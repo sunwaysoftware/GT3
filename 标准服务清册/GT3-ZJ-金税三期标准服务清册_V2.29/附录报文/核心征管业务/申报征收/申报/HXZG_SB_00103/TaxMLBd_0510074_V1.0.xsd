@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 被2012 () 使用XMLSpy v编辑的 (http://www.altova.com) by -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:include schemaLocation="TaxMLPublicType.xsd"/>
+	<xs:complexType name="swsxbgbywbw">
+		<xs:annotation>
+			<xs:documentation>中华人民共和国税收缴款书（税务收现专用）业务报文</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="swsxbgb" type="swsxbgb">
+						<xs:annotation>
+							<xs:documentation>中华人民共和国税收缴款书（税务收现专用）</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="swsxbgb">
+		<xs:annotation>
+			<xs:documentation>中华人民共和国税收缴款书（税务收现专用）</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="swsxzyGrid">
+				<xs:annotation>
+					<xs:documentation>印花税销售凭证</xs:documentation>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:sequence maxOccurs="unbounded">
+						<xs:element name="swsxzyGridlb" type="swsxzyGridlbVO"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="sxslxxform" type="sxslxxformVO"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="swsxzyGridlbVO">
+		<xs:annotation>
+			<xs:documentation>申报表信息</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="pzzg" type="pzzg" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>票证字轨</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="pzhm" type="pzhm" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>票证号码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="tfrq" type="tfrq" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>填发日期</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yskmDm" type="yskmDm" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>预算科目代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ysfpblDm" type="ysfpblDm" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>预算分配比例代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="skgkDm" type="gkDm" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>收款国库代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="mezl" type="pzzlDm" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>面额种类</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sl" type="pzsl" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>数量</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="je" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="nsrsbh" type="nsrsbh">
+				<xs:annotation>
+					<xs:documentation> 纳税人识别号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="nsrmc" type="nsrmc">
+				<xs:annotation>
+					<xs:documentation>纳税人名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sfzjzl" type="sfzjlxDm">
+				<xs:annotation>
+					<xs:documentation>证件类型</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zjhm" type="bsrsfzjhm">
+				<xs:annotation>
+					<xs:documentation>证件号码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="pzzlDm" type="pzzlDm">
+				<xs:annotation>
+					<xs:documentation>票证种类</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zspmDm" type="zspmDm" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>征收品目代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="hzjkszpzzlDm" type="pzzlDm" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>汇总缴款书票证种类</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="hzjkspzzg" type="pzzg" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>汇总缴款书票证字轨</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="hzjkspzhm" type="pzhm" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>汇总缴款书号码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bdzdjxh" type="djxh" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>被代征对象登记序号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="nsqxDm" type="nsqxDm" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>纳税期限代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sl1" type="sl1" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>税率</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="gjDm" type="gjDm" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>国籍地区代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="sxslxxformVO">
+		<xs:sequence>
+			<xs:element name="slswjg" type="slswjgmc">
+				<xs:annotation>
+					<xs:documentation>受理税务机关</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="dzdw" type="dsdw" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>代售单位</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="tpr" type="tprDm" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>售票人员代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="slrq" type="slrq">
+				<xs:annotation>
+					<xs:documentation>受理日期</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bz" type="bz" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>备注</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

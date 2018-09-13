@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 被2012 () 使用XMLSpy v编辑的 (http://www.altova.com) by -->
+<!-- edited with XMLSpy v2013 (http://www.altova.com) by  () -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxMLPublicSBType.xsd"/>
+	<xs:include schemaLocation="TaxDoc.xsd"/>
+	<xs:include schemaLocation="TaxMLBw_yhssb_V1.0.xsd"/>
+	<xs:complexType name="HXZGSB01308Request">
+		<xs:annotation>
+			<xs:documentation>印花税申报错误更正保存</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="yhssbywbw" type="yhssbywbw">
+						<xs:annotation>
+							<xs:documentation>宗地信息查询VO</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="sbsbbcTjqtxxVO" type="SBSBbcTjqtxxVO">
+						<xs:annotation>
+							<xs:documentation>印花税申报申报保存提交其他信息对象</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="nsrxxVO" type="SbCwgzNsrxxVo">
+						<xs:annotation>
+							<xs:documentation>纳税人信息VO</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="sbcwgzJs" type="nsrmc">
+						<xs:annotation>
+							<xs:documentation>申报错误更正计税标志</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+</xs:schema>

@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:complexType name="GSSBDJ00001Response">
+		<xs:annotation>
+			<xs:documentation>查询社会保险费缴费人登记信息</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="queryShbxfJfrDjxxGrid">
+						<xs:annotation>
+							<xs:documentation>登记社保户信息列表</xs:documentation>
+						</xs:annotation>
+						<xs:complexType>
+							<xs:sequence maxOccurs="unbounded">
+								<xs:element name="queryShbxfJfrDjxxGridlb" type="DjSbhDjxxDTO"/>
+							</xs:sequence>
+						</xs:complexType>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="DjSbhDjxxDTO">
+		<xs:annotation>
+			<xs:documentation>登记社保户信息DTO</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="nsrmc" type="nsrmc">
+				<xs:annotation>
+					<xs:documentation>纳税人名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sbjbjgDm" type="sbjbjgDm">
+				<xs:annotation>
+					<xs:documentation>社保经办机构代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sbbm" type="sbbm">
+				<xs:annotation>
+					<xs:documentation>社保编码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zgswskfjDm" type="zgswskfjDm">
+				<xs:annotation>
+					<xs:documentation>主管税务所（科、分局）代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

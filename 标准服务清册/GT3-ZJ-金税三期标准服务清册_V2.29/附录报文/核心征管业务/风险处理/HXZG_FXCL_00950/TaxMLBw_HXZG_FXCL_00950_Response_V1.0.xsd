@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 被2012 () 使用XMLSpy v编辑的 (http://www.altova.com) by -->
+<!-- edited with XMLSpy v2013 (http://www.altova.com) by  () -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:complexType name="HXZGFXCL00950Response">
+		<xs:annotation>
+			<xs:documentation>查询预备会谈信息业务报文</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="FHM" type="bzdsDm" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>返回码</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="CLJGMS" type="ywnr" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>处理结果描述</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="YYDJAPAYBH" type="yydjapaybh" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>预约定价安排案源编号</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="LXR" type="btzwgqyfddbrxm" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>联系人</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="LXDH" type="csflxdh" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>联系电话</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="YDDH" type="csflxdh" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>移动电话</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="YYDJAPLX" type="xqyydjaplxDm" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>预约定价安排类型</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="YYDJAPSYRQZ" type="yydjapsyrqz" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>预约定价安排适用日期起</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="YYDJAPSYRQQ" type="yydjapsyrqq" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>预约定价安排适用日期起</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="YYDJAPZRDJYZJQJSFFSM" type="ywnr" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>预约定价安排转让定价原则及其计算方法说明</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="YYDJAPZXQK" type="ywnr" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>预约定价安排执行情况</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="YYDJAPQDRQ" type="yydjapqdrq" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>预约定价安排签订日期</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="APSYRQZ" type="yydjapSyrqz" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>安排适用日期止</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="YYDJAPAJMC" type="yydjapajmc" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>预约定价安排案件名称</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="YYDJAJZT_DM" type="yydjajztDm" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>预约定价案件状态代码</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+</xs:schema>

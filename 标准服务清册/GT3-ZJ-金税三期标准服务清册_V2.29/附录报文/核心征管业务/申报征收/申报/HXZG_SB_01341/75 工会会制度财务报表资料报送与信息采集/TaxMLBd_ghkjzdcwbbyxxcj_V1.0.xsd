@@ -1,0 +1,305 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+    <xs:include schemaLocation="TaxDoc.xsd"/>
+    <xs:include schemaLocation="TaxML.xsd"/>
+    <xs:include schemaLocation="TaxMLPublic.xsd"/>
+    <xs:complexType name="ghkjcwbbywbw">
+        <xs:complexContent>
+            <xs:extension base="taxDoc">
+                <xs:sequence>
+                    <xs:element name="zcfzbVo" type="ghkjzcfzbVO"/>
+                    <xs:element name="srzcbVo" type="ghkjsrzcbVO"/>
+                    <xs:element name="wlkxmxbVo" type="ghkjwlkxmxbVO"/>
+                    <xs:element name="jfsjqkbVo" type="ghkjjfsjqkbVO"/>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+
+    <xs:complexType name="ghkjzcfzbVO">
+        <xs:sequence>
+            <xs:element name="nsrxxForm" type="nsrxxFormVO">
+                <xs:annotation>
+                    <xs:documentation>纳税人信息信息</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="ghkjzcfzbGrid">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="ghkjzcfzbGridlb" type="ghkjzcfzbGridlbVO" maxOccurs="unbounded">
+                            <xs:annotation>
+                                <xs:documentation>工会会计制度经费收缴情况表</xs:documentation>
+                            </xs:annotation>
+                        </xs:element>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="ghkjzcfzbGridlbVO">
+        <xs:annotation>
+            <xs:documentation>工会会计制度经费收缴情况表VO</xs:documentation>
+        </xs:annotation>
+        <xs:sequence>
+            <xs:element name="bjjfsrje" type="bjjfsrje" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>拨缴经费收入金额</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="yfsjjf" type="yfsjjf" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>已付上级经费</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="yfxjjfbl" type="yfxjjfbl" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>应付下级经费比例</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="bjjfsrbl" type="bjjfsrbl" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>拨缴经费收入比例</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="ysxjjfbl" type="ysxjjfbl" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>应收下级经费比例</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="ewbhxh" type="ewbhxh" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>二维表行序号</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+
+            <xs:element name="yfxjjfje" type="yfxjjfje" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>应付下级经费金额</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="yssjjfbl" type="yssjjfbl" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>应收上级经费比例</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="yfwfsjjf" type="yfwfsjjf" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>应付未付上级经费</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="yfsjjfje" type="yfsjjfje" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>应付上级经费金额</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="yfsjjfbl" type="yfsjjfbl" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>应付上级经费比例</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="ysxjjfje" type="ysxjjfje" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>应收下级经费金额</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="yssjjfje" type="yssjjfje" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>应收上级经费金额</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="dw" type="dw" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>单位</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="ghkjsrzcbVO">
+        <xs:sequence>
+            <xs:element name="nsrxxForm2" type="nsrxxFormVO">
+                <xs:annotation>
+                    <xs:documentation>纳税人信息信息</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="ghkjsrzcbGrid">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="ghkjsrzcbGridlb" type="ghkjsrzcbGridlbVO" maxOccurs="unbounded">
+                            <xs:annotation>
+                                <xs:documentation>工会会计制度收入支出表</xs:documentation>
+                            </xs:annotation>
+                        </xs:element>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="ghkjsrzcbGridlbVO">
+        <xs:annotation>
+            <xs:documentation>工会会计制度收入支出表VO</xs:documentation>
+        </xs:annotation>
+        <xs:sequence>
+            <xs:element name="hc" type="hc" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>行次||行次</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="ewbhxh" type="ewbhxh" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>二维表行序号</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+
+            <xs:element name="bys" type="bys" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>本月数</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="hmc" type="hmc" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>行名称</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="bnljs" type="bnljs" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>本年累计数</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="ghkjwlkxmxbVO">
+        <xs:sequence>
+            <xs:element name="nsrxxForm3" type="nsrxxFormVO">
+                <xs:annotation>
+                    <xs:documentation>纳税人信息信息</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="ghkjwlkxmxbGrid">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="ghkjwlkxmxbGridlb" type="ghkjwlkxmxbGridlbVO" maxOccurs="unbounded">
+                            <xs:annotation>
+                                <xs:documentation>工会会计制度往来款项明细表</xs:documentation>
+                            </xs:annotation>
+                        </xs:element>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="ghkjwlkxmxbGridlbVO">
+        <xs:annotation>
+            <xs:documentation>工会会计制度往来款项明细表VO</xs:documentation>
+        </xs:annotation>
+        <xs:sequence>
+            <xs:element name="jtnr" type="jtnr" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>具体内容</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="ewbhxh" type="ewbhxh" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>二维表行序号</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+
+            <xs:element name="je" type="je" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>金额</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="hmc" type="hmc" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>行名称</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="zcyfzkmmc" type="zcyfzkmmc" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>资产与负债科目名称</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="ghkjjfsjqkbVO">
+        <xs:sequence>
+            <xs:element name="nsrxxForm4" type="nsrxxFormVO">
+                <xs:annotation>
+                    <xs:documentation>纳税人信息信息</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="ghkjjfsjqkbGrid">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="ghkjjfsjqkbGridlb" type="ghkjjfsjqkbGridlbVO" maxOccurs="unbounded">
+                            <xs:annotation>
+                                <xs:documentation>工会会计制度资产负债表</xs:documentation>
+                            </xs:annotation>
+                        </xs:element>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="ghkjjfsjqkbGridlbVO">
+        <xs:annotation>
+            <xs:documentation>工会会计制度资产负债表VO</xs:documentation>
+        </xs:annotation>
+        <xs:sequence>
+            <xs:element name="hc" type="hc" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>行次||行次</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="qms" type="qms" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>期末数||期末数</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="ncs" type="ncs" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>年初数</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="ewbhxh" type="ewbhxh" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>二维表行序号</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+
+            <xs:element name="hmc" type="hmc" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>行名称</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="nsrxxFormVO">
+        <xs:sequence>
+            <xs:element name="nsrsbh" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>纳税人识别号</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="nsrmc" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>纳税人识名称</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="zcfzbr" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>资产负债表日</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="skssqq" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>税款所属期起</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="skssqz" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>税款所属期止</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+</xs:schema>

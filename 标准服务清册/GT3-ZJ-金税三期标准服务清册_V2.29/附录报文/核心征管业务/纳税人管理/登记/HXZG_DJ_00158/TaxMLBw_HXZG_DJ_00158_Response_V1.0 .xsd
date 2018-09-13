@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2009 (http://www.altova.com) by Administrator (EMBRACE) -->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://www.chinatax.gov.cn/dataspec/" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:complexType name="HXZGDJ00158Response">
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="jsqxmxxGrid">
+						<xs:annotation>
+							<xs:documentation>建设期项目信息</xs:documentation>
+						</xs:annotation>
+						<xs:complexType>
+							<xs:sequence minOccurs="0" maxOccurs="unbounded">
+								<xs:element name="jsqxmxxGridlb" type="jsqxmxxVO"/>
+							</xs:sequence>
+						</xs:complexType>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="jsqxmxxVO">
+		<xs:annotation>
+			<xs:documentation>建设期项目信息列表</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="jsdwdjxh" type="jsdwdjxh">
+				<xs:annotation>
+					<xs:documentation>建设单位登记序号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="nsrsbh" type="nsrsbh">
+				<xs:annotation>
+					<xs:documentation>建设方纳税人识别号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="nsrmc" type="nsrmc">
+				<xs:annotation>
+					<xs:documentation>建设方纳税人名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jsqgcxmbh" type="jsqgcxmbh">
+				<xs:annotation>
+					<xs:documentation>建设期工程项目编号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="gcxmmc" type="gcxmmc">
+				<xs:annotation>
+					<xs:documentation>建设期工程项目名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

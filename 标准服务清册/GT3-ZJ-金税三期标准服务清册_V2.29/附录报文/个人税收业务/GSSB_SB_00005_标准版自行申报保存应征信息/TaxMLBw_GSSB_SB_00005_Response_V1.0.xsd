@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:complexType name="ShbxfStandardZxsbResponse">
+		<xs:annotation>
+			<xs:documentation>社会保险费申报返回报文（标准版自行申报）</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="ShbxfStandardZxsbResultList" type="ShbxfStandardZxsbResultList"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="ShbxfStandardZxsbResultList">
+		<xs:annotation>
+			<xs:documentation>社会保险费申报返回结果列表</xs:documentation>
+		</xs:annotation>
+		<xs:sequence maxOccurs="unbounded">
+			<xs:element name="ShbxfStandardZxsbResult" type="ShbxfStandardZxsbResult">
+				<xs:annotation>
+					<xs:documentation>社会保险费申报结果列表</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="ShbxfStandardZxsbResult">
+		<xs:annotation>
+			<xs:documentation>社会保险费申报结果</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="yzpzxh" type="yzpzxh">
+				<xs:annotation>
+					<xs:documentation>应征凭证序号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="StandardZxsbRespList" type="StandardZxsbRespList">
+				<xs:annotation>
+					<xs:documentation>自行申报结果列表</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="StandardZxsbRespList">
+		<xs:annotation>
+			<xs:documentation>自行申报结果列表</xs:documentation>
+		</xs:annotation>
+		<xs:sequence maxOccurs="unbounded">
+			<xs:element name="StandardZxsbResp" type="StandardZxsbResp">
+				<xs:annotation>
+					<xs:documentation>社会保险费自行申报结果对象</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="StandardZxsbResp">
+		<xs:annotation>
+			<xs:documentation>社会保险费自行申报结果对象</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="sbpch" type="sbpch">
+				<xs:annotation>
+					<xs:documentation>申报批次号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="xxh" type="xxh">
+				<xs:annotation>
+						<xs:documentation>小序号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sbjbjgDm" type="sbjbjgDm">
+				<xs:annotation>
+						<xs:documentation>社保经办机构代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:simpleType name="sbpch">
+		<xs:annotation>
+			<xs:documentation>申报批次号</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:length value="32"/>
+		</xs:restriction>
+	</xs:simpleType>
+</xs:schema>

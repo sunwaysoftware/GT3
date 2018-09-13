@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2013 (http://www.altova.com) by  () -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:include schemaLocation="TaxMLPublicDJType.xsd"/>
+	<xs:complexType name="HXZGDJ00414Request">
+		<xs:annotation>
+			<xs:documentation>保存注销不动产项目登记信息</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="djZxbdcxmdjxxVO" type="DJZxbdcxmdjxxVO">
+						<xs:annotation>
+							<xs:documentation>注销不动产项目登记信息</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="wsxxGrid" type="WsxxGrid">
+						<xs:annotation>
+							<xs:documentation>注销不动产项目完税信息</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="djYsqywslxxbVO" type="DJYsqywslxxbVO">
+						<xs:annotation>
+							<xs:documentation>依申请业务受理信息</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="zgswskfjDm" type="zgswskfjDm">
+						<xs:annotation>
+							<xs:documentation>主管税务所科分局代码</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="WsxxGrid">
+		<xs:annotation>
+			<xs:documentation>注销建筑业项目登记完税信息列表</xs:documentation>
+		</xs:annotation>
+		<xs:sequence minOccurs="0" maxOccurs="unbounded">
+			<xs:element name="djZxbdcxmdjWsxxVO" type="DJZxbdcxmdjWsxxVO">
+				<xs:annotation>
+					<xs:documentation>注销建筑业项目登记完税信息</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

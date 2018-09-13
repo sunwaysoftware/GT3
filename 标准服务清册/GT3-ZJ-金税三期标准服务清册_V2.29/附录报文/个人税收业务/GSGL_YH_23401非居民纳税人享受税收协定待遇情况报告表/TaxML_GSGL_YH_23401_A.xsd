@@ -1,0 +1,825 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://www.chinatax.gov.cn/dataspec/" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:complexType name="yhFjmnsrxsssxddyqkbgbA">
+		<xs:annotation>
+			<xs:documentation>
+			    报告表A表主表信息
+			</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="sdlxDm" type="ssxdsdlxDm">
+						<xs:annotation>
+							<xs:documentation>所得类型代码(取自dm_gy_ssxdsdlx表，代码值为'10','11','12') </xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:group ref="kjywrsyxxA"/>
+					<xs:group ref="swjgglsyxxA"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:group name="kjywrsyxxA">
+		<xs:annotation>
+			<xs:documentation>
+			    扣缴义务人使用信息
+			</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:group ref="xsgxtkdytx"/>
+			<xs:group ref="xslxtkdytx"/>
+			<xs:group ref="xstxqsyftkdytx"/>
+			<xs:group ref="qtxx"/>
+		</xs:sequence>
+	</xs:group>
+	<xs:group name="swjgglsyxxA">
+		<xs:annotation>
+			<xs:documentation>
+			    税务机关管理使用信息
+			</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:group ref="xslxtkdy"/>
+			<xs:group ref="xstxqsyftkdy"/>
+			<xs:group ref="qtxx2"/>
+		</xs:sequence>
+	</xs:group>
+	<xs:group name="xsgxtkdytx">
+		<xs:annotation>
+			<xs:documentation>
+			    享受股息条款待遇填写
+			</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="fjmnsrzjyyzfgxdgsdgfbl" type="fjmnsrzjyyzfgxdgsdgfbl">
+				<xs:annotation>
+					<xs:documentation>非居民纳税人直接拥有支付股息的公司的股份比例（（0,1]；若“所得类型”为股息，则该项为必录）</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="fjmnsrzjyyzfgxdgsdgfblhj" type="fjmnsrzjyyzfgxdgsdgfblhj">
+				<xs:annotation>
+					<xs:documentation>非居民纳税人直接或间接拥有支付股息公司的股份比例合计（（0,1]；若“所得类型”为股息，则该项为必录）</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="fjmnsrzggsdtzje" type="fjmnsrzggsdtzje">
+				<xs:annotation>
+					<xs:documentation>非居民纳税人在该公司的投资金额（若“所得类型”为股息，则该项为必录。）</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="fjmnsrzggsdtzbz" type="tzzebzyDm">
+				<xs:annotation>
+					<xs:documentation>非居民纳税人在该公司的投资金额币种（若“所得类型”为股息，则该项为必录。）</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:group>
+	<xs:group name="xslxtkdytx">
+		<xs:annotation>
+			<xs:documentation>
+			    享受利息条款待遇填写
+			</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="dkzjsfczyxqk" type="dkzjsfczyxqk">
+				<xs:annotation>
+					<xs:documentation>贷款资金是否存在以下情况（所得类型选择“利息”时可录）1.由税收协定缔约对方符合条件的政府或机构间接提供资金2.由税收协定缔约对方符合条件的政府或机构提供担保3.由税收协定缔约对方符合条件的政府或机构提供保险</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zfhjgmc" type="zfhjgmc">
+				<xs:annotation>
+					<xs:documentation>如贷款资金由税收协定缔约对方符合条件的政府或机构间接提供资金、担保或保险，请填写符合条件的政府或机构全称（贷款资金是否存在以下情况选择时必录）</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:group>
+	<xs:group name="xstxqsyftkdytx">
+		<xs:annotation>
+			<xs:documentation>
+			    享受特许权使用费条款待遇填写
+			</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="txqsyfdqlhcclx" type="txqsyfdqlhcclx">
+				<xs:annotation>
+					<xs:documentation>据以产生该项特许权使用费的权利或财产属于以下哪种类型？（选项内容见表单，五选一；若“所得类型”选择“特许权使用费”，则该项为必录。）1.文学、艺术或科学著作2.专利、商标、设计、模型、图纸、秘密配方或秘密程序3.工业、商业、科学设备4.有关工业、商业、科学经验的信息5.其他特许权使用费</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sfsyfjcbzlszfdtxqsyf" type="sfsyfjcbzlszfdtxqsyf">
+				<xs:annotation>
+					<xs:documentation>该所得是否属于飞机、船舶租赁所支付的特许权使用费:是 Y, 否 N（若“所得类型”选择“特许权使用费”，则该项为必录。） </xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="fysm" type="fysm">
+				<xs:annotation>
+					<xs:documentation>请简要描述据以产生特许权使用费所得的具体权利或财产。（若“所得类型”选择“特许权使用费”，则该项为必录。）</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:group>
+	<xs:group name="qtxx">
+		<xs:annotation>
+			<xs:documentation>
+			    其他信息
+			</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="sfsjlx" type="sfsjlx">
+				<xs:annotation>
+					<xs:documentation>该项所得是否与非居民纳税人设在中国的常设机构或固定基地有实际联系:是 Y, 否 N （必录）</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sfdlsd" type="sfdlsd">
+				<xs:annotation>
+					<xs:documentation>非居民纳税人是否通过代理人取得该项所得:是 Y, 否 N （必录） </xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sysyrsm" type="sysyrsm">
+				<xs:annotation>
+					<xs:documentation>非居民纳税人为该项所得的“受益所有人”的声明 </xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sfjykzqhczq" type="sfjykzqhczq">
+				<xs:annotation>
+					<xs:documentation>非居民纳税人是否对所得或所得据以产生的财产或权利具有控制权或处置权:是 Y, 否 N （必录）</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sfcdxyfx" type="sfcdxyfx">
+				<xs:annotation>
+					<xs:documentation>非居民纳税人是否对所得或所得据以产生的财产或权利承担相应风险:是 Y, 否 N  （必录）</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sfhdjmsly" type="sfhdjmsly">
+				<xs:annotation>
+					<xs:documentation>非居民纳税人据以取得该项所得的有关权利或财产是否为获得税收协定的减免税利益而安排:是 Y, 否 N  （必录）</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yhslhsjzsl" type="jzsl">
+				<xs:annotation>
+					<xs:documentation>享受税收协定待遇的优惠税率（或实际征收率）</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:group>
+	<xs:group name="xslxtkdy">
+		<xs:annotation>
+			<xs:documentation>
+			    享受利息条款待遇
+			</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="dkhtlv" type="ll">
+				<xs:annotation>
+					<xs:documentation>贷款合同利率(（0,1）；若“所得类型”选择“利息”，则该项为必录。)</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="tqsclv" type="ll">
+				<xs:annotation>
+					<xs:documentation>同期市场利率(（0,1）；若“所得类型”选择“利息”，则该项为必录。)</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="hktj" type="hktj">
+				<xs:annotation>
+					<xs:documentation>还款条件 (若“所得类型”选择“利息”，则该项为必录。)</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sflxzfrzjglgx" type="sflxzfrzjglgx">
+				<xs:annotation>
+					<xs:documentation>非居民纳税人与利息支付人之间是否有关联关系:是 Y, 否 N（“是”“否”二选一；若“所得类型”选择“利息”，则该项为必录。） </xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sfczht" type="sfczht">
+				<xs:annotation>
+					<xs:documentation>在利息据以产生和支付的贷款合同之外，非居民纳税人与第三人之间是否存在在数额、利率和签订时间等方面相近的其他贷款或存款合同?（“是”“否”二选一；若“所得类型”选择“利息”，则该项为必录。）</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jynsrsmydsfzjhtqk" type="jynsrsmydsfzjhtqk">
+				<xs:annotation>
+					<xs:documentation>请简要说明非居民纳税人与第三人之间合同情况（包括第三人名称、第三人与非居民纳税人的关系、合同签约日期、金额、期限、利率、付息与还款条件、担保人等）(若“所得类型”选择“利息”，则该项为必录。)</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:group>
+	<xs:group name="xstxqsyftkdy">
+		<xs:annotation>
+			<xs:documentation>
+			    享受特许权使用费条款待遇
+			</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="sfyyqszm" type="sfyyqszm">
+				<xs:annotation>
+					<xs:documentation>
+					对据以收取特许权使用费的权利或财产，非居民纳税人是否拥有权属证明?如有，可另附权属证明材料:是 Y, 否 N ?（“是”“否”二选一；若“所得类型”选择“特许权使用费”，则该项为必录。）
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sftqsyzfrglgx" type="sftqsyzfrglgx">
+				<xs:annotation>
+					<xs:documentation>
+					非居民纳税人与特许权使用费支付人之间是否有关联关系:是 Y, 否 N（“是”“否”二选一；若“所得类型”选择“特许权使用费”，则该项为必录。）
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sfczbqzljssyq" type="sfczbqzljssyq">
+				<xs:annotation>
+					<xs:documentation>		在特许权使用费据以产生和支付的版权、专利、技术等使用权转让合同之外，非居民纳税人与第三人之间是否存在在有关版权、专利、技术的使用权或所有权方面的转让合同？（“是”“否”二选一；若“所得类型”选择“特许权使用费”，则该项为必录。）
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jysmydsfhtqk" type="jysmydsfhtqk">
+				<xs:annotation>
+					<xs:documentation>	请简要说明非居民纳税人与第三人之间合同情况（包括第三人名称、第三人与非居民纳税人的关系、合同签约日期、金额、期限、受让使用条件、收费方式等）（“是”“否”二选一；若“所得类型”选择“特许权使用费”，则该项为必录。）
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:group>
+	<xs:group name="qtxx2">
+		<xs:annotation>
+			<xs:documentation>
+			    其他信息
+			</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="sfyywzfhpfgdwgjm" type="sfyywzfhpfgdwgjm">
+				<xs:annotation>
+					<xs:documentation>	
+		非居民纳税人是否有义务在收到所得的12个月内将所得的全部或绝大部分（60%以上）支付或派发给第三国（地区）居民:是 Y, 否 N（必录）
+		</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yhBgbADwzfhpfqkLists" type="yhBgbADwzfhpfqk" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>	
+		报告表A表主表信息-非居民纳税人自行选择提供的能够证明其符合享受协定待遇的其他资料清单（sfyywzfhpfgdwgjm这个属性为Y时条件必录）
+		</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qtxxjysmclly" type="qtxxjysmclly">
+				<xs:annotation>
+					<xs:documentation>	
+					请简要说明对该项所得进行上述处理的理由（sfyywzfhpfgdwgjm这个属性为Y时条件必录）
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="tygdfgjdqssclqk" type="tygdfgjdqssclqk">
+				<xs:annotation>
+					<xs:documentation>	
+					缔约对方国家（地区）对此项所得的税收处理情况不征税:免税,征税税率小于等于12.5%,其他（必录）1.不征税2.免税3.征税税率小于等于12.5%4.其他
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sttzfhdlrmc" type="sttzfhdlrmc">
+				<xs:annotation>
+					<xs:documentation>	
+					如果非居民纳税人通过代理人取得该项所得，请填写以下问题:受托投资方或代理人名称（条件必录）
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sttzfhdlrsfbzhtj" type="sttzfhdlrsfbzhtj">
+				<xs:annotation>
+					<xs:documentation>	
+					如果非居民纳税人通过代理人取得该项所得，请填写以下问题:受托投资方或代理人收费标准和条件（条件必录）
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sfyfjmnsrcd" type="sfyfjmnsrcd">
+				<xs:annotation>
+					<xs:documentation>	
+					与委托投资或代理相关的风险和收益是否由非居民纳税人承担:是 Y, 否 N（条件必录）
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jysmwttzhdlgxsfqlyw" type="jysmwttzhdlgxsfqlyw">
+				<xs:annotation>
+					<xs:documentation>	
+					请简要说明委托投资或代理关系双方的权利和义务。（条件必录）
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="snsfylyyzgjnqtdqtlsd" type="snsfylyyzgjnqtdqtlsd">
+				<xs:annotation>
+					<xs:documentation>	
+					非居民纳税人近三年是否有来源于中国境内其他地区的同类所得:是 Y, 否 N （必录）
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sfxsgnsxddy" type="sfxsgnsxddy">
+				<xs:annotation>
+					<xs:documentation>	
+					非居民纳税人近三年是否就来源于中国境内其他地区的同类所得享受过税收协定待遇:是 Y, 否 N（必录）
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yhBgbATlsdxsssxddqqkLists" type="YhBgbATlsdxsssxddqqk" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>	
+					请说明非居民纳税人近三年就来源于中国境内其他地区的同类所得享受税收协定待遇的情况（sfxsgnsxddy为Y时必录）
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bz" type="a_bz">
+				<xs:annotation>
+					<xs:documentation>	
+					备注
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:group>
+	<xs:complexType name="YhBgbATlsdxsssxddqqk">
+		<xs:annotation>
+			<xs:documentation>
+			    报告表A表主表信息-请说明非居民纳税人近三年就来源于中国境内其他地区的同类所得享受税收协定待遇的情况
+			</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="zgswjg_dm" type="zgswjgDm">
+						<xs:annotation>
+							<xs:documentation>	
+					主管税务机关(必录)
+					</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="sjnf" type="a_sjnf">
+						<xs:annotation>
+							<xs:documentation>	
+					时间年份(必录)
+					</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="sdje" type="a_sdje">
+						<xs:annotation>
+							<xs:documentation>	
+					所得金额(必录)
+					</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="jmsje" type="a_jmsje">
+						<xs:annotation>
+							<xs:documentation>	
+					减免税金额(必录)
+					</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="yhBgbADwzfhpfqk">
+		<xs:annotation>
+			<xs:documentation>
+			    报告表A表主表信息-非居民纳税人自行选择提供的能够证明其符合享受协定待遇的其他资料清单
+			</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="skfmc" type="a_skfmc">
+						<xs:annotation>
+							<xs:documentation>	
+					收款方名称（必录）
+					</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="skfjmgdq" type="skfjmgdq">
+						<xs:annotation>
+							<xs:documentation>	
+					收款方居民国（地区）（必录）
+					</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="zfbl" type="zfbl">
+						<xs:annotation>
+							<xs:documentation>	
+					支付比例（必录）
+					</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="zfsj" type="zfsj">
+						<xs:annotation>
+							<xs:documentation>	
+					支付时间（必录）
+					</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:simpleType name="fjmnsrzjyyzfgxdgsdgfbl">
+		<xs:annotation>
+			<xs:documentation>非居民纳税人直接拥有支付股息的公司的股份比例</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:maxLength value="10"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="fjmnsrzjyyzfgxdgsdgfblhj">
+		<xs:annotation>
+			<xs:documentation>非居民纳税人直接或间接拥有支付股息公司的股份比例合计</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:maxLength value="10"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="fjmnsrzggsdtzje">
+		<xs:annotation>
+			<xs:documentation>非居民纳税人在该公司的投资金额</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:double"/>
+	</xs:simpleType>
+	<xs:simpleType name="dkzjsfczyxqk">
+		<xs:annotation>
+			<xs:documentation>贷款资金是否存在以下情况</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:maxLength value="10"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="zfhjgmc">
+		<xs:annotation>
+			<xs:documentation>如贷款资金由税收协定缔约对方符合条件的政府或机构间接提供资金、担保或保险，请填写符合条件的政府或机构全称</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:maxLength value="300"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="txqsyfdqlhcclx">
+		<xs:annotation>
+			<xs:documentation>据以产生该项特许权使用费的权利或财产属于以下哪种类型？</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:maxLength value="10"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="sfsyfjcbzlszfdtxqsyf">
+		<xs:annotation>
+			<xs:documentation>该所得是否属于飞机、船舶租赁所支付的特许权使用费:是 Y, 否 N</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:length value="1"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="fysm">
+		<xs:annotation>
+			<xs:documentation>请简要描述据以产生特许权使用费所得的具体权利或财产。</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:maxLength value="2000"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="sfsjlx">
+		<xs:annotation>
+			<xs:documentation>该项所得是否与非居民纳税人设在中国的常设机构或固定基地有实际联系:是 Y, 否 N</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:length value="1"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="sfdlsd">
+		<xs:annotation>
+			<xs:documentation>非居民纳税人是否通过代理人取得该项所得:是 Y, 否 N </xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:length value="1"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="sysyrsm">
+		<xs:annotation>
+			<xs:documentation>非居民纳税人为该项所得的“受益所有人”的声明 </xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:maxLength value="300"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="sfjykzqhczq">
+		<xs:annotation>
+			<xs:documentation>非居民纳税人是否对所得或所得据以产生的财产或权利具有控制权或处置权:是 Y, 否 N</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:length value="1"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="sfcdxyfx">
+		<xs:annotation>
+			<xs:documentation>非居民纳税人是否对所得或所得据以产生的财产或权利承担相应风险:是 Y, 否 N</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:length value="1"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="sfhdjmsly">
+		<xs:annotation>
+			<xs:documentation>非居民纳税人据以取得该项所得的有关权利或财产是否为获得税收协定的减免税利益而安排:是 Y, 否 N  </xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:length value="1"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="a_sm">
+		<xs:annotation>
+			<xs:documentation>我谨声明，我为该项所得的受益所有人，我取得该项所得的有关权利并非为了获得税收协定利益而安排 </xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:maxLength value="300"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="fjmnsrqchqz">
+		<xs:annotation>
+			<xs:documentation>非居民纳税人签章或签字 </xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:maxLength value="300"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="hktj">
+		<xs:annotation>
+			<xs:documentation>还款条件</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:maxLength value="300"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="sflxzfrzjglgx">
+		<xs:annotation>
+			<xs:documentation>非居民纳税人与利息支付人之间是否有关联关系:是 Y, 否 N</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:length value="1"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="sfczht">
+		<xs:annotation>
+			<xs:documentation>在利息据以产生和支付的贷款合同之外，非居民纳税人与第三人之间是否存在在数额、利率和签订时间等方面相近的其他贷款或存款合同?是 Y, 否 N
+		</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:length value="1"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="jynsrsmydsfzjhtqk">
+		<xs:annotation>
+			<xs:documentation>请简要说明非居民纳税人与第三人之间合同情况（包括第三人名称、第三人与非居民纳税人的关系、合同签约日期、金额、期限、利率、付息与还款条件、担保人等）
+		</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:maxLength value="500"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="sfyyqszm">
+		<xs:annotation>
+			<xs:documentation>对据以收取特许权使用费的权利或财产，非居民纳税人是否拥有权属证明?如有，可另附权属证明材料:是 Y, 否 N ?
+		</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:length value="1"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="sftqsyzfrglgx">
+		<xs:annotation>
+			<xs:documentation>非居民纳税人与特许权使用费支付人之间是否有关联关系:是 Y, 否 N
+		</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:length value="1"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="sfczbqzljssyq">
+		<xs:annotation>
+			<xs:documentation>在特许权使用费据以产生和支付的版权、专利、技术等使用权转让合同之外，非居民纳税人与第三人之间是否存在在有关版权、专利、技术的使用权或所有权方面的转让合同？
+		</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:length value="1"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="jysmydsfhtqk">
+		<xs:annotation>
+			<xs:documentation>请简要说明非居民纳税人与第三人之间合同情况（包括第三人名称、第三人与非居民纳税人的关系、合同签约日期、金额、期限、受让使用条件、收费方式等）
+		</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:maxLength value="500"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="sfyywzfhpfgdwgjm">
+		<xs:annotation>
+			<xs:documentation>非居民纳税人是否有义务在收到所得的12个月内将所得的全部或绝大部分（60%以上）支付或派发给第三国（地区）居民:是 Y, 否 N
+		</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:length value="1"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="qtxxjysmclly">
+		<xs:annotation>
+			<xs:documentation>请简要说明对该项所得进行上述处理的理由
+		</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:maxLength value="500"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="tygdfgjdqssclqk">
+		<xs:annotation>
+			<xs:documentation>缔约对方国家（地区）对此项所得的税收处理情况不征税:免税,征税税率小于等于12.5%,其他
+		</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:maxLength value="300"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="sttzfhdlrmc">
+		<xs:annotation>
+			<xs:documentation>如果非居民纳税人通过代理人取得该项所得，请填写以下问题:受托投资方或代理人名称
+		</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:maxLength value="300"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="sttzfhdlrsfbzhtj">
+		<xs:annotation>
+			<xs:documentation>如果非居民纳税人通过代理人取得该项所得，请填写以下问题:受托投资方或代理人收费标准和条件
+		</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:maxLength value="300"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="sfyfjmnsrcd">
+		<xs:annotation>
+			<xs:documentation>与委托投资或代理相关的风险和收益是否由非居民纳税人承担:是 Y, 否 N
+		</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:length value="1"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="jysmwttzhdlgxsfqlyw">
+		<xs:annotation>
+			<xs:documentation>请简要说明委托投资或代理关系双方的权利和义务。
+		</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:maxLength value="500"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="snsfylyyzgjnqtdqtlsd">
+		<xs:annotation>
+			<xs:documentation>非居民纳税人近三年是否有来源于中国境内其他地区的同类所得:是 Y, 否 N 
+		</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:length value="1"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="sfxsgnsxddy">
+		<xs:annotation>
+			<xs:documentation>非居民纳税人近三年是否就来源于中国境内其他地区的同类所得享受过税收协定待遇:是 Y, 否 N
+		</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:length value="1"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="a_bz">
+		<xs:annotation>
+			<xs:documentation>备注
+		</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:maxLength value="2000"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="qtxxqzhqz">
+		<xs:annotation>
+			<xs:documentation>其他信息:非居民纳税人签章或签字
+		</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:maxLength value="300"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="qtxxqzhqzrq">
+		<xs:annotation>
+			<xs:documentation>其他信息:非居民纳税人签章或签字日期
+		</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string"/>
+	</xs:simpleType>
+	<xs:simpleType name="qtxxkjywr">
+		<xs:annotation>
+			<xs:documentation>扣缴义务人
+		</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:maxLength value="300"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="qtxxkjywrjbr">
+		<xs:annotation>
+			<xs:documentation>扣缴义务人经办人
+		</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:maxLength value="300"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="qtxxkjywrtbrq">
+		<xs:annotation>
+			<xs:documentation>扣缴义务人填表日期
+		</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string"/>
+	</xs:simpleType>
+	<xs:simpleType name="qtxxdlsbzjjg">
+		<xs:annotation>
+			<xs:documentation>代理申报中介机构
+		</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:maxLength value="300"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="qtxxdlsbzjjgjbr">
+		<xs:annotation>
+			<xs:documentation>代理申报中介机构经办人
+		</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:maxLength value="300"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="qtxxdlsbzjjgsbrq">
+		<xs:annotation>
+			<xs:documentation>代理申报中介机构申报日期
+		</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string"/>
+	</xs:simpleType>
+	<xs:simpleType name="a_slr">
+		<xs:annotation>
+			<xs:documentation>受理人
+		</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:length value="11"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="a_sjnf">
+		<xs:annotation>
+			<xs:documentation>时间年份
+	</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:length value="4"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="a_sdje">
+		<xs:annotation>
+			<xs:documentation>所得金额
+		</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:double"/>
+	</xs:simpleType>
+	<xs:simpleType name="a_jmsje">
+		<xs:annotation>
+			<xs:documentation>减免税金额
+		</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:double"/>
+	</xs:simpleType>
+	<xs:simpleType name="a_skfmc">
+		<xs:annotation>
+			<xs:documentation>收款方名称
+	</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:maxLength value="300"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="skfjmgdq">
+		<xs:annotation>
+			<xs:documentation>收款方居民国（地区）
+		</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:length value="3"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="zfbl">
+		<xs:annotation>
+			<xs:documentation>支付比例
+		</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:maxLength value="10"/>
+		</xs:restriction>
+	</xs:simpleType>
+</xs:schema>

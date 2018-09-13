@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 被2011 rel. 2 sp1 (TeaM DJiNN) 使用XMLSpy vTeaM DJiNN编辑的 (http://www.altova.com) by -->
+<!-- edited with XMLSpy v2008 (http://www.altova.com) by TEAM ViRiLiTY (VRL) -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:complexType name="grsdsdybandbggzRequest">
+		<xs:annotation>
+			<xs:documentation>个人所得税递延纳税情况年度报告表更正请求报文</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="jywysbh" type="jywysbh">
+						<xs:annotation>
+							<xs:documentation>交易唯一识别号，对于总局版本代扣代缴客户端存储的是交易报文中的 扩展节点(不能为空)</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="kjywrdjxh" type="kjywrdjxh">
+						<xs:annotation>
+							<xs:documentation>扣缴义务人登记序号（不能为空）</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="lxr" type="lxr">
+						<xs:annotation>
+							<xs:documentation>联系人</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="babh" type="babh">
+						<xs:annotation>
+							<xs:documentation>备案编号</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="lxdh" type="lxdh">
+						<xs:annotation>
+							<xs:documentation>联系电话</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="dynsgpxs" type="dynsgpxs">
+						<xs:annotation>
+							<xs:documentation>递延纳税股票形式(不能为空),1:股票（权）期权 2：限制性股票 3：股权奖励 4:技术成果投资入股</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="bgssnf" type="bgssnf">
+						<xs:annotation>
+							<xs:documentation>报告所属年份(不能为空)(格式:yyyy)</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="gsfddbr" type="gsfddbr">
+						<xs:annotation>
+							<xs:documentation>公司法定代表人(不能为空)</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="gsjbr" type="gsjbr">
+						<xs:annotation>
+							<xs:documentation>公司经办人(“是否代理申报”为否时必录)</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="tbrq" type="tbrq">
+						<xs:annotation>
+							<xs:documentation>填报日期(不能为空)（默认为系统当前日期,格式：yyyy-MM-dd）</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="sfdlsb" type="sfdlsb">
+						<xs:annotation>
+							<xs:documentation>是否代理申报(Y/N)(不能为空)</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="dlsbjg" type="dlsbjg">
+						<xs:annotation>
+							<xs:documentation>代理申报机构，“是否代理申报”为是时必录</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="jbr" type="jbr">
+						<xs:annotation>
+							<xs:documentation>经办人，“是否代理申报”为是时必录</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="jbrzyzjhm" type="jbrzyzjhm">
+						<xs:annotation>
+							<xs:documentation>经办人执业证件号码，“是否代理申报”为是时必录</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="dlsbrq" type="dlsbrq">
+						<xs:annotation>
+							<xs:documentation>代理申报日期(格式：yyyy-MM-dd)，“是否代理申报”为是时必录</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="zgswjgDm" type="zgswjgDm">
+						<xs:annotation>
+							<xs:documentation>主管税务机关(默认为当前操作员所在税务机关)(不能为空)</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="slr" type="slr">
+						<xs:annotation>
+							<xs:documentation>受理人代码(默认为当前操作员)（不能为空，长度等于11位）</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="slrq" type="slrq">
+						<xs:annotation>
+							<xs:documentation>受理日期(默认为系统当前日期,格式：yyyy-MM-dd)(不能为空）</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="fqbaNdbgMxGrid" type="fqbaNdbgMx" maxOccurs="unbounded">
+						<xs:annotation>
+							<xs:documentation>个人所得税递延纳税情况年度报告备案明细</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="fqbaNdbgMx">
+		<xs:annotation>
+			<xs:documentation>个人所得税递延纳税情况年度报告备案明细</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="zwxm" type="xm">
+				<xs:annotation>
+					<xs:documentation>中文姓名(不能为空)</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ywxm" type="ywxm">
+				<xs:annotation>
+					<xs:documentation>英文姓名（条件必录）</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sfzjhm" type="sfzjhm">
+				<xs:annotation>
+					<xs:documentation>身份证件号码(不能为空，如果身份证件类型为居民身份证时，身份证件号码只允许18位)</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sfzjlx" type="sfzjlxDm">
+				<xs:annotation>
+					<xs:documentation>身份证件类型(不能为空)</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ztzrgs" type="ztzrgs">
+				<xs:annotation>
+					<xs:documentation>总体转让股数</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ztzrcgbl" type="ztzrcgbl">
+				<xs:annotation>
+					<xs:documentation>总体转让持股比例（不能为空）</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ztsygs" type="ztsygs">
+				<xs:annotation>
+					<xs:documentation>总体剩余股数</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ztsycgbl" type="ztsycgbl">
+				<xs:annotation>
+					<xs:documentation>总体剩余持股比例（不能为空）</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ztkjgrsds" type="ztkjgrsds">
+				<xs:annotation>
+					<xs:documentation>扣缴个人所得税</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="gpzrgs" type="ztsygs">
+				<xs:annotation>
+					<xs:documentation>股票转让股数</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="gpzrcgbl" type="gpzrcgbl">
+				<xs:annotation>
+					<xs:documentation>股票转让持股比例</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="gpsygs" type="ztsygs">
+				<xs:annotation>
+					<xs:documentation>股票剩余股数</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="gpsycgbl" type="gpzrcgbl">
+				<xs:annotation>
+					<xs:documentation>股票剩余持股比例</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="xzxzrgs" type="ztsygs">
+				<xs:annotation>
+					<xs:documentation>限制性转让股数</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="xzxzrcgbl" type="gpzrcgbl">
+				<xs:annotation>
+					<xs:documentation>限制性转让持股比例</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="xzxsygs" type="ztsygs">
+				<xs:annotation>
+					<xs:documentation>限制性剩余股数</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="xzxsycgbl" type="gpzrcgbl">
+				<xs:annotation>
+					<xs:documentation>限制性剩余持股比例</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="gqzrgs" type="ztsygs">
+				<xs:annotation>
+					<xs:documentation>股权转让股数</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="gqzrcgbl" type="gpzrcgbl">
+				<xs:annotation>
+					<xs:documentation>股权转让持股比例</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="gqsygs" type="ztsygs">
+				<xs:annotation>
+					<xs:documentation>股权剩余股数</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="gqsycgbl" type="gpzrcgbl">
+				<xs:annotation>
+					<xs:documentation>股权剩余持股比例</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jscgzrgs" type="ztsygs">
+				<xs:annotation>
+					<xs:documentation>技术成果转让股数</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jscgzrcgbl" type="gpzrcgbl">
+				<xs:annotation>
+					<xs:documentation>技术成果转让持股比例</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jscgsygs" type="ztsygs">
+				<xs:annotation>
+					<xs:documentation>技术成果剩余股数</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jscgsycgbl" type="gpzrcgbl">
+				<xs:annotation>
+					<xs:documentation>技术成果剩余持股比例</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

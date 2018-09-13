@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2010 rel. 3 (http://www.altova.com) by css1 (css1) -->
+<!-- 被2012 () 使用XMLSpy v编辑的 (http://www.altova.com) by -->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://www.chinatax.gov.cn/dataspec/" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:include schemaLocation="TaxMLBw_SBGSJKType_V1.0.xsd"/>
+	<xs:complexType name="HXZGSB00530Request">
+		<xs:annotation>
+			<xs:documentation>申报表应征信息保存请求</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="sbbyzxxGrid" type="sbbyzxxGrid">
+						<xs:annotation>
+							<xs:documentation>申报表应征信息列表</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="zcbbtzsxhGrid" type="zcbbtzsxhGrid">
+						<xs:annotation>
+							<xs:documentation>自查补报通知书序号列表</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="ssjksyhzyGrid" type="ssjksyhzyGrid">
+						<xs:annotation>
+							<xs:documentation>税收缴款书（银行经收专用）列表</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="ssjksdkdjzyGrid" type="ssjksdkdjzyGrid">
+						<xs:annotation>
+							<xs:documentation>税收缴款书（代扣代收专用）列表</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="skfjxxGrid" type="skfjxxGrid">
+						<xs:annotation>
+							<xs:documentation>税款分解信息列表</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+</xs:schema>

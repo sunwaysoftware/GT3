@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<service xmlns="http://www.chinatax.gov.cn/spec/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <head>
+    <tran_id>SWZJ.HXZG.DJ.BCBGKJSKDJBXX</tran_id>
+    <channel_id>TEST</channel_id>
+    <tran_seq>a06b1e123cc74093965ac6d21a92fcf1</tran_seq>
+    <tran_date>20141029</tran_date>
+    <tran_time>080652922</tran_time>
+    <expand>
+      <name>sjry</name>
+      <value>24406060735</value>
+    </expand>
+    <expand>
+      <name>sjjg</name>
+      <value>24406060700</value>
+    </expand>
+  </head>
+  <body><![CDATA[<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<taxML xsi:type="HXZGDJ00181Request" xmlmc="保存变更扣缴税款登记表信息" xmlbh="TaxMLBw_HXZG_DJ_00181_Request_V1.0.xsd" bbh="1.0" xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <bgkjskdjswdjb>
+        <djxh>10124406020000000332</djxh>
+        <zgswskfjDm>24406060700</zgswskfjDm>
+        <pzjguuid>9F0ECCF70E02BCFFDAE2E5AEA69857D4</pzjguuid>
+        <kjskdjuuid>36646D1859632E0FB17989120D89EA8B</kjskdjuuid>
+        <bgslxxvo>
+            <slrq>2014-10-29</slrq>
+            <slswjgDm>佛山市顺德区地方税务局乐从税务分局</slswjgDm>
+            <slyj>同意</slyj>
+            <xgslrqly></xgslrqly>
+            <sqr>24566</sqr>
+            <sqrq>2014-10-29</sqrq>
+        </bgslxxvo>
+        <bgkjskdjdjmxGrid>
+            <bgdjmxGridlb>
+                <bgxmDm>005</bgxmDm>
+                <bgqnr>wsbm</bgqnr>
+                <bghnr>whbn</bghnr>
+            </bgdjmxGridlb>
+            <bgdjmxGridlb>
+                <bgxmDm>004</bgxmDm>
+                <bgqnr>06</bgqnr>
+                <bghnr>03</bghnr>
+            </bgdjmxGridlb>
+        </bgkjskdjdjmxGrid>
+        <insertdkdjdsdjskywqkGrid/>
+        <updatedkdjdsdjskywqkGrid/>
+        <deletedkdjdsdjskywqkGrid/>
+    </bgkjskdjswdjb>
+</taxML>
+]]></body>
+</service>

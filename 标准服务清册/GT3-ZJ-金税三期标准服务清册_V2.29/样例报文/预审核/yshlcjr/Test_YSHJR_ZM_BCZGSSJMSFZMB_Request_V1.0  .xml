@@ -1,0 +1,85 @@
+<service xmlns="http://www.chinatax.gov.cn/spec/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<head>
+		<tran_id>SWZJ.HXZG.YSH.BCXXCJBSJ</tran_id>
+		<channel_id>TEST</channel_id>
+		<tran_seq>C000BNFZC25001201305030505267890</tran_seq>
+		<tran_date>20140826</tran_date>
+		<tran_time>173435849</tran_time>
+                       <expand>
+      <name>sjry</name>
+      <value>24406060735</value>
+    </expand>
+    <expand>
+      <name>sjjg</name>
+      <value>24406060700</value>
+    </expand>	</head> 
+<body><![CDATA[<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<taxML xsi:type="HXZGYSH00006Request" xmlbh="HXZGYSH00006Request" bbh="V1.1" xmlmc="渠道业务审核接入报文" xsi:schemaLocation="http://www.chinatax.gov.cn/dataspec/ TaxMLBw_HXZG_YSH_00006_Request_V1.1.xsd" xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<fileInfor>
+		<fileGrid>
+			<fileGridlb>
+				<filepath>2</filepath>
+				<filetype>2</filetype>
+				<filename>2</filename>
+				<fileindex>2</fileindex>
+			</fileGridlb>
+		</fileGrid>
+		<fileInforVO>
+			<fileSize>3</fileSize>
+			<recordNumber>3</recordNumber>
+			<nsrSwjgDm>3</nsrSwjgDm>
+		</fileInforVO>
+	</fileInfor>
+	<qdywshRequestVO>
+		<qxswjgDm>24406060700</qxswjgDm>
+		<djxh>10124406020000000143</djxh>
+		<lcswsxDm>LCSXA051005001</lcswsxDm>
+		<slswsxDm>SLSXA051005001</slswsxDm>
+		<dzbzdszlDm>BDA0510011</dzbzdszlDm>
+		<xtbm>C000BNFZC</xtbm>
+		<xzqhDm>440605</xzqhDm>
+		<nsrmc>花花的联合办证（直属局专用）--其他人别用哈</nsrmc>
+		<nsrsbh>440604000333111</nsrsbh>
+		<request>&lt;?xml version="1.0" encoding="UTF-8" standalone="yes"?&gt;
+&lt;taxML xsi:type="HXZGZM00013Request" xmlmc="保存中国税收居民身份证明申请表" xmlbh="TaxMLBw_HXZG_ZM_00013_Request_V1.0.xsd" bbh="1.0" xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"&gt;
+    &lt;djxh&gt;10124406020000000143&lt;/djxh&gt;
+    &lt;zgswskfjDm&gt;24406060700&lt;/zgswskfjDm&gt;
+    &lt;zgssjmsfzmsqb&gt;
+        &lt;zgssjmsfzmsqjbxxForm&gt;
+            &lt;sqrlx&gt;1&lt;/sqrlx&gt;
+            &lt;sqrhdlr&gt;申请人或代理人&lt;/sqrhdlr&gt;
+            &lt;nsrsbh&gt;440604000333111&lt;/nsrsbh&gt;
+            &lt;nsrmc&gt;花花的联合办证（直属局专用）--其他人别用哈&lt;/nsrmc&gt;
+            &lt;lxdh&gt;463456243545765&lt;/lxdh&gt;
+            &lt;nsnd&gt;2014&lt;/nsnd&gt;
+            &lt;zgswjg&gt;顺德区地方税务局&lt;/zgswjg&gt;
+            &lt;gjdq&gt;156&lt;/gjdq&gt;
+        &lt;/zgssjmsfzmsqjbxxForm&gt;
+        &lt;qyxxForm&gt;
+            &lt;zcdz&gt;23443524&lt;/zcdz&gt;
+            &lt;sjgljgszd&gt;实际管理机构所在地&lt;/sjgljgszd&gt;
+            &lt;scjydz&gt;34524524&lt;/scjydz&gt;
+            &lt;jyfw&gt;2345243524&lt;/jyfw&gt;
+            &lt;qysqndwsqk&gt;企业申请年度完税情况&lt;/qysqndwsqk&gt;
+        &lt;/qyxxForm&gt;
+    &lt;/zgssjmsfzmsqb&gt;
+&lt;/taxML&gt;
+</request>
+		<procStartOrgID>24406060700</procStartOrgID>
+		<userList>
+<userListlb>
+				<swryDm></swryDm>
+				<swryxm></swryxm>
+				<jgDm>24406060700</jgDm>
+				<jgmc></jgmc>
+				<gwDm>244900000001</gwDm>
+				<gwmc></gwmc>
+				<swrysfDm></swrysfDm>
+				<gwxh></gwxh>
+			</userListlb>
+</userList>
+		<procStartPerformer>24406060735</procStartPerformer>
+	</qdywshRequestVO>
+</taxML>
+]]></body>
+</service>

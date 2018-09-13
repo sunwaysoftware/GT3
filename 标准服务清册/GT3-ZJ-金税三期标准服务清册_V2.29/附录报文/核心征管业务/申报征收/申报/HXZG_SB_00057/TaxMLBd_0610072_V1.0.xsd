@@ -1,0 +1,525 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2010 rel. 3 (http://www.altova.com) by xuxin (csstj) -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:include schemaLocation="TaxMLPublicType.xsd"/>
+	<xs:complexType name="yysrjcbfymxsbbywbw">
+		<xs:annotation>
+			<xs:documentation>《中华人民共和国非居民企业所得税年度纳税申报表（适用于据实申报企业）附表1营业收入及成本费用明细表》业务报文</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="yysrjcbfymxsbb">
+						<xs:annotation>
+							<xs:documentation>《中华人民共和国非居民企业所得税年度纳税申报表（适用于据实申报企业）附表1营业收入及成本费用明细表》</xs:documentation>
+						</xs:annotation>
+						<xs:complexType>
+							<xs:sequence>
+								<xs:element name="yysrjcbfymxsbbFrom" type="yysrjcbfymxsbbFrom">
+									<xs:annotation>
+										<xs:documentation>营业收入及成本费用明细表申报信息</xs:documentation>
+									</xs:annotation>
+								</xs:element>
+							</xs:sequence>
+						</xs:complexType>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="yysrjcbfymxsbb">
+		<xs:annotation>
+			<xs:documentation>《中华人民共和国非居民企业所得税年度纳税申报表（适用于据实申报企业）附表1营业收入及成本费用明细表》</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="yysrjcbfymxsbbFrom" type="yysrjcbfymxsbbFrom">
+				<xs:annotation>
+					<xs:documentation>营业收入及成本费用明细表申报信息</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="yysrjcbfymxsbbFrom">
+		<xs:annotation>
+			<xs:documentation>营业收入及成本费用明细表申报信息</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="yysrHjZzje" type="yysrHjZzje" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>营业收入合计账载金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yysrHjYfsbje" type="yysrHjYfsbje" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>营业收入合计依法申报金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zyywsrZzje" type="zyywsrZzje" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>主营业务收入账载金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zyywsrYfsbje" type="zyywsrYfsbje" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>主营业务收入依法申报金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zyywsrXshwsrZzje" type="zyywsrXshwsrZzje" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>主营业务收入销售货物收入账载金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zyywsrXshwsrYfsbje" type="zyywsrXshwsrYfsbje" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>主营业务收入销售货物收入依法申报金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zyywsrTglwsrZzje" type="zyywsrTglwsrZzje" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>主营业务收入提供劳务收入账载金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zyywsrTglwsrYfsbje" type="zyywsrTglwsrYfsbje" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>主营业务收入提供劳务收入依法申报金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zyywsrQtZzje" type="zyywsrQtZzje" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>主营业务收入其他账载金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zyywsrQtYfsbje" type="zyywsrQtYfsbje" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>主营业务收入其他依法申报金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qtywsrZzje" type="qtywsrZzje" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>其他业务收入账载金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qtywsrYfsbje" type="qtywsrYfsbje" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>其他业务收入依法申报金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qtywsrMxXmmc" type="qtywsrMxXmmc" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>其他业务收入明细项目名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qtywsrMxZzje" type="qtywsrMxZzje" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>其他业务收入明细账载金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qtywsrMxYfsbje" type="qtywsrMxYfsbje" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>其他业务收入明细依法申报金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yycbhjZzje" type="yycbhjZzje" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>营业成本合计账载金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yycbhjYfsbje" type="yycbhjYfsbje" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>营业成本合计依法申报金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yycbXshwcbZzje" type="yycbXshwcbZzje" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>营业成本销售货物成本账载金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yycbXshwcbYfsbje" type="yycbXshwcbYfsbje" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>营业成本销售货物成本依法申报金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yycbTglwcbZzje" type="yycbTglwcbZzje" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>营业成本提供劳务成本账载金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yycbTglwcbYfsbje" type="yycbTglwcbYfsbje" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>营业成本提供劳务成本依法申报金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yycbQtywcbZzje" type="yycbQtywcbZzje" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>营业成本其他业务成本账载金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yycbQtywcbYfsbje" type="yycbQtywcbYfsbje" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>营业成本其他业务成本依法申报金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qjfyhjZzje" type="qjfyhjZzje" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>期间费用合计账载金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qjfyhjYfsbje" type="qjfyhjYfsbje" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>期间费用合计依法申报金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yyfyYfsbje" type="yyfyYfsbje" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>营业费用依法申报金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yyfyGzxjZzje" type="yyfyGzxjZzje" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>营业费用工资薪金账载金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yyfyGzxjYfsbje" type="yyfyGzxjYfsbje" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>营业费用工资薪金依法申报金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yyfyFlfZzje" type="yyfyFlfZzje" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>营业费用福利费账载金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yyfyFlfYfsbje" type="yyfyFlfYfsbje" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>营业费用福利费依法申报金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yyfyZfgjjZzje" type="yyfyZfgjjZzje" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>营业费用住房公积金账载金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yyfyZfgjjYfsbje" type="yyfyZfgjjYfsbje" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>营业费用住房公积金依法申报金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yyfyTxbxjjZzje" type="yyfyTxbxjjZzje" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>营业费用退休保险基金账载金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yyfyTxbxjjYfsbje" type="yyfyTxbxjjYfsbje" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>营业费用退休保险基金依法申报金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yyfyYlbxjjZzje" type="yyfyYlbxjjZzje" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>营业费用医疗保险基金账载金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yyfyYlbxjjYfsbje" type="yyfyYlbxjjYfsbje" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>营业费用医疗保险基金依法申报金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yyfyZjfZzje" type="yyfyZjfZzje" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>营业费用折旧费账载金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yyfyZjfYfsbje" type="yyfyZjfYfsbje" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>营业费用折旧费依法申报金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yyfyBxfZzje" type="yyfyBxfZzje" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>营业费用保险费账载金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yyfyBxfYfsbje" type="yyfyBxfYfsbje" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>营业费用保险费依法申报金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yyfyGgxcfZzje" type="yyfyGgxcfZzje" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>营业费用广告宣传费账载金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yyfyGgxcfYfsbje" type="yyfyGgxcfYfsbje" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>营业费用广告宣传费依法申报金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yyfyZgjyjfZzje" type="yyfyZgjyjfZzje" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>营业费用职工教育经费账载金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yyfyZgjyjfYfsbje" type="yyfyZgjyjfYfsbje" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>营业费用职工教育经费依法申报金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yyfyGhjfZzje" type="yyfyGhjfZzje" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>营业费用工会经费账载金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yyfyGhjfYfsbje" type="yyfyGhjfYfsbje" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>营业费用工会经费依法申报金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yyfyWxzctxZzje" type="yyfyWxzctxZzje" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>营业费用无形资产摊销账载金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yyfyWxzctxYfsbje" type="yyfyWxzctxYfsbje" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>营业费用无形资产摊销依法申报金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yyfyYwzdfZzje" type="yyfyYwzdfZzje" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>营业费用业务招待费账载金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yyfyYwzdfYfsbje" type="yyfyYwzdfYfsbje" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>营业费用业务招待费依法申报金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yyfyTxfZzje" type="yyfyTxfZzje" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>营业费用通讯费账载金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yyfyTxfYfsbje" type="yyfyTxfYfsbje" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>营业费用通讯费依法申报金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yyfyClfZzje" type="yyfyClfZzje" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>营业费用差旅费账载金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yyfyClfYfsbje" type="yyfyClfYfsbje" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>营业费用差旅费依法申报金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yyfyZlfZzje" type="yyfyZlfZzje" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>营业费用租赁费账载金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yyfyZlfYfsbje" type="yyfyZlfYfsbje" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>营业费用租赁费依法申报金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yyfyZzje" type="yyfyZzje" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>营业费用账载金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="glfyzzje" type="glfyzzje" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>管理费用账载金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="glfyYfsbje" type="glfyYfsbje" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>管理费用依法申报金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="glfyGzxjZzje" type="glfyGzxjZzje" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>管理费用工资薪金账载金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="glfyGzxjYfsbje" type="glfyGzxjYfsbje" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>管理费用工资薪金依法申报金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="glfyFlfZzje" type="glfyFlfZzje" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>管理费用福利费账载金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="glfyFlfYfsbje" type="glfyFlfYfsbje" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>管理费用福利费依法申报金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="glfyZfgjjZzje" type="glfyZfgjjZzje" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>管理费用住房公积金账载金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="glfyZfgjjYfsbje" type="glfyZfgjjYfsbje" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>管理费用住房公积金依法申报金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="glfyTxbxjjZzje" type="glfyTxbxjjZzje" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>管理费用退休保险基金账载金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="glfyTxbxjjYfsbje" type="glfyTxbxjjYfsbje" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>管理费用退休保险基金依法申报金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="glfyYlbxjjYfsbje" type="glfyYlbxjjYfsbje" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>管理费用医疗保险基金依法申报金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="glfyYlbxjjZzje" type="glfyYlbxjjZzje" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>管理费用医疗保险基金账载金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="glfyZjfZzje" type="glfyZjfZzje" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>管理费用折旧费账载金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="glfyZjfYfsbje" type="glfyZjfYfsbje" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>管理费用折旧费依法申报金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="glfyBxfZzje" type="glfyBxfZzje" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>管理费用保险费账载金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="glfyBxfYfsbje" type="glfyBxfYfsbje" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>管理费用保险费依法申报金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="glfyGgxcfZzje" type="glfyGgxcfZzje" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>管理费用广告宣传费账载金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="glfyGgxcfYfsbje" type="glfyGgxcfYfsbje" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>管理费用广告宣传费依法申报金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="glfyZgjyjfZzje" type="glfyZgjyjfZzje" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>管理费用职工教育经费账载金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="glfyZgjyjfYfsbje" type="glfyZgjyjfYfsbje" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>管理费用职工教育经费依法申报金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="glfyGhjfZzje" type="glfyGhjfZzje" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>管理费用工会经费账载金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="glfyGhjfYfsbje" type="glfyGhjfYfsbje" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>管理费用工会经费依法申报金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="glfyWxzctxZzje" type="glfyWxzctxZzje" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>管理费用无形资产摊销账载金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="glfyWxzctxYfsbje" type="glfyWxzctxYfsbje" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>管理费用无形资产摊销依法申报金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="glfyYwzdfZzje" type="glfyYwzdfZzje" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>管理费用业务招待费账载金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="glfyYwzdfYfsbje" type="glfyYwzdfYfsbje" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>管理费用业务招待费依法申报金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="glfyTxfZzje" type="glfyTxfZzje" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>管理费用通讯费账载金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="glfyTxfYfsbje" type="glfyTxfYfsbje" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>管理费用通讯费依法申报金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="glfyClfZzje" type="glfyClfZzje" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>管理费用差旅费账载金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="glfyClfYfsbje" type="glfyClfYfsbje" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>管理费用差旅费依法申报金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="glfyZlfZzje" type="glfyZlfZzje" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>管理费用租赁费账载金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="glfyZlfYfsbje" type="glfyZlfYfsbje" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>管理费用租赁费依法申报金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="cwfyZzje" type="cwfyZzje" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>财务费用账载金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="cwfyYfsbje" type="cwfyYfsbje" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>财务费用依法申报金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="cwfyLxZzje" type="cwfyLxZzje" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>财务费用利息账载金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="cwfyLxYfsbje" type="cwfyLxYfsbje" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>财务费用利息依法申报金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="cwfyHdsyZzje" type="cwfyHdsyZzje" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>财务费用汇兑损益账载金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="cwfyHdsyYfsbje" type="cwfyHdsyYfsbje" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>财务费用汇兑损益依法申报金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

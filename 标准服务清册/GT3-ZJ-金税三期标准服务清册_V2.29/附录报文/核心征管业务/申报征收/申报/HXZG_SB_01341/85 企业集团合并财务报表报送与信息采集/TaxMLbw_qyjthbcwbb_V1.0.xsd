@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2013 (http://www.altova.com) by  () -->
+<!-- 被2011 rel. 2 sp1 (TeaM DJiNN) 使用XMLSpy vTeaM DJiNN编辑的 (http://www.altova.com) by -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:include schemaLocation="TaxMLBd_qyjthbcwbb_V1.0.xsd"/>
+	<xs:include schemaLocation="TaxMLPublicSBType.xsd"/>
+	<xs:complexType name="Qyjthbcwbbywbw">
+		<xs:annotation>
+			<xs:documentation>总业务报文</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="qyjtHbzcfzbVO" type="QyjtHbzcfzbVO" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>合并资产负债表</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="qyjtHblrbVO" type="QyjtHblrbVO" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>合并利润表</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="qyjtHbxjllbVO" type="QyjtHbxjllbVO" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>合并现金流量表</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="qyjtHbsyzqybdbVO" type="QyjtHbsyzqybdbVO" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>合并所有者权益变动表</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="ndcwkjbgshbgVO" type="NdcwkjbgshbgVO" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>年度财务会计报告审计报告</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="yfzcfzzhzbVO" type="YfzcfzzhzbVO">
+						<xs:annotation>
+							<xs:documentation>“研发支出”辅助账汇总表VO</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+</xs:schema>

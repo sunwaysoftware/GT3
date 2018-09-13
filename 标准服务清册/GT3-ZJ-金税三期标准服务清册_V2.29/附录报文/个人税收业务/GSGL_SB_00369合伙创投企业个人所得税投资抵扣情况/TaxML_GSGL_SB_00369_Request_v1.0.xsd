@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:complexType name="sbHhctGrsdsTzdkqkRequest">
+		<xs:annotation>
+			<xs:documentation>合伙创投企业个人所得税投资抵扣情况报告</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="hhctqyjbqk" type="hhctqyjbqk">
+						<xs:annotation>
+							<xs:documentation>合伙创投企业基本情况</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="grhhxgqkGrid" type="grhhxgqkGrid">
+						<xs:annotation>
+							<xs:documentation>个人合伙人相关情况</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="bwxx" type="bwxx">
+						<xs:annotation>
+							<xs:documentation>表尾信息</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="hhctqyjbqk">
+		<xs:annotation>
+			<xs:documentation>合伙创投企业基本情况</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="kjywrdjxh" type="djxh">
+				<xs:annotation>
+					<xs:documentation>合伙创投企业登记序号（不能为空，长度不能大于20字节）</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="tze" type="tze">
+				<xs:annotation>
+					<xs:documentation>当年新增符合条件的投资额合计（不能为空,为空默认为0，大于等于0，保留2位小数）</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="kdktze" type="kdktze">
+				<xs:annotation>
+					<xs:documentation>新增可抵扣投资额（不能为空,为空默认为0，大于等于0，保留2位小数）</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="nd" type="nd">
+				<xs:annotation>
+					<xs:documentation>年度（不能为空，格式为yyyy）</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="tzqkbabhGrid" type="tzqkbabhGrid">
+				<xs:annotation>
+					<xs:documentation>投资情况备案编号列表（不能为空）</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="tzqkbabhGrid">
+		<xs:annotation>
+			<xs:documentation>投资情况备案编号列表</xs:documentation>
+		</xs:annotation>
+		<xs:sequence maxOccurs="unbounded">
+			<xs:element name="tzqkbabh" type="babh">
+				<xs:annotation>
+					<xs:documentation>投资情况备案编号（不能为空）</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="grhhxgqkGrid">
+		<xs:annotation>
+			<xs:documentation>个人合伙人相关情况列表</xs:documentation>
+		</xs:annotation>
+		<xs:sequence maxOccurs="unbounded">
+			<xs:element name="grhhrxgqk" type="grhhrxgqk">
+				<xs:annotation>
+					<xs:documentation>个人合伙人相关情况</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="grhhrxgqk">
+		<xs:annotation>
+			<xs:documentation>个人合伙人相关情况</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="hhrxm" type="hhrxm">
+				<xs:annotation>
+					<xs:documentation>姓名（不可为空，长度不能大于150字节）</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="hhrsfzjlx" type="sfzjlxDm">
+				<xs:annotation>
+					<xs:documentation>身份证件类型（不可为空，传代码值如居民身份证传201）</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="hhrsfzjhm" type="hhrsfzjhm">
+				<xs:annotation>
+					<xs:documentation>身份证件号码（不能为空，长度不能大于30字节）</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="cze" type="cze">
+				<xs:annotation>
+					<xs:documentation>出资额（为空默认为0，大于等于0，保留2位小数）</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="czbl" type="bl">
+				<xs:annotation>
+					<xs:documentation>出资比例（不可为空，为空默认为0，大于等于0，小于等于100，保留4位小数）</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="fpbl" type="fpblStr">
+				<xs:annotation>
+					<xs:documentation>分配比例（大于等于0，小于等于100，保留4位小数）</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="dndfpdjysd" type="dndfpdjysd">
+				<xs:annotation>
+					<xs:documentation>当年度分配的经营所得（不可为空，为空默认为0，大于等于0，保留2位小数）</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jzsnkdktze" type="jzsnkdktze">
+				<xs:annotation>
+					<xs:documentation>结转上年可抵扣投资额（为空默认为0，大于等于0，保留2位小数）</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="dnxzkdktze" type="dnxzkdktze">
+				<xs:annotation>
+					<xs:documentation>当年新增可抵扣投资额（不可为空，为空默认为0，大于等于0，保留2位小数）</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="dnsjdktze" type="dnsjdktze">
+				<xs:annotation>
+					<xs:documentation>当年实际抵扣投资额（不可为空，为空默认为0，大于等于0，保留2位小数）</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jzdktze" type="jzdktze">
+				<xs:annotation>
+					<xs:documentation>结转抵扣投资额（不可为空，为空默认为0，大于等于0，保留2位小数）</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="bwxx">
+		<xs:annotation>
+			<xs:documentation>表尾信息</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="dljg" type="zjdljg">
+				<xs:annotation>
+					<xs:documentation>代理机构名称（长度不能大于300字节）</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="lxr" type="lxr">
+				<xs:annotation>
+					<xs:documentation>联系人名称（长度不能大于150字节）</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="tbrq" type="tbrq">
+				<xs:annotation>
+					<xs:documentation>填报日期（为空时取系统默认日期；不能大于系统日期；格式为yyyy-mm-dd）</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zgswjg" type="swjgDm">
+				<xs:annotation>
+					<xs:documentation>主管税务机关（受理税务机关）（不可为空，长度为11位）</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="slrDm" type="slrDm">
+				<xs:annotation>
+					<xs:documentation>受理人代码（不可为空，长度为11位）</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="slrq" type="slrq">
+				<xs:annotation>
+					<xs:documentation>受理日期（为空时取系统默认日期；不能大于系统日期；格式为yyyy-mm-dd）</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

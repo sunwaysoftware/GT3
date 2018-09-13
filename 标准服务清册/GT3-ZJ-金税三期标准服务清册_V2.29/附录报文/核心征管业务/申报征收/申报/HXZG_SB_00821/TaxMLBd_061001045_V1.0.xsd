@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 被2012 () 使用XMLSpy v编辑的 (http://www.altova.com) by -->
+<!-- edited with XMLSpy v2010 rel. 3 (http://www.altova.com) by  () -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:complexType name="jrbxyyyssb01_dklxsrmxbywbw">
+		<xs:annotation>
+			<xs:documentation>《贷款（含贴现、押汇、透支等）利息收入明细表》业务报文</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="jrbxyyyssb01_dklxsrmxb" type="jrbxyyyssb01_dklxsrmxb">
+						<xs:annotation>
+							<xs:documentation>《贷款（含贴现、押汇、透支等）利息收入明细表》</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="jrbxyyyssb01_dklxsrmxb">
+		<xs:annotation>
+			<xs:documentation>《贷款（含贴现、押汇、透支等）利息收入明细表》</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="dklxsrmxbGrid" type="dklxsrmxbGrid">
+				<xs:annotation>
+					<xs:documentation>贷款（含贴现、押汇、透支等）利息收入明细</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="dklxsrmxbGrid">
+		<xs:annotation>
+			<xs:documentation>《贷款（含贴现、押汇、透支等）利息收入明细表》</xs:documentation>
+		</xs:annotation>
+		<xs:sequence maxOccurs="unbounded">
+			<xs:element name="dklxsrmxbGridlb" type="dklxsrmxbGridlb">
+				<xs:annotation>
+					<xs:documentation>贷款（含贴现、押汇、透支等）利息收入明细</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="dklxsrForm">
+		<xs:annotation>
+			<xs:documentation>贷款（含贴现、押汇、透支等）利息收入</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="bqqccjlx" type="je">
+				<xs:annotation>
+					<xs:documentation>本期期初冲减利息</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bqyslxsrzj" type="je">
+				<xs:annotation>
+					<xs:documentation>本期应税利息收入总计</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="dklxsrmxbGridlb">
+		<xs:annotation>
+			<xs:documentation>贷款（含贴现、押汇、透支等）利息收入明细</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="nsrsbh" type="nsrsbh">
+				<xs:annotation>
+					<xs:documentation>纳税人识别号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="lxqsrq" type="jxqsrq">
+				<xs:annotation>
+					<xs:documentation>计息起始日期</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="lxzzrq" type="jxzzrq">
+				<xs:annotation>
+					<xs:documentation>计息终止日期</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bzDm" type="bzDm">
+				<xs:annotation>
+					<xs:documentation>币制代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zhl" type="zhl">
+				<xs:annotation>
+					<xs:documentation>折合率</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="dkbjYb" type="je">
+				<xs:annotation>
+					<xs:documentation>贷款本金原币</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="dkbjZrmb" type="je">
+				<xs:annotation>
+					<xs:documentation>贷款本金折人民币</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yll" type="je">
+				<xs:annotation>
+					<xs:documentation>月利率</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bqbjcslxsrYb" type="je">
+				<xs:annotation>
+					<xs:documentation>本期本金产生利息收入原币</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bqbjcslxsrZrmb" type="je">
+				<xs:annotation>
+					<xs:documentation>本期本金产生利息收入折人民币</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bqssbwlxsrYb" type="je">
+				<xs:annotation>
+					<xs:documentation>本期实收表外利息收入原币</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bqssbwlxsrZrmb" type="je">
+				<xs:annotation>
+					<xs:documentation>本期实收表外利息收入折人民币</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bqcjlxYb" type="je">
+				<xs:annotation>
+					<xs:documentation>本期冲减利息原币</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bqcjlxZrmb" type="je">
+				<xs:annotation>
+					<xs:documentation>本期冲减利息折人民币</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bqyslxsr" type="je">
+				<xs:annotation>
+					<xs:documentation>本期应税利息收入</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bz" type="bz">
+				<xs:annotation>
+					<xs:documentation>备注</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

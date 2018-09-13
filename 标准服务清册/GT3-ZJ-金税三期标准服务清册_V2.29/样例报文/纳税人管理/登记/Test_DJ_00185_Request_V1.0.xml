@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<service xmlns="http://www.chinatax.gov.cn/spec/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <head>
+    <tran_id>SWZJ.HXZG.DJ.BCSWZJSQXXSJXX</tran_id>
+    <channel_id>TEST</channel_id>
+    <tran_seq>8126ba329f054c05aab60f2ae9012c96</tran_seq>
+    <tran_date>20141031</tran_date>
+    <tran_time>095304207</tran_time>
+    <expand>
+      <name>sjry</name>
+      <value>24406060735</value>
+    </expand>
+    <expand>
+      <name>sjjg</name>
+      <value>24406060700</value>
+    </expand>
+  </head>
+  <body><![CDATA[<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<taxML xsi:type="HXZGDJ00185Request" xmlmc="保存税务证件申请信息及收缴信息" xmlbh="TaxMLBw_HXZG_DJ_00185_Request_V1.0.xsd" bbh="1.0" xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <djxh>10124406020000000143</djxh>
+    <lcslid>8D2A8B452DD7C057EFF155E54DFF9836</lcslid>
+    <sjgsdq>24406060700</sjgsdq>
+    <zjzbf>
+        <zjzbfJbxxForm>
+            <nsrsbh>440604000333111</nsrsbh>
+            <nsrmc>花花的联合办证（直属局专用）--其他人别用哈</nsrmc>
+            <fddbrhfzrhyzxm>345234524</fddbrhfzrhyzxm>
+        </zjzbfJbxxForm>
+        <swzjsqxxForm>
+            <bsrxm>邓炳沛</bsrxm>
+            <sqly>申请理由</sqly>
+            <sqrq>2014-10-31 21:53:00</sqrq>
+        </swzjsqxxForm>
+        <sqzjxxGrid>
+            <sqzjxxGridlb>
+                <swzjsqlxDm>1</swzjsqlxDm>
+                <swzjzlDm>02</swzjzlDm>
+                <sqffzjsl>0.0</sqffzjsl>
+            </sqzjxxGridlb>
+        </sqzjxxGrid>
+        <slqkxxForm>
+            <slyj>受理意见</slyj>
+            <slrDm>花花的联合办证（直属局专用）--其他人别用哈</slrDm>
+            <slrq>2014-10-31</slrq>
+        </slqkxxForm>
+    </zjzbf>
+</taxML>
+]]></body>
+</service>

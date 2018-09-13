@@ -1,0 +1,461 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 被2012 () 使用XMLSpy v编辑的 (http://www.altova.com) by -->
+<!-- edited with XMLSpy v2010 rel. 3 (http://www.altova.com) by liuwei (liuweicss) -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:complexType name="A105020ywbw">
+		<xs:annotation>
+			<xs:documentation>061015018《未按权责发生制确认收入纳税调整明细表》（A105020）业务报文</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="A105020Ywbd" type="A105020Ywbd">
+				<xs:annotation>
+					<xs:documentation>061015018《未按权责发生制确认收入纳税调整明细表》（A105020）表单</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="A105020Ywbd">
+		<xs:annotation>
+			<xs:documentation>061015018《未按权责发生制确认收入纳税调整明细表》（A105020)表单</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="waqzfszqrsrnstzmxbForm" type="waqzfszqrsrnstzmxbForm" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>061015018《未按权责发生制确认收入纳税调整明细表》（A105020）申报信息</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="waqzfszqrsrnstzmxbForm">
+		<xs:annotation>
+			<xs:documentation>061015018《未按权责发生制确认收入纳税调整明细表》（A105020)申报信息</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="kqsqdzjlxtxqhtje" type="je">
+				<xs:annotation>
+					<xs:documentation>跨期收取的租金、利息、特许权使用费收入合同金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="kqsqdzjlxtxqzzjebn" type="je">
+				<xs:annotation>
+					<xs:documentation>跨期收取的租金、利息、特许权使用费收入账载金额本年</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="kqsqdzjlxtxqzzjelj" type="je">
+				<xs:annotation>
+					<xs:documentation>跨期收取的租金、利息、特许权使用费收入账载金额累计</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="kqsqdzjlxtxqssjebn" type="je">
+				<xs:annotation>
+					<xs:documentation>跨期收取的租金、利息、特许权使用费收入税收金额本年</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="kqsqdzjlxtxqssjelj" type="je">
+				<xs:annotation>
+					<xs:documentation>跨期收取的租金、利息、特许权使用费收入税收金额累计</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="kqsqdzjlxtxqnstzje" type="je">
+				<xs:annotation>
+					<xs:documentation>跨期收取的租金、利息、特许权使用费收入纳税调整金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zjhtje" type="je">
+				<xs:annotation>
+					<xs:documentation>租金合同金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zjzzjebn" type="je">
+				<xs:annotation>
+					<xs:documentation>租金账载金额本年</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zjzzjelj" type="je">
+				<xs:annotation>
+					<xs:documentation>租金账载金额累计</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zjssjebn" type="je">
+				<xs:annotation>
+					<xs:documentation>租金税收金额本年</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zjssjelj" type="je">
+				<xs:annotation>
+					<xs:documentation>租金税收金额累计</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zjnstzje" type="je">
+				<xs:annotation>
+					<xs:documentation>租金纳税调整金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="lxhtje" type="je">
+				<xs:annotation>
+					<xs:documentation>利息合同金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="lxzzjebn" type="je">
+				<xs:annotation>
+					<xs:documentation>利息账载金额本年</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="lxzzjelj" type="je">
+				<xs:annotation>
+					<xs:documentation>利息账载金额累计</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="lxssjebn" type="je">
+				<xs:annotation>
+					<xs:documentation>利息税收金额本年</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="lxssjelj" type="je">
+				<xs:annotation>
+					<xs:documentation>利息税收金额累计</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="lxnstzje" type="je">
+				<xs:annotation>
+					<xs:documentation>利息纳税调整金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="txqsyfhtje" type="je">
+				<xs:annotation>
+					<xs:documentation>特许权使用费合同金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="tzqsyfzzjebn" type="je">
+				<xs:annotation>
+					<xs:documentation>特许权使用费账载金额本年</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="tzqsyfzzjelj" type="je">
+				<xs:annotation>
+					<xs:documentation>特许权使用费账载金额累计</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="tzqsyfssjebn" type="je">
+				<xs:annotation>
+					<xs:documentation>特许权使用费税收金额本年</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="tzqsyfssjelj" type="je">
+				<xs:annotation>
+					<xs:documentation>特许权使用费税收金额累计</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="tzqsyfnstzje" type="je">
+				<xs:annotation>
+					<xs:documentation>特许权使用费纳税调整金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="fqqrsrhtje" type="je">
+				<xs:annotation>
+					<xs:documentation>分期确认收入合同金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="fqqrsrzzjebn" type="je">
+				<xs:annotation>
+					<xs:documentation>分期确认收入账载金额本年</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="fqqrsrzzjelj" type="je">
+				<xs:annotation>
+					<xs:documentation>分期确认收入账载金额累计</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="fqqrsrssjebn" type="je">
+				<xs:annotation>
+					<xs:documentation>分期确认收入税收金额本年</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="fqqrsrssjelj" type="je">
+				<xs:annotation>
+					<xs:documentation>分期确认收入税收金额累计</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="fqqrsrnstzje" type="je">
+				<xs:annotation>
+					<xs:documentation>分期确认收入纳税调整金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="fqskfsxshwsrhtje" type="je">
+				<xs:annotation>
+					<xs:documentation>分期收款方式销售货物收入合同金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="fqskfsxshwsrzzjebn" type="je">
+				<xs:annotation>
+					<xs:documentation>分期收款方式销售货物收入账载金额本年</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="fqskfsxshwsrzzjelj" type="je">
+				<xs:annotation>
+					<xs:documentation>分期收款方式销售货物收入账载金额累计</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="fqskfsxshwsrssjebn" type="je">
+				<xs:annotation>
+					<xs:documentation>分期收款方式销售货物收入税收金额本年</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="fqskfsxshwsrlj" type="je">
+				<xs:annotation>
+					<xs:documentation>分期收款方式销售货物收入税收金额累计</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="fqskfsxshwsrnstzje" type="je">
+				<xs:annotation>
+					<xs:documentation>分期收款方式销售货物收入纳税调整金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="cxsjcg12gyhtje" type="je">
+				<xs:annotation>
+					<xs:documentation>持续时间超过12个月的建造合同收入合同金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="cxsjcg12gyzzjebn" type="je">
+				<xs:annotation>
+					<xs:documentation>持续时间超过12个月的建造合同收入账载金额本年</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="cxsjcg12gyzzjelj" type="je">
+				<xs:annotation>
+					<xs:documentation>持续时间超过12个月的建造合同收入账载金额累计</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="cxsjcg12gyssjebn" type="je">
+				<xs:annotation>
+					<xs:documentation>持续时间超过12个月的建造合同收入税收金额本年</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="cxsjcg12gyssjelj" type="je">
+				<xs:annotation>
+					<xs:documentation>持续时间超过12个月的建造合同收入税收金额累计</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="cxsjcg12gynstzje" type="je">
+				<xs:annotation>
+					<xs:documentation>持续时间超过12个月的建造合同收入纳税调整金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qtfqqrsrhtje" type="je">
+				<xs:annotation>
+					<xs:documentation>其他分期确认收入合同金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qtfqqrsrzzjebn" type="je">
+				<xs:annotation>
+					<xs:documentation>其他分期确认收入账载金额本年</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qtfqqrsrzzjelj" type="je">
+				<xs:annotation>
+					<xs:documentation>其他分期确认收入账载金额累计</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qtfqqrsrssjebn" type="je">
+				<xs:annotation>
+					<xs:documentation>其他分期确认收入税收金额本年</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qtfqqrsrssjelj" type="je">
+				<xs:annotation>
+					<xs:documentation>其他分期确认收入税收金额累计</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qtfqqrsrnstzje" type="je">
+				<xs:annotation>
+					<xs:documentation>其他分期确认收入纳税调整金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zfbzdysrhtje" type="je">
+				<xs:annotation>
+					<xs:documentation>政府补助递延收入合同金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zfbzdysrzzjebn" type="je">
+				<xs:annotation>
+					<xs:documentation>政府补助递延收入账载金额本年</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zfbzdysrzzjelj" type="je">
+				<xs:annotation>
+					<xs:documentation>政府补助递延收入账载金额累计</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zfbzdysrssjebn" type="je">
+				<xs:annotation>
+					<xs:documentation>政府补助递延收入税收金额本年</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zfbzdysrssjelj" type="je">
+				<xs:annotation>
+					<xs:documentation>政府补助递延收入税收金额累计</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zfbzdysrnstzje" type="je">
+				<xs:annotation>
+					<xs:documentation>政府补助递延收入纳税调整金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ysyxgdzfbzhtje" type="je">
+				<xs:annotation>
+					<xs:documentation>与收益相关的政府补助合同金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ysyxgdzfbzzzjebn" type="je">
+				<xs:annotation>
+					<xs:documentation>与收益相关的政府补助账载金额本年</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ysyxgdzfbzzzjelj" type="je">
+				<xs:annotation>
+					<xs:documentation>与收益相关的政府补助账载金额累计</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ysyxgdzfbzssjebn" type="je">
+				<xs:annotation>
+					<xs:documentation>与收益相关的政府补助税收金额本年</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ysyxgdzfbzssjelj" type="je">
+				<xs:annotation>
+					<xs:documentation>与收益相关的政府补助税收金额累计</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ysyxgdzfbznstzje" type="je">
+				<xs:annotation>
+					<xs:documentation>与收益相关的政府补助纳税调整金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yzcxgdzfbzhtje" type="je">
+				<xs:annotation>
+					<xs:documentation>与资产相关的政府补助合同金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yzcxgdzfbzzzjebn" type="je">
+				<xs:annotation>
+					<xs:documentation>与资产相关的政府补助账载金额本年</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yzcxgdzfbzzzjelj" type="je">
+				<xs:annotation>
+					<xs:documentation>与资产相关的政府补助账载金额累计</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yzcxgdzfbzssjebn" type="je">
+				<xs:annotation>
+					<xs:documentation>与资产相关的政府补助税收金额本年</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yzcxgdzfbzssjelj" type="je">
+				<xs:annotation>
+					<xs:documentation>与资产相关的政府补助税收金额累计</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yzcxgdzfbznstzje" type="je">
+				<xs:annotation>
+					<xs:documentation>与资产相关的政府补助纳税调整金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qthtje" type="je">
+				<xs:annotation>
+					<xs:documentation>其他合同金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qtzzjebn" type="je">
+				<xs:annotation>
+					<xs:documentation>其他账载金额本年</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qtzzjelj" type="je">
+				<xs:annotation>
+					<xs:documentation>其他账载金额累计</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qtssjebn" type="je">
+				<xs:annotation>
+					<xs:documentation>其他税收金额本年</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qtssjelj" type="je">
+				<xs:annotation>
+					<xs:documentation>其他税收金额累计</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qtnstzje" type="je">
+				<xs:annotation>
+					<xs:documentation>其他纳税调整金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qtwaqzfszqrsrhtje" type="je">
+				<xs:annotation>
+					<xs:documentation>其他未按权责发生制确认收入合同金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qtwaqzfszqrsrzzjebn" type="je">
+				<xs:annotation>
+					<xs:documentation>其他未按权责发生制确认收入账载金额本年</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qtwaqzfszqrsrzzjelj" type="je">
+				<xs:annotation>
+					<xs:documentation>其他未按权责发生制确认收入账载金额累计</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qtwaqzfszqrsrssjebn" type="je">
+				<xs:annotation>
+					<xs:documentation>其他未按权责发生制确认收入税收金额本年</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qtwaqzfszqrsrssjelj" type="je">
+				<xs:annotation>
+					<xs:documentation>其他未按权责发生制确认收入税收金额累计</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qtwaqzfszqrsrnstzje" type="je">
+				<xs:annotation>
+					<xs:documentation>其他未按权责发生制确认收入纳税调整金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="hjhtje" type="je">
+				<xs:annotation>
+					<xs:documentation>合计合同金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="hjzzjebn" type="je">
+				<xs:annotation>
+					<xs:documentation>合计账载金额本年</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="hjzzjelj" type="je">
+				<xs:annotation>
+					<xs:documentation>合计账载金额累计</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="hjssjebn" type="je">
+				<xs:annotation>
+					<xs:documentation>合计税收金额本年</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="hjssjelj" type="je">
+				<xs:annotation>
+					<xs:documentation>合计税收金额累计</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="hjnstzje" type="je">
+				<xs:annotation>
+					<xs:documentation>合计纳税调整金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

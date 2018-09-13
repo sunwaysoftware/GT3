@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 被2011 rel. 2 sp1 (TeaM DJiNN) 使用XMLSpy vTeaM DJiNN编辑的 (http://www.altova.com) by -->
+<!-- edited with XMLSpy v2010 rel. 3 (http://www.altova.com) by MESMERiZE (MSM) -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:include schemaLocation="TaxMLPublicType.xsd"/>
+	<xs:include schemaLocation="TaxMLBd_dkdjwhsy_0610095_V1.0.xsd"/>
+	<xs:include schemaLocation="TaxMLBd_tydkdj_0610572_V1.0.xsd"/>
+	<xs:include schemaLocation="TaxMLBd_tydkdj_0610575_V1.0.xsd"/>
+	<xs:complexType name="dkdjwhsyjsfsbywbw">
+		<xs:annotation>
+			<xs:documentation>代扣代缴文化事业建设费申报业务报文</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="dkdjwhsyjsfsbsbSbb" type="DkdjwhsyjsfsbSbbdxxVO">
+						<xs:annotation>
+							<xs:documentation>代扣代缴文化事业建设费申报业务报文</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="DkdjwhsyjsfsbSbbdxxVO">
+		<xs:annotation>
+			<xs:documentation>代扣代缴文化事业建设费申报业务报文</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="dkdjwhsyjsfsb" type="dkdjwhsyjsfsb">
+				<xs:annotation>
+					<xs:documentation>代扣代缴文化事业建设费申报</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="dkdjdsdjdkdszy" type="dkdjdsdjdkdszy" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>中华人民共和国税收缴款书（代扣代收专用）</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="dkdjdsdjyhjszy" type="dkdjdsdjyhjszy" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>中华人民共和国税收缴款书（银行经收专用）</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

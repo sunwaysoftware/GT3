@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 被2012 () 使用XMLSpy v编辑的 (http://www.altova.com) by -->
+<!-- edited with XMLSpy v2005 rel. 3 U (http://www.altova.com) by  () -->
+<!-- 编辑使用 XMLSpy v2006 U (http://www.altova.com) 由 any (any) -->
+<!-- 编辑使用 XMLSpy v2006 U (http://www.altova.com) 由 any (any) -->
+<!-- 编辑使用 XMLSpy v2006 U (http://www.altova.com) 由 any (any) -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxDoc.xsd"/>
+	<xs:include schemaLocation="TaxMLPublic.xsd"/>
+	<xs:include schemaLocation="TaxMLPublicFPType.xsd"/>
+	<xs:complexType name="HXZGFP15108Response">
+		<xs:annotation>
+			<xs:documentation>查询网上申领明细（查明细表数据包括主表数据）返回</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="fpWslpQueryGrid" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>网上领票明细</xs:documentation>
+						</xs:annotation>
+						<xs:complexType>
+							<xs:sequence maxOccurs="unbounded">
+								<xs:element name="fpWslpQueryGridlb">
+									<xs:annotation>
+										<xs:documentation>网上领票明细列表</xs:documentation>
+									</xs:annotation>
+									<xs:complexType>
+										<xs:sequence>
+											<xs:element name="wslpuuid" type="wslpuuid">
+												<xs:annotation>
+													<xs:documentation>网上领票UUID</xs:documentation>
+												</xs:annotation>
+											</xs:element>
+											<xs:element name="ywslxh" type="ywslxh">
+												<xs:annotation>
+													<xs:documentation>业务受理序号</xs:documentation>
+												</xs:annotation>
+											</xs:element>
+											<xs:element name="djxh" type="djxh">
+												<xs:annotation>
+													<xs:documentation>登记序号</xs:documentation>
+												</xs:annotation>
+											</xs:element>
+											<xs:element name="nsrsbh" type="nsrsbh">
+												<xs:annotation>
+													<xs:documentation>纳税人识别号</xs:documentation>
+												</xs:annotation>
+											</xs:element>
+											<xs:element name="gprxm" type="gprxm">
+												<xs:annotation>
+													<xs:documentation>购票人姓名</xs:documentation>
+												</xs:annotation>
+											</xs:element>
+											<xs:element name="sfzjzlDm" type="sfzjzlDm">
+												<xs:annotation>
+													<xs:documentation>身份证件种类代码</xs:documentation>
+												</xs:annotation>
+											</xs:element>
+											<xs:element name="sfzjhm" type="sfzjhm">
+												<xs:annotation>
+													<xs:documentation>身份证件号码</xs:documentation>
+												</xs:annotation>
+											</xs:element>
+											<xs:element name="wslpywztDm" type="wslpywztDm">
+												<xs:annotation>
+													<xs:documentation>网上领票业务状态代码</xs:documentation>
+												</xs:annotation>
+											</xs:element>
+											<xs:element name="wslpqrfsDm" type="wslpqrfsDm">
+												<xs:annotation>
+													<xs:documentation>网上领票确认方式代码</xs:documentation>
+												</xs:annotation>
+											</xs:element>
+											<xs:element name="shbtgyy" type="shbtgyy">
+												<xs:annotation>
+													<xs:documentation>审核不通过原因</xs:documentation>
+												</xs:annotation>
+											</xs:element>
+											<xs:element name="zgswskfjDm" type="zgswskfjDm">
+												<xs:annotation>
+													<xs:documentation>纳税人主管税务科分局代码</xs:documentation>
+												</xs:annotation>
+											</xs:element>
+											<xs:element name="slcs" type="slcs">
+												<xs:annotation>
+													<xs:documentation>受理厂商</xs:documentation>
+												</xs:annotation>
+											</xs:element>
+											<xs:element name="lxdh" type="lxdh">
+												<xs:annotation>
+													<xs:documentation>联系电话</xs:documentation>
+												</xs:annotation>
+											</xs:element>
+											<xs:element name="bz" type="bz">
+												<xs:annotation>
+													<xs:documentation>备注</xs:documentation>
+												</xs:annotation>
+											</xs:element>
+											<xs:element name="wslpmxuuid" type="wslpmxuuid">
+												<xs:annotation>
+													<xs:documentation>网上领票明细UUID</xs:documentation>
+												</xs:annotation>
+											</xs:element>
+											<xs:element name="fpzlDm" type="fpzlDm">
+												<xs:annotation>
+													<xs:documentation>发票种类代码</xs:documentation>
+												</xs:annotation>
+											</xs:element>
+											<xs:element name="fpDm" type="fpDm">
+												<xs:annotation>
+													<xs:documentation>发票代码</xs:documentation>
+												</xs:annotation>
+											</xs:element>
+											<xs:element name="bs" type="bs">
+												<xs:annotation>
+													<xs:documentation>本数</xs:documentation>
+												</xs:annotation>
+											</xs:element>
+											<xs:element name="fpqshm" type="fpqshm">
+												<xs:annotation>
+													<xs:documentation>发票起始号码</xs:documentation>
+												</xs:annotation>
+											</xs:element>
+											<xs:element name="fpzzhm" type="fpzzhm">
+												<xs:annotation>
+													<xs:documentation>发票终止号码</xs:documentation>
+												</xs:annotation>
+											</xs:element>
+											<xs:element name="wslpsjmxztDm" type="wslpsjmxztDm">
+												<xs:annotation>
+													<xs:documentation>网上领票数据明细状态代码</xs:documentation>
+												</xs:annotation>
+											</xs:element>
+											<xs:element name="zfbz1" type="zfbz1">
+												<xs:annotation>
+													<xs:documentation>作废标志</xs:documentation>
+												</xs:annotation>
+											</xs:element>
+										</xs:sequence>
+									</xs:complexType>
+								</xs:element>
+							</xs:sequence>
+						</xs:complexType>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+</xs:schema>

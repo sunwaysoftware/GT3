@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2010 rel. 3 (http://www.altova.com) by xuxin (csstj) -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:include schemaLocation="TaxMLPublicType.xsd"/>
+	<xs:complexType name="sydwshttmbfqydwzcmxsbbywbw">
+		<xs:annotation>
+			<xs:documentation>《中华人民共和国企业所得税年度纳税申报表附表二（3）事业单位、社会团体、民办非企业单位支出明细表》业务报文</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="sydwshttmbfqydwzcmxsbb">
+						<xs:annotation>
+							<xs:documentation>《中华人民共和国企业所得税年度纳税申报表附表二（3）事业单位、社会团体、民办非企业单位支出明细表》</xs:documentation>
+						</xs:annotation>
+						<xs:complexType>
+							<xs:sequence>
+								<xs:element name="sydwshttmbfqydwzcmxsbbFrom" type="sydwshttmbfqydwzcmxsbbFrom">
+									<xs:annotation>
+										<xs:documentation>事业单位、社会团体、民办非企业单位支出明细表申报信息</xs:documentation>
+									</xs:annotation>
+								</xs:element>
+							</xs:sequence>
+						</xs:complexType>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="sydwshttmbfqydwzcmxsbb">
+		<xs:annotation>
+			<xs:documentation>《中华人民共和国企业所得税年度纳税申报表附表二（3）事业单位、社会团体、民办非企业单位支出明细表》</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="sydwshttmbfqydwzcmxsbbFrom" type="sydwshttmbfqydwzcmxsbbFrom">
+				<xs:annotation>
+					<xs:documentation>事业单位、社会团体、民办非企业单位支出明细表申报信息</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="sydwshttmbfqydwzcmxsbbFrom">
+		<xs:annotation>
+			<xs:documentation>事业单位、社会团体、民办非企业单位支出明细表数据对应明细</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="zcze" type="zcze1" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>支出总额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bcjf" type="bcjfzc" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>拨出经费支出</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sjsjzc" type="sjsjzc" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>上缴上级支出</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bczk" type="bczkzc" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>拨出专款支出</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zkzc" type="zkzc" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>专款支出</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="syzc" type="syzc" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>事业支出</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jyzc" type="jyzc" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>经营支出</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="dfsdwbz" type="dfsdwbzzc" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>对附属单位补助支出</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jzzcjj" type="jzzcjjzc" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>结转自筹基建支出</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qtzc" type="qtzc" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>其他支出</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bzkcdzcze" type="bzkcZcze" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>不准扣除的支出总额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ssgdbyxkcdzcxmje" type="ssgdbyxkcZcxmje" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>税收规定不允许扣除的支出项目金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="aftbljsdzcxmje" type="aftbljsdzcxmje" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>按分摊比例计算的支出项目金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zykcdzcze" type="zykcdzcze" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>准予扣除的支出总额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

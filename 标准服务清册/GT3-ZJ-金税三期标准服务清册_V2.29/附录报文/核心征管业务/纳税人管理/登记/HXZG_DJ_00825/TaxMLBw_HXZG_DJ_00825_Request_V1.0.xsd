@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 被2011 rel. 2 sp1 (TeaM DJiNN) 使用XMLSpy vTeaM DJiNN编辑的 (http://www.altova.com) by -->
+<!-- edited with XMLSpy v2013 (http://www.altova.com) by  () -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:include schemaLocation="TaxMLPublicDJType.xsd"/>
+	<xs:complexType name="HXZGDJ00825Request">
+		<xs:annotation>
+			<xs:documentation>地税机关确认国税发起的申报反馈的待办任务的服务请求报文</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="bjfs" type="bjfs"/>
+					<xs:element name="gssbuuid" type="sbuuid"/>
+					<xs:element name="tyBz" type="tybz"/>
+					<xs:element name="wcjyhdqksbxxbVO" type="WcjyhdqksbxxbVO"/>
+					<xs:element name="hwsbInsertGrid">
+						<xs:complexType>
+							<xs:sequence minOccurs="0" maxOccurs="unbounded">
+								<xs:element name="DJWcjyhdqksbbxxHwxxlb" type="DJWcjyhdqksbbxxHwxxVO"/>
+							</xs:sequence>
+						</xs:complexType>
+					</xs:element>
+					<xs:element name="hwsbUpdateGrid">
+						<xs:complexType>
+							<xs:sequence maxOccurs="unbounded">
+								<xs:element name="DJWcjyhdqksbbxxHwxxlb" type="DJWcjyhdqksbbxxHwxxVO"/>
+							</xs:sequence>
+						</xs:complexType>
+					</xs:element>
+					<xs:element name="hwsbDeleteGrid">
+						<xs:complexType>
+							<xs:sequence maxOccurs="unbounded">
+								<xs:element name="DJWcjyhdqksbbxxHwxxlb" type="DJWcjyhdqksbbxxHwxxVO"/>
+							</xs:sequence>
+						</xs:complexType>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="WcjyhdqksbxxbVO">
+		<xs:annotation>
+			<xs:documentation>外出经营活动情况申报信息</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="wcjyhdqksbuuid" type="wcjyhdqksbuuid">
+				<xs:annotation>
+					<xs:documentation>外出经营活动情况申报UUID</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="lcslid" type="lcslid">
+				<xs:annotation>
+					<xs:documentation>流程实例ID</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="djxh" type="djxh">
+				<xs:annotation>
+					<xs:documentation>登记序号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="nsrsbh" type="nsrsbh">
+				<xs:annotation>
+					<xs:documentation>纳税人识别号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="nsrmc" type="nsrmc">
+				<xs:annotation>
+					<xs:documentation>纳税人名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="wcjyhdssglzmbh" type="wcjyhdssglzmbh">
+				<xs:annotation>
+					<xs:documentation>外出经营活动税收管理证明编号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sjjyqjq" type="sjjyqjq">
+				<xs:annotation>
+					<xs:documentation>实际经营期间起</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sjjyqjz" type="sjjyqjz" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>实际经营期间止</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ddrq" type="ddrq">
+				<xs:annotation>
+					<xs:documentation>到达日期</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bysj" type="bysj">
+				<xs:annotation>
+					<xs:documentation>报验时间</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jydz" type="jydz">
+				<xs:annotation>
+					<xs:documentation>经营地址</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="hwcfdd" type="hwcfdd" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>货物存放地点</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bydjuuid" type="bydjuuid">
+				<xs:annotation>
+					<xs:documentation>报验登记UUID</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zmyxqq">
+				<xs:annotation>
+					<xs:documentation>证明有效期起</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zmyxqz">
+				<xs:annotation>
+					<xs:documentation>证明有效期止</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="lrrDm" type="lrrDm">
+				<xs:annotation>
+					<xs:documentation>录入人代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="lrrq" type="lrrq">
+				<xs:annotation>
+					<xs:documentation>录入日期</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="xgrDm" type="xgrDm" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>修改人代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="xgrq" type="xgrq" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>修改日期</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sjgsdq" type="sjgsdq">
+				<xs:annotation>
+					<xs:documentation>数据归属地区</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="wcjyzmuuid" type="wcjyzmuuid">
+				<xs:annotation>
+					<xs:documentation>外出经营证明uuid</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

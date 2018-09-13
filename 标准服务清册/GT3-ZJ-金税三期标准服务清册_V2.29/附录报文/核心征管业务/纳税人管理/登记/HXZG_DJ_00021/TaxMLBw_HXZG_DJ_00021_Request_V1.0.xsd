@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:include schemaLocation="TaxMLPublicDJType.xsd"/>
+	<xs:complexType name="HXZGDJ00021Request">
+		<xs:annotation>
+			<xs:documentation>扣缴税款登记业务报文</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="DJKjskdjxxVO" type="DJKjskdjxxVO">
+						<xs:annotation>
+							<xs:documentation>扣缴税款登记信息</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="dkdjxxList" type="dkdjxxList">
+						<xs:annotation>
+							<xs:documentation>代扣代缴信息List</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="DJYsqywslxxbVO" type="DJYsqywslxxbVO">
+						<xs:annotation>
+							<xs:documentation>依申请业务受理信息表</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="dkdjxxList">
+		<xs:annotation>
+			<xs:documentation>代扣代缴代收代缴信息</xs:documentation>
+		</xs:annotation>
+		<xs:sequence minOccurs="0" maxOccurs="unbounded">
+			<xs:element name="dkdjxxlb" type="DJDkdjdsdjskywqkVO">
+				<xs:annotation>
+					<xs:documentation>代扣代缴代收代缴信息</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

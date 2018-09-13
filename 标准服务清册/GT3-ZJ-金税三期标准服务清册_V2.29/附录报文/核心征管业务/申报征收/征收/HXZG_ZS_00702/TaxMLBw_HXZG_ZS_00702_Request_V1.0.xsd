@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2013 (http://www.altova.com) by  () -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:complexType name="HXZGZS00702RequestVO">
+		<xs:annotation>
+			<xs:documentation>税收完税证明作废</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="pzzlDm" type="pzzlDm">
+						<xs:annotation>
+							<xs:documentation>票证种类代码</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="pzzgDm" type="pzzgDm">
+						<xs:annotation>
+							<xs:documentation>票证字轨代码</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="pzhm" type="pzhm">
+						<xs:annotation>
+							<xs:documentation>票证号码</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="swryDm" type="swryDm">
+						<xs:annotation>
+							<xs:documentation>做废人</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="zfrq" type="zfrq">
+						<xs:annotation>
+							<xs:documentation>作废日期</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="zfyyDm" type="pzzfyyDm">
+						<xs:annotation>
+							<xs:documentation>作废原因代码</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="zflxDm" type="pzzflxDm">
+						<xs:annotation>
+							<xs:documentation>作废类型代码</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+</xs:schema>

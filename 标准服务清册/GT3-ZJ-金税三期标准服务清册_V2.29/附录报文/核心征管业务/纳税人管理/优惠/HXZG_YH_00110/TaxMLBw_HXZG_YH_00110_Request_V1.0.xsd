@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 被2011 rel. 2 sp1 (TeaM DJiNN) 使用XMLSpy vTeaM DJiNN编辑的 (http://www.altova.com) by -->
+<!-- edited with XMLSpy v2009 (http://www.altova.com) by liumin (EMBRACE) -->
+<!-- 编辑使用 XMLSpy v2006 U (http://www.altova.com) 由 any (any) -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:complexType name="HXZGYH00110Request">
+		<xs:annotation>
+			<xs:documentation>查询车辆减免税备案信息接入报文</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="djxh" type="djxh">
+						<xs:annotation>
+							<xs:documentation>登记序号</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="clsbdh" type="clsbdh" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>车辆识别代号</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="skssqq" type="skssqq" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>税款所属期起</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="skssqz" type="skssqz" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>税款所属期止</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+</xs:schema>

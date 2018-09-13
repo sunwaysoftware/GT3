@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2011 (http://www.altova.com) by www.hbnu.com (www.hbnu.com) -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:include schemaLocation="TaxMLPublic.xsd"/>
+	<xs:complexType name="wxzcshyqjybywbw">
+		<xs:annotation>
+			<xs:documentation>《无形资产使用权交易表》业务报文</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="qyndglywwlbg2016_G105000" type="qyndglywwlbg2016_G105000">
+						<xs:annotation>
+							<xs:documentation>《无形资产使用权交易表》</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="qyndglywwlbg2016_G105000">
+		<xs:annotation>
+			<xs:documentation>《无形资产使用权交易表》</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="wxzcshyqjybGrid" type="wxzcshyqjybGrid">
+				<xs:annotation>
+					<xs:documentation>无形资产使用权交易表</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="wxzcshyqjybGrid">
+		<xs:annotation>
+			<xs:documentation>无形资产使用权交易表</xs:documentation>
+		</xs:annotation>
+		<xs:sequence maxOccurs="unbounded">
+			<xs:element name="wxzcshyqjybGridlbVO" type="wxzcshyqjybGridlbVO">
+				<xs:annotation>
+					<xs:documentation>无形资产使用权交易表</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="wxzcshyqjybGridlbVO">
+		<xs:annotation>
+			<xs:documentation>无形资产使用权交易表</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="ewbhxh" type="ewbhxh">
+				<xs:annotation>
+					<xs:documentation>二维表行序号，表单对应的行次号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ewbhmc" type="ewbhmc">
+				<xs:annotation>
+					<xs:documentation>二维表行名称，对应表单第一列名称，第7、14、15、22、29、30行传对应行的中文内容</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="glfmc" type="glfmc">
+				<xs:annotation>
+					<xs:documentation>关联方名称，第7、14、15、22、29、30行不用传</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="gljynr" type="bz">
+				<xs:annotation>
+					<xs:documentation>关联交易内容，取值为代码表DM_SB_GLJYNR，多个代码用英文逗号分隔，第7、14、15、22、29、30行不用传</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jyje" type="je">
+				<xs:annotation>
+					<xs:documentation>交易金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bl" type="bl">
+				<xs:annotation>
+					<xs:documentation>比例</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

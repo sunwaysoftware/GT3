@@ -1,0 +1,355 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2008 (http://www.altova.com) by TEAM ViRiLiTY (VRL) -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:complexType name="scjysdtzzgrsdshzsbbYwbw">
+		<xs:annotation>
+			<xs:documentation>生产、经营所得投资者个人所得税汇总申报表</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="scjysdtzzgrsdshzsbb" type="scjysdtzzgrsdshzsbb">
+						<xs:annotation>
+							<xs:documentation>生产、经营所得投资者个人所得税汇总申报表</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="scjysdtzzgrsdshzsbb">
+		<xs:annotation>
+			<xs:documentation>生产、经营所得投资者个人所得税汇总申报表</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="scjysdtzzgrsdshzsbbHead" type="scjysdtzzgrsdshzsbbHead">
+				<xs:annotation>
+					<xs:documentation>生产、经营所得投资者个人所得税汇总申报表表头</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="scjysdtzzgrsdshzsbbBody" type="scjysdtzzgrsdshzsbbBody">
+				<xs:annotation>
+					<xs:documentation>生产、经营所得投资者个人所得税汇总申报表表体</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="scjysdtzzgrsdshzsbbHead">
+		<xs:annotation>
+			<xs:documentation>生产、经营所得投资者个人所得税汇总申报表表头</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="skssqq" type="skssqq">
+				<xs:annotation>
+					<xs:documentation>税款所属期起</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="skssqz" type="skssqz">
+				<xs:annotation>
+					<xs:documentation>税款所属期止</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="tbrq" type="tbrq1">
+				<xs:annotation>
+					<xs:documentation>填表日期</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="dljg" type="dljgmc">
+				<xs:annotation>
+					<xs:documentation>代理机构（人）</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jbr" type="dljbrxm">
+				<xs:annotation>
+					<xs:documentation>经办人</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="dljbrzyzjhm" type="dljbrzyzjhm">
+				<xs:annotation>
+					<xs:documentation>经办人执业证件号码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="dlsbrq" type="dlsbrq">
+				<xs:annotation>
+					<xs:documentation>代理申报日期</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="slswjgDm" type="slswjgDm">
+				<xs:annotation>
+					<xs:documentation>受理税务机关代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="slswjgmc" type="slswjgmc">
+				<xs:annotation>
+					<xs:documentation>受理税务机关</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="slrDm" type="swryDm">
+				<xs:annotation>
+					<xs:documentation>受理人代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="slr" type="slrxm">
+				<xs:annotation>
+					<xs:documentation>受理人</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="slrq" type="slrq">
+				<xs:annotation>
+					<xs:documentation>受理日期</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sblxDm" type="bgbz">
+				<xs:annotation>
+					<xs:documentation>申报方式代码，0：正常申报，1：更正申报</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bsrxm" type="bsrxm">
+				<xs:annotation>
+					<xs:documentation>办税人姓名</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ssglyDm" type="ssglyDm">
+				<xs:annotation>
+					<xs:documentation>税收管理员代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="scjysdtzzgrsdshzsbbBody">
+		<xs:annotation>
+			<xs:documentation>生产、经营所得投资者个人所得税汇总申报表表体</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="tzzxx" type="tzzxx">
+				<xs:annotation>
+					<xs:documentation>投资者信息</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="btzdwlb" type="btzdwlb">
+				<xs:annotation>
+					<xs:documentation>被投资单位列表</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="btzdwynssdehj" type="je">
+				<xs:annotation>
+					<xs:documentation>被投资单位应纳税所得额合计</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ytzdtzzjcfy" type="je">
+				<xs:annotation>
+					<xs:documentation>应调增的投资者减除费用</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="tzhynssde" type="je">
+				<xs:annotation>
+					<xs:documentation>调整后应纳税所得额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sl" type="sl1">
+				<xs:annotation>
+					<xs:documentation>税率</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sskcs" type="je">
+				<xs:annotation>
+					<xs:documentation>速算扣除数</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ynse" type="se">
+				<xs:annotation>
+					<xs:documentation>应纳税额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sfqbgrdz" type="bz3">
+				<xs:annotation>
+					<xs:documentation>是否全部个人独资（Y:是，N:否）</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sfqbgrdzMc" type="bz1">
+				<xs:annotation>
+					<xs:documentation>是否全部个人独资名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bz" type="bl">
+				<xs:annotation>
+					<xs:documentation>本企业经营所得占各企业经营所得总额的比重（%）</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bqyynse" type="se">
+				<xs:annotation>
+					<xs:documentation>本企业应纳税额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jmse" type="se">
+				<xs:annotation>
+					<xs:documentation>减免税额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sjynse" type="se">
+				<xs:annotation>
+					<xs:documentation>实际应纳税额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yjse" type="se">
+				<xs:annotation>
+					<xs:documentation>已缴税额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ybtse" type="se">
+				<xs:annotation>
+					<xs:documentation>应补（退）税额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="tzzxx">
+		<xs:annotation>
+			<xs:documentation>投资者信息</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="xm" type="xm">
+				<xs:annotation>
+					<xs:documentation>姓名</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sfzjlxDm" type="sfzjlxDm">
+				<xs:annotation>
+					<xs:documentation>身份证件类型代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sfzjlxmc" type="sfzjlxmc">
+				<xs:annotation>
+					<xs:documentation>身份证件类型名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sfzjhm" type="sfzjhm">
+				<xs:annotation>
+					<xs:documentation>身份证件号码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="gjdqdm" type="gjhdqszDm">
+				<xs:annotation>
+					<xs:documentation>国籍（地区）代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="gjdqmc" type="gjhdqzwqc">
+				<xs:annotation>
+					<xs:documentation>国籍（地区）名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="nsrsbh" type="nsrsbh">
+				<xs:annotation>
+					<xs:documentation>纳税人识别号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="djxh" type="djxh">
+				<xs:annotation>
+					<xs:documentation>登记序号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="tzdwDjxh" type="djxh">
+				<xs:annotation>
+					<xs:documentation>投资单位登记序号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sdxmDm" type="sdxmDm">
+				<xs:annotation>
+					<xs:documentation>所得项目类型代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sdxmmc" type="sdxmmc">
+				<xs:annotation>
+					<xs:documentation>所得项目类型名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zspmDm" type="zspmDm">
+				<xs:annotation>
+					<xs:documentation>征收品目代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zspmMc" type="zspmmc">
+				<xs:annotation>
+					<xs:documentation>征收品目名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="btzdwlx" type="bz3">
+				<xs:annotation>
+					<xs:documentation>被投资单位类型:是否两个或两个以上个人独资企业或个体工商户情况 0：否 1：是（分配比例默认都为100%） 生产经营必传，承包承租时不需传</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="btzdwlb">
+		<xs:annotation>
+			<xs:documentation>被投资单位列表</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="dfpjfrmxLb" maxOccurs="unbounded">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="hh" type="je">
+							<xs:annotation>
+								<xs:documentation>行号</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+						<xs:element name="sfhjd" type="bz3">
+							<xs:annotation>
+								<xs:documentation>是否汇缴地（Y:是，N:否）</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+						<xs:element name="btzdwmc" type="btzdwmc">
+							<xs:annotation>
+								<xs:documentation>被投资单位名称</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+						<xs:element name="btzdwnsrsbh" type="btzdwnsrsbh">
+							<xs:annotation>
+								<xs:documentation>被投资单位纳税人识别号</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+						<xs:element name="fpbl" type="fpbl">
+							<xs:annotation>
+								<xs:documentation>分配比例,传值1到100</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+						<xs:element name="je" type="je">
+							<xs:annotation>
+								<xs:documentation>金额</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+						<xs:element name="tzdwDjxh" type="djxh">
+							<xs:annotation>
+								<xs:documentation>被投资单位登记序号</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+						<xs:element name="zgswjgDm" type="swjgDm">
+							<xs:annotation>
+								<xs:documentation>投资单位主管税务机关</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+						<xs:element name="zgswksfjDm" type="swjgDm">
+							<xs:annotation>
+								<xs:documentation>投资单位主管税务科所分局代码</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="hjje" type="je">
+				<xs:annotation>
+					<xs:documentation>合计金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:simpleType name="hh">
+		<xs:annotation>
+			<xs:documentation>行号</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:maxLength value="2"/>
+		</xs:restriction>
+	</xs:simpleType>
+</xs:schema>

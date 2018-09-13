@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 被2012 () 使用XMLSpy v编辑的 (http://www.altova.com) by -->
+<!-- edited with XMLSpy v2010 rel. 3 (http://www.altova.com) by liuwei (liuweicss) -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:complexType name="A100000Ywbd">
+		<xs:annotation>
+			<xs:documentation>中华人民共和国企业所得税年度纳税申报(A100000)业务报文</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="zbForm" type="SB287ZbForm">
+						<xs:annotation>
+							<xs:documentation>中华人民共和国企业所得税年度纳税申报</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="SB287ZbForm">
+		<xs:annotation>
+			<xs:documentation>《中华人民共和国企业所得税年度纳税申报》</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="yysr" type="je">
+				<xs:annotation>
+					<xs:documentation>营业收入</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yycb" type="je">
+				<xs:annotation>
+					<xs:documentation>营业成本</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yysjFj" type="je">
+				<xs:annotation>
+					<xs:documentation>营业税金及附加</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="xsfy" type="je">
+				<xs:annotation>
+					<xs:documentation>销售费用</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="glfy" type="je">
+				<xs:annotation>
+					<xs:documentation>管理费用</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="cwfy" type="je">
+				<xs:annotation>
+					<xs:documentation>财务费用</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zcjzss" type="je">
+				<xs:annotation>
+					<xs:documentation>资产减值损失</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="gyjzbdsy" type="je">
+				<xs:annotation>
+					<xs:documentation>公允价值变动收益</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="tzsy" type="je">
+				<xs:annotation>
+					<xs:documentation>投资收益</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yylr" type="je">
+				<xs:annotation>
+					<xs:documentation>营业利润</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yywsr" type="je">
+				<xs:annotation>
+					<xs:documentation>营业外收入</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yywzc" type="je">
+				<xs:annotation>
+					<xs:documentation>营业外支出</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="lrze" type="je">
+				<xs:annotation>
+					<xs:documentation>利润总额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jwsdje" type="je">
+				<xs:annotation>
+					<xs:documentation>境外所得金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="nstzzje" type="je">
+				<xs:annotation>
+					<xs:documentation>纳税调整增加额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="nstzjse" type="je">
+				<xs:annotation>
+					<xs:documentation>纳税调整减少额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="msjjsrjjjkc" type="je">
+				<xs:annotation>
+					<xs:documentation>减：免税、减计收入及加计扣除||减：免税、减计收入及加计扣除</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jwyssddjjnks" type="je">
+				<xs:annotation>
+					<xs:documentation>加：境外应税所得抵减境内亏损||加：境外应税所得抵减境内亏损</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="nstzhsd" type="je">
+				<xs:annotation>
+					<xs:documentation>纳税调整后所得||纳税调整后所得</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sdjm" type="je">
+				<xs:annotation>
+					<xs:documentation>减：所得减免||减：所得减免</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="dkynssde" type="je">
+				<xs:annotation>
+					<xs:documentation>抵扣应纳税所得额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="mbyqndks" type="je">
+				<xs:annotation>
+					<xs:documentation>弥补以前年度亏损||弥补以前年度亏损</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ynssde" type="je">
+				<xs:annotation>
+					<xs:documentation>应纳税所得额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sl1" type="je">
+				<xs:annotation>
+					<xs:documentation>税率</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ynsdse" type="je">
+				<xs:annotation>
+					<xs:documentation>应纳所得税额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jmsdse" type="je">
+				<xs:annotation>
+					<xs:documentation>减、免所得税额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="dmsdse" type="je">
+				<xs:annotation>
+					<xs:documentation>抵免所得税额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ynse" type="je">
+				<xs:annotation>
+					<xs:documentation>应纳税额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jwsdynsdse" type="je">
+				<xs:annotation>
+					<xs:documentation>境外所得应纳所得税额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jwsddmsdse" type="je">
+				<xs:annotation>
+					<xs:documentation>减：境外所得抵免所得税额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sjynsdse" type="je">
+				<xs:annotation>
+					<xs:documentation>实际应纳所得税额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bnljsjyyjSdse" type="je">
+				<xs:annotation>
+					<xs:documentation>本年累计实际已预缴的所得税额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bnybtSdse" type="je">
+				<xs:annotation>
+					<xs:documentation>本年应补退的所得税额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zjgftbnybtsdse" type="je">
+				<xs:annotation>
+					<xs:documentation>总机构分摊本年应补（退）所得税额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="czjzfpbnybtsdse" type="je">
+				<xs:annotation>
+					<xs:documentation>财政集中分配本年应补（退）所得税额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zjgztscjybmftbnybtsdse" type="je">
+				<xs:annotation>
+					<xs:documentation>总机构主体生产经营部门分摊本年应补（退）所得税额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2013 (http://www.altova.com) by  () -->
+<!-- 被2011 rel. 2 sp1 (TeaM DJiNN) 使用XMLSpy vTeaM DJiNN编辑的 (http://www.altova.com) by -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:complexType name="HXZGZS00996Response">
+		<xs:annotation>
+			<xs:documentation>三方协议响应报文</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="sfxyxxGrid">
+						<xs:complexType>
+							<xs:sequence minOccurs="0" maxOccurs="unbounded">
+								<xs:element name="sfxyxxGridlb" type="ZSSfxyxxVO"/>
+							</xs:sequence>
+						</xs:complexType>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="ZSSfxyxxVO">
+		<xs:annotation>
+			<xs:documentation>三方协议VO</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="sfxydjuuid" type="sfxydjuuid">
+				<xs:annotation>
+					<xs:documentation>三方协议uuid</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="djxh" type="djxh">
+				<xs:annotation>
+					<xs:documentation>登记序号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="skssswjgDm" type="skssswjgDm">
+				<xs:annotation>
+					<xs:documentation>税款所属税务机构代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sfxyh" type="sfxyh">
+				<xs:annotation>
+					<xs:documentation>三方协议号||三方协议号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yhhbDm" type="yhhbDm">
+				<xs:annotation>
+					<xs:documentation>银行行别代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yhyywdDm" type="yhyywdDm">
+				<xs:annotation>
+					<xs:documentation>银行营业网点代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="xzqhszDm" type="xzqhszDm">
+				<xs:annotation>
+					<xs:documentation>行政区划数字代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qsyhhh" type="qsyhhh">
+				<xs:annotation>
+					<xs:documentation>清算行行号||清算行行号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="khyhhh" type="khyhhh">
+				<xs:annotation>
+					<xs:documentation>开户行行号||开户行行号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jkzh" type="jkzh">
+				<xs:annotation>
+					<xs:documentation>缴款帐号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jkzhmc" type="jkzhmc">
+				<xs:annotation>
+					<xs:documentation>缴款账户名称||缴款账户名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sfxyztDm" type="sfxyztDm">
+				<xs:annotation>
+					<xs:documentation>三方协议状态代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sfxyyzxx" type="sfxyyzxx" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation> 三方协议验证信息</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sfxyyztgRq" type="sfxyyztgRq" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>三方协议验证通过日期</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="pkbz" type="pkbz" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>批扣标志</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sjtbSj" type="sjtbSj" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>数据同步时间||</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

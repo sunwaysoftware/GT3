@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 被2011 rel. 2 sp1 (TeaM DJiNN) 使用XMLSpy vTeaM DJiNN编辑的 (http://www.altova.com) by -->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://www.chinatax.gov.cn/dataspec/" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:complexType name="hqSbfkxxResponse">
+		<xs:annotation>
+			<xs:documentation>获取申报反馈信息响应报文</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="sbfkmxlb" type="sbfkmxlb">
+						<xs:annotation>
+							<xs:documentation>申报反馈明细列表</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="kkfkmxlb" type="kkfkmxlb">
+						<xs:annotation>
+							<xs:documentation>扣款反馈明细列表</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="sbfkmxlb">
+		<xs:annotation>
+			<xs:documentation>申报反馈明细列表</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="sbfkmx" type="sbfkmx" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="kkfkmxlb">
+		<xs:annotation>
+			<xs:documentation>扣款反馈明细列表</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="kkfkmx" type="kkfkmx" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="sbfkmx">
+		<xs:annotation>
+			<xs:documentation>申报反馈明细</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="jywysbh" type="jywysbh">
+				<xs:annotation>
+					<xs:documentation>交易唯一识别号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ffyf" type="sbrq1">
+				<xs:annotation>
+					<xs:documentation>发放月份</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sfcg" type="sfcg">
+				<xs:annotation>
+					<xs:documentation>是否成功(0:申报失败，1:申报成功,2:申报数据处理中,3:申报成功无需扣款,6:申报数据已作废,7：未申报)</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yzpzxh" type="yzpzxh">
+				<xs:annotation>
+					<xs:documentation>应征凭证序号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="fkxx" type="fkxx">
+				<xs:annotation>
+					<xs:documentation>反馈信息</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="kkfkmx">
+		<xs:annotation>
+			<xs:documentation>扣款反馈明细</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="jywysbh" type="jywysbh">
+				<xs:annotation>
+					<xs:documentation>交易唯一识别号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ffyf" type="sbrq1">
+				<xs:annotation>
+					<xs:documentation>发放月份</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sfcg" type="sfcg">
+				<xs:annotation>
+					<xs:documentation>是否成功(0:扣款失败,1:扣款成功,2:无需扣款)</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="fkxx" type="fkxx">
+				<xs:annotation>
+					<xs:documentation>反馈信息</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ykkhj" type="se">
+				<xs:annotation>
+					<xs:documentation>已扣款合计</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ykje" type="se">
+				<xs:annotation>
+					<xs:documentation>已扣金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

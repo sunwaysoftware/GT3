@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:complexType name="HXZGSB01638Response">
+		<xs:annotation>
+			<xs:documentation>个税获取通用申报中个税申报数据信息返回报文</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="gsTysbSbxxGrid">
+						<xs:annotation>
+							<xs:documentation>个税通用申报申报数据信息</xs:documentation>
+						</xs:annotation>
+						<xs:complexType>
+							<xs:sequence minOccurs="0" maxOccurs="unbounded">
+								<xs:element name="gsTysbSbxxGridlb" type="GSTysbSbxxGridlb"/>
+							</xs:sequence>
+						</xs:complexType>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="GSTysbSbxxGridlb">
+		<xs:annotation>
+			<xs:documentation>个税通用申报申报数据明细信息</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="djxh" type="djxh" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>登记序号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="pzxh" type="pzxh" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>凭证序号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sybzDm1" type="sybzDm1" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>税源标志代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sybh1" type="sybh1" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>税源编号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="syzldz" type="syzldz" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>税源坐落地址</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zsxmDm" type="zsxmDm" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>征收项目代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zspmDm" type="zspmDm" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>征收品目代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zszmDm" type="zszmDm" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>征收子目代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="skssqq" type="skssqq" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>税款所属期起</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="skssqz" type="skssqz" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>税款所属期止</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ysx" type="ysx" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>应税项总数量或收入总额、应缴费人数、原值、面积、缴费基数等</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jcx" type="jcx" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>减除项允许减除数量、金额、面积、已安排残疾人数等</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="hdjsyjje" type="hdjsyjje" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>核定计税依据金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="hztykcjye" type="hztykcjye" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>核准停业扣除经营额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jsfyj" type="jsfyj" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>计税费依据</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sflhdwse" type="sflhdwse" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>税费率或单位税额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sskcs" type="sskcs" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>速算扣除数</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bqynsfe" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>本期应纳税费额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bqjmsfe" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>本期减免税费额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bqyjsfe" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>本期已缴税费额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bqybtsfe" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>本期应补退税费额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yssdl" type="yssdl" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>应税所得率</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

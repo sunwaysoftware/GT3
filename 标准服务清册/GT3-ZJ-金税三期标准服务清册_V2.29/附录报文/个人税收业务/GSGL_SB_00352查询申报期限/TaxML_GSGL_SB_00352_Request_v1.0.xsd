@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:complexType name="cxSbqxRequest">
+		<xs:annotation>
+			<xs:documentation>查询申报期限请求报文</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="zsxmDm" type="zsxmDm">
+						<xs:annotation>
+							<xs:documentation>征收项目代码，(不能为空)</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="zspmDm" type="zspmDm">
+						<xs:annotation>
+							<xs:documentation>征收品目代码，(不能为空)</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="djxh" type="djxh">
+						<xs:annotation>
+							<xs:documentation>自然人的登记序号(扣缴类申报可以为空，其他的不能为空)</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="qydjxh" type="djxh">
+						<xs:annotation>
+							<xs:documentation>
+							企业单位登记序号(自行申报A、自行申报B、十二万申报，限售股清算申报可以为空，其他不能为空)
+						   </xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="yzpzzlDm" type="yzpzzlDm">
+						<xs:annotation>
+							<xs:documentation>应征凭证种类代码，(不能为空)</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="ywlxDm" type="ywlx">
+						<xs:annotation>
+							<xs:documentation>业务类型代码，(不能为空)</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="zgswskfjDm" type="zgswskfjDm">
+						<xs:annotation>
+							<xs:documentation>主管税务所科分局代码，(不能为空)</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="skssqq" type="skssqq">
+						<xs:annotation>
+							<xs:documentation>税款所属期起，(格式:yyyy-MM-dd,不能为空)</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="skssqz" type="skssqz">
+						<xs:annotation>
+							<xs:documentation>税款所属期止，(格式:yyyy-MM-dd,不能为空)</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="sbrq" type="sbrq1">
+						<xs:annotation>
+							<xs:documentation>申报日期，(格式:yyyy-MM-dd,不能为空)</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="lygnsndycy" type="bz3">
+						<xs:annotation>
+							<xs:documentation>
+							来源国纳税年度有差异，(Y-是，N-否,可以为空，针对自行申报B表，如果不传按照N处理，如果没有不用传)
+						</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="sdqjq" type="skssqq">
+						<xs:annotation>
+							<xs:documentation>
+							所得期间起，(格式:yyyy-MM-dd，针对自行申报B表，如果上面lygnsndycy为Y，则该字段不能为空，如果没有不用传)
+						</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="sdqjz" type="skssqz">
+						<xs:annotation>
+							<xs:documentation>
+							所得期间止，(格式:yyyy-MM-dd，针对自行申报B表，如果上面lygnsndycy为Y，则该字段不能为空，如果没有不用传)
+						</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="ykwk" type="bz3">
+						<xs:annotation>
+							<xs:documentation>
+							应扣未扣，(Y-是，N-否,可以为空，针对扣缴个人所得税报告表，如果不传按照N处理，如果没有不用传)
+						</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="wgrbsb" type="bz3">
+						<xs:annotation>
+							<xs:documentation>
+							外国人补申报，(Y-是，N-否,可以为空，针对扣自行申报A表，如果不传按照N处理，如果没有不用传)
+						</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="fqjssj" type="skssqq">
+						<xs:annotation>
+							<xs:documentation>
+							分期计划缴税时间，(格式:yyyy-MM-dd，可以为空，
+							针对自行申报A表有非货币资产分期缴纳备案的情况，如果没有不用传)
+							</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="gpDm" type="gpDm">
+						<xs:annotation>
+							<xs:documentation>
+							股票代码，(可以为空，针对限售股清算申报，如果没有不用传)
+						</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+</xs:schema>

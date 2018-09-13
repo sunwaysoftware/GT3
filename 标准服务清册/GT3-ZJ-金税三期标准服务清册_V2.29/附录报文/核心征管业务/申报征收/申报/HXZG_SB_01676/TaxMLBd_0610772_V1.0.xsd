@@ -1,0 +1,619 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2011 (http://www.altova.com) by HBNU (HBNU) -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:complexType name="fjmqysdsNstzxmmxb">
+		<xs:annotation>
+			<xs:documentation>《中华人民共和国非居民企业所得税纳税调整项目明细表（适用于据实申报企业）</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="fjmqysdsNstzxmmxbForm" type="fjmqysdsNstzxmmxbForm">
+				<xs:annotation>
+					<xs:documentation>非居民企业所得税纳税调整项目明细表（适用于据实申报企业）信息</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="fjmqysdsNstzxmmxbForm">
+		<xs:annotation>
+			<xs:documentation>非居民企业所得税金融企业支出明细表（适用于据实申报企业）</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="srltzxmtzje" type="je">
+				<xs:annotation>
+					<xs:documentation>收入类调整项目调增金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="srltzxmtjje" type="je">
+				<xs:annotation>
+					<xs:documentation>收入类调整项目调减金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="stxsssje" type="je">
+				<xs:annotation>
+					<xs:documentation>视同销售收入税收金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="stxstzje" type="je">
+				<xs:annotation>
+					<xs:documentation>视同销售收入调增金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="waqzfszyzqrdsrzzje" type="je">
+				<xs:annotation>
+					<xs:documentation>未按权责发生制原则确认的收入账载金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="waqzfszyzqrdsrssje" type="je">
+				<xs:annotation>
+					<xs:documentation>未按权责发生制原则确认的收入税收金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="waqzfszyzqrdsrtzje" type="je">
+				<xs:annotation>
+					<xs:documentation>未按权责发生制原则确认的收入调增金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="waqzfszyzqrdsrtjje" type="je">
+				<xs:annotation>
+					<xs:documentation>未按权责发生制原则确认的收入调减金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="tzsyzzje" type="je">
+				<xs:annotation>
+					<xs:documentation>投资收益账载金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="tzsyssje" type="je">
+				<xs:annotation>
+					<xs:documentation>投资收益税收金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="tzsytzje" type="je">
+				<xs:annotation>
+					<xs:documentation>投资收益调增金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="tzsytjje" type="je">
+				<xs:annotation>
+					<xs:documentation>投资收益调减金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="aqyhscqtztjje" type="je">
+				<xs:annotation>
+					<xs:documentation>按权益法核算长期股权投资对初始投资成本调整确认收益调减金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jyxjrzccstztztzje" type="je">
+				<xs:annotation>
+					<xs:documentation>交易性金融资产初始投资调整调增金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="gyjzbdjsyzzje" type="je">
+				<xs:annotation>
+					<xs:documentation>公允价值变动净损益账载金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="gyjzbdjsytzje" type="je">
+				<xs:annotation>
+					<xs:documentation>公允价值变动净损益调增金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="gyjzbdjsytjje" type="je">
+				<xs:annotation>
+					<xs:documentation>公允价值变动净损益调减金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bzssrtzje" type="je">
+				<xs:annotation>
+					<xs:documentation>不征税收入调增金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bzssrtjje" type="je">
+				<xs:annotation>
+					<xs:documentation>不征税收入调减金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zxytczxzjtzje" type="je">
+				<xs:annotation>
+					<xs:documentation>   其中：专项用途财政性资金调增金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zxytczxzjtjje" type="je">
+				<xs:annotation>
+					<xs:documentation>其中：专项用途财政性资金调减金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="xszkzrhthzzje" type="je">
+				<xs:annotation>
+					<xs:documentation>销售折扣、折让和退回账载金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="xszkzrhthssje" type="je">
+				<xs:annotation>
+					<xs:documentation>销售折扣、折让和退回税收金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="xszkzrhthtzje" type="je">
+				<xs:annotation>
+					<xs:documentation>销售折扣、折让和退回调增金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="xszkzrhthtjje" type="je">
+				<xs:annotation>
+					<xs:documentation>销售折扣、折让和退回调减金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="srltzxmqtzzje" type="je">
+				<xs:annotation>
+					<xs:documentation>其他账载金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="srltzxmqtssje" type="je">
+				<xs:annotation>
+					<xs:documentation>其他税收金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="srltzxmqttzje" type="je">
+				<xs:annotation>
+					<xs:documentation>其他调增金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="srltzxmqttjje" type="je">
+				<xs:annotation>
+					<xs:documentation>其他调减金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="kclxmtztzje" type="je">
+				<xs:annotation>
+					<xs:documentation>扣除类调整项目调增金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="kclxmtztjje" type="je">
+				<xs:annotation>
+					<xs:documentation>扣除类调整项目调减金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="stxszbssje" type="je">
+				<xs:annotation>
+					<xs:documentation>视同销售成本税收金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="stxszbtjje" type="je">
+				<xs:annotation>
+					<xs:documentation>视同销售成本调减金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zgxczzje" type="je">
+				<xs:annotation>
+					<xs:documentation>职工薪酬账载金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zgxcssje" type="je">
+				<xs:annotation>
+					<xs:documentation>职工薪酬税收金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zgxctzje" type="je">
+				<xs:annotation>
+					<xs:documentation>职工薪酬调增金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zgxctjje" type="je">
+				<xs:annotation>
+					<xs:documentation>职工薪酬调减金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ywzdfzczzje" type="je">
+				<xs:annotation>
+					<xs:documentation>业务招待费支出账载金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ywzdfzcssje" type="je">
+				<xs:annotation>
+					<xs:documentation>业务招待费支出税收金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ywzdfzctzje" type="je">
+				<xs:annotation>
+					<xs:documentation>业务招待费支出调增金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ggfhywxcfzctzje" type="je">
+				<xs:annotation>
+					<xs:documentation>广告费和业务宣传费支出调增金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ggfhywxcfzctjje" type="je">
+				<xs:annotation>
+					<xs:documentation>广告费和业务宣传费支出调减金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jzzczzje" type="je">
+				<xs:annotation>
+					<xs:documentation>捐赠支出账载金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jzzcssje" type="je">
+				<xs:annotation>
+					<xs:documentation>捐赠支出税收金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jzzctzje" type="je">
+				<xs:annotation>
+					<xs:documentation>捐赠支出调增金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="lxzczzje" type="je">
+				<xs:annotation>
+					<xs:documentation>利息支出账载金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="lxzcssje" type="je">
+				<xs:annotation>
+					<xs:documentation>利息支出税收金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="lxzctzje" type="je">
+				<xs:annotation>
+					<xs:documentation>利息支出调增金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="lxzctjje" type="je">
+				<xs:annotation>
+					<xs:documentation>利息支出调减金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="fjfkhbmscwdsszzje" type="je">
+				<xs:annotation>
+					<xs:documentation>罚金、罚款和被没收财物的损失账载金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="fjfkhbmscwdsstzje" type="je">
+				<xs:annotation>
+					<xs:documentation>罚金、罚款和被没收财物的损失调增金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ssznjjslxzzje" type="je">
+				<xs:annotation>
+					<xs:documentation>税收滞纳金、加收利息账载金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ssznjjslxtzje" type="je">
+				<xs:annotation>
+					<xs:documentation>税收滞纳金、加收利息调增金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zzzczzje" type="je">
+				<xs:annotation>
+					<xs:documentation>赞助支出账载金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zzzctzje" type="je">
+				<xs:annotation>
+					<xs:documentation>赞助支出调增金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ywsxrzsyzzje" type="je">
+				<xs:annotation>
+					<xs:documentation>与未实现融资收益相关在当期确认的财务费用账载金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ywsxrzsyssje" type="je">
+				<xs:annotation>
+					<xs:documentation>与未实现融资收益相关在当期确认的财务费用税收金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ywsxrzsytzje" type="je">
+				<xs:annotation>
+					<xs:documentation>与未实现融资收益相关在当期确认的财务费用调增金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ywsxrzsytjje" type="je">
+				<xs:annotation>
+					<xs:documentation>与未实现融资收益相关在当期确认的财务费用调减金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yjhsxfzczzje" type="je">
+				<xs:annotation>
+					<xs:documentation>佣金和手续费支出账载金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yjhsxfzcssje" type="je">
+				<xs:annotation>
+					<xs:documentation>佣金和手续费支出税收金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yjhsxfzctzje" type="je">
+				<xs:annotation>
+					<xs:documentation>佣金和手续费支出调增金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bzssryyzctzje" type="je">
+				<xs:annotation>
+					<xs:documentation>不征税收入用于支出所形成的费用调增金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zxytczxyyzctzje" type="je">
+				<xs:annotation>
+					<xs:documentation>其中：专项用途财政性资金用于支出所形成的费用调增金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="kqkcxmzzje" type="je">
+				<xs:annotation>
+					<xs:documentation>跨期扣除项目账载金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="kqkcxmssje" type="je">
+				<xs:annotation>
+					<xs:documentation>跨期扣除项目税收金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="kqkcxmtzje" type="je">
+				<xs:annotation>
+					<xs:documentation>跨期扣除项目调增金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="kqkcxmtjje" type="je">
+				<xs:annotation>
+					<xs:documentation>跨期扣除项目调减金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yqdsrwgdzczzje" type="je">
+				<xs:annotation>
+					<xs:documentation>与取得收入无关的支出账载金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yqdsrwgdzctzje" type="je">
+				<xs:annotation>
+					<xs:documentation>与取得收入无关的支出调增金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jwsdftdgtzctzje" type="je">
+				<xs:annotation>
+					<xs:documentation>境外所得分摊的共同支出调增金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="kcltzxmqtzzje" type="je">
+				<xs:annotation>
+					<xs:documentation>其他账载金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="kcltzxmqtssje" type="je">
+				<xs:annotation>
+					<xs:documentation>其他税收金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="kcltzxmqttzje" type="je">
+				<xs:annotation>
+					<xs:documentation>其他调增金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="kcltzxmqttjje" type="je">
+				<xs:annotation>
+					<xs:documentation>其他调减金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zcltzxmtzje" type="je">
+				<xs:annotation>
+					<xs:documentation>资产类调整项目调增金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zcltzxmtjje" type="je">
+				<xs:annotation>
+					<xs:documentation>资产类调整项目调减金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zczjtxzzje" type="je">
+				<xs:annotation>
+					<xs:documentation>资产折旧、摊销 账载金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zczjtxssje" type="je">
+				<xs:annotation>
+					<xs:documentation>资产折旧、摊销 税收金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zczjtxtzje" type="je">
+				<xs:annotation>
+					<xs:documentation>资产折旧、摊销 调增金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zczjtxtjje" type="je">
+				<xs:annotation>
+					<xs:documentation>资产折旧、摊销调减金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qzgdzcjszjzzje" type="je">
+				<xs:annotation>
+					<xs:documentation>其中：固定资产加速折旧（扣除）账载金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qzgdzcjszjssje" type="je">
+				<xs:annotation>
+					<xs:documentation>其中：固定资产加速折旧（扣除）税收金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qzgdzcjszjtzje" type="je">
+				<xs:annotation>
+					<xs:documentation>其中：固定资产加速折旧（扣除）调增金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qzgdzcjszjtjje" type="je">
+				<xs:annotation>
+					<xs:documentation>其中：固定资产加速折旧（扣除）调减金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zcjzzbjzzje" type="je">
+				<xs:annotation>
+					<xs:documentation>资产减值准备金账载金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zcjzzbjtzje" type="je">
+				<xs:annotation>
+					<xs:documentation>资产减值准备金调增金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zcjzzbjtjje" type="je">
+				<xs:annotation>
+					<xs:documentation>资产减值准备金调减金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zcsszzje" type="je">
+				<xs:annotation>
+					<xs:documentation>资产损失账载金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zcssssje" type="je">
+				<xs:annotation>
+					<xs:documentation>资产损失税收金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zcsstzje" type="je">
+				<xs:annotation>
+					<xs:documentation>资产损失调增金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zcsstjje" type="je">
+				<xs:annotation>
+					<xs:documentation>资产损失调减金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zcltzxmqtzzje" type="je">
+				<xs:annotation>
+					<xs:documentation>其他账载金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zcltzxmqtssje" type="je">
+				<xs:annotation>
+					<xs:documentation>其他税收金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zcltzxmqttzje" type="je">
+				<xs:annotation>
+					<xs:documentation>其他调增金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zcltzxmqttjje" type="je">
+				<xs:annotation>
+					<xs:documentation>其他调减金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="tssxtzxmtzje" type="je">
+				<xs:annotation>
+					<xs:documentation>特殊事项调整项目调增金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="tssxtzxmtjje" type="je">
+				<xs:annotation>
+					<xs:documentation>特殊事项调整项目调减金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qyczzzje" type="je">
+				<xs:annotation>
+					<xs:documentation>企业重组账载金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qyczssje" type="je">
+				<xs:annotation>
+					<xs:documentation>企业重组税收金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qycztzje" type="je">
+				<xs:annotation>
+					<xs:documentation>企业重组调增金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qyzctjje" type="je">
+				<xs:annotation>
+					<xs:documentation>企业重组调减金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zcxbqtzje" type="je">
+				<xs:annotation>
+					<xs:documentation>政策性搬迁调增金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zcxbqtjje" type="je">
+				<xs:annotation>
+					<xs:documentation>政策性搬迁调减金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="tshyzbjzzje" type="je">
+				<xs:annotation>
+					<xs:documentation>账载金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="tshyzbjssje" type="je">
+				<xs:annotation>
+					<xs:documentation>特殊行业准备金税收金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="tshyzbjtzje" type="je">
+				<xs:annotation>
+					<xs:documentation>特殊行业准备金调增金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="tshyzbjtjje" type="je">
+				<xs:annotation>
+					<xs:documentation>特殊行业准备金调减金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="fdckfqyssje" type="je">
+				<xs:annotation>
+					<xs:documentation>房地产开发企业特定业务计算的纳税调整额税收金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="fdckfqytzje" type="je">
+				<xs:annotation>
+					<xs:documentation>房地产开发企业特定业务计算的纳税调整额调增金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="fdckfqytjje" type="je">
+				<xs:annotation>
+					<xs:documentation>房地产开发企业特定业务计算的纳税调整额调减金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qttzje1" type="je">
+				<xs:annotation>
+					<xs:documentation>其他调增金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qttjje" type="je">
+				<xs:annotation>
+					<xs:documentation>其他调减金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="tbnstzyssdtzje" type="je">
+				<xs:annotation>
+					<xs:documentation>合特别纳税调整应税所得调增金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="tbnstzyssdtjje" type="je">
+				<xs:annotation>
+					<xs:documentation>特别纳税调整应税所得调减金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ztqttzje" type="je">
+				<xs:annotation>
+					<xs:documentation>其他调增金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ztqttjje" type="je">
+				<xs:annotation>
+					<xs:documentation>其他调减金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="hjtzje" type="je">
+				<xs:annotation>
+					<xs:documentation>合计调增金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="hjtjje" type="je">
+				<xs:annotation>
+					<xs:documentation>合计调减金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

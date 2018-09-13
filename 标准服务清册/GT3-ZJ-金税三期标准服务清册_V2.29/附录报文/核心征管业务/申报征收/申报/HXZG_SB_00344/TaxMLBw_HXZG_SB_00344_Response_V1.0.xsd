@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2013 (http://www.altova.com) by  () -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:include schemaLocation="TaxMLPublicSBType.xsd"/>
+	<xs:include schemaLocation="TaxMLBw_clfxsxxcj_V1.0.xsd"/>
+	<xs:complexType name="HXZGSB00344Response">
+		<xs:annotation>
+			<xs:documentation>存量房交易信息采集保存</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="zlbscjuuid" type="zlbscjuuid">
+						<xs:annotation>
+							<xs:documentation>生成资料报送采集UUID</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="clfjyxxcjb" type="clfjyxxcjywbw">
+						<xs:annotation>
+							<xs:documentation>存量房交易信息表表单</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+</xs:schema>

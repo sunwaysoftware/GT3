@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 被2012 () 使用XMLSpy v编辑的 (http://www.altova.com) by -->
+<!-- edited with XMLSpy v2013 (http://www.altova.com) by  () -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:complexType name="swjctzsyywbw">
+		<xs:annotation>
+			<xs:documentation>《税务检查通知书（一）》业务报文</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="swjctzsyForm" type="swjctzsyForm">
+						<xs:annotation>
+							<xs:documentation>稽查实施方案表单</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="swjctzsyForm">
+		<xs:sequence>
+			<xs:element name="ajbh" type="ajbh1">
+				<xs:annotation>
+					<xs:documentation>案件编号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="swjgDm" type="swjgDm">
+				<xs:annotation>
+					<xs:documentation>税务机关名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jcry" type="jcry">
+				<xs:annotation>
+					<xs:documentation>检查人员</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jcrqq" type="jcrqq">
+				<xs:annotation>
+					<xs:documentation>检查日期起</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jcssqjq" type="jcssqjq">
+				<xs:annotation>
+					<xs:documentation>检查所属期起</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jcssqjz" type="jcssqjz">
+				<xs:annotation>
+					<xs:documentation>检查所属期止</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="nsrmc" type="nsrmc">
+				<xs:annotation>
+					<xs:documentation>稽查对象名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="czrq1" type="czrq1">
+				<xs:annotation>
+					<xs:documentation>文书制作日期</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sjslid" type="sjslid">
+				<xs:annotation>
+					<xs:documentation>事件实例ID</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="dzbzdszlDm" type="dzbzdszlDm">
+				<xs:annotation>
+					<xs:documentation>电子表证单书种类代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="wszg" type="gfxwjwszg">
+				<xs:annotation>
+					<xs:documentation>文书字轨</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="swjgjg" type="swjgjg">
+				<xs:annotation>
+					<xs:documentation>税务机构局轨</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zg" type="zg">
+				<xs:annotation>
+					<xs:documentation>字轨</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="nh">
+				<xs:annotation>
+					<xs:documentation>年号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="wh">
+				<xs:annotation>
+					<xs:documentation>文号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="swjctzsyuuid" type="swjctzsyuuid">
+				<xs:annotation>
+					<xs:documentation>税务稽查通知书UUID</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ywzjuuid" type="ywzjuuid">
+				<xs:annotation>
+					<xs:documentation>业务主键UUID</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="czryDm" type="czryDm">
+				<xs:annotation>
+					<xs:documentation>操作人员代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sssx" type="sssx">
+				<xs:annotation>
+					<xs:documentation>涉税事项</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jcrsl" type="jcrsl">
+				<xs:annotation>
+					<xs:documentation>检查人数量</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 被2012 () 使用XMLSpy v编辑的 (http://www.altova.com) by -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxMLBd_112001001_V1.0.xsd"/>
+	<xs:include schemaLocation="TaxMLPublicJCType.xsd"/>
+	<xs:complexType name="HXZGFXCL00097Response">
+		<xs:annotation>
+			<xs:documentation>查询在查案件列表返回报文</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="zcajxxGrid" type="zcajxxGrid">
+						<xs:annotation>
+							<xs:documentation>在查案件信息</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="zcajxxGrid">
+		<xs:sequence maxOccurs="unbounded">
+			<xs:element name="zcajxxGridlb" type="JCAjxxVO">
+				<xs:annotation>
+					<xs:documentation>在查案件信息列表</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="zcajxxGridlbVO">
+		<xs:sequence>
+			<xs:element name="djxh" type="djxh">
+				<xs:annotation>
+					<xs:documentation>登记序号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="nsrsbh" type="nsrsbh">
+				<xs:annotation>
+					<xs:documentation>纳税人识别号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="nsrmc" type="nsrmc">
+				<xs:annotation>
+					<xs:documentation>纳税人名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jcajbh" type="jcajbh">
+				<xs:annotation>
+					<xs:documentation>案件编号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ajmc" type="ajmc">
+				<xs:annotation>
+					<xs:documentation>案件名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ajjcztDm" type="ajjcztDm">
+				<xs:annotation>
+					<xs:documentation>案件稽查状态</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

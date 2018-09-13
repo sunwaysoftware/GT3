@@ -1,0 +1,135 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!-- 被2011 rel. 2 sp1 (TeaM DJiNN) 使用XMLSpy vTeaM DJiNN编辑的 (http://www.altova.com) by -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:complexType name="HXZGZS00330ResponseVO">
+		<xs:annotation>
+			<xs:documentation>电子缴税情况查询响应报文</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="dzjkqkGrid" type="DzjkqkGrid">
+						<xs:annotation>
+							<xs:documentation>电子缴费情况列表</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="DzjkqkGrid">
+		<xs:annotation>
+			<xs:documentation>电子缴费情况列表</xs:documentation>
+		</xs:annotation>
+		<xs:sequence minOccurs="0" maxOccurs="unbounded">
+			<xs:element name="dzjkqkGridlb" type="DzjkqkGridlbVO">
+				<xs:annotation>
+					<xs:documentation>电子缴费情况列表</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="DzjkqkGridlbVO">
+		<xs:annotation>
+			<xs:documentation>电子缴费情况</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="zsxmDm" type="zsxmDm">
+				<xs:annotation>
+					<xs:documentation>电子缴税税种</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zspmDm" type="zspmDm">
+				<xs:annotation>
+					<xs:documentation>品目</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="skssqq" type="skssqq">
+				<xs:annotation>
+					<xs:documentation>税款所属期起</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="skssqz" type="skssqz">
+				<xs:annotation>
+					<xs:documentation>税款所属期止</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yhhbDm" type="yhhbDm">
+				<xs:annotation>
+					<xs:documentation>银行行别</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yhyywdDm" type="yhyywdDm">
+				<xs:annotation>
+					<xs:documentation>银行营业网点代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sjje" type="sjje">
+				<xs:annotation>
+					<xs:documentation>实缴金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="kjrs" type="kjrs">
+				<xs:annotation>
+					<xs:documentation>扣缴人数</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zsjgDm" type="zsjgDm">
+				<xs:annotation>
+					<xs:documentation>征收机关</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="dzsphm" type="dzsphm">
+				<xs:annotation>
+					<xs:documentation>电子缴税序号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yzpzxh" type="yzpzxh">
+				<xs:annotation>
+					<xs:documentation>应征凭证序号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yzpzzlDm" type="yzpzzlDm">
+				<xs:annotation>
+					<xs:documentation>应征凭证种类代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sjrq1" type="rkrq">
+				<xs:annotation>
+					<xs:documentation>入库日期（上解）</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="rkrq" type="rkrq">
+				<xs:annotation>
+					<xs:documentation>入库日期（销号）</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="spuuid" type="spuuid">
+				<xs:annotation>
+					<xs:documentation>税票UUID</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zsuuid" type="zsuuid">
+				<xs:annotation>
+					<xs:documentation>征收UUID</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="skjnfsDm" type="skjnfsDm">
+				<xs:annotation>
+					<xs:documentation>税款缴纳方式代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yhzh" type="yhzh">
+				<xs:annotation>
+					<xs:documentation>银行账号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bz" type="bz">
+				<xs:annotation>
+					<xs:documentation>备注信息</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

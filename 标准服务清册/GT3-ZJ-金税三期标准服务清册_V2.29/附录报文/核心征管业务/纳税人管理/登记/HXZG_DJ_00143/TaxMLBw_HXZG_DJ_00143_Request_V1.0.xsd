@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2013 (http://www.altova.com) by  () -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:include schemaLocation="TaxMLPublicDJType.xsd"/>
+	<xs:complexType name="HXZGDJ00143Request">
+		<xs:annotation>
+			<xs:documentation>保存外埠纳税人经营地销售货物申请查验报告表信息接入报文</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="DJWbnsrjydsbcyhwxxVO" type="DJWbnsrjydsbcyhwxxVO">
+						<xs:annotation>
+							<xs:documentation>外埠纳税人经营地申报查验货物信息</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="WbnsrjydsbcyhwSbhwxxGrid" type="WbnsrjydsbcyhwSbhwxxGrid">
+						<xs:annotation>
+							<xs:documentation>外埠纳税人经营地报验登记货物申报货物信息集合</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="WbnsrjydsbcyhwSbhwxxGrid">
+		<xs:annotation>
+			<xs:documentation>外埠纳税人经营地报验登记货物申报货物信息集合</xs:documentation>
+		</xs:annotation>
+		<xs:sequence minOccurs="0" maxOccurs="unbounded">
+			<xs:element name="WbnsrjydsbcyhwSbhwxxGridlb" type="DJWbnsrjydsbcyhwSbhwxxVO">
+				<xs:annotation>
+					<xs:documentation>外埠纳税人经营地报验登记货物申报货物信息集合列表</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

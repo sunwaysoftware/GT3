@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<service>
+  <head>
+    <tran_id>SWZJ.HXZG.SB.YHSCWGZCSHQCS</tran_id>
+    <channel_id>C000FZJES</channel_id>
+    <tran_seq>11111111111111111111111111111111</tran_seq>
+    <tran_date>20140820</tran_date>
+    <tran_time>173655570</tran_time>
+    <rtn_code>0</rtn_code>
+    <rtn_msg>
+      <Code>000</Code>
+      <Message></Message>
+      <Reason></Reason>
+    </rtn_msg>
+    <expand>
+      <name>identityType</name>
+      <value>49308fd2f75d462594648203c1ae5e93</value>
+    </expand>
+    <expand>
+      <name>sjry</name>
+      <value>24406060733</value>
+    </expand>
+    <expand>
+      <name>sjjg</name>
+      <value>24400000000</value>
+    </expand>
+  </head>
+  <body><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<taxML xsi:type="HXZGSB01307Request" bbh="String" xmlbh="String" xmlmc="String" xsi:schemaLocation="http://www.chinatax.gov.cn/dataspec/ TaxMLBw_HXZG_SB_01307_Request_V1.0.xsd" xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<nsrcx>
+		<djxh>12500100002000000000</djxh>
+		<skssqq>2017-03-01</skssqq>
+		<skssqz>2017-03-31</skssqz>
+		<sbsxDm1>11</sbsxDm1>
+		<yzpzzlDm>BDA0610794</yzpzzlDm>
+		<sbuuid>872B6CB5AB60496A0959409BB62A80EE</sbuuid>
+                <pzxh>10024417000000320001</pzxh>
+	</nsrcx>
+	<zlBz></zlBz>
+</taxML>
+]]></body>
+</service>

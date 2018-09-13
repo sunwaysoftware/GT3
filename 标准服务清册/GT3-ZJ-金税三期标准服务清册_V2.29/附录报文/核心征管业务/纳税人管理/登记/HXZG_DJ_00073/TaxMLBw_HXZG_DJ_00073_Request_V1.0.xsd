@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2013 (http://www.altova.com) by  () -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:include schemaLocation="TaxMLBd_012007001_V1.0.xsd"/>
+	<xs:complexType name="HXZGDJ00073Request">
+		<xs:annotation>
+			<xs:documentation>保存组织临时登记纳税人信息请求报文</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="djxh" type="djxh">
+						<xs:annotation>
+							<xs:documentation>登记序号</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="lcslid" type="lcslid" nillable="true">
+						<xs:annotation>
+							<xs:documentation>流程实例ID</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="wcsjgdfjmqy" type="bz1">
+						<xs:annotation>
+							<xs:documentation>无常设机构的非居民企业(标志)</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="pzjguuid" type="pzjguuid">
+						<xs:annotation>
+							<xs:documentation>批准机构UUID</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="zzlsdj" type="zzlsdj">
+						<xs:annotation>
+							<xs:documentation>组织临时登记</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="bjgnsrxxbz" type="bcbz">
+						<xs:annotation>
+							<xs:documentation>本机关纳税人信息标志</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="dfjgnsrxxbz" type="bcbz">
+						<xs:annotation>
+							<xs:documentation>对方机关纳税人信息标志</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="sjlybz" type="bcbz">
+						<xs:annotation>
+							<xs:documentation>数据来源标志</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+</xs:schema>

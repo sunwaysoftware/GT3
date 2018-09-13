@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 被2011 rel. 2 sp1 (TeaM DJiNN) 使用XMLSpy vTeaM DJiNN编辑的 (http://www.altova.com) by -->
+<!-- edited with XMLSpy v2013 (http://www.altova.com) by  () -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:complexType name="zrryhjmsbabgbRequest">
+		<xs:annotation>
+			<xs:documentation>自然人优惠减免税备案报告表请求报文</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="zrryhjmsbabgb" type="zrryhjmsbabgb">
+						<xs:annotation>
+							<xs:documentation>自然人优惠减免税备案报告表</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="zrryhjmsbabgb">
+		<xs:annotation>
+			<xs:documentation>自然人优惠减免税备案报告表</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="zrryhjmsbaxxHead" type="zrryhjmsbaxxHead">
+				<xs:annotation>
+					<xs:documentation>自然人优惠减免税备案信息头</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zrryhjmsbaxxBody" type="zrryhjmsbaxxBody">
+				<xs:annotation>
+					<xs:documentation>自然人优惠减免税备案信息体</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="zrryhjmsbaxxHead">
+		<xs:annotation>
+			<xs:documentation>自然人优惠减免税备案信息头</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="zrrxxs" type="zrrxx" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>自然人信息</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="slrDm" type="slrDm">
+				<xs:annotation>
+					<xs:documentation>受理人代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="slrq" type="slrq">
+				<xs:annotation>
+					<xs:documentation>受理日期</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="slswjgDm" type="slswjgDm">
+				<xs:annotation>
+					<xs:documentation>受理税务机关代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="zrrxx">
+		<xs:annotation>
+			<xs:documentation>自然人信息</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="djxh" type="djxh">
+				<xs:annotation>
+					<xs:documentation>登记序号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="chrfcrflxDm" type="chrfcrflxDm">
+				<xs:annotation>
+					<xs:documentation>出让方承让方类型</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="zrryhjmsbaxxBody">
+		<xs:annotation>
+			<xs:documentation>自然人优惠减免税备案信息体</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="jmsbaqk" type="jmsbaqk">
+				<xs:annotation>
+					<xs:documentation>减免税备案情况</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="jmsbaqk">
+		<xs:annotation>
+			<xs:documentation>减免税备案情况</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="fcjyfsDm" type="fcjyfsDm">
+				<xs:annotation>
+					<xs:documentation>交易方式代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="fclxDm" type="fclxDm">
+				<xs:annotation>
+					<xs:documentation>房产类型代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sjzytdfwqsdtdfwmj" type="sjzytdfwqsdtdfwmj" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>房屋面积</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sfptzf" type="sfptzf" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>是否普通住房</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="chrfwtsDm" type="swjgDm" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>出让方房屋套数代码:01第一套 09 其他 如果传递为空代表09</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="crffwtsDm" type="swjgDm" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>承让方房屋套数代码11 第一套 12 第二套 19 其他 如果没有传递代表19</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="schqrq" type="schqrq" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>上次获取日期</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bcjyrq" type="bcjyrq" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>本次交易日期</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="schqfsDm" type="schqfsDm" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>上次获取方式代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="gmfsfzxqs" type="gmfsfzxqs" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>购买方是否直系亲属</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bcsm" type="bcsm" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>说明</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="htqdrq" type="rq" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>合同签订日期 </xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jyfwmj" type="sjzytdfwqsdtdfwmj" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>交易房屋面积</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:simpleType name="sfptzf">
+		<xs:annotation>
+			<xs:documentation>是否普通住房(Y:是)</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:maxLength value="1"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="sfjtwyzf">
+		<xs:annotation>
+			<xs:documentation>是否家庭唯一住房(Y:是)</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:maxLength value="1"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="chrfcrflxDm">
+		<xs:annotation>
+			<xs:documentation>出让方承让方类型(1：出让方；2：承让方)</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:maxLength value="1"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="schqrq">
+		<xs:annotation>
+			<xs:documentation>上次获取日期:格式(yyyy-mm-dd)</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string"/>
+	</xs:simpleType>
+	<xs:simpleType name="bcjyrq">
+		<xs:annotation>
+			<xs:documentation>本次交易日期:格式(yyyy-mm-dd)</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string"/>
+	</xs:simpleType>
+	<xs:simpleType name="schqfsDm">
+		<xs:annotation>
+			<xs:documentation>上次获取方式代码</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string"/>
+	</xs:simpleType>
+	<xs:simpleType name="gmfsfzxqs">
+		<xs:annotation>
+			<xs:documentation>购买方是否直系亲属(Y:是)</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:maxLength value="1"/>
+		</xs:restriction>
+	</xs:simpleType>
+</xs:schema>

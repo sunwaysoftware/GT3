@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 被2012 () 使用XMLSpy v编辑的 (http://www.altova.com) by -->
+<!-- edited with XMLSpy v2013 (http://www.altova.com) by  () -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxMLPublicFZType.xsd"/>
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:complexType name="HXZGFXCL01039Request">
+		<xs:annotation>
+			<xs:documentation>通过各种条件更新税收违法行为处理跟踪表信息接入报文</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="sswfxwclgzbuuid" type="sswfxwclgzbuuid">
+						<xs:annotation>
+							<xs:documentation>税收违法行为处理跟踪表UUID</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="sswfxwdjuuid" type="sswfxwdjuuid" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>税收违法行为登记UUID</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="lcslid" type="lcslid" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>流程实例ID</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="sjslid" type="sjslid" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>事件实例ID</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="flcslid" type="flcslid" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>父流程实例ID</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="fhdslid" type="fhdslid" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>父活动实例ID</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="FZSswfxwclgzbVO" type="FZSswfxwclgzbVO">
+						<xs:annotation>
+							<xs:documentation>需要更新的税收违法行为处理跟踪表信息（只传入需要更新的内容即可）</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+</xs:schema>

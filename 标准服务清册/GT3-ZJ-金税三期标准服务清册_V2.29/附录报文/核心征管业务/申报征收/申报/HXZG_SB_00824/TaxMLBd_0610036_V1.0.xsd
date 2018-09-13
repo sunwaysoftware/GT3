@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 被2012 () 使用XMLSpy v编辑的 (http://www.altova.com) by -->
+<!-- edited with XMLSpy v2010 rel. 3 (http://www.altova.com) by liuwei (css) -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:include schemaLocation="TaxMLPublicType.xsd"/>
+	<xs:complexType name="zysnssbbywbw">
+		<xs:annotation>
+			<xs:documentation>《资源税纳税申报表》业务报文</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="zysnssbb" type="zysnssbb">
+						<xs:annotation>
+							<xs:documentation>《资源税纳税申报表》</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="zysnssbb">
+		<xs:annotation>
+			<xs:documentation>《资源税纳税申报表》</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="sbbhead" type="sbbheadkz1VO">
+				<xs:annotation>
+					<xs:documentation>申报表头信息</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="cldezyssbbxxGrid">
+				<xs:annotation>
+					<xs:documentation>从量定额资源税申报表信息</xs:documentation>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:sequence maxOccurs="unbounded">
+						<xs:element name="cldezyssbbxxGridlb" type="cldezyssbbxxGridlbVO">
+							<xs:annotation>
+								<xs:documentation>从量定额资源税申报表信息</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="cjdlzyssbbxxGrid">
+				<xs:annotation>
+					<xs:documentation>从价定率资源税申报表信息</xs:documentation>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:sequence maxOccurs="unbounded">
+						<xs:element name="cjdlzyssbbxxGridlb" type="cjdlzyssbbxxGridlbVO">
+							<xs:annotation>
+								<xs:documentation>从价定率资源税申报表信息</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="slxxForm" type="slxxForm">
+				<xs:annotation>
+					<xs:documentation>受理信息</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="cldezyssbbxxGridlbVO">
+		<xs:annotation>
+			<xs:documentation>从量定额资源税申报表信息列表</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="yhpzuuid" type="yhpzuuid">
+				<xs:annotation>
+					<xs:documentation>优惠凭证UUID</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zspmDm" type="zspmDm">
+				<xs:annotation>
+					<xs:documentation>征收品目代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zszmDm" type="zszmDm">
+				<xs:annotation>
+					<xs:documentation>征收子目代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jsyj" type="jsyj">
+				<xs:annotation>
+					<xs:documentation>计税依据</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="dwse" type="dwse">
+				<xs:annotation>
+					<xs:documentation>单位税额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bqynse" type="bqynse">
+				<xs:annotation>
+					<xs:documentation>本期应纳税额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jmse" type="jmse">
+				<xs:annotation>
+					<xs:documentation>减免税额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bqyjse_1" type="bqyjse">
+				<xs:annotation>
+					<xs:documentation>本期预缴税额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bqkdkse" type="bqkdkse">
+				<xs:annotation>
+					<xs:documentation>本期可抵扣税额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bqybtse" type="bqybtse">
+				<xs:annotation>
+					<xs:documentation>本期应补退税</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="cjdlzyssbbxxGridlbVO">
+		<xs:annotation>
+			<xs:documentation>从价定率资源税申报表信息</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="yhpzuuid" type="yhpzuuid">
+				<xs:annotation>
+					<xs:documentation>优惠凭证UUID</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zspmDm" type="zspmDm">
+				<xs:annotation>
+					<xs:documentation>征收品目代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zszmDm" type="zszmDm">
+				<xs:annotation>
+					<xs:documentation>征收子目代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jsyj" type="jsyj">
+				<xs:annotation>
+					<xs:documentation>计税依据</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zhjzl" type="zhjzl">
+				<xs:annotation>
+					<xs:documentation>综合减征率</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sjzsl" type="sjzsl">
+				<xs:annotation>
+					<xs:documentation>实际征收率</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bqynse" type="bqynse">
+				<xs:annotation>
+					<xs:documentation>本期应纳税额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jmse" type="jmse">
+				<xs:annotation>
+					<xs:documentation>减免税额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bqyjse_1" type="bqyjse1">
+				<xs:annotation>
+					<xs:documentation>本期已缴税额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bqkdkse" type="bqkdkse">
+				<xs:annotation>
+					<xs:documentation>本期口抵扣税额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bqybtse" type="bqybtse">
+				<xs:annotation>
+					<xs:documentation>本期应补（退）税额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="slxxForm">
+		<xs:annotation>
+			<xs:documentation>受理信息</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="bsr">
+				<xs:annotation>
+					<xs:documentation>办税人</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="slr">
+				<xs:annotation>
+					<xs:documentation>受理人</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="slrq">
+				<xs:annotation>
+					<xs:documentation>受理日期</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2010 rel. 3 (http://www.altova.com) by MESMERiZE (MSM) -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:include schemaLocation="TaxMLPublicDJType.xsd"/>
+	<xs:complexType name="HXZGDJ00086Request">
+		<xs:annotation>
+			<xs:documentation>保存企业所得税汇总纳税企业总分支机构信息备案表信息接入报文</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="bcqysdshznszfjgxxbaVO">
+						<xs:annotation>
+							<xs:documentation>企业所得税汇总纳税总分机构信息备案</xs:documentation>
+						</xs:annotation>
+						<xs:complexType>
+							<xs:sequence>
+								<xs:element name="bchznsqyxxbabVO" type="DJHznsqyxxbabVO">
+									<xs:annotation>
+										<xs:documentation>备案主表信息</xs:documentation>
+									</xs:annotation>
+								</xs:element>
+								<xs:element name="bchznsqyxxbabGrid" type="bchznsqyxxbabGrid">
+									<xs:annotation>
+										<xs:documentation>备案主表信息（修改有效期）</xs:documentation>
+									</xs:annotation>
+								</xs:element>
+								<xs:element name="bcbabZjgxxVO" type="DJHznsqyxxbabZjgxxVO">
+									<xs:annotation>
+										<xs:documentation>总机构信息</xs:documentation>
+									</xs:annotation>
+								</xs:element>
+								<xs:element name="bcbabSyjgxxVO" type="DJHznsqyxxbabSyjgxxVO">
+									<xs:annotation>
+										<xs:documentation>上一级机构信息</xs:documentation>
+									</xs:annotation>
+								</xs:element>
+								<xs:element name="insertBcbabXyjgxxGrid" type="insertBcbabXyjgxxGrid">
+									<xs:annotation>
+										<xs:documentation>新增下一级机构</xs:documentation>
+									</xs:annotation>
+								</xs:element>
+								<xs:element name="updateBcbabXyjgxxGrid" type="updateBcbabXyjgxxGrid">
+									<xs:annotation>
+										<xs:documentation>修改下一级机构</xs:documentation>
+									</xs:annotation>
+								</xs:element>
+								<xs:element name="deleteBcbabXyjgxxGrid" type="deleteBcbabXyjgxxGrid">
+									<xs:annotation>
+										<xs:documentation>删除下一级机构</xs:documentation>
+									</xs:annotation>
+								</xs:element>
+								<xs:element name="ysqywslxxbVO" type="DJYsqywslxxbVO">
+									<xs:annotation>
+										<xs:documentation>受理信息</xs:documentation>
+									</xs:annotation>
+								</xs:element>
+								<xs:element name="insertDlscjybmGrid" type="insertDlscjybmGrid">
+									<xs:annotation>
+										<xs:documentation>新增独立生产经营部门</xs:documentation>
+									</xs:annotation>
+								</xs:element>
+								<xs:element name="updateDlscjybmGrid" type="updateDlscjybmGrid">
+									<xs:annotation>
+										<xs:documentation>修改独立生产经营部门</xs:documentation>
+									</xs:annotation>
+								</xs:element>
+								<xs:element name="deleteDlscjybmGrid" type="deleteDlscjybmGrid">
+									<xs:annotation>
+										<xs:documentation>删除独立生产经营部门</xs:documentation>
+									</xs:annotation>
+								</xs:element>
+								<xs:element name="insertXmbGrid" type="insertXmbGrid">
+									<xs:annotation>
+										<xs:documentation>新增项目部</xs:documentation>
+									</xs:annotation>
+								</xs:element>
+								<xs:element name="updateXmbGrid" type="updateXmbGrid">
+									<xs:annotation>
+										<xs:documentation>修改项目部</xs:documentation>
+									</xs:annotation>
+								</xs:element>
+								<xs:element name="deleteXmbGrid" type="deleteXmbGrid">
+									<xs:annotation>
+										<xs:documentation>删除项目部</xs:documentation>
+									</xs:annotation>
+								</xs:element>
+							</xs:sequence>
+						</xs:complexType>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="bchznsqyxxbabGrid">
+		<xs:annotation>
+			<xs:documentation>备案主表信息（修改有效期）</xs:documentation>
+		</xs:annotation>
+		<xs:sequence minOccurs="0" maxOccurs="unbounded">
+			<xs:element name="bchznsqyxxbabGridlb" type="DJHznsqyxxbabVO">
+				<xs:annotation>
+					<xs:documentation>备案主表信息列表</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="insertBcbabXyjgxxGrid">
+		<xs:annotation>
+			<xs:documentation>新增下一级机构</xs:documentation>
+		</xs:annotation>
+		<xs:sequence minOccurs="0" maxOccurs="unbounded">
+			<xs:element name="bcbabXyjgxxGridlb" type="DJHznsqyxxbabXyjgxxVO"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="updateBcbabXyjgxxGrid">
+		<xs:annotation>
+			<xs:documentation>修改下一级机构</xs:documentation>
+		</xs:annotation>
+		<xs:sequence minOccurs="0" maxOccurs="unbounded">
+			<xs:element name="bcbabXyjgxxGridlb" type="DJHznsqyxxbabXyjgxxVO"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="deleteBcbabXyjgxxGrid">
+		<xs:annotation>
+			<xs:documentation>删除下一级机构</xs:documentation>
+		</xs:annotation>
+		<xs:sequence minOccurs="0" maxOccurs="unbounded">
+			<xs:element name="bcbabXyjgxxGridlb" type="DJHznsqyxxbabXyjgxxVO"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="insertDlscjybmGrid">
+		<xs:annotation>
+			<xs:documentation>新增独立生产经营部门</xs:documentation>
+		</xs:annotation>
+		<xs:sequence minOccurs="0" maxOccurs="unbounded">
+			<xs:element name="dlscjybmGridlb" type="DJHznsqyxxbabDlscjybmVO">
+				<xs:annotation>
+					<xs:documentation>独立生产经营部门列表</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="updateDlscjybmGrid">
+		<xs:annotation>
+			<xs:documentation>修改独立生产经营部门</xs:documentation>
+		</xs:annotation>
+		<xs:sequence minOccurs="0" maxOccurs="unbounded">
+			<xs:element name="dlscjybmGridlb" type="DJHznsqyxxbabDlscjybmVO">
+				<xs:annotation>
+					<xs:documentation>独立生产经营部门列表</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="deleteDlscjybmGrid">
+		<xs:annotation>
+			<xs:documentation>删除独立生产经营部门</xs:documentation>
+		</xs:annotation>
+		<xs:sequence minOccurs="0" maxOccurs="unbounded">
+			<xs:element name="dlscjybmGridlb" type="DJHznsqyxxbabDlscjybmVO">
+				<xs:annotation>
+					<xs:documentation>独立生产经营部门列表</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="insertXmbGrid">
+		<xs:annotation>
+			<xs:documentation>新增项目部</xs:documentation>
+		</xs:annotation>
+		<xs:sequence minOccurs="0" maxOccurs="unbounded">
+			<xs:element name="xmbGridlb" type="DJHznsqyxxbabXmbVO">
+				<xs:annotation>
+					<xs:documentation>项目部列表</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="updateXmbGrid">
+		<xs:annotation>
+			<xs:documentation>修改项目部</xs:documentation>
+		</xs:annotation>
+		<xs:sequence minOccurs="0" maxOccurs="unbounded">
+			<xs:element name="xmbGridlb" type="DJHznsqyxxbabXmbVO">
+				<xs:annotation>
+					<xs:documentation>项目部列表</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="deleteXmbGrid">
+		<xs:annotation>
+			<xs:documentation>删除项目部</xs:documentation>
+		</xs:annotation>
+		<xs:sequence minOccurs="0" maxOccurs="unbounded">
+			<xs:element name="xmbGridlb" type="DJHznsqyxxbabXmbVO">
+				<xs:annotation>
+					<xs:documentation>项目部列表</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

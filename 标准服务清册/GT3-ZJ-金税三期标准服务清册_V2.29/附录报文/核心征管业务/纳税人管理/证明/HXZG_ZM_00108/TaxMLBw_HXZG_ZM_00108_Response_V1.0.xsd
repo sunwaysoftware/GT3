@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2013 (http://www.altova.com) by  () -->
+<!-- 编辑使用 XMLSpy v2006 U (http://www.altova.com) 由 any (any) -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:include schemaLocation="TaxMLPublic.xsd"/>
+	<xs:complexType name="ZMFwmydwzfzmHtjezfxxVO">
+		<xs:annotation>
+			<xs:documentation>服务贸易等项目对外支付税务备案（合同金额支付信息）</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="uuid" type="uuid">
+				<xs:annotation>
+					<xs:documentation>UUID||uuid</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="djxh" type="djxh">
+				<xs:annotation>
+					<xs:documentation>登记序号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="dwzfbauuid" type="dwzfbauuid">
+				<xs:annotation>
+					<xs:documentation>对外支付备案UUID</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="htxyhzfzbzDm" type="htxyhzfzbzDm">
+				<xs:annotation>
+					<xs:documentation>合同（协议或支付凭证）币种</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="htxyhzfpzzje" type="htxyhzfpzzje" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>合同（协议或支付凭证）总金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="htxyhzfpzzfbz" type="htxyhzfpzzfbz" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>合同（协议或支付凭证）支付标准</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yzfje" type="yzfje">
+				<xs:annotation>
+					<xs:documentation>已支付金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yzfjebzszDm" type="yzfjebzszDm">
+				<xs:annotation>
+					<xs:documentation>已支付金额币种数字代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bcfhje" type="bcfhje">
+				<xs:annotation>
+					<xs:documentation>本次付汇金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bcfhjebzszDm" type="bcfhjebzszDm">
+				<xs:annotation>
+					<xs:documentation>本次付汇金额币种数字代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yjfhrq" type="yjfhrq">
+				<xs:annotation>
+					<xs:documentation>预计付汇日期</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yxbz" type="yxbz">
+				<xs:annotation>
+					<xs:documentation>有效标志</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="lrrDm" type="lrrDm">
+				<xs:annotation>
+					<xs:documentation>录入人代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="lrrq" type="lrrq">
+				<xs:annotation>
+					<xs:documentation>录入日期</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="xgrDm" type="xgrDm">
+				<xs:annotation>
+					<xs:documentation>修改人代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="xgrq" type="xgrq">
+				<xs:annotation>
+					<xs:documentation>修改日期</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sjgsdq" type="sjgsdq">
+				<xs:annotation>
+					<xs:documentation>数据归属地区</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zfbz2" type="htxyhzfpzzfbz">
+				<xs:annotation>
+					<xs:documentation>支付标准</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="HXZGZM00108Response">
+		<xs:annotation>
+			<xs:documentation>根据登记序号合同号码查询纳税人历史备案合同支付信息信息</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="zmfwmydwzfzmHtjezfxxVOGrid">
+						<xs:complexType>
+							<xs:sequence minOccurs="0" maxOccurs="unbounded">
+								<xs:element name="fwmydwzfzmhtjezfGridlb" type="ZMFwmydwzfzmHtjezfxxVO">
+									<xs:annotation>
+										<xs:documentation>服务贸易等项目对外支付税务备案（合同金额支付信息）</xs:documentation>
+									</xs:annotation>
+								</xs:element>
+							</xs:sequence>
+						</xs:complexType>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+</xs:schema>

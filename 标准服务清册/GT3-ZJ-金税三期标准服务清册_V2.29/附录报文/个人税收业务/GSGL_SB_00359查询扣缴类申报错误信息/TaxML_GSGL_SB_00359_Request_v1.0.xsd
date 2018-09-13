@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:complexType name="cxKjlSbCwxxRequest">
+		<xs:annotation>
+			<xs:documentation>查询扣缴类申报错误信息请求报文</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="yzpzxh" type="yzpzxh">
+						<xs:annotation>
+							<xs:documentation>应征凭证序号，（可以为空，如果交易唯一识别号、扣缴义务人登记序号、税款所属期起、税款所属期止、业务类型代码都为空，则应征凭证序号不能为空）</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="jywysbh" type="jywysbh">
+						<xs:annotation>
+							<xs:documentation>交易唯一识别号，（可以为空，如果应征凭证序号、扣缴义务人登记序号、税款所属期起、税款所属期止、业务类型代码都为空，则不能为空）</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="kjywrdjxh" type="djxh">
+						<xs:annotation>
+							<xs:documentation>扣缴义务人登记序号，（可以为空，如果应征凭证序号、交易唯一识别号都为空，则扣缴义务人登记序号不能为空）</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="skssqq" type="skssqq">
+						<xs:annotation>
+							<xs:documentation>税款所属期起，（日期格式：yyyy-MM-dd，可以为空，如果扣缴义务人登记序号不为空，则税款所属期起不能为空）</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="skssqz" type="skssqz">
+						<xs:annotation>
+							<xs:documentation>税款所属期止，（日期格式：yyyy-MM-dd，可以为空，如果扣缴义务人登记序号不为空，则税款所属期止不能为空）</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="ywlxDm" type="ywlx">
+						<xs:annotation>
+							<xs:documentation>业务类型代码，（可以为空，如果扣缴义务人登记序号不为空，则业务类型代码不能为空。A061005001：扣缴个人所得税申报表，A061005011：广东-扣缴个人所得税申报表，A061005012：对企事业单位承包承租扣缴个人所得税报告表，A061005014：中央证券登记结算公司代扣代缴上市公司股息红利扣缴个人所得税报告表，A061005004：特定行业个人所得税年度申报表）</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+</xs:schema>

@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2010 rel. 3 (http://www.altova.com) by MESMERiZE (MSM) -->
+<!-- 被2011 rel. 2 sp1 (TeaM DJiNN) 使用XMLSpy vTeaM DJiNN编辑的 (http://www.altova.com) by -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:include schemaLocation="TaxMLPublicType.xsd"/>
+	<xs:complexType name="bqdsdjsejsbyywbw">
+		<xs:annotation>
+			<xs:documentation>《本期代收代缴税额计算表》（烟）业务报文</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="bqdsdjsejsby">
+						<xs:annotation>
+							<xs:documentation>《本期代收代缴税额计算表》（烟）</xs:documentation>
+						</xs:annotation>
+						<xs:complexType>
+							<xs:complexContent>
+								<xs:extension base="bqdsdjsejsby"/>
+							</xs:complexContent>
+						</xs:complexType>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="bqdsdjsejsby">
+		<xs:annotation>
+			<xs:documentation>《本期代收代缴税额计算表》（烟）</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="bqdsdjsejsbyGrid">
+				<xs:complexType>
+					<xs:sequence minOccurs="0" maxOccurs="unbounded">
+						<xs:element name="bqdsdjsejsbyGridlb" type="bqdsdjsejsbyGridlbVO"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="bqdsdjsejsbyGridlbVO">
+		<xs:sequence>
+			<xs:element name="ewblxh" type="ewblxh">
+				<xs:annotation>
+					<xs:documentation>二维表列序号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zspmDm" type="zspmDm">
+				<xs:annotation>
+					<xs:documentation>征收品目代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="desl1" type="desl1" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>定额税率</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="blsl" type="blsl" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>比例税率</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="stjgsl" type="stjgsl">
+				<xs:annotation>
+					<xs:documentation>受托加工数量</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="tlcpxsjg" type="tlcpxsjg">
+				<xs:annotation>
+					<xs:documentation>同类产品销售价格</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="clcb" type="clcb">
+				<xs:annotation>
+					<xs:documentation>材料成本</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jgf" type="jgf">
+				<xs:annotation>
+					<xs:documentation>加工费</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zcjsjg" type="zcjsjg">
+				<xs:annotation>
+					<xs:documentation>组成计税价格</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bqdsdjsk" type="bqdsdjsk">
+				<xs:annotation>
+					<xs:documentation>本期代收代缴税款</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

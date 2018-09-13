@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2013 (http://www.altova.com) by  () -->
+<!-- 被2012 () 使用XMLSpy v编辑的 (http://www.altova.com) by -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:include schemaLocation="TaxMLPublicZSType.xsd"/>
+	<xs:complexType name="HXZGZS10263Response">
+		<xs:annotation>
+			<xs:documentation>查询银行端缴款凭证未缴款信息</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="jkssbfGridVo">
+						<xs:annotation>
+							<xs:documentation>缴款书信息</xs:documentation>
+						</xs:annotation>
+						<xs:complexType>
+							<xs:sequence minOccurs="0" maxOccurs="unbounded">
+								<xs:element name="JkssbfGridlb" type="jkssbfxxvo"/>
+							</xs:sequence>
+						</xs:complexType>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="jkssbfxxvo">
+		<xs:annotation>
+			<xs:documentation>社保费缴款书vo</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="dzsphm" type="dzsphm"/>
+			<xs:element name="dzspmxxh" type="dzspmxxh"/>
+			<xs:element name="gldzspmxxh" type="gldzspmxxh"/>
+			<xs:element name="jkqx" type="jkqx"/>
+			<xs:element name="pzzlDm" type="pzzlDm"/>
+			<xs:element name="pzzgDm" type="pzzgDm"/>
+			<xs:element name="pzhm" type="pzhm"/>
+			<xs:element name="hzjksbz" type="hzjksbz"/>
+			<xs:element name="djxh" type="djxh"/>
+			<xs:element name="skssqq" type="skssqq"/>
+			<xs:element name="skssqz" type="skssqz"/>
+			<xs:element name="zsxmDm" type="zsxmDm"/>
+			<xs:element name="zspmDm" type="zspmDm"/>
+			<xs:element name="zszmDm" type="zszmDm"/>
+			<xs:element name="sbfsDm" type="sbfsDm"/>
+			<xs:element name="skzlDm" type="skzlDm"/>
+			<xs:element name="sksxDm" type="sksxDm"/>
+			<xs:element name="yjse" type="yjse"/>
+			<xs:element name="sl1" type="sl1"/>
+			<xs:element name="sjje" type="sjje"/>
+			<xs:element name="kjrq" type="kjrq"/>
+			<xs:element name="yskmDm" type="yskmDm"/>
+			<xs:element name="zgswskfjDm" type="zgswskfjDm"/>
+			<xs:element name="skssswjgDm" type="skssswjgDm"/>
+			<xs:element name="zsswjgDm" type="zsswjgDm"/>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 被2012 () 使用XMLSpy v编辑的 (http://www.altova.com) by -->
+<!-- edited with XMLSpy v2010 rel. 3 (http://www.altova.com) by liuwei (css) -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:include schemaLocation="TaxMLPublicSBType.xsd"/>
+	<xs:complexType name="tdzzsxmdjbcsfdckfnsrsy">
+		<xs:annotation>
+			<xs:documentation>土地增值税项目登记表（从事房地产开发的纳税人适用）</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="xmdjxxForm" type="xmdjxxForm">
+						<xs:annotation>
+							<xs:documentation>项目登记信息</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="sbsjxxGrid" type="sbsjxxGrid">
+						<xs:annotation>
+							<xs:documentation>附表中转让信息</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="xmdjxxForm">
+		<xs:annotation>
+			<xs:documentation>项目登记信息</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="xmmc" type="mc">
+				<xs:annotation>
+					<xs:documentation>项目名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="nsrsbh" type="nsrsbh">
+				<xs:annotation>
+					<xs:documentation>纳税人识别号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="nsrsmc" type="nsrmc">
+				<xs:annotation>
+					<xs:documentation>纳税人名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="tbrq" type="tbrq">
+				<xs:annotation>
+					<xs:documentation>填表日期</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bdcxmbh" type="bh">
+				<xs:annotation>
+					<xs:documentation>不动产项目编号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="syZgswskfjDm" type="swjgDm">
+				<xs:annotation>
+					<xs:documentation>税源主管税务机关代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="syJdxzDm" type="jdxzDm">
+				<xs:annotation>
+					<xs:documentation>税源街道乡镇代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="xmdz" type="xmdz">
+				<xs:annotation>
+					<xs:documentation>项目地址</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="hylb" type="hylb">
+				<xs:annotation>
+					<xs:documentation>行业类别</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="tdsyqsrhth" type="tdsyqsrHth">
+				<xs:annotation>
+					<xs:documentation>土地使用权受让（行政划拨）合同号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="tdsyqsrsj" type="tdsrsj">
+				<xs:annotation>
+					<xs:documentation>土地受让（行政划拨）时间</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jsxmkssj" type="jsxmjssj">
+				<xs:annotation>
+					<xs:documentation>建设项目开始时间</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jsxmwcsj" type="jsxmjssj">
+				<xs:annotation>
+					<xs:documentation>建设项目开始时间</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zyscb" type="zyscb">
+				<xs:annotation>
+					<xs:documentation>总预算成本</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ywyscb" type="xs:double">
+				<xs:annotation>
+					<xs:documentation>单位预算成本</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="xmxxzldd" type="xs:string">
+				<xs:annotation>
+					<xs:documentation>项目详细坐落地点</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="kftdzmj" type="xs:double">
+				<xs:annotation>
+					<xs:documentation>开发土地总面积</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="kfjzzmj" type="xs:double">
+				<xs:annotation>
+					<xs:documentation>开发建筑总面积</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="beizhu" type="bz" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>备注</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="slr" type="slr">
+				<xs:annotation>
+					<xs:documentation>受理人</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="slrq" type="slrq">
+				<xs:annotation>
+					<xs:documentation>受理日期</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="sbsjxxGrid">
+		<xs:annotation>
+			<xs:documentation>申报数据信息</xs:documentation>
+		</xs:annotation>
+		<xs:sequence maxOccurs="unbounded">
+			<xs:element name="sbsjxxGridlb" type="sbsjxxGridlb">
+				<xs:annotation>
+					<xs:documentation>附表中转让信息</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="sbsjxxGridlb">
+		<xs:annotation>
+			<xs:documentation>申报数据信息列表</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="hh" type="xs:int">
+				<xs:annotation>
+					<xs:documentation>行号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="fdczrhtmc" type="jxqsrq">
+				<xs:annotation>
+					<xs:documentation>房地产转让合同名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zrtdmj" type="zrtdmj">
+				<xs:annotation>
+					<xs:documentation>转让土地面积</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zrjzmj" type="zrjzmj">
+				<xs:annotation>
+					<xs:documentation>转让建筑面积</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zrhtqdrq" type="skssqq">
+				<xs:annotation>
+					<xs:documentation>转让合同签订日期</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

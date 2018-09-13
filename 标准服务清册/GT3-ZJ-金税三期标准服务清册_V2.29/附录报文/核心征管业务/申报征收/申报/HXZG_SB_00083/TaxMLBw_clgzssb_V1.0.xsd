@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2010 rel. 3 (http://www.altova.com) by MESMERiZE (MSM) -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:annotation>
+		<xs:documentation>an:clgzssbywbw,head,body,bodyAffix,clgzssb</xs:documentation>
+	</xs:annotation>
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:include schemaLocation="TaxMLBd_061003001_V1.0.xsd"/>
+	<xs:complexType name="clgzssbywbw">
+		<xs:annotation>
+			<xs:documentation>《车辆购置税纳税申报表》业务报文</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="body" type="clgzssbBody">
+						<xs:annotation>
+							<xs:documentation>《车辆购置税纳税申报表》</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="clgzssbBody">
+		<xs:annotation>
+			<xs:documentation>《车辆购置税纳税申报表》业务报文</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="clgzssb" type="clgzssb">
+				<xs:annotation>
+					<xs:documentation>《车辆购置税纳税申报表》</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 被2011 rel. 2 sp1 (pjf) 使用XMLSpy vcss编辑的 (http://www.altova.com) by -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:include schemaLocation="TaxMLPublicZSType.xsd"/>
+	<xs:complexType name="HXZGZS10148Response">
+		<xs:annotation>
+			<xs:documentation>社保费税库银税款缴纳</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="yzxxGrid">
+						<xs:annotation>
+							<xs:documentation>缴款信息</xs:documentation>
+						</xs:annotation>
+						<xs:complexType>
+							<xs:sequence maxOccurs="unbounded">
+								<xs:element name="yzxxGridlb">
+									<xs:annotation>
+										<xs:documentation>缴款明细列表</xs:documentation>
+									</xs:annotation>
+									<xs:complexType>
+										<xs:sequence>
+											<xs:element name="dzsphm" type="dzsphm" minOccurs="1">
+												<xs:annotation>
+													<xs:documentation>电子税票号码</xs:documentation>
+												</xs:annotation>
+											</xs:element>
+											<xs:element name="sjse" type="se" minOccurs="1">
+												<xs:annotation>
+													<xs:documentation>实缴税额</xs:documentation>
+												</xs:annotation>
+											</xs:element>
+											<xs:element name="kkfhmc" type="kkfhmc">
+												<xs:annotation>
+													<xs:documentation>银税操作状态</xs:documentation>
+												</xs:annotation>
+											</xs:element>
+											<xs:element name="kkfhDm" type="kkfhDm">
+												<xs:annotation>
+													<xs:documentation>银税操作状态</xs:documentation>
+												</xs:annotation>
+											</xs:element>
+											<xs:element name="szmxGrid" minOccurs="1">
+												<xs:complexType>
+													<xs:sequence maxOccurs="unbounded">
+														<xs:element name="szmxGridlb">
+															<xs:complexType>
+																<xs:sequence>
+																	<xs:element name="yzpzxh" type="yzpzxh">
+																		<xs:annotation>
+																			<xs:documentation>应征凭证序号</xs:documentation>
+																		</xs:annotation>
+																	</xs:element>
+																	<xs:element name="yzpzmxxh" type="yzpzmxxh">
+																		<xs:annotation>
+																			<xs:documentation>应征明细序号</xs:documentation>
+																		</xs:annotation>
+																	</xs:element>
+																	<xs:element name="ybtse" type="ybtse">
+																		<xs:annotation>
+																			<xs:documentation>应补退税额</xs:documentation>
+																		</xs:annotation>
+																	</xs:element>
+																	<xs:element name="skgkDm" type="skgkDm">
+																		<xs:annotation>
+																			<xs:documentation>收款国库</xs:documentation>
+																		</xs:annotation>
+																	</xs:element>
+																	<xs:element name="zsswjgDm" type="zsswjgDm">
+																		<xs:annotation>
+																			<xs:documentation>征收机关</xs:documentation>
+																		</xs:annotation>
+																	</xs:element>
+																	<xs:element name="zsxmDm" type="zsxmDm">
+																		<xs:annotation>
+																			<xs:documentation>征收项目</xs:documentation>
+																		</xs:annotation>
+																	</xs:element>
+																	<xs:element name="zspmDm" type="zspmDm">
+																		<xs:annotation>
+																			<xs:documentation>征收品目代码</xs:documentation>
+																		</xs:annotation>
+																	</xs:element>
+																	<xs:element name="skssqq" type="skssqq">
+																		<xs:annotation>
+																			<xs:documentation>税款所属期起</xs:documentation>
+																		</xs:annotation>
+																	</xs:element>
+																	<xs:element name="skssqz" type="skssqz">
+																		<xs:annotation>
+																			<xs:documentation>税款所属期止</xs:documentation>
+																		</xs:annotation>
+																	</xs:element>
+																</xs:sequence>
+															</xs:complexType>
+														</xs:element>
+													</xs:sequence>
+												</xs:complexType>
+											</xs:element>
+										</xs:sequence>
+									</xs:complexType>
+								</xs:element>
+							</xs:sequence>
+						</xs:complexType>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+</xs:schema>

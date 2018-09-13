@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2011 (http://www.altova.com) by www.hbnu.com (www.hbnu.com) -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:include schemaLocation="TaxMLPublic.xsd"/>
+	<xs:complexType name="fjsmbywbywbw">
+		<xs:annotation>
+			<xs:documentation>《附加说明表（英文表）》业务报文</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="qyndglywwlbg2016_G114031" type="qyndglywwlbg2016_G114031">
+						<xs:annotation>
+							<xs:documentation>《附加说明表（英文表）》</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="qyndglywwlbg2016_G114031">
+		<xs:annotation>
+			<xs:documentation>《附加说明表（英文表）》</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="fjsmbywbForm" type="fjsmbywbForm">
+				<xs:annotation>
+					<xs:documentation/>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="fjsmbywbForm">
+		<xs:annotation>
+			<xs:documentation/>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="kgqyjtmc" type="nsrmc">
+				<xs:annotation>
+					<xs:documentation>Name of the MNE group</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ssnd" type="ssnd">
+				<xs:annotation>
+					<xs:documentation>Fiscal year concerned</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bz" type="bz">
+				<xs:annotation>
+					<xs:documentation>Please include any further brief information or explanation you consider necessary or that would facilitate the understanding of the compulsory information provided in the country-by-country report.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

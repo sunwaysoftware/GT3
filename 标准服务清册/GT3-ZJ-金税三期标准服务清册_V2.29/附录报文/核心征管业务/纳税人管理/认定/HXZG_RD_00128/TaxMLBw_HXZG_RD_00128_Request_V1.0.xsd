@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:complexType name="HXZGRD00128Request">
+		<xs:annotation>
+			<xs:documentation>不认定增值税一般纳税人</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="djxh" type="djxh">
+						<xs:annotation>
+							<xs:documentation>登记序号</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="lcslid" type="lcslid">
+						<xs:annotation>
+							<xs:documentation>流程实例id</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="zgswskfjDm" type="zgswskfjDm">
+						<xs:annotation>
+							<xs:documentation>主管税务所科分局</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="brdzzsybnsrForm" type="brdzzsybnsrForm">
+						<xs:annotation>
+							<xs:documentation>不认定增值税一般纳税人表单</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="brdzzsybnsrForm">
+		<xs:annotation>
+			<xs:documentation>不认定增值税一般纳税人表单</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="rduuid" type="rduuid">
+				<xs:annotation>
+					<xs:documentation>认定uuid</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="nsryj" type="nsryj">
+				<xs:annotation>
+					<xs:documentation>选择按小规模纳税人纳税类型</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ljyshwxsejssjq" type="ljyshwxsejssjq">
+				<xs:annotation>
+					<xs:documentation>连续不超过12个月的经营期内累计应税货物销售额计算时间起</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ljyshwxsejssjz" type="ljyshwxsejssjz">
+				<xs:annotation>
+					<xs:documentation>连续不超过12个月的经营期内累计应税货物销售额计算时间止</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ljyshwxse" type="ljyshwxse">
+				<xs:annotation>
+					<xs:documentation>连续不超过12个月的经营期内累计应税货物销售额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ljysfwxsejssjq" type="ljysfwxsejssjq">
+				<xs:annotation>
+					<xs:documentation>连续不超过12个月的经营期内累计应税服务销售额计算时间起</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ljysfwxsejssjz" type="ljysfwxsejssjz">
+				<xs:annotation>
+					<xs:documentation>连续不超过12个月的经营期内累计应税服务销售额计算时间止</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ljysfwxse" type="ljysfwxse">
+				<xs:annotation>
+					<xs:documentation>连续不超过12个月的经营期内累计应税服务销售额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qksm" type="qksm">
+				<xs:annotation>
+					<xs:documentation>情况说明</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sqrq" type="sqrq">
+				<xs:annotation>
+					<xs:documentation>申请日期</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jbr" type="jbr">
+				<xs:annotation>
+					<xs:documentation>经办人</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="fddbr" type="fddbr">
+				<xs:annotation>
+					<xs:documentation>法定代表人</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="dlr" type="dlr">
+				<xs:annotation>
+					<xs:documentation>代理人</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="slr" type="sqr">
+				<xs:annotation>
+					<xs:documentation>受理人</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="slrq" type="slrq">
+				<xs:annotation>
+					<xs:documentation>受理日期</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="slswjgmc" type="slswjgmc">
+				<xs:annotation>
+					<xs:documentation>受理税务机关</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 被2011 rel. 2 sp1 (TeaM DJiNN) 使用XMLSpy vTeaM DJiNN编辑的 (http://www.altova.com) by -->
+<!-- edited with XMLSpy v2013 (http://www.altova.com) by  () -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:include schemaLocation="TaxMLPublicDJType.xsd"/>
+	<xs:complexType name="HXZGDJ00224Response">
+		<xs:annotation>
+			<xs:documentation>不动产项目登记信息清册返回报文</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="bdcxmdjxxcxjgVO" type="bdcxmdjxxcxjgVO">
+						<xs:annotation>
+							<xs:documentation>不动产项目登记信息</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="bdcxmdjxxcxjgVO">
+		<xs:annotation>
+			<xs:documentation>不动产项目登记信息</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="bdcxmdjxxcxjgVO" type="DJBdcxmdjxxVO">
+				<xs:annotation>
+					<xs:documentation>不动产项目信息</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jsqxmxxcxjgGrid">
+				<xs:annotation>
+					<xs:documentation>不动产项目登记-建设期项目信息</xs:documentation>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:sequence minOccurs="0" maxOccurs="unbounded">
+						<xs:element name="jsqxmxxcxjgGridlb" type="bdcxmdjJsqxmxxVO">
+							<xs:annotation>
+								<xs:documentation>建设期项目信息列表</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="tdxxcxjgGrid">
+				<xs:annotation>
+					<xs:documentation>不动产项目登记-土地信息</xs:documentation>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:sequence minOccurs="0" maxOccurs="unbounded">
+						<xs:element name="tdxxcxjgGridlb" type="bdcxmdjTdxxVO">
+							<xs:annotation>
+								<xs:documentation>土地信息列表</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="ydghxxcxjgGrid">
+				<xs:annotation>
+					<xs:documentation>不动产项目登记-用地规划信息</xs:documentation>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:sequence minOccurs="0" maxOccurs="unbounded">
+						<xs:element name="ydghxxcxjgGridlb" type="DJBdcxmdjYdghxxVO">
+							<xs:annotation>
+								<xs:documentation>用地规划信息列表</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="ghxkzcxjgGrid">
+				<xs:annotation>
+					<xs:documentation>不动产项目登记-规划许可证信息</xs:documentation>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:sequence minOccurs="0" maxOccurs="unbounded">
+						<xs:element name="jzghxkzcxjgGridlb" type="DJBdcxmdjJzghxkzxxVO">
+							<xs:annotation>
+								<xs:documentation>规划许可证信息列表</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="xsxkzcxjgGrid">
+				<xs:annotation>
+					<xs:documentation>不动产项目登记-销售许可证信息</xs:documentation>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:sequence minOccurs="0" maxOccurs="unbounded">
+						<xs:element name="xsxkzcxjgGridlb" type="DJBdcxmdjYsxkzxxVO">
+							<xs:annotation>
+								<xs:documentation>销售许可证信息列表</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="dwjzxxcxjgGrid">
+				<xs:annotation>
+					<xs:documentation>不动产项目登记-对外捐赠信息</xs:documentation>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:sequence minOccurs="0" maxOccurs="unbounded">
+						<xs:element name="dwjzxxcxjgGridlb" type="DJBdcxmdjDwjzxxVO">
+							<xs:annotation>
+								<xs:documentation>对外捐赠信息列表</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="dczwxxcxjgGrid">
+				<xs:annotation>
+					<xs:documentation>不动产项目登记-低偿债务信息</xs:documentation>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:sequence minOccurs="0" maxOccurs="unbounded">
+						<xs:element name="dczwxxcxjgGridlb" type="DJBdcxmdjDczwxxVO">
+							<xs:annotation>
+								<xs:documentation>抵偿债务信息列表</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="bdcxmdjTdxxVO">
+		<xs:annotation>
+			<xs:documentation>不动产项目登记土地信息</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="sytdxxuuid" type="sytdxxuuid">
+				<xs:annotation>
+					<xs:documentation>税源土地信息UUID</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="lcslid" type="lcslid">
+				<xs:annotation>
+					<xs:documentation>流程实例ID</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="tdsybh" type="tdsybh">
+				<xs:annotation>
+					<xs:documentation>土地税源编号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="xmbh" type="xmbh">
+				<xs:annotation>
+					<xs:documentation>项目编号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yxbz" type="yxbz">
+				<xs:annotation>
+					<xs:documentation>有效标志</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="lrrDm" type="lrrDm">
+				<xs:annotation>
+					<xs:documentation>录入人代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="lrrq" type="lrrq">
+				<xs:annotation>
+					<xs:documentation>录入日期</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="xgrDm" type="xgrDm" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>修改人代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="xgrq" type="xgrq" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>修改日期</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sjgsdq" type="sjgsdq">
+				<xs:annotation>
+					<xs:documentation>数据归属地区</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="tdzldz" type="tdzldz">
+				<xs:annotation>
+					<xs:documentation>土地坐落地址</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qh" type="qh">
+				<xs:annotation>
+					<xs:documentation>丘号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="tdsyzfzjgmc" type="tdsyzfzjgmc">
+				<xs:annotation>
+					<xs:documentation>土地使用证发证机关名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="tdsyzbh" type="tdsyzbh">
+				<xs:annotation>
+					<xs:documentation>土地使用证编号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="tdzmj" type="tdzmj">
+				<xs:annotation>
+					<xs:documentation>土地总面积</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="tdjbxxuuid" type="tdjbxxuuid">
+				<xs:annotation>
+					<xs:documentation>土地基本信息uuid</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

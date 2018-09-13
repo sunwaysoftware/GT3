@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2010 rel. 3 (http://www.altova.com) by xuxin (csstj) -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:include schemaLocation="TaxMLPublicType.xsd"/>
+	<xs:complexType name="ggfhywxcfkndnstzsbbywbw">
+		<xs:annotation>
+			<xs:documentation>《中华人民共和国企业所得税年度纳税申报表附表八广告费和业务宣传费跨年度纳税调整表》业务报文</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="ggfhywxcfkndnstzsbb">
+						<xs:annotation>
+							<xs:documentation>《中华人民共和国企业所得税年度纳税申报表附表八广告费和业务宣传费跨年度纳税调整表》</xs:documentation>
+						</xs:annotation>
+						<xs:complexType>
+							<xs:sequence>
+								<xs:element name="ggfhywxcfkndnstzsbbFrom" type="ggfhywxcfkndnstzsbbFrom">
+									<xs:annotation>
+										<xs:documentation>广告费和业务宣传费跨年度纳税调整表信息</xs:documentation>
+									</xs:annotation>
+								</xs:element>
+							</xs:sequence>
+						</xs:complexType>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="ggfhywxcfkndnstzsbb">
+		<xs:annotation>
+			<xs:documentation>《中华人民共和国企业所得税年度纳税申报表附表八广告费和业务宣传费跨年度纳税调整表》</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="ggfhywxcfkndnstzsbbFrom" type="ggfhywxcfkndnstzsbbFrom">
+				<xs:annotation>
+					<xs:documentation>广告费和业务宣传费跨年度纳税调整表信息</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="ggfhywxcfkndnstzsbbFrom">
+		<xs:annotation>
+			<xs:documentation>广告费和业务宣传费跨年度纳税调整表对应明细</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="bndggfhywxcfzc" type="bndggfhywxcfzc" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>本年度广告费和业务宣传费支出</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="byxkcGgfhywxcfzc" type="byxkcGgfhywxcfzc" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>不允许扣除的广告费和业务宣传费支出</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bndfhtjGgfYwxcfzc" type="bndfhtjGgfYwxcfzc" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>本年度符合条件的广告费和业务宣传费支出</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bnjsggfYwxcfkcxeXsyysr" type="bnjsggfYwxcfkcxeXsyysr" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>本年计算广告费和业务宣传费扣除限额的销售营业收入</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ssgdKcl" type="ssgdKcl" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>税收规定的扣除率</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bnggfhywxcfkcxe" type="bnggfhywxcfkcxe" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>本年广告费和业务宣传费扣除限额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bnggfhywxcfzcnsdze" type="bnggfhywxcfzcnsdze" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>本年广告费和业务宣传费支出纳税调整额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bnjzyhndkce" type="bnjzyhndkce" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>本年结转以后年度扣除额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yqndLjjzkce" type="yqndLjjzkce" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>以前年度累计结转扣除额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bnkcYqndjze" type="bnkcYqndjze" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>本年扣除的以前年度结转额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ljjzyhndkce" type="ljjzyhndkce" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>累计结转以后年度扣除额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

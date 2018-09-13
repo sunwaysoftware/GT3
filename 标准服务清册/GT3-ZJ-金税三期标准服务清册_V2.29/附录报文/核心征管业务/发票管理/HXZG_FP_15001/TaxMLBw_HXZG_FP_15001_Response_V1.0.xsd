@@ -1,0 +1,264 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 编辑使用 XMLSpy v2006 U (http://www.altova.com) 由 any (any) -->
+<!-- 编辑使用 XMLSpy v2006 U (http://www.altova.com) 由 any (any) -->
+<!-- 编辑使用 XMLSpy v2006 U (http://www.altova.com) 由 any (any) -->
+<!-- 编辑使用 XMLSpy v2006 U (http://www.altova.com) 由 any (any) -->
+<!-- 编辑使用 XMLSpy v2006 U (http://www.altova.com) 由 any (any) -->
+<!-- 被2012 () 使用XMLSpy v编辑的 (http://www.altova.com) by -->
+<!-- edited with XMLSpy v2011 rel. 2 (http://www.altova.com) by time (wnass) -->
+<!-- 编辑使用 XMLSpy v2006 U (http://www.altova.com) 由 any (any) -->
+<!-- 编辑使用 XMLSpy v2006 U (http://www.altova.com) 由 any (any) -->
+<!-- 编辑使用 XMLSpy v2006 U (http://www.altova.com) 由 any (any) -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxDoc.xsd"/>
+	<xs:include schemaLocation="TaxMLPublic.xsd"/>
+	<xs:include schemaLocation="TaxMLPublicFPType.xsd"/>
+	<xs:complexType name="YHJmsspjgVO">
+		<xs:annotation>
+			<xs:documentation>减免税审批结果</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="yhpzuuid" type="yhpzuuid">
+				<xs:annotation>
+					<xs:documentation>优惠凭证UUID</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="djxh" type="djxh">
+				<xs:annotation>
+					<xs:documentation>登记序号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="lcslid" type="lcslid">
+				<xs:annotation>
+					<xs:documentation>流程实例ID</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jmsspsxDm" type="jmsspsxDm">
+				<xs:annotation>
+					<xs:documentation>减免税审批事项代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zsxmDm" type="zsxmDm" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>征收项目代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zspmDm" type="zspmDm" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>征收品目代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jmxmdlDm" type="jmxmdlDm" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>减免项目大类代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jmxmxlDm" type="jmxmxlDm" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>减免项目小类代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jmwjDm" type="jmwjDm" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>减免文件代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jmlxDm" type="jmlxDm" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>减免类型代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jmfsDm" type="jmfsDm" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>减免方式代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jmzlxDm" type="jmzlxDm">
+				<xs:annotation>
+					<xs:documentation>减免征类型代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jmqxq" type="jmqxq" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>减免期限起</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jmqxz" type="jmqxz" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>减免期限止</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ssjmxzhzDm" type="ssjmxzhzDm" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>减免性质汇总代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ssjmxzdlDm" type="ssjmxzdlDm" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>税收减免性质大类代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ssjmxzxlDm" type="ssjmxzxlDm" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>税收减免性质小类代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jzfd" type="jzfd" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>减征幅度</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jzsl" type="jzsl" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>减征税率</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jzed" type="jzed" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>减征额度</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sjjzrq" type="sjjzrq">
+				<xs:annotation>
+					<xs:documentation>数据截止日期||数据截止日期</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="wszg" type="wszg" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>文书字轨</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yxbz" type="yxbz">
+				<xs:annotation>
+					<xs:documentation>有效标志</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zfbz1" type="zfbz1">
+				<xs:annotation>
+					<xs:documentation>作废标志</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zfrDm" type="zfrDm" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>作废人代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zfrq1" type="zfrq1" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>作废日期</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="lrrDm" type="lrrDm">
+				<xs:annotation>
+					<xs:documentation>录入人代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="lrrq" type="lrrq">
+				<xs:annotation>
+					<xs:documentation>录入日期</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="xgrDm" type="xgrDm" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>修改人代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="xgrq" type="xgrq" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>修改日期</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sjgsdq" type="sjgsdq">
+				<xs:annotation>
+					<xs:documentation>数据归属地区</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="HXZGFP15001Response">
+		<xs:annotation>
+			<xs:documentation>根据登记序号查询查询普通发票代开相关数据</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="relationVO" type="FPNsrRelationVO">
+						<xs:annotation>
+							<xs:documentation>代开相关数据VO</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="dksqVOGrid">
+						<xs:annotation>
+							<xs:documentation>代开申请VO列表</xs:documentation>
+						</xs:annotation>
+						<xs:complexType>
+							<xs:sequence maxOccurs="unbounded">
+								<xs:element name="dksqVOGridlb" type="FPDkSqVO">
+									<xs:annotation>
+										<xs:documentation>代开申请VO</xs:documentation>
+									</xs:annotation>
+								</xs:element>
+							</xs:sequence>
+						</xs:complexType>
+					</xs:element>
+					<xs:element name="sfmxVOGrid">
+						<xs:annotation>
+							<xs:documentation>税费明细VO列表</xs:documentation>
+						</xs:annotation>
+						<xs:complexType>
+							<xs:sequence maxOccurs="unbounded">
+								<xs:element name="sfmxVOGridlb" type="FPDkSfmxVO">
+									<xs:annotation>
+										<xs:documentation>税费明细VO</xs:documentation>
+									</xs:annotation>
+								</xs:element>
+							</xs:sequence>
+						</xs:complexType>
+					</xs:element>
+					<xs:element name="ysyskmxVOGrid">
+						<xs:annotation>
+							<xs:documentation>已使用税款明细VO列表</xs:documentation>
+						</xs:annotation>
+						<xs:complexType>
+							<xs:sequence maxOccurs="unbounded">
+								<xs:element name="ysyskmxVOGridlb" type="FPDkYsyskmxVO">
+									<xs:annotation>
+										<xs:documentation>已使用税款明细VO</xs:documentation>
+									</xs:annotation>
+								</xs:element>
+							</xs:sequence>
+						</xs:complexType>
+					</xs:element>
+					<xs:element name="pzhdVOGrid">
+						<xs:annotation>
+							<xs:documentation>票种核定VO列表</xs:documentation>
+						</xs:annotation>
+						<xs:complexType>
+							<xs:sequence maxOccurs="unbounded">
+								<xs:element name="pzhdVOGridlb" type="FPPzhdxxJcVO">
+									<xs:annotation>
+										<xs:documentation>票种核定VO</xs:documentation>
+									</xs:annotation>
+								</xs:element>
+							</xs:sequence>
+						</xs:complexType>
+					</xs:element>
+					<xs:element name="jmsspjgVOGrid">
+						<xs:annotation>
+							<xs:documentation>减免审批结果VO列表</xs:documentation>
+						</xs:annotation>
+						<xs:complexType>
+							<xs:sequence maxOccurs="unbounded">
+								<xs:element name="jmsspjgVOGridlb" type="YHJmsspjgVO">
+									<xs:annotation>
+										<xs:documentation>减免审批结果VO</xs:documentation>
+									</xs:annotation>
+								</xs:element>
+							</xs:sequence>
+						</xs:complexType>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+</xs:schema>

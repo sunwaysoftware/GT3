@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2011 (http://www.altova.com) by www.hbnu.com (www.hbnu.com) -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:include schemaLocation="TaxMLPublic.xsd"/>	
+	<xs:complexType name="BDA0610889">
+		<xs:annotation>
+			<xs:documentation>《zyssb02》</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="jklsmsyGrid" type="jklsmsyGrid">
+				<xs:annotation>
+					<xs:documentation/>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="jklsmsyGrid">
+		<xs:annotation>
+			<xs:documentation/>
+		</xs:annotation>
+		<xs:sequence maxOccurs="unbounded">
+			<xs:element name="jklsmsyGridlbVO" type="jklsmsyGridlbVO"  minOccurs="0">
+				<xs:annotation>
+					<xs:documentation/>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="jklsmsyGridlbVO">
+		<xs:annotation>
+			<xs:documentation/>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="zspmDm" type="zspmDm">
+				<xs:annotation>
+					<xs:documentation>税目</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zszmDm" type="zszmDm">
+				<xs:annotation>
+					<xs:documentation>子目</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ykxse" type="je">
+				<xs:annotation>
+					<xs:documentation>原矿销售额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jkxse" type="je">
+				<xs:annotation>
+					<xs:documentation>精矿销售额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="hsb" type="sl1">
+				<xs:annotation>
+					<xs:documentation>换算比</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ykhswjkdxse" type="je">
+				<xs:annotation>
+					<xs:documentation>原矿换算为精矿的销售额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yxkcdyzf" type="je">
+				<xs:annotation>
+					<xs:documentation>允许扣减的运杂费</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yxkjdwgkgjje" type="je">
+				<xs:annotation>
+					<xs:documentation>允许扣减的外购矿购进金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jsxse" type="je">
+				<xs:annotation>
+					<xs:documentation>计税销售额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jldwDm" type="jldwDm">
+				<xs:annotation>
+					<xs:documentation>计量单位</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ykxsl" type="je">
+				<xs:annotation>
+					<xs:documentation>原矿销售量</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jkxsl" type="je">
+				<xs:annotation>
+					<xs:documentation>精矿销售量</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="pjxkb" type="je">
+				<xs:annotation>
+					<xs:documentation>平均选矿比</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ykhswjkdxsl" type="je">
+				<xs:annotation>
+					<xs:documentation>原矿换算为精矿的销售量</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jsxsl" type="je">
+				<xs:annotation>
+					<xs:documentation>计税销售量</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="cjclbz" type="bz1">
+				<xs:annotation>
+					<xs:documentation>从价从量标志</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

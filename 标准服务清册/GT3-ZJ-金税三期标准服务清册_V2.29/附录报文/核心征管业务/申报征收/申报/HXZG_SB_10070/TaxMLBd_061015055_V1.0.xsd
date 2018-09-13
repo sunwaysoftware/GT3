@@ -1,0 +1,337 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 被2012 () 使用XMLSpy v编辑的 (http://www.altova.com) by -->
+<!-- edited with XMLSpy v2011 (http://www.altova.com) by aaa (aaa) -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:complexType name="skwgqyskbgbYwbd">
+		<xs:annotation>
+			<xs:documentation>受控外国企业信息报告业务表单</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence minOccurs="0" maxOccurs="unbounded">
+					<xs:element name="skwgqybgbxxbd" type="skwgqybgbxxbdVO">
+						<xs:annotation>
+							<xs:documentation>受控外国企业信息报告表</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="skwgqybgbxxbdVO">
+		<xs:annotation>
+			<xs:documentation>受控外国企业主体信息</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="skwgqyxxbgbForm" type="skwgqyxxbgbVO" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>主体信息</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="wgqygfxxZgjmcgxxGrid" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>明细信息</xs:documentation>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:sequence minOccurs="0" maxOccurs="unbounded">
+						<xs:element name="cgxxGridlb" type="wgqygfxxZgjmcgxxGridlbVO">
+							<xs:annotation>
+								<xs:documentation>明细信息</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="qtxxForm" type="skwgqyqtxxForm" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>表尾信息</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="skwgqyxxbgbVO">
+		<xs:annotation>
+			<xs:documentation>主体信息</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="qymc" type="nsrmc" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>企业名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qynsrsbh" type="nsrsbh" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>企业纳税人识别号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="skwgqyqymc" type="nsrmc" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>受控外国企业企业中文名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="skwgqymcyw" type="nsrmc" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>受控外国企业名称英文</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="skwgqynsrsbh" type="nsrsbh" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>受控外国企业纳税人识别号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="skwgqyzcdz" type="dz" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>受控外国企业注册中文地址</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="skwgqyzcdzyw" type="dz" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>受控外国企业注册地址英文</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="skwgqyclsj" type="skssqq" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>受控外国企业成立时间</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="skwgqyfddbr" type="nsrmc" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>受控外国企业法定代表人中文</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="skwgqyfddbryw" type="nsrmc" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>受控外国企业法定代表人英文</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="skwgqynsndq" type="skssqq" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>受控外国企业纳税年度起</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="skwgqyjzbwhb" type="hbmc" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>受控外国企业记账本位货币</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="skwgqydrmbhl" type="bl" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>受控外国企业折合人民币汇率选用</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="skwgqynsndz" type="skssqz" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>受控外国企业纳税年度止</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zyywfw" type="nsrmc" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>受控外国企业主营业范围</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="skwgqygctj" type="bz1" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>受控外国企业构成条件</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="uuid" type="uuid" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>uuid</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="skwgqyqtxxForm">
+		<xs:annotation>
+			<xs:documentation>其他信息</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:annotation>
+				<xs:documentation>信息</xs:documentation>
+			</xs:annotation>
+			<xs:element name="skwgqysfzgjswzjzddfdslgj" type="bz1" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>受控外国企业是否在国家税务总局指定的非低税率国家</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sjsf" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>时间税负</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="skwgqyndlrsfbgy500wyrmb" type="bz1" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>受控外国企业年度利润是否不高于500万元人民币  </xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="skwgqyzyqdjjjyhdsd" type="bz1" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>受控外国企业主要取得积极经营活动所得</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="skwgqykfplrze" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>可分配利润总额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="skwgqykdmwgse1" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>可抵免外国税额1</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="skwgqyyqndystfpe" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>以前年度已视同分配额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="skwgqykdmwgse2" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>可抵免外国税额2</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="skwgqybndfpeccyqndystfpe" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>本年度分配额超出以前年度已视同分配额的数额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="skwgqykdmwgse3" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>可抵免外国税额3</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="skwgqywfplre" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>未分配利润额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="skwgqykdmwgse4" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>可抵免外国税额4</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="skwgqystfpgbgrgx" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>视同分配给报告人股息</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="skwgqykdmwgse5" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>可抵免外国税额5</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="skwgqystfpgqtzgjmgdgx" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>视同分配给其他中国居民股东的股息</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="skwgqykdmwgse6" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>可抵免外国税额6</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bz" type="bz" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>备注</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bgrqz" type="nsrmc" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>报告人</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bgrq" type="bgrq" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>报告日期</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="slr" type="nsrmc" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>受理人</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zgswjgDm" type="zgswjgDm" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>税收机关</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="lxdh" type="lxdh" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>联系电话</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="slrq" type="slrq" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>受理日期</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="wgqygfxxZgjmcgxxGridlbVO">
+		<xs:annotation>
+			<xs:documentation>持有受控外国企业股份的中国居民股东持股信息</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="cyskwgqyzgjmgdgdmc" type="nsrmc" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>持有受控外国企业股份的中国居民股东股东名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="cyskwgqyzgjmgdcgsl" type="sl" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>持有受控外国企业股份的中国居民股东持股数量</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="cyskwgqyzgjmgdcgbl" type="bl" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>持有受控外国企业股份的中国居民股东持股比例</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="cyskwgqyzgjmgdzjcgsl" type="sl" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>持有受控外国企业股份的中国居民股东直接持股数量</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="cyskwgqyzgjmgdzjcgbl" type="bl" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>持有受控外国企业股份的中国居民股东直接持股比例</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="cyskwgqyzgjmgdzjqssj" type="skssqq" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>持有受控外国企业股份的中国居民股东直接起始时间</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="cyskwgqyzgjmgdzjzzsj" type="skssqq" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>持有受控外国企业股份的中国居民股东直接终止时间</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="cyskwgqyzgjmgdxxjjcgsl" type="sl" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>持有受控外国企业股份的中国居民股东持股信息持股数量</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="cyskwgqyzgjmgdjjcgbl" type="bl" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>持有受控外国企业股份的中国居民股东持股信息间接持股比例</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="cyskwgqyzgjmgdjjqssj" type="skssqq" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>持有受控外国企业股份的中国居民股东持股信息间接起始时间</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="cyskwgqyzgjmgdjjzzsj" type="skssqz" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>持有受控外国企业股份的中国居民股东持股信息间接终止时间</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zbuuid" type="zbuuid" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>主表uuid</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

@@ -1,0 +1,27 @@
+<service xmlns="http://www.chinatax.gov.cn/spec/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<head>
+		<tran_id>SWZJ.HXZG.YSH.ProduceTYWSZG</tran_id>
+		<channel_id>TEST</channel_id>
+		<tran_seq>C000BNFZC25001201305030505267890</tran_seq>
+		<tran_date>20140826</tran_date>
+		<tran_time>173435849</tran_time>
+                       <expand>
+      <name>sjry</name>
+      <value>24406060735</value>
+    </expand>
+    <expand>
+      <name>sjjg</name>
+      <value>24406060700</value>
+    </expand>	</head> 
+<body><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<taxML xsi:type="HXZGYSH00008Request" xmlbh="String" bbh="String" xmlmc="String" xsi:schemaLocation="http://www.chinatax.gov.cn/dataspec/ TaxMLBw_HXZG_YSH_00008_Request_V1.0.xsd" xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<cxwszgRequestVO>
+		<swjg>24406060700</swjg>
+		<nd>2014</nd>
+		<dzbzdszlDm>ZDA0110271</dzbzdszlDm>
+		<wszzgzDm>23</wszzgzDm>
+		<zxSl>5</zxSl>
+	</cxwszgRequestVO>
+</taxML>
+]]></body>
+</service>

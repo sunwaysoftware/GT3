@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2013 (http://www.altova.com) by  () -->
+<!-- 被2012 () 使用XMLSpy v编辑的 (http://www.altova.com) by -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:include schemaLocation="TaxMLPublicSBType.xsd"/>
+	<xs:include schemaLocation="TaxMLBw_tdjysb_V1.0.xsd"/>
+	<xs:complexType name="HXZGSB00203Request">
+		<xs:annotation>
+			<xs:documentation>土地交易申报事前监控及土地税源信息获取、减免信息获取请求报文</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="zrfsbNsrxxJhVO" type="SBNsrxxJhVO">
+						<xs:annotation>
+							<xs:documentation>转让方申报纳税人主体数据查询信息对象</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="srfsbNsrxxJhVO" type="SBNsrxxJhVO">
+						<xs:annotation>
+							<xs:documentation>受让方申报纳税人主体数据查询信息对象</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="tdjysbywbw" type="tdjysbywbw">
+						<xs:annotation>
+							<xs:documentation>土地交易业务报文</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="czrfs" type="czrfs">
+						<xs:annotation>
+							<xs:documentation>出转让方式</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="jyflx" type="bz1">
+						<xs:annotation>
+							<xs:documentation>交易方类型：0 转让 1受让 2 双方</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+</xs:schema>

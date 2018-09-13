@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2009 (http://www.altova.com) by Administrator (EMBRACE) -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:complexType name="yyssb06_ydtgjzylwskjnqksbbywbw">
+		<xs:annotation>
+			<xs:documentation>《异地提供建筑业劳务税款缴纳情况申报表》业务报文</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="yyssb06_ydtgjzylwskjnqksbb" type="yyssb06_ydtgjzylwskjnqksbb">
+						<xs:annotation>
+							<xs:documentation>《异地提供建筑业劳务税款缴纳情况申报表》</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="yyssb06_ydtgjzylwskjnqksbb">
+		<xs:annotation>
+			<xs:documentation>《异地提供建筑业劳务税款缴纳情况申报表》</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="ydtgjzylwskjnqksbbGrid" type="ydtgjzylwskjnqksbbGrid">
+				<xs:annotation>
+					<xs:documentation>异地建筑业提供服务情况申报表列表</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="ydtgjzylwskjnqksbbGrid">
+		<xs:annotation>
+			<xs:documentation>《异地提供建筑业劳务税款缴纳情况申报表》</xs:documentation>
+		</xs:annotation>
+		<xs:sequence maxOccurs="unbounded">
+			<xs:element name="ydtgjzylwskjnqksbbGridlb" type="ydtgjzylwskjnqksbbGridlb">
+				<xs:annotation>
+					<xs:documentation>异地建筑业提供服务情况申报表列表</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="ydtgjzylwskjnqksbbGridlb">
+		<xs:annotation>
+			<xs:documentation>异地建筑业提供服务情况申报表列表</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="ysxmDm" type="zspmDm">
+				<xs:annotation>
+					<xs:documentation>应税项目</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yjnskje" type="ynse">
+				<xs:annotation>
+					<xs:documentation>异地提供建筑业劳务-本期应纳税额-应缴纳税款金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ssjkpzh" type="ssjkpzh">
+				<xs:annotation>
+					<xs:documentation>异地提供建筑业劳务-本期应纳税额-税收缴款凭证号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bqybdkdjsk" type="je">
+				<xs:annotation>
+					<xs:documentation>异地提供建筑业劳务-本期收到扣缴税款通知书情况-本期已被代扣代缴税额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="kjssjkpzh" type="ssjkpzh">
+				<xs:annotation>
+					<xs:documentation>异地提供建筑业劳务-本期收到扣缴税款通知书情况-税收缴款凭证号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="kjskssqq" type="ssqq">
+				<xs:annotation>
+					<xs:documentation>异地提供建筑业劳务-本期收到扣缴税款通知书情况-税款所属期-起始月份</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="kjskssqz" type="ssqz">
+				<xs:annotation>
+					<xs:documentation>异地提供建筑业劳务-本期收到扣缴税款通知书情况-税款所属期-终止月份</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="kjdwnsrsbh" type="nsrsbh">
+				<xs:annotation>
+					<xs:documentation>异地提供建筑业劳务-本期收到扣缴税款通知书情况-扣缴单位纳税人识别号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yrkssjksslyysse" type="je">
+				<xs:annotation>
+					<xs:documentation>异地提供建筑业劳务-本期收到税收缴款书情况-已入库税收缴款书所列营业税税额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yrkssjkpzh" type="ssjkpzh">
+				<xs:annotation>
+					<xs:documentation>异地提供建筑业劳务-本期收到税收缴款书情况-已入库税收缴款凭证号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sdssjksskssqq" type="ssqq">
+				<xs:annotation>
+					<xs:documentation>异地提供建筑业劳务-本期收到税收缴款书情况-税款所属期-起始月份</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sdssjksskssqz" type="ssqz">
+				<xs:annotation>
+					<xs:documentation>异地提供建筑业劳务-本期收到税收缴款书情况-税款所属期-终止月份</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sdhzjmsse" type="je">
+				<xs:annotation>
+					<xs:documentation>异地提供建筑业劳务-本期收到减免税批准文书情况-核准减免税税额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sdswjmpzwsh" type="swjmpzwsh">
+				<xs:annotation>
+					<xs:documentation>异地提供建筑业劳务-本期收到减免税批准文书情况-税务减免批准文书号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sdjmpzwsyxqq" type="ssqq">
+				<xs:annotation>
+					<xs:documentation>异地提供建筑业劳务-本期收到减免税批准文书情况-批准文书有效期-起始月份</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sdjmpzwsyxqz" type="ssqz">
+				<xs:annotation>
+					<xs:documentation>异地提供建筑业劳务-本期收到减免税批准文书情况-批准文书有效期-终止月份</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:include schemaLocation="TaxMLPublicSBType.xsd"/>
+
+	<xs:complexType name="HXZGSB01867Request">
+		<xs:annotation>
+			<xs:documentation>作废单户代扣代缴车船税申报明细信息保存接入报文</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="sbpch" type="uuid">
+						<xs:annotation>
+							<xs:documentation>申报批次号(根据此号码对单户的数据进行汇总)</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="nsrjhvo" type="SBNsrxxJhVO">
+						<xs:annotation>
+							<xs:documentation>申报纳税人信息(djxh,skssqq,skssqz必传)</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+</xs:schema>

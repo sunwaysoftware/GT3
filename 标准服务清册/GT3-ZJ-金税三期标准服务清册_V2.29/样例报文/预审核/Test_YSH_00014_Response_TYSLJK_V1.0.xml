@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<service xmlns="http://www.chinatax.gov.cn/spec/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <head>
+    <tran_id>SWZJ.HXZG.YSH.TYSLJK</tran_id>
+    <channel_id>TEST</channel_id>
+    <tran_seq>C000BNFZC25001201305030505267890</tran_seq>
+    <tran_date>20140826</tran_date>
+    <tran_time>173435849</tran_time>
+    <rtn_code>0</rtn_code>
+    <rtn_msg>
+      <Code>000</Code>
+      <Message></Message>
+      <Reason></Reason>
+    </rtn_msg>
+    <expand>
+      <name>sjry</name>
+      <value>24406060735</value>
+    </expand>
+    <expand>
+      <name>sjjg</name>
+      <value>24406060001</value>
+    </expand>
+  </head>
+  <body><![CDATA[<?xml version="1.0" encoding="UTF-8" standalone="yes"?><taxML xsi:type="HXZGYSH00014Response" xmlbh="HXZGYSH00014Response" bbh="V1.0" xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><jkjgGrid><jkjgGridlb><jkxmDm>AS_FP_JK_DJXH_SFLCYWJXFP_TG</jkxmDm><jkxmmc>监控纳税人是否留存有未缴销的发票</jkxmmc><jklxDm>2</jklxDm><jklxmc>强制监控</jklxmc><jkjgDm>1</jkjgDm><jkjgmc>校验通过</jkjgmc><gyxx>该纳税人没有未缴销的发票</gyxx></jkjgGridlb><jkjgGridlb><jkxmDm>AS_DJ_JK_SWDJLX_SLSWDJ_TG</jkxmDm><jkxmmc>监控纳税人是否为办理税务登记纳税人</jkxmmc><jklxDm>2</jklxDm><jklxmc>强制监控</jklxmc><jkjgDm>1</jkjgDm><jkjgmc>校验通过</jkjgmc><gyxx>该课征主体状态为办理税务登记纳税人</gyxx></jkjgGridlb><jkjgGridlb><jkxmDm>AS_DJ_JK_YFQWBJDBRW_EXIST_TG</jkxmDm><jkxmmc>监控纳税人是否存在已发起未办结的待办任务</jkxmmc><jklxDm>2</jklxDm><jklxmc>强制监控</jklxmc><jkjgDm>2</jkjgDm><jkjgmc>校验不通过</jkjgmc><gyxx>该纳税人存在已发起未办结的待办任务,监控不通过</gyxx></jkjgGridlb><jkjgGridlb><jkxmDm>AS_DJ_JK_NSRZT_ZC_TG</jkxmDm><jkxmmc>监控纳税人状态是否为正常</jkxmmc><jklxDm>2</jklxDm><jklxmc>强制监控</jklxmc><jkjgDm>2</jkjgDm><jkjgmc>校验不通过</jkjgmc><gyxx>该纳税人状态不是正常,纳税人状态为非正常</gyxx></jkjgGridlb><jkjgGridlb><jkxmDm>AS_DJ_JK_YLXTZG_CKTS_WZX_BTG</jkxmDm><jkxmmc>纳税人是否存在未注销的出口退税资格</jkxmmc><jklxDm>1</jklxDm><jklxmc>信息提示</jklxmc><jkjgDm>1</jkjgDm><jkjgmc>校验通过</jkjgmc><gyxx>该纳税人不存在未注销的出口退税资格</gyxx></jkjgGridlb><jkjgGridlb><jkxmDm>AS_DJ_JK_YLXTZG_FWSK_WZX_BTG</jkxmDm><jkxmmc>纳税人是否存在未注销的防伪税控资格</jkxmmc><jklxDm>1</jklxDm><jklxmc>信息提示</jklxmc><jkjgDm>1</jkjgDm><jkjgmc>校验通过</jkjgmc><gyxx>该纳税人不存在未注销的防伪税控资格</gyxx></jkjgGridlb><jkjgGridlb><jkxmDm>AS_ZS_JK_NSRYDTXX</jkxmDm><jkxmmc>根据登记序号监控是否存在多缴</jkxmmc><jklxDm>1</jklxDm><jklxmc>信息提示</jklxmc><jkjgDm>1</jkjgDm><jkjgmc>校验通过</jkjgmc><gyxx>该纳税无多缴</gyxx></jkjgGridlb><jkjgGridlb><jkxmDm>AS_SB_JK_WSB_WBHBY</jkxmDm><jkxmmc>监控未申报不包含本月</jkxmmc><jklxDm>2</jklxDm><jklxmc>强制监控</jklxmc><jkjgDm>1</jkjgDm><jkjgmc>校验通过</jkjgmc><gyxx>通过监控</gyxx></jkjgGridlb><jkjgGridlb><jkxmDm>AS_SB_JK_CZWWCTDZZSQSXX</jkxmDm><jkxmmc>查询纳税人是否存在土地增值税信息</jkxmmc><jklxDm>2</jklxDm><jklxmc>强制监控</jklxmc><jkjgDm>1</jkjgDm><jkjgmc>校验通过</jkjgmc><gyxx>通过监控</gyxx></jkjgGridlb><jkjgGridlb><jkxmDm>AS_SB_JK_YFHZSBAYSFSB</jkxmDm><jkxmmc>查询定期定额分月汇总申报按月是否已申报</jkxmmc><jklxDm>2</jklxDm><jklxmc>强制监控</jklxmc><jkjgDm>1</jkjgDm><jkjgmc>校验通过</jkjgmc><gyxx>通过监控</gyxx></jkjgGridlb><jkjgGridlb><jkxmDm>AS_ZS_JK_QSZNJFK</jkxmDm><jkxmmc>滞纳金缴款罚款服务</jkxmmc><jklxDm>1</jklxDm><jklxmc>信息提示</jklxmc><jkjgDm>2</jkjgDm><jkjgmc>校验不通过</jkjgmc><gyxx>该纳税人存在2014-10-24 17:26:57至2014-10-24 17:26:57属期的个人所得税欠税153.0元</gyxx></jkjgGridlb><jkjgGridlb><jkxmDm>AS_PZ_JK_SSCZWJBXX</jkxmDm><jkxmmc>监控纳税人是否存在未结报的税收票证信息</jkxmmc><jklxDm>2</jklxDm><jklxmc>强制监控</jklxmc><jkjgDm>1</jkjgDm><jkjgmc>校验通过</jkjgmc><gyxx>通过监控</gyxx></jkjgGridlb><jkjgGridlb><jkxmDm>AS_PS_JK_NSRSFCZWWCNSPG</jkxmDm><jkxmmc>监控纳税人是否存在未完成的纳税评估</jkxmmc><jklxDm>1</jklxDm><jklxmc>信息提示</jklxmc><jkjgDm>2</jkjgDm><jkjgmc>校验不通过</jkjgmc><gyxx>该纳税人存在未完成的纳税评估</gyxx></jkjgGridlb><jkjgGridlb><jkxmDm>AS_FZ_JK_WFXWCLLCWCL</jkxmDm><jkxmmc>监控纳税人是否存在税收违法行为处理流程未处理完毕</jkxmmc><jklxDm>2</jklxDm><jklxmc>强制监控</jklxmc><jkjgDm>1</jkjgDm><jkjgmc>校验通过</jkjgmc><gyxx>通过监控</gyxx></jkjgGridlb><jkjgGridlb><jkxmDm>AS_JC_JK_NSRZCAJ</jkxmDm><jkxmmc>监控纳税人是否有在查的案件</jkxmmc><jklxDm>1</jklxDm><jklxmc>信息提示</jklxmc><jkjgDm>1</jkjgDm><jkjgmc>校验通过</jkjgmc><gyxx>通过监控</gyxx></jkjgGridlb></jkjgGrid></taxML>]]></body>
+</service>

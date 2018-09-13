@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 被2011 rel. 2 sp1 (TeaM DJiNN) 使用XMLSpy vTeaM DJiNN编辑的 (http://www.altova.com) by -->
+<!-- edited with XMLSpy v2010 rel. 3 (http://www.altova.com) by MESMERiZE (MSM) -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:include schemaLocation="TaxMLPublicType.xsd"/>
+	<xs:complexType name="bqjmsemxbywbw">
+		<xs:annotation>
+			<xs:documentation>《本期减（免）税额明细表业务报文</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="bqjmsemxb" type="bqjmsemxb">
+						<xs:annotation>
+							<xs:documentation>《本期减（免）税额明细表》</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="bqjmsemxb">
+		<xs:annotation>
+			<xs:documentation>《本期减（免）税额明细表》</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="bqjmsemxbGrid">
+				<xs:complexType>
+					<xs:sequence minOccurs="0" maxOccurs="unbounded">
+						<xs:element name="bqjmsemxbGridlb" type="bqjmsemxbGridlbVO"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="bqjmsemxbGridlbVO">
+		<xs:annotation>
+			<xs:documentation>申报数据信息</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="ewbhxh" type="ewbhxh">
+				<xs:annotation>
+					<xs:documentation>二维表行序号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zspmDm" type="zspmDm">
+				<xs:annotation>
+					<xs:documentation>征收品目代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ssjmxzDm" type="ssjmxzDm">
+				<xs:annotation>
+					<xs:documentation>税收减（免）性质代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="swsxDm" type="swsxDm">
+				<xs:annotation>
+					<xs:documentation>减（免）项目代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bqjmxse" type="bqjmxse" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>本期减免销售额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="blsl" type="blsl" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>比例税率</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bqjmsl" type="bqjmsl" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>本期减（免）数量</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="desl1" type="desl1" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>定额税率</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bqjmse" type="bqjmse" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>本期减（免）税额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="msdclxDm" type="msdclxDm" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>免税电池类型代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

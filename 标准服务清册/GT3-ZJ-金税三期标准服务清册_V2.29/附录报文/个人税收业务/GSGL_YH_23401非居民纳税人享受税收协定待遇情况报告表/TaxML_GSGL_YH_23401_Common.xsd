@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+<xs:simpleType name="length1">
+	<xs:annotation>			
+	<xs:documentation>固定长度1
+	</xs:documentation>
+	</xs:annotation>
+	<xs:restriction base="xs:string">
+		<xs:length value="1"/>
+	</xs:restriction>
+</xs:simpleType>
+<xs:simpleType name="length2">
+	<xs:annotation>			
+	<xs:documentation>固定长度2
+	</xs:documentation>
+	</xs:annotation>
+	<xs:restriction base="xs:string">
+		<xs:length value="2"/>
+	</xs:restriction>
+</xs:simpleType>
+<xs:simpleType name="length3">
+	<xs:annotation>			
+	<xs:documentation>固定长度3
+	</xs:documentation>
+	</xs:annotation>
+	<xs:restriction base="xs:string">
+		<xs:length value="3"/>
+	</xs:restriction>
+</xs:simpleType>
+<xs:simpleType name="length4">
+	<xs:annotation>			
+	<xs:documentation>固定长度4
+	</xs:documentation>
+	</xs:annotation>
+	<xs:restriction base="xs:string">
+		<xs:length value="4"/>
+	</xs:restriction>
+</xs:simpleType>
+<xs:simpleType name="length11">
+	<xs:annotation>			
+	<xs:documentation>固定长度11
+	</xs:documentation>
+	</xs:annotation>
+	<xs:restriction base="xs:string">
+		<xs:length value="11"/>
+	</xs:restriction>
+</xs:simpleType>
+<xs:simpleType name="maxLength60">
+	<xs:annotation>			
+	<xs:documentation>最长长度60
+	</xs:documentation>
+	</xs:annotation>
+	<xs:restriction base="xs:string">
+		<xs:maxLength value="60"/>
+	</xs:restriction>
+</xs:simpleType>
+<xs:simpleType name="maxLength500">
+	<xs:annotation>			
+	<xs:documentation>最长长度500
+	</xs:documentation>
+	</xs:annotation>
+	<xs:restriction base="xs:string">
+		<xs:maxLength value="500"/>
+	</xs:restriction>
+</xs:simpleType>
+<xs:simpleType name="maxLength150">
+	<xs:annotation>			
+	<xs:documentation>最长长度150
+	</xs:documentation>
+	</xs:annotation>
+	<xs:restriction base="xs:string">
+		<xs:maxLength value="150"/>
+	</xs:restriction>
+</xs:simpleType>
+<xs:simpleType name="maxLength40">
+	<xs:annotation>			
+	<xs:documentation>最长长度40
+	</xs:documentation>
+	</xs:annotation>
+	<xs:restriction base="xs:string">
+		<xs:maxLength value="40"/>
+	</xs:restriction>
+</xs:simpleType>
+<xs:simpleType name="maxLength300">
+	<xs:annotation>			
+	<xs:documentation>最长长度300
+	</xs:documentation>
+	</xs:annotation>
+	<xs:restriction base="xs:string">
+		<xs:maxLength value="300"/>
+	</xs:restriction>
+</xs:simpleType>
+<xs:simpleType name="maxLength1200">
+	<xs:annotation>			
+	<xs:documentation>最长长度1200
+	</xs:documentation>
+	</xs:annotation>
+	<xs:restriction base="xs:string">
+		<xs:maxLength value="1200"/>
+	</xs:restriction>
+</xs:simpleType>
+<xs:simpleType name="maxLength20">
+	<xs:annotation>			
+	<xs:documentation>最长长度20
+	</xs:documentation>
+	</xs:annotation>
+	<xs:restriction base="xs:string">
+		<xs:maxLength value="20"/>
+	</xs:restriction>
+</xs:simpleType>
+<xs:simpleType name="maxLength2000">
+	<xs:annotation>			
+	<xs:documentation>最长长度2000
+	</xs:documentation>
+	</xs:annotation>
+	<xs:restriction base="xs:string">
+		<xs:maxLength value="2000"/>
+	</xs:restriction>
+</xs:simpleType>
+<xs:simpleType name="maxLength10">
+	<xs:annotation>			
+	<xs:documentation>最长长度10
+	</xs:documentation>
+	</xs:annotation>
+	<xs:restriction base="xs:string">
+		<xs:maxLength value="10"/>
+	</xs:restriction>
+</xs:simpleType>
+<xs:simpleType name="maxLength13">
+	<xs:annotation>			
+	<xs:documentation>最长长度13
+	</xs:documentation>
+	</xs:annotation>
+	<xs:restriction base="xs:string">
+		<xs:maxLength value="13"/>
+	</xs:restriction>
+</xs:simpleType>
+<xs:simpleType name="date">
+	<xs:annotation>			
+	<xs:documentation>时间格式
+	</xs:documentation>
+	</xs:annotation>
+	<xs:restriction base="xs:string">
+	</xs:restriction>
+</xs:simpleType>
+<xs:simpleType name="amount">
+	<xs:annotation>
+		<xs:documentation>金额类型
+		</xs:documentation>
+	</xs:annotation>
+	<xs:restriction base="xs:double"/>
+</xs:simpleType>
+</xs:schema>

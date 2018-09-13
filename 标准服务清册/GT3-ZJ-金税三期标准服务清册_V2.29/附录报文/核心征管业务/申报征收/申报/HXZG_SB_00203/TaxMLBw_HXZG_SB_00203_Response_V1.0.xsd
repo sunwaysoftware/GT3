@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2013 (http://www.altova.com) by  () -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:include schemaLocation="TaxMLPublicSBType.xsd"/>
+	<xs:complexType name="HXZGSB00203Response">
+		<xs:annotation>
+			<xs:documentation>分土地交易申报事前监控及土地税源信息获取、减免信息获取返回报文</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="crfcshxx">
+						<xs:annotation>
+							<xs:documentation>出让方初始化信息</xs:documentation>
+						</xs:annotation>
+						<xs:complexType>
+							<xs:sequence>
+								<xs:element name="yjxxGrid">
+									<xs:annotation>
+										<xs:documentation>预缴税款数据信息</xs:documentation>
+									</xs:annotation>
+									<xs:complexType>
+										<xs:sequence minOccurs="0" maxOccurs="unbounded">
+											<xs:element name="yjxxGridlb" type="SBYjxxJhVO"/>
+										</xs:sequence>
+									</xs:complexType>
+								</xs:element>
+								<xs:element name="jmxxGrid">
+									<xs:annotation>
+										<xs:documentation>减免数据信息</xs:documentation>
+									</xs:annotation>
+									<xs:complexType>
+										<xs:sequence minOccurs="0" maxOccurs="unbounded">
+											<xs:element name="jmxxGridlb" type="SBJmxxJhVO"/>
+										</xs:sequence>
+									</xs:complexType>
+								</xs:element>
+								<xs:element name="tdjysbxxGrid">
+									<xs:annotation>
+										<xs:documentation>土地交易申报信息Grid</xs:documentation>
+									</xs:annotation>
+									<xs:complexType>
+										<xs:sequence minOccurs="0" maxOccurs="unbounded">
+											<xs:element name="tdjysbxxGridlb" type="fdcjysbxxGridlbVO">
+												<xs:annotation>
+													<xs:documentation>土地交易申报信息Gridlb</xs:documentation>
+												</xs:annotation>
+											</xs:element>
+										</xs:sequence>
+									</xs:complexType>
+								</xs:element>
+							</xs:sequence>
+						</xs:complexType>
+					</xs:element>
+					<xs:element name="srfcshxx">
+						<xs:annotation>
+							<xs:documentation>受让初始化信息</xs:documentation>
+						</xs:annotation>
+						<xs:complexType>
+							<xs:sequence>
+								<xs:element name="yjxxGrid">
+									<xs:annotation>
+										<xs:documentation>预缴税款数据信息</xs:documentation>
+									</xs:annotation>
+									<xs:complexType>
+										<xs:sequence minOccurs="0" maxOccurs="unbounded">
+											<xs:element name="yjxxGridlb" type="SBYjxxJhVO"/>
+										</xs:sequence>
+									</xs:complexType>
+								</xs:element>
+								<xs:element name="jmxxGrid">
+									<xs:annotation>
+										<xs:documentation>减免数据信息</xs:documentation>
+									</xs:annotation>
+									<xs:complexType>
+										<xs:sequence minOccurs="0" maxOccurs="unbounded">
+											<xs:element name="jmxxGridlb" type="SBJmxxJhVO"/>
+										</xs:sequence>
+									</xs:complexType>
+								</xs:element>
+								<xs:element name="tdjysbxxGrid">
+									<xs:annotation>
+										<xs:documentation>土地交易申报信息Grid</xs:documentation>
+									</xs:annotation>
+									<xs:complexType>
+										<xs:sequence minOccurs="0" maxOccurs="unbounded">
+											<xs:element name="tdjysbxxGridlb" type="fdcjysbxxGridlbVO">
+												<xs:annotation>
+													<xs:documentation>土地交易申报信息Gridlb</xs:documentation>
+												</xs:annotation>
+											</xs:element>
+										</xs:sequence>
+									</xs:complexType>
+								</xs:element>
+							</xs:sequence>
+						</xs:complexType>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+</xs:schema>

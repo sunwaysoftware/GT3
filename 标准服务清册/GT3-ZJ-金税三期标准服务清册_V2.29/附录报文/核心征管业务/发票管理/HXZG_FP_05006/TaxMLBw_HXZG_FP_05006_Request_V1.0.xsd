@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 编辑使用 XMLSpy v2006 U (http://www.altova.com) 由 any (any) -->
+<!-- 编辑使用 XMLSpy v2006 U (http://www.altova.com) 由 any (any) -->
+<!-- 编辑使用 XMLSpy v2006 U (http://www.altova.com) 由 any (any) -->
+<!-- 编辑使用 XMLSpy v2006 U (http://www.altova.com) 由 any (any) -->
+<!-- 被2012 () 使用XMLSpy v编辑的 (http://www.altova.com) by -->
+<!-- edited with XMLSpy v2011 (http://www.altova.com) by yxzhizhi (yxzhizhi) -->
+<!-- 编辑使用 XMLSpy v2006 U (http://www.altova.com) 由 any (any) -->
+<!-- 编辑使用 XMLSpy v2006 U (http://www.altova.com) 由 any (any) -->
+<!-- 编辑使用 XMLSpy v2006 U (http://www.altova.com) 由 any (any) -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxDoc.xsd"/>
+	<xs:include schemaLocation="TaxMLPublic.xsd"/>
+	<xs:include schemaLocation="TaxMLPublicFPType.xsd"/>
+	<xs:complexType name="HXZGFP05006Request">
+		<xs:annotation>
+			<xs:documentation>保存丢失增值税专用发票已报税证明</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="dszzszyfpybszmVo" type="FPDszzszyfpybszmVO">
+						<xs:annotation>
+							<xs:documentation>丢失增值税专用发票已报税证明信息</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="dszzszyfpybszmMxVoList">
+						<xs:annotation>
+							<xs:documentation>丢失增值税专用发票已报税证明明细信息</xs:documentation>
+						</xs:annotation>
+						<xs:complexType>
+							<xs:sequence maxOccurs="unbounded">
+								<xs:element name="FpDszzszyfpybszmMxVo" type="FPDszzszyfpybszmMxVO">
+									<xs:annotation>
+										<xs:documentation>丢失增值税专用发票已报税证明明细信息</xs:documentation>
+									</xs:annotation>
+								</xs:element>
+							</xs:sequence>
+						</xs:complexType>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+</xs:schema>

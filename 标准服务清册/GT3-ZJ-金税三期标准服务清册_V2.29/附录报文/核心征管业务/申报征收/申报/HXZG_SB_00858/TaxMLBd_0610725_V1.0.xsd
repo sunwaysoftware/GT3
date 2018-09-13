@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 被2011 rel. 2 sp1 (TeaM DJiNN) 使用XMLSpy vTeaM DJiNN编辑的 (http://www.altova.com) by -->
+<!-- edited with XMLSpy v2010 rel. 3 (http://www.altova.com) by MESMERiZE (MSM) -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:include schemaLocation="TaxMLPublicType.xsd"/>
+	<xs:complexType name="kndjzdmjwsdsmxbForm">
+		<xs:annotation>
+			<xs:documentation>跨年度结转抵免境外所得税明细表(A108030)业务报文</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="kndjzdmjwsdsMxbGrid" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>跨年度结转抵免境外所得税明细表</xs:documentation>
+						</xs:annotation>
+						<xs:complexType>
+							<xs:sequence  maxOccurs="unbounded" minOccurs="0">
+								<xs:element name="kndjzdmjwsdsmxbgridVO" type="kndjzdmjwsdsmxbGridVO" minOccurs="0"/>
+							</xs:sequence>
+						</xs:complexType>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="kndjzdmjwsdsmxbGridVO">
+		<xs:annotation>
+			<xs:documentation>《跨年度结转抵免境外所得税明细表》</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+<xs:element name="gjdq"  type="gjhdq"   > <xs:annotation> <xs:documentation>国家（地区）</xs:documentation></xs:annotation></xs:element>
+<xs:element name="qwnqwn"  type="je"   > <xs:annotation> <xs:documentation>前五年境外所得已缴所得税未抵免余额_前五年</xs:documentation></xs:annotation></xs:element>
+<xs:element name="qwnqsin"  type="je"   > <xs:annotation> <xs:documentation>前五年境外所得已缴所得税未抵免余额_前四年</xs:documentation></xs:annotation></xs:element>
+<xs:element name="qwnqsann"  type="je"   > <xs:annotation> <xs:documentation>前五年境外所得已缴所得税未抵免余额_前三年</xs:documentation></xs:annotation></xs:element>
+<xs:element name="qwnqln"  type="je"   > <xs:annotation> <xs:documentation>前五年境外所得已缴所得税未抵免余额_前二年</xs:documentation></xs:annotation></xs:element>
+<xs:element name="qwnqyn"  type="je"   > <xs:annotation> <xs:documentation>前五年境外所得已缴所得税未抵免余额_前一年</xs:documentation></xs:annotation></xs:element>
+<xs:element name="qwnxj"  type="je"   > <xs:annotation> <xs:documentation>前五年境外所得已缴所得税未抵免余额_小计</xs:documentation></xs:annotation></xs:element>
+<xs:element name="bnqwn"  type="je"   > <xs:annotation> <xs:documentation>本年实际抵免以前年度未抵免的境外已缴所得税额_前五年</xs:documentation></xs:annotation></xs:element>
+<xs:element name="bnqsin"  type="je"   > <xs:annotation> <xs:documentation>本年实际抵免以前年度未抵免的境外已缴所得税额_前四年</xs:documentation></xs:annotation></xs:element>
+<xs:element name="bnqsann"  type="je"   > <xs:annotation> <xs:documentation>本年实际抵免以前年度未抵免的境外已缴所得税额_前三年</xs:documentation></xs:annotation></xs:element>
+<xs:element name="bnqln"  type="je"   > <xs:annotation> <xs:documentation>本年实际抵免以前年度未抵免的境外已缴所得税额_前二年</xs:documentation></xs:annotation></xs:element>
+<xs:element name="bnqyn"  type="je"   > <xs:annotation> <xs:documentation>本年实际抵免以前年度未抵免的境外已缴所得税额_前一年</xs:documentation></xs:annotation></xs:element>
+<xs:element name="bnxj"  type="je"   > <xs:annotation> <xs:documentation>本年实际抵免以前年度未抵免的境外已缴所得税额_小计</xs:documentation></xs:annotation></xs:element>
+<xs:element name="jzqsin"  type="je"   > <xs:annotation> <xs:documentation>结转以后年度抵免的境外所得已缴所得税额_前四年</xs:documentation></xs:annotation></xs:element>
+<xs:element name="jzqsann"  type="je"   > <xs:annotation> <xs:documentation>结转以后年度抵免的境外所得已缴所得税额_前三年</xs:documentation></xs:annotation></xs:element>
+<xs:element name="jzqln"  type="je"   > <xs:annotation> <xs:documentation>结转以后年度抵免的境外所得已缴所得税额_前二年</xs:documentation></xs:annotation></xs:element>
+<xs:element name="jzqyn"  type="je"   > <xs:annotation> <xs:documentation>结转以后年度抵免的境外所得已缴所得税额_前一年</xs:documentation></xs:annotation></xs:element>
+<xs:element name="jbzn"  type="je"   > <xs:annotation> <xs:documentation>结转以后年度抵免的境外所得已缴所得税额_本年</xs:documentation></xs:annotation></xs:element>
+<xs:element name="jzxj"  type="je"   > <xs:annotation> <xs:documentation>结转以后年度抵免的境外所得已缴所得税额_小计</xs:documentation></xs:annotation></xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

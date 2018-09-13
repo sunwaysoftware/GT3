@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2010 rel. 3 (http://www.altova.com) by xiang (hbnu) -->
+<!-- 被2011 rel. 2 sp1 (TeaM DJiNN) 使用XMLSpy vTeaM DJiNN编辑的 (http://www.altova.com) by -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:include schemaLocation="TaxMLBd_sywhsy_czbzsrzc_V1.0.xsd"/>
+	<xs:include schemaLocation="TaxMLBd_sywhsy_srzcbyb_V1.0.xsd"/>
+	<xs:include schemaLocation="TaxMLBd_sywhsy_zcfzb_V1.0.xsd"/>
+	<xs:include schemaLocation="TaxMLPublicSBType.xsd"/>
+	<xs:complexType name="whsydwkjzdywbw">
+		<xs:annotation>
+			<xs:documentation>文化事业会计制度业务报文</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="sywhsyzcfzb" type="sywhsyzcfzb" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>资产负债表</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="sywhsyczbzsrzc" type="sywhsyczbzsrzcVO" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>财政补助收入支出</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="sywhsysrzcbyb" type="sywhsysrzcbybVO" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>收入支出表月报</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="ndcwkjbgshbgVO" type="NdcwkjbgshbgVO">
+						<xs:annotation>
+							<xs:documentation>年度财务会计报告审核报告</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="yfzcfzzhzbVO" type="YfzcfzzhzbVO">
+						<xs:annotation>
+							<xs:documentation>“研发支出”辅助账汇总表VO</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+</xs:schema>

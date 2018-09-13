@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2013 (http://www.altova.com) by  () -->
+<!-- 被2011 rel. 2 sp1 (TeaM DJiNN) 使用XMLSpy vTeaM DJiNN编辑的 (http://www.altova.com) by -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:include schemaLocation="TaxMLPublicType.xsd"/>
+	<xs:complexType name="qytqzldjbywbw">
+		<xs:annotation>
+			<xs:documentation>企业同期资料登记表业务报文</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="qytqzldjb" type="qytqzldjbVO">
+						<xs:annotation>
+							<xs:documentation>企业同期资料登记表</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="qytqzldjbVO">
+		<xs:annotation>
+			<xs:documentation>企业同期资料登记表信息</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="qytqzldjbFormVO" type="qytqzldjbFormVO">
+				<xs:annotation>
+					<xs:documentation>企业同期资料登记表</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="qytqzldjbFormVO">
+		<xs:annotation>
+			<xs:documentation>企业同期资料登记表信息</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="nsrsbh" type="nsrsbh">
+				<xs:annotation>
+					<xs:documentation>纳税人识别号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="nsrmc" type="nsrmc">
+				<xs:annotation>
+					<xs:documentation>纳税人名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="tqzlbh" type="tqzlbh" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>同期资料编号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="djrDm" type="djrDm" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>登记人代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="tqzllx" type="tqzllx" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>同期资料类型</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="tbnsdcajmc" type="tbnsdcAjmc" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>特别纳税调查案件名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="tbnsdzajbh" type="tbnsdzajbh" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>特别纳税调整案件编号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qytqzlfjmc" type="qytqzlfjmc" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>企业同期资料附件名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="tqzlsmjdzjljd" type="tqzlsmjdzjljd" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>同期资料扫描件电子件链接点</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

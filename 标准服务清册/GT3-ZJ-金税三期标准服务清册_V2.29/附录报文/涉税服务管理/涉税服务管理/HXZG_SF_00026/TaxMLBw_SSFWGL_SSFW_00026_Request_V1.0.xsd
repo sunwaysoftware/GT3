@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 被2012 () 使用XMLSpy v编辑的 (http://www.altova.com) by -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:include schemaLocation="TaxMLPublicSFType.xsd"/>
+	<xs:complexType name="SSFWGLSSFW00026Request">
+		<xs:annotation>
+			<xs:documentation>涉税服务机构人员信息保存请求报文</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="sszyfwjgxh" type="sszyfwjgxh">
+						<xs:annotation>
+							<xs:documentation>涉税专业服务机构序号</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="sszyfwryxxbVO" type="sszyfwryxxbVO">
+						<xs:annotation>
+							<xs:documentation>涉税机构人员信息VO</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="sszyfwryzsxxGrid" type="sszyfwryzsxxGrid">
+						<xs:annotation>
+							<xs:documentation>涉税专业服务人员证书信息</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+</xs:schema>

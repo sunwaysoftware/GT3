@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 被2012 () 使用XMLSpy v编辑的 (http://www.altova.com) by -->
+<!-- edited with XMLSpy v2013 (http://www.altova.com) by  () -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxMLPublicJCType.xsd"/>
+	<xs:complexType name="sswfajzjjqtzljjqdywbw">
+		<xs:annotation>
+			<xs:documentation>《税收违法案件证据及其他资料交接清单》业务报文</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="sswfajzjjqtzljjqd">
+						<xs:annotation>
+							<xs:documentation>税收违法案件证据及其他资料交接清单</xs:documentation>
+						</xs:annotation>
+						<xs:complexType>
+							<xs:sequence>
+								<xs:element name="jjajjbxxForm" type="jjajjbxxForm">
+									<xs:annotation>
+										<xs:documentation>税收违法案件证据及其他资料交接清单基本信息</xs:documentation>
+									</xs:annotation>
+								</xs:element>
+								<xs:element name="jjqdGrid">
+									<xs:annotation>
+										<xs:documentation>交接清单列表</xs:documentation>
+									</xs:annotation>
+									<xs:complexType>
+										<xs:sequence minOccurs="0" maxOccurs="unbounded">
+											<xs:element name="jjqdGridlb" type="JCGyfjVO"/>
+										</xs:sequence>
+									</xs:complexType>
+								</xs:element>
+								<xs:element name="jjxxForm" type="jjxxForm">
+									<xs:annotation>
+										<xs:documentation>交接信息</xs:documentation>
+									</xs:annotation>
+								</xs:element>
+							</xs:sequence>
+						</xs:complexType>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="jjajjbxxForm">
+		<xs:annotation>
+			<xs:documentation>交接案件基本信息Form</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="wsbh" type="wsbh">
+				<xs:annotation>
+					<xs:documentation>文书编号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jcajbh" type="jcajbh">
+				<xs:annotation>
+					<xs:documentation>稽查案件编号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="nsrmc" type="nsrmc">
+				<xs:annotation>
+					<xs:documentation>纳税人名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jcajyjzljjqduuid" type="jcajyjzljjqduuid">
+				<xs:annotation>
+					<xs:documentation>稽查案件移交资料交接清单UUID</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="jjxxForm">
+		<xs:annotation>
+			<xs:documentation>交接信息表单</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="yjbmDm" type="yjbmDm">
+				<xs:annotation>
+					<xs:documentation>移交部门</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yjrq">
+				<xs:annotation>
+					<xs:documentation>移交日期</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yjryDm" type="yjryDm">
+				<xs:annotation>
+					<xs:documentation>移交人员（签名）</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jsryDm" type="jsryDm">
+				<xs:annotation>
+					<xs:documentation>接收人员</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jsbmDm" type="jsbmDm">
+				<xs:annotation>
+					<xs:documentation>接收部门</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jsrq" type="jsrq">
+				<xs:annotation>
+					<xs:documentation>接收日期</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

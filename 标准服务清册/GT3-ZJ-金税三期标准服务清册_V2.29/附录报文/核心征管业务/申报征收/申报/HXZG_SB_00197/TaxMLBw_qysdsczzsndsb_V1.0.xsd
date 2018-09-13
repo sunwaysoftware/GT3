@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2010 rel. 3 (http://www.altova.com) by liuwei (liuweicss) -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:include schemaLocation="TaxMLPublicType.xsd"/>
+	<xs:include schemaLocation="TaxMLBd_0610041_V1.0.xsd"/>
+	<xs:include schemaLocation="TaxMLBd_0610042_V1.0.xsd"/>
+	<xs:include schemaLocation="TaxMLBd_0610043_V1.0.xsd"/>
+	<xs:include schemaLocation="TaxMLBd_0610044_V1.0.xsd"/>
+	<xs:include schemaLocation="TaxMLBd_0610045_V1.0.xsd"/>
+	<xs:include schemaLocation="TaxMLBd_0610046_V1.0.xsd"/>
+	<xs:include schemaLocation="TaxMLBd_0610047_V1.0.xsd"/>
+	<xs:include schemaLocation="TaxMLBd_0610048_V1.0.xsd"/>
+	<xs:include schemaLocation="TaxMLBd_0610049_V1.0.xsd"/>
+	<xs:include schemaLocation="TaxMLBd_0610050_V1.0.xsd"/>
+	<xs:include schemaLocation="TaxMLBd_0610051_V1.0.xsd"/>
+	<xs:include schemaLocation="TaxMLBd_0610052_V1.0.xsd"/>
+	<xs:include schemaLocation="TaxMLBd_0610053_V1.0.xsd"/>
+	<xs:include schemaLocation="TaxMLBd_0610054_V1.0.xsd"/>
+	<xs:include schemaLocation="TaxMLBd_0610055_V1.0.xsd"/>
+	<xs:include schemaLocation="TaxMLBd_0610056_V1.0.xsd"/>
+	<xs:include schemaLocation="TaxMLBd_0610057_V1.0.xsd"/>
+	<xs:include schemaLocation="TaxMLBd_0610345_V1.0.xsd"/>
+	<xs:include schemaLocation="TaxMLBd_0610538_V1.0.xsd"/>
+	<xs:include schemaLocation="TaxMLBd_0610563_V1.0.xsd"/>
+	<xs:include schemaLocation="TaxMLBd_0610615_V1.0.xsd"/>
+	<xs:include schemaLocation="TaxMLBd_0610326_V1.0.xsd"/>
+	<xs:include schemaLocation="TaxMLBd_0610328_V1.0.xsd"/>
+	<xs:complexType name="qysdsczzsndsbbywbw">
+		<xs:annotation>
+			<xs:documentation>《中华人民共和国企业所得税年度纳税申报表（A类）》业务报文</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="qysdsndnssbbal" type="qysdsndnssbbal">
+						<xs:annotation>
+							<xs:documentation>《中华人民共和国企业所得税年度纳税申报表（A类）》</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="srmxsbb" type="srmxsbb">
+						<xs:annotation>
+							<xs:documentation>《中华人民共和国企业所得税年度纳税申报表附表一（1）收入明细表》</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="jrqysrmxsbb" type="jrqysrmxsbb">
+						<xs:annotation>
+							<xs:documentation>《中华人民共和国企业所得税年度纳税申报表附表一（2）金融企业收入明细表》</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="sydwshttmbfqydwsrmxsbb" type="sydwshttmbfqydwsrmxsbb">
+						<xs:annotation>
+							<xs:documentation>《中华人民共和国企业所得税年度纳税申报表附表一（3）事业单位、社会团体、民办非企业单位收入明细表》</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="cbfymxsbb" type="cbfymxsbb">
+						<xs:annotation>
+							<xs:documentation>《中华人民共和国企业所得税年度纳税申报表附表二（1）成本费用明细表》</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="jrqycbfymxsbb" type="jrqycbfymxsbb">
+						<xs:annotation>
+							<xs:documentation>《中华人民共和国企业所得税年度纳税申报表附表二（2）金融企业成本费用明细表》</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="sydwshttmbfqydwzcmxsbb" type="sydwshttmbfqydwzcmxsbb">
+						<xs:annotation>
+							<xs:documentation>《中华人民共和国企业所得税年度纳税申报表附表二（3）事业单位、社会团体、民办非企业单位支出明细表》</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="nstzxmmxsbb" type="nstzxmmxsbb">
+						<xs:annotation>
+							<xs:documentation>《中华人民共和国企业所得税年度纳税申报表附表三纳税调整项目明细表》</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="qysdsnbksmxsbb" type="qysdsnbksmxsbb">
+						<xs:annotation>
+							<xs:documentation>《中华人民共和国企业所得税年度纳税申报表附表四企业所得税弥补亏损明细表》</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="ssyhmxsbb" type="ssyhmxsbb">
+						<xs:annotation>
+							<xs:documentation>《中华人民共和国企业所得税年度纳税申报表附表五税收优惠明细表》</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="jwsdsdmjsmxsbb" type="jwsdsdmjsmxsbb">
+						<xs:annotation>
+							<xs:documentation>《中华人民共和国企业所得税年度纳税申报表附表六境外所得税抵免计算明细表》</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="ygyjzjlcznstzsbb" type="ygyjzjlcznstzsbb">
+						<xs:annotation>
+							<xs:documentation>《中华人民共和国企业所得税年度纳税申报表附表七以公允价值计量资产纳税调整表》</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="ggfhywxcfkndnstzsbb" type="ggfhywxcfkndnstzsbb">
+						<xs:annotation>
+							<xs:documentation>《中华人民共和国企业所得税年度纳税申报表附表八广告费和业务宣传费跨年度纳税调整表》</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="zczjtxnstzmxsbb" type="zczjtxnstzmxsbb">
+						<xs:annotation>
+							<xs:documentation>《中华人民共和国企业所得税年度纳税申报表附表九资产折旧、摊销纳税调整明细表》</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="zcjzzbxmztmxsbb" type="zcjzzbxmztmxsbb">
+						<xs:annotation>
+							<xs:documentation>《中华人民共和国企业所得税年度纳税申报表附表十资产减值准备项目调整明细表》</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="cqgqtzsdssmxsbb" type="cqgqtzsdssmxsbb">
+						<xs:annotation>
+							<xs:documentation>《中华人民共和国企业所得税年度纳税申报表附表十一长期股权投资所得（损失）明细表》</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="hsyqscssqzfqksbb" type="hsyqscssqzfqksbb">
+						<xs:annotation>
+							<xs:documentation>附表十二《海上油气生产设施弃置费情况表》</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="qysdsyjdsbczzs_qysdshznsfzjgsdsfpsbb" type="qysdsyjdsbczzs_qysdshznsfzjgsdsfpsbb">
+						<xs:annotation>
+							<xs:documentation>附表十三《中华人民共和国企业所得税汇总纳税分支机构所得税分配表》</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="zhrmghgqyzcxbqqssysbb" type="zhrmghgqyzcxbqqssysbb">
+						<xs:annotation>
+							<xs:documentation>附表十四《中华人民共和国企业政策性搬迁清算损益表》</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="yxhhzcytzqyfrhhrynssdedkqkmxsbb" type="yxhhzcytzqyfrhhrynssdedkqkmxsbb">
+						<xs:annotation>
+							<xs:documentation>附表十五《有限合伙制创业投资企业法人合伙人应纳税所得额抵扣情况明细表》</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="dwhzkcsyqyktkffyndmxb" type="dwhzkcsyqyktkffyndmxb">
+						<xs:annotation>
+							<xs:documentation>附表十六《对外合作开采石油企业勘探开发费用年度明细表》</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="qysdsskfjb" type="qysdsyjdsbczzs_qysdsskfjsbb">
+						<xs:annotation>
+							<xs:documentation>附表十七《企业所得税税款分解表》</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="jmsezssbb" type="jmsezssbb">
+						<xs:annotation>
+							<xs:documentation>附表十八《减免税额折算表》</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+</xs:schema>

@@ -1,0 +1,106 @@
+<service xmlns="http://www.chinatax.gov.cn/spec/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<head>
+		<tran_id>SWZJ.HXZG.YSH.BCXXCJBSJ</tran_id>
+		<channel_id>TEST</channel_id>
+		<tran_seq>C000BNFZC25001201305030505267890</tran_seq>
+		<tran_date>20140826</tran_date>
+		<tran_time>173435849</tran_time>
+     <expand>
+      <name>sjry</name>
+      <value>14406823041</value>
+    </expand>
+    <expand>
+      <name>sjjg</name>
+      <value>14406821200</value>
+    </expand>	</head> 
+<body><![CDATA[<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<taxML xsi:type="HXZGYSH00006Request" xmlbh="HXZGYSH00006Request" bbh="V1.1" xmlmc="渠道业务审核接入报文" xsi:schemaLocation="http://www.chinatax.gov.cn/dataspec/ TaxMLBw_HXZG_YSH_00006_Request_V1.1.xsd" xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<fileInfor>
+		<fileGrid>
+			<fileGridlb>
+				<filepath>2</filepath>
+				<filetype>2</filetype>
+				<filename>2</filename>
+				<fileindex>2</fileindex>
+			</fileGridlb>
+		</fileGrid>
+		<fileInforVO>
+			<fileSize>3</fileSize>
+			<recordNumber>3</recordNumber>
+			<nsrSwjgDm>3</nsrSwjgDm>
+		</fileInforVO>
+	</fileInfor>
+	<qdywshRequestVO>
+		<qxswjgDm>14406821200</qxswjgDm>
+		<djxh>11440600000000000285</djxh>
+		<lcswsxDm>LCSXA061010001</lcswsxDm>
+		<slswsxDm>SLSXA061010001</slswsxDm>
+		<dzbzdszlDm>BDA0610188</dzbzdszlDm>
+		<xtbm>C000BNFZC</xtbm>
+		<xzqhDm>440605</xzqhDm>
+		<nsrmc>增值税</nsrmc>
+		<nsrsbh>440605777779997</nsrsbh>
+		<request>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;taxML xsi:type="HXZGSB00146Request" bbh="String" xmlbh="String" xmlmc="String" xsi:schemaLocation="http://www.chinatax.gov.cn/dataspec/ TaxMLBw_HXZG_SB_00146_Request_V1.0.xsd" xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"&gt;
+	&lt;SBYqsbSaveVO bbh="String" xmlbh="String" xmlmc="String"&gt;
+		&lt;yqsbMx&gt;
+			&lt;sbYqmxVO&gt;
+				&lt;yqsbmxuuid&gt;83209R3RU02493EU231EU45423&lt;/yqsbmxuuid&gt;
+				&lt;yqsbuuid&gt;85409T73425732029EUI92&lt;/yqsbuuid&gt;
+				&lt;djxh&gt;12440600000000000441&lt;/djxh&gt;
+				&lt;nsqxDm&gt;06&lt;/nsqxDm&gt;
+				&lt;sqyqsbszDm&gt;10103&lt;/sqyqsbszDm&gt;
+				&lt;sqyqsbpmDm&gt;101030201&lt;/sqyqsbpmDm&gt;
+				&lt;skssqq&gt;2014-10-01&lt;/skssqq&gt;
+				&lt;skssqz&gt;2014-10-30&lt;/skssqz&gt;
+				&lt;gdsbqx&gt;2014-11-30&lt;/gdsbqx&gt;
+				&lt;sqyqsbqx&gt;2014-12-30&lt;/sqyqsbqx&gt;
+				&lt;hzyqsbqx&gt;2014-10-01&lt;/hzyqsbqx&gt;
+				&lt;lrrDm&gt;24406060247&lt;/lrrDm&gt;
+				&lt;lrrq&gt;2014-10-01&lt;/lrrq&gt;
+				&lt;xgrDm&gt;&lt;/xgrDm&gt;
+				&lt;xgrq&gt;&lt;/xgrq&gt;
+				&lt;sjgsdq&gt;24406060000&lt;/sjgsdq&gt;
+			&lt;/sbYqmxVO&gt;
+		&lt;/yqsbMx&gt;
+		&lt;yqsbuuid&gt;85409T73425732029EUI92&lt;/yqsbuuid&gt;
+		&lt;djxh&gt;12440600000000000441&lt;/djxh&gt;
+		&lt;pzxh&gt;&lt;/pzxh&gt;
+		&lt;lcslid&gt;&lt;/lcslid&gt;
+		&lt;sqyqsbdly&gt;fdsjfdsf&lt;/sqyqsbdly&gt;
+		&lt;sqrmc1&gt;dsfsd&lt;/sqrmc1&gt;
+		&lt;sqrq&gt;2014-10-01&lt;/sqrq&gt;
+		&lt;slrDm&gt;24406060247&lt;/slrDm&gt;
+		&lt;slswjgDm&gt;aaaaaaaaaaa&lt;/slswjgDm&gt;
+		&lt;slrq&gt;2014-10-01&lt;/slrq&gt;
+		&lt;yjskhdfsDm&gt;01&lt;/yjskhdfsDm&gt;
+		&lt;zfbz&gt;&lt;/zfbz&gt;
+		&lt;zfrq&gt;&lt;/zfrq&gt;
+		&lt;zfrDm&gt;&lt;/zfrDm&gt;
+		&lt;lrrq&gt;2014-10-01&lt;/lrrq&gt;
+		&lt;xgrDm&gt;&lt;/xgrDm&gt;
+		&lt;xgrq&gt;&lt;/xgrq&gt;
+		&lt;sjgsdq&gt;24406060247&lt;/sjgsdq&gt;
+		&lt;lrrDm&gt;24406060247&lt;/lrrDm&gt;
+		&lt;hzyj&gt;y&lt;/hzyj&gt;
+		&lt;hzyjsm&gt;dhfuie&lt;/hzyjsm&gt;
+	&lt;/SBYqsbSaveVO&gt;
+&lt;/taxML&gt;</request>
+		<procStartOrgID>14406821200</procStartOrgID>
+		<userList>
+			<userListlb>
+				<swryDm></swryDm>
+				<swryxm></swryxm>
+				<jgDm>14406821200</jgDm>
+				<jgmc></jgmc>
+				<gwDm>144900000001</gwDm>
+				<gwmc></gwmc>
+				<swrysfDm></swrysfDm>
+				<gwxh></gwxh>
+			</userListlb>
+		</userList>
+		<procStartPerformer>14406823041</procStartPerformer>
+	</qdywshRequestVO>
+</taxML>
+]]></body>
+</service>

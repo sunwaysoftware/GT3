@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 被2011 rel. 2 sp1 (TeaM DJiNN) 使用XMLSpy vTeaM DJiNN编辑的 (http://www.altova.com) by -->
+<!-- edited with XMLSpy v2010 rel. 3 (http://www.altova.com) by MESMERiZE (MSM) -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:element name="zrrjcxxbResponse" type="zrrjcxxbResponse"/>
+	<xs:complexType name="zrrjcxxbResponse">
+		<xs:annotation>
+			<xs:documentation>自然人基础信息B表登记响应报文</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="zrrxxgrid" type="zrrxxgrid">
+						<xs:annotation>
+							<xs:documentation>自然人信息列表</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="zrrxxgrid">
+		<xs:annotation>
+			<xs:documentation>自然人信息列表</xs:documentation>
+		</xs:annotation>
+		<xs:sequence maxOccurs="unbounded">
+			<xs:element name="zrrxxlb" type="zrrxxlb">
+				<xs:annotation>
+					<xs:documentation>自然人信息</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="zrrxxlb">
+		<xs:annotation>
+			<xs:documentation>自然人信息</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="nsrsbh" type="nsrsbh">
+				<xs:annotation>
+					<xs:documentation>纳税人识别号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="djxh" type="djxh">
+				<xs:annotation>
+					<xs:documentation>登记序号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sfzjlx_dm" type="sfzjlxDm">
+				<xs:annotation>
+					<xs:documentation>身份证件类型</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sfzjhm" type="sfzjhm">
+				<xs:annotation>
+					<xs:documentation>身份证件号码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="xm" type="xm">
+				<xs:annotation>
+					<xs:documentation>姓名</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="gj_dm" type="gjhdqszDm" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>国籍代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="csrq" type="csrq" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>出生日期</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="xb" type="xbDm" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>性别</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="slrDm" type="slrDm">
+				<xs:annotation>
+					<xs:documentation>受理人</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="slswjgDm" type="slswjgDm">
+				<xs:annotation>
+					<xs:documentation>受理税务机关</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="slswsxDm" type="slswsxDm" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>受理税务事项</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="lyqdDm" type="jrlyDm">
+				<xs:annotation>
+					<xs:documentation>来源渠道代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

@@ -1,0 +1,421 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:complexType name="fhbxzctzfqjngsbaYwbw">
+		<xs:annotation>
+			<xs:documentation>非货币性资产投资分期缴纳个人所得税备案业务报文</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="fhbxzctzfqjngsbaBzds" type="fhbxzctzfqjngsbaBzds"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="fhbxzctzfqjngsbaBzds">
+		<xs:annotation>
+			<xs:documentation>非货币性资产投资分期缴纳个人所得税备案表证单书</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="head" type="fhbxzctzfqjngsbaHead">
+				<xs:annotation>
+					<xs:documentation>非货币性资产投资分期缴纳个人所得税备案表头</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="body" type="fhbxzctzfqjngsbaBody">
+				<xs:annotation>
+					<xs:documentation>非货币性资产投资分期缴纳个人所得税备案表体</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bodyAffix" type="xs:anySimpleType">
+				<xs:annotation>
+					<xs:documentation>预留：附属表体</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="fhbxzctzfqjngsbaHead">
+		<xs:annotation>
+			<xs:documentation>非货币性资产投资分期缴纳个人所得税备案表头</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="nsrsbh" type="nsrsbh">
+				<xs:annotation>
+					<xs:documentation>纳税人识别号，不能为空</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="nsrxm" type="xm">
+				<xs:annotation>
+					<xs:documentation>纳税人姓名，不能为空</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zrrdjxh" type="djxh">
+				<xs:annotation>
+					<xs:documentation>自然人登记序号，不能为空</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sfzjlxDm" type="sfzjlxDm">
+				<xs:annotation>
+					<xs:documentation>身份证件类型代码，不能为空</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zzlxmc" type="zzlxmc">
+				<xs:annotation>
+					<xs:documentation>证照类型名称，不能为空</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sfzjhm" type="sfzjhm">
+				<xs:annotation>
+					<xs:documentation>身份证件号码，不能为空</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="lxdh" type="lxdh">
+				<xs:annotation>
+					<xs:documentation>联系电话，可以为空</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="txdz" type="jntxdz">
+				<xs:annotation>
+					<xs:documentation>通讯地址，可以为空</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="slrxm" type="slrxm">
+				<xs:annotation>
+					<xs:documentation>受理人姓名，不能为空</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="slrDm" type="slrDm">
+				<xs:annotation>
+					<xs:documentation>受理人代码，不能为空</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="slswjgDm" type="slswjgDm">
+				<xs:annotation>
+					<xs:documentation>受理税务机关代码，不能为空</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="slswjgmc" type="slswjgmc">
+				<xs:annotation>
+					<xs:documentation>受理税务机关名称，不能为空</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="slrq" type="slrq">
+				<xs:annotation>
+					<xs:documentation>受理日期，不能为空，格式必须为：YYYY-MM-DD</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="fhbxzctzfqjngsbaBody">
+		<xs:annotation>
+			<xs:documentation>非货币性资产投资分期缴纳个人所得税备案表体</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="fhbxzctzfqjngsbaMx" type="fhbxzctzfqjngsbaMx" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>非货币性资产投资分期缴纳个人所得税备案明细</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="fhbxzctzfqjngsbaMx">
+		<xs:sequence>
+			<xs:element name="babh" type="babh" minOccurs="1" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>备案编号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="btzdwxx" type="btzdwxx" minOccurs="1" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>被投资单位信息</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="touziqk" type="touziqk" minOccurs="1" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>投资情况</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="fqjsjh" type="fqjsjh" minOccurs="1" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>分期缴税计划</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qtcjxx" type="qtcjxx" minOccurs="1" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>其他信息</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="btzdwxx">
+		<xs:annotation>
+			<xs:documentation>被投资单位信息</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="btzdwnsrsbh" type="btzdwnsrsbh">
+				<xs:annotation>
+					<xs:documentation>被投资单位纳税人识别号，不能为空</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="btzdwmc" type="btzdwmc">
+				<xs:annotation>
+					<xs:documentation>被投资单位名称，不能为空</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="dz" type="scjydz">
+				<xs:annotation>
+					<xs:documentation>地址，可以为空</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="lxrxm" type="lxrxm">
+				<xs:annotation>
+					<xs:documentation>联系人，可以为空</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="lxrdh" type="lxdh">
+				<xs:annotation>
+					<xs:documentation>联系人电话，可以为空</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="touziqk">
+		<xs:annotation>
+			<xs:documentation>投资情况</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="tzlxDm" type="touzilxDm">
+				<xs:annotation>
+					<xs:documentation>
+					投资类型代码：01：新设公司，02：参与增资，03：定向增发，04：股权置换，05：重组改制，06：其他；不能为空
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="tzlxmc" type="touzilxmc">
+				<xs:annotation>
+					<xs:documentation>
+					投资类型名称：01：新设公司，02：参与增资，03：定向增发，04：股权置换，05：重组改制，06：其他；不能为空
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qdgqsj" type="sbrq">
+				<xs:annotation>
+					<xs:documentation>取得股权时间，不能为空，格式必须为：YYYY-MM-DD</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qddxjbj" type="je">
+				<xs:annotation>
+					<xs:documentation>取得的现金补价，不能为空</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="cgbl" type="tzbl">
+				<xs:annotation>
+					<xs:documentation>持股比例，用小数表示（比如0.1，表示10%），不能为空</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="touziqkmx" type="touziqkmx" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>投资情况明细</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="touziqkmx">
+		<xs:annotation>
+			<xs:documentation>投资情况明细</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="tzqkxh" type="xh">
+				<xs:annotation>
+					<xs:documentation>投资情况序号，从1递增，不重复；不能为空</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="fhbxzcmc" type="gdzcmc">
+				<xs:annotation>
+					<xs:documentation>非货币性资产名称，不能为空</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="cqhzcdjhm" type="cqhzcdjhm">
+				<xs:annotation>
+					<xs:documentation>产权证或注册登记号码，不能为空</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="djjg" type="swjgmc">
+				<xs:annotation>
+					<xs:documentation>登记机关，不能为空</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zld" type="scjydz">
+				<xs:annotation>
+					<xs:documentation>坐落地，不能为空</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="pghdgyjz" type="je">
+				<xs:annotation>
+					<xs:documentation>评估后的公允价值，不能为空</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="fhbxzcyz" type="je">
+				<xs:annotation>
+					<xs:documentation>非货币性资产原值，不能为空</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="hlsf" type="ybsfe">
+				<xs:annotation>
+					<xs:documentation>合理税费，可以为空</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="fqjsjh">
+		<xs:annotation>
+			<xs:documentation>分期缴税计划</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="tbrq" type="tbrq">
+				<xs:annotation>
+					<xs:documentation>填报日期，不能为空，格式必须为：YYYY-MM-DD</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jzjssj" type="sbrq">
+				<xs:annotation>
+					<xs:documentation>截止缴税时间，不能为空，格式必须为：YYYY-MM-DD</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ynssde" type="ynssde">
+				<xs:annotation>
+					<xs:documentation>应纳税所得额，不能为空</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yjgrsds" type="ynssde">
+				<xs:annotation>
+					<xs:documentation>应缴个人所得税，不能为空</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yijgrsds" type="ynssde">
+				<xs:annotation>
+					<xs:documentation>已缴个人所得税，可以为空</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="fqjsjhmx" type="fqjsjhmx" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>分期缴税计划明细</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="fqjsjhmx">
+		<xs:annotation>
+			<xs:documentation>分期缴税计划明细</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="ysbzt" type="bcajzt">
+				<xs:annotation>
+					<xs:documentation>已申报状态，不能为空（只能为0或1，0：未申报，1：已申报）</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jhjssj" type="sbrq">
+				<xs:annotation>
+					<xs:documentation>计划缴税时间，不能为空，格式必须为：YYYY-MM-DD</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jhjsje" type="se">
+				<xs:annotation>
+					<xs:documentation>计划缴税金额，不能为空</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="qtcjxx">
+		<xs:annotation>
+			<xs:documentation>其他信息</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="dljg" type="kjywrmc">
+				<xs:annotation>
+					<xs:documentation>代理机构，可以为空</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jbrxm" type="dljgbsrxm">
+				<xs:annotation>
+					<xs:documentation>经办人姓名，代理机构填写时，该项必须录入</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="dljbrzyzjhm" type="dljbrzyzjhm">
+				<xs:annotation>
+					<xs:documentation>代理经办人执业证件号码，代理机构填写时，该项必须录入</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zgswjgDm" type="zgswjgDm">
+				<xs:annotation>
+					<xs:documentation>主管税务机关代码，不能为空</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zgswjgmc" type="zgswjgmc">
+				<xs:annotation>
+					<xs:documentation>主管税务机关名称，不能为空</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="slrq" type="slrq">
+				<xs:annotation>
+					<xs:documentation>受理日期，不能为空，格式必须为：YYYY-MM-DD</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="slrxm" type="slrxm">
+				<xs:annotation>
+					<xs:documentation>受理人姓名，不能为空</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="slrDm" type="slrDm">
+				<xs:annotation>
+					<xs:documentation>受理人代码，不能为空</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="dlsbrq" type="sbrq">
+				<xs:annotation>
+					<xs:documentation>代理申报日期，不能为空，格式必须为：YYYY-MM-DD</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sfdlsb" type="touzilxDm">
+				<xs:annotation>
+					<xs:documentation>是否代理申报，不能为空（如果为Y时，代理机构不可以为空，默认为N）</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:simpleType name="cqhzcdjhm">
+		<xs:annotation>
+			<xs:documentation>产权证或注册登记号码</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:maxLength value="30"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="touzilxmc">
+		<xs:annotation>
+			<xs:documentation>投资类型名称</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:maxLength value="75"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="touzilxDm">
+		<xs:annotation>
+			<xs:documentation>
+			投资类型代码：01：新设公司，02：参与增资，03：定向增发，04：股权置换，05：重组改制，06：其他
+			</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:maxLength value="2"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="babh">
+		<xs:annotation>
+			<xs:documentation>备案编号</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:maxLength value="20"/>
+		</xs:restriction>
+	</xs:simpleType>
+</xs:schema>

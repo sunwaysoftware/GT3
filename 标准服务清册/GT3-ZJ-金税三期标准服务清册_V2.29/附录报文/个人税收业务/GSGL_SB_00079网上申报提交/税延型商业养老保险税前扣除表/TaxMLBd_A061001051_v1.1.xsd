@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:complexType name="syylbxYwbw">
+		<xs:annotation>
+			<xs:documentation>税延养老保险业务报文</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="syylbxmxlb" type="syylbxmxlb"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="syylbxmxlb">
+		<xs:sequence>
+			<xs:element name="syylbxmx" type="syylbxmx" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="syylbxmx">
+		<xs:annotation>
+			<xs:documentation>税延养老保险明细</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="mxxh" type="xh">
+				<xs:annotation>
+					<xs:documentation>序号（必录）</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="xm" type="xm">
+				<xs:annotation>
+					<xs:documentation>姓名（必录）</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sfzjlxdm" type="sfzjlxDm">
+				<xs:annotation>
+					<xs:documentation>身份证件类型代码（必录）</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sfzjlxmc" type="sfzjlxmc">
+				<xs:annotation>
+					<xs:documentation>身份证件类型名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sfzjhm" type="sfzjhm">
+				<xs:annotation>
+					<xs:documentation>身份证件号码（必录），当身份证件类型代码为201【居民身份证】时，身份证件号码长度只能为18位</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="syylzhbh" type="syylzhbh">
+				<xs:annotation>
+					<xs:documentation>税延养老账户编号（必录）</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sbkcyfq" type="sbrq1">
+				<xs:annotation>
+					<xs:documentation>申报扣除月份起（必录），格式yyyy-MM，申报扣除月份起不能大于申报扣除月份止</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sbkcyfz" type="sbrq1">
+				<xs:annotation>
+					<xs:documentation>申报扣除月份止（必录），格式yyyy-MM，申报扣除月份起不能大于申报扣除月份止</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bsjym" type="bsjym">
+				<xs:annotation>
+					<xs:documentation>报税校验码（必录）</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ndbf" type="je">
+				<xs:annotation>
+					<xs:documentation>年度保费（条件必录），针对《个人所得税自行申报B表》、《特定行业个人所得税年度申报》、《个人所得税生产经营所得纳税申报表（A表）》、《个人所得税生产经营所得纳税申报表（B表）》年度保费必须大于等于0。</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ydbf" type="je">
+				<xs:annotation>
+					<xs:documentation>月度保费（条件必录），针对《扣缴个人所得税报告表》、《个人所得税自行申报A表》月度保费必须大于等于0。</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bqkcje" type="je">
+				<xs:annotation>
+					<xs:documentation>本期扣除金额（必录），必须大于等于0</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

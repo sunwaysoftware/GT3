@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 被2012 () 使用XMLSpy v编辑的 (http://www.altova.com) by -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:include schemaLocation="TaxMLPublicSBType.xsd"/>
+	<xs:include schemaLocation="TaxMLBd_szyssb_V1.0.xsd"/>
+	<xs:include schemaLocation="TaxMLBd_szysjm_V1.0.xsd"/>
+	<xs:complexType name="szyssbywbw">
+		<xs:annotation>
+			<xs:documentation>《水资源税申报》业务报文</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="szysSbb" type="szyssb">
+						<xs:annotation>
+							<xs:documentation>《水资源税税款申报表》</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="szysJmb" type="szysjm">
+						<xs:annotation>
+							<xs:documentation>《水资源税附表减免表》</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="HXZGSB10062Response">
+		<xs:annotation>
+			<xs:documentation>水资源税申报错误更正初始化响应</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="syxxVO" type="SBSzyssbVO">
+						<xs:annotation>
+							<xs:documentation>采集税源信息</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="sbxxGrid">
+						<xs:annotation>
+							<xs:documentation>税款申报信息</xs:documentation>
+						</xs:annotation>
+						<xs:complexType>
+							<xs:sequence minOccurs="0" maxOccurs="unbounded">
+								<xs:element name="sbxxGridlb" type="SBZyssbMxVO"/>
+							</xs:sequence>
+						</xs:complexType>
+					</xs:element>
+					<xs:element name="yjxxGrid">
+						<xs:annotation>
+							<xs:documentation>减免信息</xs:documentation>
+						</xs:annotation>
+						<xs:complexType>
+							<xs:sequence minOccurs="0" maxOccurs="unbounded">
+								<xs:element name="yjxxGridlb" type="SBYjxxJhVO"/>
+							</xs:sequence>
+						</xs:complexType>
+					</xs:element>
+					<xs:element name="szyssbywbw" type="szyssbywbw">
+						<xs:annotation>
+							<xs:documentation>水资源税业务报文</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="hxsbxx">
+						<xs:annotation>
+							<xs:documentation>是否存在后续申报信息</xs:documentation>
+						</xs:annotation>
+						<xs:complexType>
+							<xs:sequence>
+								<xs:element name="sfczhxsbBz" type="bz"/>
+								<xs:element name="sfczhxsbMes" type="xs:string"/>
+							</xs:sequence>
+						</xs:complexType>
+					</xs:element>
+					<xs:element name="kdqsssrfpBz" type="xs:string">
+						<xs:annotation>
+							<xs:documentation>跨地区税收收入分配标志</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="kdqsssrfpblGrid">
+						<xs:annotation>
+							<xs:documentation>跨地区税收收入分配比例信息</xs:documentation>
+						</xs:annotation>
+						<xs:complexType>
+							<xs:sequence minOccurs="0" maxOccurs="unbounded">
+								<xs:element name="kdqsssrfpblGridlb" type="SBKdqsssrfpblqkbVO"/>
+							</xs:sequence>
+						</xs:complexType>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+</xs:schema>

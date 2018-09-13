@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2010 rel. 3 (http://www.altova.com) by MESMERiZE (MSM) -->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://www.chinatax.gov.cn/dataspec/" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:complexType name="sswszmcxrequest">
+		<xs:annotation>
+			<xs:documentation>查询税收完税证明信息</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="djxh" type="djxh" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>纳税人登记序号</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="sfzjlxDm" type="sfzjlxDm">
+						<xs:annotation>
+							<xs:documentation>身份证件类型代码</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="sfzjhm" type="sfzjhm">
+						<xs:annotation>
+							<xs:documentation>身份证件号码</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="xm" type="xm">
+						<xs:annotation>
+							<xs:documentation>姓名</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="qsny" type="skssqq">
+						<xs:annotation>
+							<xs:documentation>起始年月</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="zzny" type="skssqq">
+						<xs:annotation>
+							<xs:documentation>终止年月</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="swjgDm" type="swjgDm">
+						<xs:annotation>
+							<xs:documentation>税务机关代码</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="czswryDm" type="czswryDm">
+						<xs:annotation>
+							<xs:documentation>操作税务人员代码</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="kjfwSwjg" type="swjgDm">
+						<xs:annotation>
+							<xs:documentation>开具范围（税务机关）</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="pzzlDm" type="kjzmpzzlDm">
+						<xs:annotation>
+							<xs:documentation>申请开具证明票证种类（000005011：表格式；000005012：文书式），为空时或传其他值时默认文书式完税证明</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+</xs:schema>

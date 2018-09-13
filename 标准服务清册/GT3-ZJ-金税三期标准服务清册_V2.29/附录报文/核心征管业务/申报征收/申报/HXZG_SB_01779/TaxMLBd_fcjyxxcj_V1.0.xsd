@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2013 (http://www.altova.com) by  () -->
+<!-- 被2012 () 使用XMLSpy v编辑的 (http://www.altova.com) by -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:include schemaLocation="TaxMLPublicType.xsd"/>
+	<xs:include schemaLocation="TaxMLPublicSBType.xsd"/>
+	<xs:complexType name="fcjycjbdywbw">
+		<xs:annotation>
+			<xs:documentation>房产交易采集表单业务报文</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="fcjycjbd" type="fcjyxxcjbd">
+						<xs:annotation>
+							<xs:documentation>房产交易采集表单</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="fcjyxxcjbd">
+		<xs:annotation>
+			<xs:documentation>房产交易申报表单</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="SBCxsFcjycxVO" type="SBCxsFcjycxVO" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>查询条件</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zlfxsxxForm" type="SBZlfxsxxFormVO" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>增量房销售信息表</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="fyjyxxGrid">
+				<xs:annotation>
+					<xs:documentation>房产交易采集信息</xs:documentation>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:sequence maxOccurs="unbounded">
+						<xs:element name="fyjyxxGridlb" type="fyjyxx"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="fyjyxx">
+		<xs:annotation>
+			<xs:documentation>房源交易信息</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="SBCxsFcjycjxxVO" type="SBCxsFcjycjxxVO">
+				<xs:annotation>
+					<xs:documentation>房产交易采集信息</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="SBCxsFyjbxxVO" type="SBCxsFyjbxxVO">
+				<xs:annotation>
+					<xs:documentation>房源基本信息</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zrfnsrxxGrid">
+				<xs:annotation>
+					<xs:documentation>转让方纳税人信息</xs:documentation>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:sequence maxOccurs="unbounded">
+						<xs:element name="zrfnsrxxGridlb" type="SBCxsFcjycjxxJyfVO"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="csfnsrxxGrid">
+				<xs:annotation>
+					<xs:documentation>承受方纳税人信息</xs:documentation>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:sequence maxOccurs="unbounded">
+						<xs:element name="csfnsrxxGridlb" type="SBCxsFcjycjxxJyfVO"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 被2011 rel. 2 sp1 (TeaM DJiNN) 使用XMLSpy vTeaM DJiNN编辑的 (http://www.altova.com) by -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:include schemaLocation="TaxMLPublicType.xsd"/>
+	<xs:complexType name="zdsyfdcqykfjyxxjb04VO">
+		<xs:annotation>
+			<xs:documentation>重点税源房地产企业开发经营信息（季报）表</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="zdsyfdcqykfjyxxjbGrid">
+				<xs:annotation>
+					<xs:documentation>重点税源房地产企业开发经营信息（季报）表</xs:documentation>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:sequence minOccurs="0" maxOccurs="unbounded">
+						<xs:element name="zdsyfdcqykfjyxxjbGridlbVO" type="zdsyfdcqykfjyxxjb04GridlbVO"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="nsrxxFormVO" type="NsrxxFormVO" minOccurs="0"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="zdsyfdcqykfjyxxjb04GridlbVO">
+		<xs:annotation>
+			<xs:documentation>申报信息</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="ewbhxh" type="ewbhxh" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>二维表行序号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="xmmc" type="xmmc" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>项目名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="fwyt" type="fwyt" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>房屋用途</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zsfsDm" type="zsfsDm" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>征收方式代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="pzrq" type="pzrq" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>批准日期</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="tzze" type="tzze" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>投资总额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="tdmj" type="tdmj" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>土地面积</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jzmj" type="jzmj" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>建筑面积</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="kjzmj" type="kjzmj" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>可售建筑面积</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="xssr" type="xssr" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>销售收入</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="tdcb" type="tdcb" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>土地成本</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qqgcf" type="qqgcf" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>前期工程费</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jzazgcf" type="jzazgcf" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>建筑安装工程费</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ggptssf" type="ggptssf" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>公共配套设施费</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="kfjjfy" type="kfjjfy" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>开发间接费用</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="xsmj" type="xsmj" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>销售面积</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bnXsmj" type="bnXsmj" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>本年销售面积</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="snXsmj" type="snXsmj" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>上年销售面积</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bnYsk" type="bnYsk" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>本年预已收款</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="snYsk" type="snYsk" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>上年预已收款</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bnQmxsjg" type="bnQmxsjg" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>本年期末销售价格元/平方米</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="snQmxsjg" type="snQmxsjg" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>上年期末销售价格元/平方米</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bnLjynyys" type="bnLjynyys" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>本年累计应纳营业税</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="snLjyjyys" type="snLjyjyys" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>本年累计已缴营业税</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yyjTdzzs" type="yyjTdzzs" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>已预缴的土地增值税</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="hsqjTdzzs" type="hsqjTdzzs" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>汇算清缴的土地增值税</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="kfcb" type="kfcb" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>开发成本</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="kfcbTdcb" type="kfcbTdcb" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>其中:土地成本</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="kfcbKfjjfy" type="kfcbKfjjfy" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>其中:开发间接费用</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yjYys" type="yjYys" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>已缴营业税</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yjTdzzs" type="yjTdzzs" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>已缴土地增值税</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

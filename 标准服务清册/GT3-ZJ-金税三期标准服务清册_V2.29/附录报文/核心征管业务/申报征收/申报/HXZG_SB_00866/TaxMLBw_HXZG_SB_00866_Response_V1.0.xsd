@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2013 (http://www.altova.com) by  () -->
+<!-- 被2012 () 使用XMLSpy v编辑的 (http://www.altova.com) by -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:complexType name="HXZGSB00866Response">
+		<xs:annotation>
+			<xs:documentation>查询受控外国企业信息报告表返回报文</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="CgwgxxbgbZbxxList">
+						<xs:annotation>
+							<xs:documentation>被投资外国企业信息返回报文集合</xs:documentation>
+						</xs:annotation>
+						<xs:complexType>
+							<xs:sequence minOccurs="0" maxOccurs="unbounded">
+								<xs:element name="CgwgxxbgbZbxx" type="CgwgxxbgbZbxx">
+									<xs:annotation>
+										<xs:documentation>被投资外国企业信息</xs:documentation>
+									</xs:annotation>
+								</xs:element>
+							</xs:sequence>
+						</xs:complexType>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="CgwgxxbgbZbxx">
+		<xs:annotation>
+			<xs:documentation>被投资外国企业信息</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="wgqyzwmc" type="nsrmc" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>外国企业中文名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="wgqyzwcld" type="dz" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>外国企业中文成立地</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="wgqywwmc" type="nsrmc" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>外国企业外文名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="wgqywwcld" type="dz" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>外国企业外文成立地</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="szgnssbh" type="nsrsbh" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>所在国纳税识别号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zyywlx" type="nsrmc" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>主营业务类型</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bgrcgbl" type="bl" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>报告人持股比例</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="mxxh" type="pzxh" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>明细序号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 被2011 rel. 2 sp1 (TeaM DJiNN) 使用XMLSpy vTeaM DJiNN编辑的 (http://www.altova.com) by -->
+<!-- edited with XMLSpy v2010 rel. 3 (http://www.altova.com) by MESMERiZE (MSM) -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:include schemaLocation="TaxMLPublicDJType.xsd"/>
+	<xs:complexType name="HXZGDJ00399Response">
+		<xs:annotation>
+			<xs:documentation>根据主表UUID查询汇总纳税企业信息备案表子表信息返回报文</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="cxhznsqyxxbabzbxxVO" type="cxhznsqyxxbabzbxxVO"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="cxhznsqyxxbabzbxxVO">
+		<xs:annotation>
+			<xs:documentation>汇总纳税企业信息备案表子表信息</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="cxbabSyjgxxVO" type="DJHznsqyxxbabSyjgxxVO">
+				<xs:annotation>
+					<xs:documentation>上一级机构信息</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="cxbabXyjgxxGrid" type="cxbabXyjgxxGrid">
+				<xs:annotation>
+					<xs:documentation>下一级机构信息</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="cxbabDlscjybmGrid" type="cxbabDlscjybmGrid">
+				<xs:annotation>
+					<xs:documentation>独立生产经营部门信息</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="cxbabXmbGrid" type="cxbabXmbGrid">
+				<xs:annotation>
+					<xs:documentation>项目部信息</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="cxbabDlscjybmGrid">
+		<xs:annotation>
+			<xs:documentation>汇总纳税企业信息备案-独立生产经营部门信息</xs:documentation>
+		</xs:annotation>
+		<xs:sequence maxOccurs="unbounded">
+			<xs:element name="dlscjybmGridlb" type="DJHznsqyxxbabDlscjybmVO"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="cxbabXmbGrid">
+		<xs:annotation>
+			<xs:documentation>汇总纳税企业信息备案-项目部信息</xs:documentation>
+		</xs:annotation>
+		<xs:sequence maxOccurs="unbounded">
+			<xs:element name="xmbGridlb" type="DJHznsqyxxbabXmbVO"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="cxbabXyjgxxGrid">
+		<xs:annotation>
+			<xs:documentation>汇总纳税企业信息备案-下一级机构信息</xs:documentation>
+		</xs:annotation>
+		<xs:sequence maxOccurs="unbounded">
+			<xs:element name="xyjgxxGridlb" type="DJHznsqyxxbabXyjgxxVO"/>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

@@ -1,0 +1,268 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2013 (http://www.altova.com) by  () -->
+<!-- 被2012 () 使用XMLSpy v编辑的 (http://www.altova.com) by -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:include schemaLocation="TaxMLPublicType.xsd"/>
+	<xs:complexType name="QyjtHbzcfzbVO">
+		<xs:annotation>
+			<xs:documentation>合并资产负债表</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="nsrxxForm" type="NsrxxFormVO">
+				<xs:annotation>
+					<xs:documentation>纳税人基本信息</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qyjtHbzcfzbGrid">
+				<xs:annotation>
+					<xs:documentation>申报信息</xs:documentation>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:sequence maxOccurs="unbounded">
+						<xs:element name="qyjtHbzcfzbGridlb" type="QyjtHbzcfzbGridlbVO"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="QyjtHbzcfzbGridlbVO">
+		<xs:annotation>
+			<xs:documentation>申报信息</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="ewbhxh" type="ewbhxh">
+				<xs:annotation>
+					<xs:documentation>二维表行序号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="xmmc" type="xmmc">
+				<xs:annotation>
+					<xs:documentation>项目名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qmye" type="qmye">
+				<xs:annotation>
+					<xs:documentation>期末余额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ncye" type="ncye">
+				<xs:annotation>
+					<xs:documentation>年初余额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="QyjtHblrbVO">
+		<xs:annotation>
+			<xs:documentation>合并利润分配表</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="qyjtHblrbGrid">
+				<xs:annotation>
+					<xs:documentation>申报信息</xs:documentation>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:sequence maxOccurs="unbounded">
+						<xs:element name="qyjtHblrbGridlb" type="QyjtHblrbGridlbVO"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="QyjtHblrbGridlbVO">
+		<xs:annotation>
+			<xs:documentation>申报信息</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="ewbhxh" type="ewbhxh">
+				<xs:annotation>
+					<xs:documentation>二维表行序号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="xmmc" type="xmmc">
+				<xs:annotation>
+					<xs:documentation>项目名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bqje" type="bqje">
+				<xs:annotation>
+					<xs:documentation>本期金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sqje" type="sqje">
+				<xs:annotation>
+					<xs:documentation>上期金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="QyjtHbxjllbVO">
+		<xs:annotation>
+			<xs:documentation>合并现金流量表</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="qyjtHbxjllbGrid">
+				<xs:annotation>
+					<xs:documentation>申报信息</xs:documentation>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:sequence maxOccurs="unbounded">
+						<xs:element name="qyjtHbxjllbGridlb" type="QyjtHbxjllbGridlbVO"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="QyjtHbxjllbGridlbVO">
+		<xs:annotation>
+			<xs:documentation>申报信息</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="ewbhxh" type="ewbhxh">
+				<xs:annotation>
+					<xs:documentation>二维表行序号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="xmmc" type="xmmc">
+				<xs:annotation>
+					<xs:documentation>项目名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bqje" type="bqje">
+				<xs:annotation>
+					<xs:documentation>本期金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sqje" type="sqje">
+				<xs:annotation>
+					<xs:documentation>上期金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="QyjtHbsyzqybdbVO">
+		<xs:annotation>
+			<xs:documentation>合并所有者权益变动表</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="qyjtHbsyzqybdbGrid">
+				<xs:annotation>
+					<xs:documentation>申报信息</xs:documentation>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:sequence maxOccurs="unbounded">
+						<xs:element name="qyjtHbsyzqybdbGridlb" type="QyjtHbsyzqybdbGridlbVO"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="QyjtHbsyzqybdbGridlbVO">
+		<xs:annotation>
+			<xs:documentation>申报信息</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="ewbhxh" type="ewbhxh">
+				<xs:annotation>
+					<xs:documentation>二维表行序号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="hmc" type="hmc">
+				<xs:annotation>
+					<xs:documentation>行名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bnsszbhgb" type="bnsszbhgb">
+				<xs:annotation>
+					<xs:documentation>本年实收资本(或股本)</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bnzbgj" type="bnzbgj">
+				<xs:annotation>
+					<xs:documentation>本年资本公积</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bnjkcg" type="bnjkcg">
+				<xs:annotation>
+					<xs:documentation>本年减库存股</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bnyygj" type="bnyygj">
+				<xs:annotation>
+					<xs:documentation>本年盈余公积</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bnybfxzb" type="bnybfxzb">
+				<xs:annotation>
+					<xs:documentation>本年一般风险准备</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bnwfplr" type="bnwfplr">
+				<xs:annotation>
+					<xs:documentation>本年未分配利润</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bnqt" type="bnqt">
+				<xs:annotation>
+					<xs:documentation>本年其他</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bnssgdqy" type="bnssgdqy">
+				<xs:annotation>
+					<xs:documentation>本年少数股东权益</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bnsyzqyhj" type="bnsyzqyhj">
+				<xs:annotation>
+					<xs:documentation>本年所有者权益合计</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="snsszbhgb" type="snsszbhgb">
+				<xs:annotation>
+					<xs:documentation>上年实收资本(或股本)</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="snzbgj" type="snzbgj">
+				<xs:annotation>
+					<xs:documentation>上年资本公积</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="snjkcg" type="snjkcg">
+				<xs:annotation>
+					<xs:documentation>上年减库存股</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="snyygj" type="snyygj">
+				<xs:annotation>
+					<xs:documentation>上年盈余公积</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="snybfxzb" type="snybfxzb">
+				<xs:annotation>
+					<xs:documentation>上年一般风险准备</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="snwfplr" type="snwfplr">
+				<xs:annotation>
+					<xs:documentation>上年未分配利润</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="snqt" type="snqt">
+				<xs:annotation>
+					<xs:documentation>上年其他</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="snssgdqy" type="snssgdqy">
+				<xs:annotation>
+					<xs:documentation>上年少数股东权益</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="snsyzqyhj" type="snsyzqyhj">
+				<xs:annotation>
+					<xs:documentation>上年所有者权益合计</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

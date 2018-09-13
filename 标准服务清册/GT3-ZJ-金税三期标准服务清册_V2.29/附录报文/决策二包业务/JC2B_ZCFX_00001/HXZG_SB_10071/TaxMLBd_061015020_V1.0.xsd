@@ -1,0 +1,426 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 被2012 () 使用XMLSpy v编辑的 (http://www.altova.com) by -->
+<!-- edited with XMLSpy v2010 rel. 3 (http://www.altova.com) by liuwei (liuweicss) -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:complexType name="A105040ywbw">
+		<xs:annotation>
+			<xs:documentation>061015020《专项用途财政性资金纳税调整明细表》（A105040）业务报文</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="A105040Ywbd" type="A105040Ywbd">
+				<xs:annotation>
+					<xs:documentation>061015020《专项用途财政性资金纳税调整明细表》（A105040）表单</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="A105040Ywbd">
+		<xs:annotation>
+			<xs:documentation>061015020《专项用途财政性资金纳税调整明细表》（A105040）表单</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="zxytczxzjnstzmxbForm" type="zxytczxzjnstzmxbForm" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>061015020《专项用途财政性资金纳税调整明细表》（A105040）申报信息</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="zxytczxzjnstzmxbForm">
+		<xs:annotation>
+			<xs:documentation>061015020《专项用途财政性资金纳税调整明细表》（A105040）申报信息</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="qwndqdnd" type="nd" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>前五年度-取得年度</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qwndczxzj" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>前五年度-财政性资金</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qwndfhbzczxzjje" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>前五年度符合不征税收入条件的财政性资金—金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qwndfhbzczxzjjrbndje" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>前五年度符合不征税收入条件的财政性资金-进入本年亏损</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qwndqwnd" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>前五年度以前年度支出情况-前五年度</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qwndqsind" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>前五年度以前年度支出情况前四年度</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qwndqsand" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>前五年度以前年度支出情况-前三年度</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qwndqend" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>前五年度以前年度支出情况-前二年度</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qwndqynd" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>前五年度以前年度支出情况-前一年度</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qwndbnzcqkzcje" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>前五年-支出金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qwndbnzcqkfyhzcje" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>前五年度费用化支出明细表</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qwndbnjyjyje" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>前五年度结余金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qwndbnjysjczje" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>前五年度上缴财政金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qwndbnjyyjrbnje" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>前五年度应计入本年金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qsindqdnd" type="nd" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>前四年度-取得年度</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qsindczxzj" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>前四年度财政性资金</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qsindfhbzczxzjje" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>前四年度符合不征税收入条件的财政性资金-金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qsindfhbzczxzjjrbndje" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>前四年度符合不征税收入条件的财政性资金-计入本年</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qsindqsind" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>前四年度-以前年度支出情况-前四年度</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qsindqsand" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>前四年度-以前年度支出情况-前三年度</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qsindqend" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>前四年度-以前年度支出情况-前二年度</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qsindqynd" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>前四年度-以前年度支出情况-前一年度</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qsindbnzcqkzcje" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>前四年度-支出金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qsindbnzcqkfyhzcje" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>前四年度-费用化支出金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qsindbnjyjyje" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>前四年度结余金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qsindbnjysjczje" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>前四年度上缴财政性资金</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qsindbnjyyjrbnje" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>前四年度应计入本年税收金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qsandqdnd" type="nd" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>前三年度-取得年度</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qsandczxzj" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>前三年度-财政性资金</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qsandfhbzczxzjje" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>前三年度-符合不征税收入条件的财政性资金-金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qsandfhbzczxzjjrbndje" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>前三年度符合不征税收入条件的财政性资金-进入本年损益的金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qsandqsand" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>前三年度以-以前年度支出情况-前三年度</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qsanndqend" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>前三年度-以前年度支出情况-前二年度</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qsandqynd" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>前三年度-以前年度支出情况-前一年度</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qsandbnzcqkzcje" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>前三年度-支出金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qsandbnzcqkfyhzcje" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>前三年度-费用化支出金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qsandbnjyjyje" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>前三年度-结余金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qsnndbnjysjczje" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>前三年度-上缴财政性资金</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qsandbnjyyjrbnje" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>前三年度-应计入本年税收金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qendqdnd" type="nd" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>前二年度取得年度||前二年度取得年度</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qendczxzj" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>前二年度-财政性资金</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qendfhbzczxzjje" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>前二年度-符合不征税收入条件的财政性资金-金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qendfhbzczxzjjrbndje" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>前二年度-符合不征税收入条件的财政性资金-计入本年损益</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qendqend" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>前二年度-以前年度支出情况-前二年度</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qendqynd" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>前二年度-以前年度支出情况-前一年度</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qendbnzcqkzcje" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>前二年度-支出金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qendbnzcqkfyhje" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>前二年度-费用化支出金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qendbnjyjyje" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>前二年度-结余金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qendbnjysjczje" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>前二年度-上缴财政性资金</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qendbnjyyjrbnje" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>前二年度应计入本年亏损</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qyndqdnd" type="nd" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>前一年度-取得年度</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qyndczxzj" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>前一年度财政性资金</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qyndfhbzczxzjje" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>前一年度-符合不征税收入条件的财政性资金-金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qyndfhbzczxzjjrbnje" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>前一年度-符合不征税收入条件的财政性资金-计入本年损益的</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qyndqynd" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>前一年度-以前年度支出情况-前一年度</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qyndbnzcqkzcje" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>前一年度只支出金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qyndbnzcqkfyhzcje" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>前一年度费用化支出金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qyndbnjyjyje" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>前一年度结余金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qyndbnjysjczje" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>前一年度-上缴财政性资金</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qyndbnjyyjrbnje" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>前一年度-应计入本年税收收入金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bnqdnd" type="nd" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>本年-取得年度</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bnczxje" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>本年财政性资金</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bnfhbzczxzjje" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>本年符合不征税收入条件的财政性资金-金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bnfhbzczxzjjrbndje" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>本年符合不征税收入条件的财政性资金-进入本年亏损</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bnbnzcqkzcje" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>本年支出金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bnbnzcqkfyhzcje" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>本年费用化指出金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bnbnjyjyje" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>本年结余金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bnbnjysjczje" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>本年上缴财政性资金</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bnbnjyyjrbnje" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>本年应计入本年税收收入金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="hjczxje" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>合计财政性资金</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="hjfhbzczxzjje" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>合计符合不征税收入条件的财政性资金-金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="hjfhbzczxzjjrbndje" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>合计符合不征税收入条件的财政性资金-进入本年亏损的余额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="hjbnzcqkzcje" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>合计-支出金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="hjbnzcqkfyhzcje" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>合计费用化支出金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="hjbnjyjyje" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>合计结余金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="hjbnsjczje" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>合计上缴财政性资金</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="hjbnjyyjrbnje" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>合计应计入本年税收金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

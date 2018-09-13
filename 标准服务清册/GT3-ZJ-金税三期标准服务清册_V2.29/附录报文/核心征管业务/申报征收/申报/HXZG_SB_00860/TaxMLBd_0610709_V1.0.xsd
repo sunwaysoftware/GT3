@@ -1,0 +1,480 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 被2011 rel. 2 sp1 (TeaM DJiNN) 使用XMLSpy vTeaM DJiNN编辑的 (http://www.altova.com) by -->
+<!-- edited with XMLSpy v2010 rel. 3 (http://www.altova.com) by liuwei (liuweicss) -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:include schemaLocation="TaxMLPublicType.xsd"/>
+	<xs:complexType name="tshyzbjnstzmxbForm">
+		<xs:annotation>
+			<xs:documentation>特殊行业准备金纳税调整明细表(A105120)业务报文</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="tshyzbjnstzMxbVO" type="tshyzbjnstzmxbVO" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>特殊行业准备金纳税调整明细表</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="tshyzbjnstzmxbVO">
+		<xs:annotation>
+			<xs:documentation>《特殊行业准备金纳税调整明细表》</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="xbgszzje" type="je">
+				<xs:annotation>
+					<xs:documentation>保险公司账载金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="xbgsssje" type="je">
+				<xs:annotation>
+					<xs:documentation>保险公司税收金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="xbgsnstzje" type="je">
+				<xs:annotation>
+					<xs:documentation>保险公司纳税调整金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="wdqzrzbjzzje" type="je">
+				<xs:annotation>
+					<xs:documentation>未到期责任准备金账载金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="wdqzrzbjssje" type="je">
+				<xs:annotation>
+					<xs:documentation>未到期责任准备金税收金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="wdqzrzbjnstzje" type="je">
+				<xs:annotation>
+					<xs:documentation>未到期责任准备金纳税调整金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="wjpkzbjzzje" type="je">
+				<xs:annotation>
+					<xs:documentation>未决赔款准备金账载金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="wjpkzbjssje" type="je">
+				<xs:annotation>
+					<xs:documentation>未决赔款准备金税收金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="wjpkzbjnstzje" type="je">
+				<xs:annotation>
+					<xs:documentation>未决赔款准备金纳税调整金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ybazbjzzje" type="je">
+				<xs:annotation>
+					<xs:documentation>已发生已报案未决赔款准备金账载金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ybazbjssje" type="je">
+				<xs:annotation>
+					<xs:documentation>已发生已报案未决赔款准备金税收金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ybazbjnstzje" type="je">
+				<xs:annotation>
+					<xs:documentation>已发生已报案未决赔款准备金纳税调整金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="wbazbjzzje" type="je">
+				<xs:annotation>
+					<xs:documentation>已发生未报案未决赔款准备金账载金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="wbazbjssje" type="je">
+				<xs:annotation>
+					<xs:documentation>已发生未报案未决赔款准备金税收金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="wbazbjnstzje" type="je">
+				<xs:annotation>
+					<xs:documentation>已发生未报案未决赔款准备金纳税调整金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jzfxzbjzzje" type="je">
+				<xs:annotation>
+					<xs:documentation>巨灾风险准备金账载金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jzfxzbjssje" type="je">
+				<xs:annotation>
+					<xs:documentation>巨灾风险准备金税收金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jzfxzbjnstzje" type="je">
+				<xs:annotation>
+					<xs:documentation>巨灾风险准备金纳税调整金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sxzrzbjzzje" type="je">
+				<xs:annotation>
+					<xs:documentation>寿险责任准备金账载金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sxzrzbjssje" type="je">
+				<xs:annotation>
+					<xs:documentation>寿险责任准备金税收金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sxzrzbjnstzje" type="je">
+				<xs:annotation>
+					<xs:documentation>寿险责任准备金纳税调整金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="cqjkxzbjzzje" type="je">
+				<xs:annotation>
+					<xs:documentation>长期健康险责任准备金账载金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="cqjkxzbjssje" type="je">
+				<xs:annotation>
+					<xs:documentation>长期健康险责任准备金税收金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="cqjkxzbjnstzje" type="je">
+				<xs:annotation>
+					<xs:documentation>长期健康险责任准备金纳税调整金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bxbzjjzzje" type="je">
+				<xs:annotation>
+					<xs:documentation>保险保障基金账载金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bxbzjjssje" type="je">
+				<xs:annotation>
+					<xs:documentation>保险保障基金税收金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bxbzjjnstzje" type="je">
+				<xs:annotation>
+					<xs:documentation>保险保障基金纳税调整金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bxgsqtzzje" type="je">
+				<xs:annotation>
+					<xs:documentation>保险公司其他账载金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bxgsqtssje" type="je">
+				<xs:annotation>
+					<xs:documentation>保险公司其他税收金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bxgsqtnstzje" type="je">
+				<xs:annotation>
+					<xs:documentation>保险公司其他纳税调整金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zqhyzzje" type="je">
+				<xs:annotation>
+					<xs:documentation>证券行业账载金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zqhyssje" type="je">
+				<xs:annotation>
+					<xs:documentation>证券行业税收金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zqhynstzje" type="je">
+				<xs:annotation>
+					<xs:documentation>证券行业纳税调整金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zqjysfxjjzzje" type="je">
+				<xs:annotation>
+					<xs:documentation>证券交易所风险基金账载金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zqjysfxjjssje" type="je">
+				<xs:annotation>
+					<xs:documentation>证券交易所风险基金税收金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zqjysfxjjnstzje" type="je">
+				<xs:annotation>
+					<xs:documentation>证券交易所风险基金纳税调整金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zqjsfxjjzzje" type="je">
+				<xs:annotation>
+					<xs:documentation>证券结算风险基金账载金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zqjsfxjjssje" type="je">
+				<xs:annotation>
+					<xs:documentation>证券结算风险基金税收金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zqjsfxjjnstzje" type="je">
+				<xs:annotation>
+					<xs:documentation>证券结算风险基金纳税调整金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zqtzzbhjjzzje" type="je">
+				<xs:annotation>
+					<xs:documentation>证券投资者保护基金账载金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zqtzzbhjjssje" type="je">
+				<xs:annotation>
+					<xs:documentation>证券投资者保护基金税收金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zqtzzbhjjnstzje" type="je">
+				<xs:annotation>
+					<xs:documentation>证券投资者保护基金纳税调整金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zqhyqtzzje" type="je">
+				<xs:annotation>
+					<xs:documentation>证券行业其他账载金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zqhyqtssje" type="je">
+				<xs:annotation>
+					<xs:documentation>证券行业其他税收金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zqhyqtnstzje" type="je">
+				<xs:annotation>
+					<xs:documentation>证券行业其他纳税调整金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qhhyzzje" type="je">
+				<xs:annotation>
+					<xs:documentation>期货行业账载金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qhhyssje" type="je">
+				<xs:annotation>
+					<xs:documentation>期货行业税收金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qhhynstzje" type="je">
+				<xs:annotation>
+					<xs:documentation>期货行业纳税调整金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qhjysfxzbjzzje" type="je">
+				<xs:annotation>
+					<xs:documentation>期货交易所风险准备金账载金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qhjysfxzbjssje" type="je">
+				<xs:annotation>
+					<xs:documentation>期货交易所风险准备金税收金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qhjysfxzbjnstzje" type="je">
+				<xs:annotation>
+					<xs:documentation>期货交易所风险准备金纳税调整金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qhgsfxzbjzzje" type="je">
+				<xs:annotation>
+					<xs:documentation>期货公司风险准备金账载金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qhgsfxzbjssje" type="je">
+				<xs:annotation>
+					<xs:documentation>期货公司风险准备金税收金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qhgsfxzbjnstzje" type="je">
+				<xs:annotation>
+					<xs:documentation>期货公司风险准备金纳税调整金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qhtzzbzjjzzje" type="je">
+				<xs:annotation>
+					<xs:documentation>期货投资者保障基金账载金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qhtzzbzjjssje" type="je">
+				<xs:annotation>
+					<xs:documentation>期货投资者保障基金税收金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qhtzzbzjjnstzje" type="je">
+				<xs:annotation>
+					<xs:documentation>期货投资者保障基金纳税调整金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qhhyqtzzje" type="je">
+				<xs:annotation>
+					<xs:documentation>期货行业其他账载金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qhhyqtssje" type="je">
+				<xs:annotation>
+					<xs:documentation>期货行业其他税收金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qhhyqtnstzje" type="je">
+				<xs:annotation>
+					<xs:documentation>期货行业其他纳税调整金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jrhyzzje" type="je">
+				<xs:annotation>
+					<xs:documentation>金融企业账载金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jrhyssje" type="je">
+				<xs:annotation>
+					<xs:documentation>金融企业税收金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jrhynstzje" type="je">
+				<xs:annotation>
+					<xs:documentation>金融企业纳税调整金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sndksszbjzzje" type="je">
+				<xs:annotation>
+					<xs:documentation>涉农和中小企业贷款损失准备金账载金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sndksszbjssje" type="je">
+				<xs:annotation>
+					<xs:documentation>涉农和中小企业贷款损失准备金税收金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sndksszbjnstzje" type="je">
+				<xs:annotation>
+					<xs:documentation>涉农和中小企业贷款损失准备金纳税调整金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="dksszbjzzje" type="je">
+				<xs:annotation>
+					<xs:documentation>贷款损失准备金账载金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="dksszbjssje" type="je">
+				<xs:annotation>
+					<xs:documentation>贷款损失准备金税收金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="dksszbjnstzje" type="je">
+				<xs:annotation>
+					<xs:documentation>贷款损失准备金纳税调整金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jrhyqtzzje" type="je">
+				<xs:annotation>
+					<xs:documentation>金融企业其他账载金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jrhyqtssje" type="je">
+				<xs:annotation>
+					<xs:documentation>金融企业其他税收金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jrhyqtnstzje" type="je">
+				<xs:annotation>
+					<xs:documentation>金融企业其他纳税调整金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zxqyxydbjgzzje" type="je">
+				<xs:annotation>
+					<xs:documentation>中小企业信用担保机构账载金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zxqyxydbjgssje" type="je">
+				<xs:annotation>
+					<xs:documentation>中小企业信用担保机构税收金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zxqyxydbjgnstzje" type="je">
+				<xs:annotation>
+					<xs:documentation>中小企业信用担保机构纳税调整金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="dbpczbzzje" type="je">
+				<xs:annotation>
+					<xs:documentation>担保赔偿准备账载金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="dbpczbssje" type="je">
+				<xs:annotation>
+					<xs:documentation>担保赔偿准备税收金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="dbpczbnstzje" type="je">
+				<xs:annotation>
+					<xs:documentation>担保赔偿准备纳税调整金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="wdqzrzbzzje" type="je">
+				<xs:annotation>
+					<xs:documentation>未到期责任准备账载金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="wdqzrzbssje" type="je">
+				<xs:annotation>
+					<xs:documentation>未到期责任准备税收金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="wdqzrzbnstzje" type="je">
+				<xs:annotation>
+					<xs:documentation>未到期责任准备纳税调整金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zxqyxydbjgqtzzje" type="je">
+				<xs:annotation>
+					<xs:documentation>中小企业信用担保机构其他账载金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zxqyxydbjgqtssje" type="je">
+				<xs:annotation>
+					<xs:documentation>中小企业信用担保机构其他税收金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zxqyxydbjgqttzje" type="je">
+				<xs:annotation>
+					<xs:documentation>中小企业信用担保机构其他纳税调整金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qtzzje" type="je">
+				<xs:annotation>
+					<xs:documentation>其他账载金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qtssje" type="je">
+				<xs:annotation>
+					<xs:documentation>其他税收金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qtnstzje" type="je">
+				<xs:annotation>
+					<xs:documentation>其他纳税调整金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="hjzzje" type="je">
+				<xs:annotation>
+					<xs:documentation>合计账载金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="hjssje" type="je">
+				<xs:annotation>
+					<xs:documentation>合计税收金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="hjnstzje" type="je">
+				<xs:annotation>
+					<xs:documentation>合计纳税调整金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

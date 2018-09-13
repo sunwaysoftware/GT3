@@ -1,0 +1,326 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://www.chinatax.gov.cn/dataspec/" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:complexType name="xsgzrsdgrsdsqssbYwbw">
+		<xs:annotation>
+			<xs:documentation>限售股转让所得个人所得税清算申报业务报文</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="xsgzrsdgrsdsqssbbBzds" type="xsgzrsdgrsdsqssbbBzds"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="xsgzrsdgrsdsqssbbBzds">
+		<xs:annotation>
+			<xs:documentation>限售股转让所得个人所得税清算申报表表证单书</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="xsgzrsdgrsdsqssbbHead" type="xsgzrsdgrsdsqssbbHead">
+				<xs:annotation>
+					<xs:documentation>限售股转让所得个人所得税清算申报表表头，不能为空</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="xsgzrsdgrsdsqssbbBody" type="xsgzrsdgrsdsqssbbBody">
+				<xs:annotation>
+					<xs:documentation>限售股转让所得个人所得税清算申报表表体，不能为空</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bodyAffix" type="xs:anySimpleType">
+				<xs:annotation>
+					<xs:documentation>预留：附属表体</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="xsgzrsdgrsdsqssbbHead">
+		<xs:annotation>
+			<xs:documentation>限售股转让所得个人所得税清算申报表表头</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="nsrsbh" type="nsrsbh">
+				<xs:annotation>
+					<xs:documentation>纳税人识别号，不能为空</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="djxh" type="djxh">
+				<xs:annotation>
+					<xs:documentation>登记序号，不能为空</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="skssqq" type="skssqq">
+				<xs:annotation>
+					<xs:documentation>税款所属期起，不能为空，格式为yyyy-mm-dd</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="skssqz" type="skssqz">
+				<xs:annotation>
+					<xs:documentation>税款所属期止，不能为空，格式为yyyy-mm-dd</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="tbrq1" type="tbrq">
+				<xs:annotation>
+					<xs:documentation>填表日期，不能为空，格式为yyyy-mm-dd</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jbrxm" type="nsrjbrxm">
+				<xs:annotation>
+					<xs:documentation>经办人姓名，不能为空</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="slrxm" type="slrxm">
+				<xs:annotation>
+					<xs:documentation>受理人姓名，不能为空，网报如果取不到，取值同slrDm</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="slrDm" type="slrDm">
+				<xs:annotation>
+					<xs:documentation>受理人代码，不能为空</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="slrq" type="slrq">
+				<xs:annotation>
+					<xs:documentation>受理日期，不能为空，格式为yyyy-mm-dd</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="slswjgmc" type="slswjgmc">
+				<xs:annotation>
+					<xs:documentation>受理税务机关名称，不能为空</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="slswjgDm" type="slswjgDm">
+				<xs:annotation>
+					<xs:documentation>受理税务机关代码，不能为空，必须在DM_GY_SWJG表中存在</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="xsgzrsdgrsdsqssbbBody">
+		<xs:annotation>
+			<xs:documentation>限售股转让所得个人所得税清算申报表表体</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="nsrjbqk" type="nsrjbqk">
+				<xs:annotation>
+					<xs:documentation>纳税人基本情况，不能为空</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="khzqgsyybxx" type="khzqgsyybxx">
+				<xs:annotation>
+					<xs:documentation>开户证券公司（营业部），不能为空</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="xsgzrsrjnsqk" type="xsgzrsrjnsqk">
+				<xs:annotation>
+					<xs:documentation>限售股转让收入及纳税情况，不能为空</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="nsrjbqk">
+		<xs:annotation>
+			<xs:documentation>纳税人基本情况</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="nsrmc" type="nsrmc">
+				<xs:annotation>
+					<xs:documentation>纳税人名称，不能为空</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zqzhh" type="szzqsczqzhhmDm">
+				<xs:annotation>
+					<xs:documentation>证券账户号，不能为空</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sfzjlxDm" type="sfzjlxDm">
+				<xs:annotation>
+					<xs:documentation>有效身份证照类型代码，不能为空</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sfzjlxmc" type="sfzjlxmc">
+				<xs:annotation>
+					<xs:documentation>有效身份证照类型名称，不能为空</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sfzjhm" type="sfzjhm">
+				<xs:annotation>
+					<xs:documentation>有效身份证照号码，不能为空</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zyDm" type="zyDm">
+				<xs:annotation>
+					<xs:documentation>职业代码，可以为空</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zw1Dm" type="zw">
+				<xs:annotation>
+					<xs:documentation>职务代码，可以为空</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="gjdqDm" type="gjhdqszDm">
+				<xs:annotation>
+					<xs:documentation>国籍（地区）代码，可以为空</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="gjdqmc" type="gjhdqzwqc">
+				<xs:annotation>
+					<xs:documentation>国籍（地区）名称，可以为空</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zgswskfjDm" type="zgswskfjDm">
+				<xs:annotation>
+					<xs:documentation>主管税务科所分局代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jdxzDm" type="jdxzDm">
+				<xs:annotation>
+					<xs:documentation>街道乡镇代码，不能为空</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="lxdh" type="lxdh">
+				<xs:annotation>
+					<xs:documentation>联系电话，可以为空</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="khyhmc" type="jkdwrkhyhmc">
+				<xs:annotation>
+					<xs:documentation>开户银行名称，不能为空</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="khyhzh" type="jkdwrzh">
+				<xs:annotation>
+					<xs:documentation>开户银行账号，不能为空</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zgjnyxlxdz" type="txdz">
+				<xs:annotation>
+					<xs:documentation>中国境内有效联系地址，可以为空</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yzbm" type="yzbm">
+				<xs:annotation>
+					<xs:documentation>邮编，可以为空</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="khzqgsyybxx">
+		<xs:annotation>
+			<xs:documentation>开户证券公司（营业部）</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="mc" type="nr">
+				<xs:annotation>
+					<xs:documentation>名称，不能为空</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="kjywrbm" type="kjywrsbh">
+				<xs:annotation>
+					<xs:documentation>扣缴义务人编码，不能为空</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="kjdjxh" type="djxh">
+				<xs:annotation>
+					<xs:documentation>扣缴义务人登记序号，不能为空</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="dz" type="dz">
+				<xs:annotation>
+					<xs:documentation>地址，不能为空</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yzbm" type="yzbm">
+				<xs:annotation>
+					<xs:documentation>邮编，不能为空</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="xsgzrsrjnsqk">
+		<xs:annotation>
+			<xs:documentation>限售股转让收入及纳税情况</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="gpDm" type="gpDm">
+				<xs:annotation>
+					<xs:documentation>股票代码，不能为空</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="gpmc" type="gpmc">
+				<xs:annotation>
+					<xs:documentation>股票名称，不能为空</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zrgs" type="sl">
+				<xs:annotation>
+					<xs:documentation>转让股数(股)，不能为空，为整型</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sjzrsre" type="sre">
+				<xs:annotation>
+					<xs:documentation>实际转让收入额，不能为空</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="xsgyzhhlsfxj" type="yz">
+				<xs:annotation>
+					<xs:documentation>
+					限售股原值和合理税费小计，不能为空，
+					如果xsgyz、hlsf、tzdke都为空或0，则取“转让收入额*0.15”，否则为“xsgyz + hlsf + tzdke”
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="xsgyz" type="yz">
+				<xs:annotation>
+					<xs:documentation>限售股原值，可以为空</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="hlsf" type="zykcdsf">
+				<xs:annotation>
+					<xs:documentation>合理税费，可以为空</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="tzdke" type="tzdke">
+				<xs:annotation>
+					<xs:documentation>投资抵扣额，可以为空</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ynssde" type="ynssde">
+				<xs:annotation>
+					<xs:documentation>应纳税所得额，不能为空</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sl1" type="sl1">
+				<xs:annotation>
+					<xs:documentation>税率，目前暂时固定0.2，不能为空</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zspmDm" type="zspmDm">
+				<xs:annotation>
+					<xs:documentation>征收品目代码，不能为空</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zspmMc" type="zspmmc">
+				<xs:annotation>
+					<xs:documentation>征收品目名称，不能为空</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ynse" type="ynse">
+				<xs:annotation>
+					<xs:documentation>应纳税额，不能为空</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ykjse" type="ykjse">
+				<xs:annotation>
+					<xs:documentation>已扣缴税额，可以为空</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ytbse" type="ybtse">
+				<xs:annotation>
+					<xs:documentation>应退（补）税额，不能为空</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

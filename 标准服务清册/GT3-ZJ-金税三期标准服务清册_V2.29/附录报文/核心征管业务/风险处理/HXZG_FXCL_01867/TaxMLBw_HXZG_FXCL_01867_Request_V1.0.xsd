@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 被2012 () 使用XMLSpy v编辑的 (http://www.altova.com) by -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:complexType name="HXZGFXCL01867Request">
+		<xs:annotation>
+			<xs:documentation>文书送达回证批量销号请求报文（适用于催报产生的责令限改通知书和催缴产生的责令限缴通知书）</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="wsxhxxGrid">
+						<xs:annotation>
+							<xs:documentation>文书销号信息</xs:documentation>
+						</xs:annotation>
+						<xs:complexType>
+							<xs:sequence maxOccurs="unbounded">
+								<xs:element name="wsxhxxGridlb" type="ZHwsxhxxVO">
+									<xs:annotation>
+										<xs:documentation>文书销号信息列表</xs:documentation>
+									</xs:annotation>
+								</xs:element>
+							</xs:sequence>
+						</xs:complexType>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="ZHwsxhxxVO">
+		<xs:annotation>
+			<xs:documentation>销号信息</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="sdxxuuid" type="sdxxuuid">
+				<xs:annotation>
+					<xs:documentation>送达信息UUID</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="dzbzdszlDm" type="dzbzdszlDm">
+				<xs:annotation>
+					<xs:documentation>电子表证单书种类代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sdwsuuid" type="sdwsuuid">
+				<xs:annotation>
+					<xs:documentation>送达文书UUID</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sdhzuuid" type="sdhzuuid">
+				<xs:annotation>
+					<xs:documentation>送达回证UUID</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jzrxm1" type="jzrxm1" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>见证人姓名</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="wssdfsDm" type="wssdfsDm">
+				<xs:annotation>
+					<xs:documentation>文书送达方式代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="dsr" type="dsr" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>代收人</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sdr" type="sdrDm">
+				<xs:annotation>
+					<xs:documentation>送达人（至少两人，多个税务人员代码用逗号隔开）</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="wssdrq" type="wssdrq">
+				<xs:annotation>
+					<xs:documentation>文书送达日期</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="wssdrxm" type="wssdrxm" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>文书受达人姓名</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jsly" type="jsly" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>拒收理由</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="xhrDm" type="xhrDm">
+				<xs:annotation>
+					<xs:documentation>销号人代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="xhrq1" type="xhrq1">
+				<xs:annotation>
+					<xs:documentation>销号日期</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="wssddz" type="wssddz">
+				<xs:annotation>
+					<xs:documentation>文书送达地址</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="dsly" type="dsly" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>代收理由</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="hzdh" type="hzdh" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>回执单号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sftt" type="sftt">
+				<xs:annotation>
+					<xs:documentation>是否妥投</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="wttyy" type="wttyy" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>未妥投原因</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

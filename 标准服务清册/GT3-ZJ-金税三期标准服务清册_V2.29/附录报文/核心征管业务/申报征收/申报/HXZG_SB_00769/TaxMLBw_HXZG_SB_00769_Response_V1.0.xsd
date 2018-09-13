@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2013 (http://www.altova.com) by  () -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:include schemaLocation="TaxMLPublicSBType.xsd"/>
+	<xs:complexType name="HXZGSB00769Response">
+		<xs:annotation>
+			<xs:documentation>查询增量房销售资料报送历史采集信息</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="zlbscjbGrid">
+						<xs:annotation>
+							<xs:documentation>资料报送采集Grid</xs:documentation>
+						</xs:annotation>
+						<xs:complexType>
+							<xs:sequence minOccurs="0" maxOccurs="unbounded">
+								<xs:element name="zlbscjbGridlb" type="zlbscjbGridlbVO">
+									<xs:annotation>
+										<xs:documentation>资料报送采集Gridlb</xs:documentation>
+									</xs:annotation>
+								</xs:element>
+							</xs:sequence>
+						</xs:complexType>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="zlbscjbGridlbVO">
+		<xs:annotation>
+			<xs:documentation>资料报送采集表GridlbVO</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="zlbsuuid" type="zlbsuuid" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation/>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="djxh" type="djxh">
+				<xs:annotation>
+					<xs:documentation>登记序号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ssqq" type="ssqq">
+				<xs:annotation>
+					<xs:documentation>所属期起</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ssqz" type="ssqz">
+				<xs:annotation>
+					<xs:documentation>所属期止</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bszlDm" type="bszlDm">
+				<xs:annotation>
+					<xs:documentation>报送资料代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zlbscjuuid" type="zlbscjuuid">
+				<xs:annotation>
+					<xs:documentation>资料报送采集UUID</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="lrrq" type="lrrq">
+				<xs:annotation>
+					<xs:documentation>录入日期</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

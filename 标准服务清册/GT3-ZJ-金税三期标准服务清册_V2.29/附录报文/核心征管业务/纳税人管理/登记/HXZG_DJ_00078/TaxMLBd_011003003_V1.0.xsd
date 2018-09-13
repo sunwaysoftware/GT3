@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2009 (http://www.altova.com) by Administrator (EMBRACE) -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:complexType name="tydjslywbw">
+		<xs:annotation>
+			<xs:documentation>停业登记受理业务报文</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="tydjsl" type="tydjsl">
+						<xs:annotation>
+							<xs:documentation>停业登记受理</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="tydjsl">
+		<xs:annotation>
+			<xs:documentation>停业登记受理</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="nsrxxFrom" type="nsrxxForm">
+				<xs:annotation>
+					<xs:documentation>停业登记受理-纳税人基本信息</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jcfpqkGrid" type="jcfpqkGrid">
+				<xs:annotation>
+					<xs:documentation>停业登记受理-缴存发票情况</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="swzjzlGrid" type="swzjzlGrid">
+				<xs:annotation>
+					<xs:documentation>停业登记受理-缴存税务证件种类情况</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qtswzlmcGrid" type="qtswzlmcGrid">
+				<xs:annotation>
+					<xs:documentation>停业登记受理-缴存其他税务资料情况</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="nsrxxForm">
+		<xs:annotation>
+			<xs:documentation>纳税人基本信息</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="nsrsbh" type="nsrsbh">
+				<xs:annotation>
+					<xs:documentation>纳税人识别号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="nsrmc" type="nsrmc">
+				<xs:annotation>
+					<xs:documentation>纳税人名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bgrq" type="bgrq" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>报告日期</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="hztyqxq" type="hztyqxq">
+				<xs:annotation>
+					<xs:documentation>核准停业期限起</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="hztyqxz" type="hztyqxz">
+				<xs:annotation>
+					<xs:documentation>核准停业期限止</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="slrDm" type="slrDm">
+				<xs:annotation>
+					<xs:documentation>受理人代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="slrq" type="slrq">
+				<xs:annotation>
+					<xs:documentation>受理日期</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="slswjgmc" type="slswjgmc">
+				<xs:annotation>
+					<xs:documentation>受理税务机关</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="jcfpqkGrid">
+		<xs:annotation>
+			<xs:documentation>停业登记受理-缴存发票情况</xs:documentation>
+		</xs:annotation>
+		<xs:sequence minOccurs="0" maxOccurs="unbounded">
+			<xs:element name="jcfpqkGridlb" type="jcfpqkGridlb">
+				<xs:annotation>
+					<xs:documentation>缴存发票情况列表</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="jcfpqkGridlb">
+		<xs:annotation>
+			<xs:documentation>缴存发票情况列表</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="jcfpqkuuid" type="jcfpqkuuid">
+				<xs:annotation>
+					<xs:documentation>缴存发票情况UUID</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="djxh" type="djxh">
+				<xs:annotation>
+					<xs:documentation>登记序号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jhfpzlDm" type="jhfpzlDm" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>缴回发票种类代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="fpDm" type="fpDm" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>发票代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="fpqshm" type="fpqshm" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>发票起始号码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="fpzzhm" type="fpzzhm" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>发票终止号码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="fpsl" type="fpsl">
+				<xs:annotation>
+					<xs:documentation>发票数量</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="swzjzlGrid">
+		<xs:annotation>
+			<xs:documentation>停业登记受理-缴存税务证件种类情况</xs:documentation>
+		</xs:annotation>
+		<xs:sequence minOccurs="0" maxOccurs="unbounded">
+			<xs:element name="swzjzlGridlb" type="swzjzlGridlb">
+				<xs:annotation>
+					<xs:documentation>税务证件种类列表</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="swzjzlGridlb">
+		<xs:annotation>
+			<xs:documentation>税务证件种类列表</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="swzjzlDm" type="swzjzlDm">
+				<xs:annotation>
+					<xs:documentation>税务证件种类</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="swzjhm" type="swzjhm">
+				<xs:annotation>
+					<xs:documentation> 税务证件号码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="qtswzlmcGrid">
+		<xs:annotation>
+			<xs:documentation>停业登记受理-缴存其他税务资料情况</xs:documentation>
+		</xs:annotation>
+		<xs:sequence minOccurs="0" maxOccurs="unbounded">
+			<xs:element name="qtswzlmcGridlb" type="qtswzlmcGridlb">
+				<xs:annotation>
+					<xs:documentation>税务证件种类列表</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="qtswzlmcGridlb">
+		<xs:annotation>
+			<xs:documentation>其他税务资料列表</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="jcqtswzlmc" type="jcqtswzlmc">
+				<xs:annotation>
+					<xs:documentation>缴存其他税务资料名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jcqtswzlsl" type="jcqtswzlsl">
+				<xs:annotation>
+					<xs:documentation>缴存其他税务资料数量</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

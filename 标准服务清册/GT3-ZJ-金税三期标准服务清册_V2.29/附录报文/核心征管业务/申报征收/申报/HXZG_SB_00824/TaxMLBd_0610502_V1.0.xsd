@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 被2012 () 使用XMLSpy v编辑的 (http://www.altova.com) by -->
+<!-- edited with XMLSpy v2010 rel. 3 (http://www.altova.com) by liuwei (css) -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:include schemaLocation="TaxMLPublicType.xsd"/>
+	<xs:complexType name="zwhzjhszyyqtzysnssbbywbw">
+		<xs:annotation>
+			<xs:documentation>中外合作及海上自营油气田资源税纳税申报表业务报文</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="zwhzjhszyyqtzysnssbb" type="zwhzjhszyyqtzysnssbb">
+						<xs:annotation>
+							<xs:documentation>中外合作及海上自营油气田资源税纳税申报表</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="zwhzjhszyyqtzysnssbb">
+		<xs:annotation>
+			<xs:documentation>中外合作及海上自营油气田资源税纳税申报表</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="sbbhead">
+				<xs:annotation>
+					<xs:documentation>申报表头信息</xs:documentation>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:complexContent>
+						<xs:extension base="sbbheadkz2VO">
+							<xs:sequence>
+								<xs:element name="dz" type="dz">
+									<xs:annotation>
+										<xs:documentation>地址</xs:documentation>
+									</xs:annotation>
+								</xs:element>
+								<xs:element name="lxdh" type="lxdh">
+									<xs:annotation>
+										<xs:documentation>联系电话</xs:documentation>
+									</xs:annotation>
+								</xs:element>
+								<xs:element name="yhzh" type="yhzh">
+									<xs:annotation>
+										<xs:documentation>银行账号</xs:documentation>
+									</xs:annotation>
+								</xs:element>
+								<xs:element name="khyh" type="khyh">
+									<xs:annotation>
+										<xs:documentation>开户银行||开户银行</xs:documentation>
+									</xs:annotation>
+								</xs:element>
+							</xs:sequence>
+						</xs:extension>
+					</xs:complexContent>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="sbsjxxGrid">
+				<xs:annotation>
+					<xs:documentation>申报数据信息Grid</xs:documentation>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:sequence maxOccurs="unbounded">
+						<xs:element name="sbsjxxGridlb" type="sbsjxxGridlbVo">
+							<xs:annotation>
+								<xs:documentation>申报数据信息Grid</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="slxxFrom">
+				<xs:annotation>
+					<xs:documentation>受理信息</xs:documentation>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:complexContent>
+						<xs:extension base="sbbslxxVO">
+							<xs:sequence>
+								<xs:element name="bsr">
+									<xs:annotation>
+										<xs:documentation>办税人</xs:documentation>
+									</xs:annotation>
+								</xs:element>
+								<xs:element name="shr">
+									<xs:annotation>
+										<xs:documentation>审核人</xs:documentation>
+									</xs:annotation>
+								</xs:element>
+								<xs:element name="shrq">
+									<xs:annotation>
+										<xs:documentation>审核日期</xs:documentation>
+									</xs:annotation>
+								</xs:element>
+							</xs:sequence>
+						</xs:extension>
+					</xs:complexContent>
+				</xs:complexType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="sbsjxxGrid">
+		<xs:annotation>
+			<xs:documentation>申报数据信息Grid</xs:documentation>
+		</xs:annotation>
+		<xs:sequence minOccurs="0" maxOccurs="unbounded">
+			<xs:element name="sbsjxxGridlb" type="sbsjxxGridlbVo">
+				<xs:annotation>
+					<xs:documentation>申报数据信息</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="sbsjxxGridlbVo">
+		<xs:annotation>
+			<xs:documentation>申报数据信息Grid列表</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="yqtmc" type="yqtmc">
+				<xs:annotation>
+					<xs:documentation>油（气）田名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zspmDm" type="zspmDm">
+				<xs:annotation>
+					<xs:documentation>征收品目代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="xssxrq" type="xssxrq">
+				<xs:annotation>
+					<xs:documentation>销售实现日期</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="xsl" type="xsl">
+				<xs:annotation>
+					<xs:documentation>销售量吨/桶/立方米</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="gdsl" type="gdsl">
+				<xs:annotation>
+					<xs:documentation>规定税率</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jzl" type="jzl">
+				<xs:annotation>
+					<xs:documentation>减征率</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sjzsl" type="sjzsl">
+				<xs:annotation>
+					<xs:documentation>实际征收率</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="nssl" type="nssl">
+				<xs:annotation>
+					<xs:documentation>纳税数量吨/桶/立方米</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="dj" type="dj">
+				<xs:annotation>
+					<xs:documentation>单价</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="xse" type="xse">
+				<xs:annotation>
+					<xs:documentation>销售额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="xsfykce" type="xsfykce">
+				<xs:annotation>
+					<xs:documentation>销售费用扣除额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ynse" type="ynse">
+				<xs:annotation>
+					<xs:documentation>应纳税额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bz" type="bz">
+				<xs:annotation>
+					<xs:documentation>备注</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

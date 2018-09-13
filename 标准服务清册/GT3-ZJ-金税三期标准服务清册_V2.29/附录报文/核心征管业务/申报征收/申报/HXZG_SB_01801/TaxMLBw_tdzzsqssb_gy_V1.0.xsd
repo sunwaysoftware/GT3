@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 被2012 () 使用XMLSpy v编辑的 (http://www.altova.com) by -->
+<!-- edited with XMLSpy v2010 rel. 3 (http://www.altova.com) by MESMERiZE (MSM) -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:complexType name="tdzzsqsFbGyNdDataVo">
+		<xs:annotation>
+			<xs:documentation>土地增值税清算公用年度VO</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="ewbhxh" type="xs:int"/>
+			<xs:element name="xm" type="xm"/>
+			<xs:element name="nd1" type="je">
+				<xs:annotation>
+					<xs:documentation>年度1</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="nd2" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>年度2</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="nd3" type="nd" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>年度3</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="nd4" type="nd" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>年度4</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="nd5" type="nd" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>年度5</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="nd6" type="nd" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>年度6</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="nd7" type="nd" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>年度7</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bz" type="bz" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>备注</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="tdzzsqsFbGyNdVo">
+		<xs:sequence>
+			<xs:element name="nd1" type="nd"/>
+			<xs:element name="nd2" type="nd" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>年度2</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="nd3" type="nd" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>年度3</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="nd4" type="nd" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>年度4</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="nd5" type="nd" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>年度5</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="nd6" type="nd" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>年度6</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="nd7" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>年度7</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sbhjs" type="nd" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>申报合计数</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

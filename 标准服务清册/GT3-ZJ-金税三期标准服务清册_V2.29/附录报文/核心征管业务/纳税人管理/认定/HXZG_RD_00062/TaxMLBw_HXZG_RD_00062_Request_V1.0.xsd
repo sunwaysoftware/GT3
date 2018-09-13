@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2009 (http://www.altova.com) by Administrator (EMBRACE) -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:complexType name="HXZGRD00062Request">
+		<xs:annotation>
+			<xs:documentation>根据流程实例ID、活动实例ID查询税务认定资格取消表信息接入报文</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="lcslid" type="lcslid">
+						<xs:annotation>
+							<xs:documentation>流程实例ID</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="hdslid" type="hdslid">
+						<xs:annotation>
+							<xs:documentation>活动实例ID</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+</xs:schema>

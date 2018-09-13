@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:complexType name="zxkcxxYwbw">
+		<xs:annotation>
+			<xs:documentation>专项扣除信息业务报文</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="zxkcmxlb" type="zxkcmxlb"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="zxkcmxlb">
+		<xs:sequence>
+			<xs:element name="zxkcmx" type="zxkcmx" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="zxkcmx">
+		<xs:annotation>
+			<xs:documentation>专项扣除明细</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="mxxh" type="xh">
+				<xs:annotation>
+					<xs:documentation>序号（必录）</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="xm" type="xm">
+				<xs:annotation>
+					<xs:documentation>姓名（必录）</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sfzjlxdm" type="sfzjlxDm">
+				<xs:annotation>
+					<xs:documentation>身份证件类型代码（必录）</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sfzjlxmc" type="sfzjlxmc">
+				<xs:annotation>
+					<xs:documentation>身份证件类型名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sfzjhm" type="sfzjhm">
+				<xs:annotation>
+					<xs:documentation>身份证件号码（必录），当身份证件类型代码为201【居民身份证】时，身份证件号码长度只能为18位</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="djxh" type="djxh">
+				<xs:annotation>
+					<xs:documentation>登记序号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="kcxm" type="zspmDm">
+				<xs:annotation>
+					<xs:documentation>扣除项目（必录）</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bqkkcje" type="je">
+				<xs:annotation>
+					<xs:documentation>本期可扣除金额（必录），必须大于等于0</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bqkcje" type="je">
+				<xs:annotation>
+					<xs:documentation>本期扣除金额（必录），必须大于等于0</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

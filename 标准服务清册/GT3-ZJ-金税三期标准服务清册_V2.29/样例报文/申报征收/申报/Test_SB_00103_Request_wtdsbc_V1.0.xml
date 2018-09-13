@@ -1,0 +1,74 @@
+﻿<service xmlns="http://www.chinatax.gov.cn/spec/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"> 
+<head> 
+<tran_id>SWZJ.HXZG.SB.BcWtdssb</tran_id> 
+<channel_id>TEST</channel_id> 
+<tran_seq>e645dbdbbc03462cb99402bfe37f6d79</tran_seq> 
+<tran_date>20120420</tran_date> 
+<tran_time>022034181</tran_time> 
+<expand> 
+<name>sjry</name> 
+<value>24406060733</value> 
+</expand> 
+<expand> 
+<name>sjjg</name> 
+<value>24400000000</value> 
+</expand> 
+</head> 
+<body><![CDATA[<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<taxML xsi:type="HXZGSB00103Request" xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<WtdssbSbbdxxVO>
+		<wtdsbgb>
+			<nsrxxForm>
+				<nsrsbh>440606098765432</nsrsbh>
+				<nsrmc>代扣代缴专用</nsrmc>
+				<sbrq1>2014-11-01 17:41:42</sbrq1>
+				<bsr>4545</bsr>
+				<skssqq>2014-10-01</skssqq>
+				<skssqz>2014-10-31</skssqz>
+				<slr>邓炳沛</slr>
+				<slswjg>佛山市顺德区地方税务局乐从税务分局</slswjg>
+				<slrq>2014-11-01</slrq>
+				<djxh>12440600000000000708</djxh>
+			</nsrxxForm>
+			<sbbxxGrid>
+				<sbbxxGridlb>
+					<yhspmz>000004014</yhspmz>
+					<xssl>1</xssl>
+					<se>1.0</se>
+				</sbbxxGridlb>
+			</sbbxxGrid>
+		</wtdsbgb>
+		<swsxbgb>
+			<swsxzyGrid>
+				<swsxzyGridlb>
+					<pzzg>2441021141</pzzg>
+					<pzhm>20000020</pzhm>
+					<tfrq>2014-11-12</tfrq>
+					<yskmDm>101010401</yskmDm>
+					<ysfpblDm>24420055</ysfpblDm>
+					<skgkDm>4406810001</skgkDm>
+					<mezl>000004014</mezl>
+					<sl>1</sl>
+					<je>1.0</je>
+					<nsrsbh>440606098765432</nsrsbh>
+					<nsrmc>代扣代缴专用</nsrmc>
+					<sfzjzl/>
+					<zjhm/>
+					<pzzlDm>000004022</pzzlDm>
+					<zspmDm>101110101</zspmDm>
+					<hzjkszpzzlDm/>
+					<hzjkspzzg/>
+					<hzjkspzhm/>
+					<bdzdjxh>12440600000000000708</bdzdjxh>
+					<nsqxDm/>
+					<sl1>0.25</sl1>
+				</swsxzyGridlb>
+			</swsxzyGrid>
+		</swsxbgb>
+		<swjszyb>
+			<swjszybGrid/>
+		</swjszyb>
+	</WtdssbSbbdxxVO>
+</taxML>
+]]></body> 
+</service>

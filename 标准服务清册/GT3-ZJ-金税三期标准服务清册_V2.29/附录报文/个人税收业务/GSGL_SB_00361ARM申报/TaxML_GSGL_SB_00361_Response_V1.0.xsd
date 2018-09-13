@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2010 rel. 3 (http://www.altova.com) by MESMERiZE (MSM) -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:complexType name="armsbResponse">
+		<xs:annotation>
+			<xs:documentation>ARM申报信息反馈报文</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="sfcg" type="sfcg">
+						<xs:annotation>
+							<xs:documentation>是否成功 1：成功，除1之外的其他码值：失败</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="fkxx" type="fkxx">
+						<xs:annotation>
+							<xs:documentation>具体错误原因</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="fkbw" type="nr">
+						<xs:annotation>
+							<xs:documentation>反馈报文[内容为各个申报表反馈的的zip压缩Base64内容]</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+</xs:schema>

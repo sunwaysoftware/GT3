@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2009 (http://www.altova.com) by Administrator (EMBRACE) -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:include schemaLocation="TaxMLPublicDJType.xsd"/>
+	<xs:complexType name="stfxxdjywbw">
+		<xs:annotation>
+			<xs:documentation>受托方信息登记业务报文</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="stfxxdjb" type="stfxxdjVO">
+						<xs:annotation>
+							<xs:documentation>受托方信息登记表</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="stfxxdjVO">
+		<xs:annotation>
+			<xs:documentation>受托方信息登记表</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="stfjbxxForm" type="stfjbxxVO">
+				<xs:annotation>
+					<xs:documentation>受托方基本信息</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="stffyhyGrid">
+				<xs:annotation>
+					<xs:documentation>受托方副营行业gird</xs:documentation>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:sequence minOccurs="0" maxOccurs="unbounded">
+						<xs:element name="stffyhyGridlb" type="DJNsrfyhyxxVO">
+							<xs:annotation>
+								<xs:documentation>受托方副营行业gird信息列表</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="stfjbxxVO">
+		<xs:annotation>
+			<xs:documentation>受托方基本信息</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="nsrsbh" type="nsrsbh">
+				<xs:annotation>
+					<xs:documentation>纳税人识别号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="djxh" type="djxh">
+				<xs:annotation>
+					<xs:documentation>登记序号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ssdabh" type="ssdabh">
+				<xs:annotation>
+					<xs:documentation>税收档案编号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zzjgDm" type="zzjgDm">
+				<xs:annotation>
+					<xs:documentation>组织机构代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="scjydzxzqhszDm" type="scjydzxzqhszDm">
+				<xs:annotation>
+					<xs:documentation>联系地址行政区划</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="nsrmc" type="nsrmc">
+				<xs:annotation>
+					<xs:documentation>纳税人名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="djzclxDm" type="djzclxDm">
+				<xs:annotation>
+					<xs:documentation>登记注册类型</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jdxzDm" type="jdxzDm">
+				<xs:annotation>
+					<xs:documentation>所处街乡</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="scjydz" type="scjydz">
+				<xs:annotation>
+					<xs:documentation>联系地址</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="pzsljglxDm" type="pzsljglxDm">
+				<xs:annotation>
+					<xs:documentation>批准设立机关类型</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="pzsljgDm" type="pzsljgDm">
+				<xs:annotation>
+					<xs:documentation>批准设立机关代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="pzsljgmc" type="pzsljgmc">
+				<xs:annotation>
+					<xs:documentation>批准设立机关</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="pzzmhwjh" type="pzzmhwjh" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>批准设立证明或文件号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zzlxDm" type="zzlxDm">
+				<xs:annotation>
+					<xs:documentation>证照名称代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zzhm" type="zzhm">
+				<xs:annotation>
+					<xs:documentation>证照号码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="kyslrq" type="kyslrq">
+				<xs:annotation>
+					<xs:documentation>开业设立日期</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="fddbrxm" type="fddbrxm">
+				<xs:annotation>
+					<xs:documentation>法定代表人（负责人）姓名</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="fddbrsfzjlxDm" type="fddbrsfzjlxDm">
+				<xs:annotation>
+					<xs:documentation>法定代表人（负责人）身份证件种类</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="fddbrsfzjhm" type="fddbrsfzjhm">
+				<xs:annotation>
+					<xs:documentation>法定代表人（负责人）身份证件号码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zcdlxdh" type="zcdlxdh">
+				<xs:annotation>
+					<xs:documentation>联系电话</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zcdyzbm" type="zcdyzbm">
+				<xs:annotation>
+					<xs:documentation>邮政编码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="hyDm" type="hyDm">
+				<xs:annotation>
+					<xs:documentation>行业代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zgswjDm" type="zgswjDm">
+				<xs:annotation>
+					<xs:documentation>主管税务机关</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zgswskfjDm" type="zgswskfjDm">
+				<xs:annotation>
+					<xs:documentation>主管税务所（科、分局）</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="djrq" type="djrq">
+				<xs:annotation>
+					<xs:documentation>登记日期</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="djr" type="djr">
+				<xs:annotation>
+					<xs:documentation>登记人</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="djjgDm" type="djjgDm">
+				<xs:annotation>
+					<xs:documentation>登记税务机关</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="pgjgDm" type="pgjgDm">
+				<xs:annotation>
+					<xs:documentation>评估机关</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="dwlsgxDm" type="dwlsgxDm">
+				<xs:annotation>
+					<xs:documentation>单位隶属关系</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="shxydm" type="shxydm">
+				<xs:annotation>
+					<xs:documentation>社会信用代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

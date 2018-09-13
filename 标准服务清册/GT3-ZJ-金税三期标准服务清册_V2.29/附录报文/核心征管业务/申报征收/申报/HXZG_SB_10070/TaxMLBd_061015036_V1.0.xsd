@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 被2011 rel. 2 sp1 (TeaM DJiNN) 使用XMLSpy vTeaM DJiNN编辑的 (http://www.altova.com) by -->
+<!-- edited with XMLSpy v2010 rel. 3 (http://www.altova.com) by MESMERiZE (MSM) -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:complexType name="A107012Ywbd">
+		<xs:annotation>
+			<xs:documentation>研发费用加计扣除优惠明细表(A107012)表单</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="yffyjjkcyhjbxxForm" type="yffyjjkcyhjbxxFormVO"/>
+					<xs:element name="yffyjjkcyhmxbGrid">
+						<xs:complexType>
+							<xs:sequence minOccurs="0" maxOccurs="unbounded">
+								<xs:element name="yffyjjkcyhmxbGridlb" type="yffyjjkcyhmxbGridlbVO"/>
+							</xs:sequence>
+						</xs:complexType>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="yffyjjkcyhjbxxFormVO">
+		<xs:annotation>
+			<xs:documentation>《研发费用加计扣除优惠明细表》</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="qylx_1" type="nsrsbh" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>企业类型||1一般企业，2科技型中小企业</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="kjqyzxqydjbh" type="nsrdz" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>科技型中小企业登记编号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bnkxsyffyjjkcxmsl" type="zgrs" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>本年可享受研发费用加计扣除项目数量</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="yffyjjkcyhmxbGridlbVO">
+		<xs:annotation>
+			<xs:documentation>《研发费用加计扣除优惠明细表》</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="ewbhxh" type="ewbhxh" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>二维表行序号||对应表单的行号，从3开始</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ewbhmc" type="ewbhmc" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>二维表行名称||对应行号的中文名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ewbhgjz" type="ewbhgjz">
+				<xs:annotation>
+					<xs:documentation>二维表行关键字||3行传值为yffyje，4行传值为ryrgje，5行传值为rygzxjje，6行传值为rywxyjje，7行传值为rylwfyje，8行传值为zjtrfyje，9行传值为zjxhclje，10行传值为zjxhrlje，11行传值为zjxhdlfyje，12行传值为zjsycpje，13行传值为ybcssdgje，14行传值为szcpjyfje，15行传值为sbwhfyje，16行传值为sbzlfyje，17行传值为zjfyje，18行传值为yfhdyqje，19行传值为yfhdsbzjje，20行传值为wxzctxje，21行传值为yfhdrjtxje，22行传值为yfhdzlqtje，23行传值为yfhdfzlje，24行传值为xcpsjje，25行传值为xcpsjfyje，26行传值为xgygczje，27行传值为xyyzdlcsyfje，28行传值为ktkfxcsyfje，29行传值为qtxgfyje，30行传值为jszlzjgkje，31行传值为yfcgjsysfyje，32行传值为zscqsqdlfyje，33行传值为zgbxfyje，34行传值为clhyfyje，35行传值为jxetzhqtje，36行传值为wtyfje，37行传值为wtwbjgje，38行传值为wtjwyfhdje，39行传值为ndyffyxjje，40行传值为bnfyhjeje，41行传值为bnzbhjeje，42行传值为bnwxzctxeje，43行传值为yqndwxzcje，44行传值为yxkcyffyhjje，45行传值为jtssrbfje，46行传值为kcyffyjtssrje，47行传值为dnxsyfhdzje，48行传值为cpdyclbfje，49行传值为jjkcblje，50行传值为bnyfjjkcje，51行传值为cpdycljzje</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yfhdfyje" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>研发活动费用金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

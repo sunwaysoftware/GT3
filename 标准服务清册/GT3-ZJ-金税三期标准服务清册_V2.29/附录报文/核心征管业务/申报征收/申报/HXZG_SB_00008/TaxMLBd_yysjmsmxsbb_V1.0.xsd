@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2013 (http://www.altova.com) by  () -->
+<!-- 被2012 () 使用XMLSpy v编辑的 (http://www.altova.com) by -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:complexType name="yysjmsmxsbb_yysjmsmxsbbywbw">
+		<xs:annotation>
+			<xs:documentation>《营业税减免税明细申报表》业务报文</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="yysjmsmxsbb_yysjmsmxsbb" type="yysjmsmxsbb_yysjmsmxsbb">
+						<xs:annotation>
+							<xs:documentation>《营业税减免税明细申报表》</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="yysjmsmxsbb_yysjmsmxsbb">
+		<xs:annotation>
+			<xs:documentation>《营业税减免税明细申报表》</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="yysjmsmxsbbGrid" type="yysjmsmxsbbGrid">
+				<xs:annotation>
+					<xs:documentation>营业税减免税明细申报表</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="yysjmsmxsbbGridlbVO">
+		<xs:annotation>
+			<xs:documentation>减免税明细申报表GridlbVO</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="ewbhxh" type="ewbhxh">
+				<xs:annotation>
+					<xs:documentation>二维表行序号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zspmDm" type="zspmDm">
+				<xs:annotation>
+					<xs:documentation>征收品目代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ssjmxzDm" type="ssjmxzDm">
+				<xs:annotation>
+					<xs:documentation>税收减免性质代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jmssre" type="se">
+				<xs:annotation>
+					<xs:documentation>减免税收入额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sl1" type="sl1" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>税率</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jmse" type="jmse">
+				<xs:annotation>
+					<xs:documentation>减免税额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bz" type="bz" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>备注</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="xszcrs" type="sl" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>享受政策人数</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="swsxDm" type="swsxDm" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>税务事项代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="yysjmsmxsbbGrid">
+		<xs:annotation>
+			<xs:documentation>减免税明细申报表Grid</xs:documentation>
+		</xs:annotation>
+		<xs:sequence minOccurs="0" maxOccurs="unbounded">
+			<xs:element name="yysjmsmxsbbGrid" type="yysjmsmxsbbGridlbVO" minOccurs="0"/>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

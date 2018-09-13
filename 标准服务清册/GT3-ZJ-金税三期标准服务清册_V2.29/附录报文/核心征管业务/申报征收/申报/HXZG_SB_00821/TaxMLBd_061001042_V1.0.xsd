@@ -1,0 +1,306 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 被2012 () 使用XMLSpy v编辑的 (http://www.altova.com) by -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:complexType name="yyssb05_jzyyysnssbbywbw">
+		<xs:annotation>
+			<xs:documentation>《建筑业营业税纳税申报表》业务报文</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="yyssb05_jzyyysnssbb" type="yyssb05_jzyyysnssbb">
+						<xs:annotation>
+							<xs:documentation>《建筑业营业税纳税申报表》</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="yyssb05_jzyyysnssbb">
+		<xs:annotation>
+			<xs:documentation>《建筑业营业税纳税申报表》</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="bdjzyGrid" type="bdjzyGrid">
+				<xs:annotation>
+					<xs:documentation>本地提供建筑业应税劳务申报事项</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ydjzyGrid" type="ydjzyGrid">
+				<xs:annotation>
+					<xs:documentation>异地提供建筑业应税劳务申报事项</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="bdjzyGrid">
+		<xs:annotation>
+			<xs:documentation>申报信息</xs:documentation>
+		</xs:annotation>
+		<xs:sequence maxOccurs="unbounded">
+			<xs:element name="bdjzyGridlb" type="bdjzyGridlb">
+				<xs:annotation>
+					<xs:documentation>本地提供建筑业应税劳务申报事项列表</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="ydjzyGrid">
+		<xs:annotation>
+			<xs:documentation>"申报信息"</xs:documentation>
+		</xs:annotation>
+		<xs:sequence maxOccurs="unbounded">
+			<xs:element name="ydjzyGridlb" type="ydjzyGridlb">
+				<xs:annotation>
+					<xs:documentation>异地提供建筑业应税劳务申报事项列表</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="bdjzyGridlb">
+		<xs:annotation>
+			<xs:documentation>本地提供建筑业应税劳务申报事项明细列表</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="yhpzuuid" type="yhpzuuid">
+				<xs:annotation>
+					<xs:documentation>本地提供建筑业应税劳务申报事项中建筑作业优惠凭证UUID</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sbxmmc" type="sbxmmc">
+				<xs:annotation>
+					<xs:documentation>申报项目</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ysxmDm" type="zspmDm">
+				<xs:annotation>
+					<xs:documentation>应税项目</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yssr" type="je">
+				<xs:annotation>
+					<xs:documentation>本地提供建筑业应税劳务申报事项中建筑作业应税收入</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ysjcxmjexj" type="je">
+				<xs:annotation>
+					<xs:documentation>本地提供建筑业应税劳务申报事项中建筑作业应税减除项目金额小计</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zfgfzbrgcjg" type="je">
+				<xs:annotation>
+					<xs:documentation>本地提供建筑业应税劳务申报事项中建筑作业支付给分（转）包人工程价格</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jcsbjk" type="je">
+				<xs:annotation>
+					<xs:documentation>本地提供建筑业应税劳务申报事项中建筑作业减除设备价款</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qtjcxmje" type="je">
+				<xs:annotation>
+					<xs:documentation>本地提供建筑业应税劳务申报事项中建筑作业其他减除项目金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ysyye" type="je">
+				<xs:annotation>
+					<xs:documentation>本地提供建筑业应税劳务申报事项中建筑作业应税营业额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="mssr" type="mssr">
+				<xs:annotation>
+					<xs:documentation>本地提供建筑业应税劳务申报事项中建筑作业免税收入</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sl1" type="sl1">
+				<xs:annotation>
+					<xs:documentation>税率</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bqskxj" type="je">
+				<xs:annotation>
+					<xs:documentation>本地提供建筑业应税劳务申报事项中建筑作业本期税款小计</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bqynse" type="je">
+				<xs:annotation>
+					<xs:documentation>本地提供建筑业应税劳务申报事项中建筑作业本期应纳税额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="mjse" type="je">
+				<xs:annotation>
+					<xs:documentation>本地提供建筑业应税劳务申报事项中建筑作业本期免（减）税额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qcqjse" type="je">
+				<xs:annotation>
+					<xs:documentation>本地提供建筑业应税劳务申报事项中建筑作业期初欠缴税额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qqdjse" type="je">
+				<xs:annotation>
+					<xs:documentation>本地提供建筑业应税劳务申报事项中建筑作业前期多缴税额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bqyjsexj" type="je">
+				<xs:annotation>
+					<xs:documentation>本地提供建筑业应税劳务申报事项中建筑作业本期已缴税额小计</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yjbqynse" type="je">
+				<xs:annotation>
+					<xs:documentation>本地提供建筑业应税劳务申报事项中建筑作业本期已缴应纳税额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bqybkjse" type="je">
+				<xs:annotation>
+					<xs:documentation>本地提供建筑业应税劳务申报事项中建筑作业本期已被扣缴税额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bqyjqjse" type="je">
+				<xs:annotation>
+					<xs:documentation>本地提供建筑业应税劳务申报事项中建筑作业本期已缴欠缴税额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bqyjnsexj" type="je">
+				<xs:annotation>
+					<xs:documentation>本地提供建筑业应税劳务申报事项中建筑作业本期应缴税额小计</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bqqmyjse" type="je">
+				<xs:annotation>
+					<xs:documentation>本地提供建筑业应税劳务申报事项中建筑作业本期期末应缴税额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bqqmyjqjse" type="je">
+				<xs:annotation>
+					<xs:documentation>本地提供建筑业应税劳务申报事项中建筑作业本期期末应缴欠缴税额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="ydjzyGridlb">
+		<xs:annotation>
+			<xs:documentation>异地提供建筑业应税劳务申报事项</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="yhpzuuid" type="yhpzuuid">
+				<xs:annotation>
+					<xs:documentation>异地提供建筑业应税劳务申报事项中建筑作业优惠凭证UUID</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sbxmmc" type="sbxmmc">
+				<xs:annotation>
+					<xs:documentation>申报项目</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ysxmDm" type="zspmDm">
+				<xs:annotation>
+					<xs:documentation>应税项目</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yssr" type="je">
+				<xs:annotation>
+					<xs:documentation>异地提供建筑业应税劳务申报事项中建筑作业的应税收入</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ysjcxmjexj" type="je">
+				<xs:annotation>
+					<xs:documentation>异地提供建筑业应税劳务申报事项中建筑作业应税减除项目金额小计</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zfgfzbrgcjg" type="je">
+				<xs:annotation>
+					<xs:documentation>异地提供建筑业应税劳务申报事项中建筑作业支付给分（转）包人工程价格</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jcsbjk" type="je">
+				<xs:annotation>
+					<xs:documentation>异地提供建筑业应税劳务申报事项中建筑作业减除设备价款</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qtjcxmje" type="je">
+				<xs:annotation>
+					<xs:documentation>异地提供建筑业应税劳务申报事项中建筑作业其他减除项目金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ysyye" type="je">
+				<xs:annotation>
+					<xs:documentation>异地提供建筑业应税劳务申报事项中建筑作业应税营业额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="mssr" type="mssr">
+				<xs:annotation>
+					<xs:documentation>异地提供建筑业应税劳务申报事项中建筑作业免税收入</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sl1" type="sl1">
+				<xs:annotation>
+					<xs:documentation>税率</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bqskxj" type="je">
+				<xs:annotation>
+					<xs:documentation>异地提供建筑业应税劳务申报事项中建筑作业本期税款小计</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bqynse" type="je">
+				<xs:annotation>
+					<xs:documentation>异地提供建筑业应税劳务申报事项中建筑作业本期应纳税额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="mjse" type="je">
+				<xs:annotation>
+					<xs:documentation>异地提供建筑业应税劳务申报事项中建筑作业本期免（减）税额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qcqjse" type="je">
+				<xs:annotation>
+					<xs:documentation>异地提供建筑业应税劳务申报事项中建筑作业期初欠缴税额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qqdjse" type="je">
+				<xs:annotation>
+					<xs:documentation>异地提供建筑业应税劳务申报事项中建筑作业前期多缴税额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bqyjsexj" type="je">
+				<xs:annotation>
+					<xs:documentation>异地提供建筑业应税劳务申报事项中建筑作业本期已缴税额小计</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yjbqynse" type="je">
+				<xs:annotation>
+					<xs:documentation>异地提供建筑业应税劳务申报事项中建筑作业已缴本期应纳税额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bqybkjse" type="je">
+				<xs:annotation>
+					<xs:documentation>异地提供建筑业应税劳务申报事项中建筑作业本期已被扣缴税额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bqyjqjse" type="je">
+				<xs:annotation>
+					<xs:documentation>异地提供建筑业应税劳务申报事项中建筑作业本期已缴欠缴税额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bqyjnsexj" type="je">
+				<xs:annotation>
+					<xs:documentation>异地提供建筑业应税劳务申报事项中建筑作业本期应缴税额小计</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bqqmyjse" type="je">
+				<xs:annotation>
+					<xs:documentation>异地提供建筑业应税劳务申报事项中建筑作业本期期末应缴税额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bqqmyjqjse" type="je">
+				<xs:annotation>
+					<xs:documentation>异地提供建筑业应税劳务申报事项中建筑作业本期期末应缴欠缴税额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

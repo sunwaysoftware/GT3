@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 被2012 () 使用XMLSpy v编辑的 (http://www.altova.com) by -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:include schemaLocation="TaxMLPublicType.xsd"/>
+	<xs:complexType name="SBXzdwkjzdczbksrzcbVO">
+		<xs:annotation>
+			<xs:documentation>行政单位会计制度财务报表报送与信息采集收入支出表财政拨款收入支出表</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="nsrxxForm" type="NsrxxFormVO">
+				<xs:annotation>
+					<xs:documentation>纳税人基本信息</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="xzdwkjzdczbksrzcbGrid">
+				<xs:annotation>
+					<xs:documentation>财政拨款收入支出表提交数据</xs:documentation>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:sequence maxOccurs="unbounded">
+						<xs:element name="xzdwkjzdczbksrzcbGridlb" type="SBXzdwkjzdczbksrzcbGridlbVO"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="SBXzdwkjzdczbksrzcbGridlbVO">
+		<xs:annotation>
+			<xs:documentation>申报信息</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="ewbhxh" type="ewbhxh">
+				<xs:annotation>
+					<xs:documentation>二维表行序号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="xmmc" type="xmmc">
+				<xs:annotation>
+					<xs:documentation>项目名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ncczbjz" type="ncczbjz">
+				<xs:annotation>
+					<xs:documentation>年初财政拨结转</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ncczbjy" type="ncczbjy">
+				<xs:annotation>
+					<xs:documentation>年初财政拨结余</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="tzncczbkjzjy" type="tzncczbkjzjy">
+				<xs:annotation>
+					<xs:documentation>调整年初财政拨款结转结余</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="gjdrhsj" type="gjdrhsj">
+				<xs:annotation>
+					<xs:documentation>归集调入或上缴</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="dwnbtjhjz" type="dwnbtjhjz">
+				<xs:annotation>
+					<xs:documentation>单位内部调剂结转</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="dwnbtjjy" type="dwnbtjjy">
+				<xs:annotation>
+					<xs:documentation>单位内部调剂结余</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bnczbksr" type="bnczbksr">
+				<xs:annotation>
+					<xs:documentation>本年财政拨款收入</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bnczbkzc" type="bnczbkzc">
+				<xs:annotation>
+					<xs:documentation>本年财政拨款支出</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="nmczbkjz" type="nmczbkjz">
+				<xs:annotation>
+					<xs:documentation>年末财政拨款结转</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="nmczbkjy" type="nmczbkjy">
+				<xs:annotation>
+					<xs:documentation>年末财政拨款结余</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sxh" type="sxh">
+				<xs:annotation>
+					<xs:documentation>表格插入顺序号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

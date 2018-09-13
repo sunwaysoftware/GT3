@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 被2011 rel. 2 sp1 (TeaM DJiNN) 使用XMLSpy vTeaM DJiNN编辑的 (http://www.altova.com) by -->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://www.chinatax.gov.cn/dataspec/" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:complexType name="hqSbxxResponse">
+		<xs:annotation>
+			<xs:documentation>获取申报信息响应报文</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="sbmxlb" type="sbmxlb">
+						<xs:annotation>
+							<xs:documentation>申报明细列表</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="sbmxlb">
+		<xs:annotation>
+			<xs:documentation>申报明细列表</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="sbmx" type="sbmx" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="sbmx">
+		<xs:annotation>
+			<xs:documentation>申报反馈明细</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="jywysbh" type="jywysbh">
+				<xs:annotation>
+					<xs:documentation>交易唯一识别号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yzpzzlDm" type="yzpzzlDm">
+				<xs:annotation>
+					<xs:documentation>应征凭证种类代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yzpzxh" type="yzpzxh">
+				<xs:annotation>
+					<xs:documentation>应征凭证序号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="skssqq" type="skssqq">
+				<xs:annotation>
+					<xs:documentation>税款所属期起，（日期格式：yyyy-MM-dd）</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="skssqz" type="skssqz">
+				<xs:annotation>
+					<xs:documentation>税款所属期止，（日期格式：yyyy-MM-dd）</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sbrq" type="sbrq">
+				<xs:annotation>
+					<xs:documentation>申报日期，（日期格式：yyyy-MM-dd）</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ybtse" type="se">
+				<xs:annotation>
+					<xs:documentation>应补退税额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sbjgDm" type="sfcg">
+				<xs:annotation>
+					<xs:documentation>申报结果(0：解析失败;1：校验失败;2：预处理失败;3：正式提交失败;4：申报正在处理;Y：申报成功;N：已作废;9：申报数据已失效)
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="kkjgDm" type="sfcg">
+				<xs:annotation>
+					<xs:documentation>扣款结果(0:未扣款,1:部分扣款,2:扣款成功，空表示申报失败)</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

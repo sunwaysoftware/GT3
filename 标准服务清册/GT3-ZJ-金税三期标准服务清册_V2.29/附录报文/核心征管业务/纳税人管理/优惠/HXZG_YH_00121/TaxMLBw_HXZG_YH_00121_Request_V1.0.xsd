@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2010 rel. 3 (http://www.altova.com) by MESMERiZE (MSM) -->
+<!-- 编辑使用 XMLSpy v2006 U (http://www.altova.com) 由 any (any) -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:include schemaLocation="TaxMLPublicYHType.xsd"/>
+	<xs:complexType name="FjmxsssxddyyhVO">
+		<xs:annotation>
+			<xs:documentation>非居民享受税收协定待遇优惠</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="fbbz" type="bz1">
+						<xs:annotation>
+							<xs:documentation>附表标志</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="sjgsdq" type="sjgsdq">
+						<xs:annotation>
+							<xs:documentation>数据归属地区</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="YHFjmnsrssjmsfxxbgbVO" type="YHFjmnsrssjmsfxxbgbVO">
+						<xs:annotation>
+							<xs:documentation>非居民纳税人税收居民身份信息报告表</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="YHFjmnsrxsssxddyqkbgbaVO" type="YHFjmnsrxsssxddyqkbgbaVO">
+						<xs:annotation>
+							<xs:documentation>非居民纳税人享受税收协定待遇情况报告表(A表)</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="YHFjmnsrxsssxddyqkbgbbVO" type="YHFjmnsrxsssxddyqkbgbbVO">
+						<xs:annotation>
+							<xs:documentation>非居民纳税人享受税收协定待遇情况报告表(B表)</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="YHFjmnsrxsssxddyqkbgbcVO" type="YHFjmnsrxsssxddyqkbgbcVO">
+						<xs:annotation>
+							<xs:documentation>非居民纳税人享受税收协定待遇情况报告表(C表)</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="YHFjmnsrxsssxddyqkbgbdVO" type="YHFjmnsrxsssxddyqkbgbdVO">
+						<xs:annotation>
+							<xs:documentation>非居民纳税人享受税收协定待遇情况报告表(D表)</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="YHFjmnsrssjmsfxxbgbGdxxGrid" type="YHFjmnsrssjmsfxxbgbGdxxGrid">
+						<xs:annotation>
+							<xs:documentation>非居民纳税人税收居民身份信息报告表（股东信息）</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="YHFjmnsrssjmsfxxbgbJmgnsGrid" type="YHFjmnsrssjmsfxxbgbJmgnsGrid">
+						<xs:annotation>
+							<xs:documentation>非居民纳税人税收居民身份信息报告表（在居民国纳税情况）</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="YHFjmnsrxsssxddyqkbgbYsGrid" type="YHFjmnsrxsssxddyqkbgbYsGrid">
+						<xs:annotation>
+							<xs:documentation>非居民纳税人享受税收协定待遇情况报告表(运输线路及沿途停泊口岸情况)</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="YHFjmnsrxsssxdbgbDwzfqkGrid" type="YHFjmnsrxsssxdbgbDwzfqkGrid">
+						<xs:annotation>
+							<xs:documentation>非居民纳税人享受税收协定待遇情况报告表(对外支付情况)</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="YHFjmnsrxsssxdbgbXsqkGrid" type="YHFjmnsrxsssxdbgbXsqkGrid">
+						<xs:annotation>
+							<xs:documentation>非居民纳税人享受税收协定待遇情况报告表(享受税收协定情况)</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="YHFjmnsrxsssxdbgbGcfbqkGrid" type="YHFjmnsrxsssxdbgbGcfbqkGrid">
+						<xs:annotation>
+							<xs:documentation>非居民纳税人享受税收协定待遇情况报告表(工程分包情况)</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="YHFjmnsrxsssxdbgbCgqkGrid" type="YHFjmnsrxsssxdbgbCgqkGrid">
+						<xs:annotation>
+							<xs:documentation>非居民纳税人享受税收协定待遇情况报告表(持股情况)</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="YHFjmnsrxsssxdbgbCgbhqkGrid" type="YHFjmnsrxsssxdbgbCgbhqkGrid">
+						<xs:annotation>
+							<xs:documentation>非居民纳税人享受税收协定待遇情况报告表(持股变化情况)</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="YHFjmnsrxsssxdbgbJdqkGrid" type="YHFjmnsrxsssxdbgbJdqkGrid">
+						<xs:annotation>
+							<xs:documentation>非居民纳税人享受税收协定待遇情况报告表(劳动活动间断情况)</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="YHFjmnsrxsssxdbgbTjzlGrid" type="YHFjmnsrxsssxdbgbTjzlGrid">
+						<xs:annotation>
+							<xs:documentation>非居民纳税人享受税收协定待遇情况报告表（提交资料）</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="YHFjmnsrssjmsfxxbgbGdxxGrid">
+		<xs:annotation>
+			<xs:documentation>非居民纳税人税收居民身份信息报告表（股东信息）</xs:documentation>
+		</xs:annotation>
+		<xs:sequence minOccurs="0" maxOccurs="unbounded">
+			<xs:element name="YHFjmnsrssjmsfxxbgbGdxxVOlb" type="YHFjmnsrssjmsfxxbgbGdxxVO">
+				<xs:annotation>
+					<xs:documentation>非居民纳税人税收居民身份信息报告表（股东信息）</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="YHFjmnsrssjmsfxxbgbJmgnsGrid">
+		<xs:annotation>
+			<xs:documentation>非居民纳税人税收居民身份信息报告表（在居民国纳税情况）</xs:documentation>
+		</xs:annotation>
+		<xs:sequence minOccurs="0" maxOccurs="unbounded">
+			<xs:element name="YHFjmnsrssjmsfxxbgbJmgnsVOlb" type="YHFjmnsrssjmsfxxbgbJmgnsVO">
+				<xs:annotation>
+					<xs:documentation>非居民纳税人税收居民身份信息报告表（在居民国纳税情况）</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="YHFjmnsrxsssxddyqkbgbYsGrid">
+		<xs:annotation>
+			<xs:documentation>非居民纳税人享受税收协定待遇情况报告表(运输线路及沿途停泊口岸情况)</xs:documentation>
+		</xs:annotation>
+		<xs:sequence minOccurs="0" maxOccurs="unbounded">
+			<xs:element name="YHFjmnsrxsssxddyqkbgbYsVOlb" type="YHFjmnsrxsssxddyqkbgbYsVO">
+				<xs:annotation>
+					<xs:documentation>非居民纳税人享受税收协定待遇情况报告表(运输线路及沿途停泊口岸情况)</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="YHFjmnsrxsssxdbgbDwzfqkGrid">
+		<xs:annotation>
+			<xs:documentation>非居民纳税人享受税收协定待遇情况报告表(对外支付情况)</xs:documentation>
+		</xs:annotation>
+		<xs:sequence minOccurs="0" maxOccurs="unbounded">
+			<xs:element name="YHFjmnsrxsssxdbgbDwzfqkVOlb" type="YHFjmnsrxsssxdbgbDwzfqkVO">
+				<xs:annotation>
+					<xs:documentation>非居民纳税人享受税收协定待遇情况报告表(对外支付情况)</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="YHFjmnsrxsssxdbgbXsqkGrid">
+		<xs:annotation>
+			<xs:documentation>非居民纳税人享受税收协定待遇情况报告表(享受税收协定情况)</xs:documentation>
+		</xs:annotation>
+		<xs:sequence minOccurs="0" maxOccurs="unbounded">
+			<xs:element name="YHFjmnsrxsssxdbgbXsqkVOlb" type="YHFjmnsrxsssxdbgbXsqkVO">
+				<xs:annotation>
+					<xs:documentation>非居民纳税人享受税收协定待遇情况报告表(享受税收协定情况)</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="YHFjmnsrxsssxdbgbGcfbqkGrid">
+		<xs:annotation>
+			<xs:documentation>非居民纳税人享受税收协定待遇情况报告表(工程分包情况)</xs:documentation>
+		</xs:annotation>
+		<xs:sequence minOccurs="0" maxOccurs="unbounded">
+			<xs:element name="YHFjmnsrxsssxdbgbGcfbqkVOlb" type="YHFjmnsrxsssxdbgbGcfbqkVO">
+				<xs:annotation>
+					<xs:documentation>非居民纳税人享受税收协定待遇情况报告表(工程分包情况)</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="YHFjmnsrxsssxdbgbCgqkGrid">
+		<xs:annotation>
+			<xs:documentation>非居民纳税人享受税收协定待遇情况报告表(持股情况)</xs:documentation>
+		</xs:annotation>
+		<xs:sequence minOccurs="0" maxOccurs="unbounded">
+			<xs:element name="YHFjmnsrxsssxdbgbCgqkVOlb" type="YHFjmnsrxsssxdbgbCgqkVO">
+				<xs:annotation>
+					<xs:documentation>非居民纳税人享受税收协定待遇情况报告表(持股情况)</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="YHFjmnsrxsssxdbgbCgbhqkGrid">
+		<xs:annotation>
+			<xs:documentation>非居民纳税人享受税收协定待遇情况报告表(持股变化情况)</xs:documentation>
+		</xs:annotation>
+		<xs:sequence minOccurs="0" maxOccurs="unbounded">
+			<xs:element name="YHFjmnsrxsssxdbgbCgbhqkVOlb" type="YHFjmnsrxsssxdbgbCgbhqkVO">
+				<xs:annotation>
+					<xs:documentation>非居民纳税人享受税收协定待遇情况报告表(持股变化情况)</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="YHFjmnsrxsssxdbgbJdqkGrid">
+		<xs:annotation>
+			<xs:documentation>非居民纳税人享受税收协定待遇情况报告表(劳动活动间断情况)</xs:documentation>
+		</xs:annotation>
+		<xs:sequence minOccurs="0" maxOccurs="unbounded">
+			<xs:element name="YHFjmnsrxsssxdbgbJdqkVOlb" type="YHFjmnsrxsssxdbgbJdqkVO">
+				<xs:annotation>
+					<xs:documentation>非居民纳税人享受税收协定待遇情况报告表(劳动活动间断情况)</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="YHFjmnsrxsssxdbgbTjzlGrid">
+		<xs:annotation>
+			<xs:documentation>非居民纳税人享受税收协定待遇情况报告表（提交资料）</xs:documentation>
+		</xs:annotation>
+		<xs:sequence minOccurs="0" maxOccurs="unbounded">
+			<xs:element name="YHFjmnsrxsssxdbgbTjzlVOlb" type="YHFjmnsrxsssxdbgbTjzlVO">
+				<xs:annotation>
+					<xs:documentation>非居民纳税人享受税收协定待遇情况报告表（提交资料）</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="YHFjmnsrxsssxdbgbTjzlqdGrid">
+		<xs:annotation>
+			<xs:documentation>非居民享受税收协定待遇(附报资料清单)</xs:documentation>
+		</xs:annotation>
+		<xs:sequence minOccurs="0" maxOccurs="unbounded">
+			<xs:element name="YHFjmnsrxsssxdbgbTjzlVOlb" type="YHFjmnsrxsssxdbgbTjzlqdVO">
+				<xs:annotation>
+					<xs:documentation>非居民享受税收协定待遇(附报资料清单)</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="HXZGYH00121Request">
+		<xs:annotation>
+			<xs:documentation>保存非居民享受税收协定待遇优惠</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="FjmxsssxddyyhVO" type="FjmxsssxddyyhVO">
+						<xs:annotation>
+							<xs:documentation>非居民享受税收协定待遇优惠</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+</xs:schema>

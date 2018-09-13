@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2013 (http://www.altova.com) by  () -->
+<!-- 被2011 rel. 2 sp1 (pjf) 使用XMLSpy vcss编辑的 (http://www.altova.com) by -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:complexType name="HXZGZS10227ZSYjsfVO">
+		<xs:sequence>
+			<xs:element name="pzxh">
+				<xs:annotation>
+					<xs:documentation>凭证序号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yzpzzlDm" type="yzpzzlDm">
+				<xs:annotation>
+					<xs:documentation>应征凭证种类代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yzpzzlmc" type="yzpzzlmc">
+				<xs:annotation>
+					<xs:documentation>应征凭证种类名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sbrq" type="sbrq">
+				<xs:annotation>
+					<xs:documentation>申报日期</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="skssqq" type="skssqq">
+				<xs:annotation>
+					<xs:documentation>税款所属期期</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="skssqz" type="skssqz">
+				<xs:annotation>
+					<xs:documentation>税款所属期止</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ybtse" type="ybtse">
+				<xs:annotation>
+					<xs:documentation>应补退税额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jkqx" type="jkqx">
+				<xs:annotation>
+					<xs:documentation>缴款期限</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yjznjje" type="yjznjje">
+				<xs:annotation>
+					<xs:documentation>预计滞纳金金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sksxDm" type="sksxDm">
+				<xs:annotation>
+					<xs:documentation>税款属性代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sksxmc" type="sksxmc">
+				<xs:annotation>
+					<xs:documentation>税款属性名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="HXZGZS10227ResponseVO">
+		<xs:annotation>
+			<xs:documentation>查询未扣款申报表信息响应报文</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="wkksbbxxgGrid">
+						<xs:complexType>
+							<xs:sequence maxOccurs="unbounded">
+								<xs:element name="wkksbbxxGridlb" type="HXZGZS10227ZSYjsfVO"/>
+							</xs:sequence>
+						</xs:complexType>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+</xs:schema>

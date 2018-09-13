@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 被2012 () 使用XMLSpy v编辑的 (http://www.altova.com) by -->
+<!-- edited with XMLSpy v2013 (http://www.altova.com) by  () -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+    <xs:include schemaLocation="TaxML.xsd"/>
+    <xs:complexType name="RSJ2XY801Response">
+        <xs:annotation>
+            <xs:documentation>A级纳税人名单发布返回报文</xs:documentation>
+        </xs:annotation>
+        <xs:complexContent>
+            <xs:extension base="taxDoc">
+                <xs:sequence>
+                    <xs:element name="cljg" type="cljg">
+                        <xs:annotation>
+                            <xs:documentation>处理结果</xs:documentation>
+                        </xs:annotation>
+                    </xs:element>
+                    <xs:element name="nsrList">
+                        <xs:annotation>
+                            <xs:documentation>A级纳税人数组</xs:documentation>
+                        </xs:annotation>
+                        <xs:complexType>
+                            <xs:sequence>
+                                <xs:element name="djxh" type="djxh">
+                                    <xs:annotation>
+                                        <xs:documentation>登记序号</xs:documentation>
+                                    </xs:annotation>
+                                </xs:element>
+                            </xs:sequence>
+                        </xs:complexType>
+                    </xs:element>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+</xs:schema>

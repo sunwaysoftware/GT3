@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 被2012 () 使用XMLSpy v编辑的 (http://www.altova.com) by -->
+<!-- edited with XMLSpy v2013 (http://www.altova.com) by  () -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxMLPublicJCType.xsd"/>
+	<xs:complexType name="sswfajjbhywbw">
+		<xs:annotation>
+			<xs:documentation>《税收违法案件交办函》业务报文</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="sswfajjbh">
+						<xs:annotation>
+							<xs:documentation>税收违法案件交办函</xs:documentation>
+						</xs:annotation>
+						<xs:complexType>
+							<xs:sequence>
+								<xs:element name="jbhForm" type="jbhForm"/>
+								<xs:element name="fjGrid">
+									<xs:complexType>
+										<xs:sequence>
+											<xs:element name="fjGridlb" type="JCGyfjVO" minOccurs="0" maxOccurs="unbounded"/>
+										</xs:sequence>
+									</xs:complexType>
+								</xs:element>
+								<xs:element name="hfyjForm" type="hfyjForm"/>
+							</xs:sequence>
+						</xs:complexType>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="jbhForm">
+		<xs:sequence>
+			<xs:element name="wszg" type="wszg">
+				<xs:annotation>
+					<xs:documentation>文书字轨</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jsswjgDm" type="jsswjgDm">
+				<xs:annotation>
+					<xs:documentation>接收交办税务机关</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="uuid" type="uuid">
+				<xs:annotation>
+					<xs:documentation>关联uuid</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zjbhuuid" type="zjbhuuid">
+				<xs:annotation>
+					<xs:documentation>转交办UUID</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jcaybh" type="jcaybh">
+				<xs:annotation>
+					<xs:documentation>案源编号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="nsrsbh" type="nsrsbh">
+				<xs:annotation>
+					<xs:documentation>纳税人识别号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="nsrmc" type="nsrmc">
+				<xs:annotation>
+					<xs:documentation>纳税人名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zjswjgDm" type="zjswjgDm">
+				<xs:annotation>
+					<xs:documentation>交办税务机关</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="lcslid" type="lcslid">
+				<xs:annotation>
+					<xs:documentation>流程实例ID</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="wszzrq" type="wszzrq">
+				<xs:annotation>
+					<xs:documentation>文书制作日期</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="hfyjForm">
+		<xs:sequence>
+			<xs:element name="sfxyhf" type="sfxyhf">
+				<xs:annotation>
+					<xs:documentation>是否需要回复</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="hfjzrq" type="hfjzrq">
+				<xs:annotation>
+					<xs:documentation>回复截止日期</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="dz" type="dz">
+				<xs:annotation>
+					<xs:documentation>回复地址</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="lxry" type="lxry">
+				<xs:annotation>
+					<xs:documentation>联系人</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="lxdh" type="lxdh">
+				<xs:annotation>
+					<xs:documentation>联系电话</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="wszzrq" type="wszzrq">
+				<xs:annotation>
+					<xs:documentation>文书制作日期</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

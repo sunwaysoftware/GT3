@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2013 (http://www.altova.com) by  () -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:include schemaLocation="TaxMLPublicDJType.xsd"/>
+	<xs:complexType name="wtxysbgxxVO">
+		<xs:annotation>
+			<xs:documentation>委托协议书变更信息变更信息</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="wtxysBgdjmxGrid">
+				<xs:annotation>
+					<xs:documentation>变更明细信息</xs:documentation>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:sequence minOccurs="0" maxOccurs="unbounded">
+						<xs:element name="wtxysBgdjmxGridlb" type="DJBgdjmxVO">
+							<xs:annotation>
+								<xs:documentation>变更明细信息列表</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="insertBwtnsrxxGrid">
+				<xs:annotation>
+					<xs:documentation>新增被委托纳税人信息</xs:documentation>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:sequence minOccurs="0" maxOccurs="unbounded">
+						<xs:element name="insertBwtnsrxxGridlb" type="DJWtxysBwtdznsrxxVO">
+							<xs:annotation>
+								<xs:documentation>新增被委托纳税人信息列表</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="deleteBwtnsrxxGrid">
+				<xs:annotation>
+					<xs:documentation>删除被委托纳税人信息</xs:documentation>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:sequence minOccurs="0" maxOccurs="unbounded">
+						<xs:element name="deleteBwtnsrxxGridlb" type="DJWtxysBwtdznsrxxVO">
+							<xs:annotation>
+								<xs:documentation>删除被委托纳税人信息列表</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="updateBwtnsrxxGrid">
+				<xs:annotation>
+					<xs:documentation>修改被委托纳税人信息</xs:documentation>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:sequence minOccurs="0" maxOccurs="unbounded">
+						<xs:element name="updateBwtnsrxxGridlb" type="DJWtxysBwtdznsrxxVO">
+							<xs:annotation>
+								<xs:documentation>修改被委托纳税人信息</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="HXZGDJ00387Request">
+		<xs:annotation>
+			<xs:documentation>委托协议变更保存接入报文</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="djxh" type="djxh">
+						<xs:annotation>
+							<xs:documentation>登记序号</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="lcslid" type="lcslid">
+						<xs:annotation>
+							<xs:documentation>流程实例ID</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="zgswskfjDm" type="zgswskfjDm">
+						<xs:annotation>
+							<xs:documentation>主观税务所科分局代码</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="wtxysuuid" type="wtxysuuid">
+						<xs:annotation>
+							<xs:documentation>委托协议书UUID</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="wtxysbgxx" type="wtxysbgxxVO">
+						<xs:annotation>
+							<xs:documentation>委托协议变更信息</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+</xs:schema>

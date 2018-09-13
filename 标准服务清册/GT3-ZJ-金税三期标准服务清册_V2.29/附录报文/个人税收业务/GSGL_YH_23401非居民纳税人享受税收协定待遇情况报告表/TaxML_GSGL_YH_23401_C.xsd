@@ -1,0 +1,807 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:complexType name="yhFjmnsrxsssxddyqkbgbC">
+		<xs:annotation>
+			<xs:documentation>
+			    报告表C表主表信息
+			</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="xsssxddytk" type="xsssxddytk">
+						<xs:annotation>
+							<xs:documentation>享受税收协定待遇条款(取自dm_gy_ssxdsdlx表，代码值为'13','21'；选择“财产收益”时，“请选择所转让财产类型”必录)</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:group ref="kjywrsyxxC"/>
+					<xs:group ref="swjgglsyxxC"/>
+					<xs:group ref="xsqtsdtkdyC"/>
+					<xs:element name="bz" type="bz">
+						<xs:annotation>
+							<xs:documentation>	
+							备注
+							</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:group name="kjywrsyxxC">
+		<xs:annotation>
+			<xs:documentation>
+			    报告表C表主表信息-享受财产收益条款待遇（扣缴义务人使用信息)
+			</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="szrcclx" type="szrcclx">
+				<xs:annotation>
+					<xs:documentation>	         请选择所转让财产类型(1是位于中国的不动产，2是非居民纳税人设在中国的常设机构或固定基地营业财产部分的动产，3是从事国际运输（海运、空运、陆运）的船舶、飞机、陆运车辆、国际运输中使用的集装箱，或属于经营上述船舶、飞机、陆运车辆、集装箱的动产，4是公司股份、参股或其他权利取得的利益 ，5是合伙企业或信托中的利益，6是其他财产;条件必录)
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zrccjtlx" type="zrccjtlx">
+				<xs:annotation>
+					<xs:documentation>请说明所转让财产具体类型(条件必录,当“请选择所转让财产类型”为“（3）  从事国际运输（海运、空运、陆运）的船舶、飞机、陆运车辆、国际运输中使用的集装箱，或属于经营上述船舶、飞机、陆运车辆、集装箱的动产”时必录)</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="szrgpsfssgsgp" type="szrgpsfssgsgp">
+				<xs:annotation>
+					<xs:documentation>被转让公司股份是否为证券交易所上市的股票？(条件必录,当选择“（4）  公司股份、参股或其他权利取得的利益 ”必录)</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zqjysmc" type="zqjysmc">
+				<xs:annotation>
+					<xs:documentation>证券交易所名称(当“被转让公司股份是否为证券交易所上市的股票“为是 时必录)</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ssgpdm" type="ssgpdm">
+				<xs:annotation>
+					<xs:documentation>上市股票代码(当“被转让公司股份是否为证券交易所上市的股票”为是时必录)</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bzrgszjcyzgbdcdzzcbl" type="bzrgszjcyzgbdcdzzcbl">
+				<xs:annotation>
+					<xs:documentation>被转让公司直接持有位于中国的不动产占总资产比例(当选择“（4）  公司股份、参股或其他权利取得的利益 ”必录)</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bzrgszjhjjcygsbdczzzcbl" type="bzrgszjhjjcygsbdczzzcbl">
+				<xs:annotation>
+					<xs:documentation>被转让公司直接或间接持有位于中国的不动产占总资产比例(当选择“（4）  公司股份、参股或其他权利取得的利益 ”必录)</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sfcybdcjqzblqk" type="sfcybdcjqzblqk">
+				<xs:annotation>
+					<xs:documentation>在转让之前的36个公历月份内（不含转让当月）是否曾出现被转让公司直接或间接持有位于中国的不动产价值占公司全部财产价值的比率在50%以上的情况?(当选择“（4）  公司股份、参股或其他权利取得的利益 ”必录)</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zrqzjcgbl" type="zrqzjcgbl">
+				<xs:annotation>
+					<xs:documentation>转让前直接持股比例(当选择“（4）  公司股份、参股或其他权利取得的利益 ”必录)</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zrhzjcgbl" type="zrhzjcgbl">
+				<xs:annotation>
+					<xs:documentation>转让后直接持股比例(当选择“（4）  公司股份、参股或其他权利取得的利益 ”必录)</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zrqsftgqrmccyrcybzrgsgf" type="zrqsftgqrmccyrcybzrgsgf">
+				<xs:annotation>
+					<xs:documentation>转让前，非居民纳税人是否有通过其他名义参与人持有被转让公司股份，且非居民纳税人对该股份享有排他性资本参与利益，并实质承担资本参与风险？(当选择“（4）  公司股份、参股或其他权利取得的利益 ”必录)</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zrqsfcygbzrgszb" type="zrqsfcygbzrgszb">
+				<xs:annotation>
+					<xs:documentation>转让前，非居民纳税人是否通过具有10%以上（含10%）直接资本关系的单层或多层公司或其他实体间接参与该被转让公司的资本？(当选择“（4）  公司股份、参股或其他权利取得的利益 ”必录)</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zrqsfjyxzlygxqtcyjjcygszb" type="zrqsfjyxzlygxqtcyjjcygszb">
+				<xs:annotation>
+					<xs:documentation>转让前，与非居民纳税人具有显著利益关系的关联集团内其他成员，是否在该被转让公司直接参与或者通过具有10%以上（含10%）直接资本的单层或多层公司或其他实体间接参与该被转让公司的资本？(当选择“（4）  公司股份、参股或其他权利取得的利益 ”必录)</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zrqgljtcghjbl" type="zrqgljtcghjbl">
+				<xs:annotation>
+					<xs:documentation>转让前关联集团持股合计比例计算公式：所求比例=（1）直接持股比例+（3）通过其他名义参与人持股比例+（4）通过其他公司或实体间接持股比例+（5）关联集团内其他成员直接或间接持股比例(当选择“（4）  公司股份、参股或其他权利取得的利益 ”必录)</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sfcjdd25ys" type="sfcjdd25ys">
+				<xs:annotation>
+					<xs:documentation>如果关联集团合计持股比例低于25%（不含25%），转让行为发生前12个月内关联集团持股比例是否曾经达到25%或以上（含25%）？(当选择“（4）  公司股份、参股或其他权利取得的利益 ”且‘转让前关联集团持股合计比例’低于25%必录)</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bzrhhqyhxtzjcyzgbdczzcbl" type="bzrhhqyhxtzjcyzgbdczzcbl">
+				<xs:annotation>
+					<xs:documentation>被转让合伙企业或信托直接持有位于中国的不动产占总资产比例(请选择所转让财产类型项选“合伙企业或信托中的利益”，则该项为必录)</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bzrhhqyhxtzjjjcyzgbdczzcbl" type="bzrhhqyhxtzjjjcyzgbdczzcbl">
+				<xs:annotation>
+					<xs:documentation>被转让合伙企业或信托直接或间接持有位于中国的不动产占总资产比例(请选择所转让财产类型项选“合伙企业或信托中的利益”，则该项为必录)</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sfzcxbzrhhqyzzzc50ys" type="sfzcxbzrhhqyzzzc50ys">
+				<xs:annotation>
+					<xs:documentation>在转让之前的36个公历月份内（不含转让当月）是否曾出现被转让合伙企业或信托直接或间接持有位于中国的不动产价值占合伙企业或信托全部财产价值的比率在50%以上的情况？(请选择所转让财产类型项选“合伙企业或信托中的利益”，则该项为必录)</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qtccjtlx" type="qtccjtlx">
+				<xs:annotation>
+					<xs:documentation>请简要说明“其他财产”的具体类型(若请选择所转让财产类型项选“其他财产”，则该项为必录)</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="smccfljyssqkhly" type="smccfljyssqkhly">
+				<xs:annotation>
+					<xs:documentation>请简要说明非居民纳税人认为应享受财产收益条款税收协定待遇的其他法律依据、事实情况或理由</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ssccsltksrze" type="ssccsltksrze">
+				<xs:annotation>
+					<xs:documentation>享受财产收益条款收入总额(必录)</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="cbfykcze" type="cbfykcze">
+				<xs:annotation>
+					<xs:documentation>成本费用扣除总额（必录）</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="xsccsytkjmed" type="xsccsytkjmed">
+				<xs:annotation>
+					<xs:documentation>享受财产收益条款减免税额（必录）</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:group>
+	<xs:group name="swjgglsyxxC">
+		<xs:annotation>
+			<xs:documentation>
+			    报告表C表主表信息-享受财产收益条款待遇（税务机关管理使用信息）
+			</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="fjmdccslsdszsdssl" type="fjmdccslsdszsdssl">
+				<xs:annotation>
+					<xs:documentation>非居民纳税人的居民国（地区）对此项财产收益所得所征所得税税率（免税或不征税请填"0"）(若请选择所转让财产类型项选择享受“财产收益”条款时必录)</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sqtmycyrxxVoLists" type="sqtmycyrxxVo" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>非居民纳税人享受税收协定待遇情况报告表_C表_所述其他名义参与人信息</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sgshqtstxxVoLists" type="sgshqtstxxVo" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>非居民纳税人享受税收协定待遇情况报告表_C表_所述公司或其他实体信息</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="gljtnqtcyxxVoLists" type="gljtnqtcyxxVo" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>非居民纳税人享受税收协定待遇情况报告表_C表_所述关联集团内其他成员信息</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zjhjjcgblbhqkVoLists" type="zjhjjcgblbhqkVo" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>转让行为前的12个月非居民纳税人直接或间接持股比例变化情况</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="fjmnsrjsnsflyzgjnqtdqtlsd" type="fjmnsrjsnsflyzgjnqtdqtlsd">
+				<xs:annotation>
+					<xs:documentation>非居民纳税人近三年是否有来源于中国境内其他地区的同类所得？(必录)</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="fjmnsrjsflyzgtlxdxsxddy" type="fjmnsrjsflyzgtlxdxsxddy">
+				<xs:annotation>
+					<xs:documentation>非居民纳税人近三年是否就来源于中国境内其他地区的同类所得享受过税收协定待遇？（若“非居民纳税人近三年是否有来源于中国境内其他地区的同类所得？”选择“是”时必录）</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="j3nyyxsxddyqkVoLists" type="j3nyyxsxddyqkVo" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>非居民纳税人近三年就来源于中国境内其他地区的同类所得享受税收协定待遇的情况</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:group>
+	<xs:group name="xsqtsdtkdyC">
+		<xs:annotation>
+			<xs:documentation>
+			    享受其他所得条款待遇
+			</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="qtsdlx" type="qtsdlx">
+				<xs:annotation>
+					<xs:documentation>请说明其他所得类型（所享受协定条款选择为“其他所得”，则该项为必录）</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sfyfjmnsrszzgcsjghgdjdysjlx" type="sfyfjmnsrszzgcsjghgdjdysjlx">
+				<xs:annotation>
+					<xs:documentation>据以支付该项所得的权利或财产是否与非居民纳税人设在中国的常设机构或固定基地有实际联系？（所享受协定条款选择为“其他所得”，则该项为必录）</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="xsqtsdtksdze" type="xsqtsdtksdze">
+				<xs:annotation>
+					<xs:documentation>享受其他所得条款所得总额（所享受协定条款选择为“其他所得”，则该项为必录）</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="xsqtsdtkjmse" type="xsqtsdtkjmse">
+				<xs:annotation>
+					<xs:documentation>享受其他所得条款减免税额（所享受协定条款选择为“其他所得”，则该项为必录）</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:group>
+	<xs:complexType name="sqtmycyrxxVo">
+		<xs:annotation>
+			<xs:documentation>
+			    报告表C表主表信息-所述其他名义参与人信息
+			</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="cyrxxxh" type="cyrxxxh">
+				<xs:annotation>
+					<xs:documentation>	
+					序号
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="cyrmc" type="cyrmc">
+				<xs:annotation>
+					<xs:documentation>					名称(若“转让前，非居民纳税人是否有通过其他名义参与人持有被转让公司股份，且非居民纳税人对该股份享有排他性资本参与利益，并实质承担资本参与风险”项选是，则该项为可录)
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="cybzrgsgfbl" type="cybzrgsgfbl">
+				<xs:annotation>
+					<xs:documentation>					持有被转让公司股份比例(若“转让前，非居民纳税人是否有通过其他名义参与人持有被转让公司股份，且非居民纳税人对该股份享有排他性资本参与利益，并实质承担资本参与风险”项选是，则该项为可录)
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jmgdq" type="jmgdq">
+				<xs:annotation>
+					<xs:documentation>		居民国（地区）(若“转让前，非居民纳税人是否有通过其他名义参与人持有被转让公司股份，且非居民纳税人对该股份享有排他性资本参与利益，并实质承担资本参与风险”项选是，则该项为可录
+取值取国籍或地区代码表（DMG0010）)
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yfjmnsrgx" type="yfjmnsrgx">
+				<xs:annotation>
+					<xs:documentation>						与非居民纳税人关系(若“转让前，非居民纳税人是否有通过其他名义参与人持有被转让公司股份，且非居民纳税人对该股份享有排他性资本参与利益，并实质承担资本参与风险”项选是，则该项为可录)
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="sgshqtstxxVo">
+		<xs:annotation>
+			<xs:documentation>
+			    报告表C表主表信息-所述公司或其他实体信息
+			</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="qtstxxxh" type="cyrxxxh">
+				<xs:annotation>
+					<xs:documentation>	
+					其它序号
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="mc" type="cyrmc">
+				<xs:annotation>
+					<xs:documentation>				名称(若“转让前，非居民纳税人是否通过具有10%以上（含10%）直接资本关系的单层或多层公司或其他实体间接参与该被转让公司的资本”项选是，则该项为可录)
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="cybzrgsgfbl" type="cybzrgsgfbl">
+				<xs:annotation>
+					<xs:documentation>			持有被转让公司股份比例(若“转让前，非居民纳税人是否通过具有10%以上（含10%）直接资本关系的单层或多层公司或其他实体间接参与该被转让公司的资本”项选是，则该项为可录)
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qtstcybzrgsgfbl" type="qtstcybzrgsgfbl">
+				<xs:annotation>
+					<xs:documentation>				非居民纳税人通过该公司或其他实体持有被转让公司股份比例(若“转让前，非居民纳税人是否通过具有10%以上（含10%）直接资本关系的单层或多层公司或其他实体间接参与该被转让公司的资本”项选是，则该项为可录)
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jmgdq" type="jmgdq">
+				<xs:annotation>
+					<xs:documentation>				居民国（地区）(若“转让前，非居民纳税人是否通过具有10%以上（含10%）直接资本关系的单层或多层公司或其他实体间接参与该被转让公司的资本”项选是，则该项为可录；
+取值取国籍或地区代码表（DMG0010）)
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="gljtnqtcyxxVo">
+		<xs:annotation>
+			<xs:documentation>
+			    报告表C表主表信息-所述关联集团内其他成员信息 
+			</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="syxxxh" type="cyrxxxh">
+				<xs:annotation>
+					<xs:documentation>	
+					序号
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="xm" type="cyrmc">
+				<xs:annotation>
+					<xs:documentation>			名称(若“转让前，与非居民纳税人具有显著利益关系的关联集团内其他成员，是否在该被转让公司直接参与或者通过具有10%以上（含10%）直接资本的单层或多层公司或其他实体间接参与该被转让公司的资本”项选是，则该项为可录)
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="cybzrgsgfbl" type="cybzrgsgfbl">
+				<xs:annotation>
+					<xs:documentation>					持有被转让公司股份比例(若“转让前，与非居民纳税人具有显著利益关系的关联集团内其他成员，是否在该被转让公司直接参与或者通过具有10%以上（含10%）直接资本的单层或多层公司或其他实体间接参与该被转让公司的资本”项选是，则该项为可录)
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="fjmcybzrgsgfbl" type="qtstcybzrgsgfbl">
+				<xs:annotation>
+					<xs:documentation>					非居民纳税人通过该公司或其他实体持有被转让公司股份比例(若“转让前，与非居民纳税人具有显著利益关系的关联集团内其他成员，是否在该被转让公司直接参与或者通过具有10%以上（含10%）直接资本的单层或多层公司或其他实体间接参与该被转让公司的资本”项选是，则该项为可录)
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jmgdq" type="jmgdq">
+				<xs:annotation>
+					<xs:documentation>		居民国（地区）(若“转让前，与非居民纳税人具有显著利益关系的关联集团内其他成员，是否在该被转让公司直接参与或者通过具有10%以上（含10%）直接资本的单层或多层公司或其他实体间接参与该被转让公司的资本”项选是，则该项为可录
+取值取国籍或地区代码表（DMG0010）)
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="zjhjjcgblbhqkVo">
+		<xs:annotation>
+			<xs:documentation>
+			    报告表C表主表信息-转让行为前的12个月非居民纳税人直接或间接持股比例变化情况 
+			</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="cgbhqkxh" type="cyrxxxh">
+				<xs:annotation>
+					<xs:documentation>	
+					序号
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="cgrmc" type="cgrmc">
+				<xs:annotation>
+					<xs:documentation>	
+					持股人名称(若请选择所转让财产类型项选“□ 公司股份、参股或其他权利取得的利益”，则该项为可录)
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="cgbhsj" type="cgbhsj">
+				<xs:annotation>
+					<xs:documentation>	
+					持股比例变化时间(若请选择所转让财产类型项选“□ 公司股份、参股或其他权利取得的利益”，则该项为可录)
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bhqcgrcgbl" type="bhqcgrcgbl">
+				<xs:annotation>
+					<xs:documentation>	
+					变化前持股人持股比例(若请选择所转让财产类型项选“□ 公司股份、参股或其他权利取得的利益”，则该项为可录)
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bhhcgrcgbl" type="bhhcgrcgbl">
+				<xs:annotation>
+					<xs:documentation>	
+					变化后持股人持股比例(若请选择所转让财产类型项选“□ 公司股份、参股或其他权利取得的利益”，则该项为可录)
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="gljtcgblhj" type="gljtcgblhj">
+				<xs:annotation>
+					<xs:documentation>	
+					关联集团持股比例合计(若请选择所转让财产类型项选“□ 公司股份、参股或其他权利取得的利益”，则该项为可录)
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="j3nyyxsxddyqkVo">
+		<xs:annotation>
+			<xs:documentation>
+			    报告表C表主表信息-非居民纳税人近三年就来源于中国境内其他地区的同类所得享受税收协定待遇的情况 
+			</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="zgswjg" type="zgswjgmc">
+				<xs:annotation>
+					<xs:documentation>					主管税务机关（若“非居民纳税人近三年是否就来源于中国境内其他地区的同类所得享受过税收协定待遇？”选择“是”时必录）
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sjnf" type="sjnf">
+				<xs:annotation>
+					<xs:documentation>						时间（年份）（若“非居民纳税人近三年是否就来源于中国境内其他地区的同类所得享受过税收协定待遇？”选择“是”时必录）
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sdje" type="sdje">
+				<xs:annotation>
+					<xs:documentation>	
+				所得金额（若“非居民纳税人近三年是否就来源于中国境内其他地区的同类所得享受过税收协定待遇？”选择“是”时必录）
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jmsje" type="jmsje">
+				<xs:annotation>
+					<xs:documentation>					减免税金额（若“非居民纳税人近三年是否就来源于中国境内其他地区的同类所得享受过税收协定待遇？”选择“是”时必录）
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:simpleType name="xsssxddytk">
+		<xs:annotation>
+			<xs:documentation>享受税收协定待遇条款</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:maxLength value="60"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="szrcclx">
+		<xs:annotation>
+			<xs:documentation>请选择所转让财产类型</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:maxLength value="50"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="zrccjtlx">
+		<xs:annotation>
+			<xs:documentation>请说明所转让财产具体类型</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:maxLength value="300"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="szrgpsfssgsgp">
+		<xs:annotation>
+			<xs:documentation>被转让公司股份是否为证券交易所上市的股票？</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:maxLength value="1"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="zqjysmc">
+		<xs:annotation>
+			<xs:documentation>证券交易所名称</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:maxLength value="300"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="ssgpdm">
+		<xs:annotation>
+			<xs:documentation>上市股票代码</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:maxLength value="100"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="bzrgszjcyzgbdcdzzcbl">
+		<xs:annotation>
+			<xs:documentation>被转让公司直接持有位于中国的不动产占总资产比例</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:maxLength value="19"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="bzrgszjhjjcygsbdczzzcbl">
+		<xs:annotation>
+			<xs:documentation>被转让公司直接或间接持有位于中国的不动产占总资产比例</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:maxLength value="19"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="sfcybdcjqzblqk">
+		<xs:annotation>
+			<xs:documentation>被在转让之前的36个公历月份内（不含转让当月）是否曾出现被转让公司直接或间接持有位于中国的不动产价值占公司全部财产价值的比率在50%以上的情况?</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:maxLength value="1"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="zrqzjcgbl">
+		<xs:annotation>
+			<xs:documentation>转让前直接持股比例</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:maxLength value="19"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="zrhzjcgbl">
+		<xs:annotation>
+			<xs:documentation>转让后直接持股比例</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:maxLength value="19"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="zrqsftgqrmccyrcybzrgsgf">
+		<xs:annotation>
+			<xs:documentation>转让前，非居民纳税人是否有通过其他名义参与人持有被转让公司股份，且非居民纳税人对该股份享有排他性资本参与利益，并实质承担资本参与风险？</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:maxLength value="1"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="zrqsfcygbzrgszb">
+		<xs:annotation>
+			<xs:documentation>转让前，非居民纳税人是否通过具有10%以上（含10%）直接资本关系的单层或多层公司或其他实体间接参与该被转让公司的资本？</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:maxLength value="1"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="zrqsfjyxzlygxqtcyjjcygszb">
+		<xs:annotation>
+			<xs:documentation>转让前，与非居民纳税人具有显著利益关系的关联集团内其他成员，是否在该被转让公司直接参与或者通过具有10%以上（含10%）直接资本的单层或多层公司或其他实体间接参与该被转让公司的资本？</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:maxLength value="1"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="zrqgljtcghjbl">
+		<xs:annotation>
+			<xs:documentation>转让前关联集团持股合计比例计算公式：所求比例=（1）直接持股比例+（3）通过其他名义参与人持股比例+（4）通过其他公司或实体间接持股比例+（5）关联集团内其他成员直接或间接持股比例 </xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:maxLength value="19"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="sfcjdd25ys">
+		<xs:annotation>
+			<xs:documentation>如果关联集团合计持股比例低于25%（不含25%），转让行为发生前12个月内关联集团持股比例是否曾经达到25%或以上（含25%）？</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:maxLength value="1"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="bzrhhqyhxtzjcyzgbdczzcbl">
+		<xs:annotation>
+			<xs:documentation>被转让合伙企业或信托直接持有位于中国的不动产占总资产比例</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:maxLength value="19"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="bzrhhqyhxtzjjjcyzgbdczzcbl">
+		<xs:annotation>
+			<xs:documentation>被转让合伙企业或信托直接或间接持有位于中国的不动产占总资产比例</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:maxLength value="19"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="sfzcxbzrhhqyzzzc50ys">
+		<xs:annotation>
+			<xs:documentation>在转让之前的36个公历月份内（不含转让当月）是否曾出现被转让合伙企业或信托直接或间接持有位于中国的不动产价值占合伙企业或信托全部财产价值的比率在50%以上的情况？</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:maxLength value="19"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="qtccjtlx">
+		<xs:annotation>
+			<xs:documentation>请简要说明“其他财产”的具体类型</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:maxLength value="200"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="smccfljyssqkhly">
+		<xs:annotation>
+			<xs:documentation>请简要说明非居民纳税人认为应享受财产收益条款税收协定待遇的其他法律依据、事实情况或理由</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:maxLength value="200"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="ssccsltksrze">
+		<xs:annotation>
+			<xs:documentation>享受财产收益条款收入总额</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:maxLength value="19"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="cbfykcze">
+		<xs:annotation>
+			<xs:documentation>成本费用扣除总额</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:maxLength value="19"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="xsccsytkjmed">
+		<xs:annotation>
+			<xs:documentation>享受财产收益条款减免税额</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:maxLength value="19"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="fjmdccslsdszsdssl">
+		<xs:annotation>
+			<xs:documentation>非居民纳税人的居民国（地区）对此项财产收益所得所征所得税税率（免税或不征税请填"0"）</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:maxLength value="19"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="cyrxxxh">
+		<xs:annotation>
+			<xs:documentation>序号</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:maxLength value="20"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="cyrmc">
+		<xs:annotation>
+			<xs:documentation>名称</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:maxLength value="150"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="cybzrgsgfbl">
+		<xs:annotation>
+			<xs:documentation>持有被转让公司股份比例</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:maxLength value="19"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="jmgdq">
+		<xs:annotation>
+			<xs:documentation>居民国（地区）</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:maxLength value="3"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="yfjmnsrgx">
+		<xs:annotation>
+			<xs:documentation>与非居民纳税人关系</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:maxLength value="300"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="qtstcybzrgsgfbl">
+		<xs:annotation>
+			<xs:documentation>非居民纳税人通过该公司或其他实体持有被转让公司股份比例</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:maxLength value="19"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="cgrmc">
+		<xs:annotation>
+			<xs:documentation>持股人名称</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:maxLength value="30"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="cgbhsj">
+		<xs:annotation>
+			<xs:documentation>持股比例变化时间</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string"/>
+	</xs:simpleType>
+	<xs:simpleType name="bhqcgrcgbl">
+		<xs:annotation>
+			<xs:documentation>变化前持股人持股比例</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:maxLength value="19"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="bhhcgrcgbl">
+		<xs:annotation>
+			<xs:documentation>变化后持股人持股比例</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:maxLength value="19"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="gljtcgblhj">
+		<xs:annotation>
+			<xs:documentation>关联集团持股比例合计</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:maxLength value="19"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="fjmnsrjsnsflyzgjnqtdqtlsd">
+		<xs:annotation>
+			<xs:documentation>非居民纳税人近三年是否有来源于中国境内其他地区的同类所得？</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:maxLength value="1"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="fjmnsrjsflyzgtlxdxsxddy">
+		<xs:annotation>
+			<xs:documentation>非居民纳税人近三年是否就来源于中国境内其他地区的同类所得享受过税收协定待遇？</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:maxLength value="1"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="sjnf">
+		<xs:annotation>
+			<xs:documentation>时间（年份）</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:maxLength value="4"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="sdje">
+		<xs:annotation>
+			<xs:documentation>所得金额</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:maxLength value="19"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="jmsje">
+		<xs:annotation>
+			<xs:documentation>减免税金额</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:maxLength value="19"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="qtsdlx">
+		<xs:annotation>
+			<xs:documentation>请说明其他所得类型</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:maxLength value="300"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="sfyfjmnsrszzgcsjghgdjdysjlx">
+		<xs:annotation>
+			<xs:documentation>据以支付该项所得的权利或财产是否与非居民纳税人设在中国的常设机构或固定基地有实际联系？</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:maxLength value="1"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="xsqtsdtksdze">
+		<xs:annotation>
+			<xs:documentation>享受其他所得条款所得总额</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:maxLength value="19"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="xsqtsdtkjmse">
+		<xs:annotation>
+			<xs:documentation>享受其他所得条款减免税额</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:maxLength value="19"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="tjsj">
+		<xs:annotation>
+			<xs:documentation>提交时间</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string"/>
+	</xs:simpleType>
+</xs:schema>

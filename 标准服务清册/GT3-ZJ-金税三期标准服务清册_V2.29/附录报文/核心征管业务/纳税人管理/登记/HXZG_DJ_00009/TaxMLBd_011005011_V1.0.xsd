@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2013 (http://www.altova.com) by  () -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:complexType name="zxswdjldsebcxxb">
+		<xs:annotation>
+			<xs:documentation>注销税务登记</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="zzsldseNsrxxForm" type="zzsldseNsrxxVO">
+				<xs:annotation>
+					<xs:documentation>注销税务登记_注销税务登记申请表</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zzsldseXnsrxxForm" type="zzsldseXnsrxxVO">
+				<xs:annotation>
+					<xs:documentation>增值税留底税额新纳税人信息</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zzsldsexxForm" type="zzsldsexxVO">
+				<xs:annotation>
+					<xs:documentation>增值税留底税额信息表</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="djxh" type="djxh">
+				<xs:annotation>
+					<xs:documentation>登记序号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="lcslid" type="lcslid">
+				<xs:annotation>
+					<xs:documentation>流程实例id</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="xdjxh" type="xdjxh">
+				<xs:annotation>
+					<xs:documentation>新登记序号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="zzsldseNsrxxVO">
+		<xs:annotation>
+			<xs:documentation>注销税务登记申请表</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="nsrsbh" type="nsrsbh">
+				<xs:annotation>
+					<xs:documentation>纳税人识别号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="nsrmc" type="nsrmc">
+				<xs:annotation>
+					<xs:documentation>纳税人名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yxqq" type="yxqq">
+				<xs:annotation>
+					<xs:documentation>有效期起</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zzhm" type="zzhm">
+				<xs:annotation>
+					<xs:documentation>证照号码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="zzsldseXnsrxxVO">
+		<xs:annotation>
+			<xs:documentation>注销税务登记申请表</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="nsrsbh" type="nsrsbh">
+				<xs:annotation>
+					<xs:documentation>纳税人识别号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="nsrmc" type="nsrmc">
+				<xs:annotation>
+					<xs:documentation>纳税人名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yxqq" type="yxqq">
+				<xs:annotation>
+					<xs:documentation>有效期起</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zzhm" type="zzhm">
+				<xs:annotation>
+					<xs:documentation>证照号码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="zzsldsexxVO">
+		<xs:annotation>
+			<xs:documentation>注销税务登记申请表</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="skssqq" type="skssqq">
+				<xs:annotation>
+					<xs:documentation>最后一次增值税纳税申报所属期起</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="skssqz" type="skssqz">
+				<xs:annotation>
+					<xs:documentation>最后一次增值税纳税申报所属期止</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ybhwjlwhysfwqmldse" type="se">
+				<xs:annotation>
+					<xs:documentation>般货物及劳务和应税服务期末留抵税额 </xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jzjthwjlwhysfwqmldse" type="se">
+				<xs:annotation>
+					<xs:documentation>即征即退货物及劳务和应税服务期末留抵税额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qmldsehj" type="se">
+				<xs:annotation>
+					<xs:documentation>期末留抵税额合计</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qtxysmsx" type="bz">
+				<xs:annotation>
+					<xs:documentation>其他需要说明的事项</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="hsyj" type="bz">
+				<xs:annotation>
+					<xs:documentation>核实意见</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

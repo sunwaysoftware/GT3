@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2013 (http://www.altova.com) by  () -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:complexType name="HXZGDJ00259Response">
+		<xs:annotation>
+			<xs:documentation>根据登记序号和所属校验纳税人是否为重点税源监控企业返回</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+		<xs:sequence>
+			<xs:element name="bz" type="bz">
+				<xs:annotation>
+					<xs:documentation>标志</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+			</xs:extension>
+			</xs:complexContent>
+	</xs:complexType>
+
+	
+</xs:schema>

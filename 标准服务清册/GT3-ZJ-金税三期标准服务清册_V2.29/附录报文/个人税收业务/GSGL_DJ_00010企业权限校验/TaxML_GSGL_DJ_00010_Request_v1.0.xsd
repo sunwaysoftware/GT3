@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:complexType name="checkQyqxRequest">
+		<xs:annotation>
+			<xs:documentation>校验企业权限请求报文</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="gwxh" type="gwxh">
+						<xs:annotation>
+							<xs:documentation>岗位序号，(不能为空)</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="znDm" type="znDm">
+						<xs:annotation>
+							<xs:documentation>职能代码，(不能为空)</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="zgswksfjDm" type="swjgDm">
+						<xs:annotation>
+							<xs:documentation>主管税务科所分局代码，(不能为空)</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+</xs:schema>

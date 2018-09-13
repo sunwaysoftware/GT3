@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2010 rel. 3 (http://www.altova.com) by liuwei (liuweicss) -->
+<!-- 被2011 rel. 2 sp1 (TeaM DJiNN) 使用XMLSpy vTeaM DJiNN编辑的 (http://www.altova.com) by -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:include schemaLocation="TaxMLPublicSBType.xsd"/>
+	<xs:include schemaLocation="TaxMLBw_qysdsczzsndsb2017_V1.0.xsd"/>
+	<xs:complexType name="SwzjJc2bQtQysdshsqjzcfxtsRequest">
+		<xs:annotation>
+			<xs:documentation>企业所得税汇算清缴政策风险提示服务请求报文，居民企业企业所得税查账征收年度申报（2014）保存纳税人基本数据信息请求报文,居民企业企业所得税查账征收年度申报（2014）保存信息请求报文</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+
+					<!-- TaxMLBw_HXZG_SB_10067_Request_V1.0.xsd 保存企业所得税年度纳税申报保存企业纳税人信息(2017版)请求报文 -->
+					<xs:element name="A000000" type="A000000Ywbd"/>
+
+					<!-- TaxMLBw_HXZG_SB_10069_Request_V1.0.xsd -->
+					<xs:element name="yxtbbdstr" type="bz">
+						<xs:annotation>
+							<xs:documentation>已选填报表单字串</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					
+					<!-- TaxMLBw_HXZG_SB_10071_Request_V1.0.xsd -->
+					<xs:element name="ywbw" type="SBQysdsczzsNbbywbw">
+						<xs:annotation>
+							<xs:documentation>业务报文</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="qtbcxx" type="SB287NbbBcqtxxVO">
+						<xs:annotation>
+							<xs:documentation>其他保存信息</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					
+					<xs:element name="djxh" type="djxh">
+						<xs:annotation>
+							<xs:documentation>登记序号</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="skssqq" type="skssqq">
+						<xs:annotation>
+							<xs:documentation>税款所属期起</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="skssqz" type="skssqz">
+						<xs:annotation>
+							<xs:documentation>税款所属期止</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+</xs:schema>

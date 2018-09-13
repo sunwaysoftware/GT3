@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 被2011 rel. 2 sp1 (TeaM DJiNN) 使用XMLSpy vTeaM DJiNN编辑的 (http://www.altova.com) by -->
+<!-- edited with XMLSpy v2010 rel. 3 (http://www.altova.com) by MESMERiZE (MSM) -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:include schemaLocation="TaxMLPublicType.xsd"/>
+	<xs:complexType name="gphggjyxfsjsjgywbw">
+		<xs:annotation>
+			<xs:documentation>各牌号规格卷烟消费税计税价格业务报文</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="gphggjyxfsjsjg" type="gphggjyxfsjsjg">
+						<xs:annotation>
+							<xs:documentation>各牌号规格卷烟消费税计税价格</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="gphggjyxfsjsjg">
+		<xs:annotation>
+			<xs:documentation>各牌号规格卷烟消费税计税价格</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="gphggjyxfsjsjgGrid">
+				<xs:annotation>
+					<xs:documentation>申报数据信息</xs:documentation>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:sequence minOccurs="0" maxOccurs="unbounded">
+						<xs:element name="gphggjyxfsjsjgGridlb" type="gphggjyxfsjsjgGridlbVO">
+							<xs:annotation>
+								<xs:documentation>申报数据信息</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="gphggjyxfsjsjgGrid">
+		<xs:annotation>
+			<xs:documentation>申报数据信息</xs:documentation>
+		</xs:annotation>
+		<xs:sequence minOccurs="0" maxOccurs="unbounded">
+			<xs:element name="gphggjyxfsjsjgGridlb" type="gphggjyxfsjsjgGridlbVO">
+				<xs:annotation>
+					<xs:documentation>申报数据信息</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="gphggjyxfsjsjgGridlbVO">
+		<xs:annotation>
+			<xs:documentation>申报数据信息</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="ewbhxh" type="ewbhxh">
+				<xs:annotation>
+					<xs:documentation>二维表行序号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jyph" type="jyph">
+				<xs:annotation>
+					<xs:documentation>卷烟牌号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yzbzgg" type="yzbzgg">
+				<xs:annotation>
+					<xs:documentation>烟支包装规格</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="xl" type="xl">
+				<xs:annotation>
+					<xs:documentation>销量</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jsjg" type="jsjg">
+				<xs:annotation>
+					<xs:documentation>计税价格</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="xse" type="xse">
+				<xs:annotation>
+					<xs:documentation>销售额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bz" type="bz" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>备注</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

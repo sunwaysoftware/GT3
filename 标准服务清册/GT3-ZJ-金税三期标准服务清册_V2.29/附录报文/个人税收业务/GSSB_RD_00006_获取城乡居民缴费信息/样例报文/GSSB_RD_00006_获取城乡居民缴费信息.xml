@@ -1,0 +1,37 @@
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ent="http://entrance.publish.sbf.iitms.gt3.gov/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <ent:service><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<service xmlns="http://www.chinatax.gov.cn/spec/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <head>
+    <tran_id>SWZJ.GSGL.RD.CXJMHDXXCX</tran_id>
+    <channel_id>TEST</channel_id>
+    <tran_seq>11111111111111111111111111111111</tran_seq>
+    <tran_date>20140820</tran_date>
+    <tran_time>173655570</tran_time>
+    <rtn_code>0</rtn_code>
+    <rtn_msg>
+      <Code>000</Code>
+      <Message></Message>
+      <Reason></Reason>
+    </rtn_msg>
+    <expand>
+      <name>identityType</name>
+      <value>49308fd2f75d462594648203c1ae5e93</value>
+    </expand>
+  </head>
+  <body><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<taxML xsi:type="GSSBRD00006Request" bbh="String" xmlbh="String" xmlmc="String" xsi:schemaLocation="http://www.chinatax.gov.cn/dataspec/ TaxMLBw_GSSB_RD_00006_Request_V1.0.xsd" xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<jfdxlx>01</jfdxlx>
+<xm>ttt</xm>
+<zjlx>201</zjlx>
+<zjhm>343</zjhm>
+<sbwylsh>test99</sbwylsh>
+<sbnd>0000</sbnd>
+<zsxmdm>10210</zsxmdm>
+<jfdc>100.00</jfdc>
+</taxML>
+]]]]>><![CDATA[</body>
+</service>]]></ent:service>
+   </soapenv:Body>
+</soapenv:Envelope>

@@ -1,0 +1,281 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:complexType name="yhFjmnsrxsssxddyqkbgbB">
+		<xs:annotation>
+			<xs:documentation>
+			    报告表B表主表信息
+			</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="sdlx" type="sdlx">
+						<xs:annotation>
+							<xs:documentation>
+							享受税收协定待遇条款(取自dm_gy_ssxdsdlx表，代码值为'07','14')
+							</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:group ref="cszyxlwhqtdlxhdqk"/>
+					<xs:group ref="qdtlsdjxsssxddyqk"/>
+					<xs:element name="bz" type="bz">
+						<xs:annotation>
+							<xs:documentation>备注</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:group name="cszyxlwhqtdlxhdqk">
+		<xs:annotation>
+			<xs:documentation>非居民纳税人在中国从事专业性劳务或其他独立性活动情况</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="smcszyxlwhqtdlxhdlxyxz" type="smcszyxlwhqtdlxhdlxyxz">
+				<xs:annotation>
+					<xs:documentation> 													请简要说明非居民纳税人所从事专业性劳务或者其他独立性活动的类型与性质（可另附职业资格证明,必录）
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sfsyjcsycsjggdjd" type="sfsyjcsycsjggdjd">
+				<xs:annotation>
+					<xs:documentation>			非居民纳税人在中国境内从事专业性劳务或者其他独立性活动，是否设有经常使用的常设机构或固定基地？（必录，是为Y，否N）      	
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sjmgdjddz" type="sjmgdjddz">
+				<xs:annotation>
+					<xs:documentation>非居民纳税人设在中国境内的常设机构或固定基地地址（当非居民纳税人在中国境内从事专业性劳务或者其他独立性活动，是否设有经常使用的常设机构或固定基地选是时，必录）</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bsntlqkLists" type="tlqk" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>上一公历年度在中国境内实际停留时间列表</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bbntlqkLists" type="tlqk" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>本年度在中国境内实际停留时间或预计停留时间</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bxntlqkLists" type="tlqk" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>下一公历年度在中国境内预计停留时间</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sfzgzfhcsjggdjdfd" type="sfzgzfhcsjggdjdfd">
+				<xs:annotation>
+					<xs:documentation>该项所得是否由中国居民支付，或者由位于中国的常设机构或固定基地负担？(是为Y，否N)</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="gxsdje" type="gxsdje">
+				<xs:annotation>
+					<xs:documentation>该项所得金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="gxsdbz" type="gxsdbz">
+				<xs:annotation>
+					<xs:documentation>该项所得金额币种（1为元，2为美元）</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:group>
+	<xs:group name="qdtlsdjxsssxddyqk">
+		<xs:annotation>
+			<xs:documentation>非居民纳税人取得同类所得及享受税收协定待遇情况</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="fjmj3nsfylyzdjnqtdqtlsd" type="fjmj3nsfylyzdjnqtdqtlsd">
+				<xs:annotation>
+					<xs:documentation>非居民纳税人近三年是否有来源于中国境内其他地区的同类所得？（选择“是”时，“非居民纳税人近三年是否就来源于中国境内其他地区的同类所得享受过协定待遇？”必录,是为Y，否N）</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="fjmj3nsfylyzdjnqtdqtlsdxd" type="fjmj3nsfylyzdjnqtdqtlsdxd">
+				<xs:annotation>
+					<xs:documentation>条件必录，非居民纳税人近三年是否就来源于中国境内其他地区的同类所得享受过协定待遇？（选择“是”时，“主管税务机关”“时间（年份）”“所得金额”必录,是为Y，否N）</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bZgswjgsyqkLists" type="bZgswjgsyqk" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>请说明非居民纳税人近三年就来源于中国境内其他地区的同类所得享受税收协定待遇的情况</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:group>
+	<xs:complexType name="tlqk">
+		<xs:annotation>
+			<xs:documentation>
+			    报告表B表主表信息-中国境内实际停留时间
+			</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="ddzgrq" type="ddzgrq">
+				<xs:annotation>
+					<xs:documentation>	
+					到达中国日期
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="lkzgrq" type="lkzgrq">
+				<xs:annotation>
+					<xs:documentation>	
+					离开中国日期 
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="tlts" type="tlts">
+				<xs:annotation>
+					<xs:documentation>	
+					停留天数 
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="bZgswjgsyqk">
+		<xs:annotation>
+			<xs:documentation>
+			    报告表B表主表信息-非居民纳税人近三年就来源于中国境内其他地区的同类所得享受税收协定待遇的情况
+			</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="zgswjgdm" type="zgswjgDm">
+				<xs:annotation>
+					<xs:documentation>	
+					主管税务机关
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sjnf" type="b_sjnf">
+				<xs:annotation>
+					<xs:documentation>	
+					时间(年份)
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sdje" type="b_sdje">
+				<xs:annotation>
+					<xs:documentation>	
+					所得金额 
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:simpleType name="sdlx">
+		<xs:annotation>
+			<xs:documentation>享受税收协定待遇条款</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:maxLength value="1"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="smcszyxlwhqtdlxhdlxyxz">
+		<xs:annotation>
+			<xs:documentation>请简要说明非居民纳税人所从事专业性劳务或者其他独立性活动的类型与性质（可另附职业资格证明）</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:maxLength value="500"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="sfsyjcsycsjggdjd">
+		<xs:annotation>
+			<xs:documentation>非居民纳税人在中国境内从事专业性劳务或者其他独立性活动，是否设有经常使用的常设机构或固定基地？</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:maxLength value="1"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="sjmgdjddz">
+		<xs:annotation>
+			<xs:documentation>非居民纳税人设在中国境内的常设机构或固定基地地址</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:maxLength value="300"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="ddzgrq">
+		<xs:annotation>
+			<xs:documentation>到达中国日期</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string"/>
+	</xs:simpleType>
+	<xs:simpleType name="lkzgrq">
+		<xs:annotation>
+			<xs:documentation>离开中国日期 </xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string"/>
+	</xs:simpleType>
+	<xs:simpleType name="tlts">
+		<xs:annotation>
+			<xs:documentation>停留天数</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:maxLength value="10"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="sfzgzfhcsjggdjdfd">
+		<xs:annotation>
+			<xs:documentation>该项所得是否由中国居民支付，或者由位于中国的常设机构或固定基地负担？</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:maxLength value="1"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="gxsdje">
+		<xs:annotation>
+			<xs:documentation>该项所得金额</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:maxLength value="19"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="fjmj3nsfylyzdjnqtdqtlsd">
+		<xs:annotation>
+			<xs:documentation>非居民纳税人近三年是否有来源于中国境内其他地区的同类所得？</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:maxLength value="1"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="fjmj3nsfylyzdjnqtdqtlsdxd">
+		<xs:annotation>
+			<xs:documentation>非居民纳税人近三年是否就来源于中国境内其他地区的同类所得享受过协定待遇？</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:maxLength value="1"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="b_sjnf">
+		<xs:annotation>
+			<xs:documentation>时间(年份)</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:maxLength value="4"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="b_sdje">
+		<xs:annotation>
+			<xs:documentation>所得金额</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:maxLength value="19"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="b_tjsj">
+		<xs:annotation>
+			<xs:documentation>提交时间</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string"/>
+	</xs:simpleType>
+	<xs:simpleType name="gxsdbz">
+		<xs:annotation>
+			<xs:documentation>该项所得金额币种（1为元，2为美元）</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:maxLength value="1"/>
+		</xs:restriction>
+	</xs:simpleType>
+</xs:schema>

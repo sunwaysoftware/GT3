@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2011 (http://www.altova.com) by ht (ht) -->
+<!-- 被2012 () 使用XMLSpy v编辑的 (http://www.altova.com) by -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:include schemaLocation="TaxMLPublicZSType.xsd"/>
+	<xs:complexType name="HXZGZS00249Response">
+		<xs:annotation>
+			<xs:documentation>根据登记序号查询纳税人抵缴欠税信息</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="tsjmxzbz" type="mc">
+						<xs:annotation>
+							<xs:documentation>退税减免性质相关</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="swjgjg" type="swjgjg">
+						<xs:annotation>
+							<xs:documentation>税务机关局轨</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="zg" type="zg">
+						<xs:annotation>
+							<xs:documentation>字轨</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="nh" type="nh">
+						<xs:annotation>
+							<xs:documentation>年号</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="xh" type="xh">
+						<xs:annotation>
+							<xs:documentation>序号</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="wszg" type="wszg">
+						<xs:annotation>
+							<xs:documentation>文书字轨</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="djpzxh" type="djpzxh">
+						<xs:annotation>
+							<xs:documentation>抵缴凭证序号</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="djxh" type="djxh">
+						<xs:annotation>
+							<xs:documentation>登记序号</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="nsrsbh" type="nsrsbh">
+						<xs:annotation>
+							<xs:documentation>纳税人识别号</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="nsrmc" type="nsrmc">
+						<xs:annotation>
+							<xs:documentation>纳税人名称</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="flag" type="flag">
+						<xs:annotation>
+							<xs:documentation>查询抵缴欠税标记</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="zgswskfjDm" type="zgswskfjDm">
+						<xs:annotation>
+							<xs:documentation>纳税人主管所科分局</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="swjgmc" type="swjgmc">
+						<xs:annotation>
+							<xs:documentation>税务机关名称</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="djBz" type="djbz">
+						<xs:annotation>
+							<xs:documentation>抵缴标识 N 同税种，Y 不同税种</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="nsrkdtxxVOListGrid">
+						<xs:annotation>
+							<xs:documentation>纳税人可抵多缴信息</xs:documentation>
+						</xs:annotation>
+						<xs:complexType>
+							<xs:sequence minOccurs="0" maxOccurs="unbounded">
+								<xs:element name="nsrkdtxxVOListGridlb" type="ZSKdtskVO"/>
+							</xs:sequence>
+						</xs:complexType>
+					</xs:element>
+					<xs:element name="nsrQsdjVOListGrid">
+						<xs:annotation>
+							<xs:documentation>纳税人可抵欠缴信息</xs:documentation>
+						</xs:annotation>
+						<xs:complexType>
+							<xs:sequence minOccurs="0" maxOccurs="unbounded">
+								<xs:element name="nsrQsdjVOListGridlb" type="ZSQsdjVO"/>
+							</xs:sequence>
+						</xs:complexType>
+					</xs:element>
+					<xs:element name="insertYzxxVOListGrid">
+						<xs:annotation>
+							<xs:documentation>保存应征信息VOList</xs:documentation>
+						</xs:annotation>
+						<xs:complexType>
+							<xs:sequence minOccurs="0" maxOccurs="unbounded">
+								<xs:element name="insertYzxxVOListGridlb" type="ZSQsdjVO"/>
+							</xs:sequence>
+						</xs:complexType>
+					</xs:element>
+					<xs:element name="updateYzxxVOListGrid">
+						<xs:annotation>
+							<xs:documentation>更新应征信息VOList</xs:documentation>
+						</xs:annotation>
+						<xs:complexType>
+							<xs:sequence minOccurs="0" maxOccurs="unbounded">
+								<xs:element name="updateYzxxVOListGridlb" type="ZSQsdjVO"/>
+							</xs:sequence>
+						</xs:complexType>
+					</xs:element>
+					<xs:element name="insertYdtVOListGrid">
+						<xs:annotation>
+							<xs:documentation>新增应抵退信息VOList</xs:documentation>
+						</xs:annotation>
+						<xs:complexType>
+							<xs:sequence minOccurs="0" maxOccurs="unbounded">
+								<xs:element name="insertYdtVOListGridlb" type="ZSYdtxxVO"/>
+							</xs:sequence>
+						</xs:complexType>
+					</xs:element>
+					<xs:element name="updateYdtVOListGrid">
+						<xs:annotation>
+							<xs:documentation>更新应抵退信息VOList</xs:documentation>
+						</xs:annotation>
+						<xs:complexType>
+							<xs:sequence minOccurs="0" maxOccurs="unbounded">
+								<xs:element name="updateYdtVOListGridlb" type="ZSYdtxxVO"/>
+							</xs:sequence>
+						</xs:complexType>
+					</xs:element>
+					<xs:element name="insertDjskxxVOListGrid">
+						<xs:annotation>
+							<xs:documentation>新增抵缴税款信息VOList</xs:documentation>
+						</xs:annotation>
+						<xs:complexType>
+							<xs:sequence minOccurs="0" maxOccurs="unbounded">
+								<xs:element name="insertDjskxxVOList" type="ZSDjskxxVO"/>
+							</xs:sequence>
+						</xs:complexType>
+					</xs:element>
+					<xs:element name="insertQsclxxVOListGrid">
+						<xs:annotation>
+							<xs:documentation>新增欠税处理信息VOList</xs:documentation>
+						</xs:annotation>
+						<xs:complexType>
+							<xs:sequence minOccurs="0" maxOccurs="unbounded">
+								<xs:element name="insertQsclxxVOListGridlb" type="ZSQsclxxVO"/>
+							</xs:sequence>
+						</xs:complexType>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+</xs:schema>

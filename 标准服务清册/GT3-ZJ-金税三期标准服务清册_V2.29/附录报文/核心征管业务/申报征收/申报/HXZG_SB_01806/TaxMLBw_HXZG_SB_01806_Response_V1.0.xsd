@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2011 rel. 2 (http://www.altova.com) by pl (css) -->
+<!-- 被2012 () 使用XMLSpy v编辑的 (http://www.altova.com) by -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:include schemaLocation="TaxMLPublicSBType.xsd"/>
+	<xs:complexType name="HXZGSB01806Response">
+		<xs:annotation>
+			<xs:documentation>残疾人就业保障金返回</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="sbYjskxxVOList" type="YjxxGrid"></xs:element>
+					<xs:element name="sbxxVoList" type="SbxxGrid"></xs:element>
+					<xs:element name="jmxxVoList" type="JmxxGrid"></xs:element>
+					<xs:element name="snsjapcjrjyrs" type="je"></xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="YjxxGrid">
+		<xs:sequence minOccurs="0" maxOccurs="unbounded">
+			<xs:element name="sbYjskxxVOListlb" type="SBYjxxJhVO"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="SbxxGrid">
+		<xs:sequence minOccurs="0" maxOccurs="unbounded">
+			<xs:element name="sbxxGridlb" type="SBSbxxkzJhVO"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="JmxxGrid">
+		<xs:sequence minOccurs="0" maxOccurs="unbounded">
+			<xs:element name="jmxxVolb" type="SBJmxxJhVO"/>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

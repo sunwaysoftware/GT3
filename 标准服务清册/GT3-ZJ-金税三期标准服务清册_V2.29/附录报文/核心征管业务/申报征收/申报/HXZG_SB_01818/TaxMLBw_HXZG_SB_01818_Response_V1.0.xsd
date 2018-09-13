@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2011 (http://www.altova.com) by aaa (aaa) -->
+<!-- 被2011 rel. 2 sp1 (TeaM DJiNN) 使用XMLSpy vTeaM DJiNN编辑的 (http://www.altova.com) by -->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://www.chinatax.gov.cn/dataspec/" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:complexType name="HXZGSB01818Response">
+		<xs:annotation>
+			<xs:documentation>作废社保费批扣清册</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="pkqczfcgjlts" type="ewbhxh">
+						<xs:annotation>
+							<xs:documentation>批扣清册作废成功记录条数</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="pkqcfkbzfcgjlts" type="ewbhxh">
+						<xs:annotation>
+							<xs:documentation>批扣清册反馈表作废成功记录条数</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+</xs:schema>

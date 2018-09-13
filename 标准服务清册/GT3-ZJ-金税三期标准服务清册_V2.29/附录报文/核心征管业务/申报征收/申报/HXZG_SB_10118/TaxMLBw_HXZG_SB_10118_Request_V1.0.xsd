@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2010 rel. 3 (http://www.altova.com) by liuwei (liuweicss) -->
+<!-- 被2012 () 使用XMLSpy v编辑的 (http://www.altova.com) by -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:include schemaLocation="TaxMLPublicSBType.xsd"/>
+	<xs:include schemaLocation="TaxMLBw_qysdskdqhznsfzjgnb2018_V1.0.xsd"/>
+	<xs:complexType name="HXZGSB10118Request">
+		<xs:annotation>
+			<xs:documentation>企业所得税跨地区经营汇总纳税企业的分支机构年度纳税申报（2018年版）保存请求报文</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="qysdskdqhznsfzjgnbywbw" type="Qysdskdqhznsfzjgnbywbw">
+						<xs:annotation>
+							<xs:documentation>企业所得税跨地区经营汇总纳税企业的分支机构年度纳税申报（2018年版）表单数据信息</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="sbSBbcTjqtxxVO" type="SBSBbcTjqtxxVO">
+						<xs:annotation>
+							<xs:documentation>申报纳税人申报保存提交其他信息对象</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+</xs:schema>

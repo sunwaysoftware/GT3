@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2010 rel. 3 (http://www.altova.com) by xuxin (csstj) -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:complexType name="zhrmghgqyzcxbqqssysbbywbw">
+		<xs:annotation>
+			<xs:documentation>《中华人民共和国企业政策性搬迁清算损益表》业务报文</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="zhrmghgqyzcxbqqssysbb">
+						<xs:annotation>
+							<xs:documentation>《中华人民共和国企业政策性搬迁清算损益表》</xs:documentation>
+						</xs:annotation>
+						<xs:complexType>
+							<xs:sequence>
+								<xs:element name="zhrmghgqyzcxbqqssysbbFrom" type="zhrmghgqyzcxbqqssysbbFrom">
+									<xs:annotation>
+										<xs:documentation>中华人民共和国企业政策性搬迁清算损益表申报信息</xs:documentation>
+									</xs:annotation>
+								</xs:element>
+							</xs:sequence>
+						</xs:complexType>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="zhrmghgqyzcxbqqssysbb">
+		<xs:annotation>
+			<xs:documentation>《中华人民共和国企业政策性搬迁清算损益表》</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="zhrmghgqyzcxbqqssysbbFrom" type="zhrmghgqyzcxbqqssysbbFrom">
+				<xs:annotation>
+					<xs:documentation>中华人民共和国企业政策性搬迁清算损益表申报信息</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="zhrmghgqyzcxbqqssysbbFrom">
+		<xs:annotation>
+			<xs:documentation>中华人民共和国企业政策性搬迁清算损益表申报信息</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="zcxbqqjq" type="zcxbqqjq" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>政策性搬迁期间起</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zcxbqqjz" type="zcxbqqjz" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>政策性搬迁期间止</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="dbzyzcjzBc" type="dbzyzcjzBc" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>对被征用资产价值的补偿</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ybqAzegyBc" type="ybqAzegyBc" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>因搬迁、安置而给予的补偿</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="dtctyxcSsegyBc" type="dtctyxcSsegyBc" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>对停产停业形成的损失而给予的补偿</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zcbqgczZdhseqdBxpk" type="zcbqgczZdhseqdBxpk" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>资产搬迁过程中遭到毁损而取得的保险赔款</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bqzcczsr" type="bqzcczsr" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>搬迁资产处置收入</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qtbqsr" type="qtbqsr" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>其他搬迁收入</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bqsrhj" type="bqsrhj" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>搬迁收入合计</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="azzgsjfsFy" type="azzgsjfsFy" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>安置职工实际发生的费用</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="tgqjZfgzgGzjflf" type="tgqjZfgzgGzjflf" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>停工期间支付给职工的工资及福利费</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="lscfbqzcefsFy" type="lscfbqzcefsFy" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>临时存放搬迁资产而发生的费用</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="glzcbqazfy" type="glzcbqazfy" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>各类资产搬迁安装费用</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zcczzc" type="zcczzc" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>资产处置支出</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qtbqzc" type="qtbqzc" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>其他搬迁支出</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bqzchj" type="bqzchj" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>搬迁支出合计</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bqsdHss" type="bqsdHss" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>搬迁所得或损失</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="dljbrxm" type="dljbrxm" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>代理经办人姓名</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="dlsbrq" type="dlsbrq" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>代理申报日期</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="dlsbzjjgzyzjhm" type="dlsbzjjgzyzjhm" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>代理申报中介机构执业证件号码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

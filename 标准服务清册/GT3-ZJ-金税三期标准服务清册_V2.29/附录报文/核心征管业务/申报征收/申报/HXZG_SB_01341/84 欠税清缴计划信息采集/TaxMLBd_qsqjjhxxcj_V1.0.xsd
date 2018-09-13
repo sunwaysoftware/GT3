@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2013 (http://www.altova.com) by  () -->
+<!-- 被2012 () 使用XMLSpy v编辑的 (http://www.altova.com) by -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:include schemaLocation="TaxMLPublicType.xsd"/>
+	<xs:complexType name="QsqjjhVO">
+		<xs:annotation>
+			<xs:documentation>欠税清缴计划</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="qsqjjhForm" type="QsqjjhFormVO">
+				<xs:annotation>
+					<xs:documentation>欠税清缴计划提要</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qsqjjhmxGrid">
+				<xs:annotation>
+					<xs:documentation>欠税清缴计划明细</xs:documentation>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:sequence maxOccurs="unbounded">
+						<xs:element name="qsqjjhmxGridlb" type="QsqjjhmxGridlbVO"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="slxxForm" type="slxxFormVO">
+				<xs:annotation>
+					<xs:documentation>受理信息</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="QsqjjhFormVO">
+		<xs:annotation>
+			<xs:documentation>欠款清缴计划提要</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="nsrsbh" type="nsrsbh">
+				<xs:annotation>
+					<xs:documentation>纳税人识别号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="nsrmc" type="nsrmc">
+				<xs:annotation>
+					<xs:documentation>纳税人名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qkssqq" type="ssqq">
+				<xs:annotation>
+					<xs:documentation>欠款所属期起</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qkssqz" type="ssqz">
+				<xs:annotation>
+					<xs:documentation>欠款所属期止</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zjccqk" type="kjbbbz">
+				<xs:annotation>
+					<xs:documentation>资金筹措情况</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="QsqjjhmxGridlbVO">
+		<xs:annotation>
+			<xs:documentation>欠款清缴计划明细</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="ewbhxh" type="ewbhxh">
+				<xs:annotation>
+					<xs:documentation>二维表行序号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qjsz" type="zsxmDm">
+				<xs:annotation>
+					<xs:documentation>欠缴税种</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qjsj" type="je">
+				<xs:annotation>
+					<xs:documentation>欠缴税金</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jhqjsj" type="rq">
+				<xs:annotation>
+					<xs:documentation>计划清缴时间</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jhjnqsje" type="je">
+				<xs:annotation>
+					<xs:documentation>计划缴纳欠税金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

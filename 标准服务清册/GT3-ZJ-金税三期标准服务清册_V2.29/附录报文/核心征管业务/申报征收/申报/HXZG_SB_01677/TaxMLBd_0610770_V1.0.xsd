@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2011 (http://www.altova.com) by HBNU (HBNU) -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:complexType name="fjmqysdsJrqyzcmxb">
+		<xs:annotation>
+			<xs:documentation>《中华人民共和国非居民企业所得税金融企业支出明细表（适用于据实申报企业）</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="fjmqysdsJrqyzcmxbForm" type="fjmqysdsJrqyzcmxbForm">
+				<xs:annotation>
+					<xs:documentation>非居民企业所得税金融企业支出明细表（适用于据实申报企业）信息</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="fjmqysdsJrqyzcmxbForm">
+		<xs:annotation>
+			<xs:documentation>非居民企业所得税金融企业支出明细表（适用于据实申报企业）</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="yyzc" type="je">
+				<xs:annotation>
+					<xs:documentation>营业支出</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yhywzc" type="je">
+				<xs:annotation>
+					<xs:documentation>银行业务支出</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yhlxzc" type="yhlxzcje">
+				<xs:annotation>
+					<xs:documentation>银行利息支出</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="tycf" type="tycflxzc">
+				<xs:annotation>
+					<xs:documentation>同业存放</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="xzyyhjk" type="xzyyhjklxzcje">
+				<xs:annotation>
+					<xs:documentation>向中央银行借款</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="crzj" type="crzjlxzc">
+				<xs:annotation>
+					<xs:documentation>拆入资金</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="xsck" type="xscklxzc">
+				<xs:annotation>
+					<xs:documentation>吸收存款</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="mchgjrzc" type="mchgjrzcLxzc">
+				<xs:annotation>
+					<xs:documentation>卖出回购金融资产</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="fxzq" type="fxzqlxzc">
+				<xs:annotation>
+					<xs:documentation>发行债券</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yhlxzcqt" type="je">
+				<xs:annotation>
+					<xs:documentation>其他</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yhsxfjyjzc" type="yhsxfjyjzcje">
+				<xs:annotation>
+					<xs:documentation>银行手续费及佣金支出</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sxfzc" type="je">
+				<xs:annotation>
+					<xs:documentation>sxfzc</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yjzc" type="je">
+				<xs:annotation>
+					<xs:documentation>佣金支出</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yhsxfjyjzcqt" type="je">
+				<xs:annotation>
+					<xs:documentation>其他</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bxywzc" type="bxywzc">
+				<xs:annotation>
+					<xs:documentation>保险业务支出</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="tbj" type="tbj">
+				<xs:annotation>
+					<xs:documentation>退保金</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="pfzc" type="pfzc">
+				<xs:annotation>
+					<xs:documentation>赔付支出</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="thpfzc" type="thpfzc">
+				<xs:annotation>
+					<xs:documentation>摊回赔付支出</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="tqbxzrzbj" type="tqbxzrzbjje">
+				<xs:annotation>
+					<xs:documentation>提取保险责任准备金</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="thbxzrzbj" type="thbxzrzbj">
+				<xs:annotation>
+					<xs:documentation>摊回保险责任准备金</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bdhlzc" type="bdhlzc">
+				<xs:annotation>
+					<xs:documentation>保单红利支出</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="fbfy" type="fbfy">
+				<xs:annotation>
+					<xs:documentation>分保费用</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="thfbfy" type="thfbfy">
+				<xs:annotation>
+					<xs:documentation>摊回分保费用</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bxywsxfjyjzc" type="je">
+				<xs:annotation>
+					<xs:documentation>保险业务手续费及佣金支出</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qtjrywzc" type="qtjrywzc">
+				<xs:annotation>
+					<xs:documentation>其他金融业务支出</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qtywcb" type="qtywcb">
+				<xs:annotation>
+					<xs:documentation>其他业务成本</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yywzc" type="yywzc">
+				<xs:annotation>
+					<xs:documentation>营业外支出</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="fldzcczss" type="je">
+				<xs:annotation>
+					<xs:documentation>非流动资产处置损失</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="fhbxzcjhss" type="je">
+				<xs:annotation>
+					<xs:documentation>非货币性资产交换损失</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zwczss" type="je">
+				<xs:annotation>
+					<xs:documentation>债务重组损失</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jzzc" type="jzzc">
+				<xs:annotation>
+					<xs:documentation>捐赠支出</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="fcss" type="fcss">
+				<xs:annotation>
+					<xs:documentation>非常损失</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yywzcqt" type="je">
+				<xs:annotation>
+					<xs:documentation>其他</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

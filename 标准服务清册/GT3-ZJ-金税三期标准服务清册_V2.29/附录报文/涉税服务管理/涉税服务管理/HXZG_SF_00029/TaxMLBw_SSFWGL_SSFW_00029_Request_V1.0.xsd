@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 被2012 () 使用XMLSpy v编辑的 (http://www.altova.com) by -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:include schemaLocation="TaxMLPublicSFType.xsd"/>
+	<xs:complexType name="SSFWGLSSFW00029Request">
+		<xs:annotation>
+			<xs:documentation>涉税服务机构人员变更信息保存请求报文</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="sszyfwjgxh" type="sszyfwjgxh">
+						<xs:annotation>
+							<xs:documentation>涉税专业服务机构序号</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="sszyfwbgbVO" type="sszyfwbgbVO">
+						<xs:annotation>
+							<xs:documentation>涉税专业服务变更表VO</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="ssfwjgxxbgGrid" type="ssfwjgxxbgGrid">
+						<xs:annotation>
+							<xs:documentation>涉税机构基本信息变更</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="ssfwrybgGrid" type="ssfwrybgGrid">
+						<xs:annotation>
+							<xs:documentation>人员信息变更</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="ssfwryzsbgGrid" type="ssfwryzsbgGrid">
+						<xs:annotation>
+							<xs:documentation>人员信息证书变更</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="insertSszyfwryGrid" type="sszyfwryGrid">
+						<xs:annotation>
+							<xs:documentation>新增涉税专业服务人员信息</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="deleteSszyfwryGrid" type="sszyfwryGrid">
+						<xs:annotation>
+							<xs:documentation>删除涉税专业服务人员信息</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="insertSszyfwryzsxxGrid" type="sszyfwryzsxxGrid">
+						<xs:annotation>
+							<xs:documentation>新增涉税专业服务人员证书信息</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="deleteSszyfwryzsxxGrid" type="sszyfwryzsxxGrid">
+						<xs:annotation>
+							<xs:documentation>删除涉税专业服务人员证书信息</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+</xs:schema>

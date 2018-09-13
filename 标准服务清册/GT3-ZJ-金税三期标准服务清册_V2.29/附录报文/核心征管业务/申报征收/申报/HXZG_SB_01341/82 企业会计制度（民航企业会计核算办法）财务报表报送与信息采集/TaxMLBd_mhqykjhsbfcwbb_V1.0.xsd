@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2013 (http://www.altova.com) by  () -->
+<!-- 被2012 () 使用XMLSpy v编辑的 (http://www.altova.com) by -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:include schemaLocation="TaxMLPublicType.xsd"/>
+	<xs:complexType name="MhqykjhsbfZcfzbVO">
+		<xs:annotation>
+			<xs:documentation>资产负债表（适用执行民航企业会计核算办法的企业）</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="nsrxxForm" type="NsrxxFormVO">
+				<xs:annotation>
+					<xs:documentation>纳税人基本信息</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="mhqykjhsbfZcfzbGrid">
+				<xs:annotation>
+					<xs:documentation>申报信息</xs:documentation>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:sequence maxOccurs="unbounded">
+						<xs:element name="mhqykjhsbfZcfzbGridlb" type="MhqykjhsbfZcfzbGridlbVO"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="MhqykjhsbfZcfzbGridlbVO">
+		<xs:annotation>
+			<xs:documentation>申报信息</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="ewbhxh" type="ewbhxh">
+				<xs:annotation>
+					<xs:documentation>二维表行序号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="xmmc" type="xmmc">
+				<xs:annotation>
+					<xs:documentation>项目名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ncs" type="ncs">
+				<xs:annotation>
+					<xs:documentation>年初数</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qms" type="je">
+				<xs:annotation>
+					<xs:documentation>期末数</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="MhqykjhsbfLrfpbVO">
+		<xs:annotation>
+			<xs:documentation>利润分配表（适用执行民航企业会计核算办法的企业）</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="mhqykjhsbfLrfpbGrid">
+				<xs:annotation>
+					<xs:documentation>申报信息</xs:documentation>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:sequence maxOccurs="unbounded">
+						<xs:element name="mhqykjhsbfLrfpbGridlb" type="MhqykjhsbfLrfpbGridlbVO"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="MhqykjhsbfLrfpbGridlbVO">
+		<xs:annotation>
+			<xs:documentation>申报信息</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="ewbhxh" type="ewbhxh">
+				<xs:annotation>
+					<xs:documentation>二维表行序号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="xmmc" type="xmmc">
+				<xs:annotation>
+					<xs:documentation>项目名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="snljs" type="snljs">
+				<xs:annotation>
+					<xs:documentation>上年累计数</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bnljs" type="bnljs">
+				<xs:annotation>
+					<xs:documentation>本年累计数</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="MhqykjhsbfXjllbVO">
+		<xs:annotation>
+			<xs:documentation>现金流量表（适用执行民航企业会计核算办法的企业）</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="mhqykjhsbfXjllbGrid">
+				<xs:annotation>
+					<xs:documentation>申报信息</xs:documentation>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:sequence maxOccurs="unbounded">
+						<xs:element name="mhqykjhsbfXjllbGridlb" type="MhqykjhsbfXjllbGridlbVO"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="MhqykjhsbfXjllbGridlbVO">
+		<xs:annotation>
+			<xs:documentation>申报信息</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="ewbhxh" type="ewbhxh">
+				<xs:annotation>
+					<xs:documentation>二维表行序号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="xmmc" type="xmmc">
+				<xs:annotation>
+					<xs:documentation>项目名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bnljje" type="bnljje">
+				<xs:annotation>
+					<xs:documentation>本年累计金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="snje" type="snje">
+				<xs:annotation>
+					<xs:documentation>上年金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="MhqykjhsbfYsjymbkxbVO">
+		<xs:annotation>
+			<xs:documentation>应上交应弥补款项表（适用执行民航企业会计核算办法的企业）</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="mhqykjhsbfYsjymbkxbGrid">
+				<xs:annotation>
+					<xs:documentation>申报信息</xs:documentation>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:sequence maxOccurs="unbounded">
+						<xs:element name="mhqykjhsbfYsjymbkxbGridlb" type="MhqykjhsbfYsjymbkxbGridlbVO"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="MhqykjhsbfYsjymbkxbGridlbVO">
+		<xs:annotation>
+			<xs:documentation>申报信息</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="ewbhxh" type="ewbhxh">
+				<xs:annotation>
+					<xs:documentation>二维表行序号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="xmmc" type="xmmc">
+				<xs:annotation>
+					<xs:documentation>项目名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bnsj" type="je">
+				<xs:annotation>
+					<xs:documentation>本年实际</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="snsj" type="je">
+				<xs:annotation>
+					<xs:documentation>今年实际</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

@@ -1,0 +1,512 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2011 (http://www.altova.com) by www.hbnu.com (www.hbnu.com) -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:include schemaLocation="TaxMLPublic.xsd"/>
+	<xs:complexType name="bgqyxxbywbw">
+		<xs:annotation>
+			<xs:documentation>《报告企业信息表》业务报文</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="qyndglywwlbg2016_G000000" type="qyndglywwlbg2016_G000000">
+						<xs:annotation>
+							<xs:documentation>《报告企业信息表》</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="qyndglywwlbg2016_G000000">
+		<xs:annotation>
+			<xs:documentation>《报告企业信息表》</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="qygdxxGrid" type="qygdxxGrid">
+				<xs:annotation>
+					<xs:documentation>400企业股东信息（前五位）</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jbxxForm" type="jbxxForm">
+				<xs:annotation>
+					<xs:documentation>100基本信息</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qygjglryxxGrid" type="qygjglryxxGrid">
+				<xs:annotation>
+					<xs:documentation>300企业高级管理人员信息</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="nsrxxForm" type="nsrxxForm">
+				<xs:annotation>
+					<xs:documentation>纳税人信息</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qybmxxGrid" type="qybmxxGrid">
+				<xs:annotation>
+					<xs:documentation>200企业内部部门信息</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="slxxForm" type="slxxForm">
+				<xs:annotation>
+					<xs:documentation/>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="tbbd" type="tbbd">
+				<xs:annotation>
+					<xs:documentation>填报表单【1:填报;0:不填报】，所有表单填报情况依次用01表示为长字串进行传值，例如：全部填报则传1111111111111111111111</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="qygdxxGrid">
+		<xs:annotation>
+			<xs:documentation>400企业股东信息（前五位）</xs:documentation>
+		</xs:annotation>
+		<xs:sequence maxOccurs="unbounded">
+			<xs:element name="qygdxxGridlbVO" type="qygdxxGridlbVO">
+				<xs:annotation>
+					<xs:documentation>400企业股东信息（前五位）</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="qygdxxGridlbVO">
+		<xs:annotation>
+			<xs:documentation>400企业股东信息（前五位）</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="gdmc" type="gdmc">
+				<xs:annotation>
+					<xs:documentation>401股东名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="gdglflxDm" type="gdglflxDm">
+				<xs:annotation>
+					<xs:documentation>402股东类型，取值为代码表DM_SB_GDGLFLX</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="gjhdqszDm" type="gjhdqszDm">
+				<xs:annotation>
+					<xs:documentation>403国家（地区），取值为代码表DM_GY_GJHDQ</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="djzclxDm" type="djzclxDm">
+				<xs:annotation>
+					<xs:documentation>404登记注册类型，取值为代码表DM_DJ_DJZCLX</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sfzjlxDm" type="sfzjlxDm">
+				<xs:annotation>
+					<xs:documentation>405证件种类，取值为代码表DM_GY_SFZJLX</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sfzjhm" type="sfzjhm">
+				<xs:annotation>
+					<xs:documentation>406纳税人识别号或身份证件号码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="cgqssj" type="cgqssj">
+				<xs:annotation>
+					<xs:documentation>407持股起始日期</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="cgbl" type="bl">
+				<xs:annotation>
+					<xs:documentation>408持股比例</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="jbxxForm">
+		<xs:annotation>
+			<xs:documentation>100基本信息</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="nsrmc" type="nsrmc">
+				<xs:annotation>
+					<xs:documentation>101纳税人名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zcdgj" type="gjhdqszDm">
+				<xs:annotation>
+					<xs:documentation>国家（地区），取值为代码表DM_GY_GJHDQ</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zcdsf" type="xzqhszDm">
+				<xs:annotation>
+					<xs:documentation>省份，取值为代码表DM_GY_XZQH</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zcddjs" type="xzqhszDm">
+				<xs:annotation>
+					<xs:documentation>地级市，取值为代码表DM_GY_XZQH</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="nsrsbh" type="nsrsbh">
+				<xs:annotation>
+					<xs:documentation>102纳税人识别号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jydgj" type="gjhdqszDm">
+				<xs:annotation>
+					<xs:documentation>国家（地区），取值为代码表DM_GY_GJHDQ</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jydsf" type="xzqhszDm">
+				<xs:annotation>
+					<xs:documentation>省份，取值为代码表DM_GY_XZQH</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jyddjs" type="xzqhszDm">
+				<xs:annotation>
+					<xs:documentation>地级市，取值为代码表DM_GY_XZQH</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jyfw" type="bz">
+				<xs:annotation>
+					<xs:documentation>105经营范围</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zggsjg" type="zggsjg">
+				<xs:annotation>
+					<xs:documentation>106主管国税机关</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zczbbz" type="hbszDm">
+				<xs:annotation>
+					<xs:documentation>币种，取值为代码表DM_GY_HB</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zczb" type="je">
+				<xs:annotation>
+					<xs:documentation>金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="djzclxDm" type="djzclxDm">
+				<xs:annotation>
+					<xs:documentation>110登记注册类型，取值为代码表DM_DJ_DJZCLX</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zgdsjg" type="zgdsjg">
+				<xs:annotation>
+					<xs:documentation>107主管地税机关</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="tzzebz" type="hbszDm">
+				<xs:annotation>
+					<xs:documentation>币种，取值为代码表DM_GY_HB</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="tzze" type="je">
+				<xs:annotation>
+					<xs:documentation>金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="hyDm" type="hyDm">
+				<xs:annotation>
+					<xs:documentation>111所属行业，取值为代码表DM_GY_HY</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sfdlfr" type="sfbz">
+				<xs:annotation>
+					<xs:documentation>112独立法人【1:是;0:否】</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="fddbr" type="fddbr">
+				<xs:annotation>
+					<xs:documentation>113法定代表人或负责人</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sfdlhs" type="sfbz">
+				<xs:annotation>
+					<xs:documentation>114独立核算【1:是;0:否】</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qykjzz" type="qykjzz">
+				<xs:annotation>
+					<xs:documentation>115适用的会计准则或会计制度，企业会计准则【0:一般企业;1:银行;2:证券;3:保险;4:担保】</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="xqykjzz" type="xqykjzz">
+				<xs:annotation>
+					<xs:documentation>115适用的会计准则或会计制度，小企业会计准则【Y:是;N或者空:否】</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qykjzd" type="qykjzd">
+				<xs:annotation>
+					<xs:documentation>115适用的会计准则或会计制度，企业会计制度【Y:是;N或者空:否】</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sydwkjzz" type="sydwkjzz">
+				<xs:annotation>
+					<xs:documentation>115适用的会计准则或会计制度，事业单位会计准则【0:事业单位会计制度;1:科学事业单位会计制度;2:医院会计制度;3:高等学校会计制度;4:中小学会计制度;5:彩票机构会计制度】</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="mjfylzzkjzd" type="mjfylzzkjzd">
+				<xs:annotation>
+					<xs:documentation>115适用的会计准则或会计制度，民间非营利组织会计制度【Y:是;N或者空:否】</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="cjtjjzzkjzd" type="cjtjjzzkjzd">
+				<xs:annotation>
+					<xs:documentation>115适用的会计准则或会计制度，村集体经济会计制度【0:是;1或者空:否】</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="nmzyhzscwkjzd" type="nmzyhzscwkjzd">
+				<xs:annotation>
+					<xs:documentation>115适用的会计准则或会计制度，农民专业合作社财务会计制度(试行)【0:是;1或者空:否】</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="kjzdqt" type="kjzdqt">
+				<xs:annotation>
+					<xs:documentation>115适用的会计准则或会计制度，其他(试行)【Y:是;N或者空:否】</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sfyss" type="sfbz">
+				<xs:annotation>
+					<xs:documentation>116上市公司【1:是;0:否】</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ssgpdm" type="ssgpdm">
+				<xs:annotation>
+					<xs:documentation>117上市股票代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ssjysmc" type="ssjysmc">
+				<xs:annotation>
+					<xs:documentation>118上市交易所</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jzbwb" type="hbszDm">
+				<xs:annotation>
+					<xs:documentation>119记账本位币</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sfqyjtzzkgqy" type="sfbz">
+				<xs:annotation>
+					<xs:documentation>120企业集团最终控股企业【1:是;0:否】</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qyjtzzkgqymc" type="qyjtzzkgqymc">
+				<xs:annotation>
+					<xs:documentation>121企业集团最终控股企业名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zzkgqyszgj" type="gjhdqszDm">
+				<xs:annotation>
+					<xs:documentation>122企业集团最终控股企业所在国家（地区），取值为代码表DM_GY_GJHDQ</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sfgbbsqy" type="sfbz">
+				<xs:annotation>
+					<xs:documentation>123被指定为国别报告的报送企业【1:是;0:否】</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="gljyndtqzllxDm" type="gljyndtqzllxDm">
+				<xs:annotation>
+					<xs:documentation>124本年度准备同期资料，取值为代码表DM_SB_GLJYNDTQZLLX</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sfyydj" type="sfbz">
+				<xs:annotation>
+					<xs:documentation>125执行预约定价安排【1:是;0:否】</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sfqdcbftxy" type="sfbz">
+				<xs:annotation>
+					<xs:documentation>126签订或者执行成本分摊协议【1:是;0:否】</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="qygjglryxxGrid">
+		<xs:annotation>
+			<xs:documentation>300企业高级管理人员信息</xs:documentation>
+		</xs:annotation>
+		<xs:sequence maxOccurs="unbounded">
+			<xs:element name="qygjglryxxGridlbVO" type="qygjglryxxGridlbVO">
+				<xs:annotation>
+					<xs:documentation>300企业高级管理人员信息</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="qygjglryxxGridlbVO">
+		<xs:annotation>
+			<xs:documentation>300企业高级管理人员信息</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="zwmc" type="zwmc">
+				<xs:annotation>
+					<xs:documentation>301职务名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="xm" type="xm">
+				<xs:annotation>
+					<xs:documentation>302姓名</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="gjhdqszDm" type="gjhdqszDm">
+				<xs:annotation>
+					<xs:documentation>303国家（地区），取值为代码表DM_GY_GJHDQ</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sfzjlxDm" type="sfzjlxDm">
+				<xs:annotation>
+					<xs:documentation>304身份证件名称，取值为代码表DM_GY_SFZJLX</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sfzjhm" type="sfzjhm">
+				<xs:annotation>
+					<xs:documentation>305身份证件号码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="rzrqq" type="rzrqq">
+				<xs:annotation>
+					<xs:documentation>306任职起始日期</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="rzrqz" type="rzrqz">
+				<xs:annotation>
+					<xs:documentation>307任职截止日期</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="wtfmc" type="wtfmc">
+				<xs:annotation>
+					<xs:documentation>308委任方名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="nsrxxForm">
+		<xs:annotation>
+			<xs:documentation>纳税人信息</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="nsrsbh" type="nsrsbh">
+				<xs:annotation>
+					<xs:documentation>纳税人识别号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="nsrmc" type="nsrmc">
+				<xs:annotation>
+					<xs:documentation>纳税人名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="skssqq" type="skssqq">
+				<xs:annotation>
+					<xs:documentation>税款所属期起</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="skssqz" type="skssqz">
+				<xs:annotation>
+					<xs:documentation>税款所属期止</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="fddbr" type="fddbr">
+				<xs:annotation>
+					<xs:documentation>法定代表人</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="kjzgmc" type="kjzgmc">
+				<xs:annotation>
+					<xs:documentation>会计主管姓名</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sbrq1" type="sbrq1">
+				<xs:annotation>
+					<xs:documentation>申报日期</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="tbrq" type="tbrq">
+				<xs:annotation>
+					<xs:documentation>填表日期</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sbsxDm1" type="sbsxDm1">
+				<xs:annotation>
+					<xs:documentation>申报属性【11:正常申报;21:纳税人自行补正】</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="qybmxxGrid">
+		<xs:annotation>
+			<xs:documentation>200企业内部部门信息</xs:documentation>
+		</xs:annotation>
+		<xs:sequence maxOccurs="unbounded">
+			<xs:element name="qybmxxGridlbVO" type="qybmxxGridlbVO">
+				<xs:annotation>
+					<xs:documentation>200企业内部部门信息</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="qybmxxGridlbVO">
+		<xs:annotation>
+			<xs:documentation>200企业内部部门信息</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="bmmc" type="bmmc">
+				<xs:annotation>
+					<xs:documentation>201部门名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ywfw" type="ywfw">
+				<xs:annotation>
+					<xs:documentation>202部门履行的职责业务范围及履行职责业务流程</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zgrs" type="zgrs">
+				<xs:annotation>
+					<xs:documentation>203职工人数</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sjbmmc" type="sjbmmc">
+				<xs:annotation>
+					<xs:documentation>204上一级部门名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="slxxForm">
+		<xs:annotation>
+			<xs:documentation/>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="dljbr" type="dljbr">
+				<xs:annotation>
+					<xs:documentation>代理经办人</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="dljbrzyzjhm" type="dljbrzyzjhm">
+				<xs:annotation>
+					<xs:documentation>代理经办人执业证件号码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="dlsbrq" type="dlsbrq">
+				<xs:annotation>
+					<xs:documentation>代理申报日期</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="slr" type="slr">
+				<xs:annotation>
+					<xs:documentation>受理人</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="slrq" type="slrq">
+				<xs:annotation>
+					<xs:documentation>受理日期</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="slswjg" type="slswjg">
+				<xs:annotation>
+					<xs:documentation>受理税务机关【11位税务机关代码】</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

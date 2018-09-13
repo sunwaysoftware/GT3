@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2010 rel. 3 (http://www.altova.com) by MESMERiZE (MSM) -->
+<!-- 被2011 rel. 2 sp1 (TeaM DJiNN) 使用XMLSpy vTeaM DJiNN编辑的 (http://www.altova.com) by -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:include schemaLocation="TaxMLPublicType.xsd"/>
+	<xs:complexType name="sydblzcjzzbmxbVO">
+		<xs:annotation>
+			<xs:documentation>资产减值准备明细表</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="sydblzcjzzbmxbxxGrid">
+				<xs:annotation>
+					<xs:documentation>申报信息</xs:documentation>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:sequence maxOccurs="unbounded">
+						<xs:element name="sydblzcjzzbmxbxxGridlb" type="sydblzcjzzbmxbGridlbVO"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="sydblzcjzzbmxbGridlbVO">
+		<xs:annotation>
+			<xs:documentation>申报信息</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="ewbhxh" type="ewbhxh" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>二维表行序号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="xmmc" type="xmmc" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>项目名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ncye" type="ncyeZc" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>年初余额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bnjt" type="bqjtehj" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>本年计提</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="hxhsh" type="hxznje" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>核销后收回</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="cxmczc" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>冲销/卖出资产</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yzcjzhszhs" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>因资产价值回升转回数</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qtbh1" type="qtbh" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>其他变化</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="nmye" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>年末余额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

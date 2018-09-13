@@ -1,0 +1,300 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2010 rel. 3 (http://www.altova.com) by xuxin (csstj) -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:include schemaLocation="TaxMLPublicType.xsd"/>
+	<xs:complexType name="jrqycbfymxsbbywbw">
+		<xs:annotation>
+			<xs:documentation>《中华人民共和国企业所得税年度纳税申报表附表二（2）金融企业成本费用明细表》业务报文</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="jrqycbfymxsbb">
+						<xs:annotation>
+							<xs:documentation>《中华人民共和国企业所得税年度纳税申报表附表二（2）金融企业成本费用明细表》</xs:documentation>
+						</xs:annotation>
+						<xs:complexType>
+							<xs:sequence>
+								<xs:element name="jrqycbfymxsbbFrom" type="jrqycbfymxsbbFrom">
+									<xs:annotation>
+										<xs:documentation>金融企业成本费用明细表申报信息</xs:documentation>
+									</xs:annotation>
+								</xs:element>
+							</xs:sequence>
+						</xs:complexType>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="jrqycbfymxsbb">
+		<xs:annotation>
+			<xs:documentation>《中华人民共和国企业所得税年度纳税申报表附表二（2）金融企业成本费用明细表》</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="jrqycbfymxsbbFrom" type="jrqycbfymxsbbFrom">
+				<xs:annotation>
+					<xs:documentation>金融企业成本费用明细表申报信息</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="jrqycbfymxsbbFrom">
+		<xs:annotation>
+			<xs:documentation>金融企业成本费用明细表数据对应明细</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="yycb" type="yycb" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>营业成本</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yhywcb" type="yxYwcb" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>银行业务成本</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yhlxzc" type="yxLxzc" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>银行利息支出</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="tycf" type="tycflxzc" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>同业存放利息支出</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="xzyyhjk" type="xzyyxJklxzc" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>向中央银行借款利息支出</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="crzj" type="crzjlxzc" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>拆入资金利息支出</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="xsck" type="xscklxzc" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>吸收存款利息支出</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="mchgjrzc" type="mchgjrzcLxzc" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>卖出回购金融资产利息支出</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="fxzq" type="fxzqlxzc" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>发行债券利息支出</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yhywcbqt" type="qtlxzc" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>其他利息支出</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yhsxfjyjzc" type="yxSxfYjzc" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>银行手续费及佣金支出</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sxfzc" type="yxSxfzc" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>银行手续费支出</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yjzc" type="yxYjzc" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>银行佣金支出</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yhsxfjyjzcqt" type="yxQtsxfYjzc" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>银行其他手续费及佣金支出</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yhyecbywjglf" type="yxYwjglf" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>银行业务及管理费</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yhyecbqtywcb" type="qtywcb" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>其他业务成本</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bxywzc" type="bxywzc" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>保险业务支出</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bxywzcywzc" type="ywzc" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>业务支出</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bxywzctbj" type="tbj" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>退保金</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bxywzcpfzc" type="pfzc" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>赔付支出</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bxywzcthpfac" type="thpfzc" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>摊回赔付支出</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bxywzctqbxzrzbj" type="tqbxzRzbj" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>提取保险责任准备金</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bxywzcthbxzrzbj" type="thbxzrzbj" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>摊回保险责任准备金</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bxywzcbdhlzc" type="bdhlzc" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>保单红利支出</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bxywzcfbfy" type="fbfy" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>分保费用</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bxywzcsxfjyjzc" type="sxfjyjzc" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>手续费及佣金支出</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bxywzcywjglf" type="bxywjglf" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>保险业务及管理费</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bxywzcthfbfy" type="thfbfy" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>摊回分保费用</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bxywzcywzcqt" type="qtywzc" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>其他业务支出</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qtywcbbxywzc" type="bxywqtywcb" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>保险业务其他业务成本</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zqywzc" type="zqywZc" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>证券业务支出</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zqsxfzc" type="zqSxfzc" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>证券手续费支出</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zqjjywzc" type="zqjjYwzc" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>证券经纪业务支出</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yj" type="zqywYjzc" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>证券业务佣金支出</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zqsxfzcqt" type="qtzqsxfzc" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>其他证券手续费支出</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zqywzcywjglf" type="zqywJglfzc" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>证券业务及管理费支出</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zqywzcqtywcb" type="zqywQtywcb" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>证券业其他业务成本</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qtjrywzc" type="qtjrywzcxj" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>其他金融业务支出小计</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ywzc" type="qtjrywzc" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>其他金融业务支出</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qtywcb" type="qtjrywqtywcb" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>其他金融业务其他业务成本</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="stxsyqrcb" type="stxsyqrcb" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>视同销售应确认成本</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="fhbxzcjhcb" type="fhbxzcJhcb" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>非货币性资产交换成本</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="hwcclwstxscb" type="hwCcLwstxscb" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>货物、财产、劳务视同销售成本</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qtstxscb" type="qtstxscb" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>其他视同销售成本</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yywzc" type="yywzc" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>营业外支出</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="gdzcpk" type="gdzcPk" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>固定资产盘亏</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="czgdzcjss" type="czgdzcjss" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>处置固定资产净损失</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="fhbxzcjyss" type="fhbxzcJyss" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>非货币性资产交易损失</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="cswxzcss" type="cswxzcss" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>出售无形资产损失</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yywzcqt" type="qtyywzc" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>其他营业外支出</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

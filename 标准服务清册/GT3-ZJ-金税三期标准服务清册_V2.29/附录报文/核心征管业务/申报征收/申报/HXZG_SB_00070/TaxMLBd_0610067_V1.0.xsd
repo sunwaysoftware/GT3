@@ -1,0 +1,467 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2013 (http://www.altova.com) by  () -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:include schemaLocation="TaxMLPublicType.xsd"/>
+	<xs:complexType name="dwtzqksbbywbw">
+		<xs:annotation>
+			<xs:documentation>《中华人民共和国企业年度关联业务往来报告表表八对外投资情况表》业务报文</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="dwztqkmxsbb">
+						<xs:annotation>
+							<xs:documentation>《中华人民共和国企业年度关联业务往来报告表表八对外投资情况表》</xs:documentation>
+						</xs:annotation>
+						<xs:complexType>
+							<xs:sequence>
+								<xs:element name="dwtzqksmxbbFrom" type="dwtzqksmxbbFrom">
+									<xs:annotation>
+										<xs:documentation>对外投资情况表对应数据</xs:documentation>
+									</xs:annotation>
+								</xs:element>
+								<xs:element name="dwtzqksmxbbGrid">
+									<xs:annotation>
+										<xs:documentation>对外投资情况表对应列表数据</xs:documentation>
+									</xs:annotation>
+									<xs:complexType>
+										<xs:sequence maxOccurs="unbounded">
+											<xs:element name="dwtzqksmxbbGridlb" type="dwtzqksmxbbGridlbVO">
+												<xs:annotation>
+													<xs:documentation>对外投资情况明细表数据对应列表</xs:documentation>
+												</xs:annotation>
+											</xs:element>
+										</xs:sequence>
+									</xs:complexType>
+								</xs:element>
+							</xs:sequence>
+						</xs:complexType>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="dwtzqksbb">
+		<xs:annotation>
+			<xs:documentation>《中华人民共和国企业年度关联业务往来报告表表八对外投资情况表》</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="dwtzqksmxbbFrom" type="dwtzqksmxbbFrom">
+				<xs:annotation>
+					<xs:documentation>对外投资情况表对应数据</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="dwtzqksmxbbGrid">
+				<xs:annotation>
+					<xs:documentation>对外投资情况表对应列表数据</xs:documentation>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:sequence maxOccurs="unbounded">
+						<xs:element name="dwtzqksmxbbGridlb" type="dwtzqksmxbbGridlbVO">
+							<xs:annotation>
+								<xs:documentation>对外投资情况明细表数据对应列表</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="dwtzqksmxbbGrid">
+		<xs:annotation>
+			<xs:documentation>对外投资情况明细表数据对应Grid</xs:documentation>
+		</xs:annotation>
+		<xs:sequence maxOccurs="unbounded">
+			<xs:element name="dwtzqksmxbbGridlb" type="dwtzqksmxbbGridlbVO">
+				<xs:annotation>
+					<xs:documentation>对外投资情况明细表数据对应列表</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="dwtzqksmxbbGridlbVO">
+		<xs:annotation>
+			<xs:documentation>对外投资情况明细表数据对应明细</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="btzwgqyqbgdxxZqbgfbl" type="btzwgqyqbgdxxZqbgfbl" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>被投资外国企业全部股东信息占全部股份比例%</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="btzwgqyqbgdxxSjq" type="btzwgqyqbgdxxQzsj">
+				<xs:annotation>
+					<xs:documentation>被投资外国企业全部股东信息时间起</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="btzwgqyqbgdxxSjz" type="btzwgqyqbgdxxQzsj">
+				<xs:annotation>
+					<xs:documentation>被投资外国企业全部股东信息时间止</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="btzwgqyqbgdxxCgzl" type="btzwgqyqbgdxxCgzl" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>被投资外国企业全部股东信息持股种类</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="btzwgqyqbgdxxNsrsbh" type="btzwgqyqbgdxxNsrsbh" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>被投资外国企业全部股东信息纳税人识别号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="btzwgqyqbgdxxGjhdq" type="btzwgqyqbgdxxGjhdq" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>被投资外国企业全部股东信息国家地区</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="btzwgqyqbgdxxGdmc" type="btzwgqyqbgdxxGdmc" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>被投资外国企业全部股东信息股东名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="dwtzqksmxbbFrom">
+		<xs:annotation>
+			<xs:documentation>营业收入及成本费用明细表申报信息</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="qycbtzwgqyfddgxqkBl" type="qycbtzwgqyfddgxqkBl" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>企业从被投资外国企业分得的股息情况比例%</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qycbtzwgqyfddgxqkBndsjfpgxe" type="qycbtzwgqyfddgxqkBndsjfpgxe" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>企业从被投资外国企业分得的股息情况本年度实际分配股息额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qycbtzwgqyfddgxqkBndyfpgxe" type="qycbtzwgqyfddgxqkBndyfpgxe" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>企业从被投资外国企业分得的股息情况本年度应分配股息额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="btzwgqyzcfzbZfz" type="btzwgqyzcfzbZfz" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>被投资外国企业资产负债表总负债</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="btzwgqyzcfzbWfplr" type="btzwgqyzcfzbWfplr" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>被投资外国企业资产负债表未分配利润</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="btzwgqyzcfzbGb" type="btzwgqyzcfzbGb" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>被投资外国企业资产负债表股本</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="btzwgqyzcfzbQtfz" type="btzwgqyzcfzbQtfz" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>被投资外国企业资产负债表其它负债</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="btzwgqyzcfzbGdhqtglfdk" type="btzwgqyzcfzbGdhqtglfdk" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>被投资外国企业资产负债表股东或其它关联方贷款</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="btzwgqyzcfzbQtldfz" type="btzwgqyzcfzbQtldfz" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>被投资外国企业资产负债表其它流动负债</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="btzwgqyzcfzbYfzk" type="btzwgqyzcfzbYfzk" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>被投资外国企业资产负债表应付账款</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="btzwgqyzcfzbZzc" type="btzwgqyzcfzbZzc" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>被投资外国企业资产负债表总资产</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="btzwgqyzcfzbQtcc" type="btzwgqyzcfzbQtcc" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>被投资外国企业资产负债表其它财产</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="btzwgqyzcfzbWxzc" type="btzwgqyzcfzbWxzc" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>被投资外国企业资产负债表无形资产</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="btzwgqyzcfzbTd" type="btzwgqyzcfzbTd" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>被投资外国企业资产负债表土地</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="btzwgqyzcfzbJzwjqtkzjcc" type="btzwgqyzcfzbJzwjqtkzjcc" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>被投资外国企业资产负债表建筑物及其它可折旧财产</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="btzwgqyzcfzbQttz" type="btzwgqyzcfzbQttz" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>被投资外国企业资产负债表其它投资</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="btzwgqyzcfzbDfsjgtz" type="btzwgqyzcfzbDfsjgtz" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>被投资外国企业资产负债表对附属机构投资</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="btzwgqyzcfzbXgdhqtglfdk" type="btzwgqyzcfzbXgdhqtglfdk" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>被投资外国企业资产负债表向股东或其它关联方贷款</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="btzwgqyzcfzbQtldzc" type="btzwgqyzcfzbQtldzc" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>被投资外国企业资产负债表其它流动资产</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="btzwgqyzcfzbCh" type="btzwgqyzcfzbCh" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>被投资外国企业资产负债表存货</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="btzwgqyzcfzbYszk" type="btzwgqyzcfzbYszk" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>被投资外国企业资产负债表应收账款</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="btzwgqyzcfzbXj" type="btzwgqyzcfzbXj" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>被投资外国企业资产负债表现金</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="btzwgqyndsybNdlrze" type="btzwgqyndsybNdlrze" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>被投资外国企业年度损益表年度利润总额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="btzwgqyndsybQtkc" type="btzwgqyndsybQtkc" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>被投资外国企业年度损益表其它扣除</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="btzwgqyndsybSj" type="btzwgqyndsybSj" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>被投资外国企业年度损益表税金</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="btzwgqyndsybZj" type="btzwgqyndsybZj" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>被投资外国企业年度损益表折旧</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="btzwgqyndsybLxzc" type="btzwgqyndsybLxzc" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>被投资外国企业年度损益表利息支出</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="btzwgqyndsybZjtxqsyzzc" type="btzwgqyndsybZjtxqsyzzc" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>被投资外国企业年度损益表租金、特许权使用总支出</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="btzwgqyndsybKjbczc" type="btzwgqyndsybKjbczc" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>被投资外国企业年度损益表扣减补偿支出</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="btzwgqyndsybQtsr" type="btzwgqyndsybQtsr" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>被投资外国企业年度损益表其他收入</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="btzwgqyndsybCczrsyss" type="btzwgqyndsybCczrsyss" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>被投资外国企业年度损益表财产转让收益损失</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="btzwgqyndsybZjtxqsyfsr" type="btzwgqyndsybZjtxqsyfsr" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>被投资外国企业年度损益表租金、特许权使用费收入</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="btzwgqyndsybLxsr" type="btzwgqyndsybLxsr" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>被投资外国企业年度损益表利息收入</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="btzwgqyndsybGxhlsr" type="btzwgqyndsybGxhlsr" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>被投资外国企业年度损益表股息、红利收入</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="btzwgqyndsybMlr" type="btzwgqyndsybMlr" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>被投资外国企业年度损益表毛利润</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="btzwgqyndsybCb" type="btzwgqyndsybCb" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>被投资外国企业年度损益表成本</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="btzwgqyndsybSrze" type="btzwgqyndsybSrze" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>被投资外国企业年度损益表收入总额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="btzwgqyndqysdssfxxBtzqyfdsdsl" type="btzwgqyndqysdssfxxBtzqyfdsdsl" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>被投资外国企业年度企业所得税税负信息被投资企业法定所得税率</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="btzwgqyndqysdssfxxSjsfbl" type="btzwgqyndqysdssfxxSjsfbl" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>被投资外国企业年度企业所得税税负信息实际税负比率%</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="btzwgqyndqysdssfxxShlre" type="btzwgqyndqysdssfxxShlre" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>被投资外国企业年度企业所得税税负信息税后利润额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="btzwgqyndqysdssfxxSjjnsds" type="btzwgqyndqysdssfxxSjjnsds" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>被投资外国企业年度企业所得税税负信息实际缴纳所得税</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="btzwgqyndqysdssfxxYnssde" type="btzwgqyndqysdssfxxYnssde" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>被投资外国企业年度企业所得税税负信息应纳税所得额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="btzwgqyndlrsfbgy500wyrmb" type="btzwgqyndlrsfbgy500wyrmb" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>被投资外国企业年度利润是否不高于500万元人民币</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="btzwgqysfzgjswzjzddfdslgj" type="btzwgqysfzgjswzjzddfdslgj" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>被投资外国企业是否在国家税务总局指定的非低税率国家地区</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qycybtzwgqygfCgbl" type="qycybtzwgqygfCgbl" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>企业持有被投资外国企业股份信息持股比例%</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qycybtzwgqygfCgsl" type="qycybtzwgqygfCgsl" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>企业持有被投资外国企业股份信息持股数量</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qycybtzwgqygfSjq" type="skssqq" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>企业持有被投资外国企业股份信息时间起</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qycybtzwgqygfSjz" type="skssqz" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>企业持有被投资外国企业股份信息时间止</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qycybtzwgqygfGfzl" type="qycybtzwgqygfGfzl" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>企业持有被投资外国企业股份信息股份种类</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="btzwgqyzgfSjq" type="ssqq" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>被投资外国企业总股份信息时间起</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="btzwgqyzgfSjz" type="ssqz" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>被投资外国企业总股份信息时间止</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="btzwgqyzgfZgfl" type="btzwgqyzgfZgfl" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>被投资外国企业总股份信息总股份量</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="btzwgqyNsndq" type="ssqq" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>纳税年度起</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="btzwgqyNsndz" type="ssqz" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>纳税年度止</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="btzwgqyDrmbhl" type="btzwgqyDrmbhl" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>被投资外国企业基本信息对人民币汇率</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="btzwgqyJzbwhb" type="btzwgqyJzbwhb" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>被投资外国企业基本信息记账本位货币</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="btzwgqyClsj" type="btzwgqyClsj" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>被投资外国企业基本信息成立时间</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="btzwgqyFddbr" type="btzwgqyFddbr" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>被投资外国企业基本信息法定代表人</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="btzwgqyNsrsbh" type="btzwgqyNsrsbh" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>被投资外国企业基本信息纳税人识别号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="btzwgqyZyywfw" type="btzwgqyZyywfw" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>被投资外国企业基本信息主营业务范围</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="btzwgqyFddbrjzdz" type="btzwgqyFddbrjzdz" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>被投资外国企业基本信息法定代表人居住地址</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="btzwgqyZyjydz" type="btzwgqyZyjydz" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>被投资外国企业基本信息主要经营地址</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="btzwgqyZcdz" type="btzwgqyZcdz" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>被投资外国企业基本信息注册地址</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="btzwgqyQymc" type="btzwgqyQymc" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>被投资外国企业基本信息企业名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="fddbr" type="fddbr" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>法定代表人（负责人）</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zcdz" type="zcdz" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>注册地址</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qymc" type="qymc" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>企业名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

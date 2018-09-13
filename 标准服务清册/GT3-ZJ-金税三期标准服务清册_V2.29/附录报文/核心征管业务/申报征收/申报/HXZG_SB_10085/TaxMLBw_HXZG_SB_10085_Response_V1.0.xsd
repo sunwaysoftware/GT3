@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 被2012 () 使用XMLSpy v编辑的 (http://www.altova.com) by -->
+<!-- edited with XMLSpy v2013 (http://www.altova.com) by  () -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:include schemaLocation="TaxMLBw_qysdsczzsndsb2017_V1.0.xsd"/>
+	<xs:include schemaLocation="TaxMLPublicSBType.xsd"/>
+	<xs:include schemaLocation="TaxMLBd_061015103_V1.0.xsd"/>
+	<xs:complexType name="HXZGSB10085Response">
+		<xs:annotation>
+			<xs:documentation>企业所得税年报错误更正初始化返回报文</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="ywbw" type="SBQysdsczzsNbbywbw">
+						<xs:annotation>
+							<xs:documentation>表单业务报文信息</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="kjzdzzDm" type="kjzdzzDm" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>会计制度准则代码</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="sbxxGrid" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>申报信息数据</xs:documentation>
+						</xs:annotation>
+						<xs:complexType>
+							<xs:sequence minOccurs="0" maxOccurs="unbounded">
+								<xs:element name="sbxxGridlb" type="SBSbxxJhVO"/>
+							</xs:sequence>
+						</xs:complexType>
+					</xs:element>
+					<xs:element name="jmxxGrid" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>减免信息数据</xs:documentation>
+						</xs:annotation>
+						<xs:complexType>
+							<xs:sequence minOccurs="0" maxOccurs="unbounded">
+								<xs:element name="jmxxGridlb" type="SBJmxxJhVO"/>
+							</xs:sequence>
+						</xs:complexType>
+					</xs:element>
+					<xs:element name="yjxxGrid" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>预缴信息数据</xs:documentation>
+						</xs:annotation>
+						<xs:complexType>
+							<xs:sequence minOccurs="0" maxOccurs="unbounded">
+								<xs:element name="yjxxGridlb" type="SBYjxxJhVO"/>
+							</xs:sequence>
+						</xs:complexType>
+					</xs:element>
+					<xs:element name="zjgxx" type="SBQysdszjgxxVO" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>总机构信息</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="fzjgxxGrid" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>分支机构信息数据</xs:documentation>
+						</xs:annotation>
+						<xs:complexType>
+							<xs:sequence minOccurs="0" maxOccurs="unbounded">
+								<xs:element name="fzjgxxGridlb" type="SBQysdsfzjgxxVO"/>
+							</xs:sequence>
+						</xs:complexType>
+					</xs:element>
+					<xs:element name="kstlfpGrid" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>跨省铁路分配信息</xs:documentation>
+						</xs:annotation>
+						<xs:complexType>
+							<xs:sequence minOccurs="0" maxOccurs="unbounded">
+								<xs:element name="kstlfpGridlb" type="SB287SdsNbKstlfpxxVO"/>
+							</xs:sequence>
+						</xs:complexType>
+					</xs:element>
+					<xs:element name="mbkstzxx" type="SBQysdsczzsndsbmbkstzxxVO" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>弥补亏损台账信息</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="sedmyhxx" type="SedmyhmxbForm" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>税额抵免优惠台账信息</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="nsrqtxxVO" type="SB287NbbNsrqtxxVO" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>其他信息</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="kdqssfpblGrid" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>跨地区税收分配比例信息</xs:documentation>
+						</xs:annotation>
+						<xs:complexType>
+							<xs:sequence minOccurs="0" maxOccurs="unbounded">
+								<xs:element name="kdqssfpblGridlb" type="SBKdqsssrfpblqkbVO"/>
+							</xs:sequence>
+						</xs:complexType>
+					</xs:element>
+					<xs:element name="fhbxtzbd" type="fhbxzctzdynstzmxbYwbd" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>非货币性投资表单信息</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+</xs:schema>

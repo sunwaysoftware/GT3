@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:complexType name="ShbxfQuerySbqkResponse">
+		<xs:annotation>
+			<xs:documentation>社会保险费申报情况查询返回报文</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="sbxxqkList">
+						<xs:annotation>
+							<xs:documentation>申报信息情况列表</xs:documentation>
+						</xs:annotation>
+						<xs:complexType>
+							<xs:sequence minOccurs="0" maxOccurs="unbounded">
+								<xs:element name="sbxxqkResponse" type="sbxxqkResponse"/>
+							</xs:sequence>
+						</xs:complexType>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="sbxxqkResponse">
+		<xs:annotation>
+			<xs:documentation>申报情况信息列表</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="yzpzxh" type="yzpzxh">
+				<xs:annotation>
+					<xs:documentation>应征凭证序号(字段不能为空,字段最大长度:20)</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yzpzxhDm" type="yzpzxhDm">
+				<xs:annotation>
+					<xs:documentation>应征凭证种类代码(字段不能为空)</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sbrq" type="sbrq">
+				<xs:annotation>
+					<xs:documentation>申报日期(字段不能为空，日期格式：YYYY-MM-DD)</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ybtse" type="ybtse">
+				<xs:annotation>
+					<xs:documentation>应补退税额合计(字段不能为空,字段格式（18.2）)</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="lrrDm" type="lrrDm">
+				<xs:annotation>
+					<xs:documentation>录入人代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sbmxList">
+				<xs:annotation>
+					<xs:documentation>申报情况明细列表</xs:documentation>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:sequence minOccurs="0" maxOccurs="unbounded">
+						<xs:element name="sbmxResponse" type="sbmxResponse"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="sbmxResponse">
+		<xs:annotation>
+			<xs:documentation>申报情况明细列表</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="sbjbjgDm" type="sbjbjgDm">
+				<xs:annotation>
+					<xs:documentation>社保经办机构代码(字段不能为空,字段最大长度:20)</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zsxmDm" type="zsxmDm">
+				<xs:annotation>
+					<xs:documentation>征收项目(字段不能为空,字段最大长度:5)</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sjzspmDm" type="sjzspmDm">
+				<xs:annotation>
+					<xs:documentation>上级征收品目代码(字段不能为空,字段最大长度:9)</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zspmDm" type="zspmDm">
+				<xs:annotation>
+					<xs:documentation>征收品目代码(字段不能为空,字段最大长度:9)</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zszmDm" type="zszmDm">
+				<xs:annotation>
+					<xs:documentation>征收子目(字段最大长度:16)</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jfjs" type="jfjs">
+				<xs:annotation>
+					<xs:documentation>缴费基数（字段格式（16.2））</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jfbl" type="jffl">
+				<xs:annotation>
+					<xs:documentation>缴费比例（字段格式（16.6））</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yjfe" type="yjfe">
+				<xs:annotation>
+					<xs:documentation>应缴费额(字段不能为空，（字段格式（18.2））)</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sblsh" type="sblsh">
+				<xs:annotation>
+					<xs:documentation>社保流水号(字段不能为空,字段最大长度:32)</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sbbm" type="sbbm">
+				<xs:annotation>
+					<xs:documentation>社保编码(字段不能为空,字段最大长度:30)</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="xxh" type="xxh">
+				<xs:annotation>
+					<xs:documentation>小序号(字段不能为空)</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="fkssqq" type="fkssqq">
+				<xs:annotation>
+					<xs:documentation>费款所属期起(字段不能为空，日期格式：YYYY-MM-DD)</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="fkssqz" type="fkssqz">
+				<xs:annotation>
+					<xs:documentation>费款所属期止(字段不能为空，日期格式：YYYY-MM-DD)</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sbsjly" type="sbsjly">
+				<xs:annotation>
+					<xs:documentation>申报数据来源(字段不能为空)</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

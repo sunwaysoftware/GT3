@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2010 rel. 3 (http://www.altova.com) by MESMERiZE (MSM) -->
+<!-- 被2011 rel. 2 sp1 (TeaM DJiNN) 使用XMLSpy vTeaM DJiNN编辑的 (http://www.altova.com) by -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:complexType name="HXZGSB00767Response">
+		<xs:annotation>
+			<xs:documentation>调整补税情况_调整前盈亏，及调整补税情况_调整前纳税情况返回报文</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="sbTzbsqkReturnVO" type="SBTzbsqkReturnVO" nillable="true">
+						<xs:annotation>
+							<xs:documentation>调整补税情况_调整前盈亏，及调整补税情况_调整前纳税情况VO</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="SBTzbsqkReturnVO">
+		<xs:annotation>
+			<xs:documentation>调整补税情况_调整前盈亏，及调整补税情况_调整前纳税情况VO</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="lrze" type="lrze">
+				<xs:annotation>
+					<xs:documentation>利润总额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="nstzzje" type="nstzjse">
+				<xs:annotation>
+					<xs:documentation>纳税调整增加额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="nstzjse" type="nstzjse">
+				<xs:annotation>
+					<xs:documentation>纳税调整减少额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sjynsdse" type="sjynsdse">
+				<xs:annotation>
+					<xs:documentation>实际应纳所得税额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

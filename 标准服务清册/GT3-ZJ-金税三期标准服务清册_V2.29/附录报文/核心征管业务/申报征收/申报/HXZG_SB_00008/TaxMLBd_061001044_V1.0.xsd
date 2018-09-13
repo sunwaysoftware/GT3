@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 被2012 () 使用XMLSpy v编辑的 (http://www.altova.com) by -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:complexType name="jrbxyyysnssbbywbw">
+		<xs:annotation>
+			<xs:documentation>《金融保险业营业税纳税申报表》业务报文</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="jrbxyyysnssbb" type="jrbxyyysnssbb">
+						<xs:annotation>
+							<xs:documentation>《金融保险业营业税纳税申报表》</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="jrbxyyysnssbb">
+		<xs:annotation>
+			<xs:documentation>《金融保险业营业税纳税申报表》</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="jrbxysbbxxGrid" type="jrbxysbbxxGrid">
+				<xs:annotation>
+					<xs:documentation>营业税申报（适用于金融保险业）-申报信息</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="jrbxysbbxxGrid">
+		<xs:annotation>
+			<xs:documentation>营业税申报（适用于金融保险业）-申报信息</xs:documentation>
+		</xs:annotation>
+		<xs:sequence maxOccurs="unbounded">
+			<xs:element name="jrbxysbbxxGridlb" type="jrbxysbbxxGridlb"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="jrbxysbbxxGridlb">
+		<xs:annotation>
+			<xs:documentation>营业税申报（适用于金融保险业）-申报信息</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="ewbhxh" type="ewbhxh">
+				<xs:annotation>
+					<xs:documentation>二维表行序号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="hmc" type="hmc">
+				<xs:annotation>
+					<xs:documentation>行名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ysqbsr" type="je">
+				<xs:annotation>
+					<xs:documentation>应税全部收入</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ysjcxme" type="je">
+				<xs:annotation>
+					<xs:documentation>应税减除项目额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ysyye" type="je">
+				<xs:annotation>
+					<xs:documentation>应税营业额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="msqbsr" type="je">
+				<xs:annotation>
+					<xs:documentation>免税全部收入</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="msjcxme" type="je">
+				<xs:annotation>
+					<xs:documentation>免税减除项目额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="msyye" type="je">
+				<xs:annotation>
+					<xs:documentation>免税营业额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sl1" type="je">
+				<xs:annotation>
+					<xs:documentation>税率</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ynse" type="je">
+				<xs:annotation>
+					<xs:documentation>应纳税额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="mjse" type="je">
+				<xs:annotation>
+					<xs:documentation>免减税额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yjse" type="je">
+				<xs:annotation>
+					<xs:documentation>已缴税额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ybtse" type="je">
+				<xs:annotation>
+					<xs:documentation>应补(退)税额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

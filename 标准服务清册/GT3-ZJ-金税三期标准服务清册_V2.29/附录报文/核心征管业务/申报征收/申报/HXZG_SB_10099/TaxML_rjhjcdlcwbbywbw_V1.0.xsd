@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+    <xs:include schemaLocation="TaxML.xsd"/>
+
+    <xs:complexType name="RjhjcdlqyyhsxzlqdYwbw">
+        <xs:annotation>
+            <xs:documentation>总业务报文</xs:documentation>
+        </xs:annotation>
+        <xs:complexContent>
+            <xs:extension base="taxDoc">
+                <xs:sequence>
+                    <xs:element name="rjhjcdlyhsxzlqd" type="RjhjcdlyhsxzlqdVO"></xs:element>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+
+    <xs:complexType name="RjhjcdlyhsxzlqdVO">
+        <xs:sequence>
+            <xs:element name="nsrxxForm" type="NsrxxFormVO"></xs:element>
+            <xs:element name="tjzlGrid">
+                <xs:complexType>
+                    <xs:sequence maxOccurs="unbounded">
+                        <xs:element name="tjzlGridlb" type="TjzlGridlbVO"></xs:element>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="NsrxxFormVO">
+        <xs:annotation>
+            <xs:documentation>软件和集成电路产业企业所得税优惠事项后续管理提交资料清单纳税人信息</xs:documentation>
+        </xs:annotation>
+        <xs:sequence>
+            <xs:element name="sbuuid" type="sbuuid">
+                <xs:annotation>
+                    <xs:documentation>sbuuid</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="djxh" type="djxh">
+                <xs:annotation>
+                    <xs:documentation>登记序号</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="nsrsbh" type="nsrsbh">
+                <xs:annotation>
+                    <xs:documentation>纳税人识别号</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="nsrmc" type="nsrmc">
+                <xs:annotation>
+                    <xs:documentation>纳税人名称</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="slrq" type="slrq">
+                <xs:annotation>
+                    <xs:documentation>受理日期</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="ssnd" type="ssnd">
+                <xs:annotation>
+                    <xs:documentation>资料报送所属年度</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="sdsyhhxglqylxDm" type="sdsyhhxglqylxDm">
+                <xs:annotation>
+                    <xs:documentation>企业类型代码</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="zllx" type="zllx">
+                <xs:annotation>
+                    <xs:documentation>提交资料类型</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="zfbz1" type="zfbz1">
+                <xs:annotation>
+                    <xs:documentation>作废标志</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="TjzlGridlbVO">
+        <xs:annotation>
+            <xs:documentation>提交资料清单Gridlb</xs:documentation>
+        </xs:annotation>
+        <xs:sequence>
+            <xs:element name="sbuuid" type="sbuuid">
+                <xs:annotation>
+                    <xs:documentation>sbuuid</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="sftj" type="sftj">
+                <xs:annotation>
+                    <xs:documentation>是否提交</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="tjzlmc" type="tjzlmc">
+                <xs:annotation>
+                    <xs:documentation>提交资料名称</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+</xs:schema>

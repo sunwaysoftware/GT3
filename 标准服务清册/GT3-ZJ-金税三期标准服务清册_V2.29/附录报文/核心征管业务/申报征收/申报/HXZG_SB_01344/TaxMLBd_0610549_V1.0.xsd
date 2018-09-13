@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 被2011 rel. 2 sp1 (TeaM DJiNN) 使用XMLSpy vTeaM DJiNN编辑的 (http://www.altova.com) by -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:include schemaLocation="TaxMLPublicType.xsd"/>
+	<xs:complexType name="fqdqdzcpcljjsbbywbw">
+		<xs:annotation>
+			<xs:documentation>废弃电器电子产品处理基金申报表业务报文</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="fqdqdzcpcljjsbb" type="fqdqdzcpcljjsbb">
+						<xs:annotation>
+							<xs:documentation>废弃电器电子产品处理基金申报表</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="fqdqdzcpcljjsbb">
+		<xs:annotation>
+			<xs:documentation>废弃电器电子产品处理基金申报表</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="sbbhead">
+				<xs:annotation>
+					<xs:documentation>申报表头信息</xs:documentation>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:complexContent>
+						<xs:extension base="sbbheadVO">
+							<xs:sequence>
+								<xs:element name="tbrq" type="tbrq">
+									<xs:annotation>
+										<xs:documentation>填表日期</xs:documentation>
+									</xs:annotation>
+								</xs:element>
+							</xs:sequence>
+						</xs:extension>
+					</xs:complexContent>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="sbsjxxGrid">
+				<xs:annotation>
+					<xs:documentation>申报数据信息</xs:documentation>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:sequence maxOccurs="unbounded">
+						<xs:element name="sbsjxxGridlb" type="sbsjxxGridlbVo">
+							<xs:annotation>
+								<xs:documentation>申报数据信息</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="slxxForm" type="slxxForm">
+				<xs:annotation>
+					<xs:documentation>受理信息</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="sbsjxxGrid">
+		<xs:annotation>
+			<xs:documentation>申报数据信息</xs:documentation>
+		</xs:annotation>
+		<xs:sequence maxOccurs="unbounded">
+			<xs:element name="sbsjxxGridlb" type="sbsjxxGridlbVo">
+				<xs:annotation>
+					<xs:documentation>申报数据信息</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="sbsjxxGridlbVo">
+		<xs:annotation>
+			<xs:documentation>申报数据信息</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="ewbhxh" type="ewbhxh">
+				<xs:annotation>
+					<xs:documentation>二维表行序号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bqxssl" type="bqxssl">
+				<xs:annotation>
+					<xs:documentation>本期销售数量</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yzxssl" type="yzxssl">
+				<xs:annotation>
+					<xs:documentation>应征销售数量</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ckmzXssl" type="ckmzXssl">
+				<xs:annotation>
+					<xs:documentation>出口免征销售数量</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sqwksl" type="sqwksl">
+				<xs:annotation>
+					<xs:documentation>上期未扣数量</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bqkkcsl" type="bqkkcsl">
+				<xs:annotation>
+					<xs:documentation>本期可扣除数量</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jksl" type="jksl">
+				<xs:annotation>
+					<xs:documentation>进口数量</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="gngjsl" type="gngjsl">
+				<xs:annotation>
+					<xs:documentation>国内购进数量</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="wtjgShsl" type="wtjgShsl">
+				<xs:annotation>
+					<xs:documentation>委托加工收回数量</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yzjjcpKdthsl" type="yzjjcpKdthsl">
+				<xs:annotation>
+					<xs:documentation>已征基金产品可抵退货数量</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bqyzsl" type="bqyzsl">
+				<xs:annotation>
+					<xs:documentation>本期应征数量</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jzxqkcsl" type="jzxqkcsl">
+				<xs:annotation>
+					<xs:documentation>结转下期扣除数量</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zsbz" type="zsbz">
+				<xs:annotation>
+					<xs:documentation>终审标志</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bqyzjjje" type="bqyzjjje">
+				<xs:annotation>
+					<xs:documentation>本期应征基金金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bqjzje" type="bqjzje">
+				<xs:annotation>
+					<xs:documentation>本期减征金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yyjjje" type="yyjjje">
+				<xs:annotation>
+					<xs:documentation>已预缴基金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sqjzjje" type="sqjzjje">
+				<xs:annotation>
+					<xs:documentation>上期结转基金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bqybjje" type="bqybjje">
+				<xs:annotation>
+					<xs:documentation>本期应补基金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bqjzxqjje" type="bqjzxqjje">
+				<xs:annotation>
+					<xs:documentation>本期结转下期基金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zsxmDm" type="zsxmDm">
+				<xs:annotation>
+					<xs:documentation>征收项目代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zspmDm" type="zspmDm">
+				<xs:annotation>
+					<xs:documentation>征收品目代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="slxxForm">
+		<xs:annotation>
+			<xs:documentation>受理信息</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="jbr" type="jbr">
+				<xs:annotation>
+					<xs:documentation>经办人</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="fddbr" type="fddbr">
+				<xs:annotation>
+					<xs:documentation>法定代表人</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jbrlxdh" type="jbrlxdh">
+				<xs:annotation>
+					<xs:documentation>经办人联系电话</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="dlrmc" type="dlrmc">
+				<xs:annotation>
+					<xs:documentation>代理人名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sqr" type="sqr">
+				<xs:annotation>
+					<xs:documentation>授权人</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="dljbr" type="dljbr">
+				<xs:annotation>
+					<xs:documentation>代理经办人</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="dlrlxdh" type="dlrlxdh">
+				<xs:annotation>
+					<xs:documentation>代理人联系电话</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sdrq" type="sdrq">
+				<xs:annotation>
+					<xs:documentation>收到日期</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jsr" type="jsr">
+				<xs:annotation>
+					<xs:documentation>接收人</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zgswjggz" type="zgswjg">
+				<xs:annotation>
+					<xs:documentation>主管税务机关</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

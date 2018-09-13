@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:include schemaLocation="TaxMLPublicDJType.xsd"/>
+	<xs:complexType name="HXZGDJ00098Response">
+		<xs:annotation>
+			<xs:documentation>根据登记序号查询己登记的特定征收部门信息与银行账户信息返回报文</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="tdzsbmxx" type="tdzsbmxx">
+						<xs:annotation>
+							<xs:documentation>特定征收部门信息</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="tdzsbmxx">
+		<xs:annotation>
+			<xs:documentation>特定征收部门信息</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="DJTdzsbmdjxxVO" type="DJTdzsbmdjxxVO">
+				<xs:annotation>
+					<xs:documentation>特定征收部门登记信息</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ckzhzhbgGrid" type="ckzhzhbgGrid">
+				<xs:annotation>
+					<xs:documentation>存款账号账户报告集合</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="ckzhzhbgGrid">
+		<xs:annotation>
+			<xs:documentation>存款账号账户报告集合列表</xs:documentation>
+		</xs:annotation>
+		<xs:sequence minOccurs="0" maxOccurs="unbounded">
+			<xs:element name="ckzhzhbgGridlb" type="DJNsrckzhzhxxVO">
+				<xs:annotation>
+					<xs:documentation>纳税人存款账户账号信息</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

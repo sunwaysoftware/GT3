@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2013 (http://www.altova.com) by  () -->
+<!-- 被2011 rel. 2 sp1 (TeaM DJiNN) 使用XMLSpy vTeaM DJiNN编辑的 (http://www.altova.com) by -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:complexType name="syccjshfpmxbywbw">
+		<xs:annotation>
+			<xs:documentation>《剩余财产计算和分配明细表》业务报文</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="syccjshfpmxb" type="syccjshfpmxb">
+						<xs:annotation>
+							<xs:documentation>《剩余财产计算和分配明细表》</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="syccjshfpmxb">
+		<xs:annotation>
+			<xs:documentation>《剩余财产计算和分配明细表》</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="syccjshfpmxForm" type="syccjshfpmxForm">
+				<xs:annotation>
+					<xs:documentation>剩余财产计算和分配明细表</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="syccfpGrid">
+				<xs:annotation>
+					<xs:documentation>剩余财产分配</xs:documentation>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:sequence minOccurs="0" maxOccurs="unbounded">
+						<xs:element name="syccfpGridlb" type="syccfpGridlbVo">
+							<xs:annotation>
+								<xs:documentation>剩余财产分配</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="syccjshfpmxForm">
+		<xs:annotation>
+			<xs:documentation>剩余财产计算和分配明细表</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="zckbxjzhjyjg" type="zckbxjzhjyjg" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>资产可变现价值或交易价格</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qsfy" type="qsfy" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>清算费用</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zggz" type="zggz" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>职工工资</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="shbxfy" type="shbxfy" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>社会保险费用</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="fdbcj" type="fdbcj" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>法定补偿金</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qssjjfj" type="qssjjfj" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>清算税金及附加</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qssdse" type="qssdse" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>清算所得税额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yqndqse" type="yqndqse" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>以前年度欠税额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qtzw" type="qtzw" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>其他债务</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sycc" type="sycc" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>剩余财产</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="syccLjyygj" type="syccLjyygj" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>剩余财产累计盈余公积</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="syccLjwfplr" type="syccLjwfplr" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>剩余财产累计未分配利润</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="syccfpGrid">
+		<xs:annotation>
+			<xs:documentation>剩余财产分配</xs:documentation>
+		</xs:annotation>
+		<xs:sequence minOccurs="0" maxOccurs="unbounded">
+			<xs:element name="syccfpGridlb" type="syccfpGridlbVo">
+				<xs:annotation>
+					<xs:documentation>剩余财产分配列表</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="syccfpGridlbVo">
+		<xs:annotation>
+			<xs:documentation>剩余财产分配</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="ewbhxh" type="ewbhxh">
+				<xs:annotation>
+					<xs:documentation>二维表行序号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="gdmc" type="gdmc">
+				<xs:annotation>
+					<xs:documentation>股东名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="cyqsqyqyxtzbl" type="cyqsqyqyxtzbl">
+				<xs:annotation>
+					<xs:documentation>持有清算企业权益性投资比例%</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="tze" type="tze">
+				<xs:annotation>
+					<xs:documentation>投资额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="fpccje" type="fpccje">
+				<xs:annotation>
+					<xs:documentation>分配的财产金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="fpccjeQrwgxje" type="fpccjeQrwgxje">
+				<xs:annotation>
+					<xs:documentation>分配财产金额确认为股息金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

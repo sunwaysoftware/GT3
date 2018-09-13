@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 被2012 () 使用XMLSpy v编辑的 (http://www.altova.com) by -->
+<!-- edited with XMLSpy v2005 rel. 3 U (http://www.altova.com) by  () -->
+<!-- 编辑使用 XMLSpy v2006 U (http://www.altova.com) 由 any (any) -->
+<!-- 编辑使用 XMLSpy v2006 U (http://www.altova.com) 由 any (any) -->
+<!-- 编辑使用 XMLSpy v2006 U (http://www.altova.com) 由 any (any) -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxDoc.xsd"/>
+	<xs:include schemaLocation="TaxMLPublic.xsd"/>
+	<xs:include schemaLocation="TaxMLPublicFPType.xsd"/>
+	<xs:complexType name="HXZGFP00100Request">
+		<xs:annotation>
+			<xs:documentation>保存发票挂失毁损申请（适用纳税人）申请信息</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+								<xs:element name="fpgssh" type="FPGsshsqbgVO">
+									<xs:annotation>
+										<xs:documentation>发票挂失损毁主表</xs:documentation>
+									</xs:annotation>
+								</xs:element>
+								<xs:element name="fpgsshGrid">
+									<xs:annotation>
+										<xs:documentation>发票挂失损毁明细</xs:documentation>
+									</xs:annotation>
+									<xs:complexType>
+										<xs:sequence maxOccurs="unbounded">
+											<xs:element name="fpgsshGridlb" type="FPGsshsqbgMxVO"/>
+										</xs:sequence>
+									</xs:complexType>
+								</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+</xs:schema>

@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2010 rel. 3 (http://www.altova.com) by MESMERiZE (MSM) -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:complexType name="zzrjmspBazgxxcxresponse">
+		<xs:annotation>
+			<xs:documentation>自然人减免审批、备案资格信息查询</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="zrrjmspBazgxxgrid" type="zrrjmspBazgxxgrid">
+						<xs:annotation>
+							<xs:documentation>自然人减免审批、备案资格信息</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="zrrjmspBazgxxgrid">
+		<xs:annotation>
+			<xs:documentation>自然人减免审批、备案资格信息</xs:documentation>
+		</xs:annotation>
+		<xs:sequence maxOccurs="unbounded">
+			<xs:element name="zrrjmspBazgxxlb" type="zrrjmspBazgxxlb">
+				<xs:annotation>
+					<xs:documentation>自然人减免审批、备案资格信息列表</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="zrrjmspBazgxxlb">
+		<xs:annotation>
+			<xs:documentation>自然人减免审批、备案资格信息列表</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="mxuuid" type="mxuuid">
+				<xs:annotation>
+					<xs:documentation>明细uuid</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yhpzuuid" type="yhpzuuid">
+				<xs:annotation>
+					<xs:documentation>优惠凭证uuid</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="djxh" type="djxh">
+				<xs:annotation>
+					<xs:documentation>登记序号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jmsswsxDm" type="swsxDm">
+				<xs:annotation>
+					<xs:documentation>减免税税务事项代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jmlxDm" type="jmlxDm">
+				<xs:annotation>
+					<xs:documentation>减免类型代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zsxmDm" type="zsxmDm">
+				<xs:annotation>
+					<xs:documentation>征收项目代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zspmDm" type="zspmDm">
+				<xs:annotation>
+					<xs:documentation>征收品目代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jmqxq" type="jmqxq">
+				<xs:annotation>
+					<xs:documentation>减免期限起</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jmqxz" type="jmqxz">
+				<xs:annotation>
+					<xs:documentation>减免期限止</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jzfd" type="jzfd">
+				<xs:annotation>
+					<xs:documentation>减征幅度</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jzsl" type="jzsl">
+				<xs:annotation>
+					<xs:documentation>减征税率</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jzed" type="jzed">
+				<xs:annotation>
+					<xs:documentation>减征额度</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jmxzDm" type="jmxzDm">
+				<xs:annotation>
+					<xs:documentation>减免性质代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jmxzdlDm" type="jmxzdlDm">
+				<xs:annotation>
+					<xs:documentation>减免性质大类代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jmxzxlDm" type="jmxzxlDm">
+				<xs:annotation>
+					<xs:documentation>减免性质小类代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jmfsDm" type="jmfsDm">
+				<xs:annotation>
+					<xs:documentation>减免方式代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+				<xs:element name="htbh" type="htbh">
+				<xs:annotation>
+					<xs:documentation>合同编号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		<xs:element name="htmc" type="htmc">
+				<xs:annotation>
+					<xs:documentation>合同名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jmzlxDm" type="jmfsDm">
+				<xs:annotation>
+					<xs:documentation>减免征类型代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:simpleType name="jmxzdlDm">
+		<xs:annotation>
+			<xs:documentation>减免性质大类代码</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:length value="2"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="jmxzxlDm">
+		<xs:annotation>
+			<xs:documentation>减免性质小类代码</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:length value="2"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="jmxzDm">
+		<xs:annotation>
+			<xs:documentation>减免性质代码</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:length value="10"/>
+		</xs:restriction>
+	</xs:simpleType>
+</xs:schema>

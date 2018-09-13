@@ -1,0 +1,480 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 被2011 rel. 2 sp1 (servyou) 使用XMLSpy vservyou编辑的 (http://www.altova.com) by -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:complexType name="tdhyndsdssbbYwbw">
+		<xs:annotation>
+			<xs:documentation>特定行业年度所得税申报表业务报文</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="tdhyndsdssbbBzds" type="tdhyndsdssbbBzds"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="tdhyndsdssbbBzds">
+		<xs:annotation>
+			<xs:documentation>特定行业年度所得税申报表表证单书</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="head" type="tdhyndsdssbbHead">
+				<xs:annotation>
+					<xs:documentation>特定行业年度所得税申报表表头</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="body" type="tdhyndsdssbbBody">
+				<xs:annotation>
+					<xs:documentation>特定行业年度所得税申报表表体</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bodyAffix" type="xs:anySimpleType">
+				<xs:annotation>
+					<xs:documentation>预留：附属表体</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="tdhyndsdssbbHead">
+		<xs:annotation>
+			<xs:documentation>特定行业年度所得税申报表表头</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="kjywrsbh" type="kjywrsbh">
+				<xs:annotation>
+					<xs:documentation>扣缴义务人识别号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="kjywrmc" type="kjywrmc">
+				<xs:annotation>
+					<xs:documentation>扣缴义务人名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="hyDm" type="hyDm">
+				<xs:annotation>
+					<xs:documentation>行业</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="djzclxDm" type="djzclxDm">
+				<xs:annotation>
+					<xs:documentation>登记注册类型</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="kjywrdjxh" type="djxh">
+				<xs:annotation>
+					<xs:documentation>扣缴义务人登记序号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="skssqq" type="skssqq">
+				<xs:annotation>
+					<xs:documentation>税款所属时期起</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="skssqz" type="skssqz">
+				<xs:annotation>
+					<xs:documentation>税款所属时期止</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="tbrq1" type="tbrq">
+				<xs:annotation>
+					<xs:documentation>填表日期</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sbrq" type="sbrq">
+				<xs:annotation>
+					<xs:documentation>申报日期</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="dlsbrq" type="sbrq">
+				<xs:annotation>
+					<xs:documentation>代理申报日期</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="kjrs" type="kjrs">
+				<xs:annotation>
+					<xs:documentation>扣缴人数</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="fddbrfzrxm" type="fddbrfzrxm">
+				<xs:annotation>
+					<xs:documentation>法定代表人（负责人）姓名</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jbrxm" type="swjgjbrxm">
+				<xs:annotation>
+					<xs:documentation>经办人姓名</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="slrxm" type="slrxm">
+				<xs:annotation>
+					<xs:documentation>受理人姓名</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="slrDm" type="slrDm">
+				<xs:annotation>
+					<xs:documentation>受理人代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="dljgbsrxm" type="dljgbsrxm">
+				<xs:annotation>
+					<xs:documentation>代理机构经办人姓名，代理机构填写时，该项必须录入</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="dljbrzyzjhm" type="dljbrzyzjhm">
+				<xs:annotation>
+					<xs:documentation>代理经办人执业证件号码，代理机构填写时，该项必须录入</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="slrq" type="slrq">
+				<xs:annotation>
+					<xs:documentation>受理日期</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="lrrq" type="lrrq">
+				<xs:annotation>
+					<xs:documentation>录入日期</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="slswjgDm" type="slswjgDm">
+				<xs:annotation>
+					<xs:documentation>受理税务机关代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="slswjgMc" type="slswjgmc">
+				<xs:annotation>
+					<xs:documentation>受理税务机关名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sblxDm" type="bgbz">
+				<xs:annotation>
+					<xs:documentation>申报方式代码，0：正常申报，1：更正申报</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="dljg" type="kjywrmc">
+				<xs:annotation>
+					<xs:documentation>代理机构</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ssglyDm" type="ssglyDm">
+				<xs:annotation>
+					<xs:documentation>税收管理员代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="tdhyndsdssbbBody">
+		<xs:annotation>
+			<xs:documentation>特定行业年度所得税申报表表体</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="tdhyndsdssbb" type="tdhyndsdssbb" minOccurs="1" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>特定行业年度所得税申报表列表</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="tdhyndsdssbbHj" type="tdhyndsdssbbHj" minOccurs="1" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>特定行业年度所得税申报表合计</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="tdhyndsdssbb">
+		<xs:sequence>
+			<xs:element name="tdhyndsdssbbMx" type="tdhyndsdssbbMx" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="tdhyndsdssbbMx">
+		<xs:annotation>
+			<xs:documentation>特定行业年度所得税申报表明细</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="xh" type="xh">
+				<xs:annotation>
+					<xs:documentation>序号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="nsrxm" type="nsrmc">
+				<xs:annotation>
+					<xs:documentation>纳税人姓名</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zzlxdm" type="sfzjlxDm">
+				<xs:annotation>
+					<xs:documentation>证照类型代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zzlxmc" type="zzlxmc">
+				<xs:annotation>
+					<xs:documentation>证照类型名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zzhm" type="zzhm">
+				<xs:annotation>
+					<xs:documentation>证照号码当证照类型代码为201【居民身份证】时，证照号码长度只能为18位</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="nsrsbh" type="nsrsbh">
+				<xs:annotation>
+					<xs:documentation>纳税人识别号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="djxh" type="djxh">
+				<xs:annotation>
+					<xs:documentation>登记序号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sdxmdm" type="grsdssdxmDm">
+				<xs:annotation>
+					<xs:documentation>所得项目代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sdxmmc" type="sdxmmc">
+				<xs:annotation>
+					<xs:documentation>所得项目名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sdqjq" type="sdqjq">
+				<xs:annotation>
+					<xs:documentation>所得期间起</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sdqjz" type="sdqjz">
+				<xs:annotation>
+					<xs:documentation>所得期间止</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qnsre" type="sre">
+				<xs:annotation>
+					<xs:documentation>全年收入额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qnmssdje" type="mssdje">
+				<xs:annotation>
+					<xs:documentation>全年免税所得金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qnylbxje" type="ylbxjjje">
+				<xs:annotation>
+					<xs:documentation>全年养老保险金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qnyilbxje" type="ylbxjjje">
+				<xs:annotation>
+					<xs:documentation>全年医疗保险金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qnsybxje" type="ylbxjjje">
+				<xs:annotation>
+					<xs:documentation>全年失业保险金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qnzfgjjje" type="zfgjjje">
+				<xs:annotation>
+					<xs:documentation>全年住房公积金金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qnsqkcxmqtje" type="zykcdsf">
+				<xs:annotation>
+					<xs:documentation>全年（税前扣除项目）其他金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qnsqkcxmnjje" type="zykcdsf">
+				<xs:annotation>
+					<xs:documentation>全年税前扣除项目年金金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qnsqkcxmsyjkxje" type="zykcdsf">
+				<xs:annotation>
+					<xs:documentation>全年税前扣除项目商业健康险金额,没有时传0,大于0时,附表【TaxMLBd_BDA0610855_v1.1.xsd《商业健康保险税前扣除》】必录，并且明细中的自然人一定要在《商业健康保险税前扣除》明细中存在。				
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qnsqkcxmtzdkje" type="zykcdsf">
+				<xs:annotation>
+					<xs:documentation>全年税前扣除项目投资抵扣金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qnsqkcxmsyylbxje" type="zykcdsf">
+				<xs:annotation>
+					<xs:documentation>全年税前扣除项目税延养老保险金额，	（税前扣除项目）税延养老保险，没有时传0；
+				      大于0时,附表【TaxMLBd_A061001051_v1.1.xsd《税延型商业养老保险税前扣除表》】必录，并且明细中的自然人一定要在《税延型商业养老保险税前扣除表》明细中存在。
+				    </xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qnsqkcxmjehj" type="kcxmjehj">
+				<xs:annotation>
+					<xs:documentation>全年税前扣除项目金额合计</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qnjcfye" type="fykcbz">
+				<xs:annotation>
+					<xs:documentation>全年减除费用额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zykcdjze" type="zykcdjze">
+				<xs:annotation>
+					<xs:documentation>准予扣除的捐赠额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ypjynssde" type="ynssde">
+				<xs:annotation>
+					<xs:documentation>月平均应纳税所得额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sl1" type="sl1">
+				<xs:annotation>
+					<xs:documentation>税率</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sskcs" type="sskcs">
+				<xs:annotation>
+					<xs:documentation>速算扣除数</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zspmDm" type="zspmDm">
+				<xs:annotation>
+					<xs:documentation>征收品目代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ypjynse" type="ynse">
+				<xs:annotation>
+					<xs:documentation>月平均应纳（扣缴）税额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qnyingkjse" type="ykse">
+				<xs:annotation>
+					<xs:documentation>全年应扣缴税额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jmse" type="jmse">
+				<xs:annotation>
+					<xs:documentation>减免税额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qnyujse" type="yjse1">
+				<xs:annotation>
+					<xs:documentation>全年预缴税额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ybtse" type="sjybtse">
+				<xs:annotation>
+					<xs:documentation>应补退税额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bz" type="bz">
+				<xs:annotation>
+					<xs:documentation>备注</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="tdhyndsdssbbHj">
+		<xs:annotation>
+			<xs:documentation>特定行业年度所得税申报表合计</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="hjQnsre" type="sre">
+				<xs:annotation>
+					<xs:documentation>合计全年收入额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="hjQnmssdje" type="mssdje">
+				<xs:annotation>
+					<xs:documentation>合计全年免税所得额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="hjQnylbxje" type="ylbxjjje">
+				<xs:annotation>
+					<xs:documentation>合计全年养老保险</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="hjQnyilbxje" type="ylbxjjje">
+				<xs:annotation>
+					<xs:documentation>合计全年医疗保险</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="hjQnsybxje" type="ylbxjjje">
+				<xs:annotation>
+					<xs:documentation>合计全年失业保险</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="hjQnzfgjjje" type="zfgjjje">
+				<xs:annotation>
+					<xs:documentation>合计全年住房公积金</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="hjQnsqkcxmqtje" type="zfgjjje">
+				<xs:annotation>
+					<xs:documentation>合计全年税前扣除项目其他金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="hjQnsqkcxmnjje" type="zfgjjje">
+				<xs:annotation>
+					<xs:documentation>合计全年税前扣除项目年金金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="hjQnsqkcxmsyjkxje" type="zfgjjje">
+				<xs:annotation>
+					<xs:documentation>合计全年税前扣除项目商业健康险金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="hjQnsqkcxmtzdkje" type="zfgjjje">
+				<xs:annotation>
+					<xs:documentation>合计全年税前扣除项目投资抵扣金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="hjQnsqkcxmsyylbxje" type="zfgjjje">
+				<xs:annotation>
+					<xs:documentation>合计全年税前扣除项目税延养老保险金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="hjQnsqkcxmjehj" type="kcxmjehj">
+				<xs:annotation>
+					<xs:documentation>合计全年税前扣除项目金额合计</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="hjQnjcfye" type="sre">
+				<xs:annotation>
+					<xs:documentation>合计减除费用额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="hjZykcdjze" type="zykcdjze">
+				<xs:annotation>
+					<xs:documentation>合计准予扣除的捐赠额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="hjYpjynssde" type="ynssde">
+				<xs:annotation>
+					<xs:documentation>合计月平均应纳税所得额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="hjYpjynse" type="ynse">
+				<xs:annotation>
+					<xs:documentation>合计月平均应纳（扣缴）税额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="hjQnYingkjse" type="ykjse">
+				<xs:annotation>
+					<xs:documentation>合计全年应扣缴税额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="hjJmse" type="jmse">
+				<xs:annotation>
+					<xs:documentation>合计减免税额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="hjQnyujse" type="ykjse">
+				<xs:annotation>
+					<xs:documentation>合计全年预缴税额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="hjYbtse" type="ybtse">
+				<xs:annotation>
+					<xs:documentation>合计应补退税额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

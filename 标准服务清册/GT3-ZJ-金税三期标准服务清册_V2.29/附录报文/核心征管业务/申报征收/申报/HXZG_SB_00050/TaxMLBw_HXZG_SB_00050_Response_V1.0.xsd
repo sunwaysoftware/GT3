@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2009 (http://www.altova.com) by Administrator (EMBRACE) -->
+<!-- 被2011 rel. 2 sp1 (TeaM DJiNN) 使用XMLSpy vTeaM DJiNN编辑的 (http://www.altova.com) by -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:include schemaLocation="TaxMLPublicSBType.xsd"/>
+	<xs:include schemaLocation="TaxMLBw_kqsyfyjsb_V1.0.xsd"/>
+	<xs:complexType name="HXZGSB00050Response">
+		<xs:annotation>
+			<xs:documentation>矿区使用费预缴申报事前监控返回报文</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="sbxxGrid">
+						<xs:annotation>
+							<xs:documentation>申报信息</xs:documentation>
+						</xs:annotation>
+						<xs:complexType>
+							<xs:sequence minOccurs="0" maxOccurs="unbounded">
+								<xs:element name="sbxxGridlb" type="SBSbxxJhVO"/>
+							</xs:sequence>
+						</xs:complexType>
+					</xs:element>
+					<xs:element name="jmxxGrid">
+						<xs:annotation>
+							<xs:documentation>减免信息</xs:documentation>
+						</xs:annotation>
+						<xs:complexType>
+							<xs:sequence minOccurs="0" maxOccurs="unbounded">
+								<xs:element name="jmxxGridlb" type="SBJmxxJhVO"/>
+							</xs:sequence>
+						</xs:complexType>
+					</xs:element>
+					<xs:element name="yjxxGrid">
+						<xs:annotation>
+							<xs:documentation>预缴信息</xs:documentation>
+						</xs:annotation>
+						<xs:complexType>
+							<xs:sequence minOccurs="0" maxOccurs="unbounded">
+								<xs:element name="yjxxGridlb" type="SBYjxxJhVO"/>
+							</xs:sequence>
+						</xs:complexType>
+					</xs:element>
+					<xs:element name="kqsyfjfgzGrid">
+						<xs:annotation>
+							<xs:documentation>矿区使用费计费规则</xs:documentation>
+						</xs:annotation>
+						<xs:complexType>
+							<xs:sequence minOccurs="0" maxOccurs="unbounded">
+								<xs:element name="kqsyfjfgzGridlb" type="SBKqsyfJfgzVO"/>
+							</xs:sequence>
+						</xs:complexType>
+					</xs:element>
+					<xs:element name="skssqz" type="skssqz">
+						<xs:annotation>
+							<xs:documentation>税款所属期</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="SBKqsyfyjsbVO">
+		<xs:annotation>
+			<xs:documentation>矿区使用费预缴申报VO</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="SBYqtGrid">
+				<xs:complexType>
+					<xs:sequence minOccurs="0" maxOccurs="unbounded">
+						<xs:element name="SBYqtGridlb" type="SBYqtVO"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="SBKqsyfJfgzGrid">
+				<xs:complexType>
+					<xs:sequence minOccurs="0" maxOccurs="unbounded">
+						<xs:element name="SBKqsyfJfgzGridlb" type="SBKqsyfJfgzVO"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="Kqsyfyjsbywbw" type="KqsyfyjsbSbbdxxVO"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="SBYqtVO">
+		<xs:annotation>
+			<xs:documentation>油气田VO</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="yqtDm" type="yqtDm" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>油气田代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yqtmc" type="yqtmc" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>油气田名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zyzmc" type="zyzmc" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>作业者名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sjgsdq" type="sjgsdq" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>数据归属地区</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yxbz" type="yxbz" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>有效标志</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="xybz" type="xybz" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>选用标志</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="swjgDm" type="swjgDm" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>税务机关代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="lrrDm" type="lrrDm" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>录入人代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="lrrq" type="lrrq" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>录入日期</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="xgrq" type="xgrq" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>修改日期</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="djxh" type="djxh" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>登记序号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="SBKqsyfJfgzVO">
+		<xs:annotation>
+			<xs:documentation>矿区使用费计费规则VO</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="yfcpmc" type="yfcpmc" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>应费产品名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sskcs" type="sskcs" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>速算扣除数</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="syfl" type="syfl" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>适用费率</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jfslz" type="jfslz" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>计费数量止</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jfslq" type="jfslq" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>计费数量起</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="fljcms" type="fljcms" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>费率级次描述</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zspmDm" type="zspmDm" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>征收品目代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

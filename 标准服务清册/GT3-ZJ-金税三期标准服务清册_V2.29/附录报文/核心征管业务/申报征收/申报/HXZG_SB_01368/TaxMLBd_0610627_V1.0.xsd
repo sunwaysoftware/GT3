@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 被2012 () 使用XMLSpy v编辑的 (http://www.altova.com) by -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:include schemaLocation="TaxMLPublicType.xsd"/>
+	<xs:complexType name="yzrfdcygsjmxsbbywbw">
+		<xs:annotation>
+			<xs:documentation>与转让房地产有关税金明细申报表业务报文</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="yzrfdcygsjmxsbb" type="yzrfdcygsjmxsbb">
+						<xs:annotation>
+							<xs:documentation>与转让房地产有关税金明细申报表</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="yzrfdcygsjmxsbb">
+		<xs:annotation>
+			<xs:documentation>与转让房地产有关税金明细申报表</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="yzrfdcygsjmxsbbForm">
+				<xs:annotation>
+					<xs:documentation>申报表信息</xs:documentation>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:complexContent>
+						<xs:extension base="yzrfdcygsjmxsbbForm"/>
+					</xs:complexContent>
+				</xs:complexType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="yzrfdcygsjmxsbbForm">
+		<xs:annotation>
+			<xs:documentation>申报头信息</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="yjnskje1" type="je">
+				<xs:annotation>
+					<xs:documentation>应缴纳税款金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sjjnskje1" type="je">
+				<xs:annotation>
+					<xs:documentation>实际缴纳税款金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bz1" type="bz">
+				<xs:annotation>
+					<xs:documentation>备 注</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yjnskje2" type="je">
+				<xs:annotation>
+					<xs:documentation>应缴纳税款金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sjjnskje2" type="je">
+				<xs:annotation>
+					<xs:documentation>实际缴纳税款金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bz2" type="bz">
+				<xs:annotation>
+					<xs:documentation>备 注</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yjnskje3" type="je">
+				<xs:annotation>
+					<xs:documentation>应缴纳税款金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sjjnskje3" type="je">
+				<xs:annotation>
+					<xs:documentation>实际缴纳税款金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bz3" type="bz">
+				<xs:annotation>
+					<xs:documentation>备 注</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yjnskje4" type="je">
+				<xs:annotation>
+					<xs:documentation>应缴纳税款金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sjjnskje4" type="je">
+				<xs:annotation>
+					<xs:documentation>实际缴纳税款金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bz4" type="bz">
+				<xs:annotation>
+					<xs:documentation>备 注</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yjnskje5" type="je">
+				<xs:annotation>
+					<xs:documentation>应缴纳税款金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sjjnskje5" type="je">
+				<xs:annotation>
+					<xs:documentation>实际缴纳税款金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bz5" type="bz">
+				<xs:annotation>
+					<xs:documentation>备 注</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yjnskje6" type="je">
+				<xs:annotation>
+					<xs:documentation>应缴纳税款金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sjjnskje6" type="je">
+				<xs:annotation>
+					<xs:documentation>实际缴纳税款金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bz6" type="bz">
+				<xs:annotation>
+					<xs:documentation>备 注</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yjnskje7" type="je">
+				<xs:annotation>
+					<xs:documentation>应缴纳税款金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sjjnskje7" type="je">
+				<xs:annotation>
+					<xs:documentation>实际缴纳税款金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bz7" type="bz">
+				<xs:annotation>
+					<xs:documentation>备 注</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yjnskje8" type="je">
+				<xs:annotation>
+					<xs:documentation>应缴纳税款金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sjjnskje8" type="je">
+				<xs:annotation>
+					<xs:documentation>实际缴纳税款金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bz8" type="bz">
+				<xs:annotation>
+					<xs:documentation>备 注</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

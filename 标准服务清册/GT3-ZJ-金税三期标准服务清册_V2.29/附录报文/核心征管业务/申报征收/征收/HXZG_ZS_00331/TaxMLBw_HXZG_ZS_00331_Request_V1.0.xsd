@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 被2011 rel. 2 sp1 (TeaM DJiNN) 使用XMLSpy vTeaM DJiNN编辑的 (http://www.altova.com) by -->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://www.chinatax.gov.cn/dataspec/" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:complexType name="HXZGZS00331RequestVO">
+		<xs:annotation>
+			<xs:documentation>完税凭证换开标志记录请求报文</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="zsWszhkVO">
+						<xs:complexType>
+							<xs:complexContent>
+								<xs:extension base="WszhkVO"/>
+							</xs:complexContent>
+						</xs:complexType>
+					</xs:element>
+					<xs:element name="hkpzqkGrid">
+						<xs:complexType>
+							<xs:sequence maxOccurs="unbounded">
+								<xs:element name="hkpzqkGridlb" type="HkpzqkGridlbVO"/>
+							</xs:sequence>
+						</xs:complexType>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="WszhkVO">
+		<xs:annotation>
+			<xs:documentation>完税证换开VO</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="djxh" type="djxh">
+				<xs:annotation>
+					<xs:documentation>登记序号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="hkrq" type="kprq">
+				<xs:annotation>
+					<xs:documentation>换开日期</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="swjgDm" type="swjgDm">
+				<xs:annotation>
+					<xs:documentation>税务机关代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="czryDm" type="czryDm">
+				<xs:annotation>
+					<xs:documentation>操作人员代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sjgsdq" type="sjgsdq">
+				<xs:annotation>
+					<xs:documentation>数据归属地区</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="HkpzqkGridlbVO">
+		<xs:annotation>
+			<xs:documentation>完税证换开列表VO</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="pzzlDm" type="pzzlDm">
+				<xs:annotation>
+					<xs:documentation>开具凭证类型</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="pzzgDm" type="pzzgDm">
+				<xs:annotation>
+					<xs:documentation>开具凭证字轨</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="pzhm" type="pzhm">
+				<xs:annotation>
+					<xs:documentation>开具凭证号码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sjje" type="sjje">
+				<xs:annotation>
+					<xs:documentation>实缴金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jklxDm" type="jklxDm">
+				<xs:annotation>
+					<xs:documentation>缴款类型代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="dzsphm" type="dzsphm">
+				<xs:annotation>
+					<xs:documentation>电子缴税序号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="spuuid" type="spuuid">
+				<xs:annotation>
+					<xs:documentation>税票uuid</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

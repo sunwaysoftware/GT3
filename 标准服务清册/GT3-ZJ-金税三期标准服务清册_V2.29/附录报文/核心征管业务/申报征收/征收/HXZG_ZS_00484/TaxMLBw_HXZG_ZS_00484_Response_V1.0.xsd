@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 被2011 rel. 2 sp1 (TeaM DJiNN) 使用XMLSpy vTeaM DJiNN编辑的 (http://www.altova.com) by -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:complexType name="ZSHXZG00484ResponseVO">
+		<xs:annotation>
+			<xs:documentation>纳税人其他纳税核定信息查询响应报文</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="ZS00484nsrqtnshdxxGrid">
+						<xs:complexType>
+							<xs:sequence minOccurs="0" maxOccurs="unbounded">
+								<xs:element name="nsrqtnshdxxGridlb" type="ZS00484NsrqtnshdxxVO"/>
+							</xs:sequence>
+						</xs:complexType>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="ZS00484NsrqtnshdxxVO">
+		<xs:annotation>
+			<xs:documentation>纳税人其他纳税核定信息VO</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="zsxmDm"  type="zsxmDm">
+				<xs:annotation>
+					<xs:documentation>征收项目代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zspmDm"  type="zspmDm">
+				<xs:annotation>
+					<xs:documentation>征收品目代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jsyj"  type="jsyj">
+				<xs:annotation>
+					<xs:documentation>计税依据</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ynsjye"  type="ynsjye">
+				<xs:annotation>
+					<xs:documentation>应纳税经营额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sl1"  type="sl1">
+				<xs:annotation>
+					<xs:documentation>税率</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ynse"  type="ynse">
+				<xs:annotation>
+					<xs:documentation>应纳税额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="hdse"  type="hdse">
+				<xs:annotation>
+					<xs:documentation>核定税额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jsbz1"  type="jsbz1">
+				<xs:annotation>
+					<xs:documentation>计税标志</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jyxmDm"  type="jyxmDm">
+				<xs:annotation>
+					<xs:documentation>经营项目代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="wdqzdbz"  type="wdqzdbz">
+				<xs:annotation>
+					<xs:documentation>未达起征点标志</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

@@ -1,0 +1,405 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 被2011 rel. 2 sp1 (TeaM DJiNN) 使用XMLSpy vTeaM DJiNN编辑的 (http://www.altova.com) by -->
+<!-- edited with XMLSpy v2010 rel. 3 (http://www.altova.com) by liuwei (liuweicss) -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:include schemaLocation="TaxMLPublicType.xsd"/>
+	<xs:complexType name="qjfymxbForm">
+		<xs:annotation>
+			<xs:documentation>期间费用明细表(A104000)业务报文</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="qjfyMxbVO" type="qjfymxbVO" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>期间费用明细表</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="qjfymxbVO">
+		<xs:annotation>
+			<xs:documentation>《期间费用明细表》</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="zgxcxsfy" type="je">
+				<xs:annotation>
+					<xs:documentation>职工薪酬销售费用</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zgxcglfy" type="je">
+				<xs:annotation>
+					<xs:documentation>职工薪酬管理费用</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="lwfxsfy" type="je">
+				<xs:annotation>
+					<xs:documentation>劳务费销售费用</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="lwfjwzf" type="je">
+				<xs:annotation>
+					<xs:documentation>劳务费境外支付</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="lwfglfy" type="je">
+				<xs:annotation>
+					<xs:documentation>劳务费管理费用</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="lwfjwzf1" type="je">
+				<xs:annotation>
+					<xs:documentation>劳务费境外支付1</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zxgwfxsfy" type="je">
+				<xs:annotation>
+					<xs:documentation>咨询顾问费销售费用</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zxgwfjwzf" type="je">
+				<xs:annotation>
+					<xs:documentation>咨询顾问费境外支付</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zxgwfglfy" type="je">
+				<xs:annotation>
+					<xs:documentation>咨询顾问费管理费用</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zxgwfjwzf1" type="je">
+				<xs:annotation>
+					<xs:documentation>咨询顾问费境外支付1</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ywzdfxsfy" type="je">
+				<xs:annotation>
+					<xs:documentation>业务招待费销售费用</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ywzdfglfy" type="je">
+				<xs:annotation>
+					<xs:documentation>业务招待费管理费用</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ggxcfxsfy" type="je">
+				<xs:annotation>
+					<xs:documentation>广告费和业务宣传费销售费用</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ggxcfglfy" type="je">
+				<xs:annotation>
+					<xs:documentation>广告费和业务宣传费管理费用</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yjsxfxsfy" type="je">
+				<xs:annotation>
+					<xs:documentation>佣金和手续费销售费用</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yjsxfjwzf" type="je">
+				<xs:annotation>
+					<xs:documentation>佣金和手续费境外支付</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yjsxfglfy" type="je">
+				<xs:annotation>
+					<xs:documentation>佣金和手续费管理费用</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yjsxfjwzf1" type="je">
+				<xs:annotation>
+					<xs:documentation>佣金和手续费境外支付1</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yjsxfcwfy" type="je">
+				<xs:annotation>
+					<xs:documentation>佣金和手续费财务费用</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yjsxfjwzf2" type="je">
+				<xs:annotation>
+					<xs:documentation>佣金和手续费境外支付2</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zczjtxfxsfy" type="je">
+				<xs:annotation>
+					<xs:documentation>资产折旧摊销费销售费用</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zczjtxfglfy" type="je">
+				<xs:annotation>
+					<xs:documentation>资产折旧摊销费管理费用</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ccshpkxsfy" type="je">
+				<xs:annotation>
+					<xs:documentation>财产损耗、盘亏及毁损损失销售费用</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ccshpkglfy" type="je">
+				<xs:annotation>
+					<xs:documentation>财产损耗、盘亏及毁损损失管理费用</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bgfxsfy" type="je">
+				<xs:annotation>
+					<xs:documentation>办公费销售费用</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bgfglfy" type="je">
+				<xs:annotation>
+					<xs:documentation>办公费管理费用</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="dshfxsfy" type="je">
+				<xs:annotation>
+					<xs:documentation>董事会费销售费用</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="dshfglfy" type="je">
+				<xs:annotation>
+					<xs:documentation>董事会费管理费用</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zlfxsfy" type="je">
+				<xs:annotation>
+					<xs:documentation>租赁费销售费用</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zlfjwzf" type="je">
+				<xs:annotation>
+					<xs:documentation>租赁费境外支付</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zlfglfy" type="je">
+				<xs:annotation>
+					<xs:documentation>租赁费管理费用</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zlfjwzf1" type="je">
+				<xs:annotation>
+					<xs:documentation>租赁费境外支付1</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ssfxsfy" type="je">
+				<xs:annotation>
+					<xs:documentation>诉讼费销售费用</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ssfglfy" type="je">
+				<xs:annotation>
+					<xs:documentation>诉讼费管理费用</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="clfxsfy" type="je">
+				<xs:annotation>
+					<xs:documentation>差旅费销售费用</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="clfglfy" type="je">
+				<xs:annotation>
+					<xs:documentation>差旅费管理费用</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bxfxsfy" type="je">
+				<xs:annotation>
+					<xs:documentation>保险费销售费用</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bxfglfy" type="je">
+				<xs:annotation>
+					<xs:documentation>保险费管理费用</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ysccfxsfy" type="je">
+				<xs:annotation>
+					<xs:documentation>运输、仓储费销售费用</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ysccfjwzf" type="je">
+				<xs:annotation>
+					<xs:documentation>运输、仓储费境外支付</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ysccfglfy" type="je">
+				<xs:annotation>
+					<xs:documentation>运输、仓储费管理费用</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ysccfjwzf1" type="je">
+				<xs:annotation>
+					<xs:documentation>运输、仓储费境外支付1</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="xlfxsfy" type="je">
+				<xs:annotation>
+					<xs:documentation>修理费销售费用</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="xlfjwzf" type="je">
+				<xs:annotation>
+					<xs:documentation>修理费境外支付</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="xlfglfy" type="je">
+				<xs:annotation>
+					<xs:documentation>修理费管理费用</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="xlfjwzf1" type="je">
+				<xs:annotation>
+					<xs:documentation>修理费境外支付1</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bzfxsfy" type="je">
+				<xs:annotation>
+					<xs:documentation>包装费销售费用</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bzfglfy" type="je">
+				<xs:annotation>
+					<xs:documentation>包装费管理费用</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jszrfxsfy" type="je">
+				<xs:annotation>
+					<xs:documentation>技术转让费销售费用</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jszrfjwzf" type="je">
+				<xs:annotation>
+					<xs:documentation>技术转让费境外支付</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jszrfglfy" type="je">
+				<xs:annotation>
+					<xs:documentation>技术转让费管理费用</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jszrfjwzf1" type="je">
+				<xs:annotation>
+					<xs:documentation>技术转让费境外支付1</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yjfyxsfy" type="je">
+				<xs:annotation>
+					<xs:documentation>研究费用销售费用</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yjfyjwzf" type="je">
+				<xs:annotation>
+					<xs:documentation>研究费用境外支付</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yjfyglfy" type="je">
+				<xs:annotation>
+					<xs:documentation>研究费用管理费用</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yjfyjwzf1" type="je">
+				<xs:annotation>
+					<xs:documentation>研究费用境外支付1</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="gxsfxsfy" type="je">
+				<xs:annotation>
+					<xs:documentation>各项税费销售费用</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="gxsfglfy" type="je">
+				<xs:annotation>
+					<xs:documentation>各项税费管理费用</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="lxszcwfy" type="je">
+				<xs:annotation>
+					<xs:documentation>利息收支财务费用</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="lxszjwzf2" type="je">
+				<xs:annotation>
+					<xs:documentation>利息收支境外支付2</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="hdcecwfy" type="je">
+				<xs:annotation>
+					<xs:documentation>汇兑差额财务费用</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="xjzkcwfy" type="je">
+				<xs:annotation>
+					<xs:documentation>现金折扣财务费用</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qtxsfy" type="je">
+				<xs:annotation>
+					<xs:documentation>其他销售费用</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qtjwzf" type="je">
+				<xs:annotation>
+					<xs:documentation>其他境外支付</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qtglfy" type="je">
+				<xs:annotation>
+					<xs:documentation>其他管理费用</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qtjwzf1" type="je">
+				<xs:annotation>
+					<xs:documentation>其他境外支付1</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qtcwfy" type="je">
+				<xs:annotation>
+					<xs:documentation>其他财务费用</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qtjwzf2" type="je">
+				<xs:annotation>
+					<xs:documentation>其他境外支付2</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="hjxsfy" type="je">
+				<xs:annotation>
+					<xs:documentation>合计销售费用</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="hjjwzf" type="je">
+				<xs:annotation>
+					<xs:documentation>合计境外支付</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="hjglfy" type="je">
+				<xs:annotation>
+					<xs:documentation>合计管理费用</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="hjjwzf1" type="je">
+				<xs:annotation>
+					<xs:documentation>合计境外支付1</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="hjcwfy" type="je">
+				<xs:annotation>
+					<xs:documentation>合计财务费用</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="hjjwzf2" type="je">
+				<xs:annotation>
+					<xs:documentation>合计境外支付2</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="hdcejwzf2" type="je">
+				<xs:annotation>
+					<xs:documentation>汇兑差额，其中境外支付||汇兑差额，其中境外支付</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

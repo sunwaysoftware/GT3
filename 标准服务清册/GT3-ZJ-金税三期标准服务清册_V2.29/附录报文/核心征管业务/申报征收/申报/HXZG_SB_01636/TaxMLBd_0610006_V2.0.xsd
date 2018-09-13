@@ -1,0 +1,545 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2010 (http://www.altova.com) by MESMERiZE (MiZE) -->
+<!-- 编辑使用 XMLSpy v2006 U (http://www.altova.com) 由 any (any) -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:complexType name="ccqkdjbywbw">
+		<xs:annotation>
+			<xs:documentation>车船情况登记表业务报文</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="ccqkdjb" type="ccqkdjb">
+						<xs:annotation>
+							<xs:documentation>车船情况登记表</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="ccqkdjb">
+		<xs:annotation>
+			<xs:documentation>车船情况登记表</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="ClqkxxsGrid" type="ClqkxxsGrid">
+				<xs:annotation>
+					<xs:documentation>车辆情况信息Grid</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="CbqkxxsGrid" type="CbqkxxsGrid">
+				<xs:annotation>
+					<xs:documentation>船舶情况信息Grid</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="ClqkxxsGrid">
+		<xs:annotation>
+			<xs:documentation>车辆情况信息</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="InsertClqkxxGrid" type="InsertClqkxxGrid">
+				<xs:annotation>
+					<xs:documentation>新增车辆情况信息Grid</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="UpdateClqkxxGrid" type="UpdateClqkxxGrid">
+				<xs:annotation>
+					<xs:documentation>修改车辆情况信息Grid</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="DeleteClqkxxGrid" type="DeleteClqkxxGrid">
+				<xs:annotation>
+					<xs:documentation>删除车辆情况信息Grid</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="InsertClqkxxGrid">
+		<xs:annotation>
+			<xs:documentation>新增车辆情况信息Grid</xs:documentation>
+		</xs:annotation>
+		<xs:sequence minOccurs="0" maxOccurs="unbounded">
+			<xs:element name="InsertClqkxxGridlb" type="DJClqkxxVO">
+				<xs:annotation>
+					<xs:documentation>新增车辆情况信息列表</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="UpdateClqkxxGrid">
+		<xs:annotation>
+			<xs:documentation>修改车辆情况信息</xs:documentation>
+		</xs:annotation>
+		<xs:sequence minOccurs="0" maxOccurs="unbounded">
+			<xs:element name="UpdateClqkxxGridlb" type="DJClqkxxVO">
+				<xs:annotation>
+					<xs:documentation>修改车辆情况信息列表</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="DeleteClqkxxGrid">
+		<xs:annotation>
+			<xs:documentation>删除车辆情况信息</xs:documentation>
+		</xs:annotation>
+		<xs:sequence minOccurs="0" maxOccurs="unbounded">
+			<xs:element name="DeleteClqkxxGridlb" type="DJClqkxxVO">
+				<xs:annotation>
+					<xs:documentation>删除车辆情况信息列表</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="CbqkxxsGrid">
+		<xs:annotation>
+			<xs:documentation>车辆情况信息</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="InsertCbqkxxGrid" type="InsertCbqkxxGrid">
+				<xs:annotation>
+					<xs:documentation>新增船舶情况信息Grid</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="UpdateCbqkxxGrid" type="UpdateCbqkxxGrid">
+				<xs:annotation>
+					<xs:documentation>修改船舶情况信息Grid</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="DeleteCbqkxxGrid" type="DeleteCbqkxxGrid">
+				<xs:annotation>
+					<xs:documentation>删除船舶情况信息Grid</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="InsertCbqkxxGrid">
+		<xs:annotation>
+			<xs:documentation>新增船舶情况信息Grid</xs:documentation>
+		</xs:annotation>
+		<xs:sequence minOccurs="0" maxOccurs="unbounded">
+			<xs:element name="InsertCbqkxxGridlb" type="DJCbqkxxVO">
+				<xs:annotation>
+					<xs:documentation>新增船舶情况信息列表</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="UpdateCbqkxxGrid">
+		<xs:annotation>
+			<xs:documentation>修改船舶情况信息</xs:documentation>
+		</xs:annotation>
+		<xs:sequence minOccurs="0" maxOccurs="unbounded">
+			<xs:element name="UpdateCbqkxxGridlb" type="DJCbqkxxVO">
+				<xs:annotation>
+					<xs:documentation>修改船舶情况信息列表</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="DeleteCbqkxxGrid">
+		<xs:annotation>
+			<xs:documentation>删除船舶情况信息</xs:documentation>
+		</xs:annotation>
+		<xs:sequence minOccurs="0" maxOccurs="unbounded">
+			<xs:element name="DeleteCbqkxxGridlb" type="DJCbqkxxVO">
+				<xs:annotation>
+					<xs:documentation>删除船舶情况信息列表</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="DJClqkxxVO">
+		<xs:annotation>
+			<xs:documentation>车辆情况信息</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="clqkuuid" type="clqkuuid">
+				<xs:annotation>
+					<xs:documentation>车辆情况UUID</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="djxh" type="djxh">
+				<xs:annotation>
+					<xs:documentation>登记序号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="clpzh" type="clpzh" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>车辆牌照号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="clsbdh" type="clsbdh">
+				<xs:annotation>
+					<xs:documentation>车辆识别代号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zspmDm" type="zspmDm">
+				<xs:annotation>
+					<xs:documentation>征收品目代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ssswjgDm" type="ssswjgDm">
+				<xs:annotation>
+					<xs:documentation>所属税务机关代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="xzqhszDm" type="xzqhszDm">
+				<xs:annotation>
+					<xs:documentation>行政区划数字代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jdxzDm" type="jdxzDm" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>街道乡镇代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sl1" type="sl1" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>税率</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bz" type="bz" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>备注</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zxrq" type="zxrq" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>注销日期</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zbzl" type="zbzl" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>整备质量</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="hdzkrs" type="hdzkrs" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>核定载客人数</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="pql" type="pql" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>排气量</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sjtbSj" type="sjtbSj" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>数据同步时间</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zszmDm" type="zszmDm" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>征收子目代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ppxh" type="ppxh" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>车辆型号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="clcp" type="clcp" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>车辆厂牌</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="syxz" type="syxz" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>使用性质||使用性质</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jdcrlnyzlDm" type="jdcrlnyzlDm" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>机动车燃料（能源）种类代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="clfprqhzcdjrq" type="clfprqhzcdjrq" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>车辆发票日期或注册登记日期||车辆发票日期或注册登记日期</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="fdjhm" type="fdjhm" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>发动机号码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zfbz1" type="zfbz1" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>作废标志</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="lrrDm" type="lrrDm">
+				<xs:annotation>
+					<xs:documentation>录入人代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="lrrq" type="lrrq">
+				<xs:annotation>
+					<xs:documentation>录入日期</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="xgrDm" type="xgrDm" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>修改人代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="xgrq" type="xgrq" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>修改日期</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sjgsdq" type="sjgsdq">
+				<xs:annotation>
+					<xs:documentation>数据归属地区</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="nsqxDm" type="nsqxDm" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>纳税期限代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jkqxDm" type="jkqxDm" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>缴款期限代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sbqxDm" type="sbqxDm" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>申报期限代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sbbz" type="bz1" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>是否申报标志（Y已申报N未申报）</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jldwDm" type="jldwDm" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>计量单位代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="DJCbqkxxVO">
+		<xs:annotation>
+			<xs:documentation>船舶情况信息</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="cbqkuuid" type="cbqkuuid">
+				<xs:annotation>
+					<xs:documentation>船舶情况UUID</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="djxh" type="djxh">
+				<xs:annotation>
+					<xs:documentation>登记序号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="cbpzhm" type="cbpzhm" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>船舶牌照号码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="cbjdw" type="cbjdw" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>船舶净吨位</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="cbmc" type="cbmc" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>船舶名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bz" type="bz" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>备注</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zxrq" type="zxrq" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>注销日期</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zspmDm" type="zspmDm">
+				<xs:annotation>
+					<xs:documentation>征收品目代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ssswjgDm" type="ssswjgDm">
+				<xs:annotation>
+					<xs:documentation>所属税务机关代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="xzqhszDm" type="xzqhszDm">
+				<xs:annotation>
+					<xs:documentation>行政区划数字代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jdxzDm" type="jdxzDm" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>街道乡镇代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sl1" type="sl1" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>税率</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="cbsbh" type="cbsbh" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>船舶识别号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="tscd" type="tscd" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>艇身长度||（米）</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="fdjgl" type="fdjgl" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>发动机功率</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sjtbSj" type="sjtbSj" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>数据同步时间</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zszmDm" type="zszmDm" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>征收子目代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jcenrq" type="jcenrq" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>建成日期||建成日期</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="fzrq" type="fzrq" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>发证日期</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="cjg" type="cjg" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>船籍港||船籍港</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ccdjhm" type="ccdjhm" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>初次登记号码||初次登记号码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qdsyqrq" type="qdsyqrq" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>取得所有权日期</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zjzl" type="zjzl" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>主机种类</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zfbz1" type="zfbz1" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>作废标志</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="lrrDm" type="lrrDm">
+				<xs:annotation>
+					<xs:documentation>录入人代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="lrrq" type="lrrq">
+				<xs:annotation>
+					<xs:documentation>录入日期</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="xgrDm" type="xgrDm" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>修改人代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="xgrq" type="xgrq" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>修改日期</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sjgsdq" type="sjgsdq">
+				<xs:annotation>
+					<xs:documentation>数据归属地区</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="nsqxDm" type="nsqxDm" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>纳税期限代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jkqxDm" type="jkqxDm" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>缴款期限代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sbqxDm" type="sbqxDm" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>申报期限代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sbbz" type="bz1" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>是否申报标志（Y已申报N未申报）</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jldwDm" type="jldwDm" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>计量单位代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="clqkxxGrid">
+		<xs:annotation>
+			<xs:documentation>纳税人车船登记信息查询-车辆情况信息</xs:documentation>
+		</xs:annotation>
+		<xs:sequence minOccurs="0" maxOccurs="unbounded">
+			<xs:element name="clqkxxGridlb" type="DJClqkxxVO">
+				<xs:annotation>
+					<xs:documentation>车辆情况信息列表</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="cbqkxxGrid">
+		<xs:annotation>
+			<xs:documentation>纳税人车船登记信息查询-船舶情况信息</xs:documentation>
+		</xs:annotation>
+		<xs:sequence minOccurs="0" maxOccurs="unbounded">
+			<xs:element name="cbqkxxGridlb" type="DJCbqkxxVO">
+				<xs:annotation>
+					<xs:documentation>船舶情况信息列表</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="CcdjxxVO">
+		<xs:annotation>
+			<xs:documentation>纳税人车船登记信息查询-车船登记信息</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="clqkxxGrid" type="clqkxxGrid">
+				<xs:annotation>
+					<xs:documentation>车辆情况信息</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="cbqkxxGrid" type="cbqkxxGrid">
+				<xs:annotation>
+					<xs:documentation>船舶情况信息</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

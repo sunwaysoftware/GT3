@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:complexType name="tdhyndsbFjxxcjYwbw">
+		<xs:annotation>
+			<xs:documentation>特定行业个人所得税年度申报附加信息采集业务报文</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="tdhyndsbFjxx" type="tdhyndsbFjxx"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="tdhyndsbFjxx">
+		<xs:annotation>
+			<xs:documentation>特定行业个人所得税年度申报表证单书</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="head" type="tdhyndsbFjxxHead">
+				<xs:annotation>
+					<xs:documentation>特定行业个人所得税年度申报附加信息表头</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="body" type="tdhyndsbFjxxBody">
+				<xs:annotation>
+					<xs:documentation>特定行业个人所得税年度申报附加信息表体</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="tdhyndsbFjxxHead">
+		<xs:annotation>
+			<xs:documentation>特定行业个人所得税年度申报附加信息表头，目前没有，预留</xs:documentation>
+		</xs:annotation>
+	</xs:complexType>
+	<xs:complexType name="tdhyndsbFjxxBody">
+		<xs:annotation>
+			<xs:documentation>特定行业个人所得税年度申报附加信息表体</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="tdhyndsbFjxxLb" type="tdhyndsbFjxxLb" minOccurs="1" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>特定行业个人所得税年度申报附加信息列表</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="tdhyndsbFjxxLb">
+		<xs:sequence>
+			<xs:element name="tdhyndsbFjxxMx" type="tdhyndsbFjxxMx" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="tdhyndsbFjxxMx">
+		<xs:annotation>
+			<xs:documentation>特定行业个人所得税年度申报附加信息明细</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="xh" type="xh">
+				<xs:annotation>
+					<xs:documentation>不能为空，和特定行业个人所得税年度申报表中的对应，方便数据库数据关联；</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sdqjq" type="sdqjq">
+				<xs:annotation>
+					<xs:documentation>所得期间起，格式为yyyy-mm-dd，和扣缴个人所得税报告表中的对应，不能为空</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sdqjz" type="sdqjz">
+				<xs:annotation>
+					<xs:documentation>所得期间止，格式为yyyy-mm-dd，和扣缴个人所得税报告表中的对应，不能为空</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="gh" type="gh">
+				<xs:annotation>
+					<xs:documentation>工号，可以为空</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qsyfq" type="ftyfs">
+				<xs:annotation>
+					<xs:documentation>
+					清算月份起；范围为1~12；
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qsyfz" type="ftyfs">
+				<xs:annotation>
+					<xs:documentation>
+					清算月份止；范围为1~12；
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sqkcxmqtx" type="sqkcxmqtx">
+				<xs:annotation>
+					<xs:documentation>税前扣除项目其他项</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ftyfs" type="ftyfs">
+				<xs:annotation>
+					<xs:documentation>
+					分摊月份数；
+					来源于：内退一次性补偿金  提前退休一次性补贴 年金领取；
+					针对内退一次性补偿金,提前退休一次性补贴必传，其他的无需填写；
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="sqkcxmqtx">
+		<xs:annotation>
+			<xs:documentation>税前扣除项目其他项</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="qtfy" type="je">
+				<xs:annotation>
+					<xs:documentation>其他费用，没有时传0；</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="syjkbx" type="je">
+				<xs:annotation>
+					<xs:documentation>商业健康保险，没有时传0；</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="txf" type="je">
+				<xs:annotation>
+					<xs:documentation>通讯费，没有时传0；</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:simpleType name="gh">
+		<xs:annotation>
+			<xs:documentation>工号</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:maxLength value="60"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="ftyfs">
+		<xs:annotation>
+			<xs:documentation>月份数</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:int"/>
+	</xs:simpleType>
+</xs:schema>

@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2011 (http://www.altova.com) by www.hbnu.com (www.hbnu.com) -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+     <xs:include schemaLocation="TaxML.xsd"/>
+     <xs:complexType name="hsyqscssqzfqkb">
+         <xs:annotation>
+             <xs:documentation>《海上油气生产设施弃置费情况表》业务报文</xs:documentation>
+         </xs:annotation>	 
+         <xs:sequence>
+             <xs:element name="qtxxForm" type="qtxxForm">
+                 <xs:annotation>
+                     <xs:documentation>其他信息</xs:documentation>
+                 </xs:annotation>
+             </xs:element>
+             <xs:element name="hsyqscssqzfqkbGrid" type="hsyqscssqzfqkbGrid">
+                 <xs:annotation>
+                     <xs:documentation>海上油气生产设施弃置费情况表</xs:documentation>
+                 </xs:annotation>
+             </xs:element>
+         </xs:sequence>
+     </xs:complexType>
+     <xs:complexType name="qtxxForm">
+         <xs:annotation>
+             <xs:documentation>其他信息</xs:documentation>
+         </xs:annotation>
+         <xs:sequence>
+             <xs:element name="bz" type="bz">
+                 <xs:annotation>
+                     <xs:documentation>九、备注</xs:documentation>
+                 </xs:annotation>
+             </xs:element>
+             <xs:element name="tbrq" type="tbrq">
+                 <xs:annotation>
+                     <xs:documentation>填报日期</xs:documentation>
+                 </xs:annotation>
+             </xs:element>
+             <xs:element name="tbrxm" type="tbr">
+                 <xs:annotation>
+                     <xs:documentation>填报人</xs:documentation>
+                 </xs:annotation>
+             </xs:element>
+             <xs:element name="nsrmc" type="nsrmc">
+                 <xs:annotation>
+                     <xs:documentation>纳税人（盖章）</xs:documentation>
+                 </xs:annotation>
+             </xs:element>
+             <xs:element name="cwfzrqz" type="cwfzr">
+                 <xs:annotation>
+                     <xs:documentation>财务负责人（签字）</xs:documentation>
+                 </xs:annotation>
+             </xs:element>
+         </xs:sequence>
+     </xs:complexType>
+     <xs:complexType name="hsyqscssqzfqkbGrid">
+         <xs:annotation>
+             <xs:documentation>海上油气生产设施弃置费情况表</xs:documentation>
+         </xs:annotation>
+         <xs:sequence maxOccurs="unbounded">
+             <xs:element name="hsyqscssqzfqkbGridlbVO" type="hsyqscssqzfqkbGridlbVO">
+                 <xs:annotation>
+                     <xs:documentation></xs:documentation>
+                 </xs:annotation>
+             </xs:element>
+         </xs:sequence>
+     </xs:complexType>
+     <xs:complexType name="hsyqscssqzfqkbGridlbVO">
+         <xs:annotation>
+             <xs:documentation></xs:documentation>
+         </xs:annotation>
+         <xs:sequence>
+             <xs:element name="yqtmc" type="yqtmc">
+                 <xs:annotation>
+                     <xs:documentation>油（气）田名称</xs:documentation>
+                 </xs:annotation>
+             </xs:element>
+             <xs:element name="tzbl" type="sl1">
+                 <xs:annotation>
+                     <xs:documentation>投资比例</xs:documentation>
+                 </xs:annotation>
+             </xs:element>
+             <xs:element name="qzfzkzh" type="zh">
+                 <xs:annotation>
+                     <xs:documentation>弃置费专款帐号</xs:documentation>
+                 </xs:annotation>
+             </xs:element>
+             <xs:element name="qzfjtzeMy" type="je">
+                 <xs:annotation>
+                     <xs:documentation>一、弃置费计提总额美元</xs:documentation>
+                 </xs:annotation>
+             </xs:element>
+             <xs:element name="qzfjtzeRmb" type="je">
+                 <xs:annotation>
+                     <xs:documentation>一、弃置费计提总额人民币</xs:documentation>
+                 </xs:annotation>
+             </xs:element>
+             <xs:element name="qzfdzhjeMy" type="je">
+                 <xs:annotation>
+                     <xs:documentation>二、弃置费调整后金额美元</xs:documentation>
+                 </xs:annotation>
+             </xs:element>
+             <xs:element name="qzfdzhjeRmb" type="je">
+                 <xs:annotation>
+                     <xs:documentation>二、弃置费调整后金额人民币</xs:documentation>
+                 </xs:annotation>
+             </xs:element>
+             <xs:element name="ncqzfzhjeMy" type="je">
+                 <xs:annotation>
+                     <xs:documentation>三、年初弃置费账户金额美元</xs:documentation>
+                 </xs:annotation>
+             </xs:element>
+             <xs:element name="ncqzfzhjeRmb" type="je">
+                 <xs:annotation>
+                     <xs:documentation>三、年初弃置费账户金额人民币</xs:documentation>
+                 </xs:annotation>
+             </xs:element>
+             <xs:element name="bndtqqzfjeMy" type="je">
+                 <xs:annotation>
+                     <xs:documentation>四、本年度提取弃置费金额美元</xs:documentation>
+                 </xs:annotation>
+             </xs:element>
+             <xs:element name="bndtqqzfjeRmb" type="je">
+                 <xs:annotation>
+                     <xs:documentation>四、本年度提取弃置费金额人民币</xs:documentation>
+                 </xs:annotation>
+             </xs:element>
+             <xs:element name="bndqzfzjsyMy" type="je">
+                 <xs:annotation>
+                     <xs:documentation>五、本年度弃置费资金损益美元</xs:documentation>
+                 </xs:annotation>
+             </xs:element>
+             <xs:element name="bndqzfzjsyRmb" type="je">
+                 <xs:annotation>
+                     <xs:documentation>五、本年度弃置费资金损益人民币</xs:documentation>
+                 </xs:annotation>
+             </xs:element>
+             <xs:element name="bndqzfhdsyMy" type="je">
+                 <xs:annotation>
+                     <xs:documentation>六、本年度弃置费汇兑损益美元</xs:documentation>
+                 </xs:annotation>
+             </xs:element>
+             <xs:element name="bndqzfhdsyRmb" type="je">
+                 <xs:annotation>
+                     <xs:documentation>六、本年度弃置费汇兑损益人民币</xs:documentation>
+                 </xs:annotation>
+             </xs:element>
+             <xs:element name="nmqzfzhjeMy" type="je">
+                 <xs:annotation>
+                     <xs:documentation>七、年末弃置费账户金额美元</xs:documentation>
+                 </xs:annotation>
+             </xs:element>
+             <xs:element name="nmqzfzhjeRmb" type="je">
+                 <xs:annotation>
+                     <xs:documentation>七、年末弃置费账户金额人民币</xs:documentation>
+                 </xs:annotation>
+             </xs:element>
+             <xs:element name="dhl" type="sl1">
+                 <xs:annotation>
+                     <xs:documentation>八、兑换率</xs:documentation>
+                 </xs:annotation>
+             </xs:element>
+         </xs:sequence>
+     </xs:complexType>
+</xs:schema>

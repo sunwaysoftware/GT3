@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:complexType name="ZdsswfajxxgbRequest">
+		<xs:annotation>
+			<xs:documentation>重大税收违法案件信息公布业务报文</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="ZdsswfajxxgbForm" type="ZdsswfajxxgbForm">
+						<xs:annotation>
+							<xs:documentation>重大税收违法案件信息公布请求</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="ZdsswfajxxgbForm">
+		<xs:annotation>
+			<xs:documentation>重大税收违法案件信息公布请求</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="swjgDm" type="swjgDm">
+				<xs:annotation>
+					<xs:documentation>公布机关</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ggrq" type="wszzrq" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>公布日期</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

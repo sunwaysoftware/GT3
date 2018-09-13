@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2011 rel. 2 (http://www.altova.com) by pl (css) -->
+<!-- 编辑使用 XMLSpy v2006 U (http://www.altova.com) 由 any (any) -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:include schemaLocation="TaxMLPublicYHType.xsd"/>
+	<xs:include schemaLocation="TaxMLBd_031005016_V1.0.xsd"/>
+	<xs:complexType name="HXZGYH00050Request">
+		<xs:annotation>
+			<xs:documentation>石脑油、燃料油消费税退（免）税资格备案请求</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="snyrlysyqytmxfszgbab" type="snyrlysyqytmxfszgbab"/>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

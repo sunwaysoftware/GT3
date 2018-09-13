@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:complexType name="sbqkcxresponse">
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="sbqkxx" type="sbqkxx">
+						<xs:annotation>
+							<xs:documentation>申报情况信息</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="sbqkxx">
+		<xs:annotation>
+			<xs:documentation>申报情况信息</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="sbqkxxmx" maxOccurs="unbounded">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="yzpzxh" type="yzpzxh">
+							<xs:annotation>
+								<xs:documentation>应征凭证序号</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+						<xs:element name="yzpzzlDm" type="yzpzzlDm">
+							<xs:annotation>
+								<xs:documentation>应征凭证种类代码</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+						<xs:element name="sbrq1" type="sbrq1">
+							<xs:annotation>
+								<xs:documentation>申报日期</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+						<xs:element name="ybtsehj" type="ybtse">
+							<xs:annotation>
+								<xs:documentation>应补退税额合计</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+						<xs:element name="lrrDm" type="lrrDm">
+							<xs:annotation>
+								<xs:documentation>录入人代码</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+						<xs:element name="tzqydjxh" type="djxh">
+							<xs:annotation>
+								<xs:documentation>投资企业登记序号</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

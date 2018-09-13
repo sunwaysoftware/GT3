@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:complexType name="checkQyztRequest">
+		<xs:annotation>
+			<xs:documentation>校验企业状态请求报文</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="ywlxDm" type="ywlx">
+						<xs:annotation>
+							<xs:documentation>业务类型代码，(不能为空)</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="qyztDm" type="rtncode">
+						<xs:annotation>
+							<xs:documentation>企业状态代码，(不能为空)</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+<xs:element name="sbfsDm" type="sbfsDm">
+						<xs:annotation>
+							<xs:documentation>申报方式代码，可以为空，磁盘介质申报传34，网上申报传32</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+</xs:schema>

@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 被2011 rel. 2 sp1 (TeaM DJiNN) 使用XMLSpy vTeaM DJiNN编辑的 (http://www.altova.com) by -->
+<!-- edited with XMLSpy v2010 rel. 3 (http://www.altova.com) by MESMERiZE (MSM) -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:include schemaLocation="TaxMLPublicType.xsd"/>
+	<xs:complexType name="cpyxsmxbywbw">
+		<xs:annotation>
+			<xs:documentation>《成品油销售明细表》业务报文</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="cpyxsmxb" type="cpyxsmxb">
+						<xs:annotation>
+							<xs:documentation>《成品油销售明细表》</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="cpyxsmxb">
+		<xs:annotation>
+			<xs:documentation>《成品油销售明细表》</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="cpyxsmxbGrid">
+				<xs:annotation>
+					<xs:documentation>申报数据信息</xs:documentation>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:sequence minOccurs="0" maxOccurs="unbounded">
+						<xs:element name="cpyxsmxbGridlb" type="cpyxsmxbGridlbVO">
+							<xs:annotation>
+								<xs:documentation>申报数据信息</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="cpyxsmxbGridlbVO">
+		<xs:annotation>
+			<xs:documentation>申报数据信息</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="ewbhxh" type="ewbhxh">
+				<xs:annotation>
+					<xs:documentation>二维表行序号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="cpymc" type="cpymc">
+				<xs:annotation>
+					<xs:documentation>成品油名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="fpDm" type="fpDm">
+				<xs:annotation>
+					<xs:documentation>发票代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="fphm" type="fphm">
+				<xs:annotation>
+					<xs:documentation>发票号码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="kprq" type="kprq">
+				<xs:annotation>
+					<xs:documentation>开票日期</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="xssl" type="xssl">
+				<xs:annotation>
+					<xs:documentation>销售数量</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="xse" type="xse">
+				<xs:annotation>
+					<xs:documentation>销售额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ghfnsrmc" type="ghfnsrmc">
+				<xs:annotation>
+					<xs:documentation>购货方纳税人名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ghfnsrsbh" type="ghfnsrsbh">
+				<xs:annotation>
+					<xs:documentation>购货方纳税人识别号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bz" type="bz">
+				<xs:annotation>
+					<xs:documentation>备注</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

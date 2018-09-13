@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2011 (http://www.altova.com) by shiwp (shiwp) -->
+<!-- 被2011 rel. 2 sp1 (servyou) 使用XMLSpy vservyou编辑的 (http://www.altova.com) by -->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://www.chinatax.gov.cn/dataspec/" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:complexType name="sbfJfzmxxRequest">
+		<xs:annotation>
+			<xs:documentation>查询社保费缴费证明信息</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="zgswjgDm" type="zgswjgDm">
+						<xs:annotation>
+							<xs:documentation>主管税务机关</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="sbrqq" type="sbrqq">
+						<xs:annotation>
+							<xs:documentation>申报日期起</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="sbrqz" type="sbrqz">
+						<xs:annotation>
+							<xs:documentation>申报日期止</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="djxh" type="djxh">
+						<xs:annotation>
+							<xs:documentation>登记序号</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="xzqhszDm" type="xzqhszDm" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>行政区划</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="jfrlx" type="jfrlx">
+						<xs:annotation>
+							<xs:documentation>缴费人类型（1：个人；2：员工；3：单位）</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+</xs:schema>

@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 被2011 rel. 2 sp1 (TeaM DJiNN) 使用XMLSpy vTeaM DJiNN编辑的 (http://www.altova.com) by -->
+<!-- edited with XMLSpy v2010 rel. 3 (http://www.altova.com) by liuwei (liuweicss) -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:include schemaLocation="TaxMLPublicType.xsd"/>
+	<xs:complexType name="zcsssqkcjnstzmxbFrom">
+		<xs:annotation>
+			<xs:documentation>资产损失税前扣除及纳税调整明细表(A105090)业务报文</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="zcsssqkcjnstzMxbVO" type="zcsssqkcjnstzmxbVO" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>资产损失税前扣除及纳税调整明细表</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="zcsssqkcjnstzmxbVO">
+		<xs:annotation>
+			<xs:documentation>《资产损失税前扣除及纳税调整明细表》</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="qdsbzcsszzje" type="je">
+				<xs:annotation>
+					<xs:documentation>清单申报资产损失_账载金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qdsbzcssssje" type="je">
+				<xs:annotation>
+					<xs:documentation>清单申报资产损失_税收金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qdsbzcssnstzje" type="je">
+				<xs:annotation>
+					<xs:documentation>清单申报资产损失_纳税调整金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="xszrbmzcsszzje" type="je">
+				<xs:annotation>
+					<xs:documentation>正常经营管理活动中，按照公允价格销售、转让、变卖非货币资产的损失_账载金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="xszrbmzcssssje" type="je">
+				<xs:annotation>
+					<xs:documentation>正常经营管理活动中，按照公允价格销售、转让、变卖非货币资产的损失_税收金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="xszrbmzcssnstzje" type="je">
+				<xs:annotation>
+					<xs:documentation>正常经营管理活动中，按照公允价格销售、转让、变卖非货币资产的损失_纳税调整金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="chfszcshzzje" type="je">
+				<xs:annotation>
+					<xs:documentation>存货发生的正常损耗_账载金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="chfszcshssje" type="je">
+				<xs:annotation>
+					<xs:documentation>存货发生的正常损耗_税收金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="chfszcshnstzje" type="je">
+				<xs:annotation>
+					<xs:documentation>存货发生的正常损耗_纳税调整金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zcbfqlzzje" type="je">
+				<xs:annotation>
+					<xs:documentation>固定资产达到或超过使用年限而正常报废清理的损失_账载金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zcbfqlssje" type="je">
+				<xs:annotation>
+					<xs:documentation>固定资产达到或超过使用年限而正常报废清理的损失_税收金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zcbfqlnstzje" type="je">
+				<xs:annotation>
+					<xs:documentation>固定资产达到或超过使用年限而正常报废清理的损失_纳税调整金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zcswzzje" type="je">
+				<xs:annotation>
+					<xs:documentation>生产性生物资产达到或超过使用年限而正常死亡发生的资产损失_账载金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zcswssje" type="je">
+				<xs:annotation>
+					<xs:documentation>生产性生物资产达到或超过使用年限而正常死亡发生的资产损失_税收金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zcswnstzje" type="je">
+				<xs:annotation>
+					<xs:documentation>生产性生物资产达到或超过使用年限而正常死亡发生的资产损失_纳税调整金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="tgjycsscfszzje" type="je">
+				<xs:annotation>
+					<xs:documentation>照市场公平交易原则通过各种金融方式发生的损失_账载金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="tgjycsscfsssje" type="je">
+				<xs:annotation>
+					<xs:documentation>照市场公平交易原则通过各种金融方式发生的损失_税收金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="tgjycsscfsnstzje" type="je">
+				<xs:annotation>
+					<xs:documentation>照市场公平交易原则通过各种金融方式发生的损失_纳税调整金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="fzjgsbzzje" type="je">
+				<xs:annotation>
+					<xs:documentation>分支机构上报的资产损失_账载金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="fzjgsbssje" type="je">
+				<xs:annotation>
+					<xs:documentation>分支机构上报的资产损失_税收金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="fzjgsbnstzje" type="je">
+				<xs:annotation>
+					<xs:documentation>分支机构上报的资产损失_纳税调整金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qtqdsbzcsszzje" type="je">
+				<xs:annotation>
+					<xs:documentation>其他_账载金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qtqdsbzcssssje" type="je">
+				<xs:annotation>
+					<xs:documentation>其他_税收金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qtqdsbzcssnstzje" type="je">
+				<xs:annotation>
+					<xs:documentation>其他_纳税调整金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zxsbzcsszzje" type="je">
+				<xs:annotation>
+					<xs:documentation>专项申报资产损失_账载金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zxsbzcssssje" type="je">
+				<xs:annotation>
+					<xs:documentation>专项申报资产损失_税收金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zxsbzcssnstzje" type="je">
+				<xs:annotation>
+					<xs:documentation>专项申报资产损失_纳税调整金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="hbzcsszzje" type="je">
+				<xs:annotation>
+					<xs:documentation>货币资产损失账载金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="hbzcssssje" type="je">
+				<xs:annotation>
+					<xs:documentation>货币资产损失税收金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="hbzcssnstzje" type="je">
+				<xs:annotation>
+					<xs:documentation>货币资产损失纳税调整金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="fhbzcsszzje" type="je">
+				<xs:annotation>
+					<xs:documentation>非货币资产损失账载金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="fhbzcssssje" type="je">
+				<xs:annotation>
+					<xs:documentation>非货币资产损失税收金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="fhbzcssnstzje" type="je">
+				<xs:annotation>
+					<xs:documentation>非货币资产损失纳税调整金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="tzsszzje" type="je">
+				<xs:annotation>
+					<xs:documentation>投资损失账载金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="tzssssje" type="je">
+				<xs:annotation>
+					<xs:documentation>投资损失税收金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="tzssnstzje" type="je">
+				<xs:annotation>
+					<xs:documentation>投资损失纳税调整金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qtzxsbzcsszzje" type="je">
+				<xs:annotation>
+					<xs:documentation>其他_账载金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qtzxsbzcssssje" type="je">
+				<xs:annotation>
+					<xs:documentation>其他_税收金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qtzxsbzcssnstzje" type="je">
+				<xs:annotation>
+					<xs:documentation>其他_纳税调整金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="hjzzje" type="je">
+				<xs:annotation>
+					<xs:documentation>合计账载金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="hjssje" type="je">
+				<xs:annotation>
+					<xs:documentation>合计税收金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="hjnstzje" type="je">
+				<xs:annotation>
+					<xs:documentation>合计纳税调整金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

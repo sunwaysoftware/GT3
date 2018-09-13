@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 编辑使用 XMLSpy v2006 U (http://www.altova.com) 由 any (any) -->
+<!-- 编辑使用 XMLSpy v2006 U (http://www.altova.com) 由 any (any) -->
+<!-- 编辑使用 XMLSpy v2006 U (http://www.altova.com) 由 any (any) -->
+<!-- 编辑使用 XMLSpy v2006 U (http://www.altova.com) 由 any (any) -->
+<!-- 被2012 () 使用XMLSpy v编辑的 (http://www.altova.com) by -->
+<!-- edited with XMLSpy v2011 rel. 2 (http://www.altova.com) by time (wnass) -->
+<!-- 编辑使用 XMLSpy v2006 U (http://www.altova.com) 由 any (any) -->
+<!-- 编辑使用 XMLSpy v2006 U (http://www.altova.com) 由 any (any) -->
+<!-- 编辑使用 XMLSpy v2006 U (http://www.altova.com) 由 any (any) -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxDoc.xsd"/>
+	<xs:include schemaLocation="TaxMLPublic.xsd"/>
+	<xs:include schemaLocation="TaxMLPublicFPType.xsd"/>
+	<xs:complexType name="HXZGFP10016Request">
+		<xs:annotation>
+			<xs:documentation>保存代开申请审核请求</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="dksquuid" type="dksquuid">
+						<xs:annotation>
+							<xs:documentation>代开申请UUID</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="ybsfe" type="ybsfe">
+						<xs:annotation>
+							<xs:documentation>应补税费额</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="dkfplbDm" type="dkfplbDm">
+						<xs:annotation>
+							<xs:documentation>代开发票类别</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="fpdkSfmxGrid">
+						<xs:annotation>
+							<xs:documentation>税费明细VO列表</xs:documentation>
+						</xs:annotation>
+						<xs:complexType>
+							<xs:sequence maxOccurs="unbounded">
+								<xs:element name="FPDkSfmxGridlb" type="FPDkSfmxVO">
+									<xs:annotation>
+										<xs:documentation>税费明细VO</xs:documentation>
+									</xs:annotation>
+								</xs:element>
+							</xs:sequence>
+						</xs:complexType>
+					</xs:element>
+					<xs:element name="jzyfpGcxmVOGrid" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>建筑业工程项目VO列表</xs:documentation>
+						</xs:annotation>
+						<xs:complexType>
+							<xs:sequence maxOccurs="unbounded">
+								<xs:element name="jzyfpGcxmVOGridlb" type="FPDkJzyfpGcxmVO">
+									<xs:annotation>
+										<xs:documentation>建筑业工程项目VO</xs:documentation>
+									</xs:annotation>
+								</xs:element>
+							</xs:sequence>
+						</xs:complexType>
+					</xs:element>
+					<xs:element name="ydkfpmxVOGrid" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>建筑业抵扣分包发票VO列表</xs:documentation>
+						</xs:annotation>
+						<xs:complexType>
+							<xs:sequence maxOccurs="unbounded">
+								<xs:element name="ydkfpmxVOGridlb" type="FPDkTszgYdkfpmxVO">
+									<xs:annotation>
+										<xs:documentation>建筑业抵扣分包发票VO</xs:documentation>
+									</xs:annotation>
+								</xs:element>
+							</xs:sequence>
+						</xs:complexType>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+</xs:schema>

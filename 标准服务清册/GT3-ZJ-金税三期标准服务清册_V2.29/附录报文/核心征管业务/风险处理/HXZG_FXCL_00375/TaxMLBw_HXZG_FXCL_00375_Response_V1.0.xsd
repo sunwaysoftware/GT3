@@ -1,0 +1,378 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 被2012 (qwqw) 使用XMLSpy vqwqwqw编辑的 (http://www.altova.com) by -->
+<!-- edited with XMLSpy v2013 (http://www.altova.com) by  () -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:complexType name="HXZGFXCL00375Response">
+		<xs:annotation>
+			<xs:documentation>根据唯一编号查询强制扣缴税款信息返回报文</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="qzkjskxxForm" type="qzkjskxxForm" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>强制扣缴税款信息</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="FZSsqzzxjdskjsskxsyVO">
+		<xs:annotation>
+			<xs:documentation>税收强制执行决定书（扣缴税收款项适用）对象</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="ssqzzxjdskjsskxsyuuid" type="ssqzzxjdskjsskxsyuuid">
+				<xs:annotation>
+					<xs:documentation>税收强制执行决定书扣缴税收款项适用UUID</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ajxxuuid" type="ajxxuuid" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>案件信息UUID</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="swxzzfsqbuuid" type="swxzzfsqbuuid">
+				<xs:annotation>
+					<xs:documentation>税务行政执法申请表UUID</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="cjwsswjgDm" type="cjwsswjgDm">
+				<xs:annotation>
+					<xs:documentation>出具文书税务机关代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="swjgjg" type="swjgjg">
+				<xs:annotation>
+					<xs:documentation>税务机构局轨</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zg" type="zg">
+				<xs:annotation>
+					<xs:documentation>字轨</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="nh" type="nh">
+				<xs:annotation>
+					<xs:documentation>年号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="wh" type="wh">
+				<xs:annotation>
+					<xs:documentation>文号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="flyj" type="flyj">
+				<xs:annotation>
+					<xs:documentation>法律依据</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="spswjgDm" type="spswjgDm" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>审批税务机关代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="kjqsrq" type="kjqsrq" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>扣缴起始日期</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zxkjjrjgmc" type="zxkjjrjgmc" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>执行扣缴金融机构名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ckxz" type="ckxz" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>存款性质</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qzkjshkxzh" type="qzkjshkxzh" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>强制扣缴税收款项账号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qzkjskje" type="qzkjskje" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>强制扣缴税款金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qzkjznjje" type="qzkjznjje" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>强制扣缴滞纳金金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qzkjfkje" type="qzkjfkje" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>强制扣缴罚款金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qzkjmswfsdje" type="qzkjmswfsdje" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>强制扣缴没收违法所得金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="fyjgDm" type="fyjgDm" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>复议机关代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="fyjgmc" type="fyjgmc" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>复议机关名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="wszzrq" type="wszzrq">
+				<xs:annotation>
+					<xs:documentation>文书制作日期</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="swjgDm" type="swjgDm">
+				<xs:annotation>
+					<xs:documentation>税务机关代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zxhbzhmc" type="zxhbzhmc" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>执行划拨账户名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="dzbzdszlDm" type="dzbzdszlDm" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>电子表证单书种类代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="lcslid" type="lcslid">
+				<xs:annotation>
+					<xs:documentation>流程实例ID</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="hdslid" type="hdslid">
+				<xs:annotation>
+					<xs:documentation>活动实例ID</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sjslid" type="sjslid" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>事件实例ID</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zfrq1" type="zfrq1" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>作废日期</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zfrDm" type="zfrDm" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>作废人代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zfbz1" type="zfbz1" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>作废标志</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="QzKjsskxtzsMxGridlbVO">
+		<xs:annotation>
+			<xs:documentation>扣缴税收款项通知书</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="kjsskxtzsuuid" type="kjsskxtzsuuid">
+				<xs:annotation>
+					<xs:documentation>扣缴税收款项通知书UUID</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="wszg" type="wszg" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>文书字轨</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ajxxuuid" type="ajxxuuid" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>案件信息UUID</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jdsuuid" type="jdsuuid" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>决定书UUID</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="cjwsswjgDm" type="cjwsswjgDm" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>出具文书税务机关代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="swjgjg" type="swjgjg" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>税务机构局轨</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zg" type="zg" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>字轨</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="nh" type="nh" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>年号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="wh" type="wh" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>文号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="kjskqx" type="kjskqx" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>扣缴税款期限</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jkpzfs" type="jkpzfs" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>缴款凭证份数</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="swjgDm" type="swjgDm" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>税务机关代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="pzzlDm" type="pzzlDm" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>票证种类代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="pzzg" type="pzzg" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>票证字轨</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sphm" type="sphm" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>税票号码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="wszzrq" type="wszzrq" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>文书制作日期</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ckzhye" type="ckzhye" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>存款账户余额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qsrxm1" type="qsrxm1" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>签收人姓名</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qsrq3" type="qsrq3" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>签收日期</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qsdwqzrq" type="qsdwqzrq" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>签收单位签章日期</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="dzbzdszlDm" type="dzbzdszlDm" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>电子表证单书种类代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="lcslid" type="lcslid" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>流程实例ID</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="hdslid" type="hdslid" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>活动实例ID</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sjslid" type="sjslid" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>事件实例ID</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zfrq1" type="zfrq1" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>作废日期</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zfrDm" type="zfrDm" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>作废人代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zfbz1" type="zfbz1" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>作废标志</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zxkjjrjgmc" type="zxkjjrjgmc" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>执行扣缴金融机构名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qzkjshkxzh" type="qzkjshkxzh" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>强制扣缴税收款项账号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qzkjskje" type="qzkjskje" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>强制扣缴税款金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qzkjznjje" type="qzkjznjje" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>强制扣缴滞纳金金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qzkjfkje" type="qzkjfkje" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>强制扣缴罚款金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qzkjmswfsdje" type="qzkjmswfsdje" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>强制扣缴没收违法所得金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="hjje" type="hjje" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>强制扣缴没收违法所得金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="qzkjskxxForm">
+		<xs:annotation>
+			<xs:documentation>强制扣缴税款信息</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="ssqzzxjdskjsskxsyForm" type="FZSsqzzxjdskjsskxsyVO">
+				<xs:annotation>
+					<xs:documentation>税收强制执行决定书（扣缴税收款项适用）</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="kjsskxtzsmxGrid">
+				<xs:annotation>
+					<xs:documentation>扣缴税收款项通知书</xs:documentation>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:sequence maxOccurs="unbounded">
+						<xs:element name="QzKjsskxtzsMxGridlb" type="QzKjsskxtzsMxGridlbVO"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

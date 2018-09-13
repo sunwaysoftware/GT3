@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<service xmlns="http://www.chinatax.gov.cn/spec/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <head>
+    <tran_id>SWZJ.HXZG.DJ.BCWTXYSBGXX</tran_id>
+    <channel_id>TEST</channel_id>
+    <tran_seq>87a85275d54240d599f0aa22b57b62a7</tran_seq>
+    <tran_date>20141102</tran_date>
+    <tran_time>042734157</tran_time>
+    <expand>
+      <name>sjry</name>
+      <value>24406060735</value>
+    </expand>
+    <expand>
+      <name>sjjg</name>
+      <value>24406060700</value>
+    </expand>
+  </head>
+  <body><![CDATA[<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<taxML xsi:type="HXZGDJ00387Request" xmlmc="保存委托协议书变更信息" xmlbh="TaxMLBw_HXZG_DJ_00387_Request_V1.0.xsd" bbh="1.0" xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <djxh>10124406030000000394</djxh>
+    <lcslid>1888C1E433A7569B6FD1037BA350F8B8</lcslid>
+    <zgswskfjDm>24406060700</zgswskfjDm>
+    <wtxysuuid>D1FF167497B35D018257A15B0F605FF6</wtxysuuid>
+    <wtxysbgxx>
+        <wtxysBgdjmxGrid>
+            <wtxysBgdjmxGridlb>
+                <bgxmDm>BDA0120098006</bgxmDm>
+                <bgqnr>户籍所在地地址</bgqnr>
+                <bghnr>户籍所在地地址变更</bghnr>
+            </wtxysBgdjmxGridlb>
+            <wtxysBgdjmxGridlb>
+                <bgxmDm>BDA0120098007</bgxmDm>
+                <bgqnr>现居住地地址</bgqnr>
+                <bghnr></bghnr>
+            </wtxysBgdjmxGridlb>
+            <wtxysBgdjmxGridlb>
+                <bgxmDm>BDA0120098033</bgxmDm>
+                <bgqnr>顺地税乐 税委 〔2014〕 84 号</bgqnr>
+                <bghnr>顺地税乐 税委 〔2014〕 84 号</bghnr>
+            </wtxysBgdjmxGridlb>
+            <wtxysBgdjmxGridlb>
+                <bgxmDm>BDA0120098011</bgxmDm>
+                <bgqnr>10</bgqnr>
+                <bghnr>20</bghnr>
+            </wtxysBgdjmxGridlb>
+            <wtxysBgdjmxGridlb>
+                <bgxmDm>BDA0120098009</bgxmDm>
+                <bgqnr>30199,30446</bgqnr>
+                <bghnr>10105,10106,10107,10109</bghnr>
+            </wtxysBgdjmxGridlb>
+        </wtxysBgdjmxGrid>
+        <insertBwtnsrxxGrid/>
+        <deleteBwtnsrxxGrid/>
+        <updateBwtnsrxxGrid/>
+    </wtxysbgxx>
+</taxML>
+]]></body>
+</service>

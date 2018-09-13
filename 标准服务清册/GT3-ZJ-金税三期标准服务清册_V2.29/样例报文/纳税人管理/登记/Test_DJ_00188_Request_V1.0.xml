@@ -1,0 +1,76 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<service xmlns="http://www.chinatax.gov.cn/spec/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <head>
+    <tran_id>SWZJ.HXZG.DJ.BCNSRHBFLQKBGSXX</tran_id>
+    <channel_id>TEST</channel_id>
+    <tran_seq>9746629c0b2d4aacb34f850eafb40314</tran_seq>
+    <tran_date>20141101</tran_date>
+    <tran_time>091059982</tran_time>
+    <expand>
+      <name>sjry</name>
+      <value>24406060735</value>
+    </expand>
+    <expand>
+      <name>sjjg</name>
+      <value>24406060700</value>
+    </expand>
+  </head>
+  <body><![CDATA[<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<taxML xsi:type="HXZGDJ00188Request" xmlmc="保存纳税人合并（分立）情况报告书信息" xmlbh="TaxMLBw_HXZG_DJ_00188_Request_V1.0.xsd" bbh="1.0" xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <nsrhbflqksaveVO>
+        <djysqywslxxbVO>
+            <djxh>10124406030000000385</djxh>
+            <slswsxDm>SLSXA011031001</slswsxDm>
+            <lcslid>177E7CF04D8E9D4826247E286B627253</lcslid>
+            <slrDm>24406060735</slrDm>
+            <slrq>2014-11-01</slrq>
+            <slswjgDm>24406060700</slswjgDm>
+            <sqr>申请人</sqr>
+            <sqrq>2014-11-01</sqrq>
+            <sjgsdq>24406060700</sjgsdq>
+        </djysqywslxxbVO>
+        <djnsrhbflbgVO>
+            <lcslid>177E7CF04D8E9D4826247E286B627253</lcslid>
+            <djxh>10124406030000000385</djxh>
+            <pzhbflwjhjymc>*批准合并(分立)文件和决议</pzhbflwjhjymc>
+            <hbflyy>合并(分立)原因</hbflyy>
+            <hbflsj>2014-10-29</hbflsj>
+            <nsrhbfllxDm>0</nsrhbfllxDm>
+            <wjsy></wjsy>
+            <bgrq1>2014-11-01</bgrq1>
+            <sjgsdq>24406060700</sjgsdq>
+        </djnsrhbflbgVO>
+        <nsrhbflqjbqkGrid>
+            <nsrhbflqjbqkGridlb>
+                <hbflqqkuuid></hbflqqkuuid>
+                <hbflbguuid></hbflbguuid>
+                <djxh></djxh>
+                <hbflqnsrsbh>440606888800001</hbflqnsrsbh>
+                <hbflqnsrmc>单位纳税人</hbflqnsrmc>
+                <hbflqfzrxm>法定代表人（负责人）名称</hbflqfzrxm>
+                <hbflqscjydz>生产经营地址</hbflqscjydz>
+                <qsbz>N</qsbz>
+                <yxbz></yxbz>
+                <lrrq></lrrq>
+                <lrrDm></lrrDm>
+                <xgrq></xgrq>
+                <xgrDm></xgrDm>
+                <sjgsdq></sjgsdq>
+            </nsrhbflqjbqkGridlb>
+        </nsrhbflqjbqkGrid>
+        <nsrhbflhjbqkGrid>
+            <nsrhbflhjbqkGridlb>
+                <djxh>10124406030000000387</djxh>
+                <hbflhnsrsbh>005566778899001</hbflhnsrsbh>
+                <hbflhnsrmc>个体纳税人花花服务测试用</hbflhnsrmc>
+                <hbflhfzrxm>业主姓名</hbflhfzrxm>
+                <hbflhscjydz>生产经营地址</hbflhscjydz>
+                <bz>111111111111</bz>
+                <sjgsdq>24406060700</sjgsdq>
+            </nsrhbflhjbqkGridlb>
+        </nsrhbflhjbqkGrid>
+        <nsrhbflsqjskqkGrid/>
+    </nsrhbflqksaveVO>
+</taxML>
+]]></body>
+</service>

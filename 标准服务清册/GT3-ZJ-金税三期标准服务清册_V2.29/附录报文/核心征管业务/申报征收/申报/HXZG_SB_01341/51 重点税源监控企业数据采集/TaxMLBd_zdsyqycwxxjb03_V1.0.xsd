@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 被2011 rel. 2 sp1 (TeaM DJiNN) 使用XMLSpy vTeaM DJiNN编辑的 (http://www.altova.com) by -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:include schemaLocation="TaxMLPublicType.xsd"/>
+	<xs:complexType name="zdsyqycwxxjbb03VO">
+		<xs:annotation>
+			<xs:documentation>重点税源企业财务信息（季报）表</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="zdsyqycwxxjbbGrid">
+				<xs:complexType>
+					<xs:sequence minOccurs="0" maxOccurs="unbounded">
+						<xs:element name="zdsyqycwxxjbbGridlbVO" type="zdsyqycwxxjbb03GridlbVO">
+							<xs:annotation>
+								<xs:documentation>重点税源企业财务信息（季报）表</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="nsrxxFormVO" type="NsrxxFormVO" minOccurs="0"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="zdsyqycwxxjbb03GridlbVO">
+		<xs:annotation>
+			<xs:documentation>申报信息</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="ewbhxh" type="ewbhxh" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>二维表行序号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ljxmmc" type="ljxmmc" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>累计项目</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bnlj" type="bnlj" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>本年累计</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="snlj" type="snlj" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>上年累计</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qcmxmmc" type="qcmxmmc" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>期初（末）项目</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bnnc" type="bnnc" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>本年年初</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bnqm" type="bnqm" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>本年期末</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="snnc" type="snnc" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>上年年初</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="snqm" type="snqm" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>上年期末</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

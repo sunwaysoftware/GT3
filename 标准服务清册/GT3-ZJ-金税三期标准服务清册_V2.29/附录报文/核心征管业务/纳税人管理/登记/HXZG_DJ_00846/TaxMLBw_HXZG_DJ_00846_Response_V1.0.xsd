@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 被2012 () 使用XMLSpy v编辑的 (http://www.altova.com) by -->
+<!-- edited with XMLSpy v2013 (http://www.altova.com) by  () -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:complexType name="HXZGDJ00846Response">
+		<xs:annotation>
+			<xs:documentation>查询外部交换排污许可证排放口信息返回报文</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="DJHjbhsWbjhpfkxxGrid" type="DJHjbhsWbjhpfkxxGrid"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="DJHjbhsWbjhpfkxxGrid">
+		<xs:annotation>
+			<xs:documentation>环保税税源返回信息Grid</xs:documentation>
+		</xs:annotation>
+		<xs:sequence minOccurs="0" maxOccurs="unbounded">
+			<xs:element name="DJHjbhsWbjhpfkxxGridlb" type="DJHjbhsWbjhpfkxxVO"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="DJHjbhsWbjhpfkxxVO">
+		<xs:annotation>
+			<xs:documentation>环保税外部交换许可证排放口信息</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="syuuid" type="syuuid">
+				<xs:annotation>
+					<xs:documentation>税源uuid</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="hbsjcxxuuid" type="hbsjcxxuuid">
+				<xs:annotation>
+					<xs:documentation>环境保护税基础信息uuid</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="pwxkzbh" type="pwxkzbh">
+				<xs:annotation>
+					<xs:documentation>排污许可证副本编号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="scjydz" type="scjydz">
+				<xs:annotation>
+					<xs:documentation>生产经营场所地址</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yxqq" type="yxqq">
+				<xs:annotation>
+					<xs:documentation>有效期起</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yxqz" type="yxqz">
+				<xs:annotation>
+					<xs:documentation>有效期止</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zywrwlbDm" type="zywrwlbDm">
+				<xs:annotation>
+					<xs:documentation>排放口大类代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="hgbhssybh" type="hgbhssybh">
+				<xs:annotation>
+					<xs:documentation>排放口税源编号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="pfkbh" type="pfkbh">
+				<xs:annotation>
+					<xs:documentation>排放口编号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="pfkmc" type="pfkmc">
+				<xs:annotation>
+					<xs:documentation>排放口(噪声源)名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jdxzDm" type="jdxzDm">
+				<xs:annotation>
+					<xs:documentation>所处街乡</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="pfkwz" type="pfkwz">
+				<xs:annotation>
+					<xs:documentation>排放口位置</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jd2" type="nsrmc">
+				<xs:annotation>
+					<xs:documentation>经度</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="wd" type="nsrmc">
+				<xs:annotation>
+					<xs:documentation>纬度</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="pffsDm" type="pffsDm">
+				<xs:annotation>
+					<xs:documentation>排放方式代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="wspfqxDm" type="wspfqxDm">
+				<xs:annotation>
+					<xs:documentation>排放去向代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="pfklxDm" type="pfklxDm">
+				<xs:annotation>
+					<xs:documentation>许可证管控要求</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="dqwrwpfklbDm" type="dqwrwpfklbDm">
+				<xs:annotation>
+					<xs:documentation>大气污染物排放口类别代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zgswskfjDm" type="zgswskfjDm">
+				<xs:annotation>
+					<xs:documentation>主管税务所科（分局）代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="gjhbjgDm" type="zgbmmc">
+				<xs:annotation>
+					<xs:documentation>环境保护主管部门</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="syyxqq" type="syyxqq">
+				<xs:annotation>
+					<xs:documentation>税源有效期起</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="syyxqz" type="syyxqz">
+				<xs:annotation>
+					<xs:documentation>税源有效期止</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="xzqhszDm" type="xzqhszDm">
+				<xs:annotation>
+					<xs:documentation>行政区划</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yxbz" type="yxbz">
+				<xs:annotation>
+					<xs:documentation>有效标志</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="pfkwybm" type="hth">
+				<xs:annotation>
+					<xs:documentation>排放口唯一编码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sbbz" type="yxbz">
+				<xs:annotation>
+					<xs:documentation>申报标志</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="xkzfbwybm" type="fbhtzh">
+				<xs:annotation>
+					<xs:documentation>许可证副本唯一编码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="clrq" type="clrq">
+				<xs:annotation>
+					<xs:documentation>注销撤销日期</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="wbjhpfkuuid" type="uuid">
+				<xs:annotation>
+					<xs:documentation>排放口uuid</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sqlx" type="sqlx">
+				<xs:annotation>
+					<xs:documentation>申请类型</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="dwmc" type="dwmc">
+				<xs:annotation>
+					<xs:documentation>单位名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="hbssjlybz" type="clbz">
+				<xs:annotation>
+					<xs:documentation>环保税数据来源标志（0：排污费征收系统,1：排污许可证系统）</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="hylb" type="hylb">
+				<xs:annotation>
+					<xs:documentation>行业类别</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="tcrq" type="rq">
+				<xs:annotation>
+					<xs:documentation>投产日期</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sfsyzdqy" type="yxbz">
+				<xs:annotation>
+					<xs:documentation>是否属于重点区域</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="hfrq1" type="hfrq1">
+				<xs:annotation>
+					<xs:documentation>核发日期</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="hfhbjgmc" type="nsrmc">
+				<xs:annotation>
+					<xs:documentation>核发环保机关名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zywrwlbsDm" type="zywrwlbsDm">
+				<xs:annotation>
+					<xs:documentation>z主要污染物类别代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

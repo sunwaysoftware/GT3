@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 被2011 rel. 2 sp1 (TeaM DJiNN) 使用XMLSpy vTeaM DJiNN编辑的 (http://www.altova.com) by -->
+<!-- edited with XMLSpy v2010 rel. 3 (http://www.altova.com) by MESMERiZE (MSM) -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:include schemaLocation="TaxMLPublicType.xsd"/>
+	<xs:complexType name="jwsdnstzhsdmxbForm">
+		<xs:annotation>
+			<xs:documentation>境外所得纳税调整后所得明细表(A108010)业务报文</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="jwsdnstzhsdMxbGrid" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>境外所得纳税调整后所得明细表</xs:documentation>
+						</xs:annotation>
+						<xs:complexType>
+							<xs:sequence  maxOccurs="unbounded" minOccurs="0">
+								<xs:element name="jwsdnstzhsdmxbgridVO" type="jwsdnstzhsdmxbGridVO" minOccurs="0"/>
+							</xs:sequence>
+						</xs:complexType>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="jwsdnstzhsdmxbGridVO">
+		<xs:annotation>
+			<xs:documentation>《境外所得纳税调整后所得明细表》</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+<xs:element name="gjdq"  type="gjhdq"   > <xs:annotation> <xs:documentation>国家（地区）</xs:documentation></xs:annotation></xs:element>
+<xs:element name="jwshfzjgyylr"  type="je"   > <xs:annotation> <xs:documentation>境外税后所得_分支机构机构营业利润所得</xs:documentation></xs:annotation></xs:element>
+<xs:element name="jwshgxhltzsd"  type="je"   > <xs:annotation> <xs:documentation>境外税后所得_股息、红利等权益性投资所得</xs:documentation></xs:annotation></xs:element>
+<xs:element name="jwshlxsd"  type="je"   > <xs:annotation> <xs:documentation>境外税后所得_利息所得</xs:documentation></xs:annotation></xs:element>
+<xs:element name="jwshzjsd"  type="je"   > <xs:annotation> <xs:documentation>境外税后所得_租金所得</xs:documentation></xs:annotation></xs:element>
+<xs:element name="jwshtxqfysd"  type="je"   > <xs:annotation> <xs:documentation>境外税后所得_特许权使用费所得</xs:documentation></xs:annotation></xs:element>
+<xs:element name="jwshcczrsd"  type="je"   > <xs:annotation> <xs:documentation>境外税后所得_财产转让所得</xs:documentation></xs:annotation></xs:element>
+<xs:element name="jwshqtsd"  type="je"   > <xs:annotation> <xs:documentation>境外税后所得_其他所得</xs:documentation></xs:annotation></xs:element>
+<xs:element name="jwshxj"  type="je"   > <xs:annotation> <xs:documentation>境外税后所得_小计</xs:documentation></xs:annotation></xs:element>
+<xs:element name="jwsdkdmzjjn"  type="je"   > <xs:annotation> <xs:documentation>境外所得可抵免的所得税额_直接缴纳的所得税额</xs:documentation></xs:annotation></xs:element>
+<xs:element name="jwsdkdmjjfd"  type="je"   > <xs:annotation> <xs:documentation>境外所得可抵免的所得税额_间接负担的所得税额</xs:documentation></xs:annotation></xs:element>
+<xs:element name="jwsdkdmxssrrdm"  type="je"   > <xs:annotation> <xs:documentation>境外所得可抵免的所得税额_享受税收饶让抵免税额</xs:documentation></xs:annotation></xs:element>
+<xs:element name="jwsdkdmxj"  type="je"   > <xs:annotation> <xs:documentation>境外所得可抵免的所得税额_小计</xs:documentation></xs:annotation></xs:element>
+<xs:element name="jwsqsd"  type="je"   > <xs:annotation> <xs:documentation>境外税前所得</xs:documentation></xs:annotation></xs:element>
+<xs:element name="jwfzsrzctze"  type="je"   > <xs:annotation> <xs:documentation>境外分支机构收入与支出纳税调整额</xs:documentation></xs:annotation></xs:element>
+<xs:element name="jwfztzftkccbfy"  type="je"   > <xs:annotation> <xs:documentation>境外分支机构调整分摊扣除的有关成本费用</xs:documentation></xs:annotation></xs:element>
+<xs:element name="jwsdtzcbfyzc"  type="je"   > <xs:annotation> <xs:documentation>境外所得对应调整的相关成本费用支出</xs:documentation></xs:annotation></xs:element>
+<xs:element name="jwsdtzhsd"  type="je"   > <xs:annotation> <xs:documentation>境外所得纳税调整后所得</xs:documentation></xs:annotation></xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2010 rel. 3 (http://www.altova.com) by xiang (hbnu) -->
+<!-- 被2012 () 使用XMLSpy v编辑的 (http://www.altova.com) by -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:include schemaLocation="TaxMLPublicType.xsd"/>
+	<xs:complexType name="syzqlzczlqkbVO">
+		<xs:annotation>
+			<xs:documentation>资产质量、表外应收利息及资本充足率情况表</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="syzqlzczlqkbxxGrid">
+				<xs:annotation>
+					<xs:documentation>资产质量情况表</xs:documentation>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:sequence maxOccurs="unbounded">
+						<xs:element name="syzqlzczlqkbxxGridlb" type="syzqlzczlqkbGridlbVO"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="syzqlzczlqkbGridlbVO">
+		<xs:annotation>
+			<xs:documentation>资产质量、表外应收利息及资本充足率情况表表格列表</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="ewbhxh" type="ewbhxh" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>二维表行序号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="xmmc" type="xmmc" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>项目名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ncs" type="ncsZc" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>年初数</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="nms" type="ncsZc">
+				<xs:annotation>
+					<xs:documentation>年末数</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

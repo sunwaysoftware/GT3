@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 被2012 () 使用XMLSpy v编辑的 (http://www.altova.com) by -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:complexType name="jrbxyyyssb07_zymmqtjrspjcsrmxbywbw">
+		<xs:annotation>
+			<xs:documentation>《自营买卖其他金融商品价差收入明细表》业务报文</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="jrbxyyyssb07_zymmqtjrspjcsrmxb" type="jrbxyyyssb07_zymmqtjrspjcsrmxb">
+						<xs:annotation>
+							<xs:documentation>《自营买卖其他金融商品价差收入明细表》</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="jrbxyyyssb07_zymmqtjrspjcsrmxb">
+		<xs:annotation>
+			<xs:documentation>《自营买卖其他金融商品价差收入明细表》</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="zymmqtjrspjcsrmxbGrid" type="zymmqtjrspjcsrmxbGrid">
+				<xs:annotation>
+					<xs:documentation>自营买卖其他金融商品价差收入明细表</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="zymmqtjrspjcsrmxbGrid">
+		<xs:annotation>
+			<xs:documentation>《自营买卖其他金融商品价差收入明细表》</xs:documentation>
+		</xs:annotation>
+		<xs:sequence maxOccurs="unbounded">
+			<xs:element name="zymmqtjrspjcsrmxbGridlb" type="zymmqtjrspjcsrmxbGridlb">
+				<xs:annotation>
+					<xs:documentation>自营买卖其他金融商品价差收入明细表</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="zymmqtjrspjcsrmxbForm">
+		<xs:annotation>
+			<xs:documentation>自营买卖其他金融商品价差收入明细表总体</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="sqzrfc" type="je">
+				<xs:annotation>
+					<xs:documentation>上期转入负差合计</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jcye" type="je">
+				<xs:annotation>
+					<xs:documentation>价差余额合计</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="zymmqtjrspjcsrmxbGridlb">
+		<xs:annotation>
+			<xs:documentation>自营买卖其他金融商品价差收入明细表</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="jrhspdm" type="jrspDm">
+				<xs:annotation>
+					<xs:documentation>金融商品代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bzDm" type="hbmc">
+				<xs:annotation>
+					<xs:documentation>货币名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zhl" type="zhl">
+				<xs:annotation>
+					<xs:documentation>折合率</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zmcj" type="je">
+				<xs:annotation>
+					<xs:documentation>总卖出价</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zmrj" type="je">
+				<xs:annotation>
+					<xs:documentation>总买入价</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jcje" type="je">
+				<xs:annotation>
+					<xs:documentation>价差</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zrmbjc" type="je">
+				<xs:annotation>
+					<xs:documentation>折人民币价差</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

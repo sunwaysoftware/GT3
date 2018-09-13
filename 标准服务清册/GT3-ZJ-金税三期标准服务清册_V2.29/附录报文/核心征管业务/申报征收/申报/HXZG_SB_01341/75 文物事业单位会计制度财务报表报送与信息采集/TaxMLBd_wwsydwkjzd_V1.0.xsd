@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2013 (http://www.altova.com) by  () -->
+<!-- 被2012 () 使用XMLSpy v编辑的 (http://www.altova.com) by -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:include schemaLocation="TaxMLPublicType.xsd"/>
+	<xs:complexType name="wwsyzcfzbVO">
+		<xs:annotation>
+			<xs:documentation>文物事业单位资产负债表</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="nsrxxForm" type="NsrxxFormVO" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>纳税人基本信息</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="wwsyzcfzbGrid">
+				<xs:annotation>
+					<xs:documentation>申报信息</xs:documentation>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:sequence minOccurs="0" maxOccurs="unbounded">
+						<xs:element name="wwsyzcfzbGridlb" type="wwsyzcfzbGridlbVO"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="wwsyzcfzbGridlbVO">
+		<xs:annotation>
+			<xs:documentation>文物事业单位资产负债表列表信息</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="ewbhxh" type="ewbhxh" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>二维表行序号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zcxmmc" type="zcxmmc" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>资产项目名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ncsZc" type="ncsZc" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>年初数_资产</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qmsZc" type="qmsZc" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>期末数_资产</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qyxmmc" type="qyxmmc" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>负债和所有者权益权益项目名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ncsQy" type="ncsQy" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>年初数_权益</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qmsQy" type="qmsQy" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>期末数_权益 </xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="wwsyczbzsrzcbVO">
+		<xs:annotation>
+			<xs:documentation>文物事业单位财政补助收入支出表</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="wwsyczbzsrzcGrid">
+				<xs:annotation>
+					<xs:documentation>申报信息</xs:documentation>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:sequence minOccurs="0" maxOccurs="unbounded">
+						<xs:element name="wwsyczbzsrzcbGridlb" type="wwsyczbzsrzcbGridlbVO"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="wwsyczbzsrzcbGridlbVO">
+		<xs:annotation>
+			<xs:documentation>文物事业单位财政补助收入支出表列表信息</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="ewbhxh" type="ewbhxh" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>二维表行序号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="xmmc" type="xmmc" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>项目名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bns" type="bns" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>本年数</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sns" type="sns" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>上年数</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="wwsysrzcbybVO">
+		<xs:annotation>
+			<xs:documentation>文物事业单位收入支出表（月报）</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="wwsysrzcbybGrid">
+				<xs:annotation>
+					<xs:documentation>申报信息</xs:documentation>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:sequence minOccurs="0" maxOccurs="unbounded">
+						<xs:element name="wwsysrzcbybGrid" type="wwsysrzcbybGridlbVO"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="wwsysrzcbybGridlbVO">
+		<xs:annotation>
+			<xs:documentation>文物事业单位收入支出表（月报）列表信息</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="ewbhxh" type="ewbhxh" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>二维表行序号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="xmmc" type="xmmc" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>项目名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bys" type="bys" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>本月数</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bnljs" type="bnljs" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>本年累计数</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

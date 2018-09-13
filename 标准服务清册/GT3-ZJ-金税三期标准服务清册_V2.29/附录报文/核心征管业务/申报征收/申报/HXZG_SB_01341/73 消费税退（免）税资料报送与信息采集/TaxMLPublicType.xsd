@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 被2011 rel. 2 sp1 (TeaM DJiNN) 使用XMLSpy vTeaM DJiNN编辑的 (http://www.altova.com) by -->
+<!-- edited with XMLSpy v2013 (http://www.altova.com) by  () -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:complexType name="sbbheadVO">
+		<xs:annotation>
+			<xs:documentation>通用申报表表头</xs:documentation>
+		</xs:annotation>
+	</xs:complexType>
+	<xs:complexType name="sbbheadkz1VO">
+		<xs:annotation>
+			<xs:documentation>通用申报表表头扩展，增加申报类型，日期</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="sbbheadVO">
+				<xs:sequence>
+					<xs:element name="sblx" type="sblx">
+						<xs:annotation>
+							<xs:documentation>申报类型代码</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="sbrq" type="sbrq">
+						<xs:annotation>
+							<xs:documentation>申报日期</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="sbbslxxVO">
+		<xs:annotation>
+			<xs:documentation>申报表受理信息VO</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="slrDm" type="slrDm" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>受理人代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="slswjgDm" type="slswjgDm" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>受理税务机关代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="slrq" type="slrq">
+				<xs:annotation>
+					<xs:documentation>受理日期</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="sbbslxxkz1VO">
+		<xs:annotation>
+			<xs:documentation>申报表受理信息VO扩展1，增加代理人相关信息</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="sbbslxxVO">
+				<xs:sequence>
+					<xs:element name="swdlrmc" type="swdlrmc">
+						<xs:annotation>
+							<xs:documentation>税务代理人名称</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="swdlrlxdh" type="swdlrlxdh">
+						<xs:annotation>
+							<xs:documentation>税务代理人联系电话</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="swdlrjbr" type="xm">
+						<xs:annotation>
+							<xs:documentation>税务代理人经办人</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="cwfzr" type="cwfzr">
+						<xs:annotation>
+							<xs:documentation>财务负责人</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="fddbr" type="fddbr">
+						<xs:annotation>
+							<xs:documentation>法定代表人</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="bsy" type="bsy">
+						<xs:annotation>
+							<xs:documentation>办税人</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="sbbslxxkz2VO">
+		<xs:annotation>
+			<xs:documentation>申报表受理信息VO扩展2，增加办税人相关信息</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="sbbslxxVO">
+				<xs:sequence>
+					<xs:element name="bsy" type="bsy">
+						<xs:annotation>
+							<xs:documentation>办税人</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="sbbFjxxVO">
+		<xs:annotation>
+			<xs:documentation>申报表附加信息VO</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="swdlrdwmc" type="swdlrdwmc" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>税务代理人名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="swdlrlxdh" type="swdlrlxdh" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>税务代理人名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="NsrxxFormVO">
+		<xs:annotation>
+			<xs:documentation>纳税人信息VO</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="nsrsbh" type="nsrsbh">
+				<xs:annotation>
+					<xs:documentation>纳税人识别号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="nsrmc" type="nsrmc">
+				<xs:annotation>
+					<xs:documentation>纳税人名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bsrq" type="bsrq">
+				<xs:annotation>
+					<xs:documentation>报送日期</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="skssqq" type="skssqq">
+				<xs:annotation>
+					<xs:documentation>税款所属期起</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="skssqz" type="skssqz">
+				<xs:annotation>
+					<xs:documentation>税款所属期止</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

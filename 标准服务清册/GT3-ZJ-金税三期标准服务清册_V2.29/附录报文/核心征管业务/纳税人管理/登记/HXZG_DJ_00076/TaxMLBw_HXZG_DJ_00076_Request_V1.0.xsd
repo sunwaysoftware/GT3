@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 被2011 rel. 2 sp1 (TeaM DJiNN) 使用XMLSpy vTeaM DJiNN编辑的 (http://www.altova.com) by -->
+<!-- edited with XMLSpy v2013 (http://www.altova.com) by  () -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:include schemaLocation="TaxMLPublicDJType.xsd"/>
+	<xs:include schemaLocation="TaxMLBd_01100200102_V1.0.xsd"/>
+	<xs:complexType name="HXZGDJ00076Request">
+		<xs:annotation>
+			<xs:documentation>变更税务登记-联合办证纳税人向对方机关地税写入变更的纳税人信息接入报文</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="saveDfbgswdjb" type="saveDsDfbgswdjb">
+						<xs:annotation>
+							<xs:documentation>联合办证纳税人向对方机关地税写入变更的纳税人信息</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="saveDsDfbgswdjb">
+		<xs:annotation>
+			<xs:documentation>联合办证纳税人向对方机关地税写入变更的纳税人信息</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="xnsrsbh" type="nsrsbh">
+				<xs:annotation>
+					<xs:documentation>新纳税人识别号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ssdabh" type="ssdabh">
+				<xs:annotation>
+					<xs:documentation>税收档案编号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="kzztdjlxDm" type="kzztdjlxDm">
+				<xs:annotation>
+					<xs:documentation>课征主体登记类型代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="gdslxDm" type="gdslxDm">
+				<xs:annotation>
+					<xs:documentation>国地税类型代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="swryDm" type="swryDm">
+				<xs:annotation>
+					<xs:documentation>税务人员代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="DsDfgdjmxGrid" type="DsDfgdjmxGrid">
+				<xs:annotation>
+					<xs:documentation>变更税务登记明细信息</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="djxh" type="djxh">
+				<xs:annotation>
+					<xs:documentation>当前变更纳税人登记序号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="lcslid" type="lcslid">
+				<xs:annotation>
+					<xs:documentation>流程实例ID</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="gdssftbcs" type="bz1">
+				<xs:annotation>
+					<xs:documentation>国地税是否同步参数</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bgswdjb" type="bgdfBgxx">
+				<xs:annotation>
+					<xs:documentation>变更信息</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="DsDfgdjmxGrid">
+		<xs:annotation>
+			<xs:documentation>保存对方变更登记明细信息列表</xs:documentation>
+		</xs:annotation>
+		<xs:sequence minOccurs="0" maxOccurs="unbounded">
+			<xs:element name="bgdjmxGridlb" type="DJBgdjmxVO">
+				<xs:annotation>
+					<xs:documentation>保存对方变更税务登记明细信息</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

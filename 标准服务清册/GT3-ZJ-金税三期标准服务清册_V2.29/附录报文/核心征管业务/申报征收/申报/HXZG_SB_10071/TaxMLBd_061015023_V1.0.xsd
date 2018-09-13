@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 被2012 () 使用XMLSpy v编辑的 (http://www.altova.com) by -->
+<!-- edited with XMLSpy v2013 (http://www.altova.com) by  () -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:complexType name="A105070Ywbd">
+		<xs:annotation>
+			<xs:documentation>捐赠支出纳税调整明细表(A105070)业务报文.</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="jzzcnstzMxbGrid">
+						<xs:annotation>
+							<xs:documentation>资产折旧、摊销情况及纳税调整明细表</xs:documentation>
+						</xs:annotation>
+						<xs:complexType>
+							<xs:sequence minOccurs="0" maxOccurs="unbounded">
+								<xs:element name="jzzcnstzmxbGridlb" type="jzzcnstzmxbGridlbVO"/>
+							</xs:sequence>
+						</xs:complexType>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="jzzcnstzmxbGridlbVO">
+		<xs:annotation>
+			<xs:documentation>捐赠支出明细</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="ewbhxh" type="ewbhxh" minOccurs="1">
+				<xs:annotation>
+					<xs:documentation>二维表行序号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ewbhmc" type="nsrmc" minOccurs="1">
+				<xs:annotation>
+					<xs:documentation>二维表行名称||二维表行名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ewbhgjz" type="ewbhgjz" minOccurs="1">
+				<xs:annotation>
+					<xs:documentation>二维表行关键字，1行:fgyxjz|2行:qekcgyxjz|3行:xekcgyxjz|4行:qsnd|5行:qend|6行:qynd|7行:bn|8行:hj</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zzje" type="je" minOccurs="1">
+				<xs:annotation>
+					<xs:documentation>账载金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yqndjzkkcdjze" type="je" minOccurs="1">
+				<xs:annotation>
+					<xs:documentation>以前年度结转可扣除的捐赠额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="assgdjsdkcxe" type="je" minOccurs="1">
+				<xs:annotation>
+					<xs:documentation>按税收规定计算的扣除限额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ssje" type="je" minOccurs="1">
+				<xs:annotation>
+					<xs:documentation>税收金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="nstzje" type="je" minOccurs="1">
+				<xs:annotation>
+					<xs:documentation>纳税调增金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="nstjje" type="je" minOccurs="1">
+				<xs:annotation>
+					<xs:documentation>纳税调减金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="kjzyhndkcdjze" type="je">
+				<xs:annotation>
+					<xs:documentation>可结转以后年度扣除的捐赠额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

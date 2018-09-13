@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:include schemaLocation="TaxMLBw_clgzssb_V1.0.xsd"/>
+	<xs:complexType name="HXZGSB00080Request">
+		<xs:annotation>
+			<xs:documentation>车辆合格证信息扫描导入及监控接入报文</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="clgzssbywbw" type="clgzssbywbw">
+						<xs:annotation>
+							<xs:documentation>车购税申报表对象</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="msbz" type="bz">
+						<xs:annotation>
+							<xs:documentation>模式标志：ms0 原始，ms1合格证，ms2应急模式</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="flag" type="bz">
+						<xs:annotation>
+							<xs:documentation>调用区分标志 sbdr导入 ，qt其他（目前只用来区分是申报导入严格校验车辆合格证编号必须有）</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="clgzssbxxForm" type="clgzssbxxForm">
+						<xs:annotation>
+							<xs:documentation>合格证中相关的车辆信息</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+</xs:schema>

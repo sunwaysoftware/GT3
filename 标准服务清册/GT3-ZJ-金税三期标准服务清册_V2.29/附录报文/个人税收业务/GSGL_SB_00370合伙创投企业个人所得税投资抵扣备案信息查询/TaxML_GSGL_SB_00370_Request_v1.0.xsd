@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:complexType name="sbHhctGrsdsTzdkBaxxCxRequest">
+		<xs:annotation>
+			<xs:documentation>合伙创投个人所得税投资抵扣备案信息查询</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="kjywrdjxh" type="djxh">
+						<xs:annotation>
+							<xs:documentation>合伙创投企业登记序号（和备案编号、交易唯一识别号三种必录其一）</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="babh" type="babh">
+						<xs:annotation>
+							<xs:documentation>
+								备案编号（和交易唯一识别号、合伙创投企业登记序号必录其一；
+录入备案编号且交易唯一识别号为空时以备案编号为唯一标识信息进行查询）
+							</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="basjq" type="barq">
+						<xs:annotation>
+							<xs:documentation>备案时间起（日期格式为yyyy-MM-dd）</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="basjz" type="barq">
+						<xs:annotation>
+							<xs:documentation>备案时间止（日期格式为yyyy-MM-dd）</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="nd" type="nd">
+						<xs:annotation>
+							<xs:documentation>年度（格式为yyyy）</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="baglbm" type="baglbm">
+						<xs:annotation>
+							<xs:documentation>备案管理部门（长度不能大于300字符,存在不合法的XML字符必须被替换为相应的实体）</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="jywysbh" type="jywysbh">
+						<xs:annotation>
+							<xs:documentation>交易唯一识别号（与备案编号、登记序号三种必录其一；
+传入交易唯一识别号时，首先以交易唯一识别号为唯一识别信息查询对应备案信息）</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+</xs:schema>

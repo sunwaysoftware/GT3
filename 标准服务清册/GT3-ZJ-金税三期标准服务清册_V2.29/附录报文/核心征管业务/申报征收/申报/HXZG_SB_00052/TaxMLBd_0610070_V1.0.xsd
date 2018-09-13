@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2009 (http://www.altova.com) by Administrator (EMBRACE) -->
+<!-- 被2011 rel. 2 sp1 (TeaM DJiNN) 使用XMLSpy vTeaM DJiNN编辑的 (http://www.altova.com) by -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:include schemaLocation="TaxMLPublicType.xsd"/>
+	<xs:complexType name="kqsyfndsbbywbw">
+		<xs:annotation>
+			<xs:documentation>《矿区使用费年度申报表》业务报文</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="kqsyfndsbb" type="kqsyfndsbb">
+						<xs:annotation>
+							<xs:documentation>《矿区使用费年度申报表》</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="kqsyfndsbb">
+		<xs:annotation>
+			<xs:documentation>《矿区使用费年度申报表》</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="sbbhead" type="sbbheadkz1VO">
+				<xs:annotation>
+					<xs:documentation>申报表头信息</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="kqsyfndsbForm" type="KqsyfndsbVO">
+				<xs:annotation>
+					<xs:documentation>申报表信息</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="slxxForm" type="slxxForm">
+				<xs:annotation>
+					<xs:documentation>受理信息</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="nsrxxForm">
+		<xs:annotation>
+			<xs:documentation>纳税人基本信息</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="yqtmc" type="yqtmc">
+				<xs:annotation>
+					<xs:documentation>油（气）田名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yzbm" type="yzbm">
+				<xs:annotation>
+					<xs:documentation>邮政编码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yfcpmc" type="yfcpmc">
+				<xs:annotation>
+					<xs:documentation>应费产品名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="khyh" type="khyh">
+				<xs:annotation>
+					<xs:documentation>开户银行||开户银行</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yhzh" type="yhzh">
+				<xs:annotation>
+					<xs:documentation>账号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="lxdh" type="lxdh">
+				<xs:annotation>
+					<xs:documentation>联系电话</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="dz" type="dz">
+				<xs:annotation>
+					<xs:documentation>地址</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zyzmc" type="zyzmc">
+				<xs:annotation>
+					<xs:documentation>作业者名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="cpxssxrq" type="cpxssxrq">
+				<xs:annotation>
+					<xs:documentation>产品销售实现日期</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="KqsyfndsbVO">
+		<xs:annotation>
+			<xs:documentation>申报表信息</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="yqtmc" type="yqtmc" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>油（气）田名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yzbm" type="yzbm" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>邮政编码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="khyh" type="khyh" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>开户银行||开户银行</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="lxdh" type="lxdh" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>联系电话</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zyzmc" type="zyzmc" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>作业者名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yfcpmc" type="yfcpmc" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>应费产品名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yhzh" type="yhzh" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>银行账号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="dz" type="dz" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>地址</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bndyyljcl" type="bndyyljcl" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>本年度原油气累计产量</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zyyyl" type="zyyyl" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>其中:作业用油气量</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="shsl1" type="shsl1" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>损耗数量</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bndyyzcl" type="bndyyzcl" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>本年度原油气总产量</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="syfl" type="syfl" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>适用费率</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bndyjnKqsyfyylSskkl" type="bndyjnKqsyfyylSskkl" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>本年度应缴纳矿区使用费原油气量</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bndyjnKqsyfyyql" type="bndyjnKqsyfyyql" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>本年度已缴纳矿区使用费原油气量</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="snydkKqsyfyyl" type="snydkKqsyfyyl" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>上年应抵扣矿区使用费原油气量</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="snybjKqsyfyyl" type="snybjKqsyfyyl" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>上年应补缴矿区使用费原油气量</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ybtKqsyfyyl" type="ybtKqsyfyyl" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>应补退矿区使用费原油气量</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bndZhygyxsyyqjg" type="bndZhygyxsyyqjg" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>本年度最后一个月次销售原油气价格</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ybtkqsyfje" type="ybtkqsyfje" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>应补退矿区使用费金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="slxxForm">
+		<xs:annotation>
+			<xs:documentation>受理信息</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="cwfzrxm" type="cwfzrxm">
+				<xs:annotation>
+					<xs:documentation>财务负责人姓名</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ssdljbr" type="ssdljbr">
+				<xs:annotation>
+					<xs:documentation>税收代理经办人</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bsy" type="bsy">
+				<xs:annotation>
+					<xs:documentation>办税人</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="slrDm" type="slrDm">
+				<xs:annotation>
+					<xs:documentation>受理人</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="slrq" type="slrq">
+				<xs:annotation>
+					<xs:documentation>受理日期</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="slswjgDm" type="slswjgDm">
+				<xs:annotation>
+					<xs:documentation>受理税务机关</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="shjl" type="shjl">
+				<xs:annotation>
+					<xs:documentation>审核记录</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

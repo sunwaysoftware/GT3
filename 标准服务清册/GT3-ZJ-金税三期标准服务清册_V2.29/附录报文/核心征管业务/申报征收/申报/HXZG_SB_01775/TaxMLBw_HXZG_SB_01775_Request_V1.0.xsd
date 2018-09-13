@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2010 rel. 3 (http://www.altova.com) by MESMERiZE (MSM) -->
+<!-- 被2012 () 使用XMLSpy v编辑的 (http://www.altova.com) by -->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://www.chinatax.gov.cn/dataspec/" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:include schemaLocation="TaxMLBd_072035001_V1.0.xsd"/>
+	<xs:complexType name="HXZGSB01775Request">
+		<xs:annotation>
+			<xs:documentation>土地增值税核定保存</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="tdzzsqshd" type="tdzzsqshd">
+						<xs:annotation>
+							<xs:documentation>土地增值税核定</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="tdzzsqshduuid" type="uuid">
+						<xs:annotation>
+							<xs:documentation>土地增值税核定UUID</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="sfspbz" type="bz1">
+						<xs:annotation>
+							<xs:documentation>是否审批标志</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+</xs:schema>

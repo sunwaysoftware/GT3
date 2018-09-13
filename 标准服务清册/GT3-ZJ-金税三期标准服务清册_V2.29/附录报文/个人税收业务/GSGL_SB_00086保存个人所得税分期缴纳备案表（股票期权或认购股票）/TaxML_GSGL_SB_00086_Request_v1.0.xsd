@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 被2011 rel. 2 sp1 (TeaM DJiNN) 使用XMLSpy vTeaM DJiNN编辑的 (http://www.altova.com) by -->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://www.chinatax.gov.cn/dataspec/" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:complexType name="SbFqbaGpqqRgbpSaveRequest">
+		<xs:annotation>
+			<xs:documentation>保存分期缴纳备案股票期权或认购股票-请求报文</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="jywysbh" type="jywysbh">
+						<xs:annotation>
+							<xs:documentation>交易唯一识别号，对于总局版本代扣代缴客户端存储的是交易报文中的 扩展节点(不能为空)</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="kjywrdjxh" type="djxh">
+						<xs:annotation>
+							<xs:documentation>扣缴单位纳税人登记序号(不能为空)</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="dz" type="gsdz">
+						<xs:annotation>
+							<xs:documentation>地址</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="slswjgDm" type="swjgDm">
+						<xs:annotation>
+							<xs:documentation>受理税务机关代码(不能为空)</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="sqswryDm" type="sqswryDm">
+						<xs:annotation>
+							<xs:documentation>操作员代码(不能为空)</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="zgbsszb" type="zgbsszb">
+						<xs:annotation>
+							<xs:documentation>总股本（实收资本）(不能为空)</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="lxr" type="cbshtglwflxrxm">
+						<xs:annotation>
+							<xs:documentation>联系人(不能为空)</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="lxdh" type="fqbalxdh">
+						<xs:annotation>
+							<xs:documentation>联系电话(不能为空)</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="fqjslb" type="fqjslb">
+						<xs:annotation>
+							<xs:documentation>分期缴税类别【1:上市公司高管人员取得股票期权行权时纳税确有困难分期缴税,
+   2:个人认购股票等有价证券而从雇主取得折扣或补贴收入纳税确有困难分期缴税】(不能为空)</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="dlsbjg" type="dljgmc">
+						<xs:annotation>
+							<xs:documentation>代理申报机构</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="zgswjgDm" type="zgswjgDm">
+						<xs:annotation>
+							<xs:documentation>主管税务机关(默认为当前操作员所在税务机关)</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="sfdlsb" type="sfdlsb">
+						<xs:annotation>
+							<xs:documentation>是否代理申报(Y/N)(不能为空)</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="kjdwfzr" type="kjdwfzr">
+						<xs:annotation>
+							<xs:documentation>扣缴单位负责人(当是否代理申报为空时必录)</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="jbrxm" type="cbshtglwflxrxm">
+						<xs:annotation>
+							<xs:documentation>经办人</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="slrDm" type="slrDm">
+						<xs:annotation>
+							<xs:documentation>受理人(默认为当前操作员)</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="jbrzyzjhm" type="swdlrjbrzyzjhm">
+						<xs:annotation>
+							<xs:documentation>经办人执业证件号码(当代理申报机构录入，经办人执业证件号码必录)</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="slrq" type="slrq">
+						<xs:annotation>
+							<xs:documentation>受理日期(默认为系统当前日期,格式：yyyy-MM-dd)</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="dlsbrq" type="slrq">
+						<xs:annotation>
+							<xs:documentation>代理申报日期(默认为系统当前日期,格式：yyyy-MM-dd)</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="sqrq" type="sqrq">
+						<xs:annotation>
+							<xs:documentation>申请日期(yyyy-MM-dd)</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="fqjnbalbGrid" type="fqjnbalbGrid">
+						<xs:annotation>
+							<xs:documentation>分期缴纳备案列表</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="fqjnbalbGrid">
+		<xs:annotation>
+			<xs:documentation>分期缴纳备案列表</xs:documentation>
+		</xs:annotation>
+		<xs:sequence maxOccurs="unbounded">
+			<xs:element name="fqjnbalbLists" type="fqjnbalbXx">
+				<xs:annotation>
+					<xs:documentation>分期缴纳备案列表</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="fqjnbalbXx">
+		<xs:annotation>
+			<xs:documentation>分期缴纳备案列表</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="xm" type="xm">
+				<xs:annotation>
+					<xs:documentation>姓名(不能为空)</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sfzjlxDm" type="zrrsfzjlxDm">
+				<xs:annotation>
+					<xs:documentation>身份证件类型(不能为空)</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sfzjhm" type="bsrsfzjhm">
+				<xs:annotation>
+					<xs:documentation>身份证件号码(不能为空，如果身份证件类型为居民身份证时，身份证件号码只允许18位)</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yjzqzl" type="yjzqzl">
+				<xs:annotation>
+					<xs:documentation>有价证券种类(不能为空)</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yjzqMc" type="yjzqMc">
+				<xs:annotation>
+					<xs:documentation>有价证券名称(不能为空)</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yjzqDm" type="shzqsczqDm">
+				<xs:annotation>
+					<xs:documentation>有价证券代码(不能为空)</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="xqrgsj" type="rkrq">
+				<xs:annotation>
+					<xs:documentation>行权/认购时间(yyyy-MM-dd)(不能为空)</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="xqrgjg" type="sjje">
+				<xs:annotation>
+					<xs:documentation>行权/认购价格(不能为空)</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="xqrgsl" type="xqrgsl">
+				<xs:annotation>
+					<xs:documentation>行权/认购数量(不能为空)</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="scjg" type="sjje">
+				<xs:annotation>
+					<xs:documentation>市场价格(不能为空)</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ynssde" type="ynssde">
+				<xs:annotation>
+					<xs:documentation>应纳税所得额(（市场价格-行权/认购价格）*行权/认购数量)</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="fqys" type="fqys">
+				<xs:annotation>
+					<xs:documentation>分期月数(大于0小于等于12的整数,不能为空)</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

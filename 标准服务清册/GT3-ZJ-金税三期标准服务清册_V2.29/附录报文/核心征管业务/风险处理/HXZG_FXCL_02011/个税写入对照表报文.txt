@@ -1,0 +1,45 @@
+<service xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <head>
+    <tran_id>SWZJ.HXZG.PS.SAVEZCBSDZBFORGS</tran_id>
+    <channel_id>TEST</channel_id>
+    <tran_seq>8347c8db9a1740ba92e28c4f8b80d997</tran_seq>
+    <tran_date>20160115</tran_date>
+    <tran_time>040144</tran_time>
+    <rtn_code>0</rtn_code>
+    <rtn_msg>
+      <Code/>
+      <Message/>
+      <Reason/>
+    </rtn_msg>
+    <expand>
+      <name>identityType</name>
+      <value>TEST</value>
+    </expand>
+    <expand>
+      <name>sjry</name>
+      <value>14406823392</value>
+    </expand>
+    <expand>
+      <name>sjjg</name>
+      <value>14406820000</value>
+    </expand>
+  </head>
+  <body><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<!--用XMLSpy v2012产生的 XML文件(http://www.altova.com)-->
+<taxML xsi:type="NSPGZCBS00001Request" bbh="String" xmlbh="String" xmlmc="String" xsi:schemaLocation="http://www.chinatax.gov.cn/dataspec/ TaxMLBw_NSPG_ZCBS_00001_Request_V1.0.xsd" xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <NspgzcdzbrcGrid>
+    <NspgzcdzbrcGridlb>
+      <yzpzxh>10014416000000170010</yzpzxh>
+      <zxbztzsuuid>43C0B7A4C15CE16FBF3C27D6285D7115</zxbztzsuuid>
+      <lrrDm>14406823392</lrrDm>
+    </NspgzcdzbrcGridlb>
+    <NspgzcdzbrcGridlb>
+      <yzpzxh>10024416000000365054</yzpzxh>
+      <zxbztzsuuid>9C24A68301E7B1FF7CEB45929A9401C9</zxbztzsuuid>
+      <lrrDm>14406823392</lrrDm>
+    </NspgzcdzbrcGridlb>
+  </NspgzcdzbrcGrid>
+</taxML>
+]]></body>
+</service>
+

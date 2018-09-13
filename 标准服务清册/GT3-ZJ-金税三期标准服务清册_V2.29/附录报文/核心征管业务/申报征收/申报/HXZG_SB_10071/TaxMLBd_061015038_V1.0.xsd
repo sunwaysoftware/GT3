@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 被2011 rel. 2 sp1 (TeaM DJiNN) 使用XMLSpy vTeaM DJiNN编辑的 (http://www.altova.com) by -->
+<!-- edited with XMLSpy v2010 rel. 3 (http://www.altova.com) by MESMERiZE (MSM) -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:complexType name="A107030Ywbd">
+		<xs:annotation>
+			<xs:documentation>抵扣应纳税所得额明细表(A107030)表单</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="dkynssdemxbForm" type="dkynssdemxbFormVO">
+						<xs:annotation>
+							<xs:documentation>抵扣应纳税所得额明细表</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="dkynssdemxbFormVO">
+		<xs:annotation>
+			<xs:documentation>《抵扣应纳税所得额明细表》</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="bnxzfhtjgqtze" type="je">
+				<xs:annotation>
+					<xs:documentation>本年新增的符合条件的股权投资额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ssgddklje" type="sl1">
+				<xs:annotation>
+					<xs:documentation>税收规定的抵扣率</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bnxzkdkgqtze" type="je">
+				<xs:annotation>
+					<xs:documentation>本年新增的可抵扣的股权投资额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yqndjzswdkgqtzje" type="je">
+				<xs:annotation>
+					<xs:documentation>以前年度结转的尚未抵扣的股权投资余额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bnkdkgqtze" type="je">
+				<xs:annotation>
+					<xs:documentation>本年可抵扣的股权投资额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bnkyydkynssde" type="je">
+				<xs:annotation>
+					<xs:documentation>本年可用于抵扣的应纳税所得额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bnsjdkynssde" type="je">
+				<xs:annotation>
+					<xs:documentation>本年实际抵扣应纳税所得额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jzyhnddkgqtzye" type="je">
+				<xs:annotation>
+					<xs:documentation>结转以后年度抵扣的股权投资余额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bncyxhhctqysdse" type="je">
+				<xs:annotation>
+					<xs:documentation>本年从有限合伙创投企业应分得的应纳税所得额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bnxzdkdktze" type="je">
+				<xs:annotation>
+					<xs:documentation>本年新增的可抵扣投资额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yqndjzdkdktzeye" type="je">
+				<xs:annotation>
+					<xs:documentation>以前年度结转的可抵扣投资额余额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bnkdktze" type="je">
+				<xs:annotation>
+					<xs:documentation>本年可抵扣投资额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bnsjdkyfdynssde" type="je">
+				<xs:annotation>
+					<xs:documentation>本年实际抵扣应分得的应纳税所得额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jzyhnddkdtzrye" type="je">
+				<xs:annotation>
+					<xs:documentation>结转以后年度抵扣的投资额余额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="hj" type="je">
+				<xs:annotation>
+					<xs:documentation>合计</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bnxzfhtjgqtze2" type="je">
+				<xs:annotation>
+					<xs:documentation>本年新增的符合条件的股权投资额(未上市中小高新技术企业)</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ssgddklje2" type="je">
+				<xs:annotation>
+					<xs:documentation>税收规定的抵扣率(未上市中小高新技术企业)</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bnxzkdkgqtze2" type="je">
+				<xs:annotation>
+					<xs:documentation>本年新增的可抵扣的股权投资额(未上市中小高新技术企业)</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bnsjdkynssde2" type="je">
+				<xs:annotation>
+					<xs:documentation>本年实际抵扣应纳税所得额(未上市中小高新技术企业)</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bncyxhhctqysdse2" type="je">
+				<xs:annotation>
+					<xs:documentation>本年从有限合伙创投企业应分得的应纳税所得额(未上市中小高新技术企业)</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bnxzdkdktze2" type="je">
+				<xs:annotation>
+					<xs:documentation>本年新增的可抵扣投资额(未上市中小高新技术企业)</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bnsjdkyfdynssde2" type="je">
+				<xs:annotation>
+					<xs:documentation>本年实际抵扣应分得的应纳税所得额(未上市中小高新技术企业)</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="hj2" type="je">
+				<xs:annotation>
+					<xs:documentation>合计(未上市中小高新技术企业)</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bnxzfhtjgqtze3" type="je">
+				<xs:annotation>
+					<xs:documentation>本年新增的符合条件的股权投资额(初创期科技型企业)</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ssgddklje3" type="je">
+				<xs:annotation>
+					<xs:documentation>税收规定的抵扣率(初创期科技型企业)</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bnxzkdkgqtze3" type="je">
+				<xs:annotation>
+					<xs:documentation>本年新增的可抵扣的股权投资额(初创期科技型企业)</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bnsjdkynssde3" type="je">
+				<xs:annotation>
+					<xs:documentation>本年实际抵扣应纳税所得额(初创期科技型企业)</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bncyxhhctqysdse3" type="je">
+				<xs:annotation>
+					<xs:documentation>本年从有限合伙创投企业应分得的应纳税所得额(初创期科技型企业)</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bnxzdkdktze3" type="je">
+				<xs:annotation>
+					<xs:documentation>本年新增的可抵扣投资额(初创期科技型企业)</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bnsjdkyfdynssde3" type="je">
+				<xs:annotation>
+					<xs:documentation>本年实际抵扣应分得的应纳税所得额(初创期科技型企业)</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="hj3" type="je">
+				<xs:annotation>
+					<xs:documentation>合计(初创期科技型企业)</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2013 (http://www.altova.com) by  () -->
+<!-- 被2012 () 使用XMLSpy v编辑的 (http://www.altova.com) by -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:include schemaLocation="TaxMLPublicSBType.xsd"/>
+	<xs:include schemaLocation="TaxMLBw_fcjysb_V1.0.xsd"/>
+	<xs:include schemaLocation="TaxMLBw_fcjysb_V1.0.xsd"/>
+	<xs:complexType name="HXZGSB00267Request">
+		<xs:annotation>
+			<xs:documentation>房产交易申报保存前监控及保存申报信息请求报文</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="mfsbzzxx">
+						<xs:annotation>
+							<xs:documentation>卖方申报组装数据</xs:documentation>
+						</xs:annotation>
+						<xs:complexType>
+							<xs:sequence>
+								<xs:element name="sbxxGrid">
+									<xs:annotation>
+										<xs:documentation>申报数据信息</xs:documentation>
+									</xs:annotation>
+									<xs:complexType>
+										<xs:sequence minOccurs="0" maxOccurs="unbounded">
+											<xs:element name="sbxxGridlb" type="SBSbxxTjVO"/>
+										</xs:sequence>
+									</xs:complexType>
+								</xs:element>
+								<xs:element name="jmxxGrid">
+									<xs:annotation>
+										<xs:documentation>减免数据信息</xs:documentation>
+									</xs:annotation>
+									<xs:complexType>
+										<xs:sequence minOccurs="0" maxOccurs="unbounded">
+											<xs:element name="jmxxGridlb" type="SBSbjmTjVO"/>
+										</xs:sequence>
+									</xs:complexType>
+								</xs:element>
+								<xs:element name="yjxxGrid">
+									<xs:annotation>
+										<xs:documentation>预缴税款数据信息</xs:documentation>
+									</xs:annotation>
+									<xs:complexType>
+										<xs:sequence minOccurs="0" maxOccurs="unbounded">
+											<xs:element name="yjxxGridlb" type="SBSbyjTjVO"/>
+										</xs:sequence>
+									</xs:complexType>
+								</xs:element>
+								<xs:element name="sbSBbcTjqtxxVO" type="SBSBbcTjqtxxVO">
+									<xs:annotation>
+										<xs:documentation>申报纳税人申报保存提交其他信息对象</xs:documentation>
+									</xs:annotation>
+								</xs:element>
+							</xs:sequence>
+						</xs:complexType>
+					</xs:element>
+					<xs:element name="gmfsbzzxx">
+						<xs:annotation>
+							<xs:documentation>买方申报组装数据</xs:documentation>
+						</xs:annotation>
+						<xs:complexType>
+							<xs:sequence>
+								<xs:element name="gmfsbxxGrid">
+									<xs:annotation>
+										<xs:documentation>购买方申报信息</xs:documentation>
+									</xs:annotation>
+									<xs:complexType>
+										<xs:sequence minOccurs="0" maxOccurs="unbounded">
+											<xs:element name="gmfsbxxGridlb" type="SBSbxxTjVO"/>
+										</xs:sequence>
+									</xs:complexType>
+								</xs:element>
+								<xs:element name="gmfjmxxGrid">
+									<xs:annotation>
+										<xs:documentation>购买方减免信息</xs:documentation>
+									</xs:annotation>
+									<xs:complexType>
+										<xs:sequence minOccurs="0" maxOccurs="unbounded">
+											<xs:element name="gmfjmxxGridlb" type="SBSbjmTjVO"/>
+										</xs:sequence>
+									</xs:complexType>
+								</xs:element>
+								<xs:element name="gmfyjxxGrid">
+									<xs:annotation>
+										<xs:documentation>购买方预缴税款数据信息</xs:documentation>
+									</xs:annotation>
+									<xs:complexType>
+										<xs:sequence minOccurs="0" maxOccurs="unbounded">
+											<xs:element name="gmfyjxxGridlb" type="SBSbyjTjVO"/>
+										</xs:sequence>
+									</xs:complexType>
+								</xs:element>
+								<xs:element name="gmfsbSBbcTjqtxxVO" type="SBSBbcTjqtxxVO">
+									<xs:annotation>
+										<xs:documentation>购买方申报纳税人申报保存提交其他信息对象</xs:documentation>
+									</xs:annotation>
+								</xs:element>
+							</xs:sequence>
+						</xs:complexType>
+					</xs:element>
+					<xs:element name="fcjysbbdVO" type="fcjysbywbw">
+						<xs:annotation>
+							<xs:documentation>房产交易申报申报表单数据信息</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="zrryhjmsbabgbGrid">
+						<xs:annotation>
+							<xs:documentation>自然人优惠备案数据</xs:documentation>
+						</xs:annotation>
+						<xs:complexType>
+							<xs:sequence minOccurs="0" maxOccurs="unbounded">
+								<xs:element name="zrryhjmsbabgblb" type="zrryhjmsbabgblbVO"/>
+							</xs:sequence>
+						</xs:complexType>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="zrryhjmsbabgblbVO">
+		<xs:annotation>
+			<xs:documentation>自然人优惠信息列表VO</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="yhpzuuid" type="yhpzuuid">
+				<xs:annotation>
+					<xs:documentation>优惠凭证uuid</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="djxh" type="djxh">
+				<xs:annotation>
+					<xs:documentation>登记序号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jmsswsxDm" type="swsxDm">
+				<xs:annotation>
+					<xs:documentation>减免税税务事项代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jmlxDm" type="jmlxDm">
+				<xs:annotation>
+					<xs:documentation>减免类型代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zsxmDm" type="zsxmDm">
+				<xs:annotation>
+					<xs:documentation>征收项目代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zspmDm" type="zspmDm">
+				<xs:annotation>
+					<xs:documentation>征收品目代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jmslxDm" type="jmslxDm">
+				<xs:annotation>
+					<xs:documentation>减免税类型代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jmqxq" type="jmqxq">
+				<xs:annotation>
+					<xs:documentation>减免期限起</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jmqxz" type="jmqxz">
+				<xs:annotation>
+					<xs:documentation>减免期限止</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jzfd" type="jzfd">
+				<xs:annotation>
+					<xs:documentation>减征幅度</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jzsl" type="jzsl">
+				<xs:annotation>
+					<xs:documentation>减征税率</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jzed" type="jzed">
+				<xs:annotation>
+					<xs:documentation>减征额度</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jmxzDm" type="jmxzDm">
+				<xs:annotation>
+					<xs:documentation>减免性质代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jmxzdlDm" type="jmxmdlDm">
+				<xs:annotation>
+					<xs:documentation>减免性质大类代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jmxzxlDm" type="jmxmxlDm">
+				<xs:annotation>
+					<xs:documentation>减免性质小类代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yzpzxh" type="pzxh" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>凭证序号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sfsybz" type="bz1" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>是否使用标志</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

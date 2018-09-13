@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2013 (http://www.altova.com) by  () -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:include schemaLocation="TaxMLPublicDJType.xsd"/>
+	<xs:complexType name="HXZGDJ00153Response">
+		<xs:annotation>
+			<xs:documentation>根据登记序号查询纳税人建筑业项目信息返回报文</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="DJJzygcxmqkdjxxbVO" type="DJJzygcxmqkdjxxbVO">
+						<xs:annotation>
+							<xs:documentation>建筑业工程项目情况登记信息</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="JzygcxmTdxxGrid" type="JzygcxmTdxxGrid">
+						<xs:annotation>
+							<xs:documentation>建筑业工程项目土地信息集合</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="JzyxmdjSgxkzxxGrid" type="JzyxmdjSgxkzxxGrid">
+						<xs:annotation>
+							<xs:documentation>建筑业项目登记（施工许可证信息）集合</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="JzyxmdjWcjyhdssglzmxxGrid" type="JzyxmdjWcjyhdssglzmxxGrid">
+						<xs:annotation>
+							<xs:documentation>建筑业项目登记（外出经营活动税收管理证明信息）集合</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="JzyxmdjSyjfbfqkGrid" type="JzyxmdjSyjfbfqkGrid">
+						<xs:annotation>
+							<xs:documentation>建筑业项目登记（上一级发包方情况）集合</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="JzyxmdjFbgcqkGrid" type="JzyxmdjFbgcqkGrid">
+						<xs:annotation>
+							<xs:documentation>建筑业项目登记（分包工程情况）集合</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="JzyxmdjThjjfgqkGrid" type="JzyxmdjThjjfgqkGrid">
+						<xs:annotation>
+							<xs:documentation>建筑业项目登记（停缓建及复工情况）集合</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="JzygcxmGrid" type="JzygcxmGrid">
+						<xs:annotation>
+							<xs:documentation>建筑业工程项目集合</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="sgfWcjyhdssglzmxxGrid" type="sgfWcjyhdssglzmxxGrid">
+						<xs:annotation>
+							<xs:documentation>施工方外出经营活动税收管理证明信息集合</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="sgfWcjyhdssglzmxxGrid">
+		<xs:annotation>
+			<xs:documentation>施工方外出经营活动税收管理证明信息集合</xs:documentation>
+		</xs:annotation>
+		<xs:sequence minOccurs="0" maxOccurs="unbounded">
+			<xs:element name="sgfWcjyhdssglzmxxGridlb" type="DJJzyxmdjWcjyhdssglzmxxVO">
+				<xs:annotation>
+					<xs:documentation>施工方外出经营活动税收管理证明信息列表</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="JzygcxmGrid">
+		<xs:annotation>
+			<xs:documentation>建筑业工程项目集合</xs:documentation>
+		</xs:annotation>
+		<xs:sequence minOccurs="0" maxOccurs="unbounded">
+			<xs:element name="JzygcxmGridlb" type="JzygcxmVO">
+				<xs:annotation>
+					<xs:documentation>建筑业工程项目集合列表</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="JzygcxmTdxxGrid">
+		<xs:annotation>
+			<xs:documentation>建筑业工程项目土地信息集合</xs:documentation>
+		</xs:annotation>
+		<xs:sequence minOccurs="0" maxOccurs="unbounded">
+			<xs:element name="JzygcxmTdxxGridlb" type="JzygcxmTdxxVO">
+				<xs:annotation>
+					<xs:documentation>建筑业工程项目土地信息列表</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="JzyxmdjSgxkzxxGrid">
+		<xs:annotation>
+			<xs:documentation>建筑业项目登记（施工许可证信息）集合</xs:documentation>
+		</xs:annotation>
+		<xs:sequence minOccurs="0" maxOccurs="unbounded">
+			<xs:element name="JzyxmdjSgxkzxxGridlb" type="DJJzyxmdjSgxkzxxVO">
+				<xs:annotation>
+					<xs:documentation>建筑业项目登记（施工许可证信息）列表</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="JzyxmdjWcjyhdssglzmxxGrid">
+		<xs:annotation>
+			<xs:documentation>外埠纳税人经营地报验登记集合</xs:documentation>
+		</xs:annotation>
+		<xs:sequence minOccurs="0" maxOccurs="unbounded">
+			<xs:element name="JzyxmdjWcjyhdssglzmxxGridlb" type="DJJzyxmdjWcjyhdssglzmxxVO">
+				<xs:annotation>
+					<xs:documentation>建筑业项目登记（外出经营活动税收管理证明信息）列表</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="JzyxmdjSyjfbfqkGrid">
+		<xs:annotation>
+			<xs:documentation>建筑业项目登记（上一级发包方情况）集合</xs:documentation>
+		</xs:annotation>
+		<xs:sequence minOccurs="0" maxOccurs="unbounded">
+			<xs:element name="JzyxmdjSyjfbfqkGridlb" type="JzyxmdjZfbgcxmxxVO">
+				<xs:annotation>
+					<xs:documentation>建筑业项目登记（上一级发包方情况）列表</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="JzyxmdjFbgcqkGrid">
+		<xs:annotation>
+			<xs:documentation>建筑业项目登记（分包工程情况）集合</xs:documentation>
+		</xs:annotation>
+		<xs:sequence minOccurs="0" maxOccurs="unbounded">
+			<xs:element name="JzyxmdjFbgcqkGridlb" type="JzyxmdjZfbgcxmxxVO">
+				<xs:annotation>
+					<xs:documentation>建筑业项目登记（分包工程情况）列表</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="JzyxmdjThjjfgqkGrid">
+		<xs:annotation>
+			<xs:documentation>建筑业项目登记（停缓建及复工情况）集合</xs:documentation>
+		</xs:annotation>
+		<xs:sequence minOccurs="0" maxOccurs="unbounded">
+			<xs:element name="JzyxmdjThjjfgqkGridlb" type="DJJzyxmdjThjjfgqkVO">
+				<xs:annotation>
+					<xs:documentation>建筑业项目登记（停缓建及复工情况）列表</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="JzygcxmVO">
+		<xs:annotation>
+			<xs:documentation>建筑业工程项目</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="jzygcxmuuid" type="jzygcxmuuid">
+				<xs:annotation>
+					<xs:documentation>建筑业工程项目UUID</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="gcxmbh" type="gcxmbh">
+				<xs:annotation>
+					<xs:documentation>工程项目编号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="gcxmmc" type="gcxmmc">
+				<xs:annotation>
+					<xs:documentation>工程项目名册</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

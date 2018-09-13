@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<service xmlns="http://www.chinatax.gov.cn/spec/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <head>
+    <tran_id>SWZJ.HXZG.ZM.BCZGSSJMSFZMB</tran_id>
+    <channel_id>TEST</channel_id>
+    <tran_seq>38b1b9a13e6449abbb12e76c668811fb</tran_seq>
+    <tran_date>20141031</tran_date>
+    <tran_time>054506316</tran_time>
+    <expand>
+      <name>sjry</name>
+      <value>24406060735</value>
+    </expand>
+    <expand>
+      <name>sjjg</name>
+      <value>24406060700</value>
+    </expand>
+  </head>
+  <body><![CDATA[<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<taxML xsi:type="HXZGZM00013Request" xmlmc="保存中国税收居民身份证明申请表" xmlbh="TaxMLBw_HXZG_ZM_00013_Request_V1.0.xsd" bbh="1.0" xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <djxh>10124406020000000143</djxh>
+    <lcslid>A0jvaxWAYFjnl8RDahQlZUWeV8UwCHzi</lcslid>
+    <zgswskfjDm>24406060700</zgswskfjDm>
+    <zgssjmsfzmsqb>
+        <zgssjmsfzmsqjbxxForm>
+            <sqrlx>1</sqrlx>
+            <sqrhdlr>申请人或代理人</sqrhdlr>
+            <nsrsbh>440604000333111</nsrsbh>
+            <nsrmc>花花的联合办证（直属局专用）--其他人别用哈</nsrmc>
+            <lxdh>463456243545765</lxdh>
+            <nsnd>2014</nsnd>
+            <zgswjg>顺德区地方税务局</zgswjg>
+            <gjdq>156</gjdq>
+        </zgssjmsfzmsqjbxxForm>
+        <qyxxForm>
+            <zcdz>23443524</zcdz>
+            <sjgljgszd>实际管理机构所在地</sjgljgszd>
+            <scjydz>34524524</scjydz>
+            <jyfw>2345243524</jyfw>
+            <qysqndwsqk>企业申请年度完税情况</qysqndwsqk>
+        </qyxxForm>
+    </zgssjmsfzmsqb>
+</taxML>
+]]></body>
+</service>

@@ -1,0 +1,167 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<service xmlns="http://www.chinatax.gov.cn/spec/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <head>
+    <tran_id>SWZJ.HXZG.SB.BCZLBSCJBSJ</tran_id>
+    <channel_id>MNQ</channel_id>
+    <tran_seq>ece934b6abaa4f1e9be7926c1f119c3a</tran_seq>
+    <tran_date>20141024</tran_date>
+    <tran_time>113128168</tran_time>
+    <expand>
+      <name>sjry</name>
+      <value>24406060735</value>
+    </expand>
+    <expand>
+      <name>sjjg</name>
+      <value>24406060700</value>
+    </expand>
+  </head>
+  <body><![CDATA[<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<taxML xsi:type="HXZGSB00470Request" xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <zlbsbcVO>
+        <SB100BdxxVO>
+            <zlbsuuid>B5AB644E09C30D841B8FD73A8D06AAE3</zlbsuuid>
+            <djxh>12440600000000000712</djxh>
+            <zlbsdlDm>ZL1001</zlbsdlDm>
+            <zlbsxlDm>ZL1001044</zlbsxlDm>
+            <zllx>0</zllx>
+            <zlsl>1.0</zlsl>
+            <cfdz>1</cfdz>
+            <cjbdxml><![CDATA[<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<taxML xmlns="http://www.chinatax.gov.cn/dataspec/">
+    <sygtgshzcfzb>
+        <sygtgshnsrxxForm>
+            <nsrsbh>440606098765432</nsrsbh>
+            <nsrmc>代扣代缴专用</nsrmc>
+            <bsrq>2014-11-20 14:36:06</bsrq>
+            <skssqq>2014-10-01 14:36:06</skssqq>
+            <skssqz>2014-10-31</skssqz>
+        </sygtgshnsrxxForm>
+        <sygtgshzcfzbGrid>
+            <sygtgshzcfzbGridlb>
+                <ewbhxh>1</ewbhxh>
+                <zcxmmc>现金</zcxmmc>
+                <zcje1>10.0</zcje1>
+                <qyxmmc>借入款项</qyxmmc>
+                <fzqyje>50.0</fzqyje>
+            </sygtgshzcfzbGridlb>
+            <sygtgshzcfzbGridlb>
+                <ewbhxh>2</ewbhxh>
+                <zcxmmc>银行借款</zcxmmc>
+                <zcje1>20.0</zcje1>
+                <qyxmmc>应付款项</qyxmmc>
+                <fzqyje>50.0</fzqyje>
+            </sygtgshzcfzbGridlb>
+            <sygtgshzcfzbGridlb>
+                <ewbhxh>3</ewbhxh>
+                <zcxmmc>应收款项</zcxmmc>
+                <zcje1>30.0</zcje1>
+                <qyxmmc>应付工资</qyxmmc>
+                <fzqyje>60.0</fzqyje>
+            </sygtgshzcfzbGridlb>
+            <sygtgshzcfzbGridlb>
+                <ewbhxh>4</ewbhxh>
+                <zcxmmc>存货</zcxmmc>
+                <zcje1>40.0</zcje1>
+                <qyxmmc>未交税金</qyxmmc>
+                <fzqyje>60.0</fzqyje>
+            </sygtgshzcfzbGridlb>
+            <sygtgshzcfzbGridlb>
+                <ewbhxh>5</ewbhxh>
+                <zcxmmc>待摊费用</zcxmmc>
+                <zcje1>50.0</zcje1>
+                <qyxmmc>负债合计</qyxmmc>
+                <fzqyje>220.0</fzqyje>
+            </sygtgshzcfzbGridlb>
+            <sygtgshzcfzbGridlb>
+                <ewbhxh>6</ewbhxh>
+                <zcxmmc>待处理财产损失</zcxmmc>
+                <zcje1>60.0</zcje1>
+            </sygtgshzcfzbGridlb>
+            <sygtgshzcfzbGridlb>
+                <ewbhxh>7</ewbhxh>
+                <zcxmmc>固定资产原价</zcxmmc>
+                <zcje1>70.0</zcje1>
+            </sygtgshzcfzbGridlb>
+            <sygtgshzcfzbGridlb>
+                <ewbhxh>8</ewbhxh>
+                <zcxmmc>减：累计折旧</zcxmmc>
+                <zcje1>10.0</zcje1>
+                <qyxmmc>业主权益</qyxmmc>
+                <fzqyje>80.0</fzqyje>
+            </sygtgshzcfzbGridlb>
+            <sygtgshzcfzbGridlb>
+                <ewbhxh>9</ewbhxh>
+                <zcxmmc>固定资产净值</zcxmmc>
+                <zcje1>60.0</zcje1>
+                <qyxmmc>业主投资</qyxmmc>
+                <fzqyje>70.0</fzqyje>
+            </sygtgshzcfzbGridlb>
+            <sygtgshzcfzbGridlb>
+                <ewbhxh>10</ewbhxh>
+                <zcxmmc>固定资产清理</zcxmmc>
+                <zcje1>20.0</zcje1>
+                <qyxmmc>减：应弥补的亏损</qyxmmc>
+                <fzqyje>60.0</fzqyje>
+            </sygtgshzcfzbGridlb>
+            <sygtgshzcfzbGridlb>
+                <ewbhxh>11</ewbhxh>
+                <zcxmmc>在建工程</zcxmmc>
+                <zcje1>30.0</zcje1>
+                <qyxmmc>留存利润</qyxmmc>
+                <fzqyje>130.0</fzqyje>
+            </sygtgshzcfzbGridlb>
+            <sygtgshzcfzbGridlb>
+                <ewbhxh>12</ewbhxh>
+                <zcxmmc>无形资产</zcxmmc>
+                <zcje1>40.0</zcje1>
+                <qyxmmc>业主权益合计</qyxmmc>
+                <fzqyje>140.0</fzqyje>
+            </sygtgshzcfzbGridlb>
+            <sygtgshzcfzbGridlb>
+                <ewbhxh>13</ewbhxh>
+                <zcxmmc>资产总计</zcxmmc>
+                <zcje1>360.0</zcje1>
+                <qyxmmc>负债及业主权益总计</qyxmmc>
+                <fzqyje>360.0</fzqyje>
+            </sygtgshzcfzbGridlb>
+        </sygtgshzcfzbGrid>
+    </sygtgshzcfzb>
+    <sygtgshyssdb>
+        <yysr>10.0</yysr>
+        <yyzj>20.0</yyzj>
+        <yycb>30.0</yycb>
+        <yyfy>40.0</yyfy>
+        <yywsz>50.0</yywsz>
+        <bnjysd>-130.0</bnjysd>
+        <ymbdyqndks>60.0</ymbdyqndks>
+        <bnyssd>-190.0</bnyssd>
+    </sygtgshyssdb>
+    <sygtgshlclrb>
+        <bnyssd>10.0</bnyssd>
+        <grsdsse>20.0</grsdsse>
+        <shlzfy>30.0</shlzfy>
+        <zryqks>40.0</zryqks>
+        <nclclr>50.0</nclclr>
+        <nmlclr>-30.0</nmlclr>
+    </sygtgshlclrb>
+</taxML>]]]]><![CDATA[>
+</cjbdxml>
+            <dzbzdszlDm>BDA0610165</dzbzdszlDm>
+            <SBCjbmxGrid>
+                <SBCjbmxGridlb>
+                    <zlbsuuid>B5AB644E09C30D841B8FD73A8D06AAE3</zlbsuuid>
+                    <djxh>12440600000000000712</djxh>
+                    <ssqq>2014-10-01 00:00:00</ssqq>
+                    <ssqz>2014-10-31 00:00:00</ssqz>
+                    <bszlDm>ZLA0610197</bszlDm>
+                </SBCjbmxGridlb>
+            </SBCjbmxGrid>
+        </SB100BdxxVO>
+        <gzbz>N</gzbz>
+        <slswsxDm>SLSXC132002005</slswsxDm>
+        <ywbwname xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema">gov.gt3.vo.sbzs.sb.sb233.Sygtgshcwbszywbw</ywbwname>
+        <xmlCode>TaxMLbw_sygtgshcwbs_V1.0.xsd.xsd</xmlCode>
+    </zlbsbcVO>
+</taxML>
+]]></body>
+</service>

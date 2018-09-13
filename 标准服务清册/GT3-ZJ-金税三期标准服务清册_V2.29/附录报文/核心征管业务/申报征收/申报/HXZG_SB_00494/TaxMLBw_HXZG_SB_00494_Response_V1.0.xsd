@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 被2011 rel. 2 sp1 (TeaM DJiNN) 使用XMLSpy vTeaM DJiNN编辑的 (http://www.altova.com) by -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:complexType name="HXZGSB000494Response">
+		<xs:annotation>
+			<xs:documentation>申报情况返回报文</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="sbqkGrid">
+						<xs:annotation>
+							<xs:documentation>逾期未申报信息请求报文</xs:documentation>
+						</xs:annotation>
+						<xs:complexType>
+							<xs:sequence maxOccurs="unbounded">
+								<xs:element name="sbqkGridlb" type="SbqkGridlbVO">
+									<xs:annotation>
+										<xs:documentation>逾期未申报信息请求报文</xs:documentation>
+									</xs:annotation>
+								</xs:element>
+							</xs:sequence>
+						</xs:complexType>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="SbqkGridlbVO">
+		<xs:sequence>
+			<xs:element name="pzxh" type="pzxh" nillable="true"/>
+			<xs:element name="yzpzzlDm" type="yzpzzlDm"/>
+			<xs:element name="sbrq1" type="sbrq1"/>
+			<xs:element name="ybtse" type="ybtse"/>
+			<xs:element name="sbfsDm" type="sbfsDm"/>
+			<xs:element name="zfbz1" type="zfbz1"/>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

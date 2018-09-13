@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:element name="hqgsdlhdxxresponse">
+		<xs:complexType>
+			<xs:complexContent>
+				<xs:extension base="taxDoc">
+					<xs:sequence>
+						<xs:element name="dlhdxx" type="dlhdxx">
+							<xs:annotation>
+								<xs:documentation>定率核定信息</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+					</xs:sequence>
+				</xs:extension>
+			</xs:complexContent>
+		</xs:complexType>
+	</xs:element>
+	<xs:complexType name="dlhdxx">
+		<xs:annotation>
+			<xs:documentation>定率核定信息</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="dlhdmx" maxOccurs="unbounded">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="zspmDm" type="zspmDm">
+							<xs:annotation>
+								<xs:documentation>征收品目代码</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+						<xs:element name="hdyxqq" type="yxqq">
+							<xs:annotation>
+								<xs:documentation>核定有效期起</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+						<xs:element name="hdyxqz" type="yxqz">
+							<xs:annotation>
+								<xs:documentation>核定有效期止</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+						<xs:element name="jsbz_1" type="dmbz">
+							<xs:annotation>
+								<xs:documentation>计税标志，1-征收率，2-应纳税所得率，3-所得率,4-应纳税所得额</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+						<xs:element name="lz" type="yssdl">
+							<xs:annotation>
+								<xs:documentation>率值</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+						<xs:element name="fybh" type="fybh">
+							<xs:annotation>
+								<xs:documentation>房源编号</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+						<xs:element name="zszmDm" type="zszmDm">
+							<xs:annotation>
+								<xs:documentation>征收子目代码（可以为空）</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+						<xs:element name="yynssde" type="ynssde">
+							<xs:annotation>
+								<xs:documentation>月应纳税所得额</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

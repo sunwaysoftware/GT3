@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<service xmlns="http://www.chinatax.gov.cn/spec/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <head>
+    <tran_id>SWZJ.HXZG.DJ.BCKYSKDJBXX</tran_id>
+    <channel_id>TEST</channel_id>
+    <tran_seq>f1998e5632c344769874ec477cb5fd49</tran_seq>
+    <tran_date>20141029</tran_date>
+    <tran_time>071252408</tran_time>
+    <expand>
+      <name>sjry</name>
+      <value>24406060735</value>
+    </expand>
+    <expand>
+      <name>sjjg</name>
+      <value>24406060700</value>
+    </expand>
+  </head>
+  <body><![CDATA[<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<taxML xsi:type="HXZGDJ00021Request" xmlmc="保存扣缴税款登记表信息" xmlbh="TaxMLBw_HXZG_DJ_00021_Request_V1.0.xsd" bbh="1.0" xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <DJKjskdjxxVO>
+        <kjskdjuuid></kjskdjuuid>
+        <djxh>10124406020000000332</djxh>
+        <kjywfsrq>2014-10-29</kjywfsrq>
+        <lsfskjywbz>N</lsfskjywbz>
+        <sjgsdq>24406060700</sjgsdq>
+    </DJKjskdjxxVO>
+    <dkdjxxList>
+        <dkdjxxlb>
+            <dkdjdsdjskywnr>12345</dkdjdsdjskywnr>
+            <dkdjdsdjzsxmDm>10103</dkdjdsdjzsxmDm>
+            <yxqq>2014-10-01</yxqq>
+            <yxqz>9999-12-31</yxqz>
+        </dkdjxxlb>
+        <dkdjxxlb>
+            <dkdjdsdjskywnr>23456</dkdjdsdjskywnr>
+            <dkdjdsdjzsxmDm>10104</dkdjdsdjzsxmDm>
+            <yxqq>2014-10-01</yxqq>
+            <yxqz>9999-12-31</yxqz>
+        </dkdjxxlb>
+    </dkdjxxList>
+    <DJYsqywslxxbVO>
+        <slrDm>24406060735</slrDm>
+        <slrq>2014-10-29</slrq>
+        <slswjgDm>24406060700</slswjgDm>
+    </DJYsqywslxxbVO>
+</taxML>
+]]></body>
+</service>

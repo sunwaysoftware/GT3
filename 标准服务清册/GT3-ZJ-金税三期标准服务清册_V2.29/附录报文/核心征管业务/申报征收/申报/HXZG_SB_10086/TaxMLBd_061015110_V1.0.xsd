@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 被2012 () 使用XMLSpy v编辑的 (http://www.altova.com) by -->
+<!-- edited with XMLSpy v2010 rel. 3 (http://www.altova.com) by MESMERiZE (MSM) -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:complexType name="jmqyzcgqhztsxswclsbbYwbd">
+		<xs:annotation>
+			<xs:documentation>居民企业资产（股权）划转特殊性税务处理申报表业务表单</xs:documentation>
+		</xs:annotation>
+		<xs:sequence maxOccurs="unbounded">
+			<xs:element name="tsxswclsbbbd" type="jmqyzcgqhztsxswclsbbxxVO">
+				<xs:annotation>
+					<xs:documentation>《居民企业资产（股权）划转特殊性税务处理申报表》列表</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="jmqyzcgqhztsxswclsbbxxVO">
+		<xs:annotation>
+			<xs:documentation>居民企业资产（股权）划转特殊性税务处理申报表业务报文</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="tsxswclsbbzbForm" type="jmqyzcgqhztsxswclsbbFormVO" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>居民企业资产（股权）划转特殊性税务处理申报表_主表</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="fzsfwgxTwostbGrid">
+						<xs:annotation>
+							<xs:documentation>关系二时填写的附表</xs:documentation>
+						</xs:annotation>
+						<xs:complexType>
+							<xs:sequence minOccurs="0" maxOccurs="unbounded">
+								<xs:element name="fzsfwgxTwostbGridlb" type="fzsfwgxTwostbMxGridlbVO">
+									<xs:annotation>
+										<xs:documentation>关系二时填写的附表的明细</xs:documentation>
+									</xs:annotation>
+								</xs:element>
+							</xs:sequence>
+						</xs:complexType>
+					</xs:element>
+					<xs:element name="kjclhcfGrid">
+						<xs:annotation>
+							<xs:documentation>会计处理(划出方)</xs:documentation>
+						</xs:annotation>
+						<xs:complexType>
+							<xs:sequence minOccurs="0" maxOccurs="unbounded">
+								<xs:element name="kjclhcfGridlb" type="kjclhcfGridlbVO">
+									<xs:annotation>
+										<xs:documentation>会计处理(划出方)</xs:documentation>
+									</xs:annotation>
+								</xs:element>
+							</xs:sequence>
+						</xs:complexType>
+					</xs:element>
+					<xs:element name="kjclhrfGrid">
+						<xs:annotation>
+							<xs:documentation>会计处理(划入方)</xs:documentation>
+						</xs:annotation>
+						<xs:complexType>
+							<xs:sequence minOccurs="0" maxOccurs="unbounded">
+								<xs:element name="kjclhrfGridlb" type="kjclhrfGridlbVO">
+									<xs:annotation>
+										<xs:documentation>会计处理(划入方)</xs:documentation>
+									</xs:annotation>
+								</xs:element>
+							</xs:sequence>
+						</xs:complexType>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="fzsfwgxTwostbMxGridlbVO">
+		<xs:annotation>
+			<xs:documentation>划转关系二时填写</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="gdmc" type="nsrmc" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>股东名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="cgbl" type="bl" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>持股比例</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="hcfcgqssj" type="skssqq" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>划出方持股起始时间</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="hrfcgbl" type="bl" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>划入方持股比例</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="hrfcgqssj" type="skssqq" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>划入方持股起始时间</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="kjclhcfGridlbVO">
+		<xs:annotation>
+			<xs:documentation>会计处理(划出方)</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="jdfs" type="nsrmc" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>借/贷方式“0”借“1”贷</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="kjkm" type="nsrmc" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>会计科目</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="je" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zcgqjsjc" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>资产（股权）计税基础</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="kjclhrfGridlbVO">
+		<xs:annotation>
+			<xs:documentation>会计处理(划入方)</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="jdfs" type="nsrmc" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>借/贷方式“0”借“1”贷</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="kjkm" type="nsrmc" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>会计科目</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="je" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zcgqjsjc" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>资产（股权）计税基础</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="jmqyzcgqhztsxswclsbbFormVO">
+		<xs:annotation>
+			<xs:documentation>居民企业资产（股权）划转特殊性税务处理申报表_主表</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="nsrmc" type="nsrmc" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>纳税人名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="nsrsbh" type="nsrsbh" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>纳税人识别号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="hcfnsrsbh" type="nsrsbh" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>划出方纳税人识别号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="hcfqymc" type="nsrmc" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>划出方企业名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="hcfzgswjgmc" type="swjgmc" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>划出方-主管税务机关名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="hrfnsrsbh" type="nsrsbh" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>划入方纳税人识别号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="hrfqymc" type="nsrmc" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>划入方企业名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="hrfzgswjgmc" type="swjgmc" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>划入方-主管税务机关名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sbqyqtxsmdqk" type="swjgmc" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>申报企业其他需说明的情况</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="hzsfgx" type="bz1" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>划转双方关系,“1”关系1：100%直接控制的母子公司，“关系2：受同一或相同多家居民企业100%直接控制”关系2：受同一或相同多家居民企业100%直接控制</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="hzwcr" type="skssqq" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>划转完成日</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bhzzcgqzmjz" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>被划转资产（股权）账面净值</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bhzzcgqjsjc" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>被划转资产（股权）计税基础</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="mgs" type="bz1" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>母公司是：“1”划出方;"2"划入方</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="kgqssj" type="skssqq" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>100%控股起始时间</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 编辑使用 XMLSpy v2006 U (http://www.altova.com) 由 any (any) -->
+<!-- 编辑使用 XMLSpy v2006 U (http://www.altova.com) 由 any (any) -->
+<!-- 被2011 rel. 2 sp1 (TeaM DJiNN) 使用XMLSpy vTeaM DJiNN编辑的 (http://www.altova.com) by -->
+<!-- edited with XMLSpy v2013 (http://www.altova.com) by  () -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:include schemaLocation="TaxMLPublic.xsd"/>
+	<xs:complexType name="ZmWszbgsdbtskhkxxVO">
+		<xs:annotation>
+			<xs:documentation>完税证表格式查询代办退税系统可换开信息VO</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="hkcxjg" type="zsuuid">
+				<xs:annotation>
+					<xs:documentation>换开查询结果</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:sequence minOccurs="0" maxOccurs="unbounded">
+				<xs:element name="wszxxGrid" type="ZSQtfwCxsswszVO"/>
+			</xs:sequence>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="ZSQtfwCxsswszVO">
+		<xs:annotation>
+			<xs:documentation>征收其他服务查询税收完税证VO</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="spuuid" type="spuuid"/>
+			<xs:element name="zsuuid" type="spuuid"/>
+			<xs:element name="dzsphm" type="spuuid"/>
+			<xs:element name="pzzlDm" type="spuuid"/>
+			<xs:element name="pzzgDm" type="spuuid"/>
+			<xs:element name="pzzg" type="spuuid"/>
+			<xs:element name="pzhm" type="spuuid"/>
+			<xs:element name="djxh" type="spuuid"/>
+			<xs:element name="skssqq" type="spuuid"/>
+			<xs:element name="skssqz" type="spuuid"/>
+			<xs:element name="zsxmDm" type="spuuid"/>
+			<xs:element name="zspmDm" type="spuuid"/>
+			<xs:element name="zszmDm" type="spuuid"/>
+			<xs:element name="skzlDm" type="spuuid"/>
+			<xs:element name="sksxDm" type="spuuid"/>
+			<xs:element name="zsdlfsDm" type="spuuid"/>
+			<xs:element name="kssl" type="spuuid"/>
+			<xs:element name="jsyj" type="spuuid"/>
+			<xs:element name="yjse" type="spuuid"/>
+			<xs:element name="sl1" type="spuuid"/>
+			<xs:element name="sjje" type="spuuid"/>
+			<xs:element name="kjrq" type="spuuid"/>
+			<xs:element name="skjnfsDm" type="spuuid"/>
+			<xs:element name="yskmDm" type="spuuid"/>
+			<xs:element name="ysfpblDm" type="spuuid"/>
+			<xs:element name="skgkDm" type="spuuid"/>
+			<xs:element name="sjrq1" type="spuuid"/>
+			<xs:element name="sjxhrq" type="spuuid"/>
+			<xs:element name="sjxhrDm" type="spuuid"/>
+			<xs:element name="rkrq" type="spuuid"/>
+			<xs:element name="rkxhrq" type="spuuid"/>
+			<xs:element name="rkxhrDm" type="spuuid"/>
+			<xs:element name="rkjzrq" type="spuuid"/>
+			<xs:element name="zgswskfjDm" type="spuuid"/>
+			<xs:element name="skssswjgDm" type="spuuid"/>
+			<xs:element name="zsswjgDm" type="spuuid"/>
+			<xs:element name="bz" type="spuuid"/>
+			<xs:element name="kjdjxh" type="spuuid"/>
+			<xs:element name="jklxDm" type="spuuid"/>
+			<xs:element name="pzsyqkuuid" type="spuuid"/>
+			<xs:element name="sddwdjxh" type="spuuid"/>
+			<xs:element name="sfzjhm" type="spuuid"/>
+			<xs:element name="sshxsl" type="sshxsl" minOccurs="0"/>
+			<xs:element name="sshxzt" type="spuuid"/>
+			<xs:element name="sspkjbdbh" type="spuuid"/>
+			<xs:element name="tfrq" type="spuuid"/>
+			<xs:element name="zzsnsrlxDm" type="spuuid"/>
+			<xs:element name="zkdzsphm" type="spuuid"/>
+			<xs:element name="yzpzxh" type="spuuid"/>
+			<xs:element name="yzpzzlDm" type="spuuid"/>
+			<xs:element name="sybh1" type="spuuid"/>
+			<xs:element name="clsbdm" type="spuuid"/>
+			<xs:element name="clpzhm" type="spuuid"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="ZmWszbgsdbtskhkcxtjVO">
+		<xs:annotation>
+			<xs:documentation>完税证表格式查询代办退税可换开条件VO</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="nsrsbh" type="nsrsbh">
+				<xs:annotation>
+					<xs:documentation>纳税人识别号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="djxh" type="djxh">
+				<xs:annotation>
+					<xs:documentation>登记序号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="wmzhfwqynsrsbh" type="nsrsbh">
+				<xs:annotation>
+					<xs:documentation>外贸综合服务企业纳税人识别号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ssqq" type="ssqq">
+				<xs:annotation>
+					<xs:documentation>所属期起</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ssqz" type="ssqz">
+				<xs:annotation>
+					<xs:documentation>所属期止</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

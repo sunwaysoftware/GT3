@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 被2011 rel. 2 sp1 (TeaM DJiNN) 使用XMLSpy vTeaM DJiNN编辑的 (http://www.altova.com) by -->
+<!-- edited with XMLSpy v2008 (http://www.altova.com) by TEAM ViRiLiTY (VRL) -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:complexType name="zlfsbgyrgsjmbaRequest">
+		<xs:annotation>
+			<xs:documentation>增量房申报共有人个税减免备案请求报文</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="zlfsbgyrgsjmba" type="zlfsbgyrgsjmba">
+						<xs:annotation>
+							<xs:documentation>增量房申报共有人个税减免备案</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="zlfsbgyrgsjmba">
+		<xs:annotation>
+			<xs:documentation>增量房申报共有人个税减免备案</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="zlfsbgyrgsjmbaHead" type="zlfsbgyrgsjmbaHead">
+				<xs:annotation>
+					<xs:documentation>增量房申报共有人个税减免备案头</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zlfsbgyrgsjmbaBody" type="zlfsbgyrgsjmbaBody">
+				<xs:annotation>
+					<xs:documentation>增量房申报共有人个税减免备案主体</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="zlfsbgyrgsjmbaHead">
+		<xs:annotation>
+			<xs:documentation>增量房申报共有人个税减免备案头</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="slrDm" type="slrDm">
+				<xs:annotation>
+					<xs:documentation>受理人代码(必录)</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="slrq" type="slrq">
+				<xs:annotation>
+					<xs:documentation>受理日期(必录)</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="slswjgDm" type="slswjgDm">
+				<xs:annotation>
+					<xs:documentation>受理税务机关代码(必录)</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="zlfsbgyrgsjmbaBody">
+		<xs:annotation>
+			<xs:documentation>增量房申报共有人个税减免备案主体</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="zlfjyxx" type="zlfjyxx" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>增量房交易信息</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zrrxx" type="zrrxx" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>自然人信息</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="zlfjyxx">
+		<xs:annotation>
+			<xs:documentation>增量房交易信息</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="qsqszylbDm" type="qsqszylbDm">
+				<xs:annotation>
+					<xs:documentation>契税权属转移类别代码(必录)</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="fcjycjxxuuid" type="uuid">
+				<xs:annotation>
+					<xs:documentation>房产交易采集信息UUID(必录)</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="fclxDm" type="fclxDm">
+				<xs:annotation>
+					<xs:documentation>房产类型代码(必录)</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sjzytdfwqsdtdfwmj" type="sjzytdfwqsdtdfwmj">
+				<xs:annotation>
+					<xs:documentation>房屋面积</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qsqszyytDm" type="qsqszyytDm">
+				<xs:annotation>
+					<xs:documentation>契税权属转移用途代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sfptzf" type="sfptzf">
+				<xs:annotation>
+					<xs:documentation>是否普通住房</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bcjyrq" type="rq">
+				<xs:annotation>
+					<xs:documentation>本次交易日期</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="htqdrq" type="rq">
+				<xs:annotation>
+					<xs:documentation>合同签订日期</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="zrrxx">
+		<xs:annotation>
+			<xs:documentation>自然人信息</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="gyruuid" type="uuid">
+				<xs:annotation>
+					<xs:documentation>共有人uuid(必录)</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="fcjycjxxuuid" type="uuid">
+				<xs:annotation>
+					<xs:documentation>房产交易采集信息UUID(必录)</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="djxh" type="djxh">
+				<xs:annotation>
+					<xs:documentation>登记序号(必录)</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="fwtcDm" type="fwtcDm">
+				<xs:annotation>
+					<xs:documentation>房屋套次</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="szfe2" type="szfe2">
+				<xs:annotation>
+					<xs:documentation>所占份额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:simpleType name="qsqszylbDm">
+		<xs:annotation>
+			<xs:documentation>契税权属转移类别代码</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string"/>
+	</xs:simpleType>
+	<xs:simpleType name="qsqszyytDm">
+		<xs:annotation>
+			<xs:documentation>契税权属转移用途代码</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string"/>
+	</xs:simpleType>
+	<xs:simpleType name="sfptzf">
+		<xs:annotation>
+			<xs:documentation>是否普通住房(Y:是 N:否)</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:maxLength value="1"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="fwtcDm">
+		<xs:annotation>
+			<xs:documentation>房屋套次(00-99)</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:maxLength value="2"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="szfe2">
+		<xs:annotation>
+			<xs:documentation>所占份额(0.000000-100.000000)</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:double"/>
+	</xs:simpleType>
+</xs:schema>

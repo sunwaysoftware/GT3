@@ -1,0 +1,252 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2010 rel. 3 (http://www.altova.com) by xuxin (csstj) -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:complexType name="cqgqtzsdssmxsbbywbw">
+		<xs:annotation>
+			<xs:documentation>《中华人民共和国企业所得税年度纳税申报表附表十一长期股权投资所得（损失）明细表》业务报文</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="cqgqtzsdssmxsbb">
+						<xs:annotation>
+							<xs:documentation>《中华人民共和国企业所得税年度纳税申报表附表十一长期股权投资所得（损失）明细表》</xs:documentation>
+						</xs:annotation>
+						<xs:complexType>
+							<xs:sequence>
+								<xs:element name="cqgqtzsdssmxsbbGrid">
+									<xs:annotation>
+										<xs:documentation>长期股权投资所得（损失）明细表列表</xs:documentation>
+									</xs:annotation>
+									<xs:complexType>
+										<xs:sequence maxOccurs="unbounded">
+											<xs:element name="cqgqtzsdssmxsbbGridlb" type="cqgqtzsdssmxsbbGridlbVO">
+												<xs:annotation>
+													<xs:documentation>长期股权投资所得（损失）明细表申报明细列表</xs:documentation>
+												</xs:annotation>
+											</xs:element>
+										</xs:sequence>
+									</xs:complexType>
+								</xs:element>
+								<xs:element name="tzssbczlsbbGrid">
+									<xs:annotation>
+										<xs:documentation>投资损失补充资料细表列表</xs:documentation>
+									</xs:annotation>
+									<xs:complexType>
+										<xs:sequence maxOccurs="unbounded">
+											<xs:element name="tzssbczlsbbGridlb" type="tzssbczlsbbGridlbVO">
+												<xs:annotation>
+													<xs:documentation>投资损失补充资料明细列表</xs:documentation>
+												</xs:annotation>
+											</xs:element>
+										</xs:sequence>
+									</xs:complexType>
+								</xs:element>
+							</xs:sequence>
+						</xs:complexType>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="cqgqtzsdssmxsbb">
+		<xs:annotation>
+			<xs:documentation>《中华人民共和国企业所得税年度纳税申报表附表十一长期股权投资所得（损失）明细表》</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="cqgqtzsdssmxsbbGrid">
+				<xs:annotation>
+					<xs:documentation>长期股权投资所得（损失）明细表列表</xs:documentation>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:sequence maxOccurs="unbounded">
+						<xs:element name="cqgqtzsdssmxsbbGridlb" type="cqgqtzsdssmxsbbGridlbVO">
+							<xs:annotation>
+								<xs:documentation>长期股权投资所得（损失）明细表申报明细列表</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="tzssbczlsbbGrid">
+				<xs:annotation>
+					<xs:documentation>投资损失补充资料细表列表</xs:documentation>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:sequence maxOccurs="unbounded">
+						<xs:element name="tzssbczlsbbGridlb" type="tzssbczlsbbGridlbVO">
+							<xs:annotation>
+								<xs:documentation>投资损失补充资料明细列表</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="cqgqtzsdssmxsbbGrid">
+		<xs:annotation>
+			<xs:documentation>长期股权投资所得（损失）明细表申报信息</xs:documentation>
+		</xs:annotation>
+		<xs:sequence maxOccurs="unbounded">
+			<xs:element name="cqgqtzsdssmxsbbbbGridlb" type="cqgqtzsdssmxsbbGridlbVO">
+				<xs:annotation>
+					<xs:documentation>长期股权投资所得（损失）明细表申报明细列表</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="cqgqtzsdssmxsbbGridlbVO">
+		<xs:annotation>
+			<xs:documentation>长期股权投资所得（损失）明细表明细列表</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="ewbhxh" type="ewbhxh" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>二维表行序号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="btzqymc" type="btzqymc" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>被投资企业名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qctze" type="qctze" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>期初投资额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bndzjtze" type="bndzjtze" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>本年度增减投资额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="cstzcb" type="cstzcb" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>初始投资成本</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qyfhsdcstzcbdzcsSy" type="qyfhsdcstzcbdzcsSy" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>权益法核算对初始投资成本调整产生的收益</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="gxhlkjhstzsy" type="gxhlkjhstzsy" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>股息红利会计核算投资收益</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="gxhlHjtzsy" type="gxhlHjtzsy" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>股息红利会计投资损益</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ssqrGxhlmssr" type="ssqrGxhlmssr" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>税收确认的股息红利免税收入</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ssqrGxhlqezssr" type="ssqrGxhlqezssr" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>税收确认的股息红利全额征税收入</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="gxhlHjyssCy" type="gxhlHjyssCy" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>股息红利会计与税收的差异</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="tzzrjsr" type="tzzrjsr" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>投资转让净收入</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="tzzrHjcb" type="tzzrHjcb" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>投资转让的会计成本</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="tzzrSscb" type="tzzrSscb" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>投资转让的税收成本</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="hjsqrZrsdhss" type="hjsqrZrsdhss" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>会计上确认的转让所得或损失</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="assjsTzzrsdhss" type="assjsTzzrsdhss" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>按税收计算的投资转让所得或损失</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="kjyssdcy" type="kjyssdcy" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>会计与税收的差异</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="tzssbczlsbbGrid">
+		<xs:annotation>
+			<xs:documentation>投资损失补充资料申报信息</xs:documentation>
+		</xs:annotation>
+		<xs:sequence maxOccurs="unbounded">
+			<xs:element name="tzssbczlsbbGridlb" type="tzssbczlsbbGridlbVO">
+				<xs:annotation>
+					<xs:documentation>投资损失补充资料申报明细列表</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="tzssbczlsbbGridlbVO">
+		<xs:annotation>
+			<xs:documentation>投资损失补充资料明细列表</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="ewbhxh" type="ewbhxh" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>二维表行序号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="hmc" type="hmc" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>行名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="nd" type="nd" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>年度</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="dnjzje" type="dnjzje" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>当年度结转金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ymbje" type="ymbje" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>已弥补金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bnmbje" type="bnmbje" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>本年度弥补金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jzyhnddmbje" type="jzyhnddmbje" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>结转以后年度待弥补金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bz" type="bz" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>备注</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

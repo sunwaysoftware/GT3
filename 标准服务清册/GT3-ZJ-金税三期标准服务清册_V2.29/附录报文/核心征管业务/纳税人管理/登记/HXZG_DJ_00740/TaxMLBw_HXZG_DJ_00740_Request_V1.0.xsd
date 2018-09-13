@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2013 (http://www.altova.com) by  () -->
+<!-- 编辑使用 XMLSpy v2006 U (http://www.altova.com) 由 any (any) -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:include schemaLocation="TaxMLPublicDJType.xsd"/>
+	<xs:complexType name="HXZGDJ00740Request">
+		<xs:annotation>
+			<xs:documentation>两证整合纳税人税务登记信息保存</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="lzzhnsrswdjxxcjb" type="Lzzhnsrswdjxxcjb"/>
+					<xs:element name="xdjxh" type="djxh"/>
+					<xs:element name="zxdjxh" type="djxh"/>
+					<xs:element name="yssdabh" type="ssdabh"/>
+					<xs:element name="xh" type="xh"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="Lzzhnsrswdjxxcjb">
+		<xs:annotation>
+			<xs:documentation>两证整合纳税人税务登记信息采集表</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="djSwdjbxxvo" type="DJSwdjbxxVO"/>
+			<xs:element name="djpzjgxxvo" type="DJPzjgxxVO"/>
+			<xs:element name="deleteLzzhnsrfyhyxxGrid" type="LzzhNsrfyhyxxGrid"/>
+			<xs:element name="insertLzzhnsrfyhyxxGrid" type="LzzhNsrfyhyxxGrid"/>
+			<xs:element name="updateLzzhnsrfyhyxxGrid" type="LzzhNsrfyhyxxGrid"/>
+			<xs:element name="lzzhDkdjdsdjskxxGrid" type="LzzhDkdjdsdjskxxGrid"/>
+			<xs:element name="lzzhJtcyxxGrid" type="LzzhJtcyxxGrid"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="LzzhNsrfyhyxxGrid">
+		<xs:annotation>
+			<xs:documentation>两证整合纳税人附营行业信息</xs:documentation>
+		</xs:annotation>
+		<xs:sequence minOccurs="0" maxOccurs="unbounded">
+			<xs:element name="nsrfyhyxxGridlb" type="DJNsrfyhyxxVO"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="LzzhDkdjdsdjskxxGrid">
+		<xs:annotation>
+			<xs:documentation>两证整合代扣代缴代收代缴税款信息</xs:documentation>
+		</xs:annotation>
+		<xs:sequence minOccurs="0" maxOccurs="unbounded">
+			<xs:element name="dkdjdsdjskxxGridlb" type="DJDkdjdsdjskywqkVO"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="LzzhJtcyxxGrid">
+		<xs:annotation>
+			<xs:documentation>两证整合家庭成员信息</xs:documentation>
+		</xs:annotation>
+		<xs:sequence minOccurs="0" maxOccurs="unbounded">
+			<xs:element name="jtcyxxGridlb" type="DJJtcyxxVO"/>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

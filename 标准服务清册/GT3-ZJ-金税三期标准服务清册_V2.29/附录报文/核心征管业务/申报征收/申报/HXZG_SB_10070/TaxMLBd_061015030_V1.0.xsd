@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 被2011 rel. 2 sp1 (TeaM DJiNN) 使用XMLSpy vTeaM DJiNN编辑的 (http://www.altova.com) by -->
+<!-- edited with XMLSpy v2013 (http://www.altova.com) by  () -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:complexType name="A105120Ywbd">
+		<xs:annotation>
+			<xs:documentation>特殊行业准备金纳税调整明细表(A105120)业务报文</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="tshyzbjnstzMxbGrid">
+						<xs:annotation>
+							<xs:documentation>特殊行业准备金纳税调整明细表</xs:documentation>
+						</xs:annotation>
+						<xs:complexType>
+							<xs:sequence minOccurs="0" maxOccurs="unbounded">
+								<xs:element name="tshyzbjnstzMxbGridlb" type="tshyzbjnstzmxbGridlbVO"/>
+							</xs:sequence>
+						</xs:complexType>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="tshyzbjnstzmxbGridlbVO">
+		<xs:annotation>
+			<xs:documentation>《特殊行业准备金纳税调整明细表》</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="ewbhxh" type="ewbhxh" minOccurs="1">
+				<xs:annotation>
+					<xs:documentation>二维表行序号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ewbhmc" type="nsrmc" minOccurs="1">
+				<xs:annotation>
+					<xs:documentation>二维表行名称||二维表行名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ewbhgjz" type="ewbhgjz" minOccurs="1">
+				<xs:annotation>
+					<xs:documentation>二维表行关键字，1行:bxgs|2行:bxbzjj|3行:ccbxftzx|4行:ccbxtzxbzsy|5行:ccbxtzxwbzsy|6行:rsbxbzsy|7行:rsbxwbzsy|8行:jkbxdq|9行:jkbxcq|10行:ywshbxftzx|11行:ywshbxtzxbzsy|12行:ywshbxtzxwbzsy|13行:wdqzrzbj|14行:sxzrzbj|15行:cqjkxzbj|16行:wjpkzbj|17行:ybazbj|18行:wbazbj|19行:jzfxzbj|20行:bxgsqt|21行:zqhy|22行:zqjysfxjj|23行:zqjsfxjj|24行:zqtzzbhjj|25行:zqhyqt|26行:qhhy|27行:qhjysfxzbj|28行:qhgsfxzbj|29行:qhtzzbzjj|30行:qhhyqt|31行:jrhy|32行:sndksszbj|33行:dksszbj|34行:jrhyqt|35行:zxqyxydbjg|36行:dbpczb|37行:wdqzrzb|38行:zxqyxydbjgqt|39行:xedkgs|40行:xedkgsdksszbj|41行:xedkgsqt|42行:qt|43行:hj</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zzje" type="je" minOccurs="1">
+				<xs:annotation>
+					<xs:documentation>账载金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ssje" type="je" minOccurs="1">
+				<xs:annotation>
+					<xs:documentation>税收金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="nstzje" type="je" minOccurs="1">
+				<xs:annotation>
+					<xs:documentation>纳税调整金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

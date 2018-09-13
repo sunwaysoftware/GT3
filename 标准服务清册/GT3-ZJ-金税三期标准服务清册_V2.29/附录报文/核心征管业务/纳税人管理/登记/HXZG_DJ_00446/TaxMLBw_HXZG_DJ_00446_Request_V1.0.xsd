@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2013 (http://www.altova.com) by  () -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:include schemaLocation="TaxMLPublicDJType.xsd"/>
+	<xs:complexType name="HXZGDJ00446Request">
+		<xs:annotation>
+			<xs:documentation>根据登记序号查询纳税人有效的证件信息（国税）接入报文</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="ssdabh" type="ssdabh">
+						<xs:annotation>
+							<xs:documentation>税收档案编号</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="kzztdjlxDm" type="kzztdjlxDm">
+						<xs:annotation>
+							<xs:documentation>课征主体代码</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="gdslxDm" type="gdslxDm">
+						<xs:annotation>
+							<xs:documentation>国地税类型代码</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+</xs:schema>

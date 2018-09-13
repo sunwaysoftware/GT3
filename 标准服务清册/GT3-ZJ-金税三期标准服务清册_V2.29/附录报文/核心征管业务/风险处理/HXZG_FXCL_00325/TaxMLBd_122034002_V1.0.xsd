@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 被2012 () 使用XMLSpy v编辑的 (http://www.altova.com) by -->
+<!-- edited with XMLSpy v2013 (http://www.altova.com) by  () -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:complexType name="shbxfxzcfjdsjyywbw">
+		<xs:annotation>
+			<xs:documentation>《社会保险费行政处罚决定书（简易）》业务报文</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="shbxfxzcfjdsjyForm" type="shbxfxzcfjdsjyForm">
+						<xs:annotation>
+							<xs:documentation>《社会保险费行政处罚决定书（简易）》</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="shbxfxzcfjdsjyForm">
+		<xs:annotation>
+			<xs:documentation>《社会保险费行政处罚决定书（简易）》</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="shbxfxzcfjdsjyForm" type="FZShbxfxzcfjdsjyFormVO">
+				<xs:annotation>
+					<xs:documentation>社会保险费行政处罚决定书（简易）表单</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="fxzcfqkGrid" type="fxzcfqkGrid">
+				<xs:annotation>
+					<xs:documentation>分险种处罚情况</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="FZShbxfxzcfjdsjyFormVO">
+		<xs:annotation>
+			<xs:documentation>社会保险费行政处罚决定书（简易）表单VO</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="ajbh" type="ajbh">
+				<xs:annotation>
+					<xs:documentation>案件编号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ajmc" type="ajmc">
+				<xs:annotation>
+					<xs:documentation>案件名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jfrsbh" type="jfrsbh">
+				<xs:annotation>
+					<xs:documentation>缴费人识别号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jfrmc" type="jfrmc">
+				<xs:annotation>
+					<xs:documentation>缴费人名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="swjgjg" type="swjgjg">
+				<xs:annotation>
+					<xs:documentation>税务机构局轨</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zg" type="zg">
+				<xs:annotation>
+					<xs:documentation>字轨</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="nh" type="nh">
+				<xs:annotation>
+					<xs:documentation>年号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="wh" type="wh">
+				<xs:annotation>
+					<xs:documentation>文号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="wszg" type="wszg">
+				<xs:annotation>
+					<xs:documentation>文书字轨</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zlxqjntzwszg" type="zlxqjntzwszg">
+				<xs:annotation>
+					<xs:documentation>责令限期缴纳通知文书字轨</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zlxqjnrq" type="zlxqjnrq">
+				<xs:annotation>
+					<xs:documentation>责令限期缴纳日期</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zlxqjndd" type="zlxqjndd">
+				<xs:annotation>
+					<xs:documentation>责令限期缴纳地点</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="cfje" type="cfje">
+				<xs:annotation>
+					<xs:documentation>处罚金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qjshbxfxxje" type="qjshbxfxxje">
+				<xs:annotation>
+					<xs:documentation>欠缴社会保险费小写金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qjshbxfdxje" type="qjshbxfxxje">
+				<xs:annotation>
+					<xs:documentation>欠缴社会保险费大写金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="wszzrq" type="wszzrq">
+				<xs:annotation>
+					<xs:documentation>文书制作日期</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="cfswjgDm" type="cfswjgDm">
+				<xs:annotation>
+					<xs:documentation>处罚税务机关代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="fyjgDm" type="fyjgDm">
+				<xs:annotation>
+					<xs:documentation>复议机关代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="fyjgmc" type="fyjgmc" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>复议机关名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="fkxjts" type="fkxjts" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>罚款限缴天数</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="fxzcfqkGrid">
+		<xs:annotation>
+			<xs:documentation>分险种处罚情况</xs:documentation>
+		</xs:annotation>
+		<xs:sequence maxOccurs="unbounded">
+			<xs:element name="fxzcfqkGridlb" type="fxzcfqkGridlb">
+				<xs:annotation>
+					<xs:documentation>分险种处罚情况列表</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="fxzcfqkGridlb">
+		<xs:annotation>
+			<xs:documentation>分险种处罚情况列表</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="shbxffzmxxxbuuid" type="shbxffzmxxxbuuid">
+				<xs:annotation>
+					<xs:documentation>社会保险费费种明细信息表UUID</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ywzjuuid" type="ywzjuuid">
+				<xs:annotation>
+					<xs:documentation>业务主键uuid</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="xz" type="xz">
+				<xs:annotation>
+					<xs:documentation>险种</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sssqq" type="sssqq">
+				<xs:annotation>
+					<xs:documentation>分险种所属时期起</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sssqz" type="sssqz">
+				<xs:annotation>
+					<xs:documentation>分险种所属时期止</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="fxzcfje" type="je">
+				<xs:annotation>
+					<xs:documentation>分险种处罚金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

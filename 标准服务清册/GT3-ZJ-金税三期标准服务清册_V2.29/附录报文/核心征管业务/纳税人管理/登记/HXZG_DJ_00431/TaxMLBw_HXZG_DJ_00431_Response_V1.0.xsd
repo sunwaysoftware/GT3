@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2013 (http://www.altova.com) by  () -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:complexType name="HXZGDJ00431Response">
+		<xs:annotation>
+			<xs:documentation>联合办证纳税人向对方机关国税写入变更的纳税人信息返回报文</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="zjsjbz" type="bz1">
+						<xs:annotation>
+							<xs:documentation>对方机关证件收缴标志</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="lhbzbgbz" type="bz1">
+						<xs:annotation>
+							<xs:documentation>对方机关（联合办证）变更标志</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="fpmsg" type="bz">
+						<xs:annotation>
+							<xs:documentation>发票提示信息（纳税人已自印的发票将不得使用）</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+</xs:schema>

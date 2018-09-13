@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2011 (http://www.altova.com) by www.hbnu.com (www.hbnu.com) -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:include schemaLocation="TaxMLPublic.xsd"/>
+	<xs:complexType name="ndgljycwzkfxbqyhbbgywbw">
+		<xs:annotation>
+			<xs:documentation>《年度关联交易财务状况分析表（报告企业合并报表信息）》业务报文</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="qyndglywwlbg2016_G113020" type="qyndglywwlbg2016_G113020">
+						<xs:annotation>
+							<xs:documentation>《年度关联交易财务状况分析表（报告企业合并报表信息）》</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="qyndglywwlbg2016_G113020">
+		<xs:annotation>
+			<xs:documentation>《年度关联交易财务状况分析表（报告企业合并报表信息）》</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="ndgljycwzkhbGrid" type="ndgljycwzkhbGrid">
+				<xs:annotation>
+					<xs:documentation>年度关联交易财务状况分析表（报告企业合并报表信息）</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="skssqq" type="skssqq">
+				<xs:annotation>
+					<xs:documentation>报送期间起</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="skssqz" type="skssqz">
+				<xs:annotation>
+					<xs:documentation>报送期间止</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bz" type="bz">
+				<xs:annotation>
+					<xs:documentation>划分标准说明</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="ndgljycwzkhbGrid">
+		<xs:annotation>
+			<xs:documentation>年度关联交易财务状况分析表（报告企业合并报表信息）</xs:documentation>
+		</xs:annotation>
+		<xs:sequence maxOccurs="unbounded">
+			<xs:element name="ndgljycwzkhbGridlbVO" type="ndgljycwzkhbGridlbVO">
+				<xs:annotation>
+					<xs:documentation>年度关联交易财务状况分析表（报告企业合并报表信息）</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="ndgljycwzkhbGridlbVO">
+		<xs:annotation>
+			<xs:documentation>年度关联交易财务状况分析表（报告企业合并报表信息）</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="ewbhxh" type="ewbhxh">
+				<xs:annotation>
+					<xs:documentation>二维表行序号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ewbhmc" type="ewbhmc">
+				<xs:annotation>
+					<xs:documentation>二维表行名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jwgljyje" type="je">
+				<xs:annotation>
+					<xs:documentation>境外关联交易</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jwfgljyje" type="je">
+				<xs:annotation>
+					<xs:documentation>境外非关联交易</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jngljyje" type="je">
+				<xs:annotation>
+					<xs:documentation>境内关联交易</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jnfgljyje" type="je">
+				<xs:annotation>
+					<xs:documentation>境内非关联交易</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="hj" type="je">
+				<xs:annotation>
+					<xs:documentation>合计</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

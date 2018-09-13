@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:include schemaLocation="TaxMLPublicSFType.xsd"/>
+	<xs:complexType name="SSFWGLSF00021Request">
+		<xs:annotation>
+			<xs:documentation>保存涉税专业服务恢复采集表信息</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="sszyfwhfbVO" type="SszyfwjghfbVO">
+						<xs:annotation>
+							<xs:documentation>涉税专业服务恢复表VO</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="shxydm" type="shxydm">
+						<xs:annotation>
+							<xs:documentation>社会信用代码</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="ssfwjguuid" type="uuid">
+						<xs:annotation>
+							<xs:documentation>涉税服务机构uuid</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+</xs:schema>

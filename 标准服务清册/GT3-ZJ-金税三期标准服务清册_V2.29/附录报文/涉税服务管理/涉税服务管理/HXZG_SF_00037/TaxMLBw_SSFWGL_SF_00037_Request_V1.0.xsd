@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:include schemaLocation="TaxMLPublicSFType_00037.xsd"/>
+	<xs:complexType name="SSFWGLSSFW00037Request">
+		<xs:annotation>
+			<xs:documentation>行政登记变更终审保存</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="sfSsjgbgbVO" type="sfSsjgbgbVO">
+						<xs:annotation>
+							<xs:documentation>涉税服务机构变更基本信息</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="jgxxbgGrid">
+						<xs:annotation>
+							<xs:documentation>机构变更项目grid</xs:documentation>
+						</xs:annotation>
+						<xs:complexType>
+							<xs:sequence maxOccurs="unbounded">
+								<xs:element name="jgxxbgGridlb" type="sfSsjgbgmxbVO">
+									<xs:annotation>
+										<xs:documentation>变更项目lb</xs:documentation>
+									</xs:annotation>
+								</xs:element>
+							</xs:sequence>
+						</xs:complexType>
+					</xs:element>
+					<xs:element name="hhrhgdryGrid">
+						<xs:annotation>
+							<xs:documentation>合伙人变更</xs:documentation>
+						</xs:annotation>
+						<xs:complexType>
+							<xs:sequence maxOccurs="unbounded">
+								<xs:element name="hhrhgdryGridlb" type="sfXzdjrybgmxbVO">
+									<xs:annotation>
+										<xs:documentation>合伙人变更lb</xs:documentation>
+									</xs:annotation>
+								</xs:element>
+							</xs:sequence>
+						</xs:complexType>
+					</xs:element>
+					<xs:element name="qtqdzyzgryGrid">
+						<xs:annotation>
+							<xs:documentation>其他人变更</xs:documentation>
+						</xs:annotation>
+						<xs:complexType>
+							<xs:sequence maxOccurs="unbounded">
+								<xs:element name="qtqdzyzgryGridlb" type="sfXzdjrybgmxbVO">
+									<xs:annotation>
+										<xs:documentation>其他人变更lb</xs:documentation>
+									</xs:annotation>
+								</xs:element>
+							</xs:sequence>
+						</xs:complexType>
+					</xs:element>
+					<xs:element name="swsswsxzdjVO" type="ssjgxzdjbVO">
+						<xs:annotation>
+							<xs:documentation>涉税机构基本信息</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="insertRyGrid">
+						<xs:annotation>
+							<xs:documentation>新增人员集</xs:documentation>
+						</xs:annotation>
+						<xs:complexType>
+							<xs:sequence maxOccurs="unbounded">
+								<xs:element name="insertRyGridlb" type="ssjgryxxVO">
+									<xs:annotation>
+										<xs:documentation>新增人员VO</xs:documentation>
+									</xs:annotation>
+								</xs:element>
+							</xs:sequence>
+						</xs:complexType>
+					</xs:element>
+					<xs:element name="updateRyGrid">
+						<xs:annotation>
+							<xs:documentation>协议变更人员集</xs:documentation>
+						</xs:annotation>
+						<xs:complexType>
+							<xs:sequence maxOccurs="unbounded">
+								<xs:element name="updateRyGridlb" type="ssjgryxxVO">
+									<xs:annotation>
+										<xs:documentation>机构下人员VO</xs:documentation>
+									</xs:annotation>
+								</xs:element>
+							</xs:sequence>
+						</xs:complexType>
+					</xs:element>
+					<xs:element name="existRyGrid">
+						<xs:annotation>
+							<xs:documentation>库中非机构下人员集</xs:documentation>
+						</xs:annotation>
+						<xs:complexType>
+							<xs:sequence maxOccurs="unbounded">
+								<xs:element name="existRyGridlb" type="ssjgryxxVO">
+									<xs:annotation>
+										<xs:documentation>库中非机构下VO</xs:documentation>
+									</xs:annotation>
+								</xs:element>
+							</xs:sequence>
+						</xs:complexType>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+</xs:schema>

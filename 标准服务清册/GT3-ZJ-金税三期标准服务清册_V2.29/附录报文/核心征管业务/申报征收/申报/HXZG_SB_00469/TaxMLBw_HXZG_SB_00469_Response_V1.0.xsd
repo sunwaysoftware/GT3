@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 被2011 rel. 2 sp1 (TeaM DJiNN) 使用XMLSpy vTeaM DJiNN编辑的 (http://www.altova.com) by -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:complexType name="HXZGSB00469Response">
+		<xs:annotation>
+			<xs:documentation>资料报送查询凭证化返回业务报文</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="XMLDataVO" type="XMLDataVO">
+						<xs:annotation>
+							<xs:documentation>资料报送信息</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="XMLDataVO">
+		<xs:annotation>
+			<xs:documentation>资料报送</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="id" type="id">
+				<xs:annotation>
+					<xs:documentation>ID</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="code" type="code">
+				<xs:annotation>
+					<xs:documentation>代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="data" type="datafieldid">
+				<xs:annotation>
+					<xs:documentation>数据</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sjgsrq" type="sjgsrq">
+				<xs:annotation>
+					<xs:documentation>数据归属日期</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sjgsdq" type="sjgsdq">
+				<xs:annotation>
+					<xs:documentation>数据归属地区</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sjgssjjg" type="jg"/>
+			<xs:element name="lrr_dm" type="lrrDm">
+				<xs:annotation>
+					<xs:documentation>录入人代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="lrrq" type="lrrq">
+				<xs:annotation>
+					<xs:documentation>录入日期</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ywfl_dm" type="ywflDm"/>
+			<xs:element name="XMLExtensionInfoVO" type="XMLExtensionInfoVO"/>
+			<xs:element name="ywzj1" type="zj"/>
+			<xs:element name="ywzj2" type="zj"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="XMLExtensionInfoVO">
+		<xs:sequence>
+			<xs:element name="lcslid" type="lcslid">
+				<xs:annotation>
+					<xs:documentation>流程实例ID</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="djxh" type="djxh">
+				<xs:annotation>
+					<xs:documentation>登记序号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="slswsx_dm" type="slswsxDm"/>
+			<xs:element name="xmlpzhsj" type="xmlpzhsj"/>
+			<xs:element name="hdslid" type="hdslid"/>
+			<xs:element name="sjslid" type="sjslid"/>
+			<xs:element name="ywuuid" type="ywuuid">
+				<xs:annotation>
+					<xs:documentation>业务UUID</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="dzbzdszl_dm" type="dzbzdszlDm">
+				<xs:annotation>
+					<xs:documentation>电子表证单书种类代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qdly_dm" type="qdlyDm"/>
+			<xs:element name="sjgsrq" type="sjgsrq"/>
+			<xs:element name="sjgsdq" type="sjgsdq">
+				<xs:annotation>
+					<xs:documentation>数据归属地区</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="lrr_dm" type="lrrDm">
+				<xs:annotation>
+					<xs:documentation>录入人代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="lrrq">
+				<xs:annotation>
+					<xs:documentation>录入日期</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="xgr_dm" type="xgrDm">
+				<xs:annotation>
+					<xs:documentation>修改人代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="xgrq" type="xgrq">
+				<xs:annotation>
+					<xs:documentation>修改日期</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ywylzd1" type="ylzd"/>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

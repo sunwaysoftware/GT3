@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 被2011 rel. 2 sp1 (TeaM DJiNN) 使用XMLSpy vTeaM DJiNN编辑的 (http://www.altova.com) by -->
+<!-- edited with XMLSpy v2010 rel. 3 (http://www.altova.com) by liuwei (liuweicss) -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:include schemaLocation="TaxMLPublicType.xsd"/>
+	<xs:complexType name="ybqycbzcmxbForm">
+		<xs:annotation>
+			<xs:documentation>一般企业成本支出明细表(A102010)业务报文</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="ybqycbzcMxbVO" type="ybqycbzcmxbVO" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>一般企业成本支出明细表</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="ybqycbzcmxbVO">
+		<xs:annotation>
+			<xs:documentation>《一般企业成本支出明细表》</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="yycb" type="je">
+				<xs:annotation>
+					<xs:documentation>营业成本</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zyywcb" type="je">
+				<xs:annotation>
+					<xs:documentation>主营业务成本</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="xsspcb" type="je">
+				<xs:annotation>
+					<xs:documentation>销售商品成本</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zyywcbfhbxzcjhcb" type="je">
+				<xs:annotation>
+					<xs:documentation>非货币性资产交换成本</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="tglwcb" type="je">
+				<xs:annotation>
+					<xs:documentation>提供劳务成本</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jzhtcb" type="je">
+				<xs:annotation>
+					<xs:documentation>建造合同成本</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="rdzcsyqcb" type="je">
+				<xs:annotation>
+					<xs:documentation>让渡资产使用权成本</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zyywcbqt" type="je">
+				<xs:annotation>
+					<xs:documentation>主营业成本-其他</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qtywcb" type="je">
+				<xs:annotation>
+					<xs:documentation>其他业务成本</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="clxscb" type="je">
+				<xs:annotation>
+					<xs:documentation>材料销售成本</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qtywcbfhbxzcjhcb" type="je">
+				<xs:annotation>
+					<xs:documentation>非货币性资产交换成本</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="czgdzccb" type="je">
+				<xs:annotation>
+					<xs:documentation>出租固定资产成本</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="czwxzccb" type="je">
+				<xs:annotation>
+					<xs:documentation>出租无形资产成本</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bzwczcb" type="je">
+				<xs:annotation>
+					<xs:documentation>包装物出租成本</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qtywcbqt" type="je">
+				<xs:annotation>
+					<xs:documentation>起亚营业成本其他</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yywzc" type="je">
+				<xs:annotation>
+					<xs:documentation>营业外支出A</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="fldzcczss" type="je">
+				<xs:annotation>
+					<xs:documentation>非流动资产处置损失</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="fhbxzcjhss" type="je">
+				<xs:annotation>
+					<xs:documentation>非货币性资产交换损失</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zwczss" type="je">
+				<xs:annotation>
+					<xs:documentation>债务重组损失</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="fcss" type="je">
+				<xs:annotation>
+					<xs:documentation>非常损失</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jzzc" type="je">
+				<xs:annotation>
+					<xs:documentation>捐赠支出</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zzzc" type="je">
+				<xs:annotation>
+					<xs:documentation>赞助支出</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="fmzc" type="je">
+				<xs:annotation>
+					<xs:documentation>罚没支出</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="hzss" type="je">
+				<xs:annotation>
+					<xs:documentation>坏账损失</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="wfshdzqgqtzss" type="je">
+				<xs:annotation>
+					<xs:documentation>无法收回的债券股权投资损失</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yywzcqt" type="je">
+				<xs:annotation>
+					<xs:documentation>营业额外支出-其他</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

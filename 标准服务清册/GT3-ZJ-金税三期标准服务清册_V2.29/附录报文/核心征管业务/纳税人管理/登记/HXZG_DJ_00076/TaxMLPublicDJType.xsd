@@ -1,0 +1,652 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 被2012 () 使用XMLSpy v编辑的 (http://www.altova.com) by -->
+<!-- edited with XMLSpy v2013 (http://www.altova.com) by  () -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:complexType name="DJNsrxxTzzexxVO">
+		<xs:annotation>
+			<xs:documentation>纳税人信息投资总额信息</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="uuid" type="uuid">
+				<xs:annotation>
+					<xs:documentation>UUID||uuid</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="djxh" type="djxh">
+				<xs:annotation>
+					<xs:documentation>登记序号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="tzze" type="tzze">
+				<xs:annotation>
+					<xs:documentation>投资总额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="hbszDm" type="hbszDm">
+				<xs:annotation>
+					<xs:documentation>货币数字代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yxbz" type="yxbz">
+				<xs:annotation>
+					<xs:documentation>有效标志</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="lrrDm" type="lrrDm">
+				<xs:annotation>
+					<xs:documentation>录入人代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="lrrq" type="lrrq">
+				<xs:annotation>
+					<xs:documentation>录入日期</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="xgrDm" type="xgrDm" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>修改人代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="xgrq" type="xgrq" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>修改日期</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sjgsdq" type="sjgsdq">
+				<xs:annotation>
+					<xs:documentation>数据归属地区</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="DJNsrxxZczbxxVO">
+		<xs:annotation>
+			<xs:documentation>纳税人信息（注册资本信息）</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="uuid" type="uuid">
+				<xs:annotation>
+					<xs:documentation>UUID||uuid</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zczb" type="zczb">
+				<xs:annotation>
+					<xs:documentation>注册资本</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="hbszDm" type="hbszDm">
+				<xs:annotation>
+					<xs:documentation>货币数字代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yxbz" type="yxbz">
+				<xs:annotation>
+					<xs:documentation>有效标志</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="lrrDm" type="lrrDm">
+				<xs:annotation>
+					<xs:documentation>录入人代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="lrrq" type="lrrq">
+				<xs:annotation>
+					<xs:documentation>录入日期</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="xgrDm" type="xgrDm" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>修改人代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="xgrq" type="xgrq" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>修改日期</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sjgsdq" type="sjgsdq">
+				<xs:annotation>
+					<xs:documentation>数据归属地区</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="djxh" type="djxh">
+				<xs:annotation>
+					<xs:documentation>登记序号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="DJBgdjmxVO">
+		<xs:annotation>
+			<xs:documentation>变更登记明细</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="bgdjmxuuid" type="bgdjmxuuid">
+				<xs:annotation>
+					<xs:documentation>变更登记明细UUID</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="djxh" type="djxh">
+				<xs:annotation>
+					<xs:documentation>登记序号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="lcslid" type="lcslid">
+				<xs:annotation>
+					<xs:documentation>流程实例ID</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bgxmDm" type="bgxmDm">
+				<xs:annotation>
+					<xs:documentation>变更项目代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bgqnr" type="bgqnr" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>变更前内容</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bghnr" type="bghnr" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>变更后内容</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="pzjgmc" type="pzjgmc" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>批准机关名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="pzwj" type="pzwj" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>批准文件</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="lrrDm" type="lrrDm">
+				<xs:annotation>
+					<xs:documentation>录入人代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="lrrq" type="lrrq">
+				<xs:annotation>
+					<xs:documentation>录入日期</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="xgrDm" type="xgrDm" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>修改人代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="xgrq" type="xgrq" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>修改日期</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sjgsdq" type="sjgsdq">
+				<xs:annotation>
+					<xs:documentation>数据归属地区</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="gluuid" type="gluuid" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>关联uuid</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="DJFzjgxxVO">
+		<xs:annotation>
+			<xs:documentation>分支机构信息（分店情况）</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="fzjgfduuid" type="fzjgfduuid">
+				<xs:annotation>
+					<xs:documentation>分支机构(分店)UUID</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="djxh" type="djxh">
+				<xs:annotation>
+					<xs:documentation>登记序号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="fzjghfddjxh" type="fzjghfddjxh">
+				<xs:annotation>
+					<xs:documentation>分支机构(分店)登记序号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="fzjghfdnsrsbh" type="fzjghfdnsrsbh">
+				<xs:annotation>
+					<xs:documentation>分支机构(分店)纳税人识别号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="fzjghfdmc" type="fzjghfdmc">
+				<xs:annotation>
+					<xs:documentation>分支机构(分店)名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yxqq" type="yxqq">
+				<xs:annotation>
+					<xs:documentation>有效期起</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="fzjghfddz" type="fzjghfddz">
+				<xs:annotation>
+					<xs:documentation>分支机构(分店)地址</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yxqz" type="yxqz">
+				<xs:annotation>
+					<xs:documentation>有效期止</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="fzjghfdlxdh" type="fzjghfdlxdh" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>分支机构(分店)联系电话</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="lrrDm" type="lrrDm">
+				<xs:annotation>
+					<xs:documentation>录入人代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="lrrq" type="lrrq">
+				<xs:annotation>
+					<xs:documentation>录入日期</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="xgrDm" type="xgrDm" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>修改人代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="xgrq" type="xgrq" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>修改日期</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sjgsdq" type="sjgsdq">
+				<xs:annotation>
+					<xs:documentation>数据归属地区</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="DJNsrfyhyxxVO">
+		<xs:annotation>
+			<xs:documentation>纳税人附营行业信息</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="fyhyuuid" type="fyhyuuid">
+				<xs:annotation>
+					<xs:documentation>附营行业UUID</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="djxh" type="djxh">
+				<xs:annotation>
+					<xs:documentation>登记序号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="xh" type="xh">
+				<xs:annotation>
+					<xs:documentation>序号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="hyDm" type="hyDm">
+				<xs:annotation>
+					<xs:documentation>行业代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yxbz" type="yxbz">
+				<xs:annotation>
+					<xs:documentation>有效标志</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="lrrDm" type="lrrDm">
+				<xs:annotation>
+					<xs:documentation>录入人代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="lrrq" type="lrrq">
+				<xs:annotation>
+					<xs:documentation>录入日期</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="xgrDm" type="xgrDm" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>修改人代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="xgrq" type="xgrq" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>修改日期</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sjgsdq" type="sjgsdq">
+				<xs:annotation>
+					<xs:documentation>数据归属地区</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="DJTzfxxVO">
+		<xs:annotation>
+			<xs:documentation>投资方信息（合伙人投资情况）</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="uuid" type="uuid">
+				<xs:annotation>
+					<xs:documentation>UUID</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="djxh" type="djxh">
+				<xs:annotation>
+					<xs:documentation>登记序号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="tzfhhhrzjzlDm" type="tzfhhhrzjzlDm">
+				<xs:annotation>
+					<xs:documentation>投资方（合伙人）证件种类代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="tzfhhhrzjhm" type="tzfhhhrzjhm">
+				<xs:annotation>
+					<xs:documentation>投资方（合伙人）证件号码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="tzfhhhrmc" type="tzfhhhrmc">
+				<xs:annotation>
+					<xs:documentation>投资方（合伙人）名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="tzfjjxzDm" type="tzfjjxzDm" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>投资方经济性质代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="tzbl" type="tzbl">
+				<xs:annotation>
+					<xs:documentation>投资比例</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="gjhdqszDm" type="gjhdqszDm">
+				<xs:annotation>
+					<xs:documentation>国家或地区数字代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="dz" type="dz" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>地址</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yxqq" type="yxqq">
+				<xs:annotation>
+					<xs:documentation>有效期起</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="tzje" type="tzje">
+				<xs:annotation>
+					<xs:documentation>投资金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yxqz" type="yxqz">
+				<xs:annotation>
+					<xs:documentation>有效期止</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="fpbl" type="fpbl" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>分配比例</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="lrrDm" type="lrrDm">
+				<xs:annotation>
+					<xs:documentation>录入人代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="lrrq" type="lrrq">
+				<xs:annotation>
+					<xs:documentation>录入日期</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="xgrDm" type="xgrDm" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>修改人代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="xgrq" type="xgrq" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>修改日期</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sjgsdq" type="sjgsdq">
+				<xs:annotation>
+					<xs:documentation>数据归属地区</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="DJYsqywslxxbVO">
+		<xs:annotation>
+			<xs:documentation>依申请业务受理信息表</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="uuid" type="uuid">
+				<xs:annotation>
+					<xs:documentation>UUID</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="djxh" type="djxh">
+				<xs:annotation>
+					<xs:documentation>登记序号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="slswsxDm" type="slswsxDm">
+				<xs:annotation>
+					<xs:documentation>受理税务事项代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="lcslid" type="lcslid" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>流程实例ID</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="slrDm" type="slrDm">
+				<xs:annotation>
+					<xs:documentation>受理人代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="slrq" type="slrq">
+				<xs:annotation>
+					<xs:documentation>受理日期</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="slswjgDm" type="slswjgDm">
+				<xs:annotation>
+					<xs:documentation>受理税务机关代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="slyj" type="slyj" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>受理意见</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="hzrq" type="hzrq" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>核准日期</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="hzrDm" type="hzrDm" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>核准人代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="hzswjgDm" type="hzswjgDm" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>核准税务机关代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="xgslrqly" type="xgslrqly" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>修改受理日期理由</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jbr" type="jbr" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>经办人</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="fzr" type="fzr" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>负责人</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sqr" type="sqr" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>申请人</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bsrxm" type="bsrxm" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>办税人姓名</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sqrq" type="sqrq">
+				<xs:annotation>
+					<xs:documentation>申请日期</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sqly" type="sqly" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>申请理由</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="lrrDm" type="lrrDm">
+				<xs:annotation>
+					<xs:documentation>录入人代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="lrrq" type="lrrq">
+				<xs:annotation>
+					<xs:documentation>录入日期</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="xgrDm" type="xgrDm" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>修改人代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="xgrq" type="xgrq" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>修改日期</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sjgsdq" type="sjgsdq">
+				<xs:annotation>
+					<xs:documentation>数据归属地区</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bgrq1" type="bgrq1" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>报告日期</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="DJZjgxxVO">
+		<xs:annotation>
+			<xs:documentation>总机构信息</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="zjguuid" type="zjguuid">
+				<xs:annotation>
+					<xs:documentation>总机构UUID</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="djxh" type="djxh">
+				<xs:annotation>
+					<xs:documentation>登记序号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zjgnsrsbh" type="zjgnsrsbh">
+				<xs:annotation>
+					<xs:documentation>总机构纳税人识别号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zjgdjxh" type="zjgdjxh" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>总机构登记序号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zjgmc" type="zjgmc" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>总机构名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zjgzcdz" type="zjgzcdz" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>总机构注册地址</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zjgzcdzyzbm" type="zjgzcdzyzbm" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>总机构注册地邮政编码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yxqq" type="yxqq">
+				<xs:annotation>
+					<xs:documentation>有效期起</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zjgfddbrxm" type="zjgfddbrxm" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>总机构法定代表人姓名</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yxqz" type="yxqz">
+				<xs:annotation>
+					<xs:documentation>有效期止</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zjglxdh" type="zjglxdh" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>总机构联系电话</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zjgjyfw" type="zjgjyfw" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>总机构经营范围</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="lrrDm" type="lrrDm">
+				<xs:annotation>
+					<xs:documentation>录入人代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="lrrq" type="lrrq">
+				<xs:annotation>
+					<xs:documentation>录入日期</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="xgrDm" type="xgrDm" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>修改人代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="xgrq" type="xgrq" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>修改日期</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sjgsdq" type="sjgsdq">
+				<xs:annotation>
+					<xs:documentation>数据归属地区</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yxbz" type="yxbz">
+				<xs:annotation>
+					<xs:documentation>有效标志</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

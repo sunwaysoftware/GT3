@@ -1,0 +1,700 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:complexType name="kjgrsdsbgbYwbw">
+		<xs:annotation>
+			<xs:documentation>扣缴个人所得税报告表业务报文</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="kjgrsdsbgbBzds" type="kjgrsdsbgbBzds"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="kjgrsdsbgbBzds">
+		<xs:annotation>
+			<xs:documentation>扣缴个人所得税报告表表证单书</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="head" type="kjgrsdsbgbHead">
+				<xs:annotation>
+					<xs:documentation>扣缴个人所得税报告表表头</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="body" type="kjgrsdsbgbBody">
+				<xs:annotation>
+					<xs:documentation>扣缴个人所得税报告表表体</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bodyAffix" type="xs:anySimpleType">
+				<xs:annotation>
+					<xs:documentation>预留：附属表体</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="kjgrsdsbgbHead">
+		<xs:annotation>
+			<xs:documentation>扣缴个人所得税报告表表头</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="kjywrsbh" type="kjywrsbh">
+				<xs:annotation>
+					<xs:documentation>扣缴义务人识别号，来自dj_nsrxx表，必传</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="kjywrmc" type="kjywrmc">
+				<xs:annotation>
+					<xs:documentation>扣缴义务人名称，来自dj_nsrxx表，必传</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="hyDm" type="hyDm">
+				<xs:annotation>
+					<xs:documentation>行业，来自dj_nsrxx表，可以为空</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="djzclxDm" type="djzclxDm">
+				<xs:annotation>
+					<xs:documentation>登记注册类型，来自dj_nsrxx表，可以为空</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="kjywrdjxh" type="djxh">
+				<xs:annotation>
+					<xs:documentation>
+					扣缴义务人登记序号，来自dj_nsrxx表，必传
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="skssqq" type="skssqq">
+				<xs:annotation>
+					<xs:documentation>税款所属时期起，格式为yyyy-mm-dd，必传</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="skssqz" type="skssqz">
+				<xs:annotation>
+					<xs:documentation>税款所属时期止，格式为yyyy-mm-dd，必传</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="tbrq1" type="tbrq">
+				<xs:annotation>
+					<xs:documentation>填表日期，格式为yyyy-mm-dd，必传</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sbrq" type="sbrq">
+				<xs:annotation>
+					<xs:documentation>申报日期，格式为yyyy-mm-dd，必传</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="dlsbrq" type="sbrq">
+				<xs:annotation>
+					<xs:documentation>代理申报日期，格式为yyyy-mm-dd，可以为空</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="kjrs" type="kjrs">
+				<xs:annotation>
+					<xs:documentation>扣缴人数</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="fddbrfzrxm" type="fddbrfzrxm">
+				<xs:annotation>
+					<xs:documentation>法定代表人（负责人）姓名，可以为空</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jbrxm" type="swjgjbrxm">
+				<xs:annotation>
+					<xs:documentation>经办人姓名，必传</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="slrxm" type="slrxm">
+				<xs:annotation>
+					<xs:documentation>受理人姓名，必传</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="slrDm" type="slrDm">
+				<xs:annotation>
+					<xs:documentation>受理人代码，必传</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="dljgbsrxm" type="dljgbsrxm">
+				<xs:annotation>
+					<xs:documentation>代理机构经办人姓名，代理机构填写时，该项必须录入</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="dljbrzyzjhm" type="dljbrzyzjhm">
+				<xs:annotation>
+					<xs:documentation>代理经办人执业证件号码，代理机构填写时，该项必须录入</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="slrq" type="slrq">
+				<xs:annotation>
+					<xs:documentation>受理日期，格式为yyyy-mm-dd，可以为空</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="lrrq" type="lrrq">
+				<xs:annotation>
+					<xs:documentation>录入日期，格式为yyyy-mm-dd，可以为空</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="slswjgDm" type="slswjgDm">
+				<xs:annotation>
+					<xs:documentation>受理税务机关代码，必传</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="slswjgMc" type="slswjgmc">
+				<xs:annotation>
+					<xs:documentation>受理税务机关名称，必传</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sblxDm" type="bgbz">
+				<xs:annotation>
+					<xs:documentation>申报方式代码，0：正常申报，1：更正申报，必传</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="kjywrsshybz" type="bz3">
+				<xs:annotation>
+					<xs:documentation>扣缴义务人所属行业标志， 0：一般行业， 1：特定行业月份申报，必传</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="dljg" type="kjywrmc">
+				<xs:annotation>
+					<xs:documentation>代理机构，可以为空</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ssglyDm" type="ssglyDm">
+				<xs:annotation>
+					<xs:documentation>税收管理员代码，必传</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ykwk" type="sfbz">
+				<xs:annotation>
+					<xs:documentation>应扣未扣，可以为空（Y:是，N:否--不支持网报数据进行应扣未扣申报，系统按N处理）</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ywdx" type="bz3">
+				<xs:annotation>
+					<xs:documentation>业务对象，1：自然人，2：扣缴义务人，必填，如果不传入按照2处理</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sffbmsb" type="sffbmsb">
+				<xs:annotation>
+					<xs:documentation>是否分部门申报：Y：是，N：否，空的话按照N处理，
+					申报【更正,作废】时,是否分部门申报要和申报时是否分部门申报保持一致，否则不能更正和申报</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bmbh" type="bmbh">
+				<xs:annotation>
+					<xs:documentation>部门编号，正常申报：当sffbmsb为是时，部门名称不为空部门编号必录，为否时部门编号按照空处理。
+					                            申报【更正,作废】时,部门编号要和申报时部门编号保持一致，否则不能更正和申报</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bmmc" type="bmmc">
+				<xs:annotation>
+					<xs:documentation>部门名称，当sffbmsb为是时，部门编号不为空部门名称必录为否时部门名称按照空处理</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="cztfbz" type="bz3">
+				<xs:annotation>
+					<xs:documentation>财政统发标志，如果是财政统发申报，传1，否则传0</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sftfdwsb" type="bz3">
+				<xs:annotation>
+					<xs:documentation>是否统发单位申报，0-否，1-是，该节点不存在或者传递空值，都按照0处理</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="tfdwdjxh" type="djxh">
+				<xs:annotation>
+					<xs:documentation>统发单位登记序号，如果上面sftfdwsb传值为1，则该字段不能为空，否则传空值</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="kjgrsdsbgbBody">
+		<xs:annotation>
+			<xs:documentation>扣缴个人所得税报告表表体</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="kjgrsdsbgbs" type="kjgrsdsbgbs" minOccurs="1" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>扣缴个人所得税报告表列表</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="kjgrsdsbgbHj" type="kjgrsdsbgbHj" minOccurs="1" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>扣缴个人所得税报告表合计</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="kjgrsdsbgbs">
+		<xs:sequence>
+			<xs:element name="kjgrsdsbgbMx" type="kjgrsdsbgbMx" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="kjgrsdsbgbMx">
+		<xs:annotation>
+			<xs:documentation>扣缴个人所得税报告表明细</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="xh" type="xh">
+				<xs:annotation>
+					<xs:documentation>序号，必传，不能重复</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sfmxsb" type="bz3">
+				<xs:annotation>
+					<xs:documentation>是否明细申报，1：是， 0：否，必传</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="hzsjbh" type="xh">
+				<xs:annotation>
+					<xs:documentation>
+						汇总数据编号						《中央证券登记结算公司代扣代缴上市公司股息红利扣缴个人所得税报告表》，如果客户端以文件zip上传的情况下，必填，不为空； 如果是其他情况，则为空,不能填写
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jymxbz" type="bz3">
+				<xs:annotation>
+					<xs:documentation>
+						校验明细标志，当hzsjbh不为空时，jymxbz必填，1、解析成功，0、解析失败，当hzsjbh为空时，	jymxbz不需要填写，为空				《中央证券登记结算公司代扣代缴上市公司股息红利扣缴个人所得税报告表》
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sfhgt" type="bz3">
+				<xs:annotation>
+					<xs:documentation>
+						是否沪港通，1：是， 0：否；必填；
+						《中央证券登记结算公司代扣代缴上市公司股息红利扣缴个人所得税报告表》，默认为0
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ssgsnsrsbh" type="nsrsbh">
+				<xs:annotation>
+					<xs:documentation>
+					    上市公司纳税人识别号；
+					    针对《中央证券登记结算公司代扣代缴上市公司股息红利扣缴个人所得税报告表》当sfhgt为0时必传，其他的申报表无需填写
+				   </xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ssgsnsrmc" type="nsrmc">
+				<xs:annotation>
+					<xs:documentation>
+					    上市公司纳税人名称；
+					    针对《中央证券登记结算公司代扣代缴上市公司股息红利扣缴个人所得税报告表》必传（当sfhgt为0和1是都不能为空），其他的申报表无需填写
+				   </xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ssgsdjxh" type="kjywrdjxh">
+				<xs:annotation>
+					<xs:documentation>
+					    上市公司登记序号；
+					    针对《中央证券登记结算公司代扣代缴上市公司股息红利扣缴个人所得税报告表》当sfhgt为0时必传，其他的申报表无需填写
+				   </xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ssgsjdxzDm" type="jdxzDm">
+				<xs:annotation>
+					<xs:documentation>
+					    上市公司街道乡镇代码；
+					    针对《中央证券登记结算公司代扣代缴上市公司股息红利扣缴个人所得税报告表》当sfhgt为0时必传，其他的申报表无需填写
+				   </xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ssgszgswskfjDm" type="zgswskfjDm">
+				<xs:annotation>
+					<xs:documentation>
+					    上市公司主管税务所科分局代码；
+					    针对《中央证券登记结算公司代扣代缴上市公司股息红利扣缴个人所得税报告表》当sfhgt为0时必传，其他的申报表无需填写
+				   </xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="nsrxm" type="nsrmc">
+				<xs:annotation>
+					<xs:documentation>纳税人姓名，当sfmxsb为1时必须传递，否则无需传递</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="gjhdqszdm" type="gjhdqszDm">
+				<xs:annotation>
+					<xs:documentation>国籍，可以为空</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="gjhdqmc" type="gjhdqmc">
+				<xs:annotation>
+					<xs:documentation>国籍名称，可以为空</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zzlxdm" type="sfzjlxDm">
+				<xs:annotation>
+					<xs:documentation>证照类型代码，当sfmxsb为1时必传，否则无需传递</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zzlxmc" type="zzlxmc">
+				<xs:annotation>
+					<xs:documentation>证照类型名称，当sfmxsb为1时必传，否则无需传递</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zzhm" type="zzhm">
+				<xs:annotation>
+					<xs:documentation>证照号码，当sfmxsb为1时必传，否则无需传递，
+					当证照类型代码为201【居民身份证】时，证照号码长度只能为18位。
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="nsrsbh" type="nsrsbh">
+				<xs:annotation>
+					<xs:documentation>纳税人识别号，可以为空</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="djxh" type="djxh">
+				<xs:annotation>
+					<xs:documentation>登记序号，可以为空</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="btfdwdjxh" type="djxh">
+				<xs:annotation>
+					<xs:documentation>被统发单位登记序号，上面sftfdwsb为1时，该字段不能为空</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sdxmdm" type="grsdssdxmDm">
+				<xs:annotation>
+					<xs:documentation>所得项目代码，不能为空</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sdxmmc" type="sdxmmc">
+				<xs:annotation>
+					<xs:documentation>所得项目名称，不能为空</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sdqjq" type="sdqjq">
+				<xs:annotation>
+					<xs:documentation>所得期间起，格式为yyyy-mm-dd，不能为空</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sdqjz" type="sdqjz">
+				<xs:annotation>
+					<xs:documentation>所得期间止，格式为yyyy-mm-dd，不能为空</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sre" type="sre">
+				<xs:annotation>
+					<xs:documentation>收入额，不能为空</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="mssdje" type="mssdje">
+				<xs:annotation>
+					<xs:documentation>
+					（免税所得）其他免税所得金额，没有时传0；
+					针对《中央证券登记结算公司代扣代缴上市公司股息红利扣缴个人所得税报告表》、《对企事业单位承包承租扣缴个人所得税报告表》两张申报表，因为没该项，所以传0
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="kjryxjjlmsbf" type="mssdje">
+				<xs:annotation>
+					<xs:documentation>
+					（免税所得）科技人员现金奖励免税部分，没有时传0；仅当申报工资薪金所得时该字段才可录入；
+					针对《中央证券登记结算公司代扣代缴上市公司股息红利扣缴个人所得税报告表》、《对企事业单位承包承租扣缴个人所得税报告表》两张申报表，因为没该项，所以传0
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ylbxje" type="ylbxjjje">
+				<xs:annotation>
+					<xs:documentation>
+					养老保险金额，没有时传0；
+					针对《中央证券登记结算公司代扣代缴上市公司股息红利扣缴个人所得税报告表》、《对企事业单位承包承租扣缴个人所得税报告表》两张申报表，因为没该项，所以传0
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yilbxje" type="ylbxjjje">
+				<xs:annotation>
+					<xs:documentation>
+					医疗保险金额，没有时传0；
+					针对《中央证券登记结算公司代扣代缴上市公司股息红利扣缴个人所得税报告表》、《对企事业单位承包承租扣缴个人所得税报告表》两张申报表，因为没该项，所以传0
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sybxje" type="ylbxjjje">
+				<xs:annotation>
+					<xs:documentation>
+					失业保险金额，没有时传0；
+					针对《中央证券登记结算公司代扣代缴上市公司股息红利扣缴个人所得税报告表》、《对企事业单位承包承租扣缴个人所得税报告表》两张申报表，因为没该项，所以传0
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zfgjjje" type="zfgjjje">
+				<xs:annotation>
+					<xs:documentation>
+					住房公积金金额，没有时传0；
+					针对《中央证券登记结算公司代扣代缴上市公司股息红利扣缴个人所得税报告表》、《对企事业单位承包承租扣缴个人所得税报告表》两张申报表，因为没该项，所以传0
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ccyzje" type="zfgjjje">
+				<xs:annotation>
+					<xs:documentation>
+					财产原值金额，没有时传0；
+					针对《中央证券登记结算公司代扣代缴上市公司股息红利扣缴个人所得税报告表》、《对企事业单位承包承租扣缴个人所得税报告表》两张申报表，因为没该项，所以传0
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yxkcdfye" type="zykcdsf">
+				<xs:annotation>
+					<xs:documentation>
+					允许扣除的费用额，没有时传0；
+					针对《中央证券登记结算公司代扣代缴上市公司股息红利扣缴个人所得税报告表》、《对企事业单位承包承租扣缴个人所得税报告表》两张申报表，因为没该项，所以传0
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sqkcxmqtje" type="zykcdsf">
+				<xs:annotation>
+					<xs:documentation>
+					（税前扣除项目）其他金额，没有时传0；
+					针对《中央证券登记结算公司代扣代缴上市公司股息红利扣缴个人所得税报告表》、《对企事业单位承包承租扣缴个人所得税报告表》两张申报表，因为没该项，所以传0
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="nj" type="zykcdsf">
+				<xs:annotation>
+					<xs:documentation>
+					（税前扣除项目）年金，没有时传0；
+					针对《中央证券登记结算公司代扣代缴上市公司股息红利扣缴个人所得税报告表》、《对企事业单位承包承租扣缴个人所得税报告表》两张申报表，因为没该项，所以传0
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="syjkx" type="zykcdsf">
+				<xs:annotation>
+					<xs:documentation>
+					（税前扣除项目）商业健康险，没有时传0,大于0时,附表【TaxMLBd_BDA0610855_v1.1.xsd《商业健康保险税前扣除》】必录，并且明细中的自然人一定要在《商业健康保险税前扣除》明细中存在。				针对《中央证券登记结算公司代扣代缴上市公司股息红利扣缴个人所得税报告表》、《对企事业单位承包承租扣缴个人所得税报告表》两张申报表，因为没该项，所以传0
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="tzdk" type="zykcdsf">
+				<xs:annotation>
+					<xs:documentation>
+					（税前扣除项目）投资抵扣，没有时传0；
+					针对《中央证券登记结算公司代扣代缴上市公司股息红利扣缴个人所得税报告表》、《对企事业单位承包承租扣缴个人所得税报告表》两张申报表，因为没该项，所以传0
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="syylbx" type="zykcdsf">
+				<xs:annotation>
+					<xs:documentation>
+					（税前扣除项目）税延养老保险，没有时传0；
+				       仅当申报工资薪金所得、劳务报酬所得时该字段才可录入，大于0时,附表【TaxMLBd_A061001051_v1.1.xsd《税延型商业养老保险税前扣除表》】必录，并且明细中的自然人一定要在《税延型商业养老保险税前扣除表》明细中存在。
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sqkcxmjehj" type="kcxmjehj">
+				<xs:annotation>
+					<xs:documentation>
+					税前扣除项目金额合计，没有时传0；
+					针对《中央证券登记结算公司代扣代缴上市公司股息红利扣缴个人所得税报告表》、《对企事业单位承包承租扣缴个人所得税报告表》两张申报表，因为没该项，所以传0
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jcfye" type="fykcbz">
+				<xs:annotation>
+					<xs:documentation>
+					减除费用额，按照国家规定传递，没有时传0；
+					针对《中央证券登记结算公司代扣代缴上市公司股息红利扣缴个人所得税报告表》、《对企事业单位承包承租扣缴个人所得税报告表》两张申报表，因为没该项，所以传0
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zykcdjze" type="zykcdjze">
+				<xs:annotation>
+					<xs:documentation>
+					准予扣除的捐赠额，没有时传0；
+					针对《中央证券登记结算公司代扣代缴上市公司股息红利扣缴个人所得税报告表》、《对企事业单位承包承租扣缴个人所得税报告表》两张申报表，因为没该项，所以传0
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ynssde" type="ynssde">
+				<xs:annotation>
+					<xs:documentation>
+					应纳税所得额，必传；
+					针对《对企事业单位承包承租扣缴个人所得税报告表》两张申报表，传值等于“收入额”；
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sl1" type="sl1">
+				<xs:annotation>
+					<xs:documentation>
+					税率，必传；
+					针对《对企事业单位承包承租扣缴个人所得税报告表》就等于征收率，取个税系统定律核定模块中核定的征收率，如果没核定或和核定的不一致，则申报失败；
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sskcs" type="sskcs">
+				<xs:annotation>
+					<xs:documentation>
+					速算扣除数，必传，没有时传0；
+					针对《对企事业单位承包承租扣缴个人所得税报告表》直接传0；
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zspmDm" type="zspmDm">
+				<xs:annotation>
+					<xs:documentation>征收品目代码，必传，遵循dm_gs_zspm表</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ynse" type="ynse">
+				<xs:annotation>
+					<xs:documentation>应纳（扣缴）税额，必传</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="xdsl" type="sl1">
+				<xs:annotation>
+					<xs:documentation>协定税率，可以为空</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jmse" type="jmse">
+				<xs:annotation>
+					<xs:documentation>减免税额，没有时传0</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yingkjse" type="ykse">
+				<xs:annotation>
+					<xs:documentation>应扣缴税额，必传</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ykjse" type="ykse">
+				<xs:annotation>
+					<xs:documentation>已扣缴税额，没有时传0</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ybtse" type="sjybtse">
+				<xs:annotation>
+					<xs:documentation>应补退税额，必传</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bz" type="bz">
+				<xs:annotation>
+					<xs:documentation>备注，可以为空</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="kjgrsdsbgbHj">
+		<xs:annotation>
+			<xs:documentation>扣缴个人所得税报告表合计</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="hjSre" type="sre">
+				<xs:annotation>
+					<xs:documentation>合计收入额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="hjMssdje" type="mssdje">
+				<xs:annotation>
+					<xs:documentation>（免税所得）合计其他所得额，上面明细项对应的合计，没有时传0</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="hjKjryxjjlmsbf" type="mssdje">
+				<xs:annotation>
+					<xs:documentation>(免税所得）科技人员现金奖励免税部分，上面明细项对应的合计，没有时传0</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="hjYlbxje" type="ylbxjjje">
+				<xs:annotation>
+					<xs:documentation>合计养老保险，上面明细项对应的合计，没有时传0</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="hjYilbxje" type="ylbxjjje">
+				<xs:annotation>
+					<xs:documentation>合计医疗保险，上面明细项对应的合计，没有时传0</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="hjSybxje" type="ylbxjjje">
+				<xs:annotation>
+					<xs:documentation>合计失业保险，上面明细项对应的合计，没有时传0</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="hjZfgjjje" type="zfgjjje">
+				<xs:annotation>
+					<xs:documentation>合计住房公积金，上面明细项对应的合计，没有时传0</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="hjCcyzje" type="zfgjjje">
+				<xs:annotation>
+					<xs:documentation>合计财产原值金额，上面明细项对应的合计，没有时传0</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="hjYxkcdfye" type="zykcdsf">
+				<xs:annotation>
+					<xs:documentation>合计允许扣除的费用额，上面明细项对应的合计，没有时传0</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="hjSqkcxmqtje" type="zykcdsf">
+				<xs:annotation>
+					<xs:documentation>合计税前扣除项目其他金额，上面明细项对应的合计，没有时传0</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="hjSqkcxmnjje" type="zykcdsf">
+				<xs:annotation>
+					<xs:documentation>合计税前扣除项目年金，上面明细项对应的合计，没有时传0</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="hjSqkcxmsyjkx" type="zykcdsf">
+				<xs:annotation>
+					<xs:documentation>合计税前扣除项目商业健康险，上面明细项对应的合计，没有时传0</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="hjSqkcxmtzdk" type="zykcdsf">
+				<xs:annotation>
+					<xs:documentation>合计税前扣除项目投资抵扣，上面明细项对应的合计，没有时传0</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="hjSqkcxmsyylbx" type="zykcdsf">
+				<xs:annotation>
+					<xs:documentation>合计税前扣除项目税延养老保险，上面明细项对应的合计，没有时传0</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="hjSqkcxmjehj" type="kcxmjehj">
+				<xs:annotation>
+					<xs:documentation>合计税前扣除项目金额合计，上面明细项对应的合计，没有时传0</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="hjJcfye" type="sre">
+				<xs:annotation>
+					<xs:documentation>合计减除费用额，上面明细项对应的合计，没有时传0</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="hjZykcdjze" type="zykcdjze">
+				<xs:annotation>
+					<xs:documentation>合计准予扣除的捐赠额，上面明细项对应的合计，没有时传0</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="hjYnssde" type="ynssde">
+				<xs:annotation>
+					<xs:documentation>合计应纳税所得额，上面明细项对应的合计，必传</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="hjYnse" type="ynse">
+				<xs:annotation>
+					<xs:documentation>合计应纳（扣缴）税额，上面明细项对应的合计，必传</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="hjJmse" type="jmse">
+				<xs:annotation>
+					<xs:documentation>合计减免税额，上面明细项对应的合计，没有时传0</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="hjYingkjse" type="ykjse">
+				<xs:annotation>
+					<xs:documentation>合计应扣缴税额，上面明细项对应的合计，必传</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="hjYkjse" type="ykjse">
+				<xs:annotation>
+					<xs:documentation>合计已扣缴税额，上面明细项对应的合计，没有时传0</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="hjYbtse" type="ybtse">
+				<xs:annotation>
+					<xs:documentation>合计应补退税额，上面明细项对应的合计，必传</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

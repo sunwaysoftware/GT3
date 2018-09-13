@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 被2012 () 使用XMLSpy v编辑的 (http://www.altova.com) by -->
+<!-- 编辑使用 XMLSpy v2006 U (http://www.altova.com) 由 any (any) -->
+<!-- 编辑使用 XMLSpy v2006 U (http://www.altova.com) 由 any (any) -->
+<!-- edited with XMLSpy v2011 rel. 2 (http://www.altova.com) by time (wnass) -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxDoc.xsd"/>
+	<xs:include schemaLocation="TaxMLPublic.xsd"/>
+	<xs:include schemaLocation="TaxMLPublicFPType.xsd"/>
+	<xs:complexType name="HXZGFP15239Request">
+		<xs:annotation>
+			<xs:documentation>保存房产交易信息（共有人版本）请求报文</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="djxh" type="xs:string">
+						<xs:annotation>
+							<xs:documentation>登记序号</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="fcjycjxxuuid" type="xs:string">
+						<xs:annotation>
+							<xs:documentation>房产交易UUID</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="fpdklbDm" type="xs:string">
+						<xs:annotation>
+							<xs:documentation>发票代开类别</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="kpje" type="xs:string">
+						<xs:annotation>
+							<xs:documentation>开票金额</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="zrfParamVOList">
+						<xs:annotation>
+							<xs:documentation>转让方</xs:documentation>
+						</xs:annotation>
+						<xs:complexType>
+							<xs:sequence maxOccurs="unbounded">
+								<xs:element name="zrfParamVOListlb" type="FPDKZrfParamVO">
+									<xs:annotation>
+										<xs:documentation>转让方信息列表</xs:documentation>
+									</xs:annotation>
+								</xs:element>
+							</xs:sequence>
+						</xs:complexType>
+					</xs:element>
+					<xs:element name="csfParamVOList">
+						<xs:annotation>
+							<xs:documentation>承受方</xs:documentation>
+						</xs:annotation>
+						<xs:complexType>
+							<xs:sequence maxOccurs="unbounded">
+								<xs:element name="csfParamVOListlb" type="FPDKCsfParamVO"/>
+							</xs:sequence>
+						</xs:complexType>
+					</xs:element>
+					<xs:element name="jshj" type="xs:string">
+						<xs:annotation>
+							<xs:documentation>价税合计</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+</xs:schema>

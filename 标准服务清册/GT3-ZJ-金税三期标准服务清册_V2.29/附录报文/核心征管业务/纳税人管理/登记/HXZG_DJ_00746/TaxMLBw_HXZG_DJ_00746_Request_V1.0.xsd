@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2013 (http://www.altova.com) by  () -->
+<!-- 编辑使用 XMLSpy v2006 U (http://www.altova.com) 由 any (any) -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:include schemaLocation="TaxMLPublicDJType.xsd"/>
+	<xs:complexType name="HXZGDJ00746Request">
+		<xs:annotation>
+			<xs:documentation>两证整合税务登记证信息采集校验</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="zzhm" type="zzhm"/>
+					<xs:element name="zzlxDm" type="zzlxDm"/>
+					<xs:element name="kzztdjlxDm" type="kzztdjlxDm"/>
+					<xs:element name="shxydm" type="shxydm"/>
+					<xs:element name="nsrmc" type="nsrmc"/>
+					<xs:element name="fddbrhfzrhyzsfzjhm" type="fddbrsfzjhm"/>
+					<xs:element name="fddbrhfzrhyzsfzjzlDm" type="sfzjzlDm"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+</xs:schema>

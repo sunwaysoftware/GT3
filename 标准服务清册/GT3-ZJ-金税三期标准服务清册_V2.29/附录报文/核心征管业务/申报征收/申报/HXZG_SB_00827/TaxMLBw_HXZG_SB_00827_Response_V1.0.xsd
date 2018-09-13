@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 被2011 rel. 2 sp1 (TeaM DJiNN) 使用XMLSpy vTeaM DJiNN编辑的 (http://www.altova.com) by -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:include schemaLocation="TaxMLCGSSBType.xsd"/>
+	<xs:complexType name="HXZGSB000827Response">
+		<xs:annotation>
+			<xs:documentation>批量查询车辆档案信息返回报文</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="SbCldaxxGrid">
+						<xs:annotation>
+							<xs:documentation>批量查询车辆档案信息</xs:documentation>
+						</xs:annotation>
+						<xs:complexType>
+							<xs:sequence maxOccurs="unbounded">
+								<xs:element name="SbCldaxxGridlb" type="SbCldaxxGridlbVO">
+									<xs:annotation>
+										<xs:documentation>批量查询车辆档案信息</xs:documentation>
+									</xs:annotation>
+								</xs:element>
+							</xs:sequence>
+						</xs:complexType>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="SbCldaxxGridlbVO">
+		<xs:complexContent>
+			<xs:extension base="SBCgsClxxVO">
+				<xs:sequence>
+					<xs:element name="cldauuid" type="cldauuid"/>
+					<xs:element name="djxh" type="djxh"/>
+					<xs:element name="nsrsbh" type="nsrsbh"/>
+					<xs:element name="nsrmc" type="nsrmc"/>
+					<xs:element name="zjhm" type="zjhm"/>
+					<xs:element name="nsrsfzjzlDm" type="nsrsfzjzlDm"/>
+					<xs:element name="lxdh" type="lxdh"/>
+					<xs:element name="yzbm" type="yzbm"/>
+					<xs:element name="dz" type="dz"/>
+					<xs:element name="wszmhm" type="wszmhm"/>
+					<xs:element name="pzhm1" type="pzhm1"/>
+					<xs:element name="xh" type="xh"/>
+					<xs:element name="gzrq" type="gzrq"/>
+					<xs:element name="ffrq" type="ffrq"/>
+					<xs:element name="mzsbz" type="mzsbz"/>
+					<xs:element name="fdjhm" type="fdjhm"/>
+					<xs:element name="ewtmc" type="ewtmc"/>
+					<xs:element name="wspzhm" type="wspzhm"/>
+					<xs:element name="jdrq" type="jdrq"/>
+					<xs:element name="wspzzlDm" type="wspzzlDm"/>
+					<xs:element name="sjse" type="sjse"/>
+					<xs:element name="znj" type="znj"/>
+					<xs:element name="znjpzhm" type="znjpzhm"/>
+					<xs:element name="djrDm" type="djrDm"/>
+					<xs:element name="djrq" type="djrq"/>
+					<xs:element name="jdcxszhm" type="jdcxszhm"/>
+					<xs:element name="yzpzxh" type="yzpzxh"/>
+					<xs:element name="cljdlxDm" type="cljdlxDm"/>
+					<xs:element name="cldaztDm" type="cldaztDm"/>
+					<xs:element name="zfbz1" type="zfbz1"/>
+					<xs:element name="zfrDm" type="zfrDm"/>
+					<xs:element name="zfrq1" type="zfrq1"/>
+					<xs:element name="sjtbSj" type="sjtbSj"/>
+					<xs:element name="ewtmt" type="ewtmt"/>
+					<xs:element name="clsbdh" type="clsbdh"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+</xs:schema>

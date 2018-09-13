@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 被2011 rel. 2 sp1 (TeaM DJiNN) 使用XMLSpy vTeaM DJiNN编辑的 (http://www.altova.com) by -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:complexType name="yqsbhzxxcx">
+		<xs:annotation>
+			<xs:documentation>延期申报核准信息查询</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="yqsbhzxxcx" type="yqsbhzxxCxVO">
+						<xs:annotation>
+							<xs:documentation>延期申报核准信息查询</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="yqsbhzxxCxVO">
+		<xs:annotation>
+			<xs:documentation>中华人民共和国税收缴款书（银行经收专用）</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="yqsbhzxxGrid">
+				<xs:annotation>
+					<xs:documentation>申报信息</xs:documentation>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:sequence maxOccurs="unbounded">
+						<xs:element name="yqsbhzxxGridlb" type="yqsbhzxxGridlbVO"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="yqsbhzxxGridlbVO">
+		<xs:annotation>
+			<xs:documentation>核准明细</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="yqsbmxuuid" type="yqsbuuid">
+				<xs:annotation>
+					<xs:documentation>延期申报明细uuid</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yqsbuuid" type="yqsbuuid">
+				<xs:annotation>
+					<xs:documentation>延期申报uuid</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="djxh" type="djxh">
+				<xs:annotation>
+					<xs:documentation>登记序号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="nsqxDm" type="nsqxDm">
+				<xs:annotation>
+					<xs:documentation>纳税期限代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sqyqsbszDm" type="zsxmDm">
+				<xs:annotation>
+					<xs:documentation>申请延期申报税种代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sqyqsbpmDm" type="zspmDm">
+				<xs:annotation>
+					<xs:documentation>申请延期申报品目代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="skssqq" type="skssqq">
+				<xs:annotation>
+					<xs:documentation>税款所属期起</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="skssqz" type="skssqz">
+				<xs:annotation>
+					<xs:documentation>税款所属期止</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="gdsbqx" type="gdsbqx">
+				<xs:annotation>
+					<xs:documentation>规定申报期限</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sqyqsbqx" type="sqyqsbqx">
+				<xs:annotation>
+					<xs:documentation>申请延期申报期限</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="hzyqsbqx" type="hzyqsbqx">
+				<xs:annotation>
+					<xs:documentation>核准延期申报期限</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="lrrDm" type="lrrDm">
+				<xs:annotation>
+					<xs:documentation>录入人代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="lrrq" type="lrrq">
+				<xs:annotation>
+					<xs:documentation>录入日期</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="xgrDm" type="xgrDm">
+				<xs:annotation>
+					<xs:documentation>修改人代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="xgrq" type="xgrq">
+				<xs:annotation>
+					<xs:documentation>修改日期</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sjgsdq" type="sjgsdq">
+				<xs:annotation>
+					<xs:documentation>数据归属地区</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

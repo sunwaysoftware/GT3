@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2013 (http://www.altova.com) by  () -->
+<!-- 被2011 rel. 2 sp1 (TeaM DJiNN) 使用XMLSpy vTeaM DJiNN编辑的 (http://www.altova.com) by -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:include schemaLocation="TaxMLPublicType.xsd"/>
+	<xs:complexType name="qybzqgsVO">
+		<xs:annotation>
+			<xs:documentation>所有者權益變動表</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="qybzqgsGrid">
+				<xs:annotation>
+					<xs:documentation>申报信息</xs:documentation>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:sequence maxOccurs="unbounded">
+						<xs:element name="qybzqgsGridlb" type="qybzqgsGridlbVO"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="qybzqgsGridlbVO">
+		<xs:annotation>
+			<xs:documentation>所有者权益变动表</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="ewbhxh" type="ewbhxh">
+				<xs:annotation>
+					<xs:documentation>二维表行序号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="xmmc" type="xmmc" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>项目名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bnsszbhgb" type="bnsszbhgb" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>本年实收资本(或股本)</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bnzbgj" type="bnzbgj" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>本年资本公积</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bnjkcg" type="bnjkcg" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>本年减库存股</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bnyygj" type="bnyygj" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>本年盈余公积</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bnybfxzb" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>本年一般风险准备</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bnwfplr" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>本年未分配利润</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bnsyzqyhj" type="bnsyzqyhj" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>本年所有者权益合计</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="snsszbhgb" type="snsszbhgb" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>上年实收资本(或股本)</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="snzbgj" type="snzbgj" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>上年资本公积</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="snjkcg" type="snjkcg" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>上年减库存股</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="snyygj" type="snyygj" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>上年盈余公积</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="snybfxzb" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>上年一般风险准备</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="snwfplr" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>上年未分配利润</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="snsyzqyhj" type="snsyzqyhj" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>上年所有者权益合计</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bnwbbbzsce" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>本年外币报表折算差额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="snwbbbzsce" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>上年外币报表折算差额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

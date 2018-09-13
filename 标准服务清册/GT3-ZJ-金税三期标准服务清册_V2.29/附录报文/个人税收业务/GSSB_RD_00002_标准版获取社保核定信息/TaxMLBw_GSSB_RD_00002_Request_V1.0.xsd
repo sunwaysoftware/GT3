@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 被2011 rel. 2 sp1 (TeaM DJiNN) 使用XMLSpy vTeaM DJiNN编辑的 (http://www.altova.com) by -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:complexType name="GSSBRD00002Request">
+		<xs:annotation>
+			<xs:documentation>社保核定信息获取接口</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="djxh" type="djxh" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>登记序号</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="sbbm" type="sbbm" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>社保编码</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="sbjbjg_dm" type="sbjbjg" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>社保经办机构</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="sbshrqq" type="shrq" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>社保审核日期起</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="sbshrqz" type="shrq" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>社保审核日期止</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+</xs:schema>

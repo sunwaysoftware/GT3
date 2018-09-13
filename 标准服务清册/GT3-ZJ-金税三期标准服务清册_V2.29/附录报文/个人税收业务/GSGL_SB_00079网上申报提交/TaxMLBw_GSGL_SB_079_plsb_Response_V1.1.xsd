@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2010 rel. 3 (http://www.altova.com) by MESMERiZE (MSM) -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:complexType name="sbxxbcresponse">
+		<xs:annotation>
+			<xs:documentation>申报信息保存返回</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="responseInfo" type="responseInfo" minOccurs="1" maxOccurs="1">
+						<xs:annotation>
+							<xs:documentation>反馈信息</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="responseInfo">
+		<xs:sequence>
+			<xs:element name="sbztDm" type="sbztDm">
+				<xs:annotation>
+					<xs:documentation>
+					申报状态代码，00-成功；01-失败；02-正在处理；
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sbsbyy" type="sbsbyy">
+				<xs:annotation>
+					<xs:documentation>
+					申报失败的原因，针对没有到明细处理的阶段的失败原因，明细数据处理失败的具体见下面的明细反馈中
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="responseMx" type="responseMx" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="responseMx">
+		<xs:annotation>
+			<xs:documentation>扣缴个人所得税报告表明细</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="tranSeq" type="uuid">
+				<xs:annotation>
+					<xs:documentation>交易的序列号，对应于service报文中的tran_seq节点</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sbztDm" type="sbztDm">
+				<xs:annotation>
+					<xs:documentation>
+					申报状态代码，00-成功；01-失败；02-正在处理；
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sbsbyy" type="sbsbyy">
+				<xs:annotation>
+					<xs:documentation>申报失败的原因</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yzpzxh" type="yzpzxh">
+				<xs:annotation>
+					<xs:documentation>应征凭证序号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yzpzzlDm" type="yzpzzlDm">
+				<xs:annotation>
+					<xs:documentation>应征凭证种类代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="skssqq" type="skssqq">
+				<xs:annotation>
+					<xs:documentation>税款所属时期起</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="skssqz" type="skssqz">
+				<xs:annotation>
+					<xs:documentation>税款所属时期止</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sbsk" type="sbsk">
+				<xs:annotation>
+					<xs:documentation>应补退税额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:simpleType name="sbztDm">
+		<xs:annotation>
+			<xs:documentation>申报状态</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:length value="2"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="sbsbyy">
+		<xs:annotation>
+			<xs:documentation>申报失败的原因</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:length value="3000"/>
+		</xs:restriction>
+	</xs:simpleType>
+</xs:schema>

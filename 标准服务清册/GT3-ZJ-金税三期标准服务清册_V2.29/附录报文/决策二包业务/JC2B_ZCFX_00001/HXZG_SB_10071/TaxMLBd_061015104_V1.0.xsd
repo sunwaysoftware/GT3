@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 被2012 () 使用XMLSpy v编辑的 (http://www.altova.com) by -->
+<!-- edited with XMLSpy v2010 rel. 3 (http://www.altova.com) by MESMERiZE (MSM) -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:include schemaLocation="TaxMLBd_061015105_V1.0.xsd"/>
+	<xs:include schemaLocation="TaxMLBd_061015106_V1.0.xsd"/>
+	<xs:include schemaLocation="TaxMLBd_061015107_V1.0.xsd"/>
+	<xs:include schemaLocation="TaxMLBd_061015108_V1.0.xsd"/>
+	<xs:include schemaLocation="TaxMLBd_061015109_V1.0.xsd"/>
+	<xs:complexType name="qyczsdstsxswclbgbYwbd">
+		<xs:annotation>
+			<xs:documentation>企业重组所得税特殊性税务处理报告表业务表单</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence minOccurs="0" maxOccurs="unbounded">
+					<xs:element name="qyczGridlb" type="qyczbdxxVO">
+						<xs:annotation>
+							<xs:documentation>居民企业资产（股权）划转特殊性税务处理申报表_主表</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="qyczsdstsxswcbbgbVO">
+		<xs:annotation>
+			<xs:documentation>企业重组所得税特殊性税务处理报告表</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="nsrmc" type="nsrmc">
+				<xs:annotation>
+					<xs:documentation>纳税人名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="nsrsbh" type="nsrsbh">
+				<xs:annotation>
+					<xs:documentation>纳税人识别号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zcdz" type="zcdz">
+				<xs:annotation>
+					<xs:documentation>注册地址</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="cwfzrxm" type="cwfzrxm">
+				<xs:annotation>
+					<xs:documentation>财务负责人姓名</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zgswjgmc" type="zgswjgmc">
+				<xs:annotation>
+					<xs:documentation>主管税务机关名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zcdlxdh" type="zcdlxdh">
+				<xs:annotation>
+					<xs:documentation>注册地联系电话</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="czri" type="skssqq">
+				<xs:annotation>
+					<xs:documentation>重组日</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="czywksnd" type="skssqq">
+				<xs:annotation>
+					<xs:documentation>重组业务开始年度</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="czywwcnd" type="skssqq">
+				<xs:annotation>
+					<xs:documentation>重组业务完成年度</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="flxsgb" type="bz1">
+				<xs:annotation>
+					<xs:documentation>法律形式改变 码值为1</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zwcz" type="bz1">
+				<xs:annotation>
+					<xs:documentation>债务重组,债务人码值为2 债权人码值为3</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="gqsg" type="bz1">
+				<xs:annotation>
+					<xs:documentation>股权收购 收购方码值为4，转让方码值5，被收购企业码值6</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zcsg" type="bz1">
+				<xs:annotation>
+					<xs:documentation>资产收购 收购方码值为7，转让方码值为8</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="hb" type="bz1">
+				<xs:annotation>
+					<xs:documentation>合并 合并企业码值为9，被合并企业码值为10被合并企业股东11</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="fenl" type="bz1">
+				<xs:annotation>
+					<xs:documentation>分立 分立企业码值12 被分立企业码值13 被分立企业股东码值14</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="tsxswcltjsymd" type="bz1">
+				<xs:annotation>
+					<xs:documentation>具有合理的商业目的，且不以减少、免除或者推迟缴纳税款为主要目的。</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="tsxswcltjbsghbflbz" type="bl">
+				<xs:annotation>
+					<xs:documentation>被收购、合并或分立部分的资产或股权比例符合规定的比例</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="tsxswcltjbsghbflbzbl" type="bl">
+				<xs:annotation>
+					<xs:documentation>被收购、合并或分立部分的资产或股权比例符合规定的比例</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="tsxswcltjqyczhd" type="bz1">
+				<xs:annotation>
+					<xs:documentation>企业重组后的连续12个月内不改变重组资产原来的实质性经营</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="tsxswcltjczjydjbz" type="bz">
+				<xs:annotation>
+					<xs:documentation>重组交易对价中涉及股权支付金额符合规定</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="tsxswcltjczjydjbl" type="bl">
+				<xs:annotation>
+					<xs:documentation>重组交易对价中涉及股权支付金额符合规定比例</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="tsxswcltjgqzf" type="bz1">
+				<xs:annotation>
+					<xs:documentation>企业重组中取得股权支付的原主要股东，在重组后连续12个月内，不得转让所取得的股权。</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zgswjgslyj" type="nsrmc">
+				<xs:annotation>
+					<xs:documentation>主管税务机关受理意见</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qtxysmdshx" type="nsrmc">
+				<xs:annotation>
+					<xs:documentation>其他需要说明的事项</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="qyczbdxxVO">
+		<xs:annotation>
+			<xs:documentation>《企业重组所得税特殊性税务处理报告表》表单列表vo</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="qyczsdstsxswcbbgb" type="qyczsdstsxswcbbgbVO">
+				<xs:annotation>
+					<xs:documentation>企业重组所得税特殊性税务处理报告表</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zwcz" type="zwczbdVO">
+				<xs:annotation>
+					<xs:documentation>债务重组</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="gqsg" type="gqsgbdVO">
+				<xs:annotation>
+					<xs:documentation>股权收购</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zcsg" type="zcsgbdVO">
+				<xs:annotation>
+					<xs:documentation>资产收购</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qyhb" type="qyhbbdVO">
+				<xs:annotation>
+					<xs:documentation>企业合并</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qyfl" type="qyflbdVO">
+				<xs:annotation>
+					<xs:documentation>企业分立</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

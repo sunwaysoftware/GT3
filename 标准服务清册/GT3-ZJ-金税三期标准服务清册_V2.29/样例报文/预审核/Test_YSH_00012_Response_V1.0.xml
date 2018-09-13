@@ -1,0 +1,54 @@
+<service xmlns="http://www.chinatax.gov.cn/spec/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<head>
+		<tran_id>SWZJ.HXZG.YSH.QUERYSXBLZT</tran_id>
+		<channel_id>GDGS.NFWB.WSBST</channel_id>
+		<tran_seq>C000BNFZC15001201410141922067521</tran_seq>
+		<tran_date>20141014</tran_date>
+		<tran_time>192216003</tran_time>
+		<expand>
+			<name>identityType</name>
+			<value>3327006290056</value>
+		</expand>
+		<expand>
+			<name>sjry</name>
+			<value>14406820000</value>
+		</expand>
+		<expand>
+			<name>sjjg</name>
+			<value>14406820000</value>
+		</expand>
+	</head>
+	<body><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<taxML xsi:type="HXZGYSH00012Request" xmlbh="HXZGYSH00012Request" bbh="V1.1" xmlmc="查询事项办理状态" xsi:schemaLocation="http://www.chinatax.gov.cn/dataspec/ TaxMLBw_HXZG_YSH_00012_Request_V1.1.xsd" xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<wsspjgGrid>
+		<wsspjgGridlb>
+			<lcslid>655CF5E992B3367BC97D6BD4F377432B</lcslid>
+			<djxh>10124406020000000009</djxh>
+			<nsrsbh>440606999900000</nsrsbh>
+			<slswsxdm>SLSXA041011002</slswsxdm>
+			<lcswsxdm>LCSXA041011001</lcswsxdm>
+			<lcfqsj>2014-12-27 15:32:36</lcfqsj>
+			<spjg>0</spjg>
+			<spyjxx>延期吧或者暂缓吧</spyjxx>
+			<gwxh>023A4C6E17BA6AB3E053EE1712969D05</gwxh>
+			<dqgwjssj>2014-12-27 15:52:45</dqgwjssj>
+			<dqgwblsx>2014-12-28 15:52:40</dqgwblsx>
+			<sxdqzt>02</sxdqzt>
+			<sxblzt>02</sxblzt>
+			<sprq>2014-12-27</sprq>
+			<spswjg>24406060700</spswjg>
+		</wsspjgGridlb>
+	</wsspjgGrid>
+	<ysxxGrid>
+		<ysxxGridlb>
+			<qdywshlsh>24406060700141122120019600000000</qdywshlsh>
+			<shyj>1</shyj>
+			<lcslid>24406060700141122120019600000000</lcslid>
+		</ysxxGridlb>
+		<ysxxGridlb>
+			<qdywshlsh>24406060700141205331781500000000</qdywshlsh>
+			<shyj>0</shyj>
+			</ysxxGridlb>
+	</ysxxGrid>
+</taxML>]]></body>
+</service>

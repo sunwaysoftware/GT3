@@ -1,0 +1,302 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 被2012 () 使用XMLSpy v编辑的 (http://www.altova.com) by -->
+<!-- edited with XMLSpy v2010 rel. 3 (http://www.altova.com) by MESMERiZE (MSM) -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:complexType name="qyflbdVO">
+		<xs:annotation>
+			<xs:documentation>《企业重组所得税特殊性税务处理报告表(企业分立)》</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence minOccurs="0">
+					<xs:element name="qyflForm" type="qyflFormVO">
+						<xs:annotation>
+							<xs:documentation>企业重组所得税特殊性税务处理报告表(企业分立)_主表</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="bflqygdxxGrid">
+						<xs:annotation>
+							<xs:documentation>被分立企业股东信息</xs:documentation>
+						</xs:annotation>
+						<xs:complexType>
+							<xs:sequence minOccurs="0" maxOccurs="unbounded">
+								<xs:element name="bflqygdxxmx" type="bflqygdxxmxVO">
+									<xs:annotation>
+										<xs:documentation>被合并企业信息</xs:documentation>
+									</xs:annotation>
+								</xs:element>
+							</xs:sequence>
+						</xs:complexType>
+					</xs:element>
+					<xs:element name="flqyxxGrid">
+						<xs:annotation>
+							<xs:documentation>分立企业信息</xs:documentation>
+						</xs:annotation>
+						<xs:complexType>
+							<xs:sequence minOccurs="0" maxOccurs="unbounded">
+								<xs:element name="flqyxxmx" type="flqyxxmxVO">
+									<xs:annotation>
+										<xs:documentation>分立企业信息</xs:documentation>
+									</xs:annotation>
+								</xs:element>
+							</xs:sequence>
+						</xs:complexType>
+					</xs:element>
+					<xs:element name="bflqyxxzcqkGrid">
+						<xs:annotation>
+							<xs:documentation>被分立企业股东取得股权和其他资产情况</xs:documentation>
+						</xs:annotation>
+						<xs:complexType>
+							<xs:sequence minOccurs="0" maxOccurs="unbounded">
+								<xs:element name="bflqyxxzcqkmx" type="bflqyxxzcqkmxVO">
+									<xs:annotation>
+										<xs:documentation>被合并企业信息</xs:documentation>
+									</xs:annotation>
+								</xs:element>
+							</xs:sequence>
+						</xs:complexType>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="bflqyxxzcqkmxVO">
+		<xs:annotation>
+			<xs:documentation>被分立企业股东取得股权和其他资产情况</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="gdmc" type="gdmc" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>股东名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="xmmc" type="xmmc" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>项目名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="gyjz" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>公允价值||公允价值</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jsjc" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>计税基础</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="flqyxxmxVO">
+		<xs:annotation>
+			<xs:documentation>分立企业信息</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="nsrsbh" type="nsrsbh" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>纳税人识别号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="nsrmc" type="nsrmc" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>纳税人名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="swjgmc" type="swjgmc" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>税务机关名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jsjczc" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>资产-计税基础</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jsjcfz" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>负债-计税基础</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jsjcjzc" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>净负债-计税基础</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="gyjzzc" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>资产-公允价值</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="gyjzfz" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>负债-公允价值</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="gyjzjzc" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>净负债-公允价值</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="bflqygdxxmxVO">
+		<xs:annotation>
+			<xs:documentation>被分立企业股东信息</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="nsrsbh" type="nsrsbh" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>纳税人识别号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="nsrmc" type="nsrmc" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>纳税人名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="cgbl" type="bl" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>持股比例</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="gyjz" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>公允价值||公允价值</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yjsjc" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>原计税基础</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="swjgmc" type="swjgmc" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>税务机关名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="qyflFormVO">
+		<xs:annotation>
+			<xs:documentation>企业分立</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="sbqymc" type="nsrmc" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>申报企业名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bflqynssbh" type="nsrsbh" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>被分立企业纳税识别号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bflqysszgswjgqc" type="swjgmc" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>被分立企业所属主管税务机关（全称）</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bflqymc" type="nsrmc" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>被分立企业名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jsjczc" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>资产-计税基础</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jsjcfz" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>负债-计税基础</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jsjcjzc" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>净负债-计税基础</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="gyjzzc" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>资产-公允价值</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="gyjzfz" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>负债-公允价值</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="gyjzjzc" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>净负债-公允价值</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="fljydzfze" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>分立交易的支付总额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="gqzfezjyzedbl" type="bl" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>股权支付额占交易支付总额的比例%</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="gqzfegyjz" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>②股权支付额_公允价值</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="gqzfeyjsjc" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>②股权支付额_原计税基础</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="fgqzfegyjz" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>①非股权支付额_公允价值</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="fgqzfeyjsjc" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>①非股权支付额_原计税基础</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zczrsdhss" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>非股权支付对应的资产转让所得或损失</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bflqyflzcgyjz" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>被分立企业分立资产公允价值</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bflqyqbzcgyjz" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>被分立企业全部资产公允价值</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bflqywcgfdmbqxdkse" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>被分立企业未超过法定弥补期限的亏损额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="flqykmbdbflqyswmbdkse" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>分立企业可弥补的被分立企业尚未弥补的亏损额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="wqrdzcss" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>未确认的资产损失</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="fqqrdsr" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>分期确认的收入</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

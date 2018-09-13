@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 被2012 () 使用XMLSpy v编辑的 (http://www.altova.com) by -->
+<!-- edited with XMLSpy v2013 (http://www.altova.com) by  () -->
+<!-- 编辑使用 XMLSpy v2006 U (http://www.altova.com) 由 any (any) -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:include schemaLocation="TaxMLPublicDJType.xsd"/>
+	<xs:complexType name="HXZGDJ00147Request">
+		<xs:annotation>
+			<xs:documentation>财务会计制度备案Request</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="cwkjzdjhsrbabgsVO" type="savecwkjzdjhsrbabgsVO">
+						<xs:annotation>
+							<xs:documentation>财务会计制度及核算软件备案报告书VO</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="sjtsbz" type="bz">
+						<xs:annotation>
+							<xs:documentation>数据同步标志</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="savecwkjzdjhsrbabgsVO">
+		<xs:annotation>
+			<xs:documentation>财务会计制度及核算软件备案报告书VO</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="cwkjzdbauuid" type="cwkjzdbauuid">
+				<xs:annotation>
+					<xs:documentation>财务会计制度备案UUID</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="dzbzdsbgxmGrid">
+				<xs:annotation>
+					<xs:documentation>变更登记明细</xs:documentation>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:sequence minOccurs="0" maxOccurs="unbounded">
+						<xs:element name="dzbzdsbgxmGridlb" type="DJBgdjmxVO">
+							<xs:annotation>
+								<xs:documentation>变更登记明细列表</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="insertkjbbqkGrid">
+				<xs:annotation>
+					<xs:documentation>会计报表情况Grid</xs:documentation>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:sequence minOccurs="0" maxOccurs="unbounded">
+						<xs:element name="kjbbqkGridlb" type="DJCwkjzdbaKjbbmcVO">
+							<xs:annotation>
+								<xs:documentation>会计报表情况Grid列表</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="updatekjbbqkGrid">
+				<xs:annotation>
+					<xs:documentation>会计报表情况Grid</xs:documentation>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:sequence minOccurs="0" maxOccurs="unbounded">
+						<xs:element name="kjbbqkGridlb" type="DJCwkjzdbaKjbbmcVO">
+							<xs:annotation>
+								<xs:documentation>会计报表情况Grid列表</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="deletekjbbqkGrid">
+				<xs:annotation>
+					<xs:documentation>会计报表情况Grid</xs:documentation>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:sequence minOccurs="0" maxOccurs="unbounded">
+						<xs:element name="kjbbqkGridlb" type="DJCwkjzdbaKjbbmcVO">
+							<xs:annotation>
+								<xs:documentation>会计报表情况Grid列表</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="noStatuskjbbqkGrid">
+				<xs:annotation>
+					<xs:documentation>会计报表情况Grid</xs:documentation>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:sequence minOccurs="0" maxOccurs="unbounded">
+						<xs:element name="kjbbqkGridlb" type="DJCwkjzdbaKjbbmcVO">
+							<xs:annotation>
+								<xs:documentation>会计报表情况Grid列表</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="insertqtzlGrid">
+				<xs:annotation>
+					<xs:documentation>其他情况Grid</xs:documentation>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:sequence minOccurs="0" maxOccurs="unbounded">
+						<xs:element name="qtzlGridlb" type="DJCwkjzdbaQtzlqkVO">
+							<xs:annotation>
+								<xs:documentation>其他情况Grid列表</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="updateqtzlGrid">
+				<xs:annotation>
+					<xs:documentation>其他情况Grid</xs:documentation>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:sequence minOccurs="0" maxOccurs="unbounded">
+						<xs:element name="qtzlGridlb" type="DJCwkjzdbaQtzlqkVO">
+							<xs:annotation>
+								<xs:documentation>其他情况Grid列表</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="deleteqtzlGrid">
+				<xs:annotation>
+					<xs:documentation>其他情况Grid</xs:documentation>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:sequence minOccurs="0" maxOccurs="unbounded">
+						<xs:element name="qtzlGridlb" type="DJCwkjzdbaQtzlqkVO">
+							<xs:annotation>
+								<xs:documentation>其他情况Grid列表</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="noStatusqtzlGrid">
+				<xs:annotation>
+					<xs:documentation>其他情况Grid</xs:documentation>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:sequence minOccurs="0" maxOccurs="unbounded">
+						<xs:element name="qtzlGridlb" type="DJCwkjzdbaQtzlqkVO">
+							<xs:annotation>
+								<xs:documentation>其他情况Grid列表</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			
+			<xs:element name="cwkjzdjhsrjbabgsVO" type="DJCwkjzdjhsrjbabgsVO">
+				<xs:annotation>
+					<xs:documentation>财务会计制度备案报告书</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ysqywslxxbVO" type="DJYsqywslxxbVO">
+				<xs:annotation>
+					<xs:documentation>依申请受理信息</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="cwkjzdhsrjbaGrid">
+				<xs:complexType>
+					<xs:sequence minOccurs="0" maxOccurs="unbounded">
+						<xs:element name="cwkjzdhsrjbaGridlb" type="cwkjzdhsrjbaVO"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="cwkjzdhsrjbaVO">
+		<xs:annotation>
+			<xs:documentation>会计制度备案信息(主表)</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="cwkjzdbauuid" type="cwkjzdbauuid">
+				<xs:annotation>
+					<xs:documentation>财务会计制度备案UUID</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="djxh" type="djxh">
+				<xs:annotation>
+					<xs:documentation>登记序号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="kjzdzzDm" type="kjzdzzDm" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>会计制度（准则）代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yxqq" type="yxqq">
+				<xs:annotation>
+					<xs:documentation>有效期起</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yxqz" type="yxqz">
+				<xs:annotation>
+					<xs:documentation>有效期止</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zfbz1" type="zfbz1">
+				<xs:annotation>
+					<xs:documentation>作废标志</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

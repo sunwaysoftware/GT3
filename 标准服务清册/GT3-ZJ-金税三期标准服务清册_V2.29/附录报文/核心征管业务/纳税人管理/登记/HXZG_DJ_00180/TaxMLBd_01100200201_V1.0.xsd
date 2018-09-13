@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2013 (http://www.altova.com) by  () -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:include schemaLocation="TaxMLPublicDJType.xsd"/>
+	<xs:complexType name="bgcxkjskdjb">
+		<xs:annotation>
+			<xs:documentation>变更税务登记表提交</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="djxh" type="djxh">
+				<xs:annotation>
+					<xs:documentation>登记序号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="lcslid" type="lcslid">
+				<xs:annotation>
+					<xs:documentation>流程实例ID</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bgslxxvo" type="DJYsqywslxxbVO">
+				<xs:annotation>
+					<xs:documentation>受理信息</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bgbcdjmxGrid" type="bgbcdjmxGrid">
+				<xs:annotation>
+					<xs:documentation>变更明细</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bgbcDkdjdsdjskywqkGrid" type="bgbcDkdjdsdjskywqkGrid">
+				<xs:annotation>
+					<xs:documentation>代扣代缴代收代缴税款业务情况</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="bgbcdjmxGrid">
+		<xs:annotation>
+			<xs:documentation>变更明细</xs:documentation>
+		</xs:annotation>
+		<xs:sequence minOccurs="0" maxOccurs="unbounded">
+			<xs:element name="bgbcdjmxGridlb" type="DJBgdjmxVO">
+				<xs:annotation>
+					<xs:documentation>变更明细</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+		<xs:complexType name="bgbcDkdjdsdjskywqkGrid">
+		<xs:annotation>
+			<xs:documentation>代扣代缴代收代缴税款业务情况</xs:documentation>
+		</xs:annotation>
+		<xs:sequence minOccurs="0" maxOccurs="unbounded">
+			<xs:element name="bgbcDkdjdsdjskywqkGridlb" type="DJDkdjdsdjskywqkVO">
+				<xs:annotation>
+					<xs:documentation>代扣代缴代收代缴税款业务情况</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2013 (http://www.altova.com) by  () -->
+<!-- 被2012 () 使用XMLSpy v编辑的 (http://www.altova.com) by -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:include schemaLocation="TaxMLPublicSBType.xsd"/>
+	<xs:complexType name="HXZGSB10085Request">
+		<xs:annotation>
+			<xs:documentation>企业所得税年报错误更正初始化请求报文</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="nsrxxJhVO" type="SBNsrxxJhVO">
+						<xs:annotation>
+							<xs:documentation>查询条件vo</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="cxbz" type="bz1">
+						<xs:annotation>
+							<xs:documentation>查询标志（1：查基本信息表单信息和填报表单信息；2：查除1以外的表单信息；3：全部）</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="tbbStr" type="tbbdqk" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>填报表单字符串（cxbz为2时必选）</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+</xs:schema>

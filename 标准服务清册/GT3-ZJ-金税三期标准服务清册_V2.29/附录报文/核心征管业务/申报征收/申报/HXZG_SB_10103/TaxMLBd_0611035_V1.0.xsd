@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 被2012 () 使用XMLSpy v编辑的 (http://www.altova.com) by -->
+<!-- edited with XMLSpy v2013 (http://www.altova.com) by  () -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:complexType name="A201020Ywbd">
+		<xs:annotation>
+			<xs:documentation>固定资产加速折旧（扣除）优惠明细表(A201020)业务报文.</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="gdzcjszjkcMxbGrid">
+						<xs:annotation>
+							<xs:documentation>固定资产加速折旧(扣除)优惠明细表</xs:documentation>
+						</xs:annotation>
+						<xs:complexType>
+							<xs:sequence minOccurs="0" maxOccurs="unbounded">
+								<xs:element name="gdzcjszjkcmxbGridlb" type="gdzcjszjkcmxbVO"/>
+							</xs:sequence>
+						</xs:complexType>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="gdzcjszjkcmxbVO">
+		<xs:annotation>
+			<xs:documentation>固定资产加速折旧(扣除)优惠明细表</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="ewbhxh" type="ewbhxh" minOccurs="1">
+				<xs:annotation>
+					<xs:documentation>二维表行序号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="hmc" type="nsrmc" minOccurs="1">
+				<xs:annotation>
+					<xs:documentation>二维表行名称||二维表行名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zcyz" type="je" minOccurs="1">
+				<xs:annotation>
+					<xs:documentation>资产原值</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zzzjjeLj" type="je" minOccurs="1">
+				<xs:annotation>
+					<xs:documentation>本年累计折旧（扣除）金额 账载折旧金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="azssybgdjsdzjjeLj" type="je" minOccurs="1">
+				<xs:annotation>
+					<xs:documentation>本年累计折旧（扣除）金额 按照税收一般规定计算的折旧金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="xsjszjyhjsdzjjeLj" type="je" minOccurs="1">
+				<xs:annotation>
+					<xs:documentation>本年累计折旧（扣除）金额 享受加速折旧优惠计算的折旧金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="nstjjeLj" type="je" minOccurs="1">
+				<xs:annotation>
+					<xs:documentation>本年累计折旧（扣除）金额 纳税调减金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="xsjszjyhjeLj" type="je" minOccurs="1">
+				<xs:annotation>
+					<xs:documentation>本年累计折旧（扣除）金额 享受加速折旧优惠金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2010 rel. 3 (http://www.altova.com) by MESMERiZE (MSM) -->
+<!-- 被2011 rel. 2 sp1 (TeaM DJiNN) 使用XMLSpy vTeaM DJiNN编辑的 (http://www.altova.com) by -->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://www.chinatax.gov.cn/dataspec/" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:complexType name="HXZGSB01350Request">
+		<xs:annotation>
+			<xs:documentation>外部厂商申报比对请求报文</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="SBWbcsHqbdxxVO" type="SBWbcsHqbdxxVO" nillable="true">
+						<xs:annotation>
+							<xs:documentation>外部厂商申报比对调用VO</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="SBWbcsHqbdxxVO">
+		<xs:annotation>
+			<xs:documentation>外部厂商申报比对VO</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="kjqtfp_xse_3_1" type="je">
+				<xs:annotation>
+					<xs:documentation>开具其他发票_销售额--以此类推</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="kjqtfp_xse_3_2" type="je"/>
+			<xs:element name="kjqtfp_xse_3_3" type="je"/>
+			<xs:element name="kjqtfp_xse_3_4" type="je"/>
+			<xs:element name="kjqtfp_xse_3_4a" type="je"/>
+			<xs:element name="kjqtfp_xse_3_5" type="je"/>
+			<xs:element name="kjqtfp_xse_3_8" type="je"/>
+			<xs:element name="kjqtfp_xse_3_9" type="je"/>
+			<xs:element name="kjqtfp_xse_3_9b" type="je"/>
+			<xs:element name="kjqtfp_xse_3_10" type="je"/>
+			<xs:element name="kjqtfp_xse_3_11" type="je"/>
+			<xs:element name="kjqtfp_xse_3_12" type="je"/>
+			<xs:element name="kjqtfp_xse_3_13a" type="je"/>
+			<xs:element name="kjqtfp_xse_3_13b" type="je"/>
+			<xs:element name="kjqtfp_xse_3_13c" type="je"/>
+			<xs:element name="kjqtfp_xse_3_16" type="je"/>
+			<xs:element name="kjqtfp_xse_3_17" type="je"/>
+			<xs:element name="kjqtfp_xse_3_18" type="je"/>
+			<xs:element name="kjqtfp_xse_3_19" type="je"/>
+			<xs:element name="kjqtfp_xxynse_4_1" type="je">
+				<xs:annotation>
+					<xs:documentation>开具其他发票_销项应纳税额---以此类推</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="kjqtfp_xxynse_4_2" type="je"/>
+			<xs:element name="kjqtfp_xxynse_4_3" type="je"/>
+			<xs:element name="kjqtfp_xxynse_4_4" type="je"/>
+			<xs:element name="kjqtfp_xxynse_4_4a" type="je"/>
+			<xs:element name="kjqtfp_xxynse_4_5" type="je"/>
+			<xs:element name="kjqtfp_xxynse_4_8" type="je"/>
+			<xs:element name="kjqtfp_xxynse_4_9" type="je"/>
+			<xs:element name="kjqtfp_xxynse_4_9b" type="je"/>
+			<xs:element name="kjqtfp_xxynse_4_10" type="je"/>
+			<xs:element name="kjqtfp_xxynse_4_11" type="je"/>
+			<xs:element name="kjqtfp_xxynse_4_12" type="je"/>
+			<xs:element name="kjqtfp_xxynse_4_13a" type="je"/>
+			<xs:element name="kjqtfp_xxynse_4_13b" type="je"/>
+			<xs:element name="kjqtfp_xxynse_4_13c" type="je"/>
+			<xs:element name="kjskzzszyfp_xse_1_1" type="je">
+				<xs:annotation>
+					<xs:documentation>开具税款增值税发票_销售额--以此类推</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="kjskzzszyfp_xse_1_2" type="je"/>
+			<xs:element name="kjskzzszyfp_xse_1_3" type="je"/>
+			<xs:element name="kjskzzszyfp_xse_1_4" type="je"/>
+			<xs:element name="kjskzzszyfp_xse_1_4a" type="je"/>
+			<xs:element name="kjskzzszyfp_xse_1_5" type="je"/>
+			<xs:element name="kjskzzszyfp_xse_1_8" type="je"/>
+			<xs:element name="kjskzzszyfp_xse_1_9" type="je"/>
+			<xs:element name="kjskzzszyfp_xse_1_9b" type="je"/>
+			<xs:element name="kjskzzszyfp_xse_1_10" type="je"/>
+			<xs:element name="kjskzzszyfp_xse_1_11" type="je"/>
+			<xs:element name="kjskzzszyfp_xse_1_12" type="je"/>
+			<xs:element name="kjskzzszyfp_xse_1_13a" type="je"/>
+			<xs:element name="kjskzzszyfp_xse_1_13b" type="je"/>
+			<xs:element name="kjskzzszyfp_xse_1_13c" type="je"/>
+			<xs:element name="kjskzzszyfp_xse_1_18" type="je"/>
+			<xs:element name="kjskzzszyfp_xxynse_2_1" type="je">
+				<xs:annotation>
+					<xs:documentation>开具税款增值税发票_销项应纳税额 ----以此类推</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="kjskzzszyfp_xxynse_2_2" type="je"/>
+			<xs:element name="kjskzzszyfp_xxynse_2_3" type="je"/>
+			<xs:element name="kjskzzszyfp_xxynse_2_4" type="je"/>
+			<xs:element name="kjskzzszyfp_xxynse_2_4a" type="je"/>
+			<xs:element name="kjskzzszyfp_xxynse_2_5" type="je"/>
+			<xs:element name="kjskzzszyfp_xxynse_2_8" type="je"/>
+			<xs:element name="kjskzzszyfp_xxynse_2_9" type="je"/>
+			<xs:element name="kjskzzszyfp_xxynse_2_9b" type="je"/>
+			<xs:element name="kjskzzszyfp_xxynse_2_10" type="je"/>
+			<xs:element name="kjskzzszyfp_xxynse_2_11" type="je"/>
+			<xs:element name="kjskzzszyfp_xxynse_2_12" type="je"/>
+			<xs:element name="kjskzzszyfp_xxynse_2_13a" type="je"/>
+			<xs:element name="kjskzzszyfp_xxynse_2_13b" type="je"/>
+			<xs:element name="kjskzzszyfp_xxynse_2_13c" type="je"/>
+			<xs:element name="kjskzzszyfp_xxynse_2_18" type="je"/>
+			<xs:element name="je_2" type="je">
+				<xs:annotation>
+					<xs:documentation>金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="se_2" type="je">
+				<xs:annotation>
+					<xs:documentation>税额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="je_8" type="je">
+				<xs:annotation>
+					<xs:documentation>金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="se_20" type="je">
+				<xs:annotation>
+					<xs:documentation>税额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="je_3" type="je">
+				<xs:annotation>
+					<xs:documentation>金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="se_3" type="je">
+				<xs:annotation>
+					<xs:documentation>税额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="se_5" type="je"/>
+			<xs:element name="djxh" type="djxh"/>
+			<xs:element name="skssqq" type="skssqq"/>
+			<xs:element name="skssqz" type="skssqz"/>
+			<xs:element name="h11zb" type="je">
+				<xs:annotation>
+					<xs:documentation>行11左边</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sfbd" type="bz1">
+				<xs:annotation>
+					<xs:documentation>是否比对</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sfbc" type="bz1">
+				<xs:annotation>
+					<xs:documentation>是否保存</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qsfs" type="bz1">
+				<xs:annotation>
+					<xs:documentation>取数方式（Y:取报文，N,取比对结果，默认为Y）</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

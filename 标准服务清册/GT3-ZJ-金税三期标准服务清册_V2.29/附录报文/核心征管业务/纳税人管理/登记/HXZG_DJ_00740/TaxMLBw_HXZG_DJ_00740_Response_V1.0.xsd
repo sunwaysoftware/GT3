@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 被2012 () 使用XMLSpy v编辑的 (http://www.altova.com) by -->
+<!-- edited with XMLSpy v2013 (http://www.altova.com) by  () -->
+<!-- 编辑使用 XMLSpy v2006 U (http://www.altova.com) 由 any (any) -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:include schemaLocation="TaxMLPublicDJType.xsd"/>
+	<xs:complexType name="HXZGDJ00740Response">
+		<xs:annotation>
+			<xs:documentation>两证整合纳税人税务登记信息保存</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="dfjgdjxh" type="djxh">
+						<xs:annotation>
+							<xs:documentation>对方机关登记序号</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="dfqdzgswjgbz" type="bz1">
+						<xs:annotation>
+							<xs:documentation>对方机关启动主管税务机关标志</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="dfqdzgswksbz" type="bz1">
+						<xs:annotation>
+							<xs:documentation>对方机关启动科所标志</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="dfghfpbz" type="bz1">
+						<xs:annotation>
+							<xs:documentation>对方机关启动管户标志</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="dfqdsfzbz" type="bz1">
+						<xs:annotation>
+							<xs:documentation>对方机关启动税费种认定信息</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="dfqdfjmbz" type="bz1">
+						<xs:annotation>
+							<xs:documentation>对方机关启动非居民信息</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="dfjgdjcgBz" type="bz1">
+						<xs:annotation>
+							<xs:documentation>对方机关登记成功标志</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="qdzgswksbz" type="bz1">
+						<xs:annotation>
+							<xs:documentation>启动科所标志</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="ghfpbz" type="bz1">
+						<xs:annotation>
+							<xs:documentation>启动管户标志</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="qdsfzbz" type="bz1">
+						<xs:annotation>
+							<xs:documentation>启动税费种认定信息标志</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="qdfjmbz" type="bz1">
+						<xs:annotation>
+							<xs:documentation>启动非居民标志</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="fzchzxbz" type="bz">
+						<xs:annotation>
+							<xs:documentation>非正常户注销标志</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+</xs:schema>

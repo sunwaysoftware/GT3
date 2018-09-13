@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2013 (http://www.altova.com) by  () -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:include schemaLocation="TaxMLPublicRDType.xsd"/>
+	<xs:complexType name="HXZGRD00025Request">
+		<xs:annotation>
+			<xs:documentation>保存启动表信息和更新纳税人资格信息接入报文</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="yrdpzuuid" type="rdpzuuid">
+						<xs:annotation>
+							<xs:documentation>原认定凭证UUID</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="yfdqzgYxqz" type="yxqz">
+						<xs:annotation>
+							<xs:documentation>原辅导期资格有效期止</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="RDYbnsrfdqglsqbVO" type="RDYbnsrfdqglsqbVO">
+						<xs:annotation>
+							<xs:documentation>一般纳税人辅导期管理申请表</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+</xs:schema>

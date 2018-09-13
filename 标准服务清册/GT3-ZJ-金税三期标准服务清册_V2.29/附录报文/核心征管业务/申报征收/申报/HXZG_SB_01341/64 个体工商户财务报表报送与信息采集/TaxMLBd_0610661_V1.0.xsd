@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2010 rel. 3 (http://www.altova.com) by xiang (hbnu) -->
+<!-- 被2011 rel. 2 sp1 (TeaM DJiNN) 使用XMLSpy vTeaM DJiNN编辑的 (http://www.altova.com) by -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:include schemaLocation="TaxMLPublicType.xsd"/>
+	<xs:complexType name="sygtgshzcfzbVO">
+		<xs:annotation>
+			<xs:documentation>资产负债表（适用执行个体工商户会计制度的单位）</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="sygtgshnsrxxForm" type="NsrxxFormVO">
+				<xs:annotation>
+					<xs:documentation>纳税人基本信息</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sygtgshzcfzbGrid">
+				<xs:annotation>
+					<xs:documentation>资产负债表信息</xs:documentation>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:sequence maxOccurs="unbounded">
+						<xs:element name="sygtgshzcfzbGridlb" type="sygtgshzcfzbGridlbVO">
+							<xs:annotation>
+								<xs:documentation>资产负债表列表信息</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="sygtgshzcfzbGridlbVO">
+		<xs:annotation>
+			<xs:documentation>资产负债表信息列表（适用执行个体工商户会计制度的单位）</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="ewbhxh" type="ewbhxh" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>二维表行序号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zcxmmc" type="zcxmmc" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>资产</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zcje1" type="qmsZc" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>期末数_资产</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qyxmmc" type="qyxmmc" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>负债及所有者权益 </xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="fzqyje" type="qmsQy" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>期末数_权益 </xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

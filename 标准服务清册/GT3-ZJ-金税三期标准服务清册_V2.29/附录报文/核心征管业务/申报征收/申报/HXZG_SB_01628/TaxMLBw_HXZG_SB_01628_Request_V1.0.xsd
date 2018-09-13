@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 被2012 () 使用XMLSpy v编辑的 (http://www.altova.com) by -->
+<!-- edited with XMLSpy v2013 (http://www.altova.com) by  () -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxMLBd_0610679_V1.0.xsd"/>
+	<xs:include schemaLocation="TaxMLBd_0610680_V1.0.xsd"/>
+	<xs:complexType name="HXZGSB01628Request">
+		<xs:annotation>
+			<xs:documentation>通过税源明细更新底册信息</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="cjjzfcsmxbGrid" type="cjjzfcsmxbGrid">
+				<xs:annotation>
+					<xs:documentation>从价税源明细底册信息</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="czjzfcsmxbGrid" type="czjzfcsmxbGrid">
+				<xs:annotation>
+					<xs:documentation>从租税源明细底册信息</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

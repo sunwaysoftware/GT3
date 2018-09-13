@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 被2011 rel. 2 sp1 (TeaM DJiNN) 使用XMLSpy vTeaM DJiNN编辑的 (http://www.altova.com) by -->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://www.chinatax.gov.cn/dataspec/" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:complexType name="GswszmkjcxResponse">
+		<xs:annotation>
+			<xs:documentation>税完税证明开具记录查询响应报文</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="wszmkjlb" type="wszmkjMx" maxOccurs="unbounded">
+						<xs:annotation>
+							<xs:documentation>完税证明开具记录列表</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="wszmkjMx">
+		<xs:annotation>
+			<xs:documentation>完税证明开具记录列表明细</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+				<xs:element name="pzzgDm" type="pzzgDm">
+					<xs:annotation>
+						<xs:documentation>票证字轨代码(不能为空)</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element name="pzhm" type="pzhm">
+					<xs:annotation>
+						<xs:documentation>票证号码(不能为空)</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element name="tfrq" type="tfrq">
+					<xs:annotation>
+						<xs:documentation>填发日期(不能为空)</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element name="swjgDm" type="swjgDm">
+					<xs:annotation>
+						<xs:documentation>税务机关（不能为空)</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element name="lrrDm" type="lrrDm">
+					<xs:annotation>
+						<xs:documentation>填票人（不能为空)</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element name="nsrmc" type="nsrmc">
+					<xs:annotation>
+						<xs:documentation>纳税人姓名（不能为空)</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element name="nsrsbh" type="nsrsbh">
+					<xs:annotation>
+						<xs:documentation>纳税人识别号（不能为空)</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element name="sfzjlxDm" type="sfzjlxDm">
+					<xs:annotation>
+						<xs:documentation>身份证件类型（不能为空)</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element name="sfzjhm" type="sfzjhm">
+					<xs:annotation>
+						<xs:documentation>身份证件号码（不能为空)</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element name="jehj" type="jehj">
+					<xs:annotation>
+						<xs:documentation>金额合计（不能为空)</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

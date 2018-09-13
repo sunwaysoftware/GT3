@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 被2012 () 使用XMLSpy v编辑的 (http://www.altova.com) by -->
+<!-- edited with XMLSpy v2010 rel. 3 (http://www.altova.com) by MESMERiZE (MSM) -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:include schemaLocation="TaxMLBd_061001108_V1.0.xsd"/>
+	<xs:include schemaLocation="TaxMLBd_061001109_V1.0.xsd"/>
+	<xs:complexType name="tdzzsnssbywbw">
+		<xs:annotation>
+			<xs:documentation>《土地增值税纳税申报表（一）（从事房地产开发的纳税人适用）》业务报文</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="tdzzssbcsfdckfnsrsy" type="tdzzssbcsfdckfnsrsy">
+						<xs:annotation>
+							<xs:documentation>《土地增值税纳税申报表（一）（从事房地产开发的纳税人适用）》</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="tdzzsxmdjbcsfdckfnsrsy" type="tdzzsxmdjbcsfdckfnsrsy" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>《土地增值税项目登记表（从事房地产开发的纳税人适用）》</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+</xs:schema>

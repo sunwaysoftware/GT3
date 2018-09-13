@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2013 (http://www.altova.com) by  () -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:include schemaLocation="TaxMLPublicType.xsd"/>
+	<xs:include schemaLocation="TaxMLBd_0610058_V1.0.xsd"/>
+	<xs:include schemaLocation="TaxMLBd_0610037_V1.0.xsd"/>
+	<xs:include schemaLocation="TaxMLBd_0610011_V1.0.xsd"/>
+	<xs:include schemaLocation="TaxMLBd_0610101_V1.0.xsd"/>
+	<xs:complexType name="jmqyqsqysdssbywbw">
+		<xs:annotation>
+			<xs:documentation>《居民企业清算企业所得税申报》业务报文</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="qyqssdssbb" type="qyqssdssbb">
+						<xs:annotation>
+							<xs:documentation>《中华人民共和国企业清算所得税申报表》</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="zcczsymxb" type="zcczsymxb" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>《资产处置损益明细表》</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="fzqcsymxb" type="fzqcsymxb" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>《负债清偿损益明细表》</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="syccjshfpmxb" type="syccjshfpmxb" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>《剩余财产计算和分配明细表》</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+</xs:schema>

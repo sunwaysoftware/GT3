@@ -1,0 +1,335 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- 被2011 rel. 2 sp1 (TeaM DJiNN) 使用XMLSpy vTeaM DJiNN编辑的 (http://www.altova.com) by -->
+<!-- edited with XMLSpy v2010 rel. 3 (http://www.altova.com) by xuxin (csstj) -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:include schemaLocation="TaxMLPublicType.xsd"/>
+	<xs:complexType name="fjmqysdsjdnssbbsyyhdzsqy2015">
+		<xs:annotation>
+			<xs:documentation>非居民企业所得税季度纳税申报表（适用于核定征收企业）2015)</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="sbheadVO" type="sbbheadkz1VO">
+				<xs:annotation>
+					<xs:documentation>申报表表头信息</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="fjmqysdsjdnssbbsyyhdzsqy2015Grid" type="fjmqysdsjdnssbbsyyhdzsqy2015Grid" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>非居民企业所得税季度纳税申报表（适用于核定征收企业）按收入总额核定应纳税所得额明细信息</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="fjmqysdsjdnssbbsyyhdzsqyFrom" type="fjmqysdsjdnssbbsyyhdzsqy2015From" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>申报表单数据信息</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="fjmqysdsjdnssbbsyyhdzsqy2015Grid">
+		<xs:annotation>
+			<xs:documentation>非居民企业所得税季度纳税申报表（适用于核定征收企业）按收入总额核定应纳税所得额明细信息</xs:documentation>
+		</xs:annotation>
+		<xs:sequence maxOccurs="unbounded">
+			<xs:element name="fjmqysdsjdnssbbsyyhdzsqy2015Gridlb" type="fjmqysdsjdnssbbsyyhdzsqy2015Gridlb">
+				<xs:annotation>
+					<xs:documentation>非居民企业所得税季度纳税申报表（适用于核定征收企业）按收入总额核定应纳税所得额明细信息列表</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="fjmqysdsjdnssbbsyyhdzsqy2015From">
+		<xs:annotation>
+			<xs:documentation>非居民企业所得税季度纳税申报表（适用于核定征收企业）申报信息</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="yjdndsbbj" type="yjdndsbbj">
+				<xs:annotation>
+					<xs:documentation>月季度年度申报标记</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="hyhlx" type="hymc">
+				<xs:annotation>
+					<xs:documentation>行业或类型</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="xmmc" type="xmmc" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>项目名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="xmbh" type="xmbh" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>项目编号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sfxsxddy" type="bz" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>是否享受协定待遇</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sfxsxddykz" type="bz" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>是否享受协定待遇扩展</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ssxdDm" type="ssxdDm" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>税收协定代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="asrzehdsrze" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>按收入总额核定收入总额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="asrzehdynssdehj" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>按收入总额核定应纳税所得额合计</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ajfzchsjfzcze" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>按经费支出换算经费支出总额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ajfzchsgzxj" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>按经费支出换算工资薪金</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ajfzchsjj" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>按经费支出换算奖金</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ajfzchsjt" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>按经费支出换算津贴</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ajfzchsflf" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>按经费支出换算福利费</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ajfzchswpcgf" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>按经费支出换算物品采购费</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ajfzchszxf" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>按经费支出换算装修费</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ajfzchstxf" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>按经费支出换算通讯费</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ajfzchsclf" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>按经费支出换算差旅费</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ajfzchsfz" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>按经费支出换算房租</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ajfzchssbzlf" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>按经费支出换算设备租赁费</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ajfzchsjtf" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>按经费支出换算交通费</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ajfzchsywzdf" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>按经费支出换算业务招待费</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ajfzchsqtfy" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>按经费支出换算其他费用</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ajfzchshsdsre" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>按经费支出换算换算的收入额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ajfzchshdlrl" type="sl1" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>按经费支出换算核定的利润率</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ajfzchsynssde" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>按经费支出换算应纳税所得额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="acbfyhdcbfyze" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>按成本费用核定成本费用总额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="acbfyhdhsdsre" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>按成本费用核定换算的收入额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="acbfyhdhdlrl" type="sl1" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>按成本费用核定核定的利润率</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="acbfyhdynssde" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>按成本费用核定应纳税所得额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sl1" type="sl1">
+				<xs:annotation>
+					<xs:documentation>税率</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ynqysdse" type="ynqysdse" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>应纳企业所得税额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="gjysjmsdse" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>国际运输减免所得税额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yyjqysdse" type="yyjqysdse" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>已预缴企业所得税额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ybtqysdse" type="ybtqysdse" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>应补（退）企业所得税额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="mssr" type="mssr" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>免税收入</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="gzlxsr" type="gzlxsr" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>国债利息收入</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="cjmqyqdygjgcsdgxhl" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>从居民企业取得与该机构、场所有实际联系的股息、红利</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="fhtjdfylzzdsr" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>符合条件的非营利组织的收入</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qddfzfzqlxsdsr" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>取得的地方政府债券利息所得或收入</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qtjmxmmcjjmxzdm1" type="dm" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>其他减免项目名称及减免性质代码1</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qtjmxmljje1" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>其他减免项目名称及减免性质代码累计金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qtjmxmmcjjmxzdm2" type="dm" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>其他减免项目名称及减免性质代码2</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qtjmxmljje2" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>其他减免项目名称及减免性质代码累计金额2</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="swjgmc" type="zgswjg" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>主管税务机关||主管税务机关</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jbr" type="jbr" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>经办人</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jbrzyzjhm" type="jbrzyzjhm" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>经办人执业证件号码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="slr" type="slr" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>受理人姓名</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="dlsbrq" type="dlsbrq" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>代理申报日期</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="slrq" type="slrq" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>受理日期</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jmgdqszDm" type="jmgdqszDm" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>居民国（地区）数字代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="fjmqysdsjdnssbbsyyhdzsqy2015Gridlb">
+		<xs:annotation>
+			<xs:documentation>非居民企业企业所得税核定征收申报按收入总额核定应纳税所得额明细信息</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="xmmc" type="xmmc" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>项目名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="asrzehdsre" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>按收入总额核定收入额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="asrzehdhdlrl" type="lrl" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>按收入总额核定核定的利润率</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="asrzehdynssde" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>按收入总额核定应纳税所得额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="htzh" type="htzh" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>合同字号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

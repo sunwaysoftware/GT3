@@ -1,0 +1,108 @@
+<service xmlns="http://www.chinatax.gov.cn/spec/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<head>
+		<tran_id>SWZJ.HXZG.YSH.BCXXCJBSJ</tran_id>
+		<channel_id>TEST</channel_id>
+		<tran_seq>C100BNFZC25001201305030505267110</tran_seq>
+		<tran_date>20140826</tran_date>
+		<tran_time>173435849</tran_time>
+    <expand>
+      <name>sjry</name>
+      <value>14406820320</value>
+    </expand>
+    <expand>
+      <name>sjjg</name>
+      <value>14406823600</value>
+    </expand>	</head> 
+<body><![CDATA[<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<taxML xsi:type="" xmlbh="HXZGYSH00006Request" bbh="V1.1" xmlmc="渠道业务审核接入报文" xsi:schemaLocation="http://www.chinatax.gov.cn/dataspec/ TaxMLBw_HXZG_YSH_00006_Request_V1.1.xsd" xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<fileInfor>
+		<fileGrid>
+			<fileGridlb>
+				<filepath>2</filepath>
+				<filetype>2</filetype>
+				<filename>2</filename>
+				<fileindex>2</fileindex>
+			</fileGridlb>
+		</fileGrid>
+		<fileInforVO>
+			<fileSize>3</fileSize>
+			<recordNumber>3</recordNumber>
+			<nsrSwjgDm>3</nsrSwjgDm>
+		</fileInforVO>
+	</fileInfor>
+	<qdywshRequestVO>
+		<qxswjgDm>14406823600</qxswjgDm>
+		<djxh>10114406020000000001</djxh>
+		<lcswsxDm>LCSXA021017001</lcswsxDm>
+		<slswsxDm>SLSXA021017001</slswsxDm>
+		<dzbzdszlDm>BDA0210097</dzbzdszlDm>
+		<xtbm>C000BNFZC</xtbm>
+		<xzqhDm>440605</xzqhDm>
+		<nsrmc>服务贸易人</nsrmc>
+		<nsrsbh>440605123456789</nsrsbh>
+		<request>&lt;?xml version="1.0" encoding="UTF-8" standalone="yes"?&gt;
+&lt;taxML xsi:type="HXZGFP05199Request" bbh="String" xmlbh="String" xmlmc="String" xsi:schemaLocation="http://www.chinatax.gov.cn/dataspec/ TaxMLBw_HXZG_FP_05199_Request_V1.0.xsd" xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"&gt;
+	&lt;sfxzsj&gt;Y&lt;/sfxzsj&gt;
+	&lt;zwjduuid&gt;&lt;/zwjduuid&gt;
+	&lt;fpzwjdVO&gt;
+		&lt;sjgsdq&gt;14406823600&lt;/sjgsdq&gt;
+		&lt;jdswjgDm&gt;14406823600&lt;/jdswjgDm&gt;
+		&lt;sfzjlxDm&gt;101&lt;/sfzjlxDm&gt;
+		&lt;sqrxm&gt;xxxxxx&lt;/sqrxm&gt;
+		&lt;lxdh&gt;&lt;/lxdh&gt;
+		&lt;jdrDm&gt;14406820320&lt;/jdrDm&gt;
+		&lt;sqrq&gt;2014-11-08&lt;/sqrq&gt;
+		&lt;lrrDm&gt;14406820320&lt;/lrrDm&gt;
+		&lt;slswjgDm&gt;14406823600&lt;/slswjgDm&gt;
+		&lt;xgrDm&gt;14406820320&lt;/xgrDm&gt;
+		&lt;jdrq1&gt;2014-11-11&lt;/jdrq1&gt;
+		&lt;slrq&gt;2014-11-08&lt;/slrq&gt;
+		&lt;slrDm&gt;14406820320&lt;/slrDm&gt;
+		&lt;sfzjhm&gt;asdfsaf&lt;/sfzjhm&gt;
+	&lt;/fpzwjdVO&gt;
+	&lt;addVOList&gt;
+		&lt;addVOListlb&gt;
+			&lt;sjgsdq&gt;14406823600&lt;/sjgsdq&gt;
+			&lt;djxh&gt;10114406020000000001&lt;/djxh&gt;
+			&lt;fphm&gt;77000001&lt;/fphm&gt;
+			&lt;fpzlDm&gt;1730&lt;/fpzlDm&gt;
+			&lt;zwjdcljgDm&gt;2&lt;/zwjdcljgDm&gt;
+			&lt;kpje&gt;1000&lt;/kpje&gt;
+			&lt;fplyfnsrmc&gt;测试即征即退审批&lt;/fplyfnsrmc&gt;
+			&lt;fpjdjgDm&gt;10&lt;/fpjdjgDm&gt;
+			&lt;sfytk&gt;Y&lt;/sfytk&gt;
+			&lt;fpmmskm&gt;123&lt;/fpmmskm&gt;
+			&lt;fpkjfnsrsbh&gt;440605998898980&lt;/fpkjfnsrsbh&gt;
+			&lt;kprq&gt;2014-11-15&lt;/kprq&gt;
+			&lt;fpDm&gt;1400133730&lt;/fpDm&gt;
+			&lt;lrrDm&gt;14406820320&lt;/lrrDm&gt;
+			&lt;fpkjfnsrmc&gt;测试即征即退审批&lt;/fpkjfnsrmc&gt;
+			&lt;xgrDm&gt;14406820320&lt;/xgrDm&gt;
+			&lt;fplyfnsrsbh&gt;440605998898980&lt;/fplyfnsrsbh&gt;
+			&lt;jdrq1&gt;&lt;/jdrq1&gt;
+		&lt;/addVOListlb&gt;
+	&lt;/addVOList&gt;
+	&lt;updateVOList&gt;
+	&lt;/updateVOList&gt;
+	&lt;delVOList&gt;
+	&lt;/delVOList&gt;
+&lt;/taxML&gt;
+</request>
+		<procStartOrgID>14406823600</procStartOrgID>
+		<userList>
+<userListlb>
+				<swryDm></swryDm>
+				<swryxm></swryxm>
+				<jgDm>14406823600</jgDm>
+				<jgmc>佛山市南海区国家税务局西樵税务分局</jgmc>
+				<gwDm>144000000249</gwDm>
+				<gwmc></gwmc>
+				<swrysfDm></swrysfDm>
+				<gwxh></gwxh>
+			</userListlb>
+</userList>
+		<procStartPerformer>14406823041</procStartPerformer>
+	</qdywshRequestVO>
+</taxML>
+]]></body>
+</service>

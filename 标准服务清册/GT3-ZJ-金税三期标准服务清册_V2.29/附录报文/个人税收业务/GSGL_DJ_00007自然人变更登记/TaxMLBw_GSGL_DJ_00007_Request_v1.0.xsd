@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2010 rel. 3 (http://www.altova.com) by MESMERiZE (MSM) -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:complexType name="zrrbgdjRequest">
+		<xs:annotation>
+			<xs:documentation>自然人变更登记请求报文</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="zrrbgxx" type="zrrbgxx">
+						<xs:annotation>
+							<xs:documentation>自然人变更信息</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="zrrbgxx">
+		<xs:annotation>
+			<xs:documentation>自然人信息</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="djxh" type="djxh">
+				<xs:annotation>
+					<xs:documentation>登记序号(必录)</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bghsfzjlxDm" type="sfzjlxDm" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>变更后身份证件类型</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bghsfzjhm" type="sfzjhm" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>变更后身份证件号码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bghxm" type="xm" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>变更后姓名</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bghgjDm" type="gjhdqszDm" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>变更后国籍代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bghcsrq" type="csrq" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>变更后出生日期(yyyy-MM-dd)</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bghxb" type="xbDm" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>变更后性别</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="slrDm" type="slrDm">
+				<xs:annotation>
+					<xs:documentation>受理人(必录)</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="slswjgDm" type="slswjgDm">
+				<xs:annotation>
+					<xs:documentation>受理税务机关(必录)</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

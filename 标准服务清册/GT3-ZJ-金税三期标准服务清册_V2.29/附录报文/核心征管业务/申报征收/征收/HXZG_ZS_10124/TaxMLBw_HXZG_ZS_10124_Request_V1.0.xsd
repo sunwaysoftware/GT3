@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2011 (http://www.altova.com) by adwadwa (TeaM DJiNN) -->
+<!-- 被2011 rel. 2 sp1 (pjf) 使用XMLSpy vcss编辑的 (http://www.altova.com) by -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:complexType name="HXZGZS10124Request">
+		<xs:annotation>
+			<xs:documentation>查询税务收现和银行经收两种缴款书的缴款信息全集</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="djxh" type="djxh">
+						<xs:annotation>
+							<xs:documentation>登记序号</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="pzzlDm" type="pzzlDm">
+						<xs:annotation>
+							<xs:documentation>票证种类代码</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="pzzgDm" type="pzzgDm">
+						<xs:annotation>
+							<xs:documentation>票证字轨代码</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="pzhm" type="pzhm">
+						<xs:annotation>
+							<xs:documentation>票证号码</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+</xs:schema>

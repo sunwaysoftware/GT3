@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 被2012 () 使用XMLSpy v编辑的 (http://www.altova.com) by -->
+<!-- edited with XMLSpy v2013 (http://www.altova.com) by  () -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:complexType name="HXZGFXCL00956Response">
+		<xs:annotation>
+			<xs:documentation>税务行政赔偿信息查询信息业务报文</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="swxzpcxxGrid">
+						<xs:complexType>
+							<xs:sequence maxOccurs="unbounded">
+								<xs:element name="swxzpcxxGridlb" type="SwxzpcxxcxjgVO"/>
+							</xs:sequence>
+						</xs:complexType>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="SwxzpcxxcxjgVO">
+		<xs:annotation>
+			<xs:documentation>税务行政赔偿信息查询结果VO</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="ajbh" type="ajbh">
+				<xs:annotation>
+					<xs:documentation>案件编号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ajmc" type="ajmc">
+				<xs:annotation>
+					<xs:documentation>案件名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="dwdz" type="dwdz">
+				<xs:annotation>
+					<xs:documentation>单位地址</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="lxdh" type="lxdh">
+				<xs:annotation>
+					<xs:documentation>联系电话</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="YB" type="mryb">
+				<xs:annotation>
+					<xs:documentation>邮编</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="fddbr" type="fddbr">
+				<xs:annotation>
+					<xs:documentation>法定代表人</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zw" type="zw">
+				<xs:annotation>
+					<xs:documentation>职务</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="xm" type="xm">
+				<xs:annotation>
+					<xs:documentation>姓名</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="xb" type="xbDm">
+				<xs:annotation>
+					<xs:documentation>性别</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="nl" type="nl">
+				<xs:annotation>
+					<xs:documentation>年龄</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="mz" type="mz">
+				<xs:annotation>
+					<xs:documentation>民族</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="gzdw" type="gzdw">
+				<xs:annotation>
+					<xs:documentation>工作单位</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zw" type="zw">
+				<xs:annotation>
+					<xs:documentation>职务</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zs" type="zs">
+				<xs:annotation>
+					<xs:documentation>住所</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qqrsfzjhm" type="qqrsfzjhm">
+				<xs:annotation>
+					<xs:documentation>请求人身份证件号码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="wtdlrxm" type="wtdlrxm">
+				<xs:annotation>
+					<xs:documentation>委托代理人姓名</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="wtdlrxb" type="wtdlrxbDm">
+				<xs:annotation>
+					<xs:documentation>委托代理人性别</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="wtdlrzw" type="zw">
+				<xs:annotation>
+					<xs:documentation>委托代理人职务</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="wtdlrnl" type="nl">
+				<xs:annotation>
+					<xs:documentation>委托代理人年龄</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="wtdlrgzdw" type="wtdlrgzdwmc">
+				<xs:annotation>
+					<xs:documentation>委托代理人工作单位</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="wtdlrzs" type="zs">
+				<xs:annotation>
+					<xs:documentation>委托代理人住所</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="wtdlrsfzjhm" type="wtdlrsfzjhm">
+				<xs:annotation>
+					<xs:documentation>委托代理人身份证件号码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="pcsqdyjtxzxw" type="pcsqdyjtxzxwmc">
+				<xs:annotation>
+					<xs:documentation>赔偿申请对应具体行政行为</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="pcsqdyjtxzxwzcrq" type="pcsqdyjtxzxwzcrq">
+				<xs:annotation>
+					<xs:documentation>赔偿申请对应具体行政行为作出日期</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="pcsqfs" type="bcsqfsDm">
+				<xs:annotation>
+					<xs:documentation>赔偿申请方式</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="pcywjg" type="pcywjgDm">
+				<xs:annotation>
+					<xs:documentation>赔偿义务机关</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sqpcdssjg" type="ssyyjjg">
+				<xs:annotation>
+					<xs:documentation>申请赔偿的事实经过</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="pcqqdjtnr" type="pcqqdjtnr">
+				<xs:annotation>
+					<xs:documentation>赔偿请求的具体内容</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sqpcdlygj" type="sqpcdlygj">
+				<xs:annotation>
+					<xs:documentation>申请赔偿的理由根据</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sqrq" type="sqrq">
+				<xs:annotation>
+					<xs:documentation>申请日期</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sqr" type="sqr">
+				<xs:annotation>
+					<xs:documentation>申请人</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

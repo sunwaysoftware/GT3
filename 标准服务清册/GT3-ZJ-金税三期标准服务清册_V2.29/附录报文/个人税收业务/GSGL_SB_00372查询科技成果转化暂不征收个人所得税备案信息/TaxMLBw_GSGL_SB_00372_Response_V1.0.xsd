@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 被2012 (TeaM DJiNN) 使用XMLSpy vTeaM DJiNN编辑的 (http://www.altova.com) by -->
+<!-- edited with XMLSpy v2008 (http://www.altova.com) by TEAM ViRiLiTY (VRL) -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:complexType name="kjcgzhzbzsgrsdscxResponse">
+		<xs:annotation>
+			<xs:documentation>科技成果转化暂不征收个人所得税备案信息查询反馈报文</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="kjcgzhzbzsgrsdsGrid" type="kjcgzhzbzsgrsdsListGrid" maxOccurs="unbounded">
+						<xs:annotation>
+							<xs:documentation>科技成果转化暂不征收个人所得税备案信息列表</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="kjcgzhzbzsgrsdsListGrid">
+		<xs:annotation>
+			<xs:documentation>科技成果转化暂不征收个人所得税备案信息列表</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="jldwnsrdjxh" type="djxh">
+				<xs:annotation>
+					<xs:documentation>奖励单位登记序号（不可为空）</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jldwmc" type="jldwmc">
+				<xs:annotation>
+					<xs:documentation>奖励单位名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jldwnsrsbh" type="nsrsbh">
+				<xs:annotation>
+					<xs:documentation>奖励单位纳税人识别号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="dz" type="dz">
+				<xs:annotation>
+					<xs:documentation>地址</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="lxr" type="lxr">
+				<xs:annotation>
+					<xs:documentation>联系人（不可为空）</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="lxdh" type="lxdh">
+				<xs:annotation>
+					<xs:documentation>联系电话（不可为空）</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="babh" type="babh">
+				<xs:annotation>
+					<xs:documentation>备案编号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="barq" type="barq">
+				<xs:annotation>
+					<xs:documentation>备案日期</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bars" type="bars">
+				<xs:annotation>
+					<xs:documentation>备案人数</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jbr" type="jbr">
+				<xs:annotation>
+					<xs:documentation>经办人</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="blrq" type="blrq">
+				<xs:annotation>
+					<xs:documentation>办理日期（日期格式为yyyy-MM-dd；不能大于受理日期）</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="kjcgjlryjbqkMxGrid" type="kjcgjlryjbqkMxGrid" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>奖励人员基本情况明细</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="kjcgjbqkMxGrid" type="kjcgjbqkMxGrid" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>科技成果基本情况明细</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="kjcgjlryjbqkMxGrid">
+		<xs:annotation>
+			<xs:documentation>奖励人员基本情况明细</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="jldwnsrdjxh" type="djxh">
+				<xs:annotation>
+					<xs:documentation>奖励单位登记序号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="xm" type="xm">
+				<xs:annotation>
+					<xs:documentation>姓名(不可为空)</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sfzjlxDm" type="sfzjlxDm">
+				<xs:annotation>
+					<xs:documentation>身份证件类型(不可为空，码表为dm_gy_sfzjlx)</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sfzjhm" type="sfzjhm">
+				<xs:annotation>
+					<xs:documentation>身份证件号码(不可为空)</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zw" type="zw">
+				<xs:annotation>
+					<xs:documentation>职务</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="hjsj" type="slrq">
+				<xs:annotation>
+					<xs:documentation>获奖时间</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="gfsl" type="gfsl">
+				<xs:annotation>
+					<xs:documentation>股份数量(不能为空,大于等于0)</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="czbl" type="czbl">
+				<xs:annotation>
+					<xs:documentation>出资比例（%）(不能为空,大于等于0，小于等于100%)</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sjdwmc" type="sjdwmc">
+				<xs:annotation>
+					<xs:documentation>涉及单位名称(不可为空)</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="hjje" type="hjje">
+				<xs:annotation>
+					<xs:documentation>奖励金额(不能为空,大于等于0)</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="kjcgjbqkMxGrid">
+		<xs:annotation>
+			<xs:documentation>科技成果基本情况明细</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="kjcgmc" type="kjcgmc">
+				<xs:annotation>
+					<xs:documentation>科技成果名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jbqksm" type="jbqksm">
+				<xs:annotation>
+					<xs:documentation>基本情况说明</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:simpleType name="jscgmc">
+		<xs:annotation>
+			<xs:documentation>技术成果名称</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:maxLength value="20"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="kjcgmc">
+		<xs:annotation>
+			<xs:documentation>科技成果名称</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:maxLength value="200"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="jbqksm">
+		<xs:annotation>
+			<xs:documentation>基本情况说明</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:maxLength value="200"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="jbr">
+		<xs:annotation>
+			<xs:documentation>经办人</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:maxLength value="150"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="gfsl">
+		<xs:annotation>
+			<xs:documentation>股份数量</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:maxLength value="19"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="czbl">
+		<xs:annotation>
+			<xs:documentation>出资比例（%）</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:maxLength value="19"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="jldwmc">
+		<xs:annotation>
+			<xs:documentation>奖励单位名称</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:maxLength value="300"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="bars">
+		<xs:annotation>
+			<xs:documentation>备案人数</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:maxLength value="10"/>
+		</xs:restriction>
+	</xs:simpleType>
+</xs:schema>

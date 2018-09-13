@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 编辑使用 XMLSpy v2006 U (http://www.altova.com) 由 any (any) -->
+<!-- 编辑使用 XMLSpy v2006 U (http://www.altova.com) 由 any (any) -->
+<!-- 编辑使用 XMLSpy v2006 U (http://www.altova.com) 由 any (any) -->
+<!-- 编辑使用 XMLSpy v2006 U (http://www.altova.com) 由 any (any) -->
+<!-- 被2012 () 使用XMLSpy v编辑的 (http://www.altova.com) by -->
+<!-- edited with XMLSpy v2005 rel. 3 U (http://www.altova.com) by  () -->
+<!-- 编辑使用 XMLSpy v2006 U (http://www.altova.com) 由 any (any) -->
+<!-- 编辑使用 XMLSpy v2006 U (http://www.altova.com) 由 any (any) -->
+<!-- 编辑使用 XMLSpy v2006 U (http://www.altova.com) 由 any (any) -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxDoc.xsd"/>
+	<xs:include schemaLocation="TaxMLPublic.xsd"/>
+	<xs:include schemaLocation="TaxMLPublicFPType.xsd"/>
+	<xs:complexType name="HXZGFP10032Response">
+		<xs:annotation>
+			<xs:documentation>校检并提取代开申请信息初始化代开开具业务(通用机打)</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="swjgkfkcVOGrid">
+						<xs:annotation>
+							<xs:documentation>税务机关库房库存VO列表</xs:documentation>
+						</xs:annotation>
+						<xs:complexType>
+							<xs:sequence maxOccurs="unbounded">
+								<xs:element name="swjgkfkcVOGridlb" type="FPFpSwjgkfkcVO">
+									<xs:annotation>
+										<xs:documentation>税务机关库房库存VO</xs:documentation>
+									</xs:annotation>
+								</xs:element>
+							</xs:sequence>
+						</xs:complexType>
+					</xs:element>
+					<xs:element name="dksqVO" type="FPDkSqVO">
+						<xs:annotation>
+							<xs:documentation>代开申请VO</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="sfmxVOGrid">
+						<xs:annotation>
+							<xs:documentation>税费明细VO列表</xs:documentation>
+						</xs:annotation>
+						<xs:complexType>
+							<xs:sequence maxOccurs="unbounded">
+								<xs:element name="sfmxVOGridlb" type="FPDkSfmxVO">
+									<xs:annotation>
+										<xs:documentation>税费明细VO</xs:documentation>
+									</xs:annotation>
+								</xs:element>
+							</xs:sequence>
+						</xs:complexType>
+					</xs:element>
+					<xs:element name="ysyskmxVOGrid">
+						<xs:annotation>
+							<xs:documentation>已使用税款明细VO列表</xs:documentation>
+						</xs:annotation>
+						<xs:complexType>
+							<xs:sequence maxOccurs="unbounded">
+								<xs:element name="ysyskmxVOGridlb" type="FPDkYsyskmxVO">
+									<xs:annotation>
+										<xs:documentation>已使用税款明细VO</xs:documentation>
+									</xs:annotation>
+								</xs:element>
+							</xs:sequence>
+						</xs:complexType>
+					</xs:element>
+					<xs:element name="tyjdfpVO" type="FPDkTyjdfpVO">
+						<xs:annotation>
+							<xs:documentation>通用机打发票VO</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="tyjdhlmxVOGrid">
+						<xs:annotation>
+							<xs:documentation>通用机打发票货劳明细VO列表</xs:documentation>
+						</xs:annotation>
+						<xs:complexType>
+							<xs:sequence maxOccurs="unbounded">
+								<xs:element name="tyjdhlmxVOGridlb" type="FPDkTyjdfpHlmxVO">
+									<xs:annotation>
+										<xs:documentation>通用机打发票货劳明细VO</xs:documentation>
+									</xs:annotation>
+								</xs:element>
+							</xs:sequence>
+						</xs:complexType>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+</xs:schema>

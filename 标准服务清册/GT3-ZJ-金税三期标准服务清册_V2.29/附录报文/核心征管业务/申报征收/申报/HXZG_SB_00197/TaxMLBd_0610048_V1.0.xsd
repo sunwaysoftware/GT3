@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2010 rel. 3 (http://www.altova.com) by xuxin (csstj) -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:complexType name="nstzxmmxsbbywbw">
+		<xs:annotation>
+			<xs:documentation>《中华人民共和国企业所得税年度纳税申报表附表三纳税调整项目明细表》业务报文</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="nstzxmmxsbb">
+						<xs:annotation>
+							<xs:documentation>《中华人民共和国企业所得税年度纳税申报表附表三纳税调整项目明细表》</xs:documentation>
+						</xs:annotation>
+						<xs:complexType>
+							<xs:sequence>
+								<xs:element name="nstzxmmxsbbGrid">
+									<xs:annotation>
+										<xs:documentation>纳税调整项目明细表</xs:documentation>
+									</xs:annotation>
+									<xs:complexType>
+										<xs:sequence maxOccurs="unbounded">
+											<xs:element name="nstzxmmxsbbGridlb" type="nstzxmmxsbbGridlbVO">
+												<xs:annotation>
+													<xs:documentation>纳税调整项目明细表申报明细列表</xs:documentation>
+												</xs:annotation>
+											</xs:element>
+										</xs:sequence>
+									</xs:complexType>
+								</xs:element>
+							</xs:sequence>
+						</xs:complexType>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="nstzxmmxsbb">
+		<xs:annotation>
+			<xs:documentation>《中华人民共和国企业所得税年度纳税申报表附表三纳税调整项目明细表》</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="nstzxmmxsbbGrid">
+				<xs:annotation>
+					<xs:documentation>纳税调整项目明细表</xs:documentation>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:sequence maxOccurs="unbounded">
+						<xs:element name="nstzxmmxsbbGridlb" type="nstzxmmxsbbGridlbVO">
+							<xs:annotation>
+								<xs:documentation>纳税调整项目明细表申报明细列表</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="nstzxmmxsbbGrid">
+		<xs:annotation>
+			<xs:documentation>纳税调整项目明细表申报信息</xs:documentation>
+		</xs:annotation>
+		<xs:sequence maxOccurs="unbounded">
+			<xs:element name="nstzxmmxsbbGridlb" type="nstzxmmxsbbGridlbVO">
+				<xs:annotation>
+					<xs:documentation>纳税调整项目明细表申报明细列表</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="nstzxmmxsbbGridlbVO">
+		<xs:annotation>
+			<xs:documentation>纳税调整项目明细表明细列表</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="ewbhxh" type="ewbhxh">
+				<xs:annotation>
+					<xs:documentation>二维表行序号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="hmc" type="hmc">
+				<xs:annotation>
+					<xs:documentation>行名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zzje" type="zzje">
+				<xs:annotation>
+					<xs:documentation>账载金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ssje" type="ssje" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>税收金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="tzje1" type="tzje1">
+				<xs:annotation>
+					<xs:documentation>调增金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="tjje" type="tjje">
+				<xs:annotation>
+					<xs:documentation>调减金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

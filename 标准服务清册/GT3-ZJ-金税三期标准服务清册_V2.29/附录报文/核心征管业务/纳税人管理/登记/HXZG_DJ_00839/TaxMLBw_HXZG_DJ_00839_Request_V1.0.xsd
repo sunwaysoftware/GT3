@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 被2012 () 使用XMLSpy v编辑的 (http://www.altova.com) by -->
+<!-- edited with XMLSpy v2013 (http://www.altova.com) by  () -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:include schemaLocation="TaxMLPublicDJType.xsd"/>
+	<xs:complexType name="HXZGDJ00839Request">
+		<xs:annotation>
+			<xs:documentation>保存产排污系数采集信息请求报文</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="Hbscpwxscjxx" type="Hbscpwxscjxx">
+						<xs:annotation>
+							<xs:documentation>产排污系数采集表</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="Hbscpwxscjxx">
+		<xs:annotation>
+			<xs:documentation>产排污系数采集表</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="insertPwxsjcxxcjGrid" type="insertPwxsjcxxcjGrid">
+				<xs:annotation>
+					<xs:documentation>新增排污系数稽查信息采集</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="updatePwxsjcxxcjGrid" type="updatePwxsjcxxcjGrid">
+				<xs:annotation>
+					<xs:documentation>修改排污系数稽查信息采集</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="deletePwxsjcxxcjGrid" type="deletePwxsjcxxcjGrid">
+				<xs:annotation>
+					<xs:documentation>删除排污系数稽查信息采集</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="insertPwxsjcxxcjGrid">
+		<xs:annotation>
+			<xs:documentation>新增产排污系数基础信息采集信息集合</xs:documentation>
+		</xs:annotation>
+		<xs:sequence minOccurs="0" maxOccurs="unbounded">
+			<xs:element name="insertPwxsjcxxcjGridlb" type="DJPwxsjcxxcjVO">
+				<xs:annotation>
+					<xs:documentation>新增排污系数基础信息采集信息列表</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="updatePwxsjcxxcjGrid">
+		<xs:annotation>
+			<xs:documentation>修改产排污系数基础信息采集信息集合</xs:documentation>
+		</xs:annotation>
+		<xs:sequence minOccurs="0" maxOccurs="unbounded">
+			<xs:element name="updatePwxsjcxxcjGridlb" type="DJPwxsjcxxcjVO">
+				<xs:annotation>
+					<xs:documentation>修改排污系数基础信息采集信息列表</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="deletePwxsjcxxcjGrid">
+		<xs:annotation>
+			<xs:documentation>删除产排污系数基础信息采集信息集合</xs:documentation>
+		</xs:annotation>
+		<xs:sequence minOccurs="0" maxOccurs="unbounded">
+			<xs:element name="deletePwxsjcxxcjGridlb" type="DJPwxsjcxxcjVO">
+				<xs:annotation>
+					<xs:documentation>删除排污系数基础信息采集信息列表</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

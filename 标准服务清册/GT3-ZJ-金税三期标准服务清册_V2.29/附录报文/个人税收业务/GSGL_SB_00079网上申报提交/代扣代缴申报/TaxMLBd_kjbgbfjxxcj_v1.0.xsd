@@ -1,0 +1,565 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:complexType name="kjgrsdsbgbFjxxcjYwbw">
+		<xs:annotation>
+			<xs:documentation>扣缴个人所得税报告表附加信息采集业务报文</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="kjgrsdsbgbFjxx" type="kjgrsdsbgbFjxx"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="kjgrsdsbgbFjxx">
+		<xs:annotation>
+			<xs:documentation>扣缴个人所得税报告表表证单书</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="head" type="kjgrsdsbgbFjxxHead">
+				<xs:annotation>
+					<xs:documentation>扣缴个人所得税报告表附加信息表头</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="body" type="kjgrsdsbgbFjxxBody">
+				<xs:annotation>
+					<xs:documentation>扣缴个人所得税报告表附加信息表体</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="kjgrsdsbgbFjxxHead">
+		<xs:annotation>
+			<xs:documentation>扣缴个人所得税报告表附加信息表头，目前没有，预留</xs:documentation>
+		</xs:annotation>
+	</xs:complexType>
+	<xs:complexType name="kjgrsdsbgbFjxxBody">
+		<xs:annotation>
+			<xs:documentation>扣缴个人所得税报告表附加信息表体</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="kjgrsdsbgbFjxxLb" type="kjgrsdsbgbFjxxLb" minOccurs="1" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>扣缴个人所得税报告表附加信息列表</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="kjgrsdsbgbFjxxLb">
+		<xs:sequence>
+			<xs:element name="kjgrsdsbgbFjxxMx" type="kjgrsdsbgbFjxxMx" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="kjgrsdsbgbFjxxMx">
+		<xs:annotation>
+			<xs:documentation>扣缴个人所得税报告表附加信息明细</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="nsrxm" type="nsrmc">
+				<xs:annotation>
+					<xs:documentation>纳税人姓名，和扣缴个人所得税的同名字段对应，通过该字段来关联数据</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zzlxdm" type="sfzjlxDm">
+				<xs:annotation>
+					<xs:documentation>证照类型代码，和扣缴个人所得税的同名字段对应，通过该字段来关联数据</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zzhm" type="zzhm">
+				<xs:annotation>
+					<xs:documentation>证照号码，和扣缴个人所得税的同名字段对应，通过该字段来关联数据</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sdqjq" type="sdqjq">
+				<xs:annotation>
+					<xs:documentation>所得期间起，格式为yyyy-mm-dd，和扣缴个人所得税报告表中的对应，不能为空</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sdqjz" type="sdqjz">
+				<xs:annotation>
+					<xs:documentation>所得期间止，格式为yyyy-mm-dd，和扣缴个人所得税报告表中的对应，不能为空</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="gh" type="gh">
+				<xs:annotation>
+					<xs:documentation>工号，可以为空</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sygs" type="sygs">
+				<xs:annotation>
+					<xs:documentation>
+					适用公式；
+					来源于外籍人员正常工资薪金，外籍人员正常工资薪金时必填
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="skfdfsDm" type="skfdfsDm">
+				<xs:annotation>
+					<xs:documentation>
+					税款负担方式代码，01-自行负担；02-雇主全额负担；03-雇主比例负担；04-雇主定额负担；
+					必传，没有时传自行负担；
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="skfdfsmc" type="skfdfsmc">
+				<xs:annotation>
+					<xs:documentation>
+					必传，税款负担方式名称，没有时传自行负担；
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ygzyjcfyce" type="je">
+				<xs:annotation>
+					<xs:documentation>
+					月工资薪金所得与法定减除费用额差额，没有时传0；
+					来源于内退一次性补偿金
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yxkcdnj" type="je">
+				<xs:annotation>
+					<xs:documentation>
+					允许扣除的费用额的其中，允许扣除的年金，没有时传0；
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sqkcxmqtx" type="sqkcxmqtx">
+				<xs:annotation>
+					<xs:documentation>税前扣除项目其他项</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ftyfs" type="ftyfs">
+				<xs:annotation>
+					<xs:documentation>
+					分摊月份数；
+					来源于：内退一次性补偿金  提前退休一次性补贴 年金领取；
+					针对内退一次性补偿金,提前退休一次性补贴必传，其他的无需填写；
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sjgznx" type="sjgznx">
+				<xs:annotation>
+					<xs:documentation>
+					实际工作年限；
+					来源于：解除劳动合同一次性补偿金；
+					针对解除劳动合同一次性补偿金必传，其他的无需填写；
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sjjze" type="je">
+				<xs:annotation>
+					<xs:documentation>
+					实际捐赠额，没有时传0；
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yxlzdjzbl" type="bl">
+				<xs:annotation>
+					<xs:documentation>
+					允许列支的捐赠比例，没有时传0；
+					传递小数，比如50%，传0.5
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yjynssde" type="je">
+				<xs:annotation>
+					<xs:documentation>
+					月均应纳税所得额，没有时传0；
+					来源于：内退一次性补偿金 提前退休一次性补贴
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="njlq" type="njlq">
+				<xs:annotation>
+					<xs:documentation>年金领取</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="grgpqqxqsr" type="grgpqqxqsr">
+				<xs:annotation>
+					<xs:documentation>扣缴个人所得税个人股票期权行权收入</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="wjryzcgzxj" type="wjryzcgzxj">
+				<xs:annotation>
+					<xs:documentation>扣缴个人所得税外籍人员正常工资薪金</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bhbcljsre" type="je">
+				<xs:annotation>
+					<xs:documentation>
+					累计收入额（不含本次），没有时传0；保留2位小数，稿酬所得必传
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ljyinse" type="je">
+				<xs:annotation>
+					<xs:documentation>
+					累计已纳税额，保留2位小数
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sftgccyzpz" type="bz3">
+				<xs:annotation>
+					<xs:documentation>
+					是否提供财产原值凭证，1-是，0-否，财产拍卖所得及回流文物拍卖所得时必传
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="xnnsr" type="xnnsr">
+				<xs:annotation>
+					<xs:documentation>
+					虚拟纳税人，填写：上市公司股东组或农村信用社，利息股息红利所得汇总申报时使用
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sjjcgjj" type="je">
+				<xs:annotation>
+					<xs:documentation>
+					实际缴存公积金，保留2位小数，正常工资薪金、外籍人正常工资薪金、劳务报酬必填
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="grgpqqxqsr">
+		<xs:annotation>
+			<xs:documentation>扣缴个人所得税个人股票期权行权收入</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="qqxqlxDm" type="skfdfsDm">
+				<xs:annotation>
+					<xs:documentation>
+					期权行权类型代码；01-股票期权；02-股票增值权；03-限制性股票；
+					针对个人股票期权行权收入必传，其他的无需填写
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qqxqlxmc" type="skfdfsmc">
+				<xs:annotation>
+					<xs:documentation>
+					期权行权类型名称；针对个人股票期权行权收入必传，其他的无需填写；
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="xqrq" type="skssqq">
+				<xs:annotation>
+					<xs:documentation>
+					行权日，格式为yyyy-MM-dd；
+					针对个人股票期权行权收入类型股票期权/股票增值权必传，其他的无需填写；
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sqrq" type="skssqq">
+				<xs:annotation>
+					<xs:documentation>
+					施权日，格式为yyyy-MM-dd；
+					针对个人股票期权行权收入类型股票期权/股票增值权必传，其他的无需填写；
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="gpDm" type="gpDm">
+				<xs:annotation>
+					<xs:documentation>
+					股票代码；
+					针对个人股票期权行权收入类型股票期权/限制性股票必传，其他的无需填写；
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="gpmc" type="gpmc">
+				<xs:annotation>
+					<xs:documentation>
+					股票名称；
+					针对个人股票期权行权收入类型股票期权/限制性股票必传，其他的无需填写；
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="gplx" type="gpmc">
+				<xs:annotation>
+					<xs:documentation>
+					股票类型；
+					针对个人股票期权行权收入类型股票期权/限制性股票必传，其他的无需填写；
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="xqj" type="je">
+				<xs:annotation>
+					<xs:documentation>
+					行权价；保留四位小数
+					针对个人股票期权行权收入类型股票期权/股票增值权必传，其他的无需填写
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sqj" type="je">
+				<xs:annotation>
+					<xs:documentation>
+					施权价；保留四位小数
+					针对个人股票期权行权收入类型股票期权/股票增值权必传，其他的无需填写
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="gpsl" type="je">
+				<xs:annotation>
+					<xs:documentation>
+					股票数量；
+					针对个人股票期权行权收入类型股票期权/股票增值权必传，其他的无需填写
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="gpdjrgpsj" type="je">
+				<xs:annotation>
+					<xs:documentation>
+					股票登记日股票市价；保留四位小数
+					针对个人股票期权行权收入类型限制性股票必传，其他的无需填写；
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bpcjjgpdrsj" type="je">
+				<xs:annotation>
+					<xs:documentation>
+					本批次解禁股票当日市价；保留四位小数
+					针对个人股票期权行权收入类型限制性股票必传，其他的无需填写
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bpcjjgpfs" type="qtzjcllfs">
+				<xs:annotation>
+					<xs:documentation>
+					本批次解禁股票份数；保留四位小数
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bjldxhdxzxgpzfs" type="qtzjcllfs">
+				<xs:annotation>
+					<xs:documentation>
+					被激励对象获得的限制性股票总份数；针对个人股票期权行权收入类型限制性股票必传，其他的无需填写；
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bjldxsjzfzjze" type="je">
+				<xs:annotation>
+					<xs:documentation>
+					被激励对象实际支付的资金总额；针对个人股票期权行权收入类型限制性股票必传，其他的无需填写；
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qndljxqsr" type="je">
+				<xs:annotation>
+					<xs:documentation>
+					本年度累计行权收入（不含本次）；针对个人股票期权行权收入必传，其他的无需填写；
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="gdyfs" type="qtzjcllfs">
+				<xs:annotation>
+					<xs:documentation>
+					规定月份数；针对个人股票期权行权收入必传，其他的无需填写；
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bnljyinse" type="se">
+				<xs:annotation>
+					<xs:documentation>
+					本年累计已纳税额；针对个人股票期权行权收入领取必传，其他的无需填写；
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="wjryzcgzxj">
+		<xs:annotation>
+			<xs:documentation>扣缴个人所得税外籍人员正常工资薪金</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="zgjnsddyjngzts" type="sqycts">
+				<xs:annotation>
+					<xs:documentation>来源于中国境内所得-当月境内工作天数</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zgjnsdjngzzf" type="je">
+				<xs:annotation>
+					<xs:documentation>来源于中国境内所得-境内雇主支付</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zgjnsdjwgzzf" type="je">
+				<xs:annotation>
+					<xs:documentation>来源于中国境内所得-境外雇主支付</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zgjwsddyjngzts" type="sqycts">
+				<xs:annotation>
+					<xs:documentation>来源于中国境外所得-当月境外工作天数，没有时传0；</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zgjwsdjngzzf" type="je">
+				<xs:annotation>
+					<xs:documentation>来源于中国境外所得-境内雇主支付，没有时传0；</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zgjwsdjwgzzf" type="skje">
+				<xs:annotation>
+					<xs:documentation>来源于中国境外所得-境外雇主支付，没有时传0；</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="mssdzfbt" type="je">
+				<xs:annotation>
+					<xs:documentation>免税所得金额-住房补贴，没有时传0；</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="mssdhsbt" type="je">
+				<xs:annotation>
+					<xs:documentation>免税所得金额-伙食补贴，没有时传0；</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="mssdxyf" type="je">
+				<xs:annotation>
+					<xs:documentation>免税所得金额-洗衣费，没有时传0；</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="mssdbqf" type="je">
+				<xs:annotation>
+					<xs:documentation>免税所得金额-搬迁费，没有时传0；</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="mssdccbt" type="je">
+				<xs:annotation>
+					<xs:documentation>免税所得金额-出差补贴，没有时传0；</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="mssdtqf" type="je">
+				<xs:annotation>
+					<xs:documentation>免税所得金额-探亲费，没有时传0；</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="mssdyypxf" type="je">
+				<xs:annotation>
+					<xs:documentation>免税所得金额-语言培训费，没有时传0；</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="mssdznjyjf" type="je">
+				<xs:annotation>
+					<xs:documentation>免税所得金额-子女教育经费，没有时传0；</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="mssdqtfy" type="je">
+				<xs:annotation>
+					<xs:documentation>免税所得金额-其他费用，没有时传0；</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="njlq">
+		<xs:annotation>
+			<xs:documentation>年金领取</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="njlxDm" type="bz3">
+				<xs:annotation>
+					<xs:documentation>
+					年金类型；1-企业年金；2-职业年金；
+					针对年金领取必传，其他的无需填写；
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="njlxmc" type="njlxmc">
+				<xs:annotation>
+					<xs:documentation>
+					年金类型；1-企业年金；2-职业年金；
+					针对年金领取必传，其他的无需填写；
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ywsjfe" type="je">
+				<xs:annotation>
+					<xs:documentation>
+					已完税缴费额；
+					针对年金领取必传，其他的无需填写；
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qbjfe" type="je">
+				<xs:annotation>
+					<xs:documentation>
+					全部缴费额；
+					针对年金领取必传，其他的无需填写；
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sfycxlq" type="bz3">
+				<xs:annotation>
+					<xs:documentation>
+					是否一次性领取；1-是，0-否；
+					针对年金领取必传，其他的无需填写；
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="sqkcxmqtx">
+		<xs:annotation>
+			<xs:documentation>税前扣除项目其他项</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="qtfy" type="je">
+				<xs:annotation>
+					<xs:documentation>其他费用，没有时传0；</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="syjkbx" type="je">
+				<xs:annotation>
+					<xs:documentation>商业健康保险，没有时传0；</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="txf" type="je">
+				<xs:annotation>
+					<xs:documentation>通讯费，没有时传0；</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:simpleType name="njlxmc">
+		<xs:annotation>
+			<xs:documentation>年金类型名称</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:maxLength value="75"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="gh">
+		<xs:annotation>
+			<xs:documentation>工号</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:maxLength value="60"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="sygs">
+		<xs:annotation>
+			<xs:documentation>适用公式</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:maxLength value="300"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="ftyfs">
+		<xs:annotation>
+			<xs:documentation>月份数</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:int"/>
+	</xs:simpleType>
+	<xs:simpleType name="sjgznx">
+		<xs:annotation>
+			<xs:documentation>实际工作年限</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:double"/>
+	</xs:simpleType>
+	<xs:simpleType name="xnnsr">
+		<xs:annotation>
+			<xs:documentation>虚拟纳税人</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:maxLength value="150"/>
+		</xs:restriction>
+	</xs:simpleType>
+</xs:schema>

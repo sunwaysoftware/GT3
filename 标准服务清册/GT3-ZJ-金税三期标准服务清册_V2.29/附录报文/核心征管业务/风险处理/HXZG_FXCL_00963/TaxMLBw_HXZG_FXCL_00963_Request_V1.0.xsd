@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 被2012 () 使用XMLSpy v编辑的 (http://www.altova.com) by -->
+<!-- edited with XMLSpy v2013 (http://www.altova.com) by  () -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:complexType name="HXZGFXCL00963Request">
+		<xs:annotation>
+			<xs:documentation>个税管理文书送达调用接入报文</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="wssdqdxx" type="ZHWssdqdxxVO">
+						<xs:annotation>
+							<xs:documentation>文书送达启动信息</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="sdwsuuidGrid">
+						<xs:annotation>
+							<xs:documentation>待送达文书主键列表</xs:documentation>
+						</xs:annotation>
+						<xs:complexType>
+							<xs:sequence maxOccurs="unbounded">
+								<xs:element name="sdwsuuidGridlb" type="ZHSdwsuuidGridlbVO">
+									<xs:annotation>
+										<xs:documentation>待送达文书主键列表</xs:documentation>
+									</xs:annotation>
+								</xs:element>
+							</xs:sequence>
+						</xs:complexType>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="ZHWssdqdxxVO">
+		<xs:annotation>
+			<xs:documentation>文书送达启动信息</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="djxh" type="djxh">
+				<xs:annotation>
+					<xs:documentation>登记xuh</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="tsjgDm" type="swjgDm">
+				<xs:annotation>
+					<xs:documentation>推送机关代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="gwxh" type="gwxh" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>推送人的岗位序号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="tsryDm" type="swryDm">
+				<xs:annotation>
+					<xs:documentation>推送人员</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="swjgDm" type="swjgDm">
+				<xs:annotation>
+					<xs:documentation>税务机关代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="swryDm" type="swryDm">
+				<xs:annotation>
+					<xs:documentation>税务人员代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="ZHSdwsuuidGridlbVO">
+		<xs:annotation>
+			<xs:documentation>送达文书主键列表</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="sdwsuuid" type="sdwsuuid">
+				<xs:annotation>
+					<xs:documentation>送达文书主键</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

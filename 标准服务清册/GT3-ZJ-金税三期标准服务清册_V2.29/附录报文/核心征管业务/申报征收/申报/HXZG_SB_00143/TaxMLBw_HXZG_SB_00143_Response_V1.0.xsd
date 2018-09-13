@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2011 (http://www.altova.com) by aaa (aaa) -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:include schemaLocation="TaxMLPublicSBType.xsd"/>
+	<xs:complexType name="HXZGSB00143Response">
+		<xs:annotation>
+			<xs:documentation>延期申报期初数据返回报文</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="list">
+						<xs:annotation>
+							<xs:documentation>申报数据信息</xs:documentation>
+						</xs:annotation>
+						<xs:complexType>
+							<xs:sequence minOccurs="0" maxOccurs="unbounded">
+								<xs:element name="sbYqsbqxVO" type="SBYqsbqxVO"/>
+							</xs:sequence>
+						</xs:complexType>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="SBYqsbqxVO">
+		<xs:annotation>
+			<xs:documentation>延期申报申请税种VO</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="nsrsbh" type="nsrsbh">
+				<xs:annotation>
+					<xs:documentation>纳税人识别号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zxsmDm" type="zsxmDm">
+				<xs:annotation>
+					<xs:documentation>申请延期申报税种代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zspmDm" type="zspmDm">
+				<xs:annotation>
+					<xs:documentation>申请延期申报品目代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="skssqq" type="skssqq">
+				<xs:annotation>
+					<xs:documentation>税款所属期起</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="skssqz" type="skssqz">
+				<xs:annotation>
+					<xs:documentation>税款所属期止</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="gdsbqx" type="gdsbqx">
+				<xs:annotation>
+					<xs:documentation>申报期限</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="rdpzuuid" type="rdpzuuid">
+				<xs:annotation>
+					<xs:documentation>认定</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zfsbz" type="zfsbz">
+				<xs:annotation>
+					<xs:documentation>主附税标志</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="rdzsuuid" type="rdzsuuid">
+				<xs:annotation>
+					<xs:documentation>认定主税uuid</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="djxh" type="djxh">
+				<xs:annotation>
+					<xs:documentation>登记序号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="nsqxDm" type="nsqxDm">
+				<xs:annotation>
+					<xs:documentation>纳税期限代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jyzt" type="jyzt">
+				<xs:annotation>
+					<xs:documentation>校验状态</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sbqxDm" type="sbqxDm">
+				<xs:annotation>
+					<xs:documentation>申报期限代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zsdlfsDm" type="zsdlfsDm">
+				<xs:annotation>
+					<xs:documentation>征收代理方式代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="rdyxqq" type="rdyxqq">
+				<xs:annotation>
+					<xs:documentation>认定有效期起</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="rdyxqz" type="rdyxqz">
+				<xs:annotation>
+					<xs:documentation>认定有效期止</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

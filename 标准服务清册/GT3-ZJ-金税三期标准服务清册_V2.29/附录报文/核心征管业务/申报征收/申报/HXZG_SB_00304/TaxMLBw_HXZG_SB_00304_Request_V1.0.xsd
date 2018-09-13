@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2013 (http://www.altova.com) by  () -->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://www.chinatax.gov.cn/dataspec/" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:complexType name="HXZGSB00304Request">
+		<xs:annotation>
+			<xs:documentation>根据免税类别查询车辆购置税免税图册信息</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="SBCgsYhMstccxVO" type="SBCgsYhMstccxVO">
+						<xs:annotation>
+							<xs:documentation>车辆购置税免税图册</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="SBCgsYhMstccxVO">
+		<xs:annotation>
+			<xs:documentation>车辆购置税免税图册</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:annotation>
+				<xs:documentation>车辆购置税免税图册</xs:documentation>
+			</xs:annotation>
+			<xs:element name="mslbDm" type="mslbDm">
+				<xs:annotation>
+					<xs:documentation>免税类别代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="nh" type="nh">
+				<xs:annotation>
+					<xs:documentation>年号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="nnch" type="nnch">
+				<xs:annotation>
+					<xs:documentation>年内册号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="cnyh" type="cnyh">
+				<xs:annotation>
+					<xs:documentation>册内页号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="cp" type="cp">
+				<xs:annotation>
+					<xs:documentation>厂牌</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="xh3" type="xh3">
+				<xs:annotation>
+					<xs:documentation>型号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="msmxDm" type="msmxDm">
+				<xs:annotation>
+					<xs:documentation>免税明细代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="scqymc" type="scqymc">
+				<xs:annotation>
+					<xs:documentation>生产企业名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

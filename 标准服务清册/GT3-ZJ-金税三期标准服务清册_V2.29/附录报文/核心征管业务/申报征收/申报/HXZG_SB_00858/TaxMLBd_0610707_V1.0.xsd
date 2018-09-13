@@ -1,0 +1,520 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 被2011 rel. 2 sp1 (TeaM DJiNN) 使用XMLSpy vTeaM DJiNN编辑的 (http://www.altova.com) by -->
+<!-- edited with XMLSpy v2010 rel. 3 (http://www.altova.com) by liuwei (liuweicss) -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:include schemaLocation="TaxMLPublicType.xsd"/>
+	<xs:complexType name="qyzcnstzmxbForm">
+		<xs:annotation>
+			<xs:documentation>企业重组纳税调整明细表(A105100)业务报文</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="qyzcnstzMxbVO" type="qyzcnstzmxbVO" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>企业重组纳税调整明细表</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="qyzcnstzmxbVO">
+		<xs:annotation>
+			<xs:documentation>《企业重组纳税调整明细表》</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="zwczybzzje" type="je">
+				<xs:annotation>
+					<xs:documentation>债务重组一般账载金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qczwybzzje" type="je">
+				<xs:annotation>
+					<xs:documentation>以非货币性资产清偿债务一般账载金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zzgybzzje" type="je">
+				<xs:annotation>
+					<xs:documentation>债转股一般账载金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="gqsgybzzje" type="je">
+				<xs:annotation>
+					<xs:documentation>股权收购一般账载金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="kjczgqsgybzzje" type="je">
+				<xs:annotation>
+					<xs:documentation>涉及跨境重组的股权收购一般账载金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zcsgybzzje" type="je">
+				<xs:annotation>
+					<xs:documentation>资产收购一般账载金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="kjczzcsgybzzje" type="je">
+				<xs:annotation>
+					<xs:documentation>涉及跨境重组的资产收购一般账载金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qyhbybzzje" type="je">
+				<xs:annotation>
+					<xs:documentation>企业合并一般账载金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="tykzqyhbybzzje" type="je">
+				<xs:annotation>
+					<xs:documentation>同一控制下企业合并一般账载金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ftykzqyhbybzzje" type="je">
+				<xs:annotation>
+					<xs:documentation>非同一控制下企业合并一般账载金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qyflybzzje" type="je">
+				<xs:annotation>
+					<xs:documentation>企业分立一般账载金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qtybzzje" type="je">
+				<xs:annotation>
+					<xs:documentation>其他一般账载金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="dwtzybzzje" type="je">
+				<xs:annotation>
+					<xs:documentation>以非货币性资产对外投资一般账载金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="hjybzzje" type="je">
+				<xs:annotation>
+					<xs:documentation>合计一般账载金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zwczybssje" type="je">
+				<xs:annotation>
+					<xs:documentation>债务重组一般税收金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qczwybssje" type="je">
+				<xs:annotation>
+					<xs:documentation>以非货币性资产清偿债务一般税收金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zzgybssje" type="je">
+				<xs:annotation>
+					<xs:documentation>债转股一般税收金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="gqsgybssje" type="je">
+				<xs:annotation>
+					<xs:documentation>股权收购一般税收金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="kjczgqsgybssje" type="je">
+				<xs:annotation>
+					<xs:documentation>涉及跨境重组的股权收购一般税收金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zcsgybssje" type="je">
+				<xs:annotation>
+					<xs:documentation>资产收购一般税收金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="kjczzcsgybssje" type="je">
+				<xs:annotation>
+					<xs:documentation>涉及跨境重组的资产收购一般税收金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qyhbybssje" type="je">
+				<xs:annotation>
+					<xs:documentation>企业合并一般税收金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="tykzqyhbybssje" type="je">
+				<xs:annotation>
+					<xs:documentation>同一控制下企业合并一般税收金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ftykzqyhbybssje" type="je">
+				<xs:annotation>
+					<xs:documentation>非同一控制下企业合并一般税收金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qyflybssje" type="je">
+				<xs:annotation>
+					<xs:documentation>企业分立一般税收金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qtybssje" type="je">
+				<xs:annotation>
+					<xs:documentation>其他一般税收金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="dwtzybssje" type="je">
+				<xs:annotation>
+					<xs:documentation>以非货币性资产对外投资一般税收金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="hjybssje" type="je">
+				<xs:annotation>
+					<xs:documentation>合计一般税收金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zwczybnstzje" type="je">
+				<xs:annotation>
+					<xs:documentation>债务重组一般纳税调整金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qczwybnstzje" type="je">
+				<xs:annotation>
+					<xs:documentation>以非货币性资产清偿债务一般纳税调整金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zzgybnstzje" type="je">
+				<xs:annotation>
+					<xs:documentation>债转股一般纳税调整金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="gqsgybnstzje" type="je">
+				<xs:annotation>
+					<xs:documentation>股权收购一般纳税调整金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="kjczgqsgybnstzje" type="je">
+				<xs:annotation>
+					<xs:documentation>涉及跨境重组的股权收购一般纳税调整金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zcsgybnstzje" type="je">
+				<xs:annotation>
+					<xs:documentation>资产收购一般纳税调整金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="kjczzcsgybnstzje" type="je">
+				<xs:annotation>
+					<xs:documentation>涉及跨境重组的资产收购一般纳税调整金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qyhbybnstzje" type="je">
+				<xs:annotation>
+					<xs:documentation>企业合并一般纳税调整金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="tykzqyhbybnstzje" type="je">
+				<xs:annotation>
+					<xs:documentation>同一控制下企业合并一般纳税调整金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ftykzqyhbybnstzje" type="je">
+				<xs:annotation>
+					<xs:documentation>非同一控制下企业合并一般纳税调整金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qyflybnstzje" type="je">
+				<xs:annotation>
+					<xs:documentation>企业分立一般纳税调整金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qtybnstzje" type="je">
+				<xs:annotation>
+					<xs:documentation>其他一般纳税调整金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="dwtzybnstzje" type="je">
+				<xs:annotation>
+					<xs:documentation>以非货币性资产对外投资一般纳税调整金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="hjybnstzje" type="je">
+				<xs:annotation>
+					<xs:documentation>合计一般纳税调整金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zwcztszzje" type="je">
+				<xs:annotation>
+					<xs:documentation>债务重组特殊账载金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qczwtszzje" type="je">
+				<xs:annotation>
+					<xs:documentation>以非货币性资产清偿债务特殊账载金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zzgtszzje" type="je">
+				<xs:annotation>
+					<xs:documentation>债转股特殊账载金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="gqsgtszzje" type="je">
+				<xs:annotation>
+					<xs:documentation>股权收购特殊账载金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="kjczgqsgtszzje" type="je">
+				<xs:annotation>
+					<xs:documentation>涉及跨境重组的股权收购特殊账载金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zcsgtszzje" type="je">
+				<xs:annotation>
+					<xs:documentation>资产收购特殊账载金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="kjczzcsgtszzje" type="je">
+				<xs:annotation>
+					<xs:documentation>涉及跨境重组的资产收购特殊账载金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qyhbtszzje" type="je">
+				<xs:annotation>
+					<xs:documentation>企业合并特殊账载金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="tykzqyhbtszzje" type="je">
+				<xs:annotation>
+					<xs:documentation>同一控制下企业合并特殊账载金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ftykzqyhbtszzje" type="je">
+				<xs:annotation>
+					<xs:documentation>非同一控制下企业合并特殊账载金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qyfltszzje" type="je">
+				<xs:annotation>
+					<xs:documentation>企业分立特殊账载金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qttszzje" type="je">
+				<xs:annotation>
+					<xs:documentation>其他特殊账载金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="dwtztszzje" type="je">
+				<xs:annotation>
+					<xs:documentation>以非货币性资产对外投资特殊账载金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="hjtszzje" type="je">
+				<xs:annotation>
+					<xs:documentation>合计特殊账载金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zwcztsssje" type="je">
+				<xs:annotation>
+					<xs:documentation>债务重组特殊税收金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qczwtsssje" type="je">
+				<xs:annotation>
+					<xs:documentation>以非货币性资产清偿债务特殊税收金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zzgtsssje" type="je">
+				<xs:annotation>
+					<xs:documentation>债转股特殊税收金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="gqsgtsssje" type="je">
+				<xs:annotation>
+					<xs:documentation>股权收购特殊税收金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="kjczgqsgtsssje" type="je">
+				<xs:annotation>
+					<xs:documentation>涉及跨境重组的股权收购特殊税收金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zcsgtsssje" type="je">
+				<xs:annotation>
+					<xs:documentation>资产收购特殊税收金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="kjczzcsgtsssje" type="je">
+				<xs:annotation>
+					<xs:documentation>涉及跨境重组的资产收购特殊税收金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qyhbtsssje" type="je">
+				<xs:annotation>
+					<xs:documentation>企业合并特殊税收金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="tykzqyhbtsssje" type="je">
+				<xs:annotation>
+					<xs:documentation>同一控制下企业合并特殊税收金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ftykzqyhbtsssje" type="je">
+				<xs:annotation>
+					<xs:documentation>非同一控制下企业合并特殊税收金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qyfltsssje" type="je">
+				<xs:annotation>
+					<xs:documentation>企业分立特殊税收金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qttsssje" type="je">
+				<xs:annotation>
+					<xs:documentation>其他特殊税收金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="dwtztsssje" type="je">
+				<xs:annotation>
+					<xs:documentation>以非货币性资产对外投资特殊税收金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="hjtsssje" type="je">
+				<xs:annotation>
+					<xs:documentation>合计特殊税收金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zwcztsnstzje" type="je">
+				<xs:annotation>
+					<xs:documentation>债务重组特殊纳税调整金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qczwtsnstzje" type="je">
+				<xs:annotation>
+					<xs:documentation>以非货币性资产清偿债务特殊纳税调整金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zzgtsnstzje" type="je">
+				<xs:annotation>
+					<xs:documentation>债转股特殊纳税调整金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="gqsgtsnstzje" type="je">
+				<xs:annotation>
+					<xs:documentation>股权收购特殊纳税调整金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="kjczgqsgtsnstzje" type="je">
+				<xs:annotation>
+					<xs:documentation>涉及跨境重组的股权收购特殊纳税调整金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zcsgtsnstzje" type="je">
+				<xs:annotation>
+					<xs:documentation>资产收购特殊纳税调整金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="kjczzcsgtsnstzje" type="je">
+				<xs:annotation>
+					<xs:documentation>涉及跨境重组的资产收购特殊纳税调整金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qyhbtsnstzje" type="je">
+				<xs:annotation>
+					<xs:documentation>企业合并特殊纳税调整金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="tykzqyhbtsnstzje" type="je">
+				<xs:annotation>
+					<xs:documentation>同一控制下企业合并特殊纳税调整金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ftykzqyhbtsnstzje" type="je">
+				<xs:annotation>
+					<xs:documentation>非同一控制下企业合并特殊纳税调整金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qyfltsnstzje" type="je">
+				<xs:annotation>
+					<xs:documentation>企业分立特殊纳税调整金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qttsnstzje" type="je">
+				<xs:annotation>
+					<xs:documentation>其他特殊纳税调整金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="dwtztsnstzje" type="je">
+				<xs:annotation>
+					<xs:documentation>以非货币性资产对外投资特殊纳税调整金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="hjtsnstzje" type="je">
+				<xs:annotation>
+					<xs:documentation>合计特殊纳税调整金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zwcznstzje" type="je">
+				<xs:annotation>
+					<xs:documentation>债务重组纳税调整金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qczwnstzje" type="je">
+				<xs:annotation>
+					<xs:documentation>以非货币性资产清偿债务纳税调整金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zzgnstzje" type="je">
+				<xs:annotation>
+					<xs:documentation>债转股纳税调整金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="gqsgnstzje" type="je">
+				<xs:annotation>
+					<xs:documentation>股权收购纳税调整金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="kjczgqsgnstzje" type="je">
+				<xs:annotation>
+					<xs:documentation>涉及跨境重组的股权收购纳税调整金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zcsgnstzje" type="je">
+				<xs:annotation>
+					<xs:documentation>资产收购纳税调整金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="kjczzcsgnstzje" type="je">
+				<xs:annotation>
+					<xs:documentation>涉及跨境重组的资产收购纳税调整金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qyhbnstzje" type="je">
+				<xs:annotation>
+					<xs:documentation>企业合并纳税调整金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="tykzqyhbnstzje" type="je">
+				<xs:annotation>
+					<xs:documentation>同一控制下企业合并纳税调整金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ftykzqyhbnstzje" type="je">
+				<xs:annotation>
+					<xs:documentation>非同一控制下企业合并纳税调整金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qyflnstzje" type="je">
+				<xs:annotation>
+					<xs:documentation>企业分立纳税调整金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qtnstzje" type="je">
+				<xs:annotation>
+					<xs:documentation>其他纳税调整金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="dwtznstzje" type="je">
+				<xs:annotation>
+					<xs:documentation>以非货币性资产对外投资纳税调整金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="hjnstzje" type="je">
+				<xs:annotation>
+					<xs:documentation>合计纳税调整金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

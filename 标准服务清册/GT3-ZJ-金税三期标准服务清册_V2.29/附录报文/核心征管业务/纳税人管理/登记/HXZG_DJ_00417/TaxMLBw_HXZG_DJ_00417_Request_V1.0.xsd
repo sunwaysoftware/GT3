@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2013 (http://www.altova.com) by  () -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:include schemaLocation="TaxMLPublicDJType.xsd"/>
+	<xs:complexType name="HXZGDJ00417Request">
+		<xs:annotation>
+			<xs:documentation>保存注销房屋、土地、车船信息</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="zxfwtdccxxGrid" type="zxfwtdccxxGrid">
+						<xs:annotation>
+							<xs:documentation>注销房屋、土地、车船信息</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="djYsqywslxxbVO" type="DJYsqywslxxbVO">
+						<xs:annotation>
+							<xs:documentation>依申请业务受理信息</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="djxh" type="djxh">
+						<xs:annotation>
+							<xs:documentation>登记序号</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="lcslid" type="lcslid">
+						<xs:annotation>
+							<xs:documentation>流程实例ID</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="sjgsdq" type="sjgsdq">
+						<xs:annotation>
+							<xs:documentation>数据归属地区</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="zxfwtdccxxGrid">
+		<xs:annotation>
+			<xs:documentation>注销房屋、土地、车船信息列表</xs:documentation>
+		</xs:annotation>
+		<xs:sequence minOccurs="0" maxOccurs="unbounded">
+			<xs:element name="zxfwtdccxxGridlb" type="DJZxfwtdccxxVO">
+				<xs:annotation>
+					<xs:documentation>注销房屋、土地、车船信息</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="DJZxfwtdccxxVO">
+		<xs:annotation>
+			<xs:documentation>注销房屋土地车船信息</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="sylx" type="bz">
+				<xs:annotation>
+					<xs:documentation>受理类型：01（房屋），02（土地），03（车辆），04（船舶）</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="uuid" type="uuid">
+				<xs:annotation>
+					<xs:documentation>税源主键uuid</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sybh" type="sybh" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>税源编号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="clsbdh" type="clsbdh" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>车辆识别代号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="cbsbh" type="cbsbh" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>船舶识别号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jdxzDm" type="jdxzDm" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>街道乡镇代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zxly" type="zxly" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>注销理由</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ysccczfsDm" type="ysccczfsDm" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>应税财产处置方式代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="czrq" type="czrq" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>处置日期</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

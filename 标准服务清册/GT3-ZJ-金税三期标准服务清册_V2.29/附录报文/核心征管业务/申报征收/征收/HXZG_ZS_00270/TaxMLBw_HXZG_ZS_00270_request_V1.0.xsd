@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!-- 被2012 () 使用XMLSpy v编辑的 (http://www.altova.com) by -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:include schemaLocation="TaxMLPublicZSType.xsd"/>
+	<xs:complexType name="ZSHXZG00270RequestVO">
+		<xs:annotation>
+			<xs:documentation>《居民企业所得税核定申请》保存企业所得税核定终审（非居民）信息VO</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+		<xs:extension base="taxDoc">
+		<xs:sequence>
+			<xs:element name="jbxxFormVo" type="ZSfjmqysdshdYsqJbxxVo">
+				<xs:annotation>
+					<xs:documentation>基本信息区</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zsfsFormVo" type="ZSfjmqysdshdYsqZsfsVo">
+				<xs:annotation>
+					<xs:documentation>征收方式</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sqnrFormVo" type="ZSfjmqysdshdYsqSqnrVo">
+				<xs:annotation>
+					<xs:documentation>申请内容</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="lcslid" type="lcslid">
+				<xs:annotation>
+					<xs:documentation>流程实例id</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+	</xs:sequence>
+		</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+</xs:schema>

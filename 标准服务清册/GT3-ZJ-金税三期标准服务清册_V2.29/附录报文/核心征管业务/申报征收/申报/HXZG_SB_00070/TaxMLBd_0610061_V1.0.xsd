@@ -1,0 +1,448 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2013 (http://www.altova.com) by  () -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:include schemaLocation="TaxMLPublicType.xsd"/>
+	<xs:complexType name="lwsbbywbw">
+		<xs:annotation>
+			<xs:documentation>《中华人民共和国企业年度关联业务往来报告表表四劳务表》业务报文</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="lwsbb">
+						<xs:annotation>
+							<xs:documentation>《中华人民共和国企业年度关联业务往来报告表表四劳务表》</xs:documentation>
+						</xs:annotation>
+						<xs:complexType>
+							<xs:sequence>
+								<xs:element name="lwsbbFrom" type="lwsbbFrom">
+									<xs:annotation>
+										<xs:documentation>劳务表数据扩展信息</xs:documentation>
+									</xs:annotation>
+								</xs:element>
+								<xs:element name="lwsbblwsrjwglGrid">
+									<xs:annotation>
+										<xs:documentation>劳务表数据-劳务收入境外关联对应Grid</xs:documentation>
+									</xs:annotation>
+									<xs:complexType>
+										<xs:sequence maxOccurs="unbounded">
+											<xs:element name="lwsbblwsrjwglGridlb" type="lwsbblwsrjwglGridlbVO">
+												<xs:annotation>
+													<xs:documentation>劳务表数据-劳务收入境外关联列表</xs:documentation>
+												</xs:annotation>
+											</xs:element>
+										</xs:sequence>
+									</xs:complexType>
+								</xs:element>
+								<xs:element name="lwsbblwsrjwfglGrid">
+									<xs:annotation>
+										<xs:documentation>劳务表数据-劳务收入境外非关联对应Grid</xs:documentation>
+									</xs:annotation>
+									<xs:complexType>
+										<xs:sequence maxOccurs="unbounded">
+											<xs:element name="lwsbblwsrjwfglGridlb" type="lwsbblwsrjwfglGridlbVO">
+												<xs:annotation>
+													<xs:documentation>劳务表数据-劳务收入境外非关联列表</xs:documentation>
+												</xs:annotation>
+											</xs:element>
+										</xs:sequence>
+									</xs:complexType>
+								</xs:element>
+								<xs:element name="lwsbblwzcjwglGrid">
+									<xs:annotation>
+										<xs:documentation>劳务表数据-劳务支出境外关联对应Grid</xs:documentation>
+									</xs:annotation>
+									<xs:complexType>
+										<xs:sequence maxOccurs="unbounded">
+											<xs:element name="lwsbblwzcjwglGridlb" type="lwsbblwzcjwglGridlbVO">
+												<xs:annotation>
+													<xs:documentation>劳务表数据-劳务支出境外关联列表</xs:documentation>
+												</xs:annotation>
+											</xs:element>
+										</xs:sequence>
+									</xs:complexType>
+								</xs:element>
+								<xs:element name="lwsbblwzcjwfglGrid">
+									<xs:annotation>
+										<xs:documentation>劳务表数据-劳务支出境外非关联对应Grid</xs:documentation>
+									</xs:annotation>
+									<xs:complexType>
+										<xs:sequence maxOccurs="unbounded">
+											<xs:element name="lwsbblwzcjwfglGridlb" type="lwsbblwzcjwfglGridlbVO">
+												<xs:annotation>
+													<xs:documentation>劳务表数据-劳务支出境外非关联列表</xs:documentation>
+												</xs:annotation>
+											</xs:element>
+										</xs:sequence>
+									</xs:complexType>
+								</xs:element>
+							</xs:sequence>
+						</xs:complexType>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="lwsbb">
+		<xs:annotation>
+			<xs:documentation>《中华人民共和国企业年度关联业务往来报告表表四劳务表》</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="lwsbbFrom" type="lwsbbFrom">
+				<xs:annotation>
+					<xs:documentation>劳务表数据扩展信息</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="lwsbblwsrjwglGrid">
+				<xs:annotation>
+					<xs:documentation>劳务表数据-劳务收入境外关联对应Grid</xs:documentation>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:sequence maxOccurs="unbounded">
+						<xs:element name="lwsbblwsrjwglGridlb" type="lwsbblwsrjwglGridlbVO">
+							<xs:annotation>
+								<xs:documentation>劳务表数据-劳务收入境外关联列表</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="lwsbblwsrjwfglGrid">
+				<xs:annotation>
+					<xs:documentation>劳务表数据-劳务收入境外非关联对应Grid</xs:documentation>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:sequence maxOccurs="unbounded">
+						<xs:element name="lwsbblwsrjwfglGridlb" type="lwsbblwsrjwfglGridlbVO">
+							<xs:annotation>
+								<xs:documentation>劳务表数据-劳务收入境外非关联列表</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="lwsbblwzcjwglGrid">
+				<xs:annotation>
+					<xs:documentation>劳务表数据-劳务支出境外关联对应Grid</xs:documentation>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:sequence maxOccurs="unbounded">
+						<xs:element name="lwsbblwzcjwglGridlb" type="lwsbblwzcjwglGridlbVO">
+							<xs:annotation>
+								<xs:documentation>劳务表数据-劳务支出境外关联列表</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="lwsbblwzcjwfglGrid">
+				<xs:annotation>
+					<xs:documentation>劳务表数据-劳务支出境外非关联对应Grid</xs:documentation>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:sequence maxOccurs="unbounded">
+						<xs:element name="lwsbblwzcjwfglGridlb" type="lwsbblwzcjwfglGridlbVO">
+							<xs:annotation>
+								<xs:documentation>劳务表数据-劳务支出境外非关联列表</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="lwsbblwsrjwglGrid">
+		<xs:annotation>
+			<xs:documentation>劳务表数据-劳务收入境外关联对应Grid</xs:documentation>
+		</xs:annotation>
+		<xs:sequence maxOccurs="unbounded">
+			<xs:element name="lwsbblwsrjwglGridlb" type="lwsbblwsrjwglGridlbVO">
+				<xs:annotation>
+					<xs:documentation>劳务表数据-劳务收入境外关联列表</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="lwsbblwsrjwglGridlbVO">
+		<xs:annotation>
+			<xs:documentation>劳务表数据-劳务收入境外关联对应明细</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="sfjwglf" type="sfjwglf" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>是否境外关联方"Y"/"N"</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="dxlx" type="dxlx" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>对象类型境外(2支出)/境内(1收入)</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="dxmc" type="dxmc" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>境外/境内关联方名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="gjhdq" type="gjhdq" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>国家或地区</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jyje" type="jyje" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>交易金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="djff" type="djff" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>定价方法</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bz" type="bz" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>备注</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="lwsbblwsrjwfglGrid">
+		<xs:annotation>
+			<xs:documentation>劳务表数据-劳务收入境外非关联对应Grid</xs:documentation>
+		</xs:annotation>
+		<xs:sequence maxOccurs="unbounded">
+			<xs:element name="lwsbblwsrjwfglGridlb" type="lwsbblwsrjwfglGridlbVO">
+				<xs:annotation>
+					<xs:documentation>劳务表数据-劳务收入境外非关联列表</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="lwsbblwsrjwfglGridlbVO">
+		<xs:annotation>
+			<xs:documentation>劳务表数据-劳务收入境外非关联对应明细</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="sfjwglf" type="sfjwglf" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>是否境外关联方"Y"/"N"</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="dxlx" type="dxlx" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>对象类型境外(2支出)/境内(1收入)</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="dxmc" type="dxmc" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>境外/境内关联方名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="gjhdq" type="gjhdq" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>国家或地区</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jyje" type="jyje" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>交易金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="djff" type="djff" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>定价方法</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bz" type="bz" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>备注</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="lwsbblwzcjwglGrid">
+		<xs:annotation>
+			<xs:documentation>劳务表数据-劳务支出境外关联对应Grid</xs:documentation>
+		</xs:annotation>
+		<xs:sequence maxOccurs="unbounded">
+			<xs:element name="lwsbblwzcjwglGridlb" type="lwsbblwzcjwglGridlbVO">
+				<xs:annotation>
+					<xs:documentation>劳务表数据-劳务支出境外关联列表</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="lwsbblwzcjwglGridlbVO">
+		<xs:annotation>
+			<xs:documentation>劳务表数据-劳务支出境外关联对应明细</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="sfjwglf" type="sfjwglf" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>是否境外关联方"Y"/"N"</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="dxlx" type="dxlx" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>对象类型境外(2支出)/境内(1收入)</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="dxmc" type="dxmc" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>境外/境内关联方名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="gjhdq" type="gjhdq" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>国家或地区</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jyje" type="jyje" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>交易金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="djff" type="djff" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>定价方法</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bz" type="bz" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>备注</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="lwsbblwzcjwfglGrid">
+		<xs:annotation>
+			<xs:documentation>劳务表数据-劳务支出境外非关联对应Grid</xs:documentation>
+		</xs:annotation>
+		<xs:sequence maxOccurs="unbounded">
+			<xs:element name="lwsbblwzcjwfglGridlb" type="lwsbblwzcjwfglGridlbVO">
+				<xs:annotation>
+					<xs:documentation>劳务表数据-劳务支出境外非关联列表</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="lwsbblwzcjwfglGridlbVO">
+		<xs:annotation>
+			<xs:documentation>劳务表数据-劳务支出境外非关联对应明细</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="sfjwglf" type="sfjwglf" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>是否境外关联方"Y"/"N"</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="dxlx" type="dxlx" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>对象类型境外(2支出)/境内(1收入)</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="dxmc" type="dxmc" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>境外/境内关联方名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="gjhdq" type="gjhdq" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>国家或地区</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jyje" type="jyje" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>交易金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="djff" type="djff" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>定价方法</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bz" type="bz" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>备注</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="lwsbbFrom">
+		<xs:annotation>
+			<xs:documentation>劳务表数据扩展</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="lwsr" type="lwsr" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>劳务收入</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jwlwsr" type="jwlwsr" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>境外劳务收入</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jwlwsrFgllwsr" type="jwlwsrFgllwsr" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>境外劳务收入非关联劳务收入</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jwlwsrGllwsr" type="jwlwsrGllwsr" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>境外劳务收入关联劳务收入</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jnlwsr" type="jnlwsr" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>境内劳务收入</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jnlwsrFgllwsr" type="jnlwsrFgllwsr" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>境内劳务收入非关联劳务收入</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jnlwsrGllwsr" type="jnlwsrGllwsr" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>境内劳务收入关联劳务收入</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="lwzc" type="lwzc" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>劳务支出</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jwlwzc" type="jwlwzc" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>境外劳务支出</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jwlwzcFgllwzc" type="jwlwzcFgllwzc" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>境外劳务支出非关联劳务支出</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jwlwzcGllwzc" type="jwlwzcGllwzc" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>境外劳务支出关联劳务支出</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jnlwzc" type="jnlwzc" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>境内劳务支出</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jnlwzcFgllwzc" type="jnlwzcFgllwzc" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>境内劳务支出非关联劳务支出</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jnlwzcGllwzc" type="jnlwzcGllwzc" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>境内劳务支出关联劳务支出</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

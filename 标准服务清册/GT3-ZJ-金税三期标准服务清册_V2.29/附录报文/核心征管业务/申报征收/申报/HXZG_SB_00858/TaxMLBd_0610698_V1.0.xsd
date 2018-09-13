@@ -1,0 +1,580 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 被2011 rel. 2 sp1 (TeaM DJiNN) 使用XMLSpy vTeaM DJiNN编辑的 (http://www.altova.com) by -->
+<!-- edited with XMLSpy v2010 rel. 3 (http://www.altova.com) by liuwei (liuweicss) -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:include schemaLocation="TaxMLPublicType.xsd"/>
+	<xs:complexType name="tzsynstzmxbForm">
+		<xs:annotation>
+			<xs:documentation>投资收益纳税人调整明细表(A105030)业务报文</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="tzsynstzMxbVO" type="tzsynstzmxbVO" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>投资收益纳税人调整明细表</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="tzsynstzmxbVO">
+		<xs:annotation>
+			<xs:documentation>《投资收益纳税人调整明细表》</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="jyxjrzczzje" type="je">
+				<xs:annotation>
+					<xs:documentation>交易性金融资产账载金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jyxjrzcssje" type="je">
+				<xs:annotation>
+					<xs:documentation>交易性金融资产税收金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jyxjrzccysynstzje" type="je">
+				<xs:annotation>
+					<xs:documentation>交易性金融资产持有收益纳税调整金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jyxjrzckjqrczsr" type="je">
+				<xs:annotation>
+					<xs:documentation>交易性金融资产会计确认处置收入</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jyxjrzcssjsczsr" type="je">
+				<xs:annotation>
+					<xs:documentation>交易性金融资产税收计算处置收入</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jyxjrzccztzzmjz" type="je">
+				<xs:annotation>
+					<xs:documentation>交易性金融资产处置投资账面价值</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jyxjrzccztzjsjc" type="je">
+				<xs:annotation>
+					<xs:documentation>交易性金融资产处置投资计税基础</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jyxjrzckjqrczsdhss" type="je">
+				<xs:annotation>
+					<xs:documentation>交易性金融资产会计确认所得或所失</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jyxjrzcssjsczsd" type="je">
+				<xs:annotation>
+					<xs:documentation>交易性金融资产税收计算处置所得 </xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jyxjrzcczsynstzje" type="je">
+				<xs:annotation>
+					<xs:documentation>交易性金融资产处置收益纳税调整金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jyxjrzcnstzje" type="je">
+				<xs:annotation>
+					<xs:documentation>交易性金融资产纳税调整金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="kgcsjrzczzje" type="je">
+				<xs:annotation>
+					<xs:documentation>可供出售金融资账载金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="kgcsjrzcssje" type="je">
+				<xs:annotation>
+					<xs:documentation>可供出售金融资税收金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="kgcsjrzccysynstzje" type="je">
+				<xs:annotation>
+					<xs:documentation>可供出售金融资持有收益纳税调整金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="kgcsjrzckjqrczsr" type="je">
+				<xs:annotation>
+					<xs:documentation>可供出售金融资会计确认处置收入</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="kgcsjrzcssjsczsr" type="je">
+				<xs:annotation>
+					<xs:documentation>可供出售金融资税收计算处置收入</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="kgcsjrzccztzzmjz" type="je">
+				<xs:annotation>
+					<xs:documentation>可供出售金融资处置投资账面价值</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="kgcsjrzccztzjsjc" type="je">
+				<xs:annotation>
+					<xs:documentation>可供出售金融资处置投资计税基础</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="kgcsjrzckjqrczsehss" type="je">
+				<xs:annotation>
+					<xs:documentation>可供出售金融资会计确认所得或所失</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="kgcsjrzcssjsczsd" type="je">
+				<xs:annotation>
+					<xs:documentation>可供出售金融资税收计算处置所得 </xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="kgcsjrzcczsynstzje" type="je">
+				<xs:annotation>
+					<xs:documentation>可供出售金融资处置收益纳税调整金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="kgcsjrzcnstzje" type="je">
+				<xs:annotation>
+					<xs:documentation>可供出售金融资纳税调整金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="cyzdqtzzzje" type="je">
+				<xs:annotation>
+					<xs:documentation>持有至到期投资账载金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="cyzdqtzssje" type="je">
+				<xs:annotation>
+					<xs:documentation>持有至到期投资税收金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="cyzdqtzcysynstzje" type="je">
+				<xs:annotation>
+					<xs:documentation>持有至到期投资持有收益纳税调整金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="cyzdqtzkjqrczsr" type="je">
+				<xs:annotation>
+					<xs:documentation>持有至到期投资会计确认处置收入</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="cyzdqtzssjsczss" type="je">
+				<xs:annotation>
+					<xs:documentation>持有至到期投资税收计算处置收入</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="cyzdqtzcztzzmjz" type="je">
+				<xs:annotation>
+					<xs:documentation>持有至到期投资处置投资账面价值</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="cyzdqtzcztzjsjc" type="je">
+				<xs:annotation>
+					<xs:documentation>持有至到期投资处置投资计税基础</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="cyzdqtzkjqrczsehss" type="je">
+				<xs:annotation>
+					<xs:documentation>持有至到期投资会计确认所得或所失</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="cyzdqtzssjsczsd" type="je">
+				<xs:annotation>
+					<xs:documentation>持有至到期投资税收计算处置所得 </xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="cyzdqtzczsynstzje" type="je">
+				<xs:annotation>
+					<xs:documentation>持有至到期投资处置收益纳税调整金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="cyzdqtznstzje" type="je">
+				<xs:annotation>
+					<xs:documentation>持有至到期投资纳税调整金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ysgjzzje" type="je">
+				<xs:annotation>
+					<xs:documentation>衍生工具账载金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ysgjssje" type="je">
+				<xs:annotation>
+					<xs:documentation>衍生工具税收金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ysgjcysynstzje" type="je">
+				<xs:annotation>
+					<xs:documentation>衍生工具持有收益纳税调整金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ysgjkjqrczsr" type="je">
+				<xs:annotation>
+					<xs:documentation>衍生工具会计确认处置收入</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ysgjssjsczsr" type="je">
+				<xs:annotation>
+					<xs:documentation>衍生工具税收计算处置收入</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ysgjcztzzmjz" type="je">
+				<xs:annotation>
+					<xs:documentation>衍生工具处置投资账面价值</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ysgjcztzjsjc" type="je">
+				<xs:annotation>
+					<xs:documentation>衍生工具处置投资计税基础</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ysgjkjqrczsehss" type="je">
+				<xs:annotation>
+					<xs:documentation>衍生工具会计确认所得或所失</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ssjsczsd" type="je">
+				<xs:annotation>
+					<xs:documentation>衍生工具税收计算处置所得 </xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ysgjczsynstzje" type="je">
+				<xs:annotation>
+					<xs:documentation>衍生工具处置收益纳税调整金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ysgjnstzje" type="je">
+				<xs:annotation>
+					<xs:documentation>衍生工具纳税调整金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jyxjrfzzzje" type="je">
+				<xs:annotation>
+					<xs:documentation>交易性金融负债账载金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jyxjrfzssje" type="je">
+				<xs:annotation>
+					<xs:documentation>交易性金融负债税收金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jyxjrfzcysynstzje" type="je">
+				<xs:annotation>
+					<xs:documentation>交易性金融负债持有收益纳税调整金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jyxjrfzkjqrczsr" type="je">
+				<xs:annotation>
+					<xs:documentation>交易性金融负债会计确认处置收入</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jyxjrfzssjsczsr" type="je">
+				<xs:annotation>
+					<xs:documentation>交易性金融负债税收计算处置收入</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jyxjrfzcztzzmjz" type="je">
+				<xs:annotation>
+					<xs:documentation>交易性金融负债处置投资账面价值</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jyxjrfzjsjc" type="je">
+				<xs:annotation>
+					<xs:documentation>交易性金融负债处置投资计税基础</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jyxjrfzkjqrczsehss" type="je">
+				<xs:annotation>
+					<xs:documentation>交易性金融负债会计确认所得或所失</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jyxjrfzssjsczsd" type="je">
+				<xs:annotation>
+					<xs:documentation>交易性金融负债税收计算处置所得 </xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jyxjrfzczsynstzje" type="je">
+				<xs:annotation>
+					<xs:documentation>交易性金融负债处置收益纳税调整金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jyxjrfznstzje" type="je">
+				<xs:annotation>
+					<xs:documentation>交易性金融负债纳税调整金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="cqgqtzzzje" type="je">
+				<xs:annotation>
+					<xs:documentation>长期股权投资账载金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="cqgqtzssje" type="je">
+				<xs:annotation>
+					<xs:documentation>长期股权投资税收金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="cqgqtzcysynstzje" type="je">
+				<xs:annotation>
+					<xs:documentation>长期股权投资持有收益纳税调整金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="cqgqtzkjqrczsr" type="je">
+				<xs:annotation>
+					<xs:documentation>长期股权投资会计确认处置收入</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="cqgqtzssjsczsr" type="je">
+				<xs:annotation>
+					<xs:documentation>长期股权投资税收计算处置收入</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="cqgqtzcztzzmjz" type="je">
+				<xs:annotation>
+					<xs:documentation>长期股权投资处置投资账面价值</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="cqgqtzjsjc" type="je">
+				<xs:annotation>
+					<xs:documentation>长期股权投资处置投资计税基础</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="cqgqtzkjqrczsdhss" type="je">
+				<xs:annotation>
+					<xs:documentation>长期股权投资会计确认所得或所失</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="cqgqtzssjsczsd" type="je">
+				<xs:annotation>
+					<xs:documentation>长期股权投资税收计算处置所得 </xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="cqgqtzczsynstzje" type="je">
+				<xs:annotation>
+					<xs:documentation>长期股权投资处置收益纳税调整金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="cqgqtznstzje" type="je">
+				<xs:annotation>
+					<xs:documentation>长期股权投资纳税调整金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="dqtzzje" type="je">
+				<xs:annotation>
+					<xs:documentation>长期股权投资账载金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="dqtzssje" type="je">
+				<xs:annotation>
+					<xs:documentation>长期股权投资税收金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="dqtzcysynstzje" type="je">
+				<xs:annotation>
+					<xs:documentation>长期股权投资持有收益纳税调整金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="dqtzkjqrczsr" type="je">
+				<xs:annotation>
+					<xs:documentation>长期股权投资会计确认处置收入</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="dqtzssjsczsr" type="je">
+				<xs:annotation>
+					<xs:documentation>长期股权投资税收计算处置收入</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="dqtzcztzzmjz" type="je">
+				<xs:annotation>
+					<xs:documentation>长期股权投资处置投资账面价值</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="dqtzcztzjsjc" type="je">
+				<xs:annotation>
+					<xs:documentation>长期股权投资处置投资计税基础</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="dqtzkjqrczsdhss" type="je">
+				<xs:annotation>
+					<xs:documentation>长期股权投资会计确认所得或所失</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="dqtzsssjsczsd" type="je">
+				<xs:annotation>
+					<xs:documentation>长期股权投资税收计算处置所得 </xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="dqtzczsynstzje" type="je">
+				<xs:annotation>
+					<xs:documentation>长期股权投资处置收益纳税调整金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="dqtznstzje" type="je">
+				<xs:annotation>
+					<xs:documentation>长期股权投资纳税调整金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="cqzqtzzzje" type="je">
+				<xs:annotation>
+					<xs:documentation>长期债券投资账载金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="cqzqtzssje" type="je">
+				<xs:annotation>
+					<xs:documentation>长期债券投资税收金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="cqzqtzcysynstzje" type="je">
+				<xs:annotation>
+					<xs:documentation>长期债券投资持有收益纳税调整金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="cqzqtzkjqrczsr" type="je">
+				<xs:annotation>
+					<xs:documentation>长期债券投资会计确认处置收入</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="cqzqtzssjsczsr" type="je">
+				<xs:annotation>
+					<xs:documentation>长期债券投资税收计算处置收入</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="cqzqtzcztzzmjz" type="je">
+				<xs:annotation>
+					<xs:documentation>长期债券投资处置投资账面价值</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="cqzqtzcztzjsjc" type="je">
+				<xs:annotation>
+					<xs:documentation>长期债券投资处置投资计税基础</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="cqzqtzkjqrczsdhss" type="je">
+				<xs:annotation>
+					<xs:documentation>长期债券投资会计确认所得或所失</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="cqzqtzssjsczsd" type="je">
+				<xs:annotation>
+					<xs:documentation>长期债券投资税收计算处置所得 </xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="cqzqtzczsynstzje" type="je">
+				<xs:annotation>
+					<xs:documentation>长期债券投资处置收益纳税调整金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="cqzqtznstzje" type="je">
+				<xs:annotation>
+					<xs:documentation>长期债券投资纳税调整金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qtzzje" type="je">
+				<xs:annotation>
+					<xs:documentation>其他账载金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qtssje" type="je">
+				<xs:annotation>
+					<xs:documentation>其他税收金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qtcysynstzje" type="je">
+				<xs:annotation>
+					<xs:documentation>其他持有收益纳税调整金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qtkjqrczsr" type="je">
+				<xs:annotation>
+					<xs:documentation>其他会计确认处置收入</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qtssjsczsr" type="je">
+				<xs:annotation>
+					<xs:documentation>其他税收计算处置收入</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qtctzzmjz" type="je">
+				<xs:annotation>
+					<xs:documentation>其他处置投资账面价值</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qtcztzjsjc" type="je">
+				<xs:annotation>
+					<xs:documentation>其他处置投资计税基础</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qtkjqrczsdhss" type="je">
+				<xs:annotation>
+					<xs:documentation>其他会计确认所得或所失</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qtssjsczsd" type="je">
+				<xs:annotation>
+					<xs:documentation>其他税收计算处置所得 </xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qtczsynstzje" type="je">
+				<xs:annotation>
+					<xs:documentation>其他处置收益纳税调整金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qtnstzje" type="je">
+				<xs:annotation>
+					<xs:documentation>其他纳税调整金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="hjzzje" type="je">
+				<xs:annotation>
+					<xs:documentation>合计账载金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="hjssje" type="je">
+				<xs:annotation>
+					<xs:documentation>合计税收金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="hjcysynstzje" type="je">
+				<xs:annotation>
+					<xs:documentation>合计持有收益纳税调整金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="hjkjqrczsr" type="je">
+				<xs:annotation>
+					<xs:documentation>合计会计确认处置收入</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="hjssjsczsr" type="je">
+				<xs:annotation>
+					<xs:documentation>合计税收计算处置收入</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="hjcztzzmjz" type="je">
+				<xs:annotation>
+					<xs:documentation>合计处置投资账面价值</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="hjcztzjsjc" type="je">
+				<xs:annotation>
+					<xs:documentation>合计处置投资计税基础</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="hjkjqrczsdhss" type="je">
+				<xs:annotation>
+					<xs:documentation>合计会计确认所得或所失</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="hjssjsczsd" type="je">
+				<xs:annotation>
+					<xs:documentation>合计税收计算处置所得 </xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="hjczsynstzje" type="je">
+				<xs:annotation>
+					<xs:documentation>合计处置收益纳税调整金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="hjnstzje" type="je">
+				<xs:annotation>
+					<xs:documentation>合计纳税调整金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

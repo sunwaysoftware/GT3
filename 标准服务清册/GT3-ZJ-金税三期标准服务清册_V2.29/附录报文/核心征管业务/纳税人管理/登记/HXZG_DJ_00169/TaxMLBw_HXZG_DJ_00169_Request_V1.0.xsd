@@ -1,0 +1,273 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2013 (http://www.altova.com) by  () -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:include schemaLocation="TaxMLPublicDJType.xsd"/>
+	<xs:complexType name="HXZGDJ00169Request">
+		<xs:annotation>
+			<xs:documentation>保存房屋情况登记及变更表接入报文</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="fwqkdjjbgVO" type="fwqkdjjbgVO">
+						<xs:annotation>
+							<xs:documentation>房屋情况登记及变更信息</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="fwqkdjjbgVO">
+		<xs:annotation>
+			<xs:documentation>房屋情况登记及变更信息</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="DJYsqywslxxbVO" type="DJYsqywslxxbVO">
+				<xs:annotation>
+					<xs:documentation>依申请业务受理信息表</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="insertFwztxxGrid" type="insertFwztxxGrid">
+				<xs:annotation>
+					<xs:documentation>新增房屋总体信息集合</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="updateFwztxxGrid" type="updateFwztxxGrid">
+				<xs:annotation>
+					<xs:documentation>修改房屋总体信息集合</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="deleteFwztxxGrid" type="deleteFwztxxGrid">
+				<xs:annotation>
+					<xs:documentation>删除房屋总体信息集合</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="insertZyFwsyqkdjxxGrid" type="insertZyFwsyqkdjxxGrid">
+				<xs:annotation>
+					<xs:documentation>新增自用房屋使用情况登记信息集合</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="updateZyFwsyqkdjxxGrid" type="updateZyFwsyqkdjxxGrid">
+				<xs:annotation>
+					<xs:documentation>修改自用房屋使用情况登记信息集合</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="deleteZyFwsyqkdjxxGrid" type="deleteZyFwsyqkdjxxGrid">
+				<xs:annotation>
+					<xs:documentation>删除自用房屋使用情况登记信息集合</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="insertChuzFwsyqkdjxxGrid" type="insertChuzFwsyqkdjxxGrid">
+				<xs:annotation>
+					<xs:documentation>新增出租房屋使用情况登记信息集合</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="updateChuzFwsyqkdjxxGrid" type="updateChuzFwsyqkdjxxGrid">
+				<xs:annotation>
+					<xs:documentation>修改出租房屋使用情况登记信息集合</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="deleteChuzFwsyqkdjxxGrid" type="deleteChuzFwsyqkdjxxGrid">
+				<xs:annotation>
+					<xs:documentation>删除出租房屋使用情况登记信息集合</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="insertChengzFwsyqkdjxxGrid" type="insertChengzFwsyqkdjxxGrid">
+				<xs:annotation>
+					<xs:documentation>新增承租房屋使用情况登记信息集合</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="updateChengzFwsyqkdjxxGrid" type="updateChengzFwsyqkdjxxGrid">
+				<xs:annotation>
+					<xs:documentation>修改承租房屋使用情况登记信息集合</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="deleteChengzFwsyqkdjxxGrid" type="deleteChengzFwsyqkdjxxGrid">
+				<xs:annotation>
+					<xs:documentation>删除承租房屋使用情况登记信息集合</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="hxsbcjxxGrid" type="hxsbcjfwxxGrid">
+				<xs:annotation>
+					<xs:documentation>回写申报采集信息</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="insertFwztxxGrid">
+		<xs:annotation>
+			<xs:documentation>新增房屋总体信息集合</xs:documentation>
+		</xs:annotation>
+		<xs:sequence minOccurs="0" maxOccurs="unbounded">
+			<xs:element name="insertFwztxxGridlb" type="FwztxxVO">
+				<xs:annotation>
+					<xs:documentation>新增房屋总体信息列表</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="updateFwztxxGrid">
+		<xs:annotation>
+			<xs:documentation>修改房屋总体信息集合</xs:documentation>
+		</xs:annotation>
+		<xs:sequence minOccurs="0" maxOccurs="unbounded">
+			<xs:element name="updateFwztxxGridlb" type="FwztxxVO">
+				<xs:annotation>
+					<xs:documentation>修改房屋总体信息列表</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="deleteFwztxxGrid">
+		<xs:annotation>
+			<xs:documentation>删除房屋总体信息集合</xs:documentation>
+		</xs:annotation>
+		<xs:sequence minOccurs="0" maxOccurs="unbounded">
+			<xs:element name="deleteFwztxxGridlb" type="FwztxxVO">
+				<xs:annotation>
+					<xs:documentation>删除房屋总体信息列表</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="insertZyFwsyqkdjxxGrid">
+		<xs:annotation>
+			<xs:documentation>新增自用房屋使用情况登记信息集合</xs:documentation>
+		</xs:annotation>
+		<xs:sequence minOccurs="0" maxOccurs="unbounded">
+			<xs:element name="insertZyFwsyqkdjxxGridlb" type="FwsyqkdjxxVO">
+				<xs:annotation>
+					<xs:documentation>新增自用房屋使用情况登记信息列表</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="updateZyFwsyqkdjxxGrid">
+		<xs:annotation>
+			<xs:documentation>修改自用房屋使用情况登记信息集合</xs:documentation>
+		</xs:annotation>
+		<xs:sequence minOccurs="0" maxOccurs="unbounded">
+			<xs:element name="updateZyFwsyqkdjxxGridlb" type="FwsyqkdjxxVO">
+				<xs:annotation>
+					<xs:documentation>修改自用房屋使用情况登记信息列表</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="deleteZyFwsyqkdjxxGrid">
+		<xs:annotation>
+			<xs:documentation>删除自用房屋使用情况登记信息集合</xs:documentation>
+		</xs:annotation>
+		<xs:sequence minOccurs="0" maxOccurs="unbounded">
+			<xs:element name="deleteZyFwsyqkdjxxGridlb" type="FwsyqkdjxxVO">
+				<xs:annotation>
+					<xs:documentation>删除自用房屋使用情况登记信息列表</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="insertChuzFwsyqkdjxxGrid">
+		<xs:annotation>
+			<xs:documentation>新增出租房屋使用情况登记信息集合</xs:documentation>
+		</xs:annotation>
+		<xs:sequence minOccurs="0" maxOccurs="unbounded">
+			<xs:element name="insertChuzFwsyqkdjxxGridlb" type="FwsyqkdjxxVO">
+				<xs:annotation>
+					<xs:documentation>新增出租房屋使用情况登记信息列表</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="updateChuzFwsyqkdjxxGrid">
+		<xs:annotation>
+			<xs:documentation>修改出租房屋使用情况登记信息集合</xs:documentation>
+		</xs:annotation>
+		<xs:sequence minOccurs="0" maxOccurs="unbounded">
+			<xs:element name="updateChuzFwsyqkdjxxGridlb" type="FwsyqkdjxxVO">
+				<xs:annotation>
+					<xs:documentation>修改出租房屋使用情况登记信息列表</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="deleteChuzFwsyqkdjxxGrid">
+		<xs:annotation>
+			<xs:documentation>删除出租房屋使用情况登记信息集合</xs:documentation>
+		</xs:annotation>
+		<xs:sequence minOccurs="0" maxOccurs="unbounded">
+			<xs:element name="deleteChuzFwsyqkdjxxGridlb" type="FwsyqkdjxxVO">
+				<xs:annotation>
+					<xs:documentation>删除出租房屋使用情况登记信息列表</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="insertChengzFwsyqkdjxxGrid">
+		<xs:annotation>
+			<xs:documentation>新增承租房屋使用情况登记信息集合</xs:documentation>
+		</xs:annotation>
+		<xs:sequence minOccurs="0" maxOccurs="unbounded">
+			<xs:element name="insertChengzFwsyqkdjxxGridlb" type="FwsyqkdjxxVO">
+				<xs:annotation>
+					<xs:documentation>新增承租房屋使用情况登记信息列表</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="updateChengzFwsyqkdjxxGrid">
+		<xs:annotation>
+			<xs:documentation>修改承租房屋使用情况登记信息集合</xs:documentation>
+		</xs:annotation>
+		<xs:sequence minOccurs="0" maxOccurs="unbounded">
+			<xs:element name="updateChengzFwsyqkdjxxGridlb" type="FwsyqkdjxxVO">
+				<xs:annotation>
+					<xs:documentation>修改承租房屋使用情况登记信息列表</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="deleteChengzFwsyqkdjxxGrid">
+		<xs:annotation>
+			<xs:documentation>删除承租房屋使用情况登记信息集合</xs:documentation>
+		</xs:annotation>
+		<xs:sequence minOccurs="0" maxOccurs="unbounded">
+			<xs:element name="deleteChengzFwsyqkdjxxGridlb" type="FwsyqkdjxxVO">
+				<xs:annotation>
+					<xs:documentation>删除承租房屋使用情况登记信息列表</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="hxsbcjfwxxGrid">
+		<xs:annotation>
+			<xs:documentation>回写申报采集房屋信息</xs:documentation>
+		</xs:annotation>
+		<xs:sequence minOccurs="0" maxOccurs="unbounded">
+			<xs:element name="hxsbcjxxGridlb" type="hxsbcjfwxxVO"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="hxsbcjfwxxVO">
+		<xs:annotation>
+			<xs:documentation>回写申报采集房屋信息</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="fybh" type="fybh">
+				<xs:annotation>
+					<xs:documentation>房源编号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="gmfdjxh" type="djxh">
+				<xs:annotation>
+					<xs:documentation>购买方登记序号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="uuid" type="uuid">
+				<xs:annotation>
+					<xs:documentation>申报表主键uuid</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

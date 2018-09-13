@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2013 (http://www.altova.com) by  () -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:include schemaLocation="TaxMLPublicDJType.xsd"/>
+	<xs:complexType name="nsrhbflqksaveVO">
+		<xs:annotation>
+			<xs:documentation>纳税人合并(分立)情况报告书信息</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="djnsrhbflbgVO" type="DJNsrhbflbgVO">
+				<xs:annotation>
+					<xs:documentation>纳税人合并(分立)报告表</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="djysqywslxxbVO" type="DJYsqywslxxbVO">
+				<xs:annotation>
+					<xs:documentation>受理信息</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="nsrhbflhjbqkGrid">
+				<xs:annotation>
+					<xs:documentation>合并分立后基本情况</xs:documentation>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:sequence minOccurs="0" maxOccurs="unbounded">
+						<xs:element name="nsrhbflhjbqkGridlb" type="DJHbflbgHbflhjbqkVO">
+							<xs:annotation>
+								<xs:documentation>合并分立后基本情况列表</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="nsrhbflqjbqkGrid">
+				<xs:annotation>
+					<xs:documentation>合并分立前基本情况</xs:documentation>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:sequence minOccurs="0" maxOccurs="unbounded">
+						<xs:element name="nsrhbflqjbqkGridlb" type="DJHbflbgHbflqjbqkVO">
+							<xs:annotation>
+								<xs:documentation>合并分立前基本情况列表</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="nsrhbflsqjskqkGrid">
+				<xs:annotation>
+					<xs:documentation>合并分立时欠缴税款情况</xs:documentation>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:sequence minOccurs="0" maxOccurs="unbounded">
+						<xs:element name="nsrhbflsqjskqkGridlb" type="DJHbflbgHbflsqjskqkVO">
+							<xs:annotation>
+								<xs:documentation>合并分立时欠缴税款情况列表</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

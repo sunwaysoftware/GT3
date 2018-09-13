@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2013 (http://www.altova.com) by  () -->
+<!-- 被2012 () 使用XMLSpy v编辑的 (http://www.altova.com) by -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:include schemaLocation="TaxMLBd_snyrlyscwghykcydtjb00_V1.0.xsd"/>
+	<xs:include schemaLocation="TaxMLBd_0610523_V1.0.xsd"/>
+	<xs:include schemaLocation="TaxMLBd_0610524_V1.0.xsd"/>
+	<xs:include schemaLocation="TaxMLBd_0610548_V1.0.xsd"/>
+	<xs:complexType name="xpzywbw">
+		<xs:annotation>
+			<xs:documentation>总业务报文</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="snyrlyscwghykcydtjbVO" type="snyrlyscwghykcydtjbVO">
+						<xs:annotation>
+							<xs:documentation>消费税退（免）税调查表</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="snyrlyscwghykcydtjb" type="snyrlyscwghykcydtjb">
+						<xs:annotation>
+							<xs:documentation>石脑油、燃料油生产、外购、耗用、库存月度统计表</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="syqywgsnyrlypzmxb" type="syqywgsnyrlypzmxb">
+						<xs:annotation>
+							<xs:documentation>使用企业外购石脑油、燃料油凭证明细表</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="yxfjsczztrcclljtjb" type="yxfjsczztrcclljtjb">
+						<xs:annotation>
+							<xs:documentation>乙烯、芳烃生产装置投入产出流量计统计表</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+</xs:schema>

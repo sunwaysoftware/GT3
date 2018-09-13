@@ -1,0 +1,338 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 被2012 () 使用XMLSpy v编辑的 (http://www.altova.com) by -->
+<!-- edited with XMLSpy v2013 (http://www.altova.com) by  () -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:complexType name="aydjbywbw">
+		<xs:annotation>
+			<xs:documentation>《案源登记表》业务报文</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="aydjb" type="aydjb">
+						<xs:annotation>
+							<xs:documentation>《案源登记表》</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="nsrxxForm">
+		<xs:annotation>
+			<xs:documentation>纳税人信息数据</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="nsrsbh" type="nsrsbh">
+				<xs:annotation>
+					<xs:documentation>纳税人识别号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="nsrmc" type="nsrmc">
+				<xs:annotation>
+					<xs:documentation>用户状态代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="fddbrxm" type="fddbrxm">
+				<xs:annotation>
+					<xs:documentation>法定代表人姓名</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="djzclxDm" type="djzclxDm">
+				<xs:annotation>
+					<xs:documentation>登记注册类型代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="scjydz" type="scjydz">
+				<xs:annotation>
+					<xs:documentation>生产经营地址</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="hyDm" type="hyDm">
+				<xs:annotation>
+					<xs:documentation>行业代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="lxdh" type="lxdh" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>联系电话</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zgswjgDm" type="zgswjgDm">
+				<xs:annotation>
+					<xs:documentation>主管税务机关代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="djxh" type="djxh">
+				<xs:annotation>
+					<xs:documentation>登记序号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="aydjb">
+		<xs:annotation>
+			<xs:documentation>案源登记表数据</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="aydjxxForm" type="aydjxxForm">
+				<xs:annotation>
+					<xs:documentation>案源登记信息Form</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="nsrxxForm" type="nsrxxForm">
+				<xs:annotation>
+					<xs:documentation>纳税人信息Form</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ayxxlymxGrid" type="ayxxlymxGrid">
+				<xs:annotation>
+					<xs:documentation>案源信息来源明细</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="aydjcxForm" type="aydjcxForm">
+				<xs:annotation>
+					<xs:documentation>案源信息查询</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="cxayjgGrid" type="cxayjgGrid"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="aydjxxForm">
+		<xs:sequence>
+			<xs:element name="jcayxxuuid" type="jcayxxuuid">
+				<xs:annotation>
+					<xs:documentation>稽查案源信息UUID</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zcajbh" type="zcajbh">
+				<xs:annotation>
+					<xs:documentation>在查案件编号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zcajmc" type="zcajmc">
+				<xs:annotation>
+					<xs:documentation>在查案件名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ayszbmDm" type="ayszbmDm">
+				<xs:annotation>
+					<xs:documentation>案源所在部门代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jlrq" type="jlrq">
+				<xs:annotation>
+					<xs:documentation>记录日期</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="wfwzlxDm" type="wfwzlxDm">
+				<xs:annotation>
+					<xs:documentation>违法违章类型代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="wsbh" type="wsbh">
+				<xs:annotation>
+					<xs:documentation>文书编号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jcaybh" type="jcaybh">
+				<xs:annotation>
+					<xs:documentation>稽查案源编号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="swjcayztDm" type="swjcayztDm">
+				<xs:annotation>
+					<xs:documentation>税务稽查案源状态代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jlrDm" type="jlrDm">
+				<xs:annotation>
+					<xs:documentation>记录人代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ajclyjDm" type="ajclyjDm">
+				<xs:annotation>
+					<xs:documentation>案件处理意见代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qdtj" type="qdtj">
+				<xs:annotation>
+					<xs:documentation>启动条件</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="aynclyjsm" type="aynclyjsm">
+				<xs:annotation>
+					<xs:documentation>案源拟处理意见说明</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="xgcl" type="xgcl">
+				<xs:annotation>
+					<xs:documentation>相关材料</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zynr" type="zynr">
+				<xs:annotation>
+					<xs:documentation>主要内容</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="nclcbdw" type="nclcbdw">
+				<xs:annotation>
+					<xs:documentation>拟处理承办单位</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="nclcbrq" type="nclcbrq">
+				<xs:annotation>
+					<xs:documentation>拟处理承办日期</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="nclyhfrq" type="nclyhfrq">
+				<xs:annotation>
+					<xs:documentation>拟处理应回复日期</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="djxh" type="djxh">
+				<xs:annotation>
+					<xs:documentation>登记序号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="ayxxlymxGrid">
+		<xs:sequence minOccurs="0" maxOccurs="unbounded">
+			<xs:element name="ayxxlymxGridlb" type="ayxxlymxGridlbVO"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="ayxxlymxGridlbVO">
+		<xs:sequence>
+			<xs:element name="ajlymxuuid" type="ajlymxuuid">
+				<xs:annotation>
+					<xs:documentation>案件来源明细UUID</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jcayxxlyDm" type="jcayxxlyDm">
+				<xs:annotation>
+					<xs:documentation>案源登记人代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ayxxtgfmc" type="ayxxtgfmc">
+				<xs:annotation>
+					<xs:documentation>案源来源文书字轨</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="aylywszg" type="aylywszg">
+				<xs:annotation>
+					<xs:documentation>案源来源文书字轨</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="lrrDm" type="lrrDm">
+				<xs:annotation>
+					<xs:documentation>案源来源文书字轨</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="lrrq" type="lrrq">
+				<xs:annotation>
+					<xs:documentation>案源来源文书字轨</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zfbz1" type="zfbz1">
+				<xs:annotation>
+					<xs:documentation>作废标志</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zfrq" type="zfrq">
+				<xs:annotation>
+					<xs:documentation>作废日期</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jcayxxuuid" type="jcayxxuuid">
+				<xs:annotation>
+					<xs:documentation>稽查案源信息uuid</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="aydjcxForm">
+		<xs:sequence>
+			<xs:element name="jcayxxlyDm" type="jcayxxlyDm">
+				<xs:annotation>
+					<xs:documentation>案源信息来源</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="nsrsbh" type="nsrsbh">
+				<xs:annotation>
+					<xs:documentation>纳税人识别号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jlrq" type="aydjrq">
+				<xs:annotation>
+					<xs:documentation>案源登记日期</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ayxxtgfmc" type="ayxxtgfmc">
+				<xs:annotation>
+					<xs:documentation>案源信息提供方</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jcaybh" type="jcaybh">
+				<xs:annotation>
+					<xs:documentation>案源编号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="swjcayztDm" type="swjcayztDm">
+				<xs:annotation>
+					<xs:documentation>案源状态</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="hyDm" type="hyDm">
+				<xs:annotation>
+					<xs:documentation>行业</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="djzclxDm" type="djzclxDm">
+				<xs:annotation>
+					<xs:documentation>登记注册类型</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zgswjgDm">
+				<xs:annotation>
+					<xs:documentation>主管税务机关</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="cxayjgGrid">
+		<xs:sequence minOccurs="0" maxOccurs="unbounded">
+			<xs:element name="cxayjgGridlb" type="cxayjgGridlbVO"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="cxayjgGridlbVO">
+		<xs:sequence>
+			<xs:element name="jcayxxuuid" type="jcayxxuuid">
+				<xs:annotation>
+					<xs:documentation>稽查案件信息uuid</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jcaybh" type="jcaybh">
+				<xs:annotation>
+					<xs:documentation>案源编号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="swjcayztDm" type="swjcayztDm">
+				<xs:annotation>
+					<xs:documentation>案源状态</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jlrq" type="aydjrq">
+				<xs:annotation>
+					<xs:documentation>登记日期</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jlrDm" type="aydjrDm">
+				<xs:annotation>
+					<xs:documentation>登记人</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

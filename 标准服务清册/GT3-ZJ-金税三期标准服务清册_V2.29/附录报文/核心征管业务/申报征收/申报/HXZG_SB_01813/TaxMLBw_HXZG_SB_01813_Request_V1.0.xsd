@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2013 (http://www.altova.com) by  () -->
+<!-- 被2012 () 使用XMLSpy v编辑的 (http://www.altova.com) by -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:include schemaLocation="TaxMLBd_fcjysbzf_V1.0.xsd"/>
+	<xs:complexType name="HXZGSB01813Request">
+		<xs:annotation>
+			<xs:documentation>作废房产交易申报信息请求报文</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="pzxh" type="pzxh">
+						<xs:annotation>
+							<xs:documentation>凭证序号</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="sybh1" type="sybh1" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>税源编号（即房源编号，开发商汇总申报时为空）</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="fcjysbsjxxGrid">
+						<xs:annotation>
+							<xs:documentation>房产交易申报已申报记录</xs:documentation>
+						</xs:annotation>
+						<xs:complexType>
+							<xs:sequence maxOccurs="unbounded">
+								<xs:element name="fcjysbsjxxGridlb" type="FcjysbsjxxGridlbVO">
+									<xs:annotation>
+										<xs:documentation>房产交易申报已申报记录列表</xs:documentation>
+									</xs:annotation>
+								</xs:element>
+							</xs:sequence>
+						</xs:complexType>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+</xs:schema>

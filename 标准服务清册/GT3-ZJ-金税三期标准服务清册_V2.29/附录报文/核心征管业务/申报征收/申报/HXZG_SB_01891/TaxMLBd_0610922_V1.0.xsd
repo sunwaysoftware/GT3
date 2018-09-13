@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2011 (http://www.altova.com) by www.hbnu.com (www.hbnu.com) -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:include schemaLocation="TaxMLPublic.xsd"/>
+	<xs:complexType name="qyndglywwlhzbywbw">
+		<xs:annotation>
+			<xs:documentation>《中华人民共和国企业年度关联业务往来汇总表》业务报文</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="qyndglywwlbg2016_G100000" type="qyndglywwlbg2016_G100000">
+						<xs:annotation>
+							<xs:documentation>《中华人民共和国企业年度关联业务往来汇总表》</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="qyndglywwlbg2016_G100000">
+		<xs:annotation>
+			<xs:documentation>《中华人民共和国企业年度关联业务往来汇总表》</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="qtglxxForm" type="qtglxxForm">
+				<xs:annotation>
+					<xs:documentation/>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="gljyxxGrid" type="gljyxxGrid">
+				<xs:annotation>
+					<xs:documentation>中华人民共和国企业年度关联业务往来汇总表</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="qtglxxForm">
+		<xs:annotation>
+			<xs:documentation/>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="glzqtzje" type="je">
+				<xs:annotation>
+					<xs:documentation>201年度平均关联债权投资金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qytzje" type="je">
+				<xs:annotation>
+					<xs:documentation>202年度平均权益投资金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zzbl" type="bl">
+				<xs:annotation>
+					<xs:documentation>203债资比例</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sfqdcbftxy" type="sfbz">
+				<xs:annotation>
+					<xs:documentation>成本分摊协议【1:是;0:否】</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sjftcbje" type="je">
+				<xs:annotation>
+					<xs:documentation>302本年度实际分摊成本金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bnjrzfje" type="je">
+				<xs:annotation>
+					<xs:documentation>303本年度加入支付金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bntcbcje" type="je">
+				<xs:annotation>
+					<xs:documentation>304本年度退出补偿金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="gljyndtqzllxDm" type="gljyndtqzllxDm">
+				<xs:annotation>
+					<xs:documentation>同期资料，取值代码表DM_SB_GLJYNDTQZLLX</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="gljyxxGrid">
+		<xs:annotation>
+			<xs:documentation>中华人民共和国企业年度关联业务往来汇总表</xs:documentation>
+		</xs:annotation>
+		<xs:sequence maxOccurs="unbounded">
+			<xs:element name="gljyxxGridlbVO" type="gljyxxGridlbVO">
+				<xs:annotation>
+					<xs:documentation>中华人民共和国企业年度关联业务往来汇总表</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="gljyxxGridlbVO">
+		<xs:annotation>
+			<xs:documentation>中华人民共和国企业年度关联业务往来汇总表</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="ewbhxh" type="ewbhxh">
+				<xs:annotation>
+					<xs:documentation>二维表行序号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ewbhmc" type="ewbhmc">
+				<xs:annotation>
+					<xs:documentation>二维表行名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jwgljyje" type="je">
+				<xs:annotation>
+					<xs:documentation>境外关联交易金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jngljyje" type="je">
+				<xs:annotation>
+					<xs:documentation>境内关联交易金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="gljyhj" type="je">
+				<xs:annotation>
+					<xs:documentation>关联交易合计</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jyzje" type="je">
+				<xs:annotation>
+					<xs:documentation>交易总金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 被2011 rel. 2 sp1 (TeaM DJiNN) 使用XMLSpy vTeaM DJiNN编辑的 (http://www.altova.com) by -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:include schemaLocation="TaxMLPublicType.xsd"/>
+	<xs:complexType name="zdsygyqyzycpyssxx02VO">
+		<xs:annotation>
+			<xs:documentation>重点税源工业企业主要产品与税收信息表</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="zdsygyqyzycpyssxxGrid">
+				<xs:complexType>
+					<xs:sequence minOccurs="0" maxOccurs="unbounded">
+						<xs:element name="zdsygyqyzycpyssxxGridlbVO" type="zdsygyqyzycpyssxx02GridlbVO">
+							<xs:annotation>
+								<xs:documentation>申报信息</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="nsrxxFormVO" type="NsrxxFormVO" minOccurs="0"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="zdsygyqyzycpyssxx02GridlbVO">
+		<xs:annotation>
+			<xs:documentation>申报信息</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="ewbhxh" type="ewbhxh" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>二维表行序号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="tjlxDm" type="tjlxDm" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>统计类型代码||1.本月2.累计</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="cpmc1" type="cpmc1" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>产品名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jldwmc" type="jldwmc" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>计量单位名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bnQccpkcl" type="bnQccpkcl" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>本年期初产品库存量</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="snQccpkcl" type="snQccpkcl" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>上年期初产品库存量</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bnCpclgjl" type="bnCpclgjl" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>本年产品产量购进量</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="snCpclgjl" type="snCpclgjl" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>上年产品产量购进量</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bnCpxl" type="bnCpxl" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>本年产品销量</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="snCpxl" type="snCpxl" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>上年产品销量</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bnCpxsjg" type="bnCpxsjg" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>本年产品销售价格元</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="snCpxsjg" type="snCpxsjg" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>上年产品销售价格元</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bnXssr" type="bnXssr" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>本年销售收入</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="snXssr" type="snXssr" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>上年销售收入</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bnCkxssr" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>本年其中：出口销售收入</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="snCkxssr" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>上年其中：出口销售收入</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bnMsxssr" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>本年其中：免税销售收入</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="snMsxssr" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>上年其中：免税销售收入</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bnYnssr" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>本年应纳税收入</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="snYnssr" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>上年应纳税收入</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bnQmcpkcl" type="sl" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>本年期末产品库存量</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="snQmcpkcl" type="sl" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>上年期末产品库存量</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

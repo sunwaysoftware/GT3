@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:complexType name="ShbxfdjxzxxResponse">
+		<xs:annotation>
+			<xs:documentation>社会保险费获取登记险种信息（全责模式）返回报文</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="sbfJfdjlb">
+						<xs:annotation>
+							<xs:documentation>社保费缴费登记列表</xs:documentation>
+						</xs:annotation>
+						<xs:complexType>
+							<xs:sequence minOccurs="0" maxOccurs="unbounded">
+								<xs:element name="sbfJfdjVO" type="sbfJfdjVO"/>
+							</xs:sequence>
+						</xs:complexType>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="sbfJfdjVO">
+		<xs:annotation>
+			<xs:documentation>社保缴费登记（含城乡居民和灵活就业）</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="zgswjgdm" type="zgswjg">
+				<xs:annotation>
+					<xs:documentation>主管税务机关</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zgswskfjdm" type="zgswskfjDm">
+				<xs:annotation>
+					<xs:documentation>主管税务所（科、分局）</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ssglyDm" type="ssglyDm">
+				<xs:annotation>
+					<xs:documentation>税收管理员</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sbdjzt" type="sbdjzt">
+				<xs:annotation>
+					<xs:documentation>社保登记状态</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sfqzsbh" type="sfqzsbh" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>是否为全责模式社保户(Y)</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jfrlxDm" type="jfrlx">
+				<xs:annotation>
+					<xs:documentation>缴费人类型代码（0：城乡居民，1：灵活就业，3：单位）</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sbdjxzxxlb">
+				<xs:annotation>
+					<xs:documentation>险种登记信息列表</xs:documentation>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:sequence minOccurs="0" maxOccurs="unbounded">
+						<xs:element name="sbdjxzxxVO" type="sbdjxzxxVO"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="sbdjxzxxVO">
+		<xs:annotation>
+			<xs:documentation>险种登记信息</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="sbjbjgDm" type="sbjbjg">
+				<xs:annotation>
+					<xs:documentation>社保经办机构代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sbbm" type="sbbm">
+				<xs:annotation>
+					<xs:documentation>社保编码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="cblxDm" type="cblxDm">
+				<xs:annotation>
+					<xs:documentation>参保类型代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zsxmDm" type="zsxmDm">
+				<xs:annotation>
+					<xs:documentation>征收项目</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zspmDm" type="zspmDm">
+				<xs:annotation>
+					<xs:documentation>征收品目</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zszmDm" type="zszmDm">
+				<xs:annotation>
+					<xs:documentation>征收子目</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yxqq" type="yxqq">
+				<xs:annotation>
+					<xs:documentation>有效期起</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yxqz" type="yxqz">
+				<xs:annotation>
+					<xs:documentation>有效期止</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

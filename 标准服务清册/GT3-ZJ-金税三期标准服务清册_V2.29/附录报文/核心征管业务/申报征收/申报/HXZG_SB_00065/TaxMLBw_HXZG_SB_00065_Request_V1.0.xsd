@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 被2011 rel. 2 sp1 (TeaM DJiNN) 使用XMLSpy vTeaM DJiNN编辑的 (http://www.altova.com) by -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:include schemaLocation="TaxMLPublicSBType.xsd"/>
+	<xs:complexType name="HXZGSB00065Request">
+		<xs:annotation>
+			<xs:documentation>申报错误更正获取符合查询条件的纳税人已申报记录查询VO</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="sBCwgzCxVO">
+						<xs:annotation>
+							<xs:documentation>错误更正查询VO</xs:documentation>
+						</xs:annotation>
+						<xs:complexType>
+							<xs:sequence>
+								<xs:element name="djxh" type="djxh">
+									<xs:annotation>
+										<xs:documentation>登记序号</xs:documentation>
+									</xs:annotation>
+								</xs:element>
+								<xs:element name="sbrq1" type="pzxh" minOccurs="0">
+									<xs:annotation>
+										<xs:documentation>申报日期起</xs:documentation>
+									</xs:annotation>
+								</xs:element>
+								<xs:element name="sbrq2" type="pzxh" minOccurs="0">
+									<xs:annotation>
+										<xs:documentation>申报日期止</xs:documentation>
+									</xs:annotation>
+								</xs:element>
+								<xs:element name="skssqq" type="skssqq" minOccurs="1">
+									<xs:annotation>
+										<xs:documentation>税款所属期起</xs:documentation>
+									</xs:annotation>
+								</xs:element>
+								<xs:element name="skssqz" type="skssqz" minOccurs="1">
+									<xs:annotation>
+										<xs:documentation>税款所属期止</xs:documentation>
+									</xs:annotation>
+								</xs:element>
+								<xs:element name="yzpzzlDm" type="yzpzzlDm" minOccurs="0">
+									<xs:annotation>
+										<xs:documentation>应征凭证种类代码</xs:documentation>
+									</xs:annotation>
+								</xs:element>
+								<xs:element name="zsxmDm" type="zsxmDm" minOccurs="0">
+									<xs:annotation>
+										<xs:documentation>征收项目代码</xs:documentation>
+									</xs:annotation>
+								</xs:element>
+								<xs:element name="pzxh" type="pzxh" minOccurs="0">
+									<xs:annotation>
+										<xs:documentation>凭证序号</xs:documentation>
+									</xs:annotation>
+								</xs:element>
+							</xs:sequence>
+						</xs:complexType>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+</xs:schema>

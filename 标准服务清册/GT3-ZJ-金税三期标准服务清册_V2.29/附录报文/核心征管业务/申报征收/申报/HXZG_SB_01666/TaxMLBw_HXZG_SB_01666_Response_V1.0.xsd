@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 被2011 rel. 2 sp1 (TeaM DJiNN) 使用XMLSpy vTeaM DJiNN编辑的 (http://www.altova.com) by -->
+<!-- edited with XMLSpy v2013 (http://www.altova.com) by  () -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:include schemaLocation="TaxMLPublicSBType.xsd"/>
+	<xs:complexType name="HXZGSB01666Response">
+		<xs:annotation>
+			<xs:documentation>居民企业企业所得税核定征收月季度及年度申报载入基础信息返回报文</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="sbxxGrid">
+						<xs:annotation>
+							<xs:documentation>申报数据信息</xs:documentation>
+						</xs:annotation>
+						<xs:complexType>
+							<xs:sequence minOccurs="0" maxOccurs="unbounded">
+								<xs:element name="sbxxGridlb" type="SBSbxxJhVO"/>
+							</xs:sequence>
+						</xs:complexType>
+					</xs:element>
+					<xs:element name="jmxxGrid">
+						<xs:annotation>
+							<xs:documentation>减免数据信息</xs:documentation>
+						</xs:annotation>
+						<xs:complexType>
+							<xs:sequence minOccurs="0" maxOccurs="unbounded">
+								<xs:element name="jmxxGridlb" type="SBJmxxJhVO"/>
+							</xs:sequence>
+						</xs:complexType>
+					</xs:element>
+					<xs:element name="yjxxGrid">
+						<xs:annotation>
+							<xs:documentation>预缴税款数据信息</xs:documentation>
+						</xs:annotation>
+						<xs:complexType>
+							<xs:sequence minOccurs="0" maxOccurs="unbounded">
+								<xs:element name="yjxxGridlb" type="SBYjxxJhVO"/>
+							</xs:sequence>
+						</xs:complexType>
+					</xs:element>
+					<xs:element name="sbQysdshdzsyjdndsbqtxxVO" type="SBQysdshdzsyjdndsbqtxxVO">
+						<xs:annotation>
+							<xs:documentation>企业所得税核定征收月季度年度申报其他数据信息</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="SBQysdshdzsyjdndsbqtxxVO">
+		<xs:annotation>
+			<xs:documentation>企业所得税核定征收月季度年度申报其他数据信息</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="sqyjje" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>已缴金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="kyyjye" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>可用预缴余额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yyyjje" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>已用预缴金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yssdl" type="sl" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>应税所得率</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="nhdsdse" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>年核对所得税额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zsfsDm" type="zsfsDm" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>征收方式代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sfxwqybz" type="bz" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>是否小型微利企业标志</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="xxwlqysl" type="sl" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>小型微利企业适用税率</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yqsbBz" type="bz1" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>标志</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

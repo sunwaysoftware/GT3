@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 被2012 () 使用XMLSpy v编辑的 (http://www.altova.com) by -->
+<!-- edited with XMLSpy v2013 (http://www.altova.com) by  () -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:include schemaLocation="TaxMLPublicDJType.xsd"/>
+	<xs:complexType name="HXZGDJ00836Request">
+		<xs:annotation>
+			<xs:documentation>保存大气水污染基础信息采集表</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="Hbsdqswrcjxx" type="Hbsdqswrcjxx">
+						<xs:annotation>
+							<xs:documentation>大气水污染基础信息采集表</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="insertDqswrwjcxxcjGrid">
+		<xs:annotation>
+			<xs:documentation>新增大气、水污染物基础信息采集信息集合</xs:documentation>
+		</xs:annotation>
+		<xs:sequence minOccurs="0" maxOccurs="unbounded">
+			<xs:element name="insertDqswrwjcxxcjGridlb" type="DJDqswrwjcxxcjVO">
+				<xs:annotation>
+					<xs:documentation>新增大气、水污染物基础信息采集信息列表</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="updateDqswrwjcxxcjGrid">
+		<xs:annotation>
+			<xs:documentation>修改大气、水污染物基础信息采集信息集合</xs:documentation>
+		</xs:annotation>
+		<xs:sequence minOccurs="0" maxOccurs="unbounded">
+			<xs:element name="updateDqswrwjcxxcjGrid" type="DJDqswrwjcxxcjVO">
+				<xs:annotation>
+					<xs:documentation>修改大气、水污染物基础信息采集信息列表</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="deleteDqswrwjcxxcjGrid">
+		<xs:annotation>
+			<xs:documentation>删除大气、水污染物基础信息采集信息集合</xs:documentation>
+		</xs:annotation>
+		<xs:sequence minOccurs="0" maxOccurs="unbounded">
+			<xs:element name="deleteDqswrwjcxxcjGridlb" type="DJDqswrwjcxxcjVO">
+				<xs:annotation>
+					<xs:documentation>删除大气、水污染物基础信息采集信息列表</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="Hbsdqswrcjxx">
+		<xs:annotation>
+			<xs:documentation>环保税大气水污染采集信息</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="insertDqswrwjcxxcjGrid" type="insertDqswrwjcxxcjGrid"/>
+			<xs:element name="updateDqswrwjcxxcjGrid" type="updateDqswrwjcxxcjGrid"/>
+			<xs:element name="deleteDqswrwjcxxcjGrid" type="deleteDqswrwjcxxcjGrid"/>
+			<xs:element name="djxh" type="djxh"/>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

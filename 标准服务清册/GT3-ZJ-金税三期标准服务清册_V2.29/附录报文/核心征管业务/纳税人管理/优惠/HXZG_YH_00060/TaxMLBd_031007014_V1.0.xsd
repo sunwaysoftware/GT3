@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2013 (http://www.altova.com) by  () -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:include schemaLocation="TaxMLPublicYHType.xsd"/>
+    <xs:include schemaLocation="TaxMLPublicDJType.xsd"/>
+	<xs:complexType name="qsydwgmrjsdzjhtxnxywbw">
+		<xs:annotation>
+			<xs:documentation>企事业单位购买软件缩短折旧或摊销年限情况信息采集业务报文</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="qsydwgmrjsdzjhtxnxbab" type="qsydwgmrjsdzjhtxnxbab"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="qsydwgmrjsdzjhtxnxbab">
+		<xs:annotation>
+			<xs:documentation>企事业单位购买软件缩短折旧或摊销年限情况信息表单</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="YHSqkcsqbabVO" type="YHSqkcsqbabVO"/>
+			<xs:element name="qsydwgmrjsdzjhtxnxGrid">
+				<xs:complexType>
+					<xs:sequence maxOccurs="unbounded">
+						<xs:element name="qsydwgmrjsdzjhtxnxGridlb" type="YHSqkcSdzjhtxnxxxVO"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="DJYsqywslxxbVO" type="DJYsqywslxxbVO"/>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 被2012 () 使用XMLSpy v编辑的 (http://www.altova.com) by -->
+<!-- edited with XMLSpy v2013 (http://www.altova.com) by  () -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:complexType name="HXZGFXCL01859Response">
+		<xs:annotation>
+			<xs:documentation>保存纳税评估自行补正通知书信息(提供外部直接保存)信息应答业务报文</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="BcNspgZxbztzsResponse" type="BcNspgZxbztzsResponseVO">
+						<xs:annotation>
+							<xs:documentation>纳税评估自行补正通知书信息(提供外部直接保存)信息应答</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="BcNspgZxbztzsResponseVO">
+		<xs:annotation>
+			<xs:documentation>纳税评估自行补正通知书信息(提供外部直接保存)信息应答</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="djxh">
+				<xs:annotation>
+					<xs:documentation>登记序号</xs:documentation>
+				</xs:annotation>
+				<xs:simpleType>
+					<xs:restriction base="djxh">
+						<xs:length value="20"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="ydwtfx" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>疑点问题分析</xs:documentation>
+				</xs:annotation>
+				<xs:simpleType>
+					<xs:restriction base="ydwtfx"/>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="pgxmmc" type="pgxmmc">
+				<xs:annotation>
+					<xs:documentation>评估项目名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="pgssqq" type="pgssqq">
+				<xs:annotation>
+					<xs:documentation>评估所属期起</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="pgssqz" type="pgssqz">
+				<xs:annotation>
+					<xs:documentation>评估所属期止</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="xmsssj" type="xmsssj">
+				<xs:annotation>
+					<xs:documentation>项目实施时间</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="pgfxrq" type="pgfxrq">
+				<xs:annotation>
+					<xs:documentation>评估分析日期</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="pgfxryDm" type="pgfxryDm">
+				<xs:annotation>
+					<xs:documentation>评估分析人员代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bzqx" type="bzqx">
+				<xs:annotation>
+					<xs:documentation>补正期限</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="slswjgDm" type="swjg1Dm">
+				<xs:annotation>
+					<xs:documentation>受理税务机关代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="wtms">
+				<xs:annotation>
+					<xs:documentation>问题描述</xs:documentation>
+				</xs:annotation>
+				<xs:simpleType>
+					<xs:restriction base="wtms"/>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="sy" type="sy" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>事由</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yj1" type="yj1" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>依据</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bsqx" type="bsqx" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>报送期限</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="fxydxh" type="pgajbh" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>风险应对序号(对于td_fxxx_nspgb中风险应对序号 )</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="gdslxDm" type="gdslxDm">
+				<xs:annotation>
+					<xs:documentation>国地税类型标志(1:国税 2：地税 0：总局 )</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="xzqhszDm" type="xzqhszDm">
+				<xs:annotation>
+					<xs:documentation>税务人员行政区划数字代码(可参看行政区划代码表)
+</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="nspgajxxuuid" type="uuid" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>纳税评估案卷信息uuid</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="pgajbh" type="pgajbh">
+				<xs:annotation>
+					<xs:documentation>评估案卷编号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zxbztzsuuid" type="uuid" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>自行补正通知书UUID</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zg" type="zg" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>字轨</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="swjgjg" type="swjgjg" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>税务机构局轨</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="nh" type="nh" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>年号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="wh" type="wh" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>文号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="returnErrorMsg" type="bz" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>返回错误信息</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="returnCode" type="bz" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>返回码 （0：成功 1：失败）</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

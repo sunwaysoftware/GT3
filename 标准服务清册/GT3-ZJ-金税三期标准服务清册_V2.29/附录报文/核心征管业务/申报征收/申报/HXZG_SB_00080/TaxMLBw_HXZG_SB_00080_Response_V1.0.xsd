@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2010 rel. 3 (http://www.altova.com) by MESMERiZE (MSM) -->
+<!-- 被2012 () 使用XMLSpy v编辑的 (http://www.altova.com) by -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxMLBw_HXZG_SB_00081_Response_V1.0.xsd"/>
+	<xs:complexType name="HXZGSB00080Response">
+		<xs:annotation>
+			<xs:documentation>车辆合格证信息扫描导入及监控返回报文</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="SBClhgzxxDrAndJkResVO" type="SBClhgzxxDrAndJkResVO">
+						<xs:annotation>
+							<xs:documentation>车辆合格证信息扫描导入及监控返回值对象</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="SBClhgzxxDrAndJkResVO">
+		<xs:annotation>
+			<xs:documentation>车辆购置税车辆识别号监控返回值对象</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="SBCgsHgzLockCheckResVO" type="SBCgsHgzLockCheckResVO">
+				<xs:annotation>
+					<xs:documentation>合格证是否锁定监控返回值对象</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="hgzzwjc" type="bz">
+				<xs:annotation>
+					<xs:documentation>合格证真伪监控标志</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jdczccchgz" type="jdczccchgz">
+				<xs:annotation>
+					<xs:documentation>合格证真伪监控标志</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="clsbdh" type="clsbdh">
+				<xs:annotation>
+					<xs:documentation>合格证真伪监控标志</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sfxny" type="bz">
+				<xs:annotation>
+					<xs:documentation>0：否1：是</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="SBCgsCljgxxVO" type="SBCgsCljgxxVO">
+				<xs:annotation>
+					<xs:documentation>根据车辆合格证编号查询中机中心数据获取得到的clxlh，查询所得的车辆价格信息</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="djxhFlag" type="bz">
+				<xs:annotation>
+					<xs:documentation>登记序号标志，用于前台判读是否已经确定纳税人信息</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sbcgsnsrzrrxxVO" type="SbcgsnsrzrrxxVO">
+				<xs:annotation>
+					<xs:documentation>纳税人信息列表</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="SBCgsStartBazdjsjgReqVO" type="SBCgsStartBazdjsjgReqVO">
+				<xs:annotation>
+					<xs:documentation>车购税减免备案申请请求对象</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="clxlh" type="clxlh">
+				<xs:annotation>
+					<xs:documentation>车辆序列号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="nsrxxInitFlag" type="bz">
+				<xs:annotation>
+					<xs:documentation>纳税人信息初始化标志-1 导入报文中无纳税人信息 0 根据报文中信息查询不到纳税人1根据报文中信息能唯一确定纳税人，2根据报文中信息能查询到多个纳税人，待前台确认
+ </xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="hgzcjxxjkFlag" type="bz">
+				<xs:annotation>
+					<xs:documentation>合格证车价信息监控 ba需要触发备案最低计税价格，bd 合格证信息于中机返回的合格证信息比对不一致 </xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="cgshgzbdcjxxVO" type="cgshgzbdcjxxVO">
+				<xs:annotation>
+					<xs:documentation>合格证比对信息</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="SBCgsClsbdhJkResVO" type="SBCgsClsbdhJkResVO">
+				<xs:annotation>
+					<xs:documentation>车辆购置税车辆识别号监控返回值对象</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jkxxGrid" type="jkxxGrid">
+				<xs:annotation>
+					<xs:documentation>监控信息</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="clgzssbywbw" type="clgzssbywbw">
+				<xs:annotation>
+					<xs:documentation>车购税导入申报（后端会对某些值重新赋值）</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="cgshgzbdcjxxVO">
+		<xs:annotation>
+			<xs:documentation>合格证比对信息</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="bdReCode" type="bz">
+				<xs:annotation>
+					<xs:documentation>"Y"or"N"</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bdMessage" type="bz">
+				<xs:annotation>
+					<xs:documentation>比对异常详细描述</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bdFdjhmMessage" type="bz">
+				<xs:annotation>
+					<xs:documentation>比对发动机号码异常详细描述</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 被2011 rel. 2 sp1 (TeaM DJiNN) 使用XMLSpy vTeaM DJiNN编辑的 (http://www.altova.com) by -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:include schemaLocation="TaxMLPublicType.xsd"/>
+	<xs:complexType name="HXZGSB00728Response">
+		<xs:annotation>
+			<xs:documentation>企业会计制度财务报表报送与采集查询上年年末数据业务报文</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="bdxxGrid">
+						<xs:complexType>
+							<xs:sequence minOccurs="0" maxOccurs="unbounded">
+								<xs:element name="zcfzbdxxGridlb" type="zcfzbdxxGridlbVO"/>
+							</xs:sequence>
+						</xs:complexType>
+					</xs:element>
+					<xs:element name="lrbxxGrid">
+						<xs:complexType>
+							<xs:sequence minOccurs="0" maxOccurs="unbounded">
+								<xs:element name="lrbxxGridlb" type="lrbxxGridlbVO"/>
+							</xs:sequence>
+						</xs:complexType>
+					</xs:element>
+					<xs:element name="qybxxGrid">
+						<xs:complexType>
+							<xs:sequence minOccurs="0" maxOccurs="unbounded">
+								<xs:element name="qybxxGridlb" type="qybGridlbVO"/>
+							</xs:sequence>
+						</xs:complexType>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="zcfzbdxxGridlbVO">
+		<xs:sequence>
+			<xs:element name="ewbhxh" type="ewbhxh" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>二维表行序号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zcxmmc" type="zcxmmc" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>资产项目名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ncsZc" type="ncsZc" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>年初数_资产</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qmsZc" type="qmsZc" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>期末数_资产</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qyxmmc" type="qyxmmc" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>负债和所有者权益权益项目名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ncsQy" type="ncsQy" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>年初数_权益</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qmsQy" type="qmsQy" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>期末数_权益 </xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="lrbxxGridlbVO">
+		<xs:sequence minOccurs="0">
+			<xs:element name="ewbhxh" type="ewbhxh" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>二维表行序号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="hmc" type="hmc" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>行名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bys" type="bys" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>本月数</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bnljs" type="bnljs" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>本年累计数</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="qybGridlbVO">
+		<xs:sequence>
+			<xs:element name="ewbhxh" type="ewbhxh" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>二维表行序号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="hmc" type="hmc" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>行名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bns" type="bns" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>本年数</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sns" type="sns" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>上年数</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

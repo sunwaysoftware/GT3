@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:complexType name="shbxsbzfRequest">
+		<xs:annotation>
+			<xs:documentation>作废申报表应征信息（社保）请求</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="yzpzxh" type="yzpzxh">
+						<xs:annotation>
+							<xs:documentation>应征凭证序号</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="zfrDm" type="lrrDm">
+						<xs:annotation>
+							<xs:documentation>作废人代码</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+</xs:schema>

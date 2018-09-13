@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 被2011 rel. 2 sp1 (TeaM DJiNN) 使用XMLSpy vTeaM DJiNN编辑的 (http://www.altova.com) by -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:complexType name="HXZGSB00827Request">
+		<xs:annotation>
+			<xs:documentation>批量查询车辆档案信息返回报文</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="SbCldaxxQueryGrid">
+						<xs:annotation>
+							<xs:documentation>批量查询车辆档案信息</xs:documentation>
+						</xs:annotation>
+						<xs:complexType>
+							<xs:sequence maxOccurs="unbounded">
+								<xs:element name="SbCldaxxQueryGridlb" type="SbCldaxxQueryGridlbVO">
+									<xs:annotation>
+										<xs:documentation>批量查询车辆档案信息</xs:documentation>
+									</xs:annotation>
+								</xs:element>
+							</xs:sequence>
+						</xs:complexType>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="SbCldaxxQueryGridlbVO">
+		<xs:sequence>
+			<xs:element name="clsbdh" type="clsbdh">
+				<xs:annotation>
+					<xs:documentation>车辆识别代号（车架号码）</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="wszmhm" type="wszmhm" nillable="true">
+				<xs:annotation>
+					<xs:documentation>完税证明号码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

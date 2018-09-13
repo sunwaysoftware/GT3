@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 被2012 () 使用XMLSpy v编辑的 (http://www.altova.com) by -->
+<!-- edited with XMLSpy v2013 (http://www.altova.com) by  () -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:complexType name="HXZGFXCL01530Request">
+		<xs:annotation>
+			<xs:documentation>保存评估对象信息业务报文</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="nspgbgxx" type="PSbcnspgbgNFVO">
+						<xs:annotation>
+							<xs:documentation>保存评估对象信息业务报文</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="PSbcnspgbgNFVO">
+		<xs:annotation>
+			<xs:documentation>保存评估对象信息业务报文业务报文</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="djxh">
+				<xs:annotation>
+					<xs:documentation>登记序号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="pgxmmc" type="djxh">
+				<xs:annotation>
+					<xs:documentation>评估项目名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ydwtfx" type="ydwtfx">
+				<xs:annotation>
+					<xs:documentation>评估分析确定 
+的主要问题疑 
+点及问题分析</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="pgssqq" type="pgssqq">
+				<xs:annotation>
+					<xs:documentation>评估所属期起</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="pgssqz" type="pgssqz">
+				<xs:annotation>
+					<xs:documentation>评估所属期止</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="xmsssj" type="xmsssj">
+				<xs:annotation>
+					<xs:documentation>项目实施时间</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="pgfxryDm" type="pgfxryDm">
+				<xs:annotation>
+					<xs:documentation>评估分析人员代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="pgfxrq" type="pgfxrq">
+				<xs:annotation>
+					<xs:documentation>评估分析日期</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="nspgjyDm" type="nspgjyDm">
+				<xs:annotation>
+					<xs:documentation>纳税评估建议代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="pgfxrySsswjgDm" type="swjg1Dm">
+				<xs:annotation>
+					<xs:documentation>评估分析人员所属税务机关代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="gdslxDm" type="gdslxDm">
+				<xs:annotation>
+					<xs:documentation>国地税类型代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="xzqhszDm" type="xzqhszDm">
+				<xs:annotation>
+					<xs:documentation>行政区划数字代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sjgsdq" type="sjgsdq">
+				<xs:annotation>
+					<xs:documentation>数据归属地区</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="lrrDm" type="lrrDm">
+				<xs:annotation>
+					<xs:documentation>录入人代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

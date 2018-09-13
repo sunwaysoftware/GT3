@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 编辑使用 XMLSpy v2006 U (http://www.altova.com) 由 any (any) -->
+<!-- edited with XMLSpy v2010 rel. 3 (http://www.altova.com) by MESMERiZE (MSM) -->
+<!-- 被2012 () 使用XMLSpy v编辑的 (http://www.altova.com) by -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:complexType name="SbCxsQswsqk">
+		<xs:annotation>
+			<xs:documentation>房产交易基本信息</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="xh" type="xh">
+				<xs:annotation>
+					<xs:documentation>序号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="fcjycjxxuuid" type="fcjycjxxuuid">
+				<xs:annotation>
+					<xs:documentation>房产交易采集uuid</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="xzqhmc" type="xzqhmc">
+				<xs:annotation>
+					<xs:documentation>行政区划设置名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="dj" type="dj">
+				<xs:annotation>
+					<xs:documentation>单价</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="htqdsj" type="htqdsj">
+				<xs:annotation>
+					<xs:documentation>合同签订时间</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="htje" type="htje">
+				<xs:annotation>
+					<xs:documentation>合同金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="pgqsJyjg" type="pgqsJyjg">
+				<xs:annotation>
+					<xs:documentation>评估契税交易价格</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="mj" type="mj">
+				<xs:annotation>
+					<xs:documentation>房屋面积</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="tdfwdz" type="tdfwdz">
+				<xs:annotation>
+					<xs:documentation>房屋坐落地址</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="fwsdswjgDm" type="fwsdswjgDm">
+				<xs:annotation>
+					<xs:documentation>房屋属地税务机关代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="fybh" type="fybh">
+				<xs:annotation>
+					<xs:documentation>房源编号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="xzqhszDm" type="xzqhszDm">
+				<xs:annotation>
+					<xs:documentation>行政区划设置代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="djxh" type="djxh">
+				<xs:annotation>
+					<xs:documentation>登记序号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sfzjzlDm" type="sfzjzlDm">
+				<xs:annotation>
+					<xs:documentation>身份证件种类代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sfzjhm" type="sfzjhm">
+				<xs:annotation>
+					<xs:documentation>身份证件号码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="nsrsbh" type="nsrsbh">
+				<xs:annotation>
+					<xs:documentation>纳税人识别号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="dz" type="dz">
+				<xs:annotation>
+					<xs:documentation>地址</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="nsrmc" type="nsrmc">
+				<xs:annotation>
+					<xs:documentation>纳税人名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="szfe_2" type="szfe2">
+				<xs:annotation>
+					<xs:documentation>所占份额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ybtse" type="ybtse">
+				<xs:annotation>
+					<xs:documentation>应补退税额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="dzsphm" type="dzsphm">
+				<xs:annotation>
+					<xs:documentation>电子税票号码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="pzzlDm" type="pzzlDm">
+				<xs:annotation>
+					<xs:documentation>票证种类代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="pzhm" type="pzhm">
+				<xs:annotation>
+					<xs:documentation>票证好嘛</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ynse" type="ynse">
+				<xs:annotation>
+					<xs:documentation>应纳税额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="pzzlmc" type="pzzlmc">
+				<xs:annotation>
+					<xs:documentation>票证种类名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="wsbz" type="wsbz">
+				<xs:annotation>
+					<xs:documentation>完税标志</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="HXZGSB01851Response">
+		<xs:annotation>
+			<xs:documentation>查询房产交易契税完税情况接口返回报文</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="SbCxsQswsqkGrid">
+						<xs:complexType>
+							<xs:sequence maxOccurs="unbounded">
+								<xs:element name="SbCxsQswsqkGridlb" type="SbCxsQswsqk"/>
+							</xs:sequence>
+						</xs:complexType>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+</xs:schema>

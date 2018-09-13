@@ -1,0 +1,290 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2010 rel. 3 (http://www.altova.com) by xuxin (csstj) -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:include schemaLocation="TaxMLPublicType.xsd"/>
+	<xs:complexType name="jrqysrmxsbbywbw">
+		<xs:annotation>
+			<xs:documentation>《中华人民共和国企业所得税年度纳税申报表附表一（2）金融企业收入明细表》业务报文</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="jrqysrmxsbb">
+						<xs:annotation>
+							<xs:documentation>《中华人民共和国企业所得税年度纳税申报表附表一（2）金融企业收入明细表》</xs:documentation>
+						</xs:annotation>
+						<xs:complexType>
+							<xs:sequence>
+								<xs:element name="jrqysrmxsbbFrom" type="jrqysrmxsbbFrom">
+									<xs:annotation>
+										<xs:documentation>金融企业收入明细表申报信息</xs:documentation>
+									</xs:annotation>
+								</xs:element>
+							</xs:sequence>
+						</xs:complexType>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="jrqysrmxsbb">
+		<xs:annotation>
+			<xs:documentation>《中华人民共和国企业所得税年度纳税申报表附表一（2）金融企业收入明细表》</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="jrqysrmxsbbFrom" type="jrqysrmxsbbFrom">
+				<xs:annotation>
+					<xs:documentation>金融企业收入明细表申报信息</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="jrqysrmxsbbFrom">
+		<xs:annotation>
+			<xs:documentation>金融企业收入明细表数据对应明细</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="yysr" type="yysr" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>营业收入</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yhywsr" type="yxYwsr" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>银行业务收入</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yhylxsr" type="yxyLxsr" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>银行业利息收入</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="cfty" type="cftyyxlxsr" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>存放同业银行利息收入</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="cfzyyh" type="cfzyyxlxsr" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>存放中央银行利息收入</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="cczj" type="cczjlxsr" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>拆出资金利息收入</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ffdkjdk" type="ffdkjdklxsr" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>发放贷款及垫款利息收入</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="mrfsjrzc" type="mrfsjrzcLxsr" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>买入返售金融资产利息收入</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yhylxsrqt" type="qtlxsr" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>其他利息收入</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yhysxfjyjsr" type="yxySxfYjsr" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>银行业手续费及佣金收入</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jsyqssxf" type="jsyqssxfsr" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>结算与清算手续费收入</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="dlywsxf" type="dlywsxfsr" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>代理业务手续费收入</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="xycnsxfjyj" type="xycnSxfjyjsr" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>信用承诺手续费及佣金收入</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yhksxf" type="yxKsxfsr" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>银行卡手续费收入</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="gwhzxf" type="gwhzxfsr" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>顾问和咨询费收入</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="tgjqtstywyj" type="tgjqtstywYjsr" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>托管及其他受托业务佣金收入</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yhysxfjyjsrqt" type="yxyQtsxfYjsr" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>银行业其他手续费及佣金收入</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yysrqtywsr" type="yxQtywsr" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>银行其他业务收入</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bxywsr" type="bxywsr" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>保险业务收入</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yzbf" type="yzbf" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>已赚保费</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bfsr" type="bfsr" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>保费收入</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="fcbf" type="fcbf" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>分出保费</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="tqwdqzrzbj" type="tqwdqZrzbj" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>提取未到期责任准备金</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bxywsrqtywsr" type="qtbxywsr" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>其他保险业务收入</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zqywsr" type="zqywSr" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>证券业务收入</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sxfjyjsr" type="sxfjyjsr" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>手续费及佣金收入</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zqcxywsr" type="zqcxYwsxfYjsr" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>证券承销业务手续费及佣金收入</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zqjjywsr" type="zqjjYwsxfYjsr" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>证券经纪业务手续费及佣金收入</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="stkhzcglywsr" type="stkhzcglywSxfYjsr" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>受托客户资产管理业务手续费及佣金收入</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="dldfzqywsr" type="dldfzqywSrsxfYjsr" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>代理兑付证券业务收入手续费及佣金收入</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="dlbgzqywsr" type="dlbgzqywSxfYjsr" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>代理保管证券业务手续费及佣金收入</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sxfjyjsrqt" type="qtsxfjyjsr" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>其他手续费及佣金收入</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="lxjsr" type="lxjsr" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>利息净收入</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zqywsrqtywsr" type="qtzqywsr" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>其他证券业务收入</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qtjrywsr" type="qtjrywsrhj" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>其他金融业务收入合计</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ywsr" type="qtjrywsr" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>其他金融业务收入</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qtjrywsrqtywsr" type="qtjrywqtsr" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>其他金融业务其他收入</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="stxssr" type="stxssr" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>视同销售收入</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="fhbxzcjh" type="fhbxzcjh" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>非货币性资产交换</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="hwcchwstxssr" type="hwCcLwstxssr" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>货物、财产、劳务视同销售收入</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qtstxssr" type="qtstxssr" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>其他视同销售收入</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yywsr" type="yywsr" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>营业外收入</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="gdzcpy" type="gdzcPy" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>固定资产盘盈</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="czgdzcjsy" type="czgdzcjsy" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>处置固定资产净收益</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="fhbxzcjysy" type="fhbxzcJysy" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>非货币性资产交易收益</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="cswxzcsy" type="cswxzcsy" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>出售无形资产收益</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="fkjsr" type="fkjsr" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>罚款净收入</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yywsrqt" type="qtyywsr" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>其他营业外收入</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

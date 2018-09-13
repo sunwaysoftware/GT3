@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2011 (http://www.altova.com) by aaa (aaa) -->
+<!-- 被2011 rel. 2 sp1 (TeaM DJiNN) 使用XMLSpy vTeaM DJiNN编辑的 (http://www.altova.com) by -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:complexType name="HXZGSB01818Request">
+		<xs:annotation>
+			<xs:documentation>作废社保费批扣清册（福建）</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="zgswskfjDm" type="zgswskfjDm">
+						<xs:annotation>
+							<xs:documentation>主管税务所科分局代码</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="zflx" type="zflx">
+						<xs:annotation>
+							<xs:documentation>作废类型</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="djxh" type="djxh">
+						<xs:annotation>
+							<xs:documentation>登记序号</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="ysbxhList" type="ysbxhList">
+						<xs:annotation>
+							<xs:documentation>预申报序号列表</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="ysbxhList">
+		<xs:annotation>
+			<xs:documentation>预申报序号列表</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="ysbxhmx" maxOccurs="unbounded">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="ysbxh" type="ysbxh">
+							<xs:annotation>
+								<xs:documentation>预申报序号</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+						<xs:element name="xh" type="xh">
+							<xs:annotation>
+								<xs:documentation>序号</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

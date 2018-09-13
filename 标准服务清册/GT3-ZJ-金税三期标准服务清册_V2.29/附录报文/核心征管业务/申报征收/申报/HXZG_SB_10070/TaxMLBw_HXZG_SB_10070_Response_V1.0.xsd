@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 被2012 () 使用XMLSpy v编辑的 (http://www.altova.com) by -->
+<!-- edited with XMLSpy v2010 rel. 3 (http://www.altova.com) by liuwei (liuweicss) -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:include schemaLocation="TaxMLPublicSBType.xsd"/>
+	<xs:include schemaLocation="TaxMLBw_qysdsczzsndsb2017_V1.0.xsd"/>
+	<xs:include schemaLocation="TaxMLBd_061015103_V1.0.xsd"/>
+	<xs:complexType name="HXZGSB10070Response">
+		<xs:annotation>
+			<xs:documentation>企业所得税查账征收年报载入基础数据返回报文</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="sbxxGrid">
+						<xs:annotation>
+							<xs:documentation>申报数据信息</xs:documentation>
+						</xs:annotation>
+						<xs:complexType>
+							<xs:sequence minOccurs="0" maxOccurs="unbounded">
+								<xs:element name="sbxxGridlb" type="SBSbxxJhVO"/>
+							</xs:sequence>
+						</xs:complexType>
+					</xs:element>
+					<xs:element name="jmxxGrid">
+						<xs:annotation>
+							<xs:documentation>减免数据信息</xs:documentation>
+						</xs:annotation>
+						<xs:complexType>
+							<xs:sequence minOccurs="0" maxOccurs="unbounded">
+								<xs:element name="jmxxGridlb" type="SBJmxxJhVO"/>
+							</xs:sequence>
+						</xs:complexType>
+					</xs:element>
+					<xs:element name="yjxxGrid">
+						<xs:annotation>
+							<xs:documentation>预缴税款数据信息</xs:documentation>
+						</xs:annotation>
+						<xs:complexType>
+							<xs:sequence minOccurs="0" maxOccurs="unbounded">
+								<xs:element name="yjxxGridlb" type="SBYjxxJhVO"/>
+							</xs:sequence>
+						</xs:complexType>
+					</xs:element>
+					<xs:element name="zjgxx" type="SBQysdszjgxxVO" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>企业所得税汇总纳税分支机构分配表总机构情况信息</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="fzjgxxGrid">
+						<xs:annotation>
+							<xs:documentation>企业所得税汇总纳税分支机构分配表分支机构情况信息</xs:documentation>
+						</xs:annotation>
+						<xs:complexType>
+							<xs:sequence minOccurs="0" maxOccurs="unbounded">
+								<xs:element name="fzjgxxGridlb" type="SBQysdsfzjgxxVO"/>
+							</xs:sequence>
+						</xs:complexType>
+					</xs:element>
+					<xs:element name="kstlfpGrid">
+						<xs:annotation>
+							<xs:documentation>企业所得税查账征收年度申报跨省铁路分配数据信息列表</xs:documentation>
+						</xs:annotation>
+						<xs:complexType>
+							<xs:sequence minOccurs="0" maxOccurs="unbounded">
+								<xs:element name="kstlfpGridlb" type="SB287SdsNbKstlfpxxVO"/>
+							</xs:sequence>
+						</xs:complexType>
+					</xs:element>
+					<xs:element name="mbkstzxx" type="SBQysdsczzsndsbmbkstzxxVO" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>企业所得税查账征收年度申报弥补亏损台账数据信息</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="sedmyhxx" type="SedmyhmxbForm" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>企业所得税查账征收年度申报税额抵免优惠信息</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="nsrqtxxVO" type="SB287NbbNsrqtxxVO">
+						<xs:annotation>
+							<xs:documentation>企业所得税查账征收年度申报2017版纳税人其他申报信息</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="kdqssfpblGrid">
+						<xs:annotation>
+							<xs:documentation>跨地区收收入分配比例信息</xs:documentation>
+						</xs:annotation>
+						<xs:complexType>
+							<xs:sequence minOccurs="0" maxOccurs="unbounded">
+								<xs:element name="kdqssfpblGridlb" type="SBKdqsssrfpblqkbVO"/>
+							</xs:sequence>
+						</xs:complexType>
+					</xs:element>
+					<xs:element name="fhbxtzbd" type="fhbxzctzdynstzmxbYwbd" minOccurs="0"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+</xs:schema>

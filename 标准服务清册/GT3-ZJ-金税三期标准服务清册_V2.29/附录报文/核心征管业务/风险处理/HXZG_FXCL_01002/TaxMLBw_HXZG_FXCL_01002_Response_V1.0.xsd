@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 被2012 () 使用XMLSpy v编辑的 (http://www.altova.com) by -->
+<!-- edited with XMLSpy v2013 (http://www.altova.com) by  () -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:complexType name="FZQzzxdjlbVO">
+		<xs:annotation>
+			<xs:documentation>强制执行登记列表对象VO</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="qzzxdjbuuid" type="qzzxdjbuuid">
+				<xs:annotation>
+					<xs:documentation>强制执行登记表UUID</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ajxxuuid" type="ajxxuuid" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>案件信息UUID</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="nsrsbh" type="nsrsbh" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>纳税人识别号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="nsrmc" type="nsrmc" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>纳税人名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ajbh" type="ajbh">
+				<xs:annotation>
+					<xs:documentation>案件编号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="djxh" type="djxh">
+				<xs:annotation>
+					<xs:documentation>登记序号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="wsbh" type="wsbh" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>文书编号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qzzxfsDm" type="qzzxfsDm">
+				<xs:annotation>
+					<xs:documentation>强制执行方式代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="djrq" type="djrq">
+				<xs:annotation>
+					<xs:documentation>登记日期</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="djryDm" type="djryDm">
+				<xs:annotation>
+					<xs:documentation>登记人员代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="rgdjbz" type="rgdjbz" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>人工登记标志</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zlcslid" type="zlcslid" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>子流程实例ID</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="lcslid" type="lcslid" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>流程实例ID</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="hdslid" type="hdslid" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>活动实例ID</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sjslid" type="sjslid" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>事件实例ID</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zfrq1" type="zfrq1" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>作废日期</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zfrDm" type="zfrDm" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>作废人代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zfbz1" type="zfbz1">
+				<xs:annotation>
+					<xs:documentation>作废标志</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="HXZGFXCL01002Response">
+		<xs:annotation>
+			<xs:documentation>根据：登记序号、案件编号、违法行为来源查询强制执行登记信息返回报文</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="qzzxdjxxGrid">
+						<xs:annotation>
+							<xs:documentation>强制执行登记列表</xs:documentation>
+						</xs:annotation>
+						<xs:complexType>
+							<xs:sequence minOccurs="0" maxOccurs="unbounded">
+								<xs:element name="qzzxdjxxGridlb" type="FZQzzxdjlbVO">
+									<xs:annotation>
+										<xs:documentation>强制执行登记列表lb</xs:documentation>
+									</xs:annotation>
+								</xs:element>
+							</xs:sequence>
+						</xs:complexType>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+</xs:schema>

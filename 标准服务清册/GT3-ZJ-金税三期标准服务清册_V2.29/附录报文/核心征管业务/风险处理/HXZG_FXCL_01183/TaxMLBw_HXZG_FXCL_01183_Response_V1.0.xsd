@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 被2012 () 使用XMLSpy v编辑的 (http://www.altova.com) by -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:complexType name="HXZGFXCL01183Response">
+		<xs:annotation>
+			<xs:documentation>电子档案文书送达销号响应报文</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="wssdxhscGrid">
+						<xs:annotation>
+							<xs:documentation>电子档案文书送达销号输出Grid</xs:documentation>
+						</xs:annotation>
+						<xs:complexType>
+							<xs:sequence maxOccurs="unbounded">
+								<xs:element name="wssdxhscGridlb" type="wssdxhscGridlbVO">
+									<xs:annotation>
+										<xs:documentation>电子档案文书送达销号输出Gridlb</xs:documentation>
+									</xs:annotation>
+								</xs:element>
+							</xs:sequence>
+						</xs:complexType>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="wssdxhscGridlbVO">
+		<xs:annotation>
+			<xs:documentation>电子档案文书送达销号输出Gridlb</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="sdwsuuid" type="sdwsuuid">
+				<xs:annotation>
+					<xs:documentation>送达文书UUID</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="reCode" type="returncode">
+				<xs:annotation>
+					<xs:documentation>返回码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="message" type="message">
+				<xs:annotation>
+					<xs:documentation>返回消息</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="xhrq1" type="xhrq1">
+				<xs:annotation>
+					<xs:documentation>销号日期</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

@@ -1,0 +1,449 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2009 (http://www.altova.com) by Administrator (EMBRACE) -->
+<!-- 被2011 rel. 2 sp1 (TeaM DJiNN) 使用XMLSpy vTeaM DJiNN编辑的 (http://www.altova.com) by -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:include schemaLocation="TaxMLPublicType.xsd"/>
+	<xs:include schemaLocation="TaxMLBd_tydkdj_0610575_V1.0.xsd"/>
+	<xs:include schemaLocation="TaxMLBd_tydkdj_0610572_V1.0.xsd"/>
+	<xs:complexType name="zhrmghgkjqysdsbgbbw">
+		<xs:annotation>
+			<xs:documentation>中华人民共和国扣缴企业所得税报告表业务报文</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="zhrmghgkjqysdsbgb" type="zhrmghgkjqysdsbgb">
+						<xs:annotation>
+							<xs:documentation>中华人民共和国扣缴企业所得税报告表</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="zhrmghgkjqysdsbgb">
+		<xs:annotation>
+			<xs:documentation>中华人民共和国扣缴企业所得税报告表</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="nsrxxForm" type="nsrxxForm">
+				<xs:annotation>
+					<xs:documentation>纳税人基本信息</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="kjywrjbxxForm" type="kjywrjbxxForm">
+				<xs:annotation>
+					<xs:documentation>扣缴义务人基本信息</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="nsrjbxxForm" type="nsrjbxxForm">
+				<xs:annotation>
+					<xs:documentation>纳税人基本信息</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="fdyqkjqkForm" type="fdyqkjqkForm">
+				<xs:annotation>
+					<xs:documentation>法定源泉扣缴情况</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zgswjgzdkjqkForm" type="zgswjgzdkjqkForm">
+				<xs:annotation>
+					<xs:documentation>主管税务机关指定扣缴情况</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="slxxForm" type="slxxForm">
+				<xs:annotation>
+					<xs:documentation>受理信息</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="dkdjdsdjdkdszy" type="dkdjdsdjdkdszy">
+				<xs:annotation>
+					<xs:documentation>中华人民共和国税收缴款书（代扣代收专用）</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="dkdjdsdjyhjszy" type="dkdjdsdjyhjszy">
+				<xs:annotation>
+					<xs:documentation>中华人民共和国税收缴款书（银行经收专用）</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="nsrxxForm">
+		<xs:annotation>
+			<xs:documentation>纳税人基本信息</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="kjywrsbh" type="kjywrsbh">
+				<xs:annotation>
+					<xs:documentation>扣缴义务人识别号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="kjywrmc" type="kjywrmc">
+				<xs:annotation>
+					<xs:documentation>扣缴义务人名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="kjywrlx" type="kjywrlxDm">
+				<xs:annotation>
+					<xs:documentation>扣缴义务类型</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="djzclxDm" type="djzclxDm">
+				<xs:annotation>
+					<xs:documentation>登记注册类型</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="hyDm" type="hyDm">
+				<xs:annotation>
+					<xs:documentation>行业</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sbrq1" type="sbrsmrq">
+				<xs:annotation>
+					<xs:documentation>申报日期</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="skssqq" type="skssqq">
+				<xs:annotation>
+					<xs:documentation>税款所属期起</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="skssqz" type="skssqz">
+				<xs:annotation>
+					<xs:documentation>税款所属期止</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sbsxDm1" type="sbsxDm1">
+				<xs:annotation>
+					<xs:documentation>申报类型</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="kjywrjbxxForm">
+		<xs:annotation>
+			<xs:documentation>扣缴义务人基本信息</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="kjywrnsrsbh" type="nsrsbh">
+				<xs:annotation>
+					<xs:documentation>纳税人识别号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="kjywrJjlxDm" type="kjywrJjlxDm">
+				<xs:annotation>
+					<xs:documentation>扣缴义务人经济类型代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="kjywrJjlxmc" type="kjywrJjlxmc">
+				<xs:annotation>
+					<xs:documentation>扣缴义务人基本信息经济类型名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="kjywrmc1" type="kjywrmc1">
+				<xs:annotation>
+					<xs:documentation>扣缴义务人中文名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="kjywrywmc" type="kjywrywmc">
+				<xs:annotation>
+					<xs:documentation>扣缴义务人英文名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="kjywrjjhyflDm" type="kjywrjjhyflDm">
+				<xs:annotation>
+					<xs:documentation>扣缴义务人经济行业分类代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="kjywrJjxyflmc" type="kjywrJjxyflmc">
+				<xs:annotation>
+					<xs:documentation>扣缴义务人基本信息经济行业分类名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="kjywrLxr" type="kjywrLxr">
+				<xs:annotation>
+					<xs:documentation>扣缴义务人联系人</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="kjywrZwdz" type="kjywrZwdz">
+				<xs:annotation>
+					<xs:documentation>扣缴义务人中文地址</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="kjywrYwdz" type="kjywrYwdz">
+				<xs:annotation>
+					<xs:documentation>扣缴义务人英文地址</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="kjywrLxdh" type="kjywrLxdh">
+				<xs:annotation>
+					<xs:documentation>扣缴义务人电话</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="kjywryzbm" type="kjywryzbm">
+				<xs:annotation>
+					<xs:documentation>扣缴义务人邮政编码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="nsrjbxxForm">
+		<xs:annotation>
+			<xs:documentation>纳税人基本信息</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="nsrzqjmgnssbh" type="nsrzqjmgnssbh">
+				<xs:annotation>
+					<xs:documentation>纳税人在其居民国纳税识别号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="kjdjxh" type="djxh">
+				<xs:annotation>
+					<xs:documentation>被扣缴人登记序号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="nsrzqjmgDqMcjdm" type="nsrzqjmgDqMcjdm">
+				<xs:annotation>
+					<xs:documentation>纳税人在其居民国地区名称及代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="nsrzwmc" type="nsrzwmc">
+				<xs:annotation>
+					<xs:documentation>纳税人在中国境内的中文名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="nsrywmc" type="nsrywmc">
+				<xs:annotation>
+					<xs:documentation>纳税人英文名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jmgnsrZwmc" type="jmgnsrZwmc">
+				<xs:annotation>
+					<xs:documentation>纳税人在其居民国中文名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jmgnsrYwmc" type="jmgnsrYwmc">
+				<xs:annotation>
+					<xs:documentation>纳税人在其居民国英文名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="nsrzqjmgzwdz" type="nsrzqjmgzwdz">
+				<xs:annotation>
+					<xs:documentation>纳税人在其居民国中文地址</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="nsrzqjmgywdz" type="nsrzqjmgywdz">
+				<xs:annotation>
+					<xs:documentation>纳税人在其居民国英文地址</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sbsdlxjdm" type="sbsdlxjdm">
+				<xs:annotation>
+					<xs:documentation>申报所得类型及代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bcsbsdqdrq" type="bcsbsdqdrq">
+				<xs:annotation>
+					<xs:documentation>本次申报所得取得日期</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="htmc" type="htmc">
+				<xs:annotation>
+					<xs:documentation>合同名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="htbh" type="htbh">
+				<xs:annotation>
+					<xs:documentation>合同编号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="htzxqssj" type="htzxqssj">
+				<xs:annotation>
+					<xs:documentation>合同执行起始时间</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="htzxzzsj" type="htzxzzsj">
+				<xs:annotation>
+					<xs:documentation>合同执行终止时间</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="htzje" type="xs:string">
+				<xs:annotation>
+					<xs:documentation>合同总金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zzgjndmc" type="nsrmc">
+				<xs:annotation>
+					<xs:documentation>被扣缴义务人名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="djzclx" type="djzclxDm">
+				<xs:annotation>
+					<xs:documentation>登记注册类型</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="hyDm" type="hyDm">
+				<xs:annotation>
+					<xs:documentation>行业代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zqjmgnssbh" type="nsrsbh">
+				<xs:annotation>
+					<xs:documentation>在其居民国纳税人识别号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="fdyqkjqkForm">
+		<xs:annotation>
+			<xs:documentation>法定源泉扣缴情况</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="mc" type="mc">
+				<xs:annotation>
+					<xs:documentation>名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="je" type="je">
+				<xs:annotation>
+					<xs:documentation>金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sl" type="sl">
+				<xs:annotation>
+					<xs:documentation>税率</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zsrmbje" type="je">
+				<xs:annotation>
+					<xs:documentation>zsrbmje</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="rmbje" type="je">
+				<xs:annotation>
+					<xs:documentation>人民币金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="rmbjehj" type="je">
+				<xs:annotation>
+					<xs:documentation>人民币金额合计</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="kce" type="je">
+				<xs:annotation>
+					<xs:documentation>可除恶</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ynsdse" type="je">
+				<xs:annotation>
+					<xs:documentation>ynsdse</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sysl" type="sl">
+				<xs:annotation>
+					<xs:documentation>sysl</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yjndqysdse" type="je">
+				<xs:annotation>
+					<xs:documentation>yjndqysdse</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sjzsl" type="je">
+				<xs:annotation>
+					<xs:documentation>sjzsl</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ysjjndqysdse" type="je">
+				<xs:annotation>
+					<xs:documentation>ysjjndqysdse</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jmqysdse" type="je">
+				<xs:annotation>
+					<xs:documentation>jmqysdse</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="zgswjgzdkjqkForm">
+		<xs:annotation>
+			<xs:documentation>主管税务机关指定扣缴情况</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="bcsbdsrze" type="je">
+				<xs:annotation>
+					<xs:documentation>bcsbdsrze</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="swjghdlrl" type="mc">
+				<xs:annotation>
+					<xs:documentation>swjghdlrl</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ynssde" type="je">
+				<xs:annotation>
+					<xs:documentation>ynssde</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sysl1" type="sl">
+				<xs:annotation>
+					<xs:documentation>sysl1</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ynqysdse" type="je">
+				<xs:annotation>
+					<xs:documentation>ynqysdse</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sjzsl2" type="sl">
+				<xs:annotation>
+					<xs:documentation>sjzsl2</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sjyjnedqysdse" type="je">
+				<xs:annotation>
+					<xs:documentation>sjyjnedqysdse</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jmqysdse1" type="je">
+				<xs:annotation>
+					<xs:documentation>jmqysdse1</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="slxxForm">
+		<xs:annotation>
+			<xs:documentation>受理信息</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="swdlrjbr" type="jbr">
+				<xs:annotation>
+					<xs:documentation>税务代理人经办人</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="swdlrjbrzyzjhm" type="zjhm">
+				<xs:annotation>
+					<xs:documentation>税务代理人经办人职业证件号码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="swdlrdlsbrq" type="swdlrdlsbrq">
+				<xs:annotation>
+					<xs:documentation>税务代理人代理申报日期</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="slr" type="nsrmc" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>受理人</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="slrq" type="slrq" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>受理日期</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

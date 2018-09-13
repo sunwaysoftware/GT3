@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2013 (http://www.altova.com) by  () -->
+<!-- 被2012 () 使用XMLSpy v编辑的 (http://www.altova.com) by -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:include schemaLocation="TaxMLPublicSBType.xsd"/>
+	<xs:complexType name="fcjysbshbdywbw">
+		<xs:annotation>
+			<xs:documentation>房产交易申报审核表单业务报文</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="fcjysbshbd" type="fcjysbshbd">
+						<xs:annotation>
+							<xs:documentation>房产交易申报审核表单</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="fcjysbshbd">
+		<xs:annotation>
+			<xs:documentation>房产交易申报审核表单</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="zrfnsrxxGrid">
+				<xs:annotation>
+					<xs:documentation>转让方纳税人信息</xs:documentation>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:sequence maxOccurs="unbounded">
+						<xs:element name="zrfnsrxxGridlb" type="SBCxsFcjycjxxJyfVO"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="csfnsrxxGrid">
+				<xs:annotation>
+					<xs:documentation>承受方纳税人信息</xs:documentation>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:sequence maxOccurs="unbounded">
+						<xs:element name="csfnsrxxGridlb" type="SBCxsFcjycjxxJyfVO"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="SBCxsFyjbxxVO" type="SBCxsFyjbxxVO">
+				<xs:annotation>
+					<xs:documentation>税源信息</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="SBCxsFcjycjxxVO" type="SBCxsFcjycjxxVO">
+				<xs:annotation>
+					<xs:documentation>房产交易采集信息</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zrfskxxGrid">
+				<xs:annotation>
+					<xs:documentation>转让方税款信息</xs:documentation>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:sequence minOccurs="0" maxOccurs="unbounded">
+						<xs:element name="zrfxxGridlb" type="SBCxsFcjySkxxShVO">
+							<xs:annotation>
+								<xs:documentation>转让方税款信息</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="csfskxxGrid">
+				<xs:annotation>
+					<xs:documentation>承受方税款信息</xs:documentation>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:sequence minOccurs="0" maxOccurs="unbounded">
+						<xs:element name="csfxxGridlb" type="SBCxsFcjySkxxShVO">
+							<xs:annotation>
+								<xs:documentation>承受方税款信息</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="fjxxForm" type="fjxxForm">
+				<xs:annotation>
+					<xs:documentation>受理信息</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="SBCxsFcjyShVO" type="SBCxsFcjyShVO"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="fjxxForm">
+		<xs:annotation>
+			<xs:documentation>受理信息</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="bsr" type="slry">
+				<xs:annotation>
+					<xs:documentation>办税人</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="slr" type="slry">
+				<xs:annotation>
+					<xs:documentation>受理人</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="slrq" type="slrq">
+				<xs:annotation>
+					<xs:documentation>受理日期</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="slswjg" type="sbswjgDm">
+				<xs:annotation>
+					<xs:documentation>受理税务机关</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zrfzrfdlr" type="zrfzrfdlr"/>
+			<xs:element name="csfcsfdlr" type="csfcsfdlr"/>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:complexType name="scjysdsbjcsjcxResponse">
+		<xs:annotation>
+			<xs:documentation>生产经营所得申报基础数据查询返回</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="sfsb" type="sfczwsb">
+						<xs:annotation>
+							<xs:documentation>是否申报,0为未申报，1为已申报</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="qcwjsdse" type="qcwjse">
+						<xs:annotation>
+							<xs:documentation>期初未缴所得税额</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="qcyjsdse" type="yjse">
+						<xs:annotation>
+							<xs:documentation>实际已缴所得税额</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+</xs:schema>

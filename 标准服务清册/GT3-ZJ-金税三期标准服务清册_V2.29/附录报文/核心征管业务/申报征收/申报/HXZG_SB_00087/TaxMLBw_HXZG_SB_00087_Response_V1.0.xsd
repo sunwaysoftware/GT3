@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2010 rel. 3 (http://www.altova.com) by MESMERiZE (MSM) -->
+<!-- 被2012 () 使用XMLSpy v编辑的 (http://www.altova.com) by -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:include schemaLocation="TaxMLCGSSBType.xsd"/>
+	<xs:complexType name="HXZGSB00087Response">
+		<xs:annotation>
+			<xs:documentation>根据车辆识别代号查询车辆购置税完税证明信息返回报文</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="SBCgsWszmffResVO" type="SBCgsWszmffResVO">
+						<xs:annotation>
+							<xs:documentation>车辆购置税车辆识别号监控返回值对象</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="SBCgsWszmffResVO">
+		<xs:sequence>
+			<xs:element name="SbCgsSbbxblsbJHVO" type="SbCgsSbbxblsbJHVO">
+				<xs:annotation>
+					<xs:documentation>车辆购置税车辆识别号监控返回值对象</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sbcgswszmvo" type="SBCgsWszmJHVO">
+				<xs:annotation>
+					<xs:documentation>车辆购置税车辆识别号监控返回值对象</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="reCode" type="bz">
+				<xs:annotation>
+					<xs:documentation>车辆购置税车辆识别号监控返回值对象</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sbCgsWszmPzxxVO" type="SBCgsWszmPzxxVO">
+				<xs:annotation>
+					<xs:documentation>车辆购置税车辆识别号监控返回值对象</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="wszmhmSelGrid" type="wszmhmSelGrid">
+				<xs:annotation>
+					<xs:documentation>完税证明号码列表</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="cgswszmspxxGrid" type="cgswszmspxxGrid">
+				<xs:annotation>
+					<xs:documentation>根据税票信息查询车购税申报时用</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

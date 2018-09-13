@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 被2011 rel. 2 sp1 (TeaM DJiNN) 使用XMLSpy vTeaM DJiNN编辑的 (http://www.altova.com) by -->
+<!-- edited with XMLSpy v2010 rel. 3 (http://www.altova.com) by liuwei (liuweicss) -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:include schemaLocation="TaxMLPublicType.xsd"/>
+	<xs:complexType name="yfxmkjjkcgjbForm">
+		<xs:annotation>
+			<xs:documentation>研发项目可加计扣除研究开发费用情况归集表</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="yfxmkjjkc">
+						<xs:annotation>
+							<xs:documentation>研发项目可加计扣除研究开发费用情况归集表</xs:documentation>
+						</xs:annotation>
+						<xs:complexType>
+							<xs:sequence>
+								<xs:element name="yfxmkjjkcgjbVO">
+									<xs:annotation>
+										<xs:documentation>研发项目可加计扣除研究开发费用情况归集表</xs:documentation>
+									</xs:annotation>
+									<xs:complexType>
+										<xs:sequence minOccurs="0">
+											<xs:element name="gjbVO" type="yfxmForm"/>
+										</xs:sequence>
+									</xs:complexType>
+								</xs:element>
+								<xs:element name="qtxgfyGrid">
+									<xs:annotation>
+										<xs:documentation>其他相关费用小计</xs:documentation>
+									</xs:annotation>
+									<xs:complexType>
+										<xs:sequence minOccurs="0" maxOccurs="unbounded">
+											<xs:element name="qtGrid" type="qtVO">
+												<xs:annotation>
+													<xs:documentation>其他相关费用VO</xs:documentation>
+												</xs:annotation>
+											</xs:element>
+										</xs:sequence>
+									</xs:complexType>
+								</xs:element>
+							</xs:sequence>
+						</xs:complexType>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="qtVO">
+		<xs:annotation>
+			<xs:documentation>第6行其他信息</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="xh" type="nsrsbh" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>序号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="xmmc" type="nsrmc" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>项目名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="fse" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>发生额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="yfxmForm">
+		<xs:annotation>
+			<xs:documentation>分支机构优惠备案主表信息</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="ryrgfyxj" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>人员人工费用小计||人员人工费用小计</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zjcsyshdrygzxj" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>直接从事研发活动人员-工资薪金||直接从事研发活动人员-工资薪金</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zjcsyshdrywxyj" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>直接从事研发活动人员-五险一金||直接从事研发活动人员-五险一金</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="wpyfrylwfy" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>外聘研发人员的劳务费用||外聘研发人员的劳务费用</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zjtrfyxj" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>直接投入费用小计||直接投入费用小计</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yfhdzjxhcl" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>研发活动直接消耗-材料||研发活动直接消耗-材料</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yfhdzjxhrl" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>研发活动直接消耗-燃料||研发活动直接消耗-燃料</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yfhdzjxhdlfy" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>研发活动直接消耗-动力费用||研发活动直接消耗-动力费用</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yyzjsycpszgyzb" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>用于中间试验和产品试制的模具、工艺装备开发及制造费||用于中间试验和产品试制的模具、工艺装备开发及制造费</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yybgczcypgzf" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>用于不构成固定资产的样品、样机及一般测试手段购置费||用于不构成固定资产的样品、样机及一般测试手段购置费</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yyszcpdjyf" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>用于试制产品的检验费||用于试制产品的检验费</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yyyfhdyqsbtzjywxf" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>用于研发活动的仪器、设备的运行维护、调整、检验、维修等费用||用于研发活动的仪器、设备的运行维护、调整、检验、维修等费用</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="tgjyznfszrsbf" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>通过经营租赁方式租入的用于研发活动的仪器、设备租赁费||通过经营租赁方式租入的用于研发活动的仪器、设备租赁费</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zjfyxj" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>折旧费用小计||折旧费用小计</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yyyfhddyqzjf" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>用于研发活动的仪器的折旧费||用于研发活动的仪器的折旧费</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yyyfhddsbzjf" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>用于研发活动的设备的折旧费||用于研发活动的设备的折旧费</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="wxzctxxj" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>无形资产摊销小计||无形资产摊销小计</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yyyfhddrjdtxfy" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>用于研发活动的软件的摊销费用||用于研发活动的软件的摊销费用</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yyyfhddzlqdtxfy" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>用于研发活动的专利权的摊销费用||用于研发活动的专利权的摊销费用</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yyyfhddfzljsdtxfy" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>用于研发活动的非专利技术（包括许可证、专有技术、设计和计算方法等）的摊销费用||用于研发活动的非专利技术（包括许可证、专有技术、设计和计算方法等）的摊销费用</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="xcpsjfdxj" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>新产品设计费等小计||新产品设计费等小计</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="xcpsjf" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>新产品设计费||新产品设计费</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="xgygczdf" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>新工艺规程制定费||新工艺规程制定费</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="xyyzdlcsyf" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>新药研制的临床试验费||新药研制的临床试验费</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ktkfjsdxcsyf" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>勘探开发技术的现场试验费||勘探开发技术的现场试验费</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="wtwbjghgrjxyfhdsfsdfy" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>七、委托外部机构或个人进行研发活动所发生的费用||七、委托外部机构或个人进行研发活动所发生的费用</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qzwtjwjxyfhdsfsdfy" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>其中：委托境外进行研发活动所发生的费用（包括存在关联关系的委托研发）||其中：委托境外进行研发活动所发生的费用（包括存在关联关系的委托研发）</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yxjjkcdyffyfyhj" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>八、允许加计扣除的研发费用中的第1至5类费用合计（1+2+3+4+5）||八、允许加计扣除的研发费用中的第1至5类费用合计（1+2+3+4+5）</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qtxgfyxe" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>其他相关费用限额=序号8×10％/(1-10％)||其他相关费用限额=序号8×10％/(1-10％)</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="dqfyhzckjjkcze" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>当期费用化支出可加计扣除总额||当期费用化支出可加计扣除总额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yfxmxcwxzcdqtxe" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>研发项目形成无形资产当期摊销额||研发项目形成无形资产当期摊销额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zyjjkcdtxe" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>其中：准予加计扣除的摊销额||其中：准予加计扣除的摊销额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="dqsjjjkcze" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>当期实际加计扣除总额（9+10.1）×50％||当期实际加计扣除总额（9+10.1）×50％</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qtxgfyxj" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>其他相关费用小计||其他相关费用小计</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 被2012 () 使用XMLSpy v编辑的 (http://www.altova.com) by -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxMLBd_061008201_V1.0.xsd"/>
+	<xs:include schemaLocation="TaxMLBd_061008202_V1.0.xsd"/>
+	<xs:include schemaLocation="TaxMLBd_061008203_V1.0.xsd"/>
+	<xs:include schemaLocation="TaxMLBd_061008204_V1.0.xsd"/>
+	<xs:include schemaLocation="TaxMLBd_061008205_V1.0.xsd"/>
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:complexType name="Jcylwsjgkjzdywbw">
+		<xs:annotation>
+			<xs:documentation>基层医疗卫生机构会计制度业务报文</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="jcylzcfzbVO" type="JcylzcfzbVO">
+						<xs:annotation>
+							<xs:documentation>资产负债表</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="jcylsrzczbVO" type="JcylsrzczbVO">
+						<xs:annotation>
+							<xs:documentation>收入支出总表</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="jcylywszmxbVO" type="JcylywszmxbVO">
+						<xs:annotation>
+							<xs:documentation>业务收支明细表</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="jcylczbzszmxbVO" type="JcylczbzszmxbVO">
+						<xs:annotation>
+							<xs:documentation>财政补助收支明细表</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="jcyljzcbdbVO" type="JcyljzcbdbVO">
+						<xs:annotation>
+							<xs:documentation>净资产变动表</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+</xs:schema>

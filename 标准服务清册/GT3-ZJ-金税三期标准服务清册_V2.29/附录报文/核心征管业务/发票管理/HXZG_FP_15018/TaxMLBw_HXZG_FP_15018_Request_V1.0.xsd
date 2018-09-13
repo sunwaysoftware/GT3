@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 编辑使用 XMLSpy v2006 U (http://www.altova.com) 由 any (any) -->
+<!-- 编辑使用 XMLSpy v2006 U (http://www.altova.com) 由 any (any) -->
+<!-- 被2012 () 使用XMLSpy v编辑的 (http://www.altova.com) by -->
+<!-- edited with XMLSpy v2011 rel. 2 (http://www.altova.com) by time (wnass) -->
+<!-- 编辑使用 XMLSpy v2006 U (http://www.altova.com) 由 any (any) -->
+<!-- 编辑使用 XMLSpy v2006 U (http://www.altova.com) 由 any (any) -->
+<!-- 编辑使用 XMLSpy v2006 U (http://www.altova.com) 由 any (any) -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxDoc.xsd"/>
+	<xs:include schemaLocation="TaxMLPublic.xsd"/>
+	<xs:include schemaLocation="TaxMLPublicFPType.xsd"/>
+	<xs:complexType name="HXZGFP15018Request">
+		<xs:annotation>
+			<xs:documentation>查询建筑业已维护可抵扣发票信息请求报文</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="djxhList">
+						<xs:annotation>
+							<xs:documentation>登记序号列表</xs:documentation>
+						</xs:annotation>
+						<xs:complexType>
+							<xs:sequence maxOccurs="unbounded">
+								<xs:element name="djxhListlb" type="djxh">
+									<xs:annotation>
+										<xs:documentation>登记序号</xs:documentation>
+									</xs:annotation>
+								</xs:element>
+							</xs:sequence>
+						</xs:complexType>
+					</xs:element>
+					<xs:element name="gcxmbhList">
+						<xs:annotation>
+							<xs:documentation>工程项目编号列表</xs:documentation>
+						</xs:annotation>
+						<xs:complexType>
+							<xs:sequence maxOccurs="unbounded">
+								<xs:element name="gcxmbhListlb" type="gcxmbh">
+									<xs:annotation>
+										<xs:documentation>工程项目编号</xs:documentation>
+									</xs:annotation>
+								</xs:element>
+							</xs:sequence>
+						</xs:complexType>
+					</xs:element>
+					<xs:element name="fpDm" type="fpDm">
+						<xs:annotation>
+							<xs:documentation>发票代码</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="fpqshm" type="fpqshm">
+						<xs:annotation>
+							<xs:documentation>发票起始号码</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="fpzzhm" type="fpzzhm">
+						<xs:annotation>
+							<xs:documentation>发票终止号码</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+</xs:schema>

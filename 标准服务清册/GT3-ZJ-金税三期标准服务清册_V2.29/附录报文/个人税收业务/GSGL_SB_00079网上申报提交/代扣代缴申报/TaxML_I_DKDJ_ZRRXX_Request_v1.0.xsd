@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:complexType name="zrrxxrequest">
+		<xs:annotation>
+			<xs:documentation>代扣代缴客户端的自然人信息</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="zrrxx" type="zrrxx"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="zrrxx">
+		<xs:annotation>
+			<xs:documentation>代扣代缴客户端的自然人信息</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="zrrxxtitle" type="zrrxxtitle">
+				<xs:annotation>
+					<xs:documentation>代扣代缴客户端的自然人信息表头</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zrrxxbody" type="zrrxxbody">
+				<xs:annotation>
+					<xs:documentation>代扣代缴客户端的自然人信息表体</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="zrrxxtitle">
+		<xs:annotation>
+			<xs:documentation>代扣代缴客户端的自然人信息表头</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="kjywrdjxh" type="kjywrdjxh">
+				<xs:annotation>
+					<xs:documentation>扣缴义务人登记序号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="kjywrsbh" type="kjywrsbh">
+				<xs:annotation>
+					<xs:documentation>扣缴义务人识别号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="zrrxxbody">
+		<xs:annotation>
+			<xs:documentation>代扣代缴客户端的自然人信息表体</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="zrrxxmx" type="zrrxxmx" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>自然人信息明细</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="zrrxxmx">
+		<xs:annotation>
+			<xs:documentation>境内任职受雇信息</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="zzlxDm" type="sfzjlxDm">
+				<xs:annotation>
+					<xs:documentation>证照类型代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zzhm" type="sfzjhm">
+				<xs:annotation>
+					<xs:documentation>身份证件号码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="xm" type="xm">
+				<xs:annotation>
+					<xs:documentation>姓名</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="gjhdqszDm" type="gjhdqszDm">
+				<xs:annotation>
+					<xs:documentation>国家或地区三字代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="nsrsbh" type="nsrsbh">
+				<xs:annotation>
+					<xs:documentation>纳税人识别号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

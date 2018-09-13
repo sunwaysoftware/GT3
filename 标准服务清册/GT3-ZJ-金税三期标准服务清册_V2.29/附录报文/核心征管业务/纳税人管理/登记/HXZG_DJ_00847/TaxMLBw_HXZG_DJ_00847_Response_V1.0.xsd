@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 被2012 () 使用XMLSpy v编辑的 (http://www.altova.com) by -->
+<!-- edited with XMLSpy v2013 (http://www.altova.com) by  () -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:complexType name="HXZGDJ00847Response">
+		<xs:annotation>
+			<xs:documentation>查询查询外部交换排污许可限值信息返回报文</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="DJHjbhsWbjhpxkxzGrid" type="DJHjbhsWbjhpxkxzGrid"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="DJHjbhsWbjhpxkxzGrid">
+		<xs:annotation>
+			<xs:documentation>外部交换排污许可限值信息Grid</xs:documentation>
+		</xs:annotation>
+		<xs:sequence minOccurs="0" maxOccurs="unbounded">
+			<xs:element name="DJHjbhsWbjhpxkxzGridlb" type="DJHjbhsWbjhpxkxzVO"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="DJHjbhsWbjhpxkxzVO">
+		<xs:annotation>
+			<xs:documentation>外部交换排污许可限值信息VO</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="dqswrwjcxxuuid" type="dqswrwjcxxuuid">
+				<xs:annotation>
+					<xs:documentation>大气、水污染集成信息采集uuid</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="syuuid" type="syuuid">
+				<xs:annotation>
+					<xs:documentation>税源uuid</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zspmDm" type="zspmDm">
+				<xs:annotation>
+					<xs:documentation>污染物名称||征收品目代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="xkpfndxz" type="nsrmc">
+				<xs:annotation>
+					<xs:documentation>许可排放浓度限值（毫克/升或毫克/标立方米）</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zxbz1" type="zxbz1">
+				<xs:annotation>
+					<xs:documentation>执行标准</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bzndz" type="nsrmc">
+				<xs:annotation>
+					<xs:documentation>标准浓度值（毫克/升或毫克/标立方米）</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="wrwpfljsffDm" type="wrwpfljsffDm">
+				<xs:annotation>
+					<xs:documentation>污染物排放量计算方法</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yxbz" type="yxbz">
+				<xs:annotation>
+					<xs:documentation>有效标志</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zywrwlbDm" type="zywrwlbDm">
+				<xs:annotation>
+					<xs:documentation>主要污染物类别代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="hgbhssybh" type="hgbhssybh">
+				<xs:annotation>
+					<xs:documentation>税源编号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="pfkbh" type="pfkbh">
+				<xs:annotation>
+					<xs:documentation>排放口编号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="pfkmc" type="pfkmc">
+				<xs:annotation>
+					<xs:documentation>排放口名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sbbz" type="sbbz">
+				<xs:annotation>
+					<xs:documentation>申报标志</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zszmDm" type="zszmDm">
+				<xs:annotation>
+					<xs:documentation>征收子目代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="pfkwybm" type="hth">
+				<xs:annotation>
+					<xs:documentation>排放口唯一编码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="pwxkzbh" type="swwstybh">
+				<xs:annotation>
+					<xs:documentation>排污许可证副本编号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="xkxzuuid" type="uuid">
+				<xs:annotation>
+					<xs:documentation>许可限值uuid</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sqlx" type="sqlx">
+				<xs:annotation>
+					<xs:documentation>申请类型</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="wbjhpfkuuid" type="uuid">
+				<xs:annotation>
+					<xs:documentation>排放口uuid</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

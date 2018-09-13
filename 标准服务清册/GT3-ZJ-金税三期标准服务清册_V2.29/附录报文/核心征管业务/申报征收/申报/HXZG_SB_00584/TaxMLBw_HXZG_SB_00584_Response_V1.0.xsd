@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2010 rel. 3 (http://www.altova.com) by MESMERiZE (MSM) -->
+<!-- 被2011 rel. 2 sp1 (TeaM DJiNN) 使用XMLSpy vTeaM DJiNN编辑的 (http://www.altova.com) by -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:include schemaLocation="TaxMLPublicSBType.xsd"/>
+	<xs:complexType name="HXZGSB00584Response">
+		<xs:annotation>
+			<xs:documentation>获取自查补税调整信息返回报文</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="zcbstzxxGrid">
+						<xs:annotation>
+							<xs:documentation>获取自查补税调整信息明细Grid</xs:documentation>
+						</xs:annotation>
+						<xs:complexType>
+							<xs:sequence maxOccurs="unbounded">
+								<xs:element name="zcbstzxxGridlb" type="zcbstzxxGridlbVO">
+									<xs:annotation>
+										<xs:documentation>获取自查补税调整信息Grid列表</xs:documentation>
+									</xs:annotation>
+								</xs:element>
+							</xs:sequence>
+						</xs:complexType>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="zcbstzxxGridlbVO">
+		<xs:annotation>
+			<xs:documentation>自查补税调整信息</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="zsxmDm" type="zsxmDm">
+				<xs:annotation>
+					<xs:documentation>征收项目代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zspmDm" type="zspmDm">
+				<xs:annotation>
+					<xs:documentation>征收品目代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ssqq" type="ssqq">
+				<xs:annotation>
+					<xs:documentation>所属期起</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ssqz" type="ssqz">
+				<xs:annotation>
+					<xs:documentation>所属期止</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ybsejsje" type="jsyj">
+				<xs:annotation>
+					<xs:documentation>应补税额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ybsesl" type="sl1">
+				<xs:annotation>
+					<xs:documentation>应补税额税率</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ybse" type="se">
+				<xs:annotation>
+					<xs:documentation>应补税额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jksj" type="jksj">
+				<xs:annotation>
+					<xs:documentation>缴款时间</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ybseznj" type="se">
+				<xs:annotation>
+					<xs:documentation>滞纳金</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zzstzlds" type="zzstzlds">
+				<xs:annotation>
+					<xs:documentation>增值税调整留抵数</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qysdstzynssde" type="qysdstzynssde">
+				<xs:annotation>
+					<xs:documentation>企业所得税调整应纳税所得额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qysdstzynse" type="qysdstzynse">
+				<xs:annotation>
+					<xs:documentation>企业所得税调整应纳税额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

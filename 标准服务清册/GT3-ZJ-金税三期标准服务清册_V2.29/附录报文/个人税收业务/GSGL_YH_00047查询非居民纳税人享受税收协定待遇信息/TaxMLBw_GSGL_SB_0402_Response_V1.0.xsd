@@ -1,0 +1,90 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2010 rel. 3 (http://www.altova.com) by MESMERiZE (MSM) -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:complexType name="YhFjmbaQueryOsbResponse">
+		<xs:annotation>
+			<xs:documentation>非居民纳税人享受税收协定待遇信息查询</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="yhfjmbaList" type="yhfjmbaList">
+						<xs:annotation>
+							<xs:documentation>非居民纳税人享受税收协定待遇信息查询</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="yhfjmbaList">
+		<xs:annotation>
+			<xs:documentation>非居民纳税人享受税收协定待遇信息查询</xs:documentation>
+		</xs:annotation>
+		<xs:sequence maxOccurs="unbounded">
+			<xs:element name="yhfjmba" type="yhfjmba">
+				<xs:annotation>
+					<xs:documentation>非居民纳税人享受税收协定待遇信息列表</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="yhfjmba">
+		<xs:annotation>
+			<xs:documentation>非居民纳税人享受税收协定待遇信息列表</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="yhpzuuid" type="yhpzuuid">
+				<xs:annotation>
+					<xs:documentation>唯一标识（优惠凭证uuid）</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zsxmDm" type="zsxmDm">
+				<xs:annotation>
+					<xs:documentation>征收项目代码(DM_GY_ZSXM)</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="fjmnsrxsssxddm" type="ssxdDm">
+				<xs:annotation>
+					<xs:documentation>非居民纳税人享受税收协定代码(DM_GY_SSXD)</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sdlxdm" type="ssxdsdlxDm">
+				<xs:annotation>
+					<xs:documentation>所得类型代码(DM_GY_SSXDSDLX)</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jmxzdldm" type="jmxmdlDm">
+				<xs:annotation>
+					<xs:documentation>减免性质大类代码(DM_GY_SSJMXZDL)</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jmxzxldm" type="jmxmxlDm">
+				<xs:annotation>
+					<xs:documentation>减免性质小类代码(DM_GY_SSJMXZXL)</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jmxzDm" type="jmxzDm">
+				<xs:annotation>
+					<xs:documentation>减免性质代码(DM_GY_SSJMXZ)</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jmqxq" type="jmqxq">
+				<xs:annotation>
+					<xs:documentation>减免期限起（YYYY-MM-DD）</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jmqxz" type="jmqxz">
+				<xs:annotation>
+					<xs:documentation>减免期限止（YYYY-MM-DD）</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jmsswsxDm" type="swsxDm1">
+				<xs:annotation>
+					<xs:documentation>减免税税务事项代码(DM_GY_SWSX)</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

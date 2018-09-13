@@ -1,0 +1,290 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 被2012 () 使用XMLSpy v编辑的 (http://www.altova.com) by -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:complexType name="tdzzsqssbshbywbw">
+		<xs:annotation>
+			<xs:documentation>土地增值税清算申报审核表业务报文</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="tdzzsqssbshb" type="tdzzsqssbshb">
+						<xs:annotation>
+							<xs:documentation>土地增值税清算申报审核表</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="tdzzsqssbshb">
+		<xs:annotation>
+			<xs:documentation>土地增值税清算申报审核表</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="sbheadVO" type="sbhead1VO">
+				<xs:annotation>
+					<xs:documentation>申报表头信息</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sbbxxformVO" type="sbbxxform1VO">
+				<xs:annotation>
+					<xs:documentation>申报表信息</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="sbbxxform1VO">
+		<xs:annotation>
+			<xs:documentation>申报表信息</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="shyj" type="shyj" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>审核意见</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="shrq" type="shrq" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>审核日期</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="shyjsm" type="shyjsm" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>审核意见说明</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zrfdcsrsdsPtzz" type="zrfdcsrsds" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>转让房地产收入审定数普通住宅</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zrfdcsrsdsFptzz" type="zrfdcsrsds" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>转让房地产收入审定数非普通住宅</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zrfdcsrsdsQtlxfc" type="zrfdcsrsds" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>转让房地产收入审定数其他类型房产</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="kcxmjesdsPtzz" type="kcxmjesds" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>扣除项目金额审定数普通住宅</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="kcxmjesdsFptzz" type="kcxmjesds" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>扣除项目金额审定数非普通住宅</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="kcxmjesdsQtlxfc" type="kcxmjesds" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>扣除项目金额审定数其他类型房产</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zzesdsPtzz" type="zzesds" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>增值额审定数普通住宅</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zzesdsFptzz" type="zzesds" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>增值额审定数非普通住宅</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zzesdsQtlxfc" type="zzesds" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>增值额审定数其他类型房产</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zzeykcxmjezbsdsPtzz" type="jsyj" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>增值额与扣除项目金额之比审定数普通住宅</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zzeykcxmjezbsdsFptzz" type="jsyj" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>增值额与扣除项目金额之比审定数非普通住宅</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zzeykcxmjezbsdsQtlxfc" type="jsyj" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>增值额与扣除项目金额之比审定数其他类型房产宅</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="syslsdsPtzz" type="syslsds" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>适用税率审定数普通住宅</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="syslsdsFptzz" type="syslsds" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>适用税率审定数非普通住宅</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="syslsdsQtlxfc" type="syslsds" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>适用税率审定数其他类型房产</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sskcxssdsPtzz" type="sskcxssds" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>速算扣除系数审定数普通住宅</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sskcxssdsFptzz" type="sskcxssds" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>速算扣除系数审定数非普通住宅</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sskcxssdsQtlxfc" type="sskcxssds" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>速算扣除系数审定数其他类型房产</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yjtdzzssesdsPtzz" type="yjtdzzssesds" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>应缴土地增值税税额审定数普通住宅</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yjtdzzssesdsFptzz" type="yjtdzzssesds" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>应缴土地增值税税额审定数非普通住宅</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yjtdzzssesdsQtlxfc" type="yjtdzzssesds" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>应缴土地增值税税额审定数其他类型房产</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ybttdzzssesdsPtzz" type="ybttdzzssesds" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>应补退土地增值税税额审定数普通住宅</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ybttdzzssesdsFptzz" type="ybttdzzssesds" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>应补退土地增值税税额审定数非普通住宅</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ybttdzzssesdsQtlxfc" type="ybttdzzssesds" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>应补退土地增值税税额审定数其他房产类型</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ybtskblqx" type="slrq" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>应补退税款办理期限	</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="shswjg" type="swjgDm" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>审核税务机关||审核税务机关</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="shswjgmc" type="slswjgmc">
+				<xs:annotation>
+					<xs:documentation>审核税务机关||审核税务机关</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="shr" type="shr" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>审核人</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="shxxuuid" type="uuid">
+				<xs:annotation>
+					<xs:documentation>UUID||uuid</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			
+			<xs:element name="uuid" type="uuid">
+				<xs:annotation>
+					<xs:documentation>UUID||uuid</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zfbz1" type="zfbz1" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>作废标志</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zfrq1" type="zfrq1" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>作废日期</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zfrDm" type="zfrDm" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>作废人代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="lcslid" type="lcslid" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>流程实例ID</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="hdslid" type="hdslid" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>活动实例ID</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="swsxtzsyuuid" type="uuid" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>税务事项通知书一UUID</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="swsxtzseuuid" type="uuid" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>税务事项通知书二UUID</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="sbhead1VO">
+		<xs:sequence>
+			<xs:element name="nsrsbh" type="nsrsbh" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>纳税人识别号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="nsrmc" type="nsrmc" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>纳税人名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bdcxmbh" type="bdcxmbh" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>项目编号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="xmmc" type="xmmc" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>项目名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="xmdz" type="xmdz" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>项目地址</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="skssqq" type="skssqq" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>所属时期</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="skssqz" type="skssqz" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>所属时期</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sbrq1" type="sbrq1" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>申报日期</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

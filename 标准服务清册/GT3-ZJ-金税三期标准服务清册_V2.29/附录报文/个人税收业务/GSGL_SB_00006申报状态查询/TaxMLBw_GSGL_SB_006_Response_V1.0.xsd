@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:complexType name="sbztcxresponse">
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="sbztDm" type="nsrsbztDm">
+						<xs:annotation>
+							<xs:documentation>01：未申报，02：申报成功、但申报记录已经作废，03：申报成功</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="sbfs" type="sbfsDm">
+						<xs:annotation>
+							<xs:documentation>申报方式，请参考主数据库中代码表</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="sbrq" type="sbrq">
+						<xs:annotation>
+							<xs:documentation>申报日期</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="ybtse" type="ybtse1">
+						<xs:annotation>
+							<xs:documentation>应补退税额</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="yzpzxh" type="yzpzxh">
+						<xs:annotation>
+							<xs:documentation>应征凭证序号</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+</xs:schema>

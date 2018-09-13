@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 被2012 () 使用XMLSpy v编辑的 (http://www.altova.com) by -->
+<!-- edited with XMLSpy v2013 (http://www.altova.com) by  () -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:complexType name="ZH02221ResVO">
+		<xs:annotation>
+			<xs:documentation>返回报文VO(送达文书uuid、电子表证单书种类代码、作废人代码、处理结果0\1\2、返回信息)</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="sdwsuuid" type="sdwsuuid">
+				<xs:annotation>
+					<xs:documentation>送达文书uuid</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="dzbzdszlDm" type="dzbzdszlDm">
+				<xs:annotation>
+					<xs:documentation>电子表证单书种类代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zfrDm" type="bz1">
+				<xs:annotation>
+					<xs:documentation>作废人代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="cljg" type="bz1">
+				<xs:annotation>
+					<xs:documentation>处理结果0未处理/1处理成功/2处理失败</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="cljgxx" type="ywnr">
+				<xs:annotation>
+					<xs:documentation>处理结果信息</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="HXZGFXCL02221Response">
+		<xs:annotation>
+			<xs:documentation>邮政送达批量作废催报催缴文书返回报文</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="fhxxGrid">
+						<xs:annotation>
+							<xs:documentation>返回信息Grid</xs:documentation>
+						</xs:annotation>
+						<xs:complexType>
+							<xs:sequence minOccurs="0" maxOccurs="unbounded">
+								<xs:element name="fhxxGridlb" type="ZH02221ResVO">
+									<xs:annotation>
+										<xs:documentation>返回信息Gridlb</xs:documentation>
+									</xs:annotation>
+								</xs:element>
+							</xs:sequence>
+						</xs:complexType>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+</xs:schema>

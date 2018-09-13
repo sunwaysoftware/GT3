@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:complexType name="sbbzftjrequest">
+		<xs:annotation>
+			<xs:documentation>申报表作废提交请求</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="yzpzxh" type="yzpzxh">
+						<xs:annotation>
+							<xs:documentation>应征凭证序号，用来进行作废的关键字，不可为空</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+                    <xs:element name="lrrDm" type="lrrDm">
+						<xs:annotation>
+							<xs:documentation>录入人代码，不可为空，如果取不到的话，请提供一个全省统一的录入人代码（11位）</xs:documentation>
+						</xs:annotation>
+					</xs:element>					
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+</xs:schema>

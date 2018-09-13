@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2013 (http://www.altova.com) by  () -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:include schemaLocation="TaxMLPublicDJType.xsd"/>
+	<xs:complexType name="swdjzzbywbw">
+		<xs:annotation>
+			<xs:documentation>注销税务登记信息报文</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="zxswdjsphzb" type="zxswdjsphz">
+						<xs:annotation>
+							<xs:documentation>注销税务登记</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="zxswdjsphz">
+		<xs:annotation>
+			<xs:documentation>注销税务登记</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="djxh" type="djxh">
+				<xs:annotation>
+					<xs:documentation>登记序号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="xdjxh" type="xdjxh">
+				<xs:annotation>
+					<xs:documentation>新登记序号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="lcslid" type="lcslid">
+				<xs:annotation>
+					<xs:documentation>流程实例id</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="hdslid" type="hdslid">
+				<xs:annotation>
+					<xs:documentation>流程实例id</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sjgsdq" type="sjgsdq">
+				<xs:annotation>
+					<xs:documentation>数据归属地区</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zxswdjsqForm" type="DJZxswdjsqVO">
+				<xs:annotation>
+					<xs:documentation>注销税务登记_注销税务登记申请表</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zxbsrxxForm" type="DJYsqywslxxbVO">
+				<xs:annotation>
+					<xs:documentation>依申请业务受理信息表</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="slsqswzjqkbcGrid" type="slsqswzjqkbcGrid">
+				<xs:annotation>
+					<xs:documentation>收缴税务证件情况</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="slsjqtswzlqkbcGrid" type="slsjqtswzlqkbcGrid">
+				<xs:annotation>
+					<xs:documentation>收缴其他税务资料情况</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qsxxbcGrid" type="qsxxbcGrid">
+				<xs:annotation>
+					<xs:documentation>欠税信息</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="djxxbcGrid" type="djxxbcGrid">
+				<xs:annotation>
+					<xs:documentation>多缴信息</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="rdzgxxbcGrid" type="rdzgxxbcGrid">
+				<xs:annotation>
+					<xs:documentation>认定资格信息</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yhxxbcGrid" type="yhxxbcGrid">
+				<xs:annotation>
+					<xs:documentation>优惠信息</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="slsqswzjqkbcGrid">
+		<xs:annotation>
+			<xs:documentation>收缴税务证件情况</xs:documentation>
+		</xs:annotation>
+		<xs:sequence minOccurs="0" maxOccurs="unbounded">
+			<xs:element name="slsqswzjqkbcGridlb" type="DJZxswdjsqSjswzjqkVO">
+				<xs:annotation>
+					<xs:documentation>收缴税务证件情况列表</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="slsjqtswzlqkbcGrid">
+		<xs:annotation>
+			<xs:documentation>收缴税务证件情况</xs:documentation>
+		</xs:annotation>
+		<xs:sequence minOccurs="0" maxOccurs="unbounded">
+			<xs:element name="slsjqtswzlqkbcGridlb" type="DJZxswdjsqSjqtswzlqkVO">
+				<xs:annotation>
+					<xs:documentation>收缴税务证件情况列表</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="qsxxbcGrid">
+		<xs:annotation>
+			<xs:documentation>欠税信息</xs:documentation>
+		</xs:annotation>
+		<xs:sequence minOccurs="0" maxOccurs="unbounded">
+			<xs:element name="qsxxGridbclb" type="DJZxswdjsqSjqtswzlqkVO">
+				<xs:annotation>
+					<xs:documentation>欠税信息</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="djxxbcGrid">
+		<xs:annotation>
+			<xs:documentation>多缴信息</xs:documentation>
+		</xs:annotation>
+		<xs:sequence minOccurs="0" maxOccurs="unbounded">
+			<xs:element name="djxxbcGridlb" type="DJZxswdjsqSjqtswzlqkVO">
+				<xs:annotation>
+					<xs:documentation>多缴信息</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="rdzgxxbcGrid">
+		<xs:annotation>
+			<xs:documentation>认定资格信息</xs:documentation>
+		</xs:annotation>
+		<xs:sequence minOccurs="0" maxOccurs="unbounded">
+			<xs:element name="rdzgxxbcGridlb" type="DJZxswdjQyrdzgxxVO">
+				<xs:annotation>
+					<xs:documentation>认定资格信息</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="yhxxbcGrid">
+		<xs:annotation>
+			<xs:documentation>优惠信息</xs:documentation>
+		</xs:annotation>
+		<xs:sequence minOccurs="0" maxOccurs="unbounded">
+			<xs:element name="yhxxbcGridlb" type="DJZxswdjQyyhxxVO">
+				<xs:annotation>
+					<xs:documentation>优惠信息</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

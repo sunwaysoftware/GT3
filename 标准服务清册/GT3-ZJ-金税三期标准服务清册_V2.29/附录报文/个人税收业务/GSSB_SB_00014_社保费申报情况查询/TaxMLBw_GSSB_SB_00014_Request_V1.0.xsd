@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 被2013 sp1 () 使用XMLSpy v编辑的 (http://www.altova.com) by -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:complexType name="ShbxfQuerySbqkRequest">
+		<xs:annotation>
+			<xs:documentation>社会保险费申报情况查询请求报文</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="djxh" type="djxh">
+						<xs:annotation>
+							<xs:documentation>登记序号（字段不能为空,字段最大长度:20）</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="zgswjgdm" type="zgswjgdm">
+						<xs:annotation>
+							<xs:documentation>主管税务机关代码（字段最大长度:11）</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="sbrqq" type="sbrqq">
+						<xs:annotation>
+							<xs:documentation>申报日期起(格式：YYYY-MM-DD)</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="sbrqz" type="sbrqz">
+						<xs:annotation>
+							<xs:documentation>申报日期止(格式：YYYY-MM-DD)</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="fkssqq" type="fkssqq">
+						<xs:annotation>
+							<xs:documentation>费款所属期起(格式：YYYY-MM-DD)</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="fkssqz" type="fkssqz">
+						<xs:annotation>
+							<xs:documentation>费款所属期止(格式：YYYY-MM-DD)</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+</xs:schema>

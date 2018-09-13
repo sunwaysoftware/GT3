@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2013 (http://www.altova.com) by  () -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:include schemaLocation="TaxMLBw_fjmqysdszxsb2015ywbw_V1.0.xsd"/>
+	<xs:complexType name="HXZGSB01756Request">
+		<xs:annotation>
+			<xs:documentation>非居民企业企业所得税自行申报2015申报保存接入报文</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="Fjmqysdszxsb2015Ywbw" type="Fjmqysdszxsb2015Ywbw">
+						<xs:annotation>
+							<xs:documentation>非居民企业企业所得税自行申报2015保存业务报文</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="SBSBbcTjqtxxVO" type="SBSBbcTjqtxxVO">
+						<xs:annotation>
+							<xs:documentation>非居民企业企业所得税自行申报2015申报保存其他信息报文</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="Fjmqysdszxsb2015Ywbw">
+		<xs:annotation>
+			<xs:documentation>非居民企业企业所得税自行申报2015申报保存接入报文</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="Fjmqysdszxsb2015VO" type="Fjmqysdszxsb2015VO">
+				<xs:annotation>
+					<xs:documentation>非居民企业企业所得税自行申报2015扣缴信息接入报文</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="FjmqysdszxsbNsrxx2015VO" type="FjmqysdszxsbNsrxx2015VO">
+				<xs:annotation>
+					<xs:documentation>非居民企业企业所得税自行申报2015纳税人信息报文</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="SBSBbcTjqtxxVO">
+		<xs:annotation>
+			<xs:documentation>非居民企业企业所得税自行申报2015申报保存其他信息报文</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="djxh" type="djxh">
+				<xs:annotation>
+					<xs:documentation>登记序号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zxbztzsuuid" type="zxbztzsuuid">
+				<xs:annotation>
+					<xs:documentation>uuid</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="czbz" type="bz">
+				<xs:annotation>
+					<xs:documentation>操作标志</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="kjywrmc" type="nsrmc">
+				<xs:annotation>
+					<xs:documentation>扣缴纳税人名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="kjywrdjxh" type="djxh">
+				<xs:annotation>
+					<xs:documentation>扣缴纳税人登记序号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="kjywrzcdz" type="zcdz">
+				<xs:annotation>
+					<xs:documentation>扣缴纳税人注册地址</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

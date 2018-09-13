@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<service xmlns="http://www.chinatax.gov.cn/spec/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <head>
+    <tran_id>SWZJ.HXZG.DJ.CXYHZHSFCF</tran_id>
+    <channel_id>TEST</channel_id>
+    <tran_seq>ae73e5fbb45c4280ae0f6ea193d9f241</tran_seq>
+    <tran_date>20141027</tran_date>
+    <tran_time>051301242</tran_time>
+    <expand>
+      <name>sjry</name>
+      <value>24406060735</value>
+    </expand>
+    <expand>
+      <name>sjjg</name>
+      <value>24406060700</value>
+    </expand>
+  </head>
+  <body><![CDATA[<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<taxML xsi:type="HXZGDJ00403Request" xmlmc="根据银行账号判断是否有重复已登记的账号信息" xmlbh="TaxMLBw_HXZG_DJ_00403_Request_V1.0.xsd" bbh="1.0" xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <yhzh>210307000665431</yhzh>
+    <djxh>10124406020000000143</djxh>
+</taxML>
+]]></body>
+</service>

@@ -1,0 +1,68 @@
+<!-- edited with XMLSpy v2013 (http://www.altova.com) by  () -->
+<!-- 被2012 () 使用XMLSpy v编辑的 (http://www.altova.com) by -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:include schemaLocation="TaxMLPublicYHType.xsd"/>
+	<xs:complexType name="HXZGYH00027Response">
+		<xs:annotation>
+			<xs:documentation>免税图册发布Response</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="clgzsmstcVO" type="ClgzsmstcVO">
+						<xs:annotation>
+							<xs:documentation>车辆购置税免税图册VO</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="ClgzsmstcVO">
+		<xs:annotation>
+			<xs:documentation>车辆购置税免税图册VO</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="mstcxxGrid">
+				<xs:annotation>
+					<xs:documentation>免税图册Grid</xs:documentation>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:sequence minOccurs="0" maxOccurs="unbounded">
+						<xs:element name="mstcxxGridlb" type="YHClgzsmstcVO">
+							<xs:annotation>
+								<xs:documentation>免税图册Grid列表</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="nh" type="nh">
+				<xs:annotation>
+					<xs:documentation>年号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="nnch" type="nnch">
+				<xs:annotation>
+					<xs:documentation>年内册号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="cnyh" type="cnyh">
+				<xs:annotation>
+					<xs:documentation>册内页号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zch" type="xh">
+				<xs:annotation>
+					<xs:documentation>总册号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bbh" type="bbh">
+				<xs:annotation>
+					<xs:documentation>版本号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

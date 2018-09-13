@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:complexType name="YhdjkSbResponse">
+		<xs:annotation>
+			<xs:documentation>银行端缴款申报返回报文</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="djxh" type="djxh">
+						<xs:annotation>
+							<xs:documentation>登记序号</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="sbh" type="sbbm">
+						<xs:annotation>
+							<xs:documentation>社保号</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="skssswjgDm" type="zgswjgDm">
+						<xs:annotation>
+							<xs:documentation>税款所属税务机关</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="yzpzxhList" type="yzpzxhList"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="yzpzxhList">
+		<xs:annotation>
+			<xs:documentation>应征凭证序号列表</xs:documentation>
+		</xs:annotation>
+		<xs:sequence maxOccurs="unbounded">
+			<xs:element name="yzpzxhs" type="yzpzxh">
+				<xs:annotation>
+					<xs:documentation>应征凭证序号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

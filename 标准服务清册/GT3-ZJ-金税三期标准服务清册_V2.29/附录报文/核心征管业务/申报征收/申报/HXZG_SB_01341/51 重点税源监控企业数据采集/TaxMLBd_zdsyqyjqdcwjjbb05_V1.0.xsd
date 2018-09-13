@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2010 rel. 3 (http://www.altova.com) by MESMERiZE (MSM) -->
+<!-- 被2011 rel. 2 sp1 (TeaM DJiNN) 使用XMLSpy vTeaM DJiNN编辑的 (http://www.altova.com) by -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:include schemaLocation="TaxMLPublicType.xsd"/>
+	<xs:complexType name="zdsyqyjqdcwjjbb05VO">
+		<xs:annotation>
+			<xs:documentation>6重点税源企业景气调查问卷（季报）表</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="nsrxxFormVO" type="NsrxxFormVO" minOccurs="0"/>
+			<xs:element name="zdsyqyjqdcwjjbbGrid">
+				<xs:annotation>
+					<xs:documentation>企业调查问卷</xs:documentation>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:sequence minOccurs="0" maxOccurs="unbounded">
+						<xs:element name="zdsyqyjqGridlbVO" type="zdsyqyjqGridlb05VO">
+							<xs:annotation>
+								<xs:documentation>6重点税源企业景气调查问卷（季报）表</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="zdsyqyjqQnycForm" type="zdsyqyjqQnycForm05VO" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>主要指标全年预测（2015年7月前使用）</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zdsyqyjqqnycGrid" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>主要指标全年预测（2015年7月后使用）</xs:documentation>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:sequence maxOccurs="unbounded">
+						<xs:element name="zdsyqyjqqnycGridlb" type="zdsyqyjqqnycGridlbVO"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="zdsyqyjqGridlb05VO">
+		<xs:annotation>
+			<xs:documentation>申报信息</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="ewbhxh" type="ewbhxh" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>二维表行序号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="hmc" type="hmc" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>行名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zk" type="zk" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>状况</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="zdsyqyjqQnycForm05VO">
+		<xs:annotation>
+			<xs:documentation>6重点税源企业景气调查问卷（季报）表（全年预测）</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="yysrbnyc" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>营业收入本年预测</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yysrsntq" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>营业收入上年同期</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yysrsnsj" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>营业收入上年实际</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yysrbnbsnzj" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>营业收入本年比上年增减</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="lrzebnyc" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>利润总额本年预测</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="lrzesntq" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>利润总额上年同期</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="lrzesnsj" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>利润总额上年实际</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="lrzebnbsnzj" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>利润总额本年比上年增减</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="gnsshjbnyc" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>国内税收合计本年预测</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="gnsshjsntq" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>国内税收上年同期</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="gnsshjsnsj" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>国内税收合计上年实际</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="gnsshjbnbsnzj" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>国内税收合计本年比上年增减</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zzsbnyc" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>增值税本年月预计预测</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zzssntq" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>增值税上年同期</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zzssnsj" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>增值税上年实际</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zzsbnbsnzj" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>增值税本年比上年增减</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="xxfbnyc" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>消费税本年预测</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="xxfsntq" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>消费税上年同期</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="xxfsnsj" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>消费税上年实际</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="xxfbnbsnzj" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>消费税本年比上年增减</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="grsdsbnyc" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>个人所得税本年预测</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="grsdssntq" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>个人所得税上年同期</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="grsdssnsj" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>个人所得税上年实际</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="grsdsbnbsnzj" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>个人所得税本年比上年增减</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qysdsbnyc" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>企业所得税本年月预计</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qysdssntq" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>企业所得税上年同期</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qysdssnsj" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>企业所得税上年实际</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qysdsbnbsnzj" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>企业所得税本年比上年增减</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="zdsyqyjqqnycGridlbVO">
+		<xs:annotation>
+			<xs:documentation>6重点税源企业景气调查问卷（季报）表（全年预测）GridlbVO</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="ewbhxh" type="ewbhxh">
+				<xs:annotation>
+					<xs:documentation>二维表行序号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="xmmc" type="xmmc">
+				<xs:annotation>
+					<xs:documentation>经营指标</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bnyc" type="bnyc">
+				<xs:annotation>
+					<xs:documentation>本年预测</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sntq" type="sntq">
+				<xs:annotation>
+					<xs:documentation>上年同期</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="snsj" type="snsj">
+				<xs:annotation>
+					<xs:documentation>上年实际</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bnbsnzjbl" type="bnbsnzjbl">
+				<xs:annotation>
+					<xs:documentation>本年比上年增减比例</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

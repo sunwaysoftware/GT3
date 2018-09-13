@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://www.chinatax.gov.cn/dataspec/" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML_GSGL_YH_23401_A.xsd"/>
+	<xs:include schemaLocation="TaxML_GSGL_YH_23401_B.xsd"/>
+	<xs:include schemaLocation="TaxML_GSGL_YH_23401_C.xsd"/>
+	<xs:include schemaLocation="TaxML_GSGL_YH_23401_D.xsd"/>
+	<xs:include schemaLocation="TaxML_GSGL_YH_23401_BGB.xsd"/>
+	<xs:include schemaLocation="TaxML_GSGL_YH_23401_BAB.xsd"/>
+	<xs:complexType name="yhFjmnsrxsssxddyqkbgbRequest">
+		<xs:annotation>
+			<xs:documentation>非居民纳税人享受税收协定待遇情况报告表-请求报文</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="yhFjmnsrssjmsfxxbgbVo" type="yhFjmnsrssjmsfxxbgb">
+						<xs:annotation>
+							<xs:documentation>报告表</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="yhFjmnsrxsssxddyqkbgbAVo" type="yhFjmnsrxsssxddyqkbgbA">
+						<xs:annotation>
+							<xs:documentation>报告表A</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="yhFjmnsrxsssxddyqkbgbBVo" type="yhFjmnsrxsssxddyqkbgbB">
+						<xs:annotation>
+							<xs:documentation>报告表B</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="yhFjmnsrxsssxddyqkbgbCVo" type="yhFjmnsrxsssxddyqkbgbC">
+						<xs:annotation>
+							<xs:documentation>报告表C</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="yhFjmnsrxsssxddyqkbgbDVo" type="yhFjmnsrxsssxddyqkbgbD">
+						<xs:annotation>
+							<xs:documentation>报告表D</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="yhFjmxsssxddybabVo" type="yhFjmxsssxddybab">
+						<xs:annotation>
+							<xs:documentation>备案表</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+</xs:schema>

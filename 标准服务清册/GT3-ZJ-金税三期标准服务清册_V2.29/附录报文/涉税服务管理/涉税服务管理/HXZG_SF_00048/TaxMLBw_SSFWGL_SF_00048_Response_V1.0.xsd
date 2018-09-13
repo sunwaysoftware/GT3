@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:include schemaLocation="TaxMLPublicSFType.xsd"/>
+	<xs:complexType name="SSFWGLSSFW00048Response">
+		<xs:annotation>
+			<xs:documentation>跨省查询涉税专业服务机构信息</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="ssfwjgxxVOGrid">
+						<xs:annotation>
+							<xs:documentation>涉税专业机构信息VOGrid</xs:documentation>
+						</xs:annotation>
+						<xs:complexType>
+							<xs:sequence maxOccurs="unbounded">
+								<xs:element name="ssfwjgxxVOGridlb" type="ssfwjgxxVO">
+									<xs:annotation>
+										<xs:documentation>涉税专业服务机构信息VO</xs:documentation>
+									</xs:annotation>
+								</xs:element>
+							</xs:sequence>
+						</xs:complexType>
+					</xs:element>
+					<xs:element name="DJSwdjbxxVO" type="DJSwdjbxxVO">
+						<xs:annotation>
+							<xs:documentation>税务登记信息</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="sszyfwryxxbVOGrid">
+						<xs:annotation>
+							<xs:documentation>涉税专业服务人员信息VOGrid</xs:documentation>
+						</xs:annotation>
+						<xs:complexType>
+							<xs:sequence maxOccurs="unbounded">
+								<xs:element name="sszyfwryxxbVOGridlb" type="sszyfwryxxbVO">
+									<xs:annotation>
+										<xs:documentation>涉税专业服务人员信息VO</xs:documentation>
+									</xs:annotation>
+								</xs:element>
+							</xs:sequence>
+						</xs:complexType>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+</xs:schema>

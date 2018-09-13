@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2009 (http://www.altova.com) by Administrator (EMBRACE) -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:complexType name="HXZGRD00056Response">
+		<xs:annotation>
+			<xs:documentation>纳税人当前有效的资格信息查询认定保存接入报文</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="nsrzgxxGrid" type="nsrzgxxGrid">
+						<xs:annotation>
+							<xs:documentation>纳税人当前有效的资格信息列表</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="nsrzgxxGrid">
+		<xs:annotation>
+			<xs:documentation>纳税人当前有效的资格信息列表</xs:documentation>
+		</xs:annotation>
+		<xs:sequence maxOccurs="unbounded">
+			<xs:element name="nsrzgxxGridlb" type="nsrzgxxGridlb">
+				<xs:annotation>
+					<xs:documentation>纳税人当前有效的资格信息</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="nsrzgxxGridlb">
+		<xs:annotation>
+			<xs:documentation>纳税人当前有效的资格信息</xs:documentation>
+		</xs:annotation>
+		<xs:sequence maxOccurs="unbounded">
+			<xs:element name="nsrzglxDm" type="nsrzglxDm">
+				<xs:annotation>
+					<xs:documentation>纳税人资格类型</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

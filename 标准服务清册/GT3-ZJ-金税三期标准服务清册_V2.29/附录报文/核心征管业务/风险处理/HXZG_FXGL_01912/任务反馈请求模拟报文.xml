@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--用XMLSpy v2012产生的 XML文件(http://www.altova.com)-->
+<taxML xsi:type="FxglRwfk01912Request" bbh="String" xmlbh="String" xmlmc="String" xsi:schemaLocation="http://www.chinatax.gov.cn/dataspec/ TaxMLBw_FXGL_01912_Request_V1.0.xsd" xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<RwfkFxydpjfkForm>
+		<fxydclxh>风险应对处理序号（即应对措施对应编号，一般为纳税评估案卷编号、稽查案件编号、特别纳税调整案件编号</fxydclxh>
+		<djxh>登记序号</djxh>
+		<nsrsbh>纳税人识别号</nsrsbh>
+		<nsrmc>纳税人名称</nsrmc>
+		<ydfs>应对方式  (01 稽查，02 纳税评估，03 调查核查 04 事务处理 05提醒)</ydfs>
+		<cljg>处理结果（评估-评估结果， 稽查：案件定性, 调查核实-核查结果）</cljg>
+		<sjzl>数据质量（1、准确  2、比较准确 3、不准确）</sjzl>
+		<sfddysbz>是否达到移送标准（Y是 N否）</sfddysbz>
+		<nsrsfyyj>纳税人是否有意见（Y是 N否）</nsrsfyyj>
+		<sfzdaj>是否重大案件（Y是 N否）</sfzdaj>
+		<sk>税款</sk>
+		<dzfy>代征费用</dzfy>
+		<znj>滞纳金</znj>
+		<fk>罚款</fk>
+		<bz>备注</bz>
+		<clssq>风险应对实施时间起</clssq>
+		<clssz>风险应对实施时间止</clssz>
+		<ydryDm>应对人员代码</ydryDm>
+		<ydryxm>应对人员姓名</ydryxm>
+		<ydbmDm>应对部门代码</ydbmDm>
+		<ydbmmc>应对部门名称</ydbmmc>
+		<ydswjgDm>应对税务机关代码</ydswjgDm>
+		<ydswjgmc>应对税务机关名称ydswjgmc>
+		<fksj>反馈时间(格式 YYYY-MM-DD)</fksj>
+	</RwfkFxydpjfkForm>
+	<RwfkFxydpjfkGrid>
+		<RwfkFxydpjfkGridlb>
+			<fxydxh>风险应对序号</fxydxh>
+		</RwfkFxydpjfkGridlb>
+	</RwfkFxydpjfkGrid>
+</taxML>

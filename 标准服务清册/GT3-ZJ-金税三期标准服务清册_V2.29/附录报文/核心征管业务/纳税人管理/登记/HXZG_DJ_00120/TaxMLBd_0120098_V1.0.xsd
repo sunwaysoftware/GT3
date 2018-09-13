@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2009 (http://www.altova.com) by Administrator (EMBRACE) -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:include schemaLocation="TaxMLPublicDJType.xsd"/>
+	<xs:complexType name="wtxysdjywbw">
+		<xs:annotation>
+			<xs:documentation>委托协议书登记业务报文</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="wtxysxxdjb" type="wtxysdjVO">
+						<xs:annotation>
+							<xs:documentation>委托协议书信息登记表</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="wtxysdjVO">
+		<xs:annotation>
+			<xs:documentation>委托协议书信息登记表</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="wtxysxxForm" type="DJWtxysxxVO">
+				<xs:annotation>
+					<xs:documentation>受托方基本信息</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bwtdznsrGrid">
+				<xs:annotation>
+					<xs:documentation>委托协议被委托代征纳税人信息gird</xs:documentation>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:sequence minOccurs="0" maxOccurs="unbounded">
+						<xs:element name="bwtdznsrGridlb" type="DJWtxysBwtdznsrxxVO">
+							<xs:annotation>
+								<xs:documentation>委托协议被委托代征纳税人信息gird信息列表</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

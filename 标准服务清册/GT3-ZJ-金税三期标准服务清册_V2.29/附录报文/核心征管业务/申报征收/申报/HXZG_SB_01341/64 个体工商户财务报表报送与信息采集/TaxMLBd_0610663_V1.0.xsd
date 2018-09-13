@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2010 rel. 3 (http://www.altova.com) by xiang (hbnu) -->
+<!-- 被2011 rel. 2 sp1 (TeaM DJiNN) 使用XMLSpy vTeaM DJiNN编辑的 (http://www.altova.com) by -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:include schemaLocation="TaxMLPublicType.xsd"/>
+	<xs:complexType name="sygtgshlclrbxxFormVO">
+		<xs:annotation>
+			<xs:documentation>留存利润表（适用执行个体工商户会计制度的单位）</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="bnyssd" type="bnYsk">
+				<xs:annotation>
+					<xs:documentation>本年应税所得</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="grsdsse" type="je">
+				<xs:annotation>
+					<xs:documentation>个人所得税</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="shlzfy" type="shje">
+				<xs:annotation>
+					<xs:documentation>税后列支费用</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zryqks" type="je">
+				<xs:annotation>
+					<xs:documentation>转入逾期亏损</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="nclclr" type="je">
+				<xs:annotation>
+					<xs:documentation>年初留存利润</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="nmlclr" type="je">
+				<xs:annotation>
+					<xs:documentation>年末留存利润</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

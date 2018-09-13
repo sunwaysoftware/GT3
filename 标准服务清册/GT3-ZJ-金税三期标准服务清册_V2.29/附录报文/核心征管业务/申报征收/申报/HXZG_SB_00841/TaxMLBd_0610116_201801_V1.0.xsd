@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- 被2011 rel. 2 sp1 (TeaM DJiNN) 使用XMLSpy vTeaM DJiNN编辑的 (http://www.altova.com) by -->
+<!-- edited with XMLSpy v2010 rel. 3 (http://www.altova.com) by MESMERiZE (MSM) -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="http://www.chinatax.gov.cn/dataspec/">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:include schemaLocation="TaxMLPublicType.xsd"/>
+	<xs:complexType name="Cpyxfskcjsbywbw">
+		<xs:annotation>
+			<xs:documentation>《成品油消费税扣除计算表》业务报文</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="cpyxfskcjsb" type="Cpyxfskcjsb">
+						<xs:annotation>
+							<xs:documentation>《本期准予扣除税额计算表》（成品油）</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="Cpyxfskcjsb">
+		<xs:annotation>
+			<xs:documentation>《成品油消费税扣除计算表》</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="zykcpzmxGrid">
+				<xs:complexType>
+					<xs:sequence maxOccurs="unbounded" minOccurs="0">
+						<xs:element name="zykcpzmxGridlb" type="zykcpzmxGridlbVO"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="dksejkcjsForm" type="dksejkcjsVO">
+			</xs:element>
+			<xs:element name="bxrlyclycqkForm" type="bxrlyclycqkVO">
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="zykcpzmxGridlbVO">
+		<xs:annotation>
+			<xs:documentation>成品油准予扣除凭证明细VO</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="sl1" type="sl1" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>税率</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sl" type="sl" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>数量</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="kprq" type="kprq" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>开票日期</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="pzhm" type="pzhm" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>票证号码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="pzdm" type="pzdm" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>凭证代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="pzlb" type="pzlb" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>凭证类别(1:增值税发票,2:海关缴款书,3:代收缴款书)</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sbuuid" type="sbuuid">
+				<xs:annotation>
+					<xs:documentation>申报UUID</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="pzxh" type="pzxh">
+				<xs:annotation>
+					<xs:documentation>凭证序号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="je" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="xfsse" type="xfsse" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>消费税税额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ysxfpmc" type="ysxfpmc" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>应税消费品名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="dksejkcjsVO">
+		<xs:annotation>
+			<xs:documentation>抵扣税额及库存计算VO</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="bqzykcsl" type="bqzykcsl" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>本期准予扣除数量</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qmkcsl" type="qmkcsl" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>期末库存数量</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sqkcsl" type="sqkcsl" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>上期扣除数量</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sbuuid" type="sbuuid">
+				<xs:annotation>
+					<xs:documentation>申报UUID</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bqlywyylxscbzykcsl" type="bqlywyylxscbzykcsl" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>本期领用未用于连续生产不准予扣除数量</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ewbhxh" type="ewbhxh">
+				<xs:annotation>
+					<xs:documentation>二维表行序号(1:汽油,2:柴油,3:石脑油,4:溶剂油,5:润滑油,6:燃料油,7:航空煤油,8:合计)</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="pzxh" type="pzxh">
+				<xs:annotation>
+					<xs:documentation>凭证序号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bqzykcse" type="bqzykcse" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>本期准予扣除税额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bqwgsl" type="bqwgsl" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>本期外购数量</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="bxrlyclycqkVO">
+		<xs:annotation>
+			<xs:documentation>变性燃料乙醇领用存情况VO</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="bqsclysl" type="bqsclysl" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>本期生产领用数量</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qmkcsl" type="qmkcsl" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>期末库存数量</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sqkcsl" type="sqkcsl" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>上期扣除数量</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sbuuid" type="sbuuid">
+				<xs:annotation>
+					<xs:documentation>申报UUID</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ewbhxh" type="ewbhxh">
+				<xs:annotation>
+					<xs:documentation>二维表行序号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="pzxh" type="pzxh">
+				<xs:annotation>
+					<xs:documentation>凭证序号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bqwgsl" type="bqwgsl" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>本期外购数量</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

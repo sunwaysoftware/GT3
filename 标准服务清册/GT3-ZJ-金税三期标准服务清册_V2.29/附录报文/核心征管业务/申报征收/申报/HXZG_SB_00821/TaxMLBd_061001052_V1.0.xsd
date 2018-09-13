@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 被2012 () 使用XMLSpy v编辑的 (http://www.altova.com) by -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:complexType name="jrbxyyyssb08_jrjjywjqtjrywsryhzmxbywbw">
+		<xs:annotation>
+			<xs:documentation>《金融经纪业务及其他金融业务收入月汇总明细表》业务报文</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="jrbxyyyssb08_jrjjywjqtjrywsryhzmxb" type="jrbxyyyssb08_jrjjywjqtjrywsryhzmxb">
+						<xs:annotation>
+							<xs:documentation>《金融经纪业务及其他金融业务收入月汇总明细表》</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="jrbxyyyssb08_jrjjywjqtjrywsryhzmxb">
+		<xs:annotation>
+			<xs:documentation>《金融经纪业务及其他金融业务收入月汇总明细表》</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="jrjjywjqtjrywsryhzmxbGrid" type="jrjjywjqtjrywsryhzmxbGrid">
+				<xs:annotation>
+					<xs:documentation>金融经纪业务及其他金融业务收入月汇总明细表</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="jrjjywjqtjrywsryhzmxbGrid">
+		<xs:annotation>
+			<xs:documentation>《金融经纪业务及其他金融业务收入月汇总明细表》</xs:documentation>
+		</xs:annotation>
+		<xs:sequence maxOccurs="unbounded">
+			<xs:element name="jrjjywjqtjrywsryhzmxbGridlb" type="jrjjywjqtjrywsryhzmxbGridlb">
+				<xs:annotation>
+					<xs:documentation>金融经纪业务及其他金融业务收入月汇总明细表</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="jrjjywjqtjrywsryhzmxbGridlb">
+		<xs:annotation>
+			<xs:documentation>金融经纪业务及其他金融业务收入月汇总明细表</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="yf" type="yf">
+				<xs:annotation>
+					<xs:documentation>月份</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="wtyw" type="wtywsrje">
+				<xs:annotation>
+					<xs:documentation>委托业务</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="dlfx" type="dlfxsrje">
+				<xs:annotation>
+					<xs:documentation>代理发行</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="dlmmBdwbf" type="je">
+				<xs:annotation>
+					<xs:documentation>代理买卖本单位部分</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="dlmmSjbf" type="je">
+				<xs:annotation>
+					<xs:documentation>代理买卖上缴部分</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qtdl" type="je">
+				<xs:annotation>
+					<xs:documentation>其他代理</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zxyw" type="je">
+				<xs:annotation>
+					<xs:documentation>咨询业务</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jsywClwf" type="je">
+				<xs:annotation>
+					<xs:documentation>结算业务纯劳务费</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jsywYdf" type="je">
+				<xs:annotation>
+					<xs:documentation>结算业务邮电费</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jsywGbf" type="je">
+				<xs:annotation>
+					<xs:documentation>结算业务工本费</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qtyw" type="je">
+				<xs:annotation>
+					<xs:documentation>其他业务</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="xj" type="je">
+				<xs:annotation>
+					<xs:documentation>小计</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

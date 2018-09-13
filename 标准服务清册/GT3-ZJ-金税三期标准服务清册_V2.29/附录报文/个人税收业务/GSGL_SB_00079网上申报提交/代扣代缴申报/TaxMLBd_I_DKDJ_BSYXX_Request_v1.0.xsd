@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:complexType name="bsyxxYwbw">
+		<xs:annotation>
+			<xs:documentation>办税员信息的业务报文</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="bsyxxBzds" type="bsyxxBzds"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="bsyxxBzds">
+		<xs:annotation>
+			<xs:documentation>办税员信息表证单书</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="bsyxx" type="bsyxx">
+				<xs:annotation>
+					<xs:documentation>办税员信息</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="cwfzrxx" type="cwfzrxx">
+				<xs:annotation>
+					<xs:documentation>财务负责人信息</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="frdbxx" type="frdbxx">
+				<xs:annotation>
+					<xs:documentation>法人代表信息</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="bsyxx">
+		<xs:annotation>
+			<xs:documentation>办税员信息</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="bsyxm" type="zrrxm">
+				<xs:annotation>
+					<xs:documentation>办税员姓名，必填</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yddhhm" type="yddh">
+				<xs:annotation>
+					<xs:documentation>移动电话号码（手机号码），必填</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="gddhhm" type="bsrgddh">
+				<xs:annotation>
+					<xs:documentation>固定电话号码，非必填</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qqh" type="bz1">
+				<xs:annotation>
+					<xs:documentation>QQ号，非必填</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="gwzz" type="nr">
+				<xs:annotation>
+					<xs:documentation>岗位职责，非必填，多个的情况下，中间必须用英文逗号隔开，局端会存入sb_dkdj_bsryxx表</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="gwDm" type="gwflDm">
+				<xs:annotation>
+					<xs:documentation>岗位代码，必填</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="gwmc" type="gwmc">
+				<xs:annotation>
+					<xs:documentation>岗位名称，必填</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="lxdz" type="jcjzd">
+				<xs:annotation>
+					<xs:documentation>联系地址，非必填</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="dlqyshlb" type="dlqyshlb">
+				<xs:annotation>
+					<xs:documentation>
+					    代理企业税号列表，多个的情况下，中间必须用英文逗号隔开，局端会存入sb_dkdj_bsryxx_dlqy表
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="dlqysl" type="sl">
+				<xs:annotation>
+					<xs:documentation>代理企业数量</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:simpleType name="dlqyshlb">
+		<xs:annotation>
+			<xs:documentation>代理企业税号列表</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:maxLength value="5000"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:complexType name="cwfzrxx">
+		<xs:annotation>
+			<xs:documentation>财务负责人信息</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="cwfzrxm" type="xm" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>财务负责人姓名，非必填</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="cwfzrsj" type="yddh" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>财务负责人手机，非必填</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="frdbxx">
+		<xs:annotation>
+			<xs:documentation>法人代表信息</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="frdbxm" type="xm" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>法人代表姓名，非必填</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="frdbsj" type="yddh" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>法人代表手机，非必填</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

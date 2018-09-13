@@ -1,0 +1,459 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 被2011 rel. 2 sp1 (monitor20) 使用XMLSpy vCSS编辑的 (http://www.altova.com) by -->
+<!-- edited with XMLSpy v2010 rel. 3 (http://www.altova.com) by MESMERiZE (MSM) -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:include schemaLocation="TaxMLPublicSBType.xsd"/>
+	<xs:include schemaLocation="TaxMLBw_xfssb_V1.0.xsd"/>
+	<xs:complexType name="HXZGSB00001Response">
+		<xs:annotation>
+			<xs:documentation>消费税纳税申报载入基础信息返回报文</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="sbxxGrid">
+						<xs:annotation>
+							<xs:documentation>申报数据信息</xs:documentation>
+						</xs:annotation>
+						<xs:complexType>
+							<xs:sequence minOccurs="0" maxOccurs="unbounded">
+								<xs:element name="sbxxGridlb" type="SBSbxxJhVO"/>
+							</xs:sequence>
+						</xs:complexType>
+					</xs:element>
+					<xs:element name="jmxxGrid">
+						<xs:annotation>
+							<xs:documentation>减免数据信息</xs:documentation>
+						</xs:annotation>
+						<xs:complexType>
+							<xs:sequence minOccurs="0" maxOccurs="unbounded">
+								<xs:element name="jmxxGridlb" type="SBJmxxJhVO"/>
+							</xs:sequence>
+						</xs:complexType>
+					</xs:element>
+					<xs:element name="yjxxGrid">
+						<xs:annotation>
+							<xs:documentation>预缴税款数据信息</xs:documentation>
+						</xs:annotation>
+						<xs:complexType>
+							<xs:sequence minOccurs="0" maxOccurs="unbounded">
+								<xs:element name="yjxxGridlb" type="SBYjxxJhVO"/>
+							</xs:sequence>
+						</xs:complexType>
+					</xs:element>
+					<xs:element name="xfszbqcsGrid">
+						<xs:annotation>
+							<xs:documentation>消费税纳税申报主表期初数数据信息</xs:documentation>
+						</xs:annotation>
+						<xs:complexType>
+							<xs:sequence minOccurs="0" maxOccurs="unbounded">
+								<xs:element name="xfszbqcsGridlb" type="xfszbqcsGridlbVO"/>
+							</xs:sequence>
+						</xs:complexType>
+					</xs:element>
+					<xs:element name="xfsfbqcsxx" type="SBXfsnssbqcsxxVO">
+						<xs:annotation>
+							<xs:documentation>消费税附表期初数数据信息</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="xfsqtxx" type="SBXfsnssbqtxxVO">
+						<xs:annotation>
+							<xs:documentation>消费税纳税申报其他数据信息</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="sbsjxxqtGrid">
+						<xs:annotation>
+							<xs:documentation>其他应税消费品消费税纳税申报Grid</xs:documentation>
+						</xs:annotation>
+						<xs:complexType>
+							<xs:sequence minOccurs="0" maxOccurs="unbounded">
+								<xs:element name="sbsjxxqtGridlb" type="SBXfssbsjxxqtVO"/>
+							</xs:sequence>
+						</xs:complexType>
+					</xs:element>
+					<xs:element name="jyxfsjsjgGrid">
+						<xs:annotation>
+							<xs:documentation>卷烟计税价格信息</xs:documentation>
+						</xs:annotation>
+						<xs:complexType>
+							<xs:sequence minOccurs="0" maxOccurs="unbounded">
+								<xs:element name="jyxfsjsjgGridlb" type="SBXfsjyjsjgVO"/>
+							</xs:sequence>
+						</xs:complexType>
+					</xs:element>
+					<xs:element name="xphxggjyhzGrid">
+						<xs:annotation>
+							<xs:documentation>消费税新牌号新规格卷烟信息汇总表</xs:documentation>
+						</xs:annotation>
+						<xs:complexType>
+							<xs:sequence minOccurs="0" maxOccurs="unbounded">
+								<xs:element name="xphxggjyhzGridlb" type="SBXfsxphxggjyhzVO"/>
+							</xs:sequence>
+						</xs:complexType>
+					</xs:element>
+					<xs:element name="bjzdjsjghdGrid">
+						<xs:annotation>
+							<xs:documentation>白酒最低计税价格核定</xs:documentation>
+						</xs:annotation>
+						<xs:complexType>
+							<xs:sequence minOccurs="0" maxOccurs="unbounded">
+								<xs:element name="bjzdjsjghdGridlb" type="SBXfsbjzdjsjghdVO"/>
+							</xs:sequence>
+						</xs:complexType>
+					</xs:element>
+					<xs:element name="sbsjxxcpyGrid">
+						<xs:annotation>
+							<xs:documentation>成品油类应税消费品消费税纳税申报Grid</xs:documentation>
+						</xs:annotation>
+						<xs:complexType>
+							<xs:sequence minOccurs="0" maxOccurs="unbounded">
+								<xs:element name="sbsjxxcpyGridlb" type="SBXfssbsjxxqtVO"/>
+							</xs:sequence>
+						</xs:complexType>
+					</xs:element>
+					<xs:element name="sbKssssrfpblGrid">
+						<xs:annotation>
+							<xs:documentation>跨省税收收入分配比例信息</xs:documentation>
+						</xs:annotation>
+						<xs:complexType>
+							<xs:sequence minOccurs="0" maxOccurs="unbounded">
+								<xs:element name="sbKssssrfpblGridlb" type="SBKdqsssrfpblqkbVO"/>
+							</xs:sequence>
+						</xs:complexType>
+					</xs:element>
+					<xs:element name="dqdeList">
+						<xs:annotation>
+							<xs:documentation>定期定额信息</xs:documentation>
+						</xs:annotation>
+						<xs:complexType>
+							<xs:sequence minOccurs="0" maxOccurs="unbounded">
+								<xs:element name="sb001dqdeVO" type="SB001dqdeVO"/>
+							</xs:sequence>
+						</xs:complexType>
+					</xs:element>
+					<xs:element name="BqzykcsejsbqtGridlb">
+						<xs:annotation>
+							<xs:documentation>本期准予扣除税额计算表（其他）列表</xs:documentation>
+						</xs:annotation>
+						<xs:complexType>
+							<xs:sequence minOccurs="0" maxOccurs="unbounded">
+								<xs:element name="bqzykcsejsbqtGridlbVO" type="bqzykcsejsbqtGridlbVO"/>
+							</xs:sequence>
+						</xs:complexType>
+					</xs:element>
+					<xs:element name="snyRlyKchyqkQcs">
+						<xs:annotation>
+							<xs:documentation>石脑油、燃料油库存耗用情况期初数</xs:documentation>
+						</xs:annotation>
+						<xs:complexType>
+							<xs:sequence minOccurs="0" maxOccurs="unbounded">
+								<xs:element name="kchyqkGridlb" type="kchyqkGridlbVO"/>
+							</xs:sequence>
+						</xs:complexType>
+					</xs:element>
+					<xs:element name="xfssbSbbdxxVO" type="xfssbywbw">
+						<xs:annotation>
+							<xs:documentation>消费税申报申报表单数据信息(用于获取成品油附表四（1）,附表四（2）的上期库存数量,节点中两个表单的数据均为上期申报时填写的数据)</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="SBXfsnssbqcsxxVO">
+		<xs:annotation>
+			<xs:documentation>消费税纳税申报期初数数据信息</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="dqzykcqckcwtjgysynsk" type="yjse">
+				<xs:annotation>
+					<xs:documentation>当期准予扣除的期初库存委托加工烟丝已纳税款</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="dqzykcqckcwgysj" type="mj1">
+				<xs:annotation>
+					<xs:documentation>当期准予扣除的期初库存外购烟丝买价</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="dqzykcqckcwgbjj" type="sl">
+				<xs:annotation>
+					<xs:documentation>当期准予抵减的期初库存外购啤酒液数量</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="dqzykcqckcjghqyyjnsk" type="yjse">
+				<xs:annotation>
+					<xs:documentation>当期准予扣除的期初库存委托加工含铅汽油已纳税款</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="dqzykcqckcwqqyyjnsk" type="yjse">
+				<xs:annotation>
+					<xs:documentation>当期准予扣除的期初库存委托加工无铅汽油已纳税款</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="dqzykcqckccyynsk" type="yjse">
+				<xs:annotation>
+					<xs:documentation>当期准予扣除的期初库存委托加工柴油已纳税款</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="dqzykcqckcslyynsk" type="yjse">
+				<xs:annotation>
+					<xs:documentation>当期准予扣除的期初库存委托加工石脑油已纳税款</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="dqzykcqckcjgrhyynsk" type="yjse">
+				<xs:annotation>
+					<xs:documentation>当期准予扣除的期初库存委托加工润滑油已纳税款</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="dqzykcqckcjgrynsk" type="yjse">
+				<xs:annotation>
+					<xs:documentation>当期准予扣除的期初库存委托加工燃料油已纳税款</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="dqzykcqckcjghqqysl" type="sl">
+				<xs:annotation>
+					<xs:documentation>当期准予扣除的期初库存外购含铅汽油数量</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="dqzykcqckcjgwhqqysl" type="sl">
+				<xs:annotation>
+					<xs:documentation>当期准予扣除的期初库存外购无铅汽油数量</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="dqzykcqckcwgchsl" type="sl">
+				<xs:annotation>
+					<xs:documentation>当期准予扣除的期初库存外购柴油数量</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="dqzykcqckcwgsnysl" type="sl">
+				<xs:annotation>
+					<xs:documentation>当期准予扣除的期初库存外购石脑油数量</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="dqzykcqckcwgrhhsl" type="sl">
+				<xs:annotation>
+					<xs:documentation>当期准予扣除的期初库存外购润滑油数量</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="dqzykcqckcwgrysl" type="sl">
+				<xs:annotation>
+					<xs:documentation>当期准予扣除的期初库存外购燃料油数量</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="dqzykcqckcjkhqqhsk" type="yjse">
+				<xs:annotation>
+					<xs:documentation>当期准予扣除的期初库存进口含铅汽油已纳税款</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="dqzykcqckcjkwhqqhsk" type="yjse">
+				<xs:annotation>
+					<xs:documentation>当期准予扣除的期初库存进口无铅汽油已纳税款</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="dqzykcqckcjkcyynsk" type="yjse">
+				<xs:annotation>
+					<xs:documentation>当期准予扣除的期初库存进口柴油已纳税款</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="dqzykcqckcjkslyynsk" type="yjse">
+				<xs:annotation>
+					<xs:documentation>当期准予扣除的期初库存进口石脑油已纳税款</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="dqzykcqckcjkrhyynsk" type="yjse">
+				<xs:annotation>
+					<xs:documentation>当期准予扣除的期初库存进口润滑油已纳税款</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="dqzykcqckcjkqyynsk" type="yjse">
+				<xs:annotation>
+					<xs:documentation>当期准予扣除的期初库存进口燃料油已纳税款</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="dqzykcqckcwtjgynxfs" type="yjse">
+				<xs:annotation>
+					<xs:documentation>当期准予扣除的期初库存委托加工应税消费品已纳税款</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="dqzykcqckcwqysxfpmj" type="mj1">
+				<xs:annotation>
+					<xs:documentation>当期准予扣除的期初库存外购应税消费品买价</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="dqzykcqckcwtjgynxfs2" type="yjse">
+				<xs:annotation>
+					<xs:documentation>当期准予扣除的期初库存委托加工应税消费品已纳税款2</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="dqzykcqckcwqysxfpmj2" type="mj1">
+				<xs:annotation>
+					<xs:documentation>当期准予扣除的期初库存外购应税消费品买价2</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="dqzykcqckcwtjgynxfs3" type="yjse">
+				<xs:annotation>
+					<xs:documentation>当期准予扣除的期初库存委托加工应税消费品已纳税款3</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="dqzykcqckcwqysxfpmj3" type="mj1">
+				<xs:annotation>
+					<xs:documentation>当期准予扣除的期初库存外购应税消费品买价3</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="SBXfsnssbqtxxVO">
+		<xs:annotation>
+			<xs:documentation>消费税纳税申报其他数据信息</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="ysbsbblx" type="sblx">
+				<xs:annotation>
+					<xs:documentation>已申报申报表类型（以逗号分割) </xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yqsbBz" type="bz">
+				<xs:annotation>
+					<xs:documentation>延期申报标志</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yqsbMes" type="bz3">
+				<xs:annotation>
+					<xs:documentation>延期申报提示信息</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zfjgBz" type="bz">
+				<xs:annotation>
+					<xs:documentation>总分机构标志</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="kdqsssrfpBz" type="bz">
+				<xs:annotation>
+					<xs:documentation>跨地区税收收入分配标志</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="SBXfsbjzdjsjghdVO">
+		<xs:annotation>
+			<xs:documentation>消费税白酒最低计税价格核定VO</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="pm" type="pm">
+				<xs:annotation>
+					<xs:documentation>品名</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="gg" type="cpgg">
+				<xs:annotation>
+					<xs:documentation>产品规格</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ccjg" type="ccjg">
+				<xs:annotation>
+					<xs:documentation>出厂价格</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="hdxfszdjsjg" type="hdxfszdjsjg">
+				<xs:annotation>
+					<xs:documentation>核定消费税最低计税价格</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bz" type="bz">
+				<xs:annotation>
+					<xs:documentation>备注</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="xfszbqcsGridlbVO">
+		<xs:annotation>
+			<xs:documentation>消费税申报期初数列表VO</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="xfssbblxDm" type="xfssbblxDm">
+				<xs:annotation>
+					<xs:documentation>申报表类型（以逗号分割) </xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qcwjse" type="je">
+				<xs:annotation>
+					<xs:documentation>期初未缴税额 </xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bqjnqqynse" type="je">
+				<xs:annotation>
+					<xs:documentation>本期缴纳前期应纳税额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bqyjse" type="je">
+				<xs:annotation>
+					<xs:documentation>本期预缴税额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qclqse" type="je">
+				<xs:annotation>
+					<xs:documentation>期初留抵税额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bnljybtse" type="je">
+				<xs:annotation>
+					<xs:documentation>本年累计应补退税额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="SB001dqdeVO">
+		<xs:annotation>
+			<xs:documentation>定期定额信息VO</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="ynsjye" type="se">
+				<xs:annotation>
+					<xs:documentation>应纳税经营额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="hdse" type="se">
+				<xs:annotation>
+					<xs:documentation>核定税额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jsyj" type="se">
+				<xs:annotation>
+					<xs:documentation>计税依据</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yjse" type="se">
+				<xs:annotation>
+					<xs:documentation>已缴税额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ynse" type="se">
+				<xs:annotation>
+					<xs:documentation>应纳税额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zsxmDm" type="zsxmDm">
+				<xs:annotation>
+					<xs:documentation>征收项目</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zspmDm" type="zspmDm">
+				<xs:annotation>
+					<xs:documentation>征收品目</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="dqdeBz" type="bz">
+				<xs:annotation>
+					<xs:documentation>定期定额标志</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zspmmc" type="zspmmc">
+				<xs:annotation>
+					<xs:documentation>征收品目名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

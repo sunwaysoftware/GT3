@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<service xmlns="http://www.chinatax.gov.cn/spec/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <head>
+    <tran_id>SWZJ.HXZG.DJ.JYKJYWRXXDJB</tran_id>
+    <channel_id>TEST</channel_id>
+    <tran_seq>f247c5944b5f4f81b59263121022e279</tran_seq>
+    <tran_date>20141029</tran_date>
+    <tran_time>100255254</tran_time>
+    <expand>
+      <name>sjry</name>
+      <value>24406060735</value>
+    </expand>
+    <expand>
+      <name>sjjg</name>
+      <value>24406060700</value>
+    </expand>
+  </head>
+  <body><![CDATA[<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<taxML xsi:type="HXZGDJ00019Request" xmlmc="根据扣缴义务人信息校验是否存在组织临时登记的纳税人信息" xmlbh="TaxMLBw_HXZG_DJ_00019_Request_V1.0.xsd" bbh="1.0" xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <nsrmc>扣缴义务人名称</nsrmc>
+    <fddbrxm>*法定代表人（负责人）名称</fddbrxm>
+    <fddbrsfzjlxDm>203</fddbrsfzjlxDm>
+    <fddbrsfzjhm>1234567890</fddbrsfzjhm>
+    <zzjgDm>098765434</zzjgDm>
+    <zcdzxzqhszDm>440606</zcdzxzqhszDm>
+</taxML>
+]]></body>
+</service>

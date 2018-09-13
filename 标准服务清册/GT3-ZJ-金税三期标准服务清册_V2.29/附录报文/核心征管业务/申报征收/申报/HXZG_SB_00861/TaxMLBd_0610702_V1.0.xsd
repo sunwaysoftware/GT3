@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 被2011 rel. 2 sp1 (TeaM DJiNN) 使用XMLSpy vTeaM DJiNN编辑的 (http://www.altova.com) by -->
+<!-- edited with XMLSpy v2010 rel. 3 (http://www.altova.com) by liuwei (liuweicss) -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:include schemaLocation="TaxMLPublicType.xsd"/>
+	<xs:complexType name="jzzcnstzmxbForm">
+		<xs:annotation>
+			<xs:documentation>捐赠支出纳税调整明细表(A105070)业务报文.</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="jzzcnstzMxbVO" type="jzzcnstzmxbVO" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>捐赠支出纳税调整明细表</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="jzzcnstzMxGrid" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>捐赠支出纳税调整明细表Grid</xs:documentation>
+						</xs:annotation>
+						<xs:complexType>
+							<xs:sequence minOccurs="0" maxOccurs="unbounded">
+								<xs:element name="jzzcnstzMxGridlb" type="jzzcnstzmxGridlbVO">
+									<xs:annotation>
+										<xs:documentation>捐赠支出纳税调整明细Vo</xs:documentation>
+									</xs:annotation>
+								</xs:element>
+							</xs:sequence>
+						</xs:complexType>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="jzzcnstzmxGridlbVO">
+		<xs:annotation>
+			<xs:documentation>捐赠支出明细</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="szdwmc" type="dwmc" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>受赠单位名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="gyxjzzzje" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>公益性捐赠_账载金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="fgyxjzzzje" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>公益性捐赠_账载金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="jzzcnstzmxbVO">
+		<xs:annotation>
+			<xs:documentation>捐赠支出明细</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="hjzzje" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>合计账载金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="hjasskdjsdkcxe" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>按税收规定计算的扣除限额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="hjssje" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>合计税收金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="hjnstzje" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>合计纳税调整金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zzje" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>账载金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="nstzje" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>纳税调整金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

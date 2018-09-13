@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2013 (http://www.altova.com) by  () -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:include schemaLocation="TaxMLPublicDJType.xsd"/>
+	<xs:complexType name="HXZGDJ00172Response">
+		<xs:annotation>
+			<xs:documentation>纳税人土地情况登记信息查询返回报文</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="cxtdxxGrid" type="cxtdxxGrid"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="tdztxxcxGrid">
+		<xs:annotation>
+			<xs:documentation>土地总体信息</xs:documentation>
+		</xs:annotation>
+		<xs:sequence minOccurs="0" maxOccurs="unbounded">
+			<xs:element name="tdztxxcxGridlb" type="tdztxxVO"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="tdsyqkdjxxcxGrid">
+		<xs:annotation>
+			<xs:documentation>土地使用情况登记信息</xs:documentation>
+		</xs:annotation>
+		<xs:sequence minOccurs="0" maxOccurs="unbounded">
+			<xs:element name="tdsyqkdjxxcxGridlb" type="tdsyqkdjxxVO"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="cxtdxxGrid">
+		<xs:annotation>
+			<xs:documentation>查询返回土地信息</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="tdztxxcxGrid" type="tdztxxcxGrid"/>
+			<xs:element name="tdsyqkdjxxcxGrid" type="tdsyqkdjxxcxGrid"/>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

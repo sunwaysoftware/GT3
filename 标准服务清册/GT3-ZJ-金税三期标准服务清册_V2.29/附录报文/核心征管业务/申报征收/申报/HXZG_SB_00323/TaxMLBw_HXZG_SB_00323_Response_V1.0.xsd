@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2013 (http://www.altova.com) by  () -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:include schemaLocation="TaxMLPublicSBType.xsd"/>
+	<xs:complexType name="HXZGSB00323Response">
+		<xs:annotation>
+			<xs:documentation>获取特殊纳税人名单维护初始数据</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="tsnsrGrid">
+						<xs:annotation>
+							<xs:documentation>特殊纳税人Grid</xs:documentation>
+						</xs:annotation>
+						<xs:complexType>
+							<xs:sequence minOccurs="0" maxOccurs="unbounded">
+								<xs:element name="tsnsrGridlb" type="tsnsrGridlbVO">
+									<xs:annotation>
+										<xs:documentation>特殊纳税人Gridlb</xs:documentation>
+									</xs:annotation>
+								</xs:element>
+							</xs:sequence>
+						</xs:complexType>
+					</xs:element>
+					<xs:element name="tsnsrgzGrid">
+						<xs:annotation>
+							<xs:documentation>对应规则Grid</xs:documentation>
+						</xs:annotation>
+						<xs:complexType>
+							<xs:sequence minOccurs="0" maxOccurs="unbounded">
+								<xs:element name="tsnsrgzGridlb" type="tsnsrgzGridlbVO">
+									<xs:annotation>
+										<xs:documentation>对应规则Gridlb</xs:documentation>
+									</xs:annotation>
+								</xs:element>
+							</xs:sequence>
+						</xs:complexType>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="tsnsrGridlbVO">
+		<xs:annotation>
+			<xs:documentation>特殊纳税人列表VO</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="sbuuid" type="sbuuid" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>申报UUID</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="djxh" type="djxh">
+				<xs:annotation>
+					<xs:documentation>登记序号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yxqq" type="yxqq">
+				<xs:annotation>
+					<xs:documentation>有效期起</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yxqz" type="yxqz">
+				<xs:annotation>
+					<xs:documentation>有效期止</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="tsnsrlxDm" type="tsnsrlxDm">
+				<xs:annotation>
+					<xs:documentation>特殊纳税人类型代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="swjgDm" type="swjgDm">
+				<xs:annotation>
+					<xs:documentation>税务机关代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="tsywgluuid" type="tsywgluuid" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>特殊业务关联UUID</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="nsrsbh" type="nsrsbh">
+				<xs:annotation>
+					<xs:documentation>纳税人识别号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="nsrmc" type="nsrsbh">
+				<xs:annotation>
+					<xs:documentation>纳税人名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yskmDm" type="yskmDm" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>预算科目科目代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ysfpblDm" type="ysfpblDm" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>预算分配比例代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zhjzl" type="jzl" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>综合减征率</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sjzsl" type="sjzsl" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>实际征收率</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="swjgmc" type="swjgmc">
+				<xs:annotation>
+					<xs:documentation>税务机关名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jdyjbl" type="sjzsl" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>就地预缴比例</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="tsnsrgzGridlbVO">
+		<xs:annotation>
+			<xs:documentation>特殊纳税人类型规则列表VO</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="csbm" type="csbm">
+				<xs:annotation>
+					<xs:documentation>参数编码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="tsnsrlxDm" type="tsnsrlxDm">
+				<xs:annotation>
+					<xs:documentation>特殊纳税人类型代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

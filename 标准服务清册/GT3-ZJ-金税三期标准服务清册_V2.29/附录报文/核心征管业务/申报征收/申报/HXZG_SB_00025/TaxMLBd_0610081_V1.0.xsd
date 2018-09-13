@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2010 rel. 3 (http://www.altova.com) by MESMERiZE (MSM) -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:include schemaLocation="TaxMLPublicType.xsd"/>
+	<xs:complexType name="yytrqzzssbywbw">
+		<xs:annotation>
+			<xs:documentation>《原油天然气增值税纳税申报表》业务报文</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="yytrqzzssb" type="yytrqzzssb">
+						<xs:annotation>
+							<xs:documentation>《原油天然气增值税纳税申报表》</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="yytrqzzssb">
+		<xs:annotation>
+			<xs:documentation>《原油天然气增值税纳税申报表》</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="sbbhead" type="sbbheadkz1VO">
+				<xs:annotation>
+					<xs:documentation>申报表头信息</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sbxxGrid" type="sbxxGrid">
+				<xs:annotation>
+					<xs:documentation>原油天然气增值税纳税申报明细</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="fjxxForm" type="fjxxForm" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>其他信息</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="sbxxGrid">
+		<xs:annotation>
+			<xs:documentation>《原油天然气增值税纳税申报表》</xs:documentation>
+		</xs:annotation>
+		<xs:sequence maxOccurs="unbounded">
+			<xs:element name="sbxxGridlb" type="sbxxGridlbVO">
+				<xs:annotation>
+					<xs:documentation>原油天然气增值税纳税申报明细</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="fjxxForm">
+		<xs:annotation>
+			<xs:documentation>其他信息</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="swdlrmc" type="swdlrmc">
+				<xs:annotation>
+					<xs:documentation>税务代理人名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="swdlrdz" type="swdlrdz">
+				<xs:annotation>
+					<xs:documentation>税务代理人地址</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="slr" type="slrxm">
+				<xs:annotation>
+					<xs:documentation>受理人姓名</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="slrq" type="slrq">
+				<xs:annotation>
+					<xs:documentation>受理日期</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="sbxxGridlbVO">
+		<xs:annotation>
+			<xs:documentation>原油天然气增值税纳税申报明细</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="ewbhxh" type="ewbhxh" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>二维表行序号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yqtmc" type="yqtmc" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>油（气）田名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yscppm" type="yscppm" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>应税产品品目</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="xssxr" type="xssxr" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>销售实现日</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jssl" type="jssl" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>计税数量</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sl1" type="sl1" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>税率</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="swssl" type="swssl" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>实物税数量</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="wb" type="wb" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>外币ForeignCurrencyamount</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="dhl" type="dhl" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>兑换率</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zhrmbje" type="zhrmbje" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>折合人民币金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="swsxsze" type="swsxsze" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>实物税销售总额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="swsxsfykce" type="swsxsfykce" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>实物税销售费用扣除额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yrkse" type="yrkse" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>应入库税额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

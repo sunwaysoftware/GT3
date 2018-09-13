@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 被2011 rel. 2 sp1 (TeaM DJiNN) 使用XMLSpy vTeaM DJiNN编辑的 (http://www.altova.com) by -->
+<!-- edited with XMLSpy v2013 (http://www.altova.com) by  () -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:include schemaLocation="TaxMLPublicSBType.xsd"/>
+	<xs:complexType name="SBYjsehdZbxxqueryVO">
+		<xs:annotation>
+			<xs:documentation>延期申报延期主键查询延期申报申请信息返回报文</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="nsrsbh">
+				<xs:annotation>
+					<xs:documentation>纳税人识别号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="nsrmc" type="nsrmc">
+				<xs:annotation>
+					<xs:documentation>纳税人名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yjskhdfsDm" type="yjskhdfsDm">
+				<xs:annotation>
+					<xs:documentation>预缴税款核定方式代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="hdr" type="hdr">
+				<xs:annotation>
+					<xs:documentation>核准人</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="hdswjg" type="zspmDm">
+				<xs:annotation>
+					<xs:documentation>核准税务机关</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="hdrq" type="hdrq">
+				<xs:annotation>
+					<xs:documentation>核定日期</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="djxh" type="djxh">
+				<xs:annotation>
+					<xs:documentation>登记序号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yqsbuuid" type="yqsbuuid">
+				<xs:annotation>
+					<xs:documentation>延期申报uuid</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="hzyj" type="hzyj">
+				<xs:annotation>
+					<xs:documentation>核准意见代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="hzyjsm" type="hzyjsm">
+				<xs:annotation>
+					<xs:documentation>核准意见说明</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:sequence maxOccurs="unbounded">
+				<xs:element name="mxList" type="YQSbyjsehdxxVO"/>
+			</xs:sequence>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="YQSbyjsehdxxVO">
+		<xs:annotation>
+			<xs:documentation>延期申报延期主键查询延期申报申请信息税种VO</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="uuid" type="uuid">
+				<xs:annotation>
+					<xs:documentation>uuid</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yqsbUuid">
+				<xs:annotation>
+					<xs:documentation>yqsbUuid</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yjskhdfsDm" type="yjskhdfsDm">
+				<xs:annotation>
+					<xs:documentation>预缴税款核定方式代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sxh" type="sxh">
+				<xs:annotation>
+					<xs:documentation>顺序号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="djxh" type="djxh">
+				<xs:annotation>
+					<xs:documentation>登记序号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zsxmDm" type="zsxmDm">
+				<xs:annotation>
+					<xs:documentation>征收项目代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zspmDm" type="zspmDm">
+				<xs:annotation>
+					<xs:documentation>征收品目代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="skssqq" type="skssqq">
+				<xs:annotation>
+					<xs:documentation>税款所属期起</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="skssqz" type="skssqz">
+				<xs:annotation>
+					<xs:documentation>税款所属期止</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sqsjjnse" type="sqsjjnse">
+				<xs:annotation>
+					<xs:documentation>上期实际缴纳税额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="hdyjse" type="hdyjse">
+				<xs:annotation>
+					<xs:documentation>核定已缴税额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="xjrq" type="xjrq">
+				<xs:annotation>
+					<xs:documentation>限缴日期</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="lrrDm" type="lrrDm">
+				<xs:annotation>
+					<xs:documentation>录入人代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="lrrq" type="lrrq">
+				<xs:annotation>
+					<xs:documentation>录入日期</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="xgrDm" type="xgrDm">
+				<xs:annotation>
+					<xs:documentation>修改人代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="xgrq" type="xgrq">
+				<xs:annotation>
+					<xs:documentation>修改日期</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sjgsdq" type="sjgsdq">
+				<xs:annotation>
+					<xs:documentation>数据归属地区</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sqrq" type="sqrq">
+				<xs:annotation>
+					<xs:documentation>申请日期</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="HXZGSB00149Request">
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="SBYjsehdZbxxqueryVO" type="SBYjsehdZbxxqueryVO"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+</xs:schema>

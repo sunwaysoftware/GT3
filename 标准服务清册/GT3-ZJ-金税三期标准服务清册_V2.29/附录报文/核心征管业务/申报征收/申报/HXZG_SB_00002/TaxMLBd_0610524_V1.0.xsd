@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2011 (http://www.altova.com) by aaa (aaa) -->
+<!-- 被2011 rel. 2 sp1 (TeaM DJiNN) 使用XMLSpy vTeaM DJiNN编辑的 (http://www.altova.com) by -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:include schemaLocation="TaxMLPublicType.xsd"/>
+	<xs:complexType name="syqywgsnyrlypzmxbywbw">
+		<xs:annotation>
+			<xs:documentation>使用企业外购石脑油、燃料油凭证明细表业务报文</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="syqywgsnyrlypzmxb" type="syqywgsnyrlypzmxb">
+						<xs:annotation>
+							<xs:documentation>使用企业外购石脑油、燃料油凭证明细表</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="syqywgsnyrlypzmxb">
+		<xs:annotation>
+			<xs:documentation>使用企业外购石脑油、燃料油凭证明细表</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="syqywgsnyrlypzmxbGrid">
+				<xs:annotation>
+					<xs:documentation>申报数据信息</xs:documentation>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:sequence minOccurs="0" maxOccurs="unbounded">
+						<xs:element name="syqywgsnyrlypzmxbGridlb" type="syqywgsnyrlypzmxbGridlbVO">
+							<xs:annotation>
+								<xs:documentation>申报数据信息</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="jksxxGrid">
+				<xs:complexType>
+					<xs:sequence minOccurs="0" maxOccurs="unbounded">
+						<xs:element name="jksxxGridlb" type="jksxxGridlbVO"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="syqywgsnyrlypzmxbGridlbVO">
+		<xs:annotation>
+			<xs:documentation>申报数据信息</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="ewbhxh" type="ewbhxh">
+				<xs:annotation>
+					<xs:documentation>二维表行序号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qywgyplx" type="qywgyplx">
+				<xs:annotation>
+					<xs:documentation>企业外购油品类型</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="fpzlmc" type="fpzlmc">
+				<xs:annotation>
+					<xs:documentation>凭证种类</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="fpDm" type="fpDm">
+				<xs:annotation>
+					<xs:documentation>发票代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="fphm" type="fphm">
+				<xs:annotation>
+					<xs:documentation>发票号码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="rzrq" type="rzrq">
+				<xs:annotation>
+					<xs:documentation>认证日期</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="xhfnsrsbh" type="xhfnsrsbh">
+				<xs:annotation>
+					<xs:documentation>销货方纳税人识别号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="snysl" type="snysl">
+				<xs:annotation>
+					<xs:documentation>石脑油数量</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="rlysl" type="rlysl">
+				<xs:annotation>
+					<xs:documentation>燃料油数量</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="xfsWspzhm" type="xfsWspzhm">
+				<xs:annotation>
+					<xs:documentation>消费税完税凭证号码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="jksxxGridlbVO">
+		<xs:annotation>
+			<xs:documentation>外购含税进口油品海关进口消费税专用缴款书信息</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="ewbhxh" type="ewbhxh">
+				<xs:annotation>
+					<xs:documentation>二维表行序号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qywgyplx" type="qywgyplx">
+				<xs:annotation>
+					<xs:documentation>类型</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="fpzlmc" type="fpzlmc">
+				<xs:annotation>
+					<xs:documentation>凭证种类</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="hgjkshm" type="hgjkshm">
+				<xs:annotation>
+					<xs:documentation>缴款书号码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="snysl" type="snysl">
+				<xs:annotation>
+					<xs:documentation>石脑油数量</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="rlysl" type="rlysl">
+				<xs:annotation>
+					<xs:documentation>燃料油数量</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="skje" type="skje">
+				<xs:annotation>
+					<xs:documentation>税款金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<service xmlns="http://www.chinatax.gov.cn/spec/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <head>
+    <tran_id>SWZJ.HXZG.DJ.BCCCQKDJB</tran_id>
+    <channel_id>MNQ</channel_id>
+    <tran_seq>ca80cc3def9a4c0889ddf5e9a75eca88</tran_seq>
+    <tran_date>20141029</tran_date>
+    <tran_time>032447955</tran_time>
+    <expand>
+      <name>sjry</name>
+      <value>24406060735</value>
+    </expand>
+    <expand>
+      <name>sjjg</name>
+      <value>24406060700</value>
+    </expand>
+  </head>
+  <body><![CDATA[<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<taxML xsi:type="HXZGDJ00176Request" xmlmc="保存车船情况登记及变更表并启动分配" xmlbh="TaxMLBw_HXZG_DJ_00176_Request_V1.0.xsd" bbh="1.0" xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <djxh>12440600000000000182</djxh>
+    <lcslid>04D5FE6418E01E734E118290752AA164</lcslid>
+    <ccqkdjb>
+        <ccqkdjbSlxxForm>
+            <sqr>邓生</sqr>
+            <sqrq>2014-10-29</sqrq>
+            <slrq>2014-10-29</slrq>
+        </ccqkdjbSlxxForm>
+        <ClqkxxsGrid>
+            <InsertClqkxxGrid>
+                <InsertClqkxxGridlb>
+                    <clpzh>粤Y102102</clpzh>
+                    <clsbdh>ABCE2014381423099</clsbdh>
+                    <nynse>720.0</nynse>
+                    <yxqq>2014-10-01</yxqq>
+                    <zspmDm>101140104</zspmDm>
+                    <ssswjgDm>24406060700</ssswjgDm>
+                    <xzqhszDm>440606</xzqhszDm>
+                    <jdxzDm>440606102</jdxzDm>
+                    <nsqxDm>09</nsqxDm>
+                    <sbqxDm>04</sbqxDm>
+                    <jkqxDm>04</jkqxDm>
+                    <sl1>720.0</sl1>
+                    <zbzl>6.0</zbzl>
+                    <hdzkrs>5</hdzkrs>
+                    <pql>2.0</pql>
+                </InsertClqkxxGridlb>
+            </InsertClqkxxGrid>
+            <UpdateClqkxxGrid/>
+            <DeleteClqkxxGrid/>
+        </ClqkxxsGrid>
+        <CbqkxxsGrid>
+            <InsertCbqkxxGrid/>
+            <UpdateCbqkxxGrid/>
+            <DeleteCbqkxxGrid/>
+        </CbqkxxsGrid>
+    </ccqkdjb>
+</taxML>
+]]></body>
+</service>

@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2011 (http://www.altova.com) by www.hbnu.com (www.hbnu.com) -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:include schemaLocation="TaxMLPublic.xsd"/>
+	<xs:complexType name="sdsshywhdgbfbbywbw">
+		<xs:annotation>
+			<xs:documentation>《国别报告－所得、税收和业务活动国别分布表》业务报文</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="qyndglywwlbg2016_G114010" type="qyndglywwlbg2016_G114010">
+						<xs:annotation>
+							<xs:documentation>《国别报告－所得、税收和业务活动国别分布表》</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="qyndglywwlbg2016_G114010">
+		<xs:annotation>
+			<xs:documentation>《国别报告－所得、税收和业务活动国别分布表》</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="kgqyjtmc" type="nsrmc">
+				<xs:annotation>
+					<xs:documentation>跨国企业集团名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="skssqq" type="skssqq">
+				<xs:annotation>
+					<xs:documentation>会计年度起</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="skssqz" type="skssqz">
+				<xs:annotation>
+					<xs:documentation>会计年度止</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="gbbgGrid" type="gbbgGrid">
+				<xs:annotation>
+					<xs:documentation>国别报告－所得、税收和业务活动国别分布表</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="gbbgGrid">
+		<xs:annotation>
+			<xs:documentation>国别报告－所得、税收和业务活动国别分布表</xs:documentation>
+		</xs:annotation>
+		<xs:sequence maxOccurs="unbounded">
+			<xs:element name="gbbgGridlbVO" type="gbbgGridlbVO">
+				<xs:annotation>
+					<xs:documentation>国别报告－所得、税收和业务活动国别分布表</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="gbbgGridlbVO">
+		<xs:annotation>
+			<xs:documentation>国别报告－所得、税收和业务活动国别分布表</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="gjhdqszDm" type="gjhdqszDm">
+				<xs:annotation>
+					<xs:documentation>国家（地区），取值为代码表DM_GY_GJHDQ</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="fglfsr" type="je">
+				<xs:annotation>
+					<xs:documentation>非关联方收入</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="glfsr" type="je">
+				<xs:annotation>
+					<xs:documentation>关联方收入</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zjsr" type="je">
+				<xs:annotation>
+					<xs:documentation>总计收入</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sqlr" type="je">
+				<xs:annotation>
+					<xs:documentation>税前利润（亏损）</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yjnqysds" type="je">
+				<xs:annotation>
+					<xs:documentation>已缴纳企业所得税（收付实现制）</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bnjtdsqysds" type="je">
+				<xs:annotation>
+					<xs:documentation>本年度计提的企业所得税</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zczb" type="je">
+				<xs:annotation>
+					<xs:documentation>注册资本</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="lcsy" type="je">
+				<xs:annotation>
+					<xs:documentation>留存收益</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="gyrs" type="ggrs">
+				<xs:annotation>
+					<xs:documentation>雇员人数</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yxzc" type="je">
+				<xs:annotation>
+					<xs:documentation>有型资产</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

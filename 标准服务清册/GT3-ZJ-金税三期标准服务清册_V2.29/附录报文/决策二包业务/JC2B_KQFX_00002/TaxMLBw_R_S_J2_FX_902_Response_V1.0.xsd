@@ -1,0 +1,303 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+    <xs:include schemaLocation="TaxML.xsd"/>
+    <xs:complexType name="RSJ2FX902Response">
+        <xs:annotation>
+            <xs:documentation>关联纳税人关联明细查询返回报文</xs:documentation>
+        </xs:annotation>
+        <xs:complexContent>
+            <xs:extension base="taxDoc">
+                <xs:sequence minOccurs="0">
+                    <xs:element name="ycnsrxxGrid">
+						<xs:annotation>
+							<xs:documentation>异常纳税人信息列表</xs:documentation>
+						</xs:annotation>
+						<xs:complexType>
+							<xs:sequence maxOccurs="unbounded">
+								<xs:element name="ycnsrxx">
+									<xs:annotation>
+										<xs:documentation>异常纳税人信息</xs:documentation>
+									</xs:annotation>
+									<xs:complexType>
+										<xs:sequence>
+											<xs:element name="ywlsh" type="xs:string">
+												<xs:annotation>
+													<xs:documentation>业务流水号</xs:documentation>
+												</xs:annotation>
+											</xs:element>
+											<xs:element name="nsrdzdah" type="xs:string">
+												<xs:annotation>
+													<xs:documentation>纳税人电子档案号</xs:documentation>
+												</xs:annotation>
+											</xs:element>
+											<xs:element name="nsrsbh" type="xs:string">
+												<xs:annotation>
+													<xs:documentation>纳税人识别号</xs:documentation>
+												</xs:annotation>
+											</xs:element>
+											<xs:element name="nsrmc" type="xs:string">
+												<xs:annotation>
+													<xs:documentation>纳税人名称</xs:documentation>
+												</xs:annotation>
+											</xs:element>
+											<xs:element name="glpdbz" type="xs:string">
+												<xs:annotation>
+													<xs:documentation>关联判D标志</xs:documentation>
+												</xs:annotation>
+											</xs:element>
+											<xs:element name="cflxDm" type="xs:string">
+												<xs:annotation>
+													<xs:documentation>触发类型</xs:documentation>
+												</xs:annotation>
+											</xs:element>
+											<xs:element name="yclxDm" type="xs:string">
+												<xs:annotation>
+													<xs:documentation>异常纳税人类型</xs:documentation>
+												</xs:annotation>
+											</xs:element>
+											<xs:element name="ycNsrdzdah" type="xs:string">
+												<xs:annotation>
+													<xs:documentation>异常纳税人登记序号</xs:documentation>
+												</xs:annotation>
+											</xs:element>
+											<xs:element name="ycShxydm" type="xs:string">
+												<xs:annotation>
+													<xs:documentation>异常纳税人社会信用代码</xs:documentation>
+												</xs:annotation>
+											</xs:element>
+											<xs:element name="ycNsrsbh" type="xs:string">
+												<xs:annotation>
+													<xs:documentation>异常纳税人识别号</xs:documentation>
+												</xs:annotation>
+											</xs:element>
+											<xs:element name="ycNsrmc" type="xs:string">
+												<xs:annotation>
+													<xs:documentation>异常纳税人名称</xs:documentation>
+												</xs:annotation>
+											</xs:element>
+											<xs:element name="ycNsrSjswjgId" type="xs:string">
+												<xs:annotation>
+													<xs:documentation>异常纳税人省级税务机关代码</xs:documentation>
+												</xs:annotation>
+											</xs:element>
+											<xs:element name="ycNsrZgswjgId" type="xs:string">
+												<xs:annotation>
+													<xs:documentation>异常纳税人主管税务机关代码</xs:documentation>
+												</xs:annotation>
+											</xs:element>
+											<xs:element name="ycNsrFddbrmc" type="xs:string">
+												<xs:annotation>
+													<xs:documentation>异常纳税人法定代办人名称</xs:documentation>
+												</xs:annotation>
+											</xs:element>
+											<xs:element name="ycNsrFddbrzjlxId" type="xs:string">
+												<xs:annotation>
+													<xs:documentation>异常纳税人法定代办人证件类型</xs:documentation>
+												</xs:annotation>
+											</xs:element>
+											<xs:element name="ycNsrFddbrzjhm" type="xs:string">
+												<xs:annotation>
+													<xs:documentation>异常纳税人法定代办人证件号码</xs:documentation>
+												</xs:annotation>
+											</xs:element>
+											<xs:element name="ycNsrztId" type="xs:string">
+												<xs:annotation>
+													<xs:documentation>异常纳税人状态</xs:documentation>
+												</xs:annotation>
+											</xs:element>
+										</xs:sequence>
+									</xs:complexType>
+								</xs:element>
+							</xs:sequence>
+						</xs:complexType>	
+					</xs:element>
+					<xs:element name="djnsrxxGrid">
+                		<xs:annotation>
+							<xs:documentation>D级纳税人信息列表</xs:documentation>
+						</xs:annotation>
+						<xs:complexType>
+							<xs:sequence maxOccurs="unbounded">
+								<xs:element name="djnsrxx">
+									<xs:complexType>
+										<xs:sequence>
+											<xs:element name="nsrdzdah" type="xs:string">
+												<xs:annotation>
+													<xs:documentation>纳税人登记序号</xs:documentation>
+												</xs:annotation>
+											</xs:element>	
+											<xs:element name="sjswjgId" type="xs:string">
+												<xs:annotation>
+													<xs:documentation>省级税务机关代码</xs:documentation>
+												</xs:annotation>
+											</xs:element>	
+											<xs:element name="rdrq" type="xs:string">
+												<xs:annotation>
+													<xs:documentation>认定日期</xs:documentation>
+												</xs:annotation>
+											</xs:element>
+											<xs:element name="rdyy" type="xs:string">
+												<xs:annotation>
+													<xs:documentation>认定原因</xs:documentation>
+												</xs:annotation>
+											</xs:element>
+											<xs:element name="rdswjgId" type="xs:string">
+												<xs:annotation>
+													<xs:documentation>认定税务机关代码</xs:documentation>
+												</xs:annotation>
+											</xs:element>
+											<xs:element name="rdswjgMc" type="xs:string">
+												<xs:annotation>
+													<xs:documentation>认定税务机关名称</xs:documentation>
+												</xs:annotation>
+											</xs:element>
+											<xs:element name="zjpdBz" type="xs:string">
+												<xs:annotation>
+													<xs:documentation>直接判D标志</xs:documentation>
+												</xs:annotation>
+											</xs:element>
+										</xs:sequence>	
+									</xs:complexType>
+								</xs:element>
+							</xs:sequence>
+						</xs:complexType>	
+                	</xs:element>
+					<xs:element name="qsnsrxxGrid">
+                		<xs:annotation>
+							<xs:documentation>欠税纳税人信息列表</xs:documentation>
+						</xs:annotation>
+						<xs:complexType>
+							<xs:sequence maxOccurs="unbounded">
+								<xs:element name="qsnsrxx">
+									<xs:complexType>
+										<xs:sequence>	
+											<xs:element name="nsrdzdah" type="xs:string">
+												<xs:annotation>
+													<xs:documentation>纳税人登记序号</xs:documentation>
+												</xs:annotation>
+											</xs:element>
+											<xs:element name="sjswjgId" type="xs:string">
+												<xs:annotation>
+													<xs:documentation>省级税务机关代码</xs:documentation>
+												</xs:annotation>
+											</xs:element>	
+											<xs:element name="qjssje" type="xs:string">
+												<xs:annotation>
+													<xs:documentation>欠缴税收金额</xs:documentation>
+												</xs:annotation>
+											</xs:element>	
+											<xs:element name="xjrq" type="xs:string">
+												<xs:annotation>
+													<xs:documentation>限缴日期</xs:documentation>
+												</xs:annotation>
+											</xs:element>		
+										</xs:sequence>
+									</xs:complexType>
+								</xs:element>
+							</xs:sequence>
+						</xs:complexType>	
+                	</xs:element>
+                	
+                	<xs:element name="hmdnsrxxGrid">
+                		<xs:annotation>
+							<xs:documentation>黑名单纳税人信息列表</xs:documentation>
+						</xs:annotation>
+						<xs:complexType>
+							<xs:sequence maxOccurs="unbounded">
+								<xs:element name="hmdnsrxx">
+									<xs:complexType>
+										<xs:sequence>
+											<xs:element name="nsrdzdah" type="xs:string">
+												<xs:annotation>
+													<xs:documentation>纳税人登记序号</xs:documentation>
+												</xs:annotation>
+											</xs:element>
+											<xs:element name="sjswjgId" type="xs:string">
+												<xs:annotation>
+													<xs:documentation>省级税务机关代码</xs:documentation>
+												</xs:annotation>
+											</xs:element>
+											<xs:element name="zywfxw" type="xs:string">
+												<xs:annotation>
+													<xs:documentation>主要违法行为</xs:documentation>
+												</xs:annotation>
+											</xs:element>
+											<xs:element name="ssjcswjgId" type="xs:string">
+												<xs:annotation>
+													<xs:documentation>实施检查税务机关代码</xs:documentation>
+												</xs:annotation>
+											</xs:element>
+											<xs:element name="ssjcswjgmc" type="xs:string">
+												<xs:annotation>
+													<xs:documentation>实施检查税务机关名称</xs:documentation>
+												</xs:annotation>
+											</xs:element>
+											<xs:element name="gbrq" type="xs:string">
+												<xs:annotation>
+													<xs:documentation>公布日期</xs:documentation>
+												</xs:annotation>
+											</xs:element>	
+										</xs:sequence>
+									</xs:complexType>
+								</xs:element>
+							</xs:sequence>
+						</xs:complexType>
+                	</xs:element>
+                	
+                	<xs:element name="fzcnsrxxGrid">
+                		<xs:annotation>
+							<xs:documentation>非正常纳税人信息列表</xs:documentation>
+						</xs:annotation>
+						<xs:complexType>
+							<xs:sequence maxOccurs="unbounded">
+							<xs:element name="fzcnsrxx">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="nsrdzdah" type="xs:string">
+											<xs:annotation>
+												<xs:documentation>纳税人登记序号</xs:documentation>
+											</xs:annotation>
+										</xs:element>
+										<xs:element name="sjswjgId" type="xs:string">
+											<xs:annotation>
+												<xs:documentation>省级税务机关代码</xs:documentation>
+											</xs:annotation>
+										</xs:element>
+										<xs:element name="fzchrdsj" type="xs:string">
+											<xs:annotation>
+												<xs:documentation>非正常户认定时间</xs:documentation>
+											</xs:annotation>
+										</xs:element>
+										<xs:element name="fzchrdyy" type="xs:string">
+											<xs:annotation>
+												<xs:documentation>非正常户认定原因</xs:documentation>
+											</xs:annotation>
+										</xs:element>
+										<xs:element name="fzchrdSwjgId" type="xs:string">
+											<xs:annotation>
+												<xs:documentation>非正常户认定税务机关代码</xs:documentation>
+											</xs:annotation>
+										</xs:element>
+										<xs:element name="fzchrdSwjgMc" type="xs:string">
+											<xs:annotation>
+												<xs:documentation>纳税非正常户认定税务机关名称</xs:documentation>
+											</xs:annotation>
+										</xs:element>
+										<xs:element name="qjssje" type="xs:string">
+											<xs:annotation>
+												<xs:documentation>欠缴税收金额</xs:documentation>
+											</xs:annotation>
+										</xs:element>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+							</xs:sequence>	
+						</xs:complexType>	
+						
+                	</xs:element>
+                </xs:sequence>
+                      
+               
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+</xs:schema>

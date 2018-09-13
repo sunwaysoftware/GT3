@@ -1,0 +1,326 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+		被2011 rel. 2 sp1 (TeaM DJiNN) 使用XMLSpy vTeaM DJiNN编辑的
+		(http://www.altova.com) by
+	-->
+<!--
+		edited with XMLSpy v2010 rel. 3 (http://www.altova.com) by MESMERiZE
+		(MSM)
+	-->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:include schemaLocation="TaxMLPublicType.xsd"/>
+	<xs:complexType name="jmsdsyhmxbFormNew">
+		<xs:annotation>
+			<xs:documentation>减免所得税优惠明细表(A107040)业务报文(新版本)</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="jmsdsyhMxbVONew" type="jmsdsyhmxbVONew" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>减免所得税优惠明细表</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="jmsdsyhmxbVONew">
+		<xs:annotation>
+			<xs:documentation>《减免所得税优惠明细表》</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="fhtjxxwlqy" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>符合条件的小型微利企业</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="xwjbzs" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>其中：减半征税||其中：减半征税</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="gjzdfcgxjsqy" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>国家需要重点扶持的高新技术企业</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jmdfmzzzdfqy" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>减免地方分享所得税的民族自治地方企业</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qtzxyh" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>其他专项优惠</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="tqxqgxjsqy" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>经济特区和上海浦东新区新设立的高新技术企业</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="whsydwzzqy" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>经营性文化事业单位转制企业</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="dmqy" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>动漫企业</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="szssyzqy" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>受灾地区损失严重的企业</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="szncxys" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>受灾地区农村信用社</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="szcjyqy" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>受灾地区的促进就业企业</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jsxjfwqy" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>技术先进型服务企业</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="xjxbqy" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>新疆困难地区新办企业</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="xjkfqxbqy" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>新疆喀什、霍尔果斯特殊经济开发区新办企业</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="cjzdqtcyjy" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>支持和促进重点群体创业就业企业</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="xkxyldbwmdjcdlqy" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>集成电路线宽小于0.8微米（含）的集成电路生产企业</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="xkxyldewwmdjcdlqy" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>集成电路线宽小于0.25微米的集成电路生产企业</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="cgbsyjcdlscqy" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>投资额超过80亿元人民币的集成电路生产企业</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="xbjcdlsjqy" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>新办集成电路设计企业</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="gjghzdjcdlsjqy" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>国家规划布局内重点集成电路设计企业</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="fhtjrjqy" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>符合条件的软件企业</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="gjghzdrjqy" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>国家规划布局内重点软件企业</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="xbdqglcyqy" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>设在西部地区的鼓励类产业企业</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sczbscryzmypqy" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>符合条件的生产和装配伤残人员专门用品企业</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<!--<xs:element name="zgczzcxgxjsqy" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>中关村国家自主创新示范区从事文化产业支撑技术等领域的高新技术企业</xs:documentation>
+				</xs:annotation>
+			</xs:element>-->
+			<xs:element name="xsgdqyhqy" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>享受过渡期税收优惠企业</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="xdfwhzqqy" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>横琴新区、平潭综合实验区和前海深港现代化服务业合作区企业</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qt" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>其他1减免金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="fdsljbqysdsdjjmsyh" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>项目所得额按法定税率减半征收企业所得税叠加享受减免税优惠</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="hj" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>合计</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qt1" type="nsrsbh" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>其他1(减免性质代码)</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jzmzlx" type="nsrsbh" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>减征免征类型||减征免征类型1减征2免征</xs:documentation>
+				</xs:annotation>
+			</xs:element>			
+			<xs:element name="gxjsqydslyh" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>高新技术企业低税率优惠（填写A107041）||高新技术企业低税率优惠</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="lsszdqmzsds" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>受灾地区损失严重企业(鲁山)||受灾地区损失严重企业(鲁山)</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ldszdqmzsds" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>受灾地区损失严重企业(鲁甸)||受灾地区损失严重企业(鲁甸)</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="szssyzqyqt" type="nsrsbh" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>受灾地区损失严重的企业-其他减免性质||受灾地区损失严重的企业-其他减免性质</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="szssyzqyqtje" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>受灾地区损失严重的企业-其他减免金额||受灾地区损失严重的企业-其他减免金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ncxylsdqmzsds" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>受灾地区农村信用社-芦山地区||受灾地区农村信用社-芦山地区</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ncxylddqmzsds" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>受灾地区农村信用社-鲁甸地区||受灾地区农村信用社-鲁甸地区</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="szncxysqt" type="nsrsbh" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>受灾地区农村信用社-其他减免性质||受灾地区农村信用社-其他减免性质</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="szncxysqtje" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>受灾地区农村信用社-减免金额||受灾地区农村信用社-减免金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="szdqjylsdqmzsds" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>受灾地区的促进就业企业-芦山地区||受灾地区的促进就业企业-芦山地区</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="szdqjylddqmzsds" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>受灾地区的促进就业企业-鲁甸地区||受灾地区的促进就业企业-鲁甸地区</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="szcjyqyqt" type="nsrsbh" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>受灾地区的促进就业企业-其他减免性质||受灾地区的促进就业企业-其他减免性质</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="szcjyqyqtje" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>受灾地区的促进就业企业-其他减免金额||受灾地区的促进就业企业-其他减免金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="cjzdqtcyjyxg" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>其中:1.下岗失业人员再就业||其中:1.下岗失业人员再就业</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="cjzdqtcyjygx" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>高校毕业生就业||高校毕业生就业</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="cjzdqtcytysb" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>退役士兵就业||退役士兵就业</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="tzejcdldqjmqysds" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>1.定期减免企业所得税||1.定期减免企业所得税</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jcdlfzcsqy" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>集成电路封装、测试企业||集成电路封装、测试企业</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jcdlgjzyclscsbqy" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>集成电路关键专用材料生产企业或集成电路专用设备生产企业||集成电路关键专用材料生产企业或集成电路专用设备生产企业</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qt2" type="nsrsbh" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>其他2(减免性质代码)</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qt2je" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>其他2金额||其他2金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qt3" type="nsrsbh" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>其他3(减免性质代码)</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qt3je" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>其他3金额||其他3金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jcdldqjmqysds" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>定期减免企业所得税||定期减免企业所得税</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jcdljaslzsqysds" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>减按15%税率征收企业所得税||减按15%税率征收企业所得税</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="tzejcdljaslzsqysds" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>减按15%税率征收企业所得税||减按15%税率征收企业所得税</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

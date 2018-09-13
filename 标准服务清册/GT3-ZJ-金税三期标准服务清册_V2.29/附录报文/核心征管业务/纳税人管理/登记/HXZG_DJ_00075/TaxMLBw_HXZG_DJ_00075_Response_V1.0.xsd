@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2013 (http://www.altova.com) by  () -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:complexType name="HXZGDJ00075Response">
+		<xs:annotation>
+			<xs:documentation>变更税务登记保存响应</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="xnsrsbh" type="nsrsbh">
+						<xs:annotation>
+							<xs:documentation>新纳税人识别号</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="dfsavebz" type="bz1">
+						<xs:annotation>
+							<xs:documentation>对方保存标志（国地共管户）</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="zjsjbz" type="bz1">
+						<xs:annotation>
+							<xs:documentation>证件收缴标志</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="lyfbgbz" type="bz1">
+						<xs:annotation>
+							<xs:documentation>另一方变更标志（直属局管户）</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="bgnsrmcbz" type="bz1">
+						<xs:annotation>
+							<xs:documentation>是否变更纳税人名称</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="fpmsg" type="bz">
+						<xs:annotation>
+							<xs:documentation>发票提示信息（纳税人已自印的发票将不得使用）</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+</xs:schema>

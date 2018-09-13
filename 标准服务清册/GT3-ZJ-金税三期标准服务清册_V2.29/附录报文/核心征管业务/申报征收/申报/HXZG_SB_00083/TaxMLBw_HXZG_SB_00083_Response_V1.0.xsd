@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2010 rel. 3 (http://www.altova.com) by MESMERiZE (MSM) -->
+<!-- 被2012 () 使用XMLSpy v编辑的 (http://www.altova.com) by -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxMLBw_HXZG_SB_00081_Response_V1.0.xsd"/>
+	<xs:complexType name="HXZGSB00083Response">
+		<xs:annotation>
+			<xs:documentation>车辆购置税申报计税返回报文</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="SBClgzsJsResVO" type="SBClgzsJsResVO">
+						<xs:annotation>
+							<xs:documentation>车辆购置税申报计税返回</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="SBClgzsJsResVO">
+		<xs:annotation>
+			<xs:documentation>车辆购置税计税返回报文</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="flag" type="bz">
+				<xs:annotation>
+					<xs:documentation>计税返回标志（clsbdh：表示车架号监控异常，ba：表示车价信息监控未通过需要触发最低计税价格备案，js：计税成功，返回计税结果）</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="SBCgsClsbdhJkResVO" type="SBCgsClsbdhJkResVO">
+				<xs:annotation>
+					<xs:documentation>车辆购置税车辆识别号监控返回值对象</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="SBCgsStartBazdjsjgReqVO" type="SBCgsStartBazdjsjgReqVO">
+				<xs:annotation>
+					<xs:documentation>车辆购置税备案最低计税价格申请值对象</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="SBCgsJsResVO" type="SBCgsJsResVO">
+				<xs:annotation>
+					<xs:documentation>车购税计税返回值对象</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="cgsznjxxVO" type="cgsznjxxVO">
+				<xs:annotation>
+					<xs:documentation>车购税滞纳金信息（模拟缴款日期为此刻计算，真实精确的在征收开票环节计算）</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ClgzssbcxjdctyxsfpxxResponseVO" type="ClgzssbcxjdctyxsfpxxResponseVO">
+				<xs:annotation>
+					<xs:documentation>车辆购置税申报查询电子抵账机动车统一销售发票返回信息</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="xtbdSftgFlag" type="bz">
+				<xs:annotation>
+					<xs:documentation>0默认为不启用、1默认为系统比对通过、2默认为系统比对不通过、3默认为系统比对通过人工比对通过、4默认为系统比对通过人工比对不通过</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="SBCgsJsResVO">
+		<xs:complexContent>
+			<xs:extension base="clgzssbhzxxForm">
+				<xs:sequence>
+					<xs:element name="nssbrq" type="nssbrq">
+						<xs:annotation>
+							<xs:documentation>纳税申报日期</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="skssqq" type="skssqq">
+						<xs:annotation>
+							<xs:documentation>税款所属期起</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="skssqz" type="skssqz">
+						<xs:annotation>
+							<xs:documentation>税款所属期至</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="sbqxrq" type="sbqx">
+						<xs:annotation>
+							<xs:documentation>申报期限日期</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="xjqxrq" type="jkqx">
+						<xs:annotation>
+							<xs:documentation>限缴期限日期</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="gzrq" type="gzrq">
+						<xs:annotation>
+							<xs:documentation>购置日期</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="zdjsjg" type="zdjsjg" nillable="true">
+						<xs:annotation>
+							<xs:documentation>最低计税价格</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+</xs:schema>

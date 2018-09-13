@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 被2012 () 使用XMLSpy v编辑的 (http://www.altova.com) by -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxDoc.xsd"/>
+	<xs:include schemaLocation="TaxMLPublic.xsd"/>
+	<xs:include schemaLocation="TaxMLPublicFPType.xsd"/>
+	<xs:complexType name="HXZGFP00095Request">
+		<xs:annotation>
+			<xs:documentation>保存超限量购票特批申请信息</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="gptpSqspVO" type="FPGptpSqspVO">
+						<xs:annotation>
+							<xs:documentation>超限量购票特批申请审批主表</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="gptpSqspMxVOList">
+						<xs:annotation>
+							<xs:documentation>超限量购票特批申请审批明细</xs:documentation>
+						</xs:annotation>
+						<xs:complexType>
+							<xs:sequence maxOccurs="unbounded">
+								<xs:element name="gptpSqspMxVOListlb" type="FPGptpSqspMxVO"/>
+							</xs:sequence>
+						</xs:complexType>
+					</xs:element>
+					<xs:element name="deleteGptpSqspMxVOList">
+						<xs:annotation>
+							<xs:documentation>删除的购票特批明细记录</xs:documentation>
+						</xs:annotation>
+						<xs:complexType>
+							<xs:sequence maxOccurs="unbounded">
+								<xs:element name="deleteGptpSqspMxVOListlb" type="FPGptpSqspMxVO"/>
+							</xs:sequence>
+						</xs:complexType>
+					</xs:element>
+					<xs:element name="sfts" type="xs:string"/>
+					<xs:element name="hjbz" type="xs:string"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+</xs:schema>

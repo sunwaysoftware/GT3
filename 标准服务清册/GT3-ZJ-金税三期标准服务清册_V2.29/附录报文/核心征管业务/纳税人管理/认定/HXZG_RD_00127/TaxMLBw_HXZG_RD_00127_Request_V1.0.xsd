@@ -1,0 +1,260 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2013 (http://www.altova.com) by  () -->
+<!-- 编辑使用 XMLSpy v2006 U (http://www.altova.com) 由 any (any) -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:include schemaLocation="TaxMLPublic.xsd"/>
+	<xs:complexType name="zzsybnsrrdbd">
+		<xs:annotation>
+			<xs:documentation>申请信息</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="nsrxxform" type="nsrxxformVO">
+				<xs:annotation>
+					<xs:documentation>增值税一般纳税人认定申请表</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="fddbrjbxxform" type="fddbrjbxxformVO">
+				<xs:annotation>
+					<xs:documentation>增值税一般纳税人认定申请表 -法定代表人基本信息</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="cwfzrjbxxform" type="cwfzrjbxxformVO">
+				<xs:annotation>
+					<xs:documentation>增值税一般纳税人认定申请表 -财务负责人基本信息</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bsryjbxxform" type="bsryjbxxformVO">
+				<xs:annotation>
+					<xs:documentation>增值税一般纳税人认定申请表 -办税人员基本信息</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qyjbxxform" type="qyjbxxformVO">
+				<xs:annotation>
+					<xs:documentation>增值税一般纳税人认定申请表 -企业基本信息</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="nsrxxformVO">
+		<xs:annotation>
+			<xs:documentation>增值税一般纳税人认定申请表</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="nsrsbh" type="nsrsbh">
+				<xs:annotation>
+					<xs:documentation>纳税人识别号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="nsrmc" type="nsrmc">
+				<xs:annotation>
+					<xs:documentation>纳税人名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="fddbrjbxxformVO">
+		<xs:annotation>
+			<xs:documentation>增值税一般纳税人认定申请表 -法定代表人基本信息</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="fddbrxm" type="fddbrxm" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>法定代表人（负责人、业主）</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="fddbrsfzjlxDm" type="fddbrsfzjlxDm" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>证件名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="fddbrsfzjhm" type="fddbrsfzjhm" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>证件号码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="fddbryddh" type="fddbryddh" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>电话号码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="cwfzrjbxxformVO">
+		<xs:annotation>
+			<xs:documentation>增值税一般纳税人认定申请表 -财务负责人基本信息</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="cwfzrxm" type="cwfzrxm" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>财务负责人</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="cwfzrsfzjzlDm" type="cwfzrsfzjzlDm" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>证件名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="cwfzrsfzjhm" type="cwfzrsfzjhm" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>证件号码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="cwfzryddh" type="cwfzryddh" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>移动电话</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="qyjbxxformVO">
+		<xs:annotation>
+			<xs:documentation>增值税一般纳税人认定申请表 -企业基本信息</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="scjydz" type="scjydz" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>生产经营地址</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="hsdz" type="hsdz">
+				<xs:annotation>
+					<xs:documentation>核算地址</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="nsrlbDm" type="nsrlbDm">
+				<xs:annotation>
+					<xs:documentation>纳税人类别</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="nsrzyDm" type="nsrzyDm" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>纳税人主业</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="xkynsrbz" type="bz" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>是否为新开用户</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="kjhsjqbz" type="bz" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>会计核算是否健全</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sfsxfdqgl" type="bz" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>是否实行辅导期管理工作</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sfwxxsmpfqy" type="bz" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>是否为小型商贸批发企业</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="fdqglrqz" type="fdqglrqz" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>辅导期管理日期起</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="fdqglrqq" type="fdqglrqq" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>辅导期管理日期起</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="rdyxqq" type="rdyxqq" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>一般纳税人资格生效之日</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="rdqxsejsrqq" type="rdqxsejsrqq" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>认定前销售额计算日期起</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="rdqxsejsrqz" type="rdqxsejsrqz" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>认定前销售额计算日期止</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ysxse" type="ysxse" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>认定前累计应税销售额,连续不超过12个月的经营期内</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sqrq" type="sqrq" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>申请日期</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zzsybnsrzyywlbDm" type="zzsybnsrzyywlbDm">
+				<xs:annotation>
+					<xs:documentation>增值税一般纳税人主营业务类别代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="bsryjbxxformVO">
+		<xs:annotation>
+			<xs:documentation>增值税一般纳税人认定申请表 -办税人员基本信息</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="bsrxm" type="bsrxm" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>办税人员</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bsrsfzjzlDm" type="bsrsfzjzlDm" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>证件名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bsrsfzjhm" type="bsrsfzjhm" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>证件号码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bsryddh" type="bsryddh" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>联系电话</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="HXZGRD00127Request">
+		<xs:annotation>
+			<xs:documentation>保存增值税一般纳税人认定信息</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="zzsybnsrrdbd" type="zzsybnsrrdbd">
+						<xs:annotation>
+							<xs:documentation>增值税一般纳税人认定申请表信息</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="djxh" type="djxh">
+						<xs:annotation>
+							<xs:documentation>登记序号</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="lcslid" type="lcslid">
+						<xs:annotation>
+							<xs:documentation>流程实例ID</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="hdslid" type="hdslid">
+						<xs:annotation>
+							<xs:documentation>活动实例ID</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="ybnsrsquuid" type="uuid">
+						<xs:annotation>
+							<xs:documentation>一般纳税人申请UUID</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+</xs:schema>

@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 被2012 () 使用XMLSpy v编辑的 (http://www.altova.com) by -->
+<!-- edited with XMLSpy v2010 rel. 3 (http://www.altova.com) by MESMERiZE (MSM) -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxMLBd_0610284_V1.0.xsd"/>
+	<xs:include schemaLocation="TaxMLBd_0610287_V1.0.xsd"/>
+	<xs:include schemaLocation="TaxMLBd_0610288_V1.0.xsd"/>
+	<xs:include schemaLocation="TaxMLBd_0610289_V1.0.xsd"/>
+	<xs:include schemaLocation="TaxMLBd_0610291_V1.0.xsd"/>
+	<xs:include schemaLocation="TaxMLBd_0610292_V1.0.xsd"/>
+	<xs:include schemaLocation="TaxMLBd_0610293_V1.0.xsd"/>
+	<xs:include schemaLocation="TaxMLBd_0610294_V1.0.xsd"/>
+	<xs:include schemaLocation="TaxMLBd_0610295_V1.0.xsd"/>
+	<xs:include schemaLocation="TaxMLBd_0610616_V1.0.xsd"/>
+	<xs:include schemaLocation="TaxMLBd_0610617_V1.0.xsd"/>
+	<xs:include schemaLocation="TaxMLBd_0610618_V1.0.xsd"/>
+	<xs:include schemaLocation="TaxMLBd_0610619_V1.0.xsd"/>
+	<xs:include schemaLocation="TaxMLBd_0610620_V1.0.xsd"/>
+	<xs:include schemaLocation="TaxMLBd_0610621_V1.0.xsd"/>
+	<xs:include schemaLocation="TaxMLBd_0610622_V1.0.xsd"/>
+	<xs:include schemaLocation="TaxMLBd_0610623_V1.0.xsd"/>
+	<xs:include schemaLocation="TaxMLBd_0610624_V1.0.xsd"/>
+	<xs:include schemaLocation="TaxMLBd_0610625_V1.0.xsd"/>
+	<xs:include schemaLocation="TaxMLBd_0610626_V1.0.xsd"/>
+	<xs:include schemaLocation="TaxMLBd_0610627_V1.0.xsd"/>
+	<xs:include schemaLocation="TaxMLBd_0610283_V1.0.xsd"/>
+	<xs:include schemaLocation="TaxMLBd_0610285_V1.0.xsd"/>
+	<xs:include schemaLocation="TaxMLBd_0610285_V1.0.xsd"/>
+	<xs:include schemaLocation="TaxMLBd_0610286_V1.0.xsd"/>
+	<xs:include schemaLocation="TaxMLBd_0610283_V1.0.xsd"/>
+	<xs:complexType name="tdzzsqssbywbw">
+		<xs:annotation>
+			<xs:documentation>土地增值税清算申报（依申请）业务报文</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="tdzzsqssbb">
+						<xs:annotation>
+							<xs:documentation>土地增值税清算申报表</xs:documentation>
+						</xs:annotation>
+						<xs:complexType>
+							<xs:sequence>
+								<xs:element name="tdzzsqssbzb" type="tdzzsqssbzb">
+									<xs:annotation>
+										<xs:documentation>土地增值税纳税申报表</xs:documentation>
+									</xs:annotation>
+								</xs:element>
+								<xs:element name="tdzzsqssbshb" type="tdzzsqssbshb" minOccurs="0">
+									<xs:annotation>
+										<xs:documentation>土地增值税清算申报审核表</xs:documentation>
+									</xs:annotation>
+								</xs:element>
+								<xs:element name="fdczrsrmxb" type="fdczrsrmxb" minOccurs="0">
+									<xs:annotation>
+										<xs:documentation>房地产转让收入明细表</xs:documentation>
+									</xs:annotation>
+								</xs:element>
+								<xs:element name="qdtdsyqszfdjemxb" type="qdtdsyqzfjemxb" minOccurs="0">
+									<xs:annotation>
+										<xs:documentation>取得土地使用权支付金额明细表</xs:documentation>
+									</xs:annotation>
+								</xs:element>
+								<xs:element name="tdzyjcqbcfmxb" type="tdzyjcqbcfmxb" minOccurs="0">
+									<xs:annotation>
+										<xs:documentation>土地征用及拆迁补偿费明细表</xs:documentation>
+									</xs:annotation>
+								</xs:element>
+								<xs:element name="qqgcfmxb" type="qqgcfmxb" minOccurs="0">
+									<xs:annotation>
+										<xs:documentation>前期工程费明细表</xs:documentation>
+									</xs:annotation>
+								</xs:element>
+								<xs:element name="jzazgcfmxb" type="jzazgcfmxb" minOccurs="0">
+									<xs:annotation>
+										<xs:documentation>建筑安装工程费明细表</xs:documentation>
+									</xs:annotation>
+								</xs:element>
+								<xs:element name="jcssfmxb" type="jcssfmxb" minOccurs="0">
+									<xs:annotation>
+										<xs:documentation>基础设施费明细表</xs:documentation>
+									</xs:annotation>
+								</xs:element>
+								<xs:element name="ggptssfmxb" type="ggptssfmxb" minOccurs="0">
+									<xs:annotation>
+										<xs:documentation>公共配套设施费明细表</xs:documentation>
+									</xs:annotation>
+								</xs:element>
+								<xs:element name="kfjjmxb" type="kfjjmxb" minOccurs="0">
+									<xs:annotation>
+										<xs:documentation>开发间接费明细表</xs:documentation>
+									</xs:annotation>
+								</xs:element>
+								<xs:element name="lxzcmxb" type="lxzcmxb" minOccurs="0">
+									<xs:annotation>
+										<xs:documentation>利息支出明细表</xs:documentation>
+									</xs:annotation>
+								</xs:element>
+								<xs:element name="yzrfdcygsjjnqkmxb" type="yzrfdcygsjjnqkmxb" minOccurs="0">
+									<xs:annotation>
+										<xs:documentation>与转让房地产有关税金缴纳情况明细表</xs:documentation>
+									</xs:annotation>
+								</xs:element>
+								<xs:element name="ysrxgmjmxsbb" type="ysrxgmjmxsbbForm" minOccurs="0">
+									<xs:annotation>
+										<xs:documentation>与收入相关面积明细申报表</xs:documentation>
+									</xs:annotation>
+								</xs:element>
+								<xs:element name="zrfdcsrmxsbb" type="zrfdcsrmxsbbForm" minOccurs="0">
+									<xs:annotation>
+										<xs:documentation>转让房地产收入明细申报表</xs:documentation>
+									</xs:annotation>
+								</xs:element>
+								<xs:element name="kcxmcbjzmxsbb" type="kcxmcbjzmxsbbForm" minOccurs="0">
+									<xs:annotation>
+										<xs:documentation>扣除项目成本结转明细申报表</xs:documentation>
+									</xs:annotation>
+								</xs:element>
+								<xs:element name="qdsyqzfjemxsbb" type="qdsyqzfjemxsbbForm" minOccurs="0">
+									<xs:annotation>
+										<xs:documentation>取得土地使用权支付金额明细申报表</xs:documentation>
+									</xs:annotation>
+								</xs:element>
+								<xs:element name="qqgcfmxsbb" type="qqgcfmxsbbForm" minOccurs="0">
+									<xs:annotation>
+										<xs:documentation>前期工程费明细申报表</xs:documentation>
+									</xs:annotation>
+								</xs:element>
+								<xs:element name="jzazgcfmxsbb" type="jzazgcfmxsbbForm" minOccurs="0">
+									<xs:annotation>
+										<xs:documentation>建筑安装工程费明细申报表</xs:documentation>
+									</xs:annotation>
+								</xs:element>
+								<xs:element name="jcssfmxsbb" type="jcssfmxsbbForm" minOccurs="0">
+									<xs:annotation>
+										<xs:documentation>基础设施费明细申报表</xs:documentation>
+									</xs:annotation>
+								</xs:element>
+								<xs:element name="ggptssfmxsbb" type="ggptssfmxsbbForm" minOccurs="0">
+									<xs:annotation>
+										<xs:documentation>公共配套设施费明细申报表</xs:documentation>
+									</xs:annotation>
+								</xs:element>
+								<xs:element name="kfjjfymxsbb" type="kfjjfymxsbbForm" minOccurs="0">
+									<xs:annotation>
+										<xs:documentation>开发间接费用明细申报表</xs:documentation>
+									</xs:annotation>
+								</xs:element>
+								<xs:element name="lxzcmxsbb" type="lxzcmxsbbGrid" minOccurs="0">
+									<xs:annotation>
+										<xs:documentation>利息支出明细申报表</xs:documentation>
+									</xs:annotation>
+								</xs:element>
+								<xs:element name="kcxmhzsbb" type="kcxmhzsbbForm" minOccurs="0">
+									<xs:annotation>
+										<xs:documentation>扣除项目汇总申报表</xs:documentation>
+									</xs:annotation>
+								</xs:element>
+								<xs:element name="yzrfdcygsjmxsbb" type="yzrfdcygsjmxsbbForm" minOccurs="0">
+									<xs:annotation>
+										<xs:documentation>与转让房地产有关税金明细申报表</xs:documentation>
+									</xs:annotation>
+								</xs:element>
+							</xs:sequence>
+						</xs:complexType>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+</xs:schema>

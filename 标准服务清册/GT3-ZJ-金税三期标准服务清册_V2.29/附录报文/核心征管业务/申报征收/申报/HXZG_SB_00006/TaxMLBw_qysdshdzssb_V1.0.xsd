@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2010 rel. 3 (http://www.altova.com) by liuwei (liuweicss) -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:include schemaLocation="TaxMLPublicType.xsd"/>
+	<xs:include schemaLocation="TaxMLBd_0610039_V1.0.xsd"/>
+	<xs:include schemaLocation="TaxMLBd_0610044_V1.0.xsd"/>
+	<xs:include schemaLocation="TaxMLBd_0610673_V1.0.xsd"/>
+	<xs:complexType name="qysdshdzssbywbw">
+		<xs:annotation>
+			<xs:documentation>《中华人民共和国企业所得税月（季）度和年度纳税申报表（B类）》业务报文</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="qysdshdzsyjdndsb" type="qysdshdzsyjdndsbbdxx">
+						<xs:annotation>
+							<xs:documentation>《中华人民共和国企业所得税月（季）度和年度纳税申报表（B类）》</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="ssyhmxsbb" type="ssyhmxsbb">
+						<xs:annotation>
+							<xs:documentation>《中华人民共和国企业所得税年度纳税申报表附表五税收优惠明细表》</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="qysdsyjdsbczzs_jmqycgwgqyxxbgb" type="qysdsyjdsbczzs_jmqycgwgqyxxbgb">
+						<xs:annotation>
+							<xs:documentation>居民企业参股外国企业信息报告表</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+</xs:schema>

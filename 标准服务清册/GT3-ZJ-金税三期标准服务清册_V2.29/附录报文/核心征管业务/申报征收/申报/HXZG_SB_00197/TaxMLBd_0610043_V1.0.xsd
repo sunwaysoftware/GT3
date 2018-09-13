@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2010 rel. 3 (http://www.altova.com) by xuxin (csstj) -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:include schemaLocation="TaxMLPublicType.xsd"/>
+	<xs:complexType name="srmxsbbywbw">
+		<xs:annotation>
+			<xs:documentation>《中华人民共和国企业所得税年度纳税申报表附表一（1）收入明细表》业务报文</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="srmxsbb">
+						<xs:annotation>
+							<xs:documentation>《中华人民共和国企业所得税年度纳税申报表附表一（1）收入明细表》</xs:documentation>
+						</xs:annotation>
+						<xs:complexType>
+							<xs:sequence>
+								<xs:element name="srmxsbbFrom" type="srmxsbbFrom">
+									<xs:annotation>
+										<xs:documentation>收入明细表申报信息</xs:documentation>
+									</xs:annotation>
+								</xs:element>
+							</xs:sequence>
+						</xs:complexType>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="srmxsbb">
+		<xs:annotation>
+			<xs:documentation>《中华人民共和国企业所得税年度纳税申报表附表一（1）收入明细表》</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="srmxsbbFrom" type="srmxsbbFrom">
+				<xs:annotation>
+					<xs:documentation>收入明细表申报信息</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="srmxsbbFrom">
+		<xs:annotation>
+			<xs:documentation>收入明细表数据对应明细</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="xsyysrhj" type="xsYySrhj" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>销售营业收入合计</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yysrhj" type="yysrHj" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>营业收入合计</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zyywsr" type="zyywsr" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>主营业务收入</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="xshwsr" type="xshwsr" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>销售货物收入</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="tglwsr" type="tglwsr" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>提供劳务收入</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="rdzcsyqsr" type="rdzcsyqSr" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>让渡资产使用权收入</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jzhtsr" type="jzhtsr" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>建造合同收入</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qtywsr" type="qtywsr" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>其他业务收入</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="xlxssr" type="clxssr" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>材料销售收入</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="dgdxsxfsr" type="dgdxsxfsr" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>代购代销手续费收入</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bzwczsr" type="bzwczsr" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>包装物出租收入</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qtsr1" type="qtywsrQtsr" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>其他业务收入_其他收入</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="stxssr" type="stxssr" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>视同销售收入</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="fhbxjystxssr" type="fhbxjyStxssr" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>非货币性交易视同销售收入</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="hwcclwstxssr" type="hwCcLwstxssr" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>货物、财产、劳务视同销售收入</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qtstxssr" type="qtstxssr" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>其他视同销售收入</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yywsr" type="yywsr" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>营业外收入</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="gdzcpy" type="gdzcPy" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>固定资产盘盈</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="czgdzcjsy" type="czgdzcjsy" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>处置固定资产净收益</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="fhbxzcjysy" type="fhbxzcJysy" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>非货币性资产交易收益</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="cswxzcsy" type="cswxzcsy" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>出售无形资产收益</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="fkjsr" type="fkjsr" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>罚款净收入</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zwzzsy" type="zwzzsy" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>债务重组收益</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zfbzsr" type="zfbzsr" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>政府补助收入</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jzsr" type="jzsr" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>捐赠收入</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qtsr" type="yywsrQtsr" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>营业外收入_其他收入</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

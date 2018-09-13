@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2010 rel. 3 (http://www.altova.com) by MESMERiZE (MSM) -->
+<!-- 被2011 rel. 2 sp1 (TeaM DJiNN) 使用XMLSpy vTeaM DJiNN编辑的 (http://www.altova.com) by -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:include schemaLocation="TaxMLBd_0610391_V1.0.xsd"/>
+	<xs:include schemaLocation="TaxMLBd_0610392_V1.0.xsd"/>
+	<xs:include schemaLocation="TaxMLBd_0610393_V1.0.xsd"/>
+	<xs:include schemaLocation="TaxMLBd_0610394_V1.0.xsd"/>
+	<xs:include schemaLocation="TaxMLBd_0610395_V1.0.xsd"/>
+	<xs:include schemaLocation="TaxMLBd_0610396_V1.0.xsd"/>
+	<xs:include schemaLocation="TaxMLBd_0610397_V1.0.xsd"/>
+	<xs:include schemaLocation="TaxMLBd_0610398_V1.0.xsd"/>
+	<xs:include schemaLocation="TaxMLBd_0610399_V1.0.xsd"/>
+	<xs:include schemaLocation="TaxMLPublicSBType.xsd"/>
+	<xs:complexType name="dbljrqycwbbywbw">
+		<xs:annotation>
+			<xs:documentation>担保类金融企业财务报表业务报文</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="sydbljbqkbVO" type="sydbljbqkbVO" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>基本情况表</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="sydblgdzcqkbVO" type="sydblgdzcqkbVO">
+						<xs:annotation>
+							<xs:documentation>固定资产情况表</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="sydbllrbVO" type="sydbllrbVO">
+						<xs:annotation>
+							<xs:documentation>利润表</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="sydblsjjsbfjnqkbVO" type="sydblsjjsbfjnqkbVO" nillable="true">
+						<xs:annotation>
+							<xs:documentation>税金及社会保险费用缴纳情况表</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="sydblqybVO" type="sydblqybVO">
+						<xs:annotation>
+							<xs:documentation>所有者权益变动表</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="sydblyyfyjyywszmxbVO" type="sydblyyfyjyywszmxbVO">
+						<xs:annotation>
+							<xs:documentation>业务及管理费与营业外收支明细表</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="sydblzcfzbVO" type="sydblzcfzbVO">
+						<xs:annotation>
+							<xs:documentation>资产负债表</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="sydblzcjzzbmxbVO" type="sydblzcjzzbmxbVO">
+						<xs:annotation>
+							<xs:documentation>资产减值准备明细表</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="sydblzczlqkbVO" type="sydblzczlqkbVO">
+						<xs:annotation>
+							<xs:documentation>资产质量情况表</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="ndcwkjbgshbgVO" type="NdcwkjbgshbgVO">
+						<xs:annotation>
+							<xs:documentation>年度财务会计报告审核报告</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="yfzcfzzhzbVO" type="YfzcfzzhzbVO">
+						<xs:annotation>
+							<xs:documentation>“研发支出”辅助账汇总表VO</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+</xs:schema>

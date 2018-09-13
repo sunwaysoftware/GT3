@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 被2012 () 使用XMLSpy v编辑的 (http://www.altova.com) by -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:complexType name="GSSBZS00007Request">
+		<xs:annotation>
+			<xs:documentation>社保费入库销号通知请求报文</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="zsjg_dm" type='zsjgDm'>
+						<xs:annotation>
+							<xs:documentation>征收机关代码（字段不能为空,字段最大长度:11）</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="rkpzrq" type="pzrq2">
+						<xs:annotation>
+							<xs:documentation>入库凭证日期（字段不能为空,数据类型：字符串，格式如：2017-01-01）</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+</xs:schema>

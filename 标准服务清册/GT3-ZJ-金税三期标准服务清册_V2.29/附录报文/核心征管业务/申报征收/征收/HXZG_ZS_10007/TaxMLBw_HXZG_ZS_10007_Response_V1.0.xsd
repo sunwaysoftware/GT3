@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 被2011 rel. 2 sp1 (TeaM DJiNN) 使用XMLSpy vTeaM DJiNN编辑的 (http://www.altova.com) by -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:include schemaLocation="TaxMLPublicZSType.xsd"/>
+	<xs:complexType name="HXZGZS10007Response">
+		<xs:annotation>
+			<xs:documentation>根据登记序号，应征凭证序号查询应征欠税信息响应报文</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="jkxxGrid">
+						<xs:annotation>
+							<xs:documentation>缴 款信息</xs:documentation>
+						</xs:annotation>
+						<xs:complexType>
+							<xs:sequence maxOccurs="unbounded">
+								<xs:element name="jkxxGridlb">
+									<xs:complexType>
+										<xs:sequence>
+											<xs:element name="swjgDm" type="swjgDm">
+												<xs:annotation>
+													<xs:documentation>税务机关代码</xs:documentation>
+												</xs:annotation>
+											</xs:element>
+											<xs:element name="dzsphm" type="dzsphm">
+												<xs:annotation>
+													<xs:documentation>电子税票号码</xs:documentation>
+												</xs:annotation>
+											</xs:element>
+											<xs:element name="yjse" type="se">
+												<xs:annotation>
+													<xs:documentation>应缴税额</xs:documentation>
+												</xs:annotation>
+											</xs:element>
+											<xs:element name="jkqx" type="jkqx">
+												<xs:annotation>
+													<xs:documentation>缴款期限</xs:documentation>
+												</xs:annotation>
+											</xs:element>
+											<xs:element name="szxxGrid">
+												<xs:annotation>
+													<xs:documentation>缴款信息列表</xs:documentation>
+												</xs:annotation>
+												<xs:complexType>
+													<xs:sequence maxOccurs="unbounded">
+														<xs:element name="szxxGridlb" type="ZSJksVO"/>
+													</xs:sequence>
+												</xs:complexType>
+											</xs:element>
+										</xs:sequence>
+									</xs:complexType>
+								</xs:element>
+							</xs:sequence>
+						</xs:complexType>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+</xs:schema>

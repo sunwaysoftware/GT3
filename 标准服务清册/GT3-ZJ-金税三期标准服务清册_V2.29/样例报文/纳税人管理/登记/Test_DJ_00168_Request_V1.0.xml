@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<service xmlns="http://www.chinatax.gov.cn/spec/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <head>
+    <tran_id>SWZJ.HXZG.DJ.CXFYXXBYNSRSBHZLD</tran_id>
+    <channel_id>TEST</channel_id>
+    <tran_seq>b70b75f346604c36a5ecdc1b7fb5959e</tran_seq>
+    <tran_date>20141025</tran_date>
+    <tran_time>093909948</tran_time>
+    <expand>
+      <name>sjry</name>
+      <value>24406060735</value>
+    </expand>
+    <expand>
+      <name>sjjg</name>
+      <value>24406060700</value>
+    </expand>
+  </head>
+  <body><![CDATA[<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<taxML xsi:type="HXZGDJ00168Request" xmlmc="根据纳税人识别号、出租房屋坐落地等条件查询承租房源信息" xmlbh="TaxMLBw_HXZG_DJ_00168_Request_V1.0.xsd" bbh="1.0" xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <FwxxcxVO>
+        <djxh>10124406020000000232</djxh>
+        <fybh></fybh>
+        <xzqhszDm></xzqhszDm>
+        <jdxzDm></jdxzDm>
+        <ssswjgDm></ssswjgDm>
+        <fwzldz></fwzldz>
+        <fwcqzsh></fwcqzsh>
+    </FwxxcxVO>
+</taxML>
+]]></body>
+</service>

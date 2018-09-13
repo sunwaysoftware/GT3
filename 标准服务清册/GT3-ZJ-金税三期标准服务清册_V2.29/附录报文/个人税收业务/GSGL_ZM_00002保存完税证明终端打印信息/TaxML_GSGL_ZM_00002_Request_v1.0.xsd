@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 被2011 rel. 2 sp1 (TeaM DJiNN) 使用XMLSpy vTeaM DJiNN编辑的 (http://www.altova.com) by -->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://www.chinatax.gov.cn/dataspec/" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:complexType name="ZmSszmZdDySaveRequest">
+		<xs:annotation>
+			<xs:documentation>保存完税证明终端打印信息-请求报文</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="djxh" type="djxh">
+						<xs:annotation>
+							<xs:documentation>登记序号（必录）</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="kjswjgDm" type="swjgDm">
+						<xs:annotation>
+							<xs:documentation>开具税务机关代码（必录 DM_GY_SWJG）</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					
+					<xs:element name="slswjgDm" type="swjgDm">
+						<xs:annotation>
+							<xs:documentation>受理税务机关代码（必录 DM_GY_SWJG）</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="sqswryDm" type="sqswryDm">
+						<xs:annotation>
+							<xs:documentation>操作员代码（必录 DM_GY_SWRY）</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="sqly" type="sqly">
+						<xs:annotation>
+							<xs:documentation>申请理由（必录 DM_ZM_SQKJGRSDSWSZMYT）</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="sqr" type="sqr">
+						<xs:annotation>
+							<xs:documentation>申请人（必录 长度小于150）</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="sqrq" type="sqrq">
+						<xs:annotation>
+							<xs:documentation>申请日期(yyyy-MM-dd)（必录）</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="sqkjsjq" type="kjsjq">
+						<xs:annotation>
+							<xs:documentation>申请开具时间起(yyyy-MM-dd)（必录）</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="sqkjsjz" type="kjsjz">
+						<xs:annotation>
+							<xs:documentation>申请开具时间止(yyyy-MM-dd)（必录）</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="gzxjaykj" type="sfbzDm">
+						<xs:annotation>
+							<xs:documentation>工作薪金是否按月开具（Y/N）（必录）</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="pzhm" type="pzhm" minOccurs="1">
+						<xs:annotation>
+							<xs:documentation>票证号码（必录）</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="pzzg" type="pzzg" minOccurs="1">
+						<xs:annotation>
+							<xs:documentation>票证字规代码（必录 cs_pz_pzzgb）</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="pzzlDm" type="pzzlDm" minOccurs="1">
+						<xs:annotation>
+							<xs:documentation>票证种类代码【表格式（000005011）、文书式（000005012）或者链孔式（241005014）】（必录）</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="bz" type="bz">
+						<xs:annotation>
+							<xs:documentation>备注（可以为空）</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="kjmxGrid" type="kjmxGrid">
+						<xs:annotation>
+							<xs:documentation>开具明细列表</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="kjmxGrid">
+		<xs:annotation>
+			<xs:documentation>开具明细列表</xs:documentation>
+		</xs:annotation>
+		<xs:sequence maxOccurs="unbounded">
+			<xs:element name="kjmxList" type="kjmxxx">
+				<xs:annotation>
+					<xs:documentation>开具明细列表</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="kjmxxx">
+		<xs:annotation>
+			<xs:documentation>开具明细列表</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="ypzxh" type="ypzbh">
+				<xs:annotation>
+					<xs:documentation>原凭证号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zsxmDm" type="zsxmDm">
+				<xs:annotation>
+					<xs:documentation>税种（必录 DM_GY_ZSXM）</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zspmDm" type="zspmDm">
+				<xs:annotation>
+					<xs:documentation>品目代码（必录 DM_GY_ZSPM）</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="skssqq" type="skssqq">
+				<xs:annotation>
+					<xs:documentation>税款所属期起(yyyy-MM-dd)（必录）</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="skssqz" type="skssqz">
+				<xs:annotation>
+					<xs:documentation>税款所属期止(yyyy-MM-dd)（必录）</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="rtkrq" type="rkrq">
+				<xs:annotation>
+					<xs:documentation>入(退)库日期(yyyy-MM-dd)</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sjtje" type="sjje">
+				<xs:annotation>
+					<xs:documentation>实缴(退)金额（必录 不能为'0'）</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

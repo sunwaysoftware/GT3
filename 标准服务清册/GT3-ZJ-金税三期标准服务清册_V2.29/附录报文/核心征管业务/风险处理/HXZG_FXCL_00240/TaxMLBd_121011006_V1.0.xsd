@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 被2012 () 使用XMLSpy v编辑的 (http://www.altova.com) by -->
+<!-- edited with XMLSpy v2013 (http://www.altova.com) by  () -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:complexType name="tzblywbw">
+		<xs:annotation>
+			<xs:documentation>《听证笔录》业务报文</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="tzbl" type="FZTzblVO">
+						<xs:annotation>
+							<xs:documentation>《听证笔录》</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="FZTzblVO">
+		<xs:annotation>
+			<xs:documentation>《听证笔录》VO</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="tzbluuid" type="tzbluuid">
+				<xs:annotation>
+					<xs:documentation>听证笔录UUID</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sswfxwdjuuid" type="sswfxwdjuuid">
+				<xs:annotation>
+					<xs:documentation>税收违法行为登记UUID</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ay" type="ay">
+				<xs:annotation>
+					<xs:documentation>案由</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jlyDm" type="jlyDm">
+				<xs:annotation>
+					<xs:documentation>记录员代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="tzsqrlxDm" type="tzsqrlxDm">
+				<xs:annotation>
+					<xs:documentation>听证申请人类型代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="tzblnr" type="tzblnr">
+				<xs:annotation>
+					<xs:documentation>听证笔录内容</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="tzzcrqz" type="tzzcrqz">
+				<xs:annotation>
+					<xs:documentation>听证主持人签字</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jlyqz" type="jlyqz">
+				<xs:annotation>
+					<xs:documentation>记录员签字</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="dsrqz" type="dsrqz">
+				<xs:annotation>
+					<xs:documentation>当事人签字</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="dlrqz" type="dlrqz">
+				<xs:annotation>
+					<xs:documentation>代理人签字</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="dcrqz" type="dcrqz">
+				<xs:annotation>
+					<xs:documentation>调查人签字</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zrqz" type="zrqz">
+				<xs:annotation>
+					<xs:documentation>证人签字</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qtygry" type="qtygry">
+				<xs:annotation>
+					<xs:documentation>其他有关人员</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="tzsqrmc" type="tzsqrmc">
+				<xs:annotation>
+					<xs:documentation>听证申请人名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="tzsqrnl" type="tzsqrnl">
+				<xs:annotation>
+					<xs:documentation>听证申请人年龄</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="tzsqrxbDm" type="tzsqrxbDm">
+				<xs:annotation>
+					<xs:documentation>听证申请人性别代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="tzsqrjg" type="tzsqrjg">
+				<xs:annotation>
+					<xs:documentation>听证申请人籍贯</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="tzsqrmz" type="tzsqrmz">
+				<xs:annotation>
+					<xs:documentation>听证申请人民族</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="tzsqrzs" type="tzsqrzs">
+				<xs:annotation>
+					<xs:documentation>听证申请人住所</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="tzsqrgzdwmc" type="tzsqrgzdwmc">
+				<xs:annotation>
+					<xs:documentation>听证申请人工作单位名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="tzsqrzw" type="tzsqrzw">
+				<xs:annotation>
+					<xs:documentation>听证申请人职务</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="dlrmc" type="dlrmc">
+				<xs:annotation>
+					<xs:documentation>代理人名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="dlrxbDm" type="dlrxbDm">
+				<xs:annotation>
+					<xs:documentation>代理人性别代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="dlrnl" type="dlrnl">
+				<xs:annotation>
+					<xs:documentation>代理人年龄</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="dlrzz" type="dlrzz">
+				<xs:annotation>
+					<xs:documentation>代理人住址</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="tzsqrfrhqtzzmc" type="tzsqrfrhqtzzmc">
+				<xs:annotation>
+					<xs:documentation>听证申请人（法人或其他组织）名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="tzsqrfrhqtzzdz" type="tzsqrfrhqtzzdz">
+				<xs:annotation>
+					<xs:documentation>听证申请人（法人或其他组织）地址</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="tzsqrfrhqtzzyzbm" type="tzsqrfrhqtzzyzbm">
+				<xs:annotation>
+					<xs:documentation>听证申请人（法人或其他组织）邮政编码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="tzsqrfrhqtzzfddbrfzr" type="tzsqrfrhqtzzfddbrfzr">
+				<xs:annotation>
+					<xs:documentation>听证申请人（法人或其他组织）法定代表人（负责人）</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="tzsqrfrhqtzzfddbrfzrzw" type="tzsqrfrhqtzzfddbrfzrzw">
+				<xs:annotation>
+					<xs:documentation>听证申请人（法人或其他组织）法定代表人（负责人）职务</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="tzsqrfrhqtzzfddbrfzrlxdh" type="tzsqrfrhqtzzfddbrfzrlxdh">
+				<xs:annotation>
+					<xs:documentation>听证申请人（法人或其他组织）法定代表人（负责人）联系电话</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="dlrzwzy" type="dlrzwzy">
+				<xs:annotation>
+					<xs:documentation>代理人职务（职业）</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="dlrgzdw" type="dlrgzdw">
+				<xs:annotation>
+					<xs:documentation>代理人工作单位</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sjslid" type="sjslid">
+				<xs:annotation>
+					<xs:documentation>事件实例ID</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="hdslid" type="hdslid">
+				<xs:annotation>
+					<xs:documentation>活动实例ID</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="tzsj" type="tzsj">
+				<xs:annotation>
+					<xs:documentation>听证时间</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="tzdd" type="tzdd">
+				<xs:annotation>
+					<xs:documentation>听证地点</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="tzzcr" type="tzzcr">
+				<xs:annotation>
+					<xs:documentation>听证主持人</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

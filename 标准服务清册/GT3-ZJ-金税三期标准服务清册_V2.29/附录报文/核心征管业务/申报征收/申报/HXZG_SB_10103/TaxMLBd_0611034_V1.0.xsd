@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 被2011 rel. 2 sp1 (TeaM DJiNN) 使用XMLSpy vTeaM DJiNN编辑的 (http://www.altova.com) by -->
+<!-- edited with XMLSpy v2010 rel. 3 (http://www.altova.com) by xuxin (csstj) -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:complexType name="A201010Ywbd">
+		<xs:annotation>
+			<xs:documentation>《A201010免税收入、减计收入、所得减免等优惠明细表》表单</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="msjjsrjjkcjmyhmxbForm" type="msjjsrjjkcjmyhmxbFormVO">
+						<xs:annotation>
+							<xs:documentation>《A201010免税收入、减计收入、所得减免等优惠明细表》</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="msjjsrjjkcjmyhmxbFormVO">
+		<xs:annotation>
+			<xs:documentation>《A201010免税收入、减计收入、所得减免等优惠明细表》</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="mssrLj" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>一、免税收入-累计金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="gzlxsrLj" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>（一）国债利息收入免征企业所得税-累计金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="fhtjdjmqyzjdgxhldqyxsyLj" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>（二）符合条件的居民企业之间的股息、红利等权益性投资收益免征企业所得税-累计金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="hgttzgxhlLj" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>其中：内地居民企业通过沪港通投资且连续持有H股满12个月取得的股息红利所得免征企业所得税-累计金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sgttzgxhlLj" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>内地居民企业通过深港通投资且连续持有H股满12个月取得的股息红利所得免征企业所得税-累计金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="fhtjdfylzzdsrLj" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>（三）符合条件的非营利组织的收入免征企业所得税-累计金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="fhtjdfylzzkjqyfhqLj" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>（四）符合条件的非营利组织（科技企业孵化器）的收入免征企业所得税-累计金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="fhtjdfylzzgjdxkjyqLj" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>（五）符合条件的非营利组织（国家大学科技园）的收入免征企业所得税-累计金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zgqjfzjzjjqddsrLj" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>（六）中国清洁发展机制基金取得的收入免征企业所得税-累计金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zqtzjjtzzqddmssrLj" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>（七）投资者从证券投资基金分配中取得的收入免征企业所得税-累计金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="dfzfzqlxsrLj" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>（八）取得的地方政府债券利息收入免征企业所得税-累计金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zgbxbzjjyxzrgsqdbxbzjjsrLj" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>（九）中国保险保障基金有限责任公司取得的保险保障基金等收入免征企业所得税-累计金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zgawhqdbjdazwsfsrLj" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>（十）中国奥委会取得北京冬奥组委支付的收入免征企业所得税-累计金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zgcawhqdbjdazwfqzfsrLj" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>（十一）中国残奥委会取得北京冬奥组委分期支付的收入免征企业所得税-累计金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qtmssrLj" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>（十二）其他-累计金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jjsrLj" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>二、减计收入-累计金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zhlyzysccpqddsrLj" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>（一）综合利用资源生产产品取得的收入在计算应纳税所得额时减计收入-累计金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jrbxdjgqddsllxbfsrLj" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>（二）金融、保险等机构取得的涉农利息、保费减计收入-累计金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jrjgqdsndklxsrLj" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>1.金融机构取得的涉农贷款利息收入在计算应纳税所得额时减计收入-累计金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bxjgqdsnbfsrLj" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>2.保险机构取得的涉农保费收入在计算应纳税所得额时减计收入-累计金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="xedkgsqdnhxedklxsrLj" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>3.小额贷款公司取得的农户小额贷款利息收入在计算应纳税所得额时减计收入-累计金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qddzgtljszqlxsrLj" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>（三）取得铁路债券利息收入减半征收企业所得税-累计金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qtjjsrLj" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>（四）其他-累计金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jjkcLj" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>三、加计扣除-累计金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="xcpxgyxjsyffyjjkcLj" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>（一）开发新技术、新产品、新工艺发生的研究开发费用加计扣除-累计金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="kjxzxqykfxjsyjkffyLj" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>（二）科技型中小企业开发新技术、新产品、新工艺发生的研究开发费用加计扣除-累计金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qywhdcxxcpjxcysjhdfsdxgfyLj" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>（三）企业为获得创新性、创意性、突破性的产品进行创意设计活动而发生的相关费用加计扣除-累计金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="azcjryzfgzLj" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>（四）安置残疾人员所支付的工资加计扣除-累计金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sdjmLj" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>四、所得减免-累计金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="nlmyxmLj" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>（一）从事农、林、牧、渔业项目的所得减免征收企业所得税-累计金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="msxmLj" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>1.免税项目-累计金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jbzsxmLj" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>2.减半征收项目-累计金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="gjzdfcdggjcssxmLj" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>（二）从事国家重点扶持的公共基础设施项目投资经营的所得定期减免企业所得税-累计金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="fhtjdhjbhjnjsxmLj" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>（三）从事符合条件的环境保护、节能节水项目的所得定期减免企业所得税-累计金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="fhtjdjszrxmLj" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>（四）符合条件的技术转让所得减免征收企业所得税-累计金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ssqjfzjzxmLj" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>（五）实施清洁发展机制项目的所得定期减免企业所得税-累计金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jnfwgssshtnyglxmLj" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>（六）符合条件的节能服务公司实施合同能源管理项目的所得定期减免企业所得税-累计金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="xkxyybsnmjcdlscxmLj" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>（七）线宽小于130纳米的集成电路生产项目的所得减免企业所得税-累计金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="xkxylswnmhtzecgybwyyxmLj" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>（八）线宽小于65纳米或投资额超过150亿元的集成电路生产项目的所得减免企业所得税-累计金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qtsdjmLj" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>（九）其他-累计金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="hjLj" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>合计-累计金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

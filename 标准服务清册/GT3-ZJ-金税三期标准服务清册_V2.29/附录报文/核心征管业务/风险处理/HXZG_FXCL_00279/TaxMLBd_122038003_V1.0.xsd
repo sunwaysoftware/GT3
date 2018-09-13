@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 被2012 () 使用XMLSpy v编辑的 (http://www.altova.com) by -->
+<!-- edited with XMLSpy v2013 (http://www.altova.com) by  () -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:complexType name="tgsjfsfpjdsywbw">
+		<xs:annotation>
+			<xs:documentation>《停供收缴发售发票决定书》业务报文</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="tgsjfafpjds" type="tgsjfafpjds">
+						<xs:annotation>
+							<xs:documentation>《停供收缴发售发票决定书》</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="tgsjfafpjds">
+		<xs:annotation>
+			<xs:documentation>《停供收缴发售发票决定书》</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="tgsjfsfpjdsForm" type="FZTgsjfsfpjdsVO">
+				<xs:annotation>
+					<xs:documentation>停供收缴发售发票决定书Form</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="FZTgsjfsfpjdsVO">
+		<xs:annotation>
+			<xs:documentation>停供收缴发售发票决定书Form</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="djxh" type="djxh">
+				<xs:annotation>
+					<xs:documentation>登记序号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sjtzfsfpxxbuuid" type="sjtzfsfpxxbuuid">
+				<xs:annotation>
+					<xs:documentation>收缴停止发售发票信息表uuid</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sswfxwdjuuid" type="sswfxwdjuuid">
+				<xs:annotation>
+					<xs:documentation>税收违法行为登记uuid</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="lcslid" type="lcslid">
+				<xs:annotation>
+					<xs:documentation>流程实例id</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="swjgDm" type="swjgDm">
+				<xs:annotation>
+					<xs:documentation>税务机关代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="swjgjg" type="swjgjg">
+				<xs:annotation>
+					<xs:documentation>税务机关局轨</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zg" type="zg">
+				<xs:annotation>
+					<xs:documentation>字轨</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="nh" type="nh">
+				<xs:annotation>
+					<xs:documentation>年号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="wh" type="wh">
+				<xs:annotation>
+					<xs:documentation>文号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="nsrmc" type="nsrmc">
+				<xs:annotation>
+					<xs:documentation>纳税人名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="nsrsbh" type="nsrsbh">
+				<xs:annotation>
+					<xs:documentation>纳税人识别号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sswflxDm" type="sswflxDm">
+				<xs:annotation>
+					<xs:documentation>税收违法类型代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="tgsjfprq" type="tgsjfprq">
+				<xs:annotation>
+					<xs:documentation>停供收缴发票日期</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="fyjgDm" type="fyjgDm">
+				<xs:annotation>
+					<xs:documentation>复议机关代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="wszzrq" type="wszzrq">
+				<xs:annotation>
+					<xs:documentation>文书制作日期</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sjkbfpbz" type="sjkbfpbz">
+				<xs:annotation>
+					<xs:documentation>是否需要收缴空白发票</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="hdslid" type="hdslid" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>活动实例ID</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sjslid" type="sjslid" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>事件实例ID</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

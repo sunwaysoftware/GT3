@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2010 rel. 3 (http://www.altova.com) by liuwei (liuweicss) -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:include schemaLocation="TaxMLPublicSBType.xsd"/>
+	<xs:complexType name="HXZGSB00198Response">
+		<xs:annotation>
+			<xs:documentation>居民企业清算企业所得税申报事前监控及获取税费种认定、期初数据返回报文</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="jmxxGrid">
+						<xs:annotation>
+							<xs:documentation>减免数据信息</xs:documentation>
+						</xs:annotation>
+						<xs:complexType>
+							<xs:sequence minOccurs="0" maxOccurs="unbounded">
+								<xs:element name="jmxxGridlb" type="SBJmxxJhVO"/>
+							</xs:sequence>
+						</xs:complexType>
+					</xs:element>
+					<xs:element name="mbksehj" type="je">
+						<xs:annotation>
+							<xs:documentation>弥补亏损税额合计</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="syccfpgdsjxxGrid">
+						<xs:annotation>
+							<xs:documentation>剩余财产分配数据信息</xs:documentation>
+						</xs:annotation>
+						<xs:complexType>
+							<xs:sequence minOccurs="0" maxOccurs="unbounded">
+								<xs:element name="syccfpgdsjxxGridlb" type="SBSyccfpgdsjxxVO"/>
+							</xs:sequence>
+						</xs:complexType>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="SBSyccfpgdsjxxVO">
+		<xs:annotation>
+			<xs:documentation>剩余财产分配股东数据信息VO对象</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="tzfhhhrmc" type="tzfhhhrmc" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>投资方（合伙人）名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="tzbl" type="tzbl" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>投资比例</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

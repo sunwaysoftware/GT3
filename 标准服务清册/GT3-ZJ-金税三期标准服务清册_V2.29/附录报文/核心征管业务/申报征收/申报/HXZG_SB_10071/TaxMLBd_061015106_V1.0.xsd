@@ -1,0 +1,373 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 被2012 () 使用XMLSpy v编辑的 (http://www.altova.com) by -->
+<!-- edited with XMLSpy v2010 rel. 3 (http://www.altova.com) by MESMERiZE (MSM) -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:complexType name="gqsgbdVO">
+		<xs:annotation>
+			<xs:documentation>《企业重组所得税特殊性税务处理报告表(股权收购)》</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="gqsgForm" type="gqsgFormVO">
+						<xs:annotation>
+							<xs:documentation>企业重组所得税特殊性税务处理报告表(股权收购)</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="gqzrfGrid">
+						<xs:annotation>
+							<xs:documentation>股权转让方信息</xs:documentation>
+						</xs:annotation>
+						<xs:complexType>
+							<xs:sequence minOccurs="0" maxOccurs="unbounded">
+								<xs:element name="gqzrfMx" type="gqzrfVO">
+									<xs:annotation>
+										<xs:documentation>股权转让方信息Grid</xs:documentation>
+									</xs:annotation>
+								</xs:element>
+							</xs:sequence>
+						</xs:complexType>
+					</xs:element>
+					<xs:element name="xmmxGrid">
+						<xs:annotation>
+							<xs:documentation>项目明细信息</xs:documentation>
+						</xs:annotation>
+						<xs:complexType>
+							<xs:sequence minOccurs="0" maxOccurs="unbounded">
+								<xs:element name="xmmxMx" type="xmmxVO">
+									<xs:annotation>
+										<xs:documentation>项目明细信息Grid</xs:documentation>
+									</xs:annotation>
+								</xs:element>
+							</xs:sequence>
+						</xs:complexType>
+					</xs:element>
+					<xs:element name="gqzrfxxsjqdgqjqtzcGrid">
+						<xs:annotation>
+							<xs:documentation>股权转让方信息-实际取得股权及其他资产</xs:documentation>
+						</xs:annotation>
+						<xs:complexType>
+							<xs:sequence minOccurs="0" maxOccurs="unbounded">
+								<xs:element name="sjqdgqjqtzcMx" type="sjqdgqjqtzcMxVO">
+									<xs:annotation>
+										<xs:documentation>股权转让方信息-实际取得股权及其他资产</xs:documentation>
+									</xs:annotation>
+								</xs:element>
+							</xs:sequence>
+						</xs:complexType>
+					</xs:element>
+					<xs:element name="sgfmxGrid">
+						<xs:annotation>
+							<xs:documentation>收购方明细收购方明细</xs:documentation>
+						</xs:annotation>
+						<xs:complexType>
+							<xs:sequence minOccurs="0" maxOccurs="unbounded">
+								<xs:element name="sgfmxlb" type="sgfmxGridlbVO">
+									<xs:annotation>
+										<xs:documentation>收购方明细收购方明细</xs:documentation>
+									</xs:annotation>
+								</xs:element>
+							</xs:sequence>
+						</xs:complexType>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="sgfmxGridlbVO">
+		<xs:annotation>
+			<xs:documentation>收购方明细收购方明细</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="xmmc" type="xmmc" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>项目名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="gyjz" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>公允价值||公允价值</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zmjz" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>账面价值||账面价值</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yjsjc" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>原计税基础</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="sjqdgqjqtzcMxVO">
+		<xs:annotation>
+			<xs:documentation>实际取得股权及其他资产</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="nsrsbh" type="nsrsbh" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>纳税人识别号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="xmmc" type="xmmc" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>项目名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="gyjz" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>公允价值||公允价值</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jsjc" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>计税基础</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="gqzrfVO">
+		<xs:annotation>
+			<xs:documentation>股权转让方信息</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="gqzrfnssbh" type="nsrsbh">
+				<xs:annotation>
+					<xs:documentation>股权转让方（被收购企业的股东）纳税识别号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="gqzrfmc" type="nsrmc">
+				<xs:annotation>
+					<xs:documentation>股权转让方（被收购企业的股东）名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="gqzrfsszgswjgqc" type="swjgmc">
+				<xs:annotation>
+					<xs:documentation>股权转让方所属主管税务机关（全称）</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zrgqbl" type="bl">
+				<xs:annotation>
+					<xs:documentation>转让被收购企业股权占被收购企业全部股权的比例%</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="fgqzfdydzczrsdhss" type="je">
+				<xs:annotation>
+					<xs:documentation>非股权支付对应的资产转让所得或损失</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="xmmxVO">
+		<xs:annotation>
+			<xs:documentation>项目明细信息</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="nsrsbh" type="nsrsbh" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>纳税人识别号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="xmmc" type="xmmc" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>项目名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="gyjz" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>公允价值||公允价值</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zmjz" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>账面价值||账面价值</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yjsjc" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>原计税基础</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="gqsgFormVO">
+		<xs:annotation>
+			<xs:documentation>企业重组所得税特殊性税务处理报告表(股权收购)</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="sbqymc" type="nsrmc" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>申报企业名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bsgqynssbh" type="nsrmc" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>被收购企业纳税识别号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bsgqymc" type="nsrmc" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>被收购企业名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bsgqysszgswjg" type="swjgmc" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>被收购企业所属主管税务机关(全称)</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="gqsgfnssbh" type="nsrsbh" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>股权收购方纳税识别号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="gqsgfmc" type="nsrmc" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>股权收购方名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="gqsgfsszgswjgqc" type="nsrmc" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>股权收购方所属主管税务机关(全称)</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="gmgqbl" type="bl" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>股权收购方购买的股权占被收购企业全部股权的比例%</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zfjebl" type="bl" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>股权收购方股权支付金额占交易支付总额的比例%</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="gqsgjyzfze" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>股权收购交易支付总额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="gqzfe" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>其中：股权支付额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="fgqzfe" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>非股权支付额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="gqzrhtsxr" type="skssqq" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>股权转让合同（协议）生效日</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="gsbgdjr" type="skssqq" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>股权收购方所收购股权的工商变更登记日</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sfwglqy" type="bz1" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>与投资方是否为关联企业||与投资方是否为关联企业</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jsjcsfbcbb" type="jsjcsfbcbb" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>被收购企业原有各项资产和负债的计税基础是否保持不变</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zczrsdhss" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>非股权支付对应的资产转让所得或损失</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="gyjz" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>公允价值||公允价值</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jsjc" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>计税基础</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="hjgyjz" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>合计公允价值</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="hjzmjz" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>合计账面价值</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="hjyjsjc" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>合计原计税基础</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="fgqzfegyjz" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>①非股权支付额_公允价值</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="fgqzfezmjz" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>①非股权支付额_账面价值</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="fgqzfeyjsjc" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>①非股权支付额_原计税基础</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="gqzfegyjz" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>②股权支付额_公允价值</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="gqzfezmjz" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>②股权支付额_账面价值</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="gqzfeyjsjc" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>②股权支付额_原计税基础</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bqygqgyjz" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>其中:(1)本企业股权_公允价值</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bqygqzmjz" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>其中:(1)本企业股权_账面价值</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bqygqyjsjc" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>其中:(1)本企业股权_原计税基础</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qkgqygqgyjz" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>其中:(2)其控股企业股权_公允价值</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qkgqygqzmjz" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>其中:(2)其控股企业股权_账面价值</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qkgqyyjsjc" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>其中:(2)其控股企业股权_原计税基础</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

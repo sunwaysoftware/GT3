@@ -1,0 +1,347 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2013 (http://www.altova.com) by  () -->
+<!-- 被2012 () 使用XMLSpy v编辑的 (http://www.altova.com) by -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:include schemaLocation="TaxMLPublicType.xsd"/>
+	<xs:complexType name="ChsydwkjzdZcfzbybVO">
+		<xs:annotation>
+			<xs:documentation>资产负债表（月报）（适用执行测绘事业单位会计制度的单位）</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="nsrxxForm" type="NsrxxFormVO">
+				<xs:annotation>
+					<xs:documentation>纳税人基本信息</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="chsydwkjzdZcfzbybGrid">
+				<xs:annotation>
+					<xs:documentation>申报信息</xs:documentation>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:sequence maxOccurs="unbounded">
+						<xs:element name="chsydwkjzdZcfzbybGridlb" type="ChsydwkjzdZcfzbybGridlbVO"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="ChsydwkjzdZcfzbybGridlbVO">
+		<xs:annotation>
+			<xs:documentation>申报信息</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="ewbhxh" type="ewbhxh">
+				<xs:annotation>
+					<xs:documentation>二维表行序号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="xmmc" type="xmmc">
+				<xs:annotation>
+					<xs:documentation>项目名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ncye" type="ncs">
+				<xs:annotation>
+					<xs:documentation>年初余额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qms" type="je">
+				<xs:annotation>
+					<xs:documentation>期末数</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="ChsydwkjzdZcfzbnbVO">
+		<xs:annotation>
+			<xs:documentation>资产负债表（年报）（适用执行测绘事业单位会计制度的单位）</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="chsydwkjzdZcfzbnbGrid">
+				<xs:annotation>
+					<xs:documentation>申报信息</xs:documentation>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:sequence maxOccurs="unbounded">
+						<xs:element name="chsydwkjzdZcfzbnbGridlb" type="ChsydwkjzdZcfzbnbGridlbVO"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="ChsydwkjzdZcfzbnbGridlbVO">
+		<xs:annotation>
+			<xs:documentation>申报信息</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="ewbhxh" type="ewbhxh">
+				<xs:annotation>
+					<xs:documentation>二维表行序号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="xmmc" type="xmmc">
+				<xs:annotation>
+					<xs:documentation>项目名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ncs" type="ncs">
+				<xs:annotation>
+					<xs:documentation>年初数</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qms" type="je">
+				<xs:annotation>
+					<xs:documentation>期末数</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="ChsydwkjzdZcmxbVO">
+		<xs:annotation>
+			<xs:documentation>支出明细表（适用执行测绘事业单位会计制度的单位）</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="chsydwkjzdZcmxbGrid">
+				<xs:annotation>
+					<xs:documentation>申报信息</xs:documentation>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:sequence maxOccurs="unbounded">
+						<xs:element name="chsydwkjzdZcmxbGridlb" type="ChsydwkjzdZcmxbGridlbVO"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="ChsydwkjzdZcmxbGridlbVO">
+		<xs:annotation>
+			<xs:documentation>申报信息</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="ewbhxh" type="ewbhxh">
+				<xs:annotation>
+					<xs:documentation>二维表行序号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="hmc" type="hmc">
+				<xs:annotation>
+					<xs:documentation>项目名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="hj" type="je">
+				<xs:annotation>
+					<xs:documentation>合计</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jbgz" type="je">
+				<xs:annotation>
+					<xs:documentation>基本工资</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bzgz" type="je">
+				<xs:annotation>
+					<xs:documentation>补助工资</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qtgz" type="je">
+				<xs:annotation>
+					<xs:documentation>其他工资</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zgflf" type="je">
+				<xs:annotation>
+					<xs:documentation>职工福利费</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="shbzf" type="je">
+				<xs:annotation>
+					<xs:documentation>社会保障费</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zxj" type="je">
+				<xs:annotation>
+					<xs:documentation>助学金</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="gwf" type="je">
+				<xs:annotation>
+					<xs:documentation>公务费</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sbgzf" type="je">
+				<xs:annotation>
+					<xs:documentation>设备购置费</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="xsf" type="je">
+				<xs:annotation>
+					<xs:documentation>修缮费</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ywf" type="je">
+				<xs:annotation>
+					<xs:documentation>业务费</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ywzdf" type="je">
+				<xs:annotation>
+					<xs:documentation>业务招待费</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qtfy" type="je">
+				<xs:annotation>
+					<xs:documentation>其他费用</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bz" type="bz">
+				<xs:annotation>
+					<xs:documentation>备注</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="ChsydwkjzdSrzcbVO">
+		<xs:annotation>
+			<xs:documentation>收入支出表（适用执行测绘事业单位会计制度的单位）</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="chsydwkjzdSrzcbGrid">
+				<xs:annotation>
+					<xs:documentation>申报信息</xs:documentation>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:sequence maxOccurs="unbounded">
+						<xs:element name="chsydwkjzdSrzcbGridlb" type="ChsydwkjzdSrzcbGridlbVO"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="ChsydwkjzdSrzcbGridlbVO">
+		<xs:annotation>
+			<xs:documentation>申报信息</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="ewbhxh" type="ewbhxh">
+				<xs:annotation>
+					<xs:documentation>二维表行序号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="xmmc" type="xmmc">
+				<xs:annotation>
+					<xs:documentation>项目名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bys" type="bys">
+				<xs:annotation>
+					<xs:documentation>本月数</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qms" type="bnljs">
+				<xs:annotation>
+					<xs:documentation>期末累计数</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="ChsydwkjzdJzcbdqkbVO">
+		<xs:annotation>
+			<xs:documentation>净资产变动情况表（适用执行测绘事业单位会计制度的单位）</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="chsydwkjzdJzcbdqkbGrid">
+				<xs:annotation>
+					<xs:documentation>申报信息</xs:documentation>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:sequence maxOccurs="unbounded">
+						<xs:element name="chsydwkjzdJzcbdqkbGridlb" type="ChsydwkjzdJzcbdqkbGridlbVO"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="ChsydwkjzdJzcbdqkbGridlbVO">
+		<xs:annotation>
+			<xs:documentation>申报信息</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="ewbhxh" type="ewbhxh">
+				<xs:annotation>
+					<xs:documentation>二维表行序号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="xmmc" type="xmmc">
+				<xs:annotation>
+					<xs:documentation>项目名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="hj" type="je">
+				<xs:annotation>
+					<xs:documentation>合计</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="gdjj" type="je">
+				<xs:annotation>
+					<xs:documentation>固定基金</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="syjjxj" type="je">
+				<xs:annotation>
+					<xs:documentation>事业基金小计</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ybjj" type="je">
+				<xs:annotation>
+					<xs:documentation>一般基金</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="tzjj" type="je">
+				<xs:annotation>
+					<xs:documentation>投资基金</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zyjjxj" type="je">
+				<xs:annotation>
+					<xs:documentation>专用基金小计</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="xgjj" type="je">
+				<xs:annotation>
+					<xs:documentation>修购基金</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="fljj" type="je">
+				<xs:annotation>
+					<xs:documentation>福利基金</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yljj" type="je">
+				<xs:annotation>
+					<xs:documentation>医疗基金</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zfjj" type="je">
+				<xs:annotation>
+					<xs:documentation>住房基金</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qtjj" type="je">
+				<xs:annotation>
+					<xs:documentation>其他基金</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="czbtjc" type="je">
+				<xs:annotation>
+					<xs:documentation>财政补贴结存</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zkjc" type="je">
+				<xs:annotation>
+					<xs:documentation>转款结存</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

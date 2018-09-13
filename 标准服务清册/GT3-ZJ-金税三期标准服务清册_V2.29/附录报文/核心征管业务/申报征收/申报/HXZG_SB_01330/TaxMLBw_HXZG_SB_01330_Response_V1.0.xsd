@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2013 (http://www.altova.com) by  () -->
+<!-- 被2011 rel. 2 sp1 (TeaM DJiNN) 使用XMLSpy vTeaM DJiNN编辑的 (http://www.altova.com) by -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:complexType name="HXZGSB01330Response">
+		<xs:annotation>
+			<xs:documentation>扣缴企业所得税合同备案登记表请求报文返回报文</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="SbkjqysdshtbadjxxGrid">
+						<xs:annotation>
+							<xs:documentation>扣缴企业所得税合同备案登记表Grid</xs:documentation>
+						</xs:annotation>
+						<xs:complexType>
+							<xs:sequence maxOccurs="unbounded">
+								<xs:element name="SbkjqysdshtbadjxxGridlb" type="SbkjqysdshtbadjxxGridlbVO">
+									<xs:annotation>
+										<xs:documentation>扣缴企业所得税合同备案登记表</xs:documentation>
+									</xs:annotation>
+								</xs:element>
+							</xs:sequence>
+						</xs:complexType>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="SbkjqysdshtbadjxxGridlbVO">
+		<xs:annotation>
+			<xs:documentation>扣缴企业所得税合同备案登记表VO</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="djxh" type="djxh"/>
+			<xs:element name="fjmqyzwmc" type="fjmqyzwmc"/>
+			<xs:element name="fjmqyywmc" type="fjmqyywmc"/>
+			<xs:element name="zqjmgnsrzwmc" type="zqjmgnsrzwmc"/>
+			<xs:element name="zqjmgnsrywmc" type="zqjmgnsrywmc"/>
+			<xs:element name="gjhdqmc" type="gjhdqmc"/>
+			<xs:element name="fjmqyzqjmgzwdz" type="fjmqyzqjmgzwdz"/>
+			<xs:element name="fjmqyzqjmgywdz" type="fjmqyzqjmgywdz"/>
+			<xs:element name="fjmqylxr" type="fjmqylxr"/>
+			<xs:element name="fjmqylxdh" type="fjmqylxdh"/>
+			<xs:element name="hth" type="hth"/>
+			<xs:element name="htzxqsrq" type="htzxqsrq"/>
+			<xs:element name="htzxzzrq" type="htzxzzrq"/>
+			<xs:element name="htje" type="bz"/>
+			<xs:element name="htbz" type="htbz"/>
+			<xs:element name="zfxmmc" type="zfxmmc"/>
+			<xs:element name="fkcs" type="fkcs"/>
+			<xs:element name="fjmdjxh" type="fjmdjxh"/>
+			<xs:element name="hthxymc" type="hthxymc"/>
+			<xs:element name="gjhdqszDm" type="gjhdqszDm"/>
+			<xs:element name="bh" type="bh"/>
+			<xs:element name="qysdssdlxDm" type="qysdssdlxDm"/>
+			<xs:element name="ssxdsdlxDm" type="ssxdsdlxDm"/>
+			<xs:element name="zfbz2" type="zfbz2"/>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

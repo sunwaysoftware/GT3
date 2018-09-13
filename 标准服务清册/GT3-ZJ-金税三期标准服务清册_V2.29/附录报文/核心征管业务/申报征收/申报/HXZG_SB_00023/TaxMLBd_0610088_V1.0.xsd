@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 被2011 rel. 2 sp1 (TeaM DJiNN) 使用XMLSpy vTeaM DJiNN编辑的 (http://www.altova.com) by -->
+<!-- edited with XMLSpy v2010 (http://www.altova.com) by MESMERiZE (MiZE) -->
+<!-- 编辑使用 XMLSpy v2006 U (http://www.altova.com) 由 any (any) -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:include schemaLocation="TaxMLPublicType.xsd"/>
+	<xs:complexType name="yaysnssbb">
+		<xs:annotation>
+			<xs:documentation>烟叶税纳税申报表</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="sbbhead" type="sbbheadkz1VO">
+				<xs:annotation>
+					<xs:documentation>申报表头信息</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yysgyyGrid">
+				<xs:annotation>
+					<xs:documentation>申报表信息-收购烟叶</xs:documentation>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:sequence maxOccurs="unbounded">
+						<xs:element name="yysgyyGridlb" type="yysgyyGridlbVo">
+							<xs:annotation>
+								<xs:documentation>申报表信息-收购烟叶</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="yygmyyGrid">
+				<xs:annotation>
+					<xs:documentation>申报表信息-购买烟叶</xs:documentation>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:sequence maxOccurs="unbounded">
+						<xs:element name="yygmyyGridlb" type="yygmyyGridlbVo">
+							<xs:annotation>
+								<xs:documentation>申报表信息-购买烟叶</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="dlrxxForm" type="dlrxxForm">
+				<xs:annotation>
+					<xs:documentation>代理人信息</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yysgqkGrid">
+				<xs:annotation>
+					<xs:documentation>收购烟叶</xs:documentation>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:sequence maxOccurs="unbounded">
+						<xs:element name="yysgqkGridlb" type="yysgqkGridlbVo">
+							<xs:annotation>
+								<xs:documentation>收购烟叶列表</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="yygmqkGrid">
+				<xs:annotation>
+					<xs:documentation>购买烟叶情况</xs:documentation>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:sequence maxOccurs="unbounded">
+						<xs:element name="yygmqkGridlbGridlb" type="yygmqkGridlbVo">
+							<xs:annotation>
+								<xs:documentation>购买烟叶列表</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="bzForm">
+				<xs:annotation>
+					<xs:documentation>烟叶收购情况备注信息</xs:documentation>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:sequence minOccurs="0">
+						<xs:element name="bz" type="bz">
+							<xs:annotation>
+								<xs:documentation>备注</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="yysgyyGridlbVo">
+		<xs:annotation>
+			<xs:documentation>申报表信息-收购烟叶</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="yysgje" type="yysgje">
+				<xs:annotation>
+					<xs:documentation>烟叶收购金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sl1" type="sl1">
+				<xs:annotation>
+					<xs:documentation>税率</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ynse" type="ynse">
+				<xs:annotation>
+					<xs:documentation>应纳税额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ynse1" type="ynse1">
+				<xs:annotation>
+					<xs:documentation>已纳税额1</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ybtse" type="ybtse">
+				<xs:annotation>
+					<xs:documentation>应补(退)税额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="yygmyyGridlbVo">
+		<xs:annotation>
+			<xs:documentation>申报表信息-购买烟叶</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="yygmje" type="yysgje">
+				<xs:annotation>
+					<xs:documentation>烟叶购买金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sl1" type="sl1">
+				<xs:annotation>
+					<xs:documentation>税率</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ynse" type="ynse">
+				<xs:annotation>
+					<xs:documentation>应纳税额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ynse1" type="ynse1">
+				<xs:annotation>
+					<xs:documentation>已纳税额1</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ybtse" type="ybtse">
+				<xs:annotation>
+					<xs:documentation>应补(退)税额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="dlrxxForm">
+		<xs:annotation>
+			<xs:documentation>代理人信息</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="swdlrName" type="swdlrmc">
+				<xs:annotation>
+					<xs:documentation>税务代理人名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="swdljbrName" type="dljbrxm">
+				<xs:annotation>
+					<xs:documentation>税务代理经办人</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="slr" type="slrxm">
+				<xs:annotation>
+					<xs:documentation>受理人</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="slrq" type="slrq">
+				<xs:annotation>
+					<xs:documentation>受理日期</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="slrwjgDm" type="swjgDm">
+				<xs:annotation>
+					<xs:documentation>受理税务机关</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bsr" type="bsrxm">
+				<xs:annotation>
+					<xs:documentation>办税人</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="yysgqkGridlbVo">
+		<xs:annotation>
+			<xs:documentation>烟叶收购情况-收购烟叶</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="ewbhxh" type="ewbhxh">
+				<xs:annotation>
+					<xs:documentation>二维表行序号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="xmmc" type="xmmc">
+				<xs:annotation>
+					<xs:documentation>项目名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yydjDm" type="yydjDm">
+				<xs:annotation>
+					<xs:documentation>烟叶等级代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="dj" type="dj">
+				<xs:annotation>
+					<xs:documentation>单价</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sgsl" type="sgsl">
+				<xs:annotation>
+					<xs:documentation>收购数量</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sgjk" type="sgjk">
+				<xs:annotation>
+					<xs:documentation>收购价款</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="yygmqkGridlbVo">
+		<xs:annotation>
+			<xs:documentation>烟叶购买情况-购买烟叶</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="ewbhxh" type="ewbhxh">
+				<xs:annotation>
+					<xs:documentation>二维表行序号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="xmmc" type="xmmc" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>项目名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="dj" type="dj">
+				<xs:annotation>
+					<xs:documentation>单价</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sgsl" type="sgsl">
+				<xs:annotation>
+					<xs:documentation>收购数量</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sgjk" type="sgjk">
+				<xs:annotation>
+					<xs:documentation>收购价款</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

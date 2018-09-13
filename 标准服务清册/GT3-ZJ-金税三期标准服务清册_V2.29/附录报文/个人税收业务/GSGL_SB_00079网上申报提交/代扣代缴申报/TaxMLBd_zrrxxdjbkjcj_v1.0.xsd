@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:complexType name="zrrxxdjbkjFjxxcjYwbw">
+		<xs:annotation>
+			<xs:documentation>自然人信息登记表（扣缴）附加信息采集业务报文</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="zrrxxdjbkjFjxxcjBzds" type="zrrxxdjbkjFjxxcjBzds"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="zrrxxdjbkjFjxxcjBzds">
+		<xs:annotation>
+			<xs:documentation>自然人信息登记表（扣缴）附加信息采集</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="zrrxxdjbkjFjxxHead" type="zrrxxdjbkjFjxxHead">
+				<xs:annotation>
+					<xs:documentation>自然人信息登记表（扣缴）附加信息表头</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zrrxxdjbkjFjxxBody" type="zrrxxdjbkjFjxxBody">
+				<xs:annotation>
+					<xs:documentation>自然人信息登记表（扣缴）附加信息表体</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="zrrxxdjbkjFjxxHead">
+		<xs:annotation>
+			<xs:documentation>自然人信息登记表（扣缴）附加信息采集表头，预留</xs:documentation>
+		</xs:annotation>
+	</xs:complexType>
+	<xs:complexType name="zrrxxdjbkjFjxxBody">
+		<xs:annotation>
+			<xs:documentation>自然人信息登记表（扣缴）表体</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="zrrxxdjbkjFjxxcjLb" type="zrrxxdjbkjFjxxcjLb">
+				<xs:annotation>
+					<xs:documentation>自然人信息登记表（扣缴）附加信息列表</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="zrrxxdjbkjFjxxcjLb">
+		<xs:sequence>
+			<xs:element name="zrrxxdjbkjFjxxMx" type="zrrxxdjbkjFjxxMx" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="zrrxxdjbkjFjxxMx">
+		<xs:annotation>
+			<xs:documentation>自然人信息登记表（扣缴）附加信息的明细</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="zrrxm" type="zrrxm">
+				<xs:annotation>
+					<xs:documentation>自然人姓名，必填</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sfzjlxDm" type="sfzjlxDm">
+				<xs:annotation>
+					<xs:documentation>身份证件类型代码，必填</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sfzjhm" type="sfzjhm">
+				<xs:annotation>
+					<xs:documentation>身份证件号码，必填</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="gh" type="gh">
+				<xs:annotation>
+					<xs:documentation>工号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yzbm" type="yzbm">
+				<xs:annotation>
+					<xs:documentation>邮政编码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:simpleType name="gh">
+		<xs:annotation>
+			<xs:documentation>工号</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:maxLength value="60"/>
+		</xs:restriction>
+	</xs:simpleType>
+</xs:schema>

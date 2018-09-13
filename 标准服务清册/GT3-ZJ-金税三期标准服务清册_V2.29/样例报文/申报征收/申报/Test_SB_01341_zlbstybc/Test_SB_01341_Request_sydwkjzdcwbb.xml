@@ -1,0 +1,368 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<service xmlns="http://www.chinatax.gov.cn/spec/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <head>
+    <tran_id>SWZJ.HXZG.SB.ZLBSTYBC</tran_id>
+    <channel_id>MNQ</channel_id>
+    <tran_seq>583597eb05f84ece8bcebb53a6445e8b</tran_seq>
+    <tran_date>20141025</tran_date>
+    <tran_time>122333624</tran_time>
+    <expand>
+      <name>sjry</name>
+      <value>24406060735</value>
+    </expand>
+    <expand>
+      <name>sjjg</name>
+      <value>24406060700</value>
+    </expand>
+  </head>
+  <body><![CDATA[<?xml version="1.0" encoding="UTF-8" standalone="yes"?><taxML xsi:type="HXZGSB01341Request" xmlbh="String" bbh="String" xmlmc="String" xsi:schemaLocation="http://www.chinatax.gov.cn/dataspec/ TaxMLBw_HXZG_SB_01341_Request_V1.0.xsd" xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<SB100VO>
+		<SB100BdxxVO>
+			<zlbsuuid>aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</zlbsuuid>
+			<djxh>10124406030000000382</djxh>
+			<nsrsbh>440606345667865</nsrsbh>
+		         <nsrmc>yangjing测试纳税人</nsrmc>
+			<zlbsdlDm>ZL1001</zlbsdlDm>
+			<zlbsxlDm>ZL1001002</zlbsxlDm>
+			<zllx>0</zllx>
+			<zlsl>9</zlsl>
+			<cfdz>DD</cfdz>
+<cjbdxml>&lt;?xml version="1.0" encoding="UTF-8" standalone="yes"?&gt;
+&lt;taxML xmlns="http://www.chinatax.gov.cn/dataspec/"&gt;
+    &lt;qykjzdcwbbzcfzbVO&gt;
+        &lt;nsrxxForm&gt;
+            &lt;nsrsbh&gt;440606345667865&lt;/nsrsbh&gt;
+            &lt;nsrmc&gt;yangjing测试纳税人&lt;/nsrmc&gt;
+            &lt;bsrq&gt;2014-11-28 15:12:19&lt;/bsrq&gt;
+            &lt;skssqq&gt;2014-07-01&lt;/skssqq&gt;
+            &lt;skssqz&gt;2014-07-31&lt;/skssqz&gt;
+        &lt;/nsrxxForm&gt;
+        &lt;bdxxGrid&gt;
+            &lt;zcfzbdxxGridlb&gt;
+                &lt;ewbhxh&gt;1&lt;/ewbhxh&gt;
+                &lt;zcxmmc&gt;        货币资金&lt;/zcxmmc&gt;
+                &lt;ncsZc&gt;0.0&lt;/ncsZc&gt;
+                &lt;qmsZc&gt;0.0&lt;/qmsZc&gt;
+                &lt;qyxmmc&gt;        短期借款&lt;/qyxmmc&gt;
+                &lt;ncsQy&gt;0.0&lt;/ncsQy&gt;
+                &lt;qmsQy&gt;0.0&lt;/qmsQy&gt;
+            &lt;/zcfzbdxxGridlb&gt;
+            &lt;zcfzbdxxGridlb&gt;
+                &lt;ewbhxh&gt;2&lt;/ewbhxh&gt;
+                &lt;zcxmmc&gt;        短期投资&lt;/zcxmmc&gt;
+                &lt;ncsZc&gt;0.0&lt;/ncsZc&gt;
+                &lt;qmsZc&gt;0.0&lt;/qmsZc&gt;
+                &lt;qyxmmc&gt;        应付票据&lt;/qyxmmc&gt;
+                &lt;ncsQy&gt;0.0&lt;/ncsQy&gt;
+                &lt;qmsQy&gt;0.0&lt;/qmsQy&gt;
+            &lt;/zcfzbdxxGridlb&gt;
+            &lt;zcfzbdxxGridlb&gt;
+                &lt;ewbhxh&gt;3&lt;/ewbhxh&gt;
+                &lt;zcxmmc&gt;        应收票据&lt;/zcxmmc&gt;
+                &lt;ncsZc&gt;0.0&lt;/ncsZc&gt;
+                &lt;qmsZc&gt;0.0&lt;/qmsZc&gt;
+                &lt;qyxmmc&gt;        应付账款&lt;/qyxmmc&gt;
+                &lt;ncsQy&gt;0.0&lt;/ncsQy&gt;
+                &lt;qmsQy&gt;0.0&lt;/qmsQy&gt;
+            &lt;/zcfzbdxxGridlb&gt;
+            &lt;zcfzbdxxGridlb&gt;
+                &lt;ewbhxh&gt;4&lt;/ewbhxh&gt;
+                &lt;zcxmmc&gt;        应收股利&lt;/zcxmmc&gt;
+                &lt;ncsZc&gt;0.0&lt;/ncsZc&gt;
+                &lt;qmsZc&gt;0.0&lt;/qmsZc&gt;
+                &lt;qyxmmc&gt;        预收账款&lt;/qyxmmc&gt;
+                &lt;ncsQy&gt;0.0&lt;/ncsQy&gt;
+                &lt;qmsQy&gt;0.0&lt;/qmsQy&gt;
+            &lt;/zcfzbdxxGridlb&gt;
+            &lt;zcfzbdxxGridlb&gt;
+                &lt;ewbhxh&gt;5&lt;/ewbhxh&gt;
+                &lt;zcxmmc&gt;        应收利息&lt;/zcxmmc&gt;
+                &lt;ncsZc&gt;0.0&lt;/ncsZc&gt;
+                &lt;qmsZc&gt;0.0&lt;/qmsZc&gt;
+                &lt;qyxmmc&gt;        应付工资&lt;/qyxmmc&gt;
+                &lt;ncsQy&gt;0.0&lt;/ncsQy&gt;
+                &lt;qmsQy&gt;0.0&lt;/qmsQy&gt;
+            &lt;/zcfzbdxxGridlb&gt;
+            &lt;zcfzbdxxGridlb&gt;
+                &lt;ewbhxh&gt;6&lt;/ewbhxh&gt;
+                &lt;zcxmmc&gt;        应收账款&lt;/zcxmmc&gt;
+                &lt;ncsZc&gt;0.0&lt;/ncsZc&gt;
+                &lt;qmsZc&gt;0.0&lt;/qmsZc&gt;
+                &lt;qyxmmc&gt;        应付福利费&lt;/qyxmmc&gt;
+                &lt;ncsQy&gt;0.0&lt;/ncsQy&gt;
+                &lt;qmsQy&gt;0.0&lt;/qmsQy&gt;
+            &lt;/zcfzbdxxGridlb&gt;
+            &lt;zcfzbdxxGridlb&gt;
+                &lt;ewbhxh&gt;7&lt;/ewbhxh&gt;
+                &lt;zcxmmc&gt;        其他应收&lt;/zcxmmc&gt;
+                &lt;ncsZc&gt;0.0&lt;/ncsZc&gt;
+                &lt;qmsZc&gt;0.0&lt;/qmsZc&gt;
+                &lt;qyxmmc&gt;        应付股利&lt;/qyxmmc&gt;
+                &lt;ncsQy&gt;0.0&lt;/ncsQy&gt;
+                &lt;qmsQy&gt;0.0&lt;/qmsQy&gt;
+            &lt;/zcfzbdxxGridlb&gt;
+            &lt;zcfzbdxxGridlb&gt;
+                &lt;ewbhxh&gt;8&lt;/ewbhxh&gt;
+                &lt;zcxmmc&gt;        预付账款&lt;/zcxmmc&gt;
+                &lt;ncsZc&gt;0.0&lt;/ncsZc&gt;
+                &lt;qmsZc&gt;0.0&lt;/qmsZc&gt;
+                &lt;qyxmmc&gt;        应交税金&lt;/qyxmmc&gt;
+                &lt;ncsQy&gt;0.0&lt;/ncsQy&gt;
+                &lt;qmsQy&gt;0.0&lt;/qmsQy&gt;
+            &lt;/zcfzbdxxGridlb&gt;
+            &lt;zcfzbdxxGridlb&gt;
+                &lt;ewbhxh&gt;9&lt;/ewbhxh&gt;
+                &lt;zcxmmc&gt;        应收补贴款&lt;/zcxmmc&gt;
+                &lt;ncsZc&gt;0.0&lt;/ncsZc&gt;
+                &lt;qmsZc&gt;0.0&lt;/qmsZc&gt;
+                &lt;qyxmmc&gt;        其他应交款&lt;/qyxmmc&gt;
+                &lt;ncsQy&gt;0.0&lt;/ncsQy&gt;
+                &lt;qmsQy&gt;0.0&lt;/qmsQy&gt;
+            &lt;/zcfzbdxxGridlb&gt;
+            &lt;zcfzbdxxGridlb&gt;
+                &lt;ewbhxh&gt;10&lt;/ewbhxh&gt;
+                &lt;zcxmmc&gt;        存货&lt;/zcxmmc&gt;
+                &lt;ncsZc&gt;0.0&lt;/ncsZc&gt;
+                &lt;qmsZc&gt;0.0&lt;/qmsZc&gt;
+                &lt;qyxmmc&gt;        其他应付款&lt;/qyxmmc&gt;
+                &lt;ncsQy&gt;0.0&lt;/ncsQy&gt;
+                &lt;qmsQy&gt;0.0&lt;/qmsQy&gt;
+            &lt;/zcfzbdxxGridlb&gt;
+            &lt;zcfzbdxxGridlb&gt;
+                &lt;ewbhxh&gt;11&lt;/ewbhxh&gt;
+                &lt;zcxmmc&gt;        待摊费用&lt;/zcxmmc&gt;
+                &lt;ncsZc&gt;0.0&lt;/ncsZc&gt;
+                &lt;qmsZc&gt;0.0&lt;/qmsZc&gt;
+                &lt;qyxmmc&gt;        预提费用&lt;/qyxmmc&gt;
+                &lt;ncsQy&gt;0.0&lt;/ncsQy&gt;
+                &lt;qmsQy&gt;0.0&lt;/qmsQy&gt;
+            &lt;/zcfzbdxxGridlb&gt;
+            &lt;zcfzbdxxGridlb&gt;
+                &lt;ewbhxh&gt;12&lt;/ewbhxh&gt;
+                &lt;zcxmmc&gt;        一年内到期的长期债权投资&lt;/zcxmmc&gt;
+                &lt;ncsZc&gt;0.0&lt;/ncsZc&gt;
+                &lt;qmsZc&gt;0.0&lt;/qmsZc&gt;
+                &lt;qyxmmc&gt;        预计负债&lt;/qyxmmc&gt;
+                &lt;ncsQy&gt;0.0&lt;/ncsQy&gt;
+                &lt;qmsQy&gt;0.0&lt;/qmsQy&gt;
+            &lt;/zcfzbdxxGridlb&gt;
+            &lt;zcfzbdxxGridlb&gt;
+                &lt;ewbhxh&gt;13&lt;/ewbhxh&gt;
+                &lt;zcxmmc&gt;        其他流动资产&lt;/zcxmmc&gt;
+                &lt;ncsZc&gt;0.0&lt;/ncsZc&gt;
+                &lt;qmsZc&gt;0.0&lt;/qmsZc&gt;
+                &lt;qyxmmc&gt;        一年内到期的长期负债&lt;/qyxmmc&gt;
+                &lt;ncsQy&gt;0.0&lt;/ncsQy&gt;
+                &lt;qmsQy&gt;0.0&lt;/qmsQy&gt;
+            &lt;/zcfzbdxxGridlb&gt;
+            &lt;zcfzbdxxGridlb&gt;
+                &lt;ewbhxh&gt;14&lt;/ewbhxh&gt;
+                &lt;zcxmmc&gt;        流动资产合计&lt;/zcxmmc&gt;
+                &lt;ncsZc&gt;0.0&lt;/ncsZc&gt;
+                &lt;qmsZc&gt;0.0&lt;/qmsZc&gt;
+                &lt;qyxmmc&gt;        其他流动负债&lt;/qyxmmc&gt;
+                &lt;ncsQy&gt;0.0&lt;/ncsQy&gt;
+                &lt;qmsQy&gt;0.0&lt;/qmsQy&gt;
+            &lt;/zcfzbdxxGridlb&gt;
+            &lt;zcfzbdxxGridlb&gt;
+                &lt;ewbhxh&gt;15&lt;/ewbhxh&gt;
+                &lt;zcxmmc&gt;        长期股权投资&lt;/zcxmmc&gt;
+                &lt;ncsZc&gt;0.0&lt;/ncsZc&gt;
+                &lt;qmsZc&gt;0.0&lt;/qmsZc&gt;
+                &lt;qyxmmc&gt;流动负债合计&lt;/qyxmmc&gt;
+                &lt;ncsQy&gt;0.0&lt;/ncsQy&gt;
+                &lt;qmsQy&gt;0.0&lt;/qmsQy&gt;
+            &lt;/zcfzbdxxGridlb&gt;
+            &lt;zcfzbdxxGridlb&gt;
+                &lt;ewbhxh&gt;16&lt;/ewbhxh&gt;
+                &lt;zcxmmc&gt;        长期债权投资&lt;/zcxmmc&gt;
+                &lt;ncsZc&gt;0.0&lt;/ncsZc&gt;
+                &lt;qmsZc&gt;0.0&lt;/qmsZc&gt;
+            &lt;/zcfzbdxxGridlb&gt;
+            &lt;zcfzbdxxGridlb&gt;
+                &lt;ewbhxh&gt;17&lt;/ewbhxh&gt;
+                &lt;zcxmmc&gt;        长期投资合计&lt;/zcxmmc&gt;
+                &lt;ncsZc&gt;0.0&lt;/ncsZc&gt;
+                &lt;qmsZc&gt;0.0&lt;/qmsZc&gt;
+                &lt;qyxmmc&gt;        长期借款&lt;/qyxmmc&gt;
+                &lt;ncsQy&gt;0.0&lt;/ncsQy&gt;
+                &lt;qmsQy&gt;0.0&lt;/qmsQy&gt;
+            &lt;/zcfzbdxxGridlb&gt;
+            &lt;zcfzbdxxGridlb&gt;
+                &lt;ewbhxh&gt;18&lt;/ewbhxh&gt;
+                &lt;qyxmmc&gt;        应付债券&lt;/qyxmmc&gt;
+                &lt;ncsQy&gt;0.0&lt;/ncsQy&gt;
+                &lt;qmsQy&gt;0.0&lt;/qmsQy&gt;
+            &lt;/zcfzbdxxGridlb&gt;
+            &lt;zcfzbdxxGridlb&gt;
+                &lt;ewbhxh&gt;19&lt;/ewbhxh&gt;
+                &lt;zcxmmc&gt;        固定资产原价&lt;/zcxmmc&gt;
+                &lt;ncsZc&gt;0.0&lt;/ncsZc&gt;
+                &lt;qmsZc&gt;0.0&lt;/qmsZc&gt;
+                &lt;qyxmmc&gt;        长期应付款&lt;/qyxmmc&gt;
+                &lt;ncsQy&gt;0.0&lt;/ncsQy&gt;
+                &lt;qmsQy&gt;0.0&lt;/qmsQy&gt;
+            &lt;/zcfzbdxxGridlb&gt;
+            &lt;zcfzbdxxGridlb&gt;
+                &lt;ewbhxh&gt;20&lt;/ewbhxh&gt;
+                &lt;zcxmmc&gt;        减:累计折旧&lt;/zcxmmc&gt;
+                &lt;ncsZc&gt;0.0&lt;/ncsZc&gt;
+                &lt;qmsZc&gt;0.0&lt;/qmsZc&gt;
+                &lt;qyxmmc&gt;        专项应付款&lt;/qyxmmc&gt;
+                &lt;ncsQy&gt;0.0&lt;/ncsQy&gt;
+                &lt;qmsQy&gt;0.0&lt;/qmsQy&gt;
+            &lt;/zcfzbdxxGridlb&gt;
+            &lt;zcfzbdxxGridlb&gt;
+                &lt;ewbhxh&gt;21&lt;/ewbhxh&gt;
+                &lt;zcxmmc&gt;        固定资产净值&lt;/zcxmmc&gt;
+                &lt;ncsZc&gt;0.0&lt;/ncsZc&gt;
+                &lt;qmsZc&gt;0.0&lt;/qmsZc&gt;
+                &lt;qyxmmc&gt;        其他长期负债&lt;/qyxmmc&gt;
+                &lt;ncsQy&gt;0.0&lt;/ncsQy&gt;
+                &lt;qmsQy&gt;0.0&lt;/qmsQy&gt;
+            &lt;/zcfzbdxxGridlb&gt;
+            &lt;zcfzbdxxGridlb&gt;
+                &lt;ewbhxh&gt;22&lt;/ewbhxh&gt;
+                &lt;zcxmmc&gt;        减:固定资产减值准备&lt;/zcxmmc&gt;
+                &lt;ncsZc&gt;0.0&lt;/ncsZc&gt;
+                &lt;qmsZc&gt;0.0&lt;/qmsZc&gt;
+                &lt;qyxmmc&gt;        长期负债合计&lt;/qyxmmc&gt;
+                &lt;ncsQy&gt;0.0&lt;/ncsQy&gt;
+                &lt;qmsQy&gt;0.0&lt;/qmsQy&gt;
+            &lt;/zcfzbdxxGridlb&gt;
+            &lt;zcfzbdxxGridlb&gt;
+                &lt;ewbhxh&gt;23&lt;/ewbhxh&gt;
+                &lt;zcxmmc&gt;        固定资产净额&lt;/zcxmmc&gt;
+                &lt;ncsZc&gt;0.0&lt;/ncsZc&gt;
+                &lt;qmsZc&gt;0.0&lt;/qmsZc&gt;
+            &lt;/zcfzbdxxGridlb&gt;
+            &lt;zcfzbdxxGridlb&gt;
+                &lt;ewbhxh&gt;24&lt;/ewbhxh&gt;
+                &lt;zcxmmc&gt;        工程物资&lt;/zcxmmc&gt;
+                &lt;ncsZc&gt;0.0&lt;/ncsZc&gt;
+                &lt;qmsZc&gt;0.0&lt;/qmsZc&gt;
+                &lt;qyxmmc&gt;        递延税款贷项&lt;/qyxmmc&gt;
+                &lt;ncsQy&gt;0.0&lt;/ncsQy&gt;
+                &lt;qmsQy&gt;0.0&lt;/qmsQy&gt;
+            &lt;/zcfzbdxxGridlb&gt;
+            &lt;zcfzbdxxGridlb&gt;
+                &lt;ewbhxh&gt;25&lt;/ewbhxh&gt;
+                &lt;zcxmmc&gt;        在建工程&lt;/zcxmmc&gt;
+                &lt;ncsZc&gt;0.0&lt;/ncsZc&gt;
+                &lt;qmsZc&gt;0.0&lt;/qmsZc&gt;
+                &lt;qyxmmc&gt;负债合计&lt;/qyxmmc&gt;
+                &lt;ncsQy&gt;0.0&lt;/ncsQy&gt;
+                &lt;qmsQy&gt;0.0&lt;/qmsQy&gt;
+            &lt;/zcfzbdxxGridlb&gt;
+            &lt;zcfzbdxxGridlb&gt;
+                &lt;ewbhxh&gt;26&lt;/ewbhxh&gt;
+                &lt;zcxmmc&gt;        固定资产清理&lt;/zcxmmc&gt;
+                &lt;ncsZc&gt;0.0&lt;/ncsZc&gt;
+                &lt;qmsZc&gt;0.0&lt;/qmsZc&gt;
+            &lt;/zcfzbdxxGridlb&gt;
+            &lt;zcfzbdxxGridlb&gt;
+                &lt;ewbhxh&gt;27&lt;/ewbhxh&gt;
+                &lt;zcxmmc&gt;固定资产合计&lt;/zcxmmc&gt;
+                &lt;ncsZc&gt;0.0&lt;/ncsZc&gt;
+                &lt;qmsZc&gt;0.0&lt;/qmsZc&gt;
+            &lt;/zcfzbdxxGridlb&gt;
+            &lt;zcfzbdxxGridlb&gt;
+                &lt;ewbhxh&gt;28&lt;/ewbhxh&gt;
+                &lt;qyxmmc&gt;        实收资本(或股本)&lt;/qyxmmc&gt;
+                &lt;ncsQy&gt;0.0&lt;/ncsQy&gt;
+                &lt;qmsQy&gt;0.0&lt;/qmsQy&gt;
+            &lt;/zcfzbdxxGridlb&gt;
+            &lt;zcfzbdxxGridlb&gt;
+                &lt;ewbhxh&gt;29&lt;/ewbhxh&gt;
+                &lt;zcxmmc&gt;        无形资产&lt;/zcxmmc&gt;
+                &lt;ncsZc&gt;0.0&lt;/ncsZc&gt;
+                &lt;qmsZc&gt;0.0&lt;/qmsZc&gt;
+                &lt;qyxmmc&gt;        减:已归还投资&lt;/qyxmmc&gt;
+                &lt;ncsQy&gt;0.0&lt;/ncsQy&gt;
+                &lt;qmsQy&gt;0.0&lt;/qmsQy&gt;
+            &lt;/zcfzbdxxGridlb&gt;
+            &lt;zcfzbdxxGridlb&gt;
+                &lt;ewbhxh&gt;30&lt;/ewbhxh&gt;
+                &lt;zcxmmc&gt;        长期待摊费用&lt;/zcxmmc&gt;
+                &lt;ncsZc&gt;0.0&lt;/ncsZc&gt;
+                &lt;qmsZc&gt;0.0&lt;/qmsZc&gt;
+                &lt;qyxmmc&gt;        实收资本(或股本)净额&lt;/qyxmmc&gt;
+                &lt;ncsQy&gt;0.0&lt;/ncsQy&gt;
+                &lt;qmsQy&gt;0.0&lt;/qmsQy&gt;
+            &lt;/zcfzbdxxGridlb&gt;
+            &lt;zcfzbdxxGridlb&gt;
+                &lt;ewbhxh&gt;31&lt;/ewbhxh&gt;
+                &lt;zcxmmc&gt;        其他长期资产&lt;/zcxmmc&gt;
+                &lt;ncsZc&gt;0.0&lt;/ncsZc&gt;
+                &lt;qmsZc&gt;0.0&lt;/qmsZc&gt;
+                &lt;qyxmmc&gt;        资本公积&lt;/qyxmmc&gt;
+                &lt;ncsQy&gt;0.0&lt;/ncsQy&gt;
+                &lt;qmsQy&gt;0.0&lt;/qmsQy&gt;
+            &lt;/zcfzbdxxGridlb&gt;
+            &lt;zcfzbdxxGridlb&gt;
+                &lt;ewbhxh&gt;32&lt;/ewbhxh&gt;
+                &lt;zcxmmc&gt;        无形资产及其他资产合计&lt;/zcxmmc&gt;
+                &lt;ncsZc&gt;0.0&lt;/ncsZc&gt;
+                &lt;qmsZc&gt;0.0&lt;/qmsZc&gt;
+                &lt;qyxmmc&gt;        盈余公积&lt;/qyxmmc&gt;
+                &lt;ncsQy&gt;0.0&lt;/ncsQy&gt;
+                &lt;qmsQy&gt;0.0&lt;/qmsQy&gt;
+            &lt;/zcfzbdxxGridlb&gt;
+            &lt;zcfzbdxxGridlb&gt;
+                &lt;ewbhxh&gt;33&lt;/ewbhxh&gt;
+                &lt;qyxmmc&gt;        其中:法定公益金&lt;/qyxmmc&gt;
+                &lt;ncsQy&gt;0.0&lt;/ncsQy&gt;
+                &lt;qmsQy&gt;0.0&lt;/qmsQy&gt;
+            &lt;/zcfzbdxxGridlb&gt;
+            &lt;zcfzbdxxGridlb&gt;
+                &lt;ewbhxh&gt;34&lt;/ewbhxh&gt;
+                &lt;qyxmmc&gt;        未分配利润&lt;/qyxmmc&gt;
+                &lt;ncsQy&gt;0.0&lt;/ncsQy&gt;
+                &lt;qmsQy&gt;0.0&lt;/qmsQy&gt;
+            &lt;/zcfzbdxxGridlb&gt;
+            &lt;zcfzbdxxGridlb&gt;
+                &lt;ewbhxh&gt;35&lt;/ewbhxh&gt;
+                &lt;zcxmmc&gt;        递延税款借项&lt;/zcxmmc&gt;
+                &lt;ncsZc&gt;0.0&lt;/ncsZc&gt;
+                &lt;qmsZc&gt;0.0&lt;/qmsZc&gt;
+                &lt;qyxmmc&gt;所有者权益(或股东权益)合计&lt;/qyxmmc&gt;
+                &lt;ncsQy&gt;0.0&lt;/ncsQy&gt;
+                &lt;qmsQy&gt;0.0&lt;/qmsQy&gt;
+            &lt;/zcfzbdxxGridlb&gt;
+            &lt;zcfzbdxxGridlb&gt;
+                &lt;ewbhxh&gt;36&lt;/ewbhxh&gt;
+                &lt;zcxmmc&gt;资产合计&lt;/zcxmmc&gt;
+                &lt;ncsZc&gt;0.0&lt;/ncsZc&gt;
+                &lt;qmsZc&gt;0.0&lt;/qmsZc&gt;
+                &lt;qyxmmc&gt;负债和所有者权益(或股东权益)总计&lt;/qyxmmc&gt;
+                &lt;ncsQy&gt;0.0&lt;/ncsQy&gt;
+                &lt;qmsQy&gt;0.0&lt;/qmsQy&gt;
+            &lt;/zcfzbdxxGridlb&gt;
+        &lt;/bdxxGrid&gt;
+    &lt;/qykjzdcwbbzcfzbVO&gt;
+&lt;/taxML&gt;
+</cjbdxml>			
+                           <dzbzdszlDm>aaaaaaaaaa</dzbzdszlDm>
+			<SBCjbmxGrid>
+				<SBCjbmxGridlb>
+					<zlbsuuid>aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</zlbsuuid>
+					<djxh>10124406030000000382</djxh>
+					<ssqq>2016-07-1</ssqq>
+					<ssqz>2016-07-31</ssqz>
+					<bszlDm>ZLA0610211</bszlDm>
+					<zlbscjuuid>aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</zlbscjuuid>
+				</SBCjbmxGridlb>
+			</SBCjbmxGrid>
+		</SB100BdxxVO>
+		<gzbz>N</gzbz>
+		<slswsxDm>aaaaaaaaaaaaaaaa</slswsxDm>
+		<ywbwname>RR</ywbwname>
+		<xmlCode>aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</xmlCode>
+	</SB100VO>
+	<ZlbssldjNsrxxVO>
+		<ssqq>2016-07-01</ssqq>
+		<ssqz>2016-07-31</ssqz>
+	</ZlbssldjNsrxxVO>
+</taxML>
+]]></body>
+</service>

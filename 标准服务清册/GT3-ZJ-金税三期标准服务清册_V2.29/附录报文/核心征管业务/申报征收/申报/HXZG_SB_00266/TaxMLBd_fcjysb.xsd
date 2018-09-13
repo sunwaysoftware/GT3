@@ -1,0 +1,673 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2013 (http://www.altova.com) by  () -->
+<!-- 被2012 () 使用XMLSpy v编辑的 (http://www.altova.com) by -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:include schemaLocation="TaxMLPublicType.xsd"/>
+	<xs:complexType name="fcjysbbdywbw">
+		<xs:annotation>
+			<xs:documentation>房产交易申报表单业务报文</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="fcjysbbd" type="fcjysbbd">
+						<xs:annotation>
+							<xs:documentation>房产交易申报表单</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="fcjysbbd">
+		<xs:annotation>
+			<xs:documentation>房产交易申报表单</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="cxtjForm" type="cxtjForm" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>查询条件</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zrfnsrxxForm" type="zrfnsrxxForm" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>转让方纳税人信息</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="csfnsrxxForm" type="csfnsrxxForm" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>承受方纳税人信息</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="syxxForm" type="syxxForm">
+				<xs:annotation>
+					<xs:documentation>税源信息</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="htxxForm" type="htxxForm">
+				<xs:annotation>
+					<xs:documentation>合同信息</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zrfxxGrid">
+				<xs:annotation>
+					<xs:documentation>转让方税款信息</xs:documentation>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:sequence minOccurs="0" maxOccurs="unbounded">
+						<xs:element name="zrfxxGridlb" type="zrfxxGridlbVo">
+							<xs:annotation>
+								<xs:documentation>转让方税款信息</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="csfxxGrid">
+				<xs:annotation>
+					<xs:documentation>承受方税款信息</xs:documentation>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:sequence minOccurs="0" maxOccurs="unbounded">
+						<xs:element name="csfxxGridlb" type="csfxxGridlbVo">
+							<xs:annotation>
+								<xs:documentation>承受方税款信息</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="fjxxForm" type="fjxxForm">
+				<xs:annotation>
+					<xs:documentation>受理信息</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="cxtjForm">
+		<xs:annotation>
+			<xs:documentation>查询条件</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="zrfnsrsbh" type="nsrsbh">
+				<xs:annotation>
+					<xs:documentation>转让方纳税人识别号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="csfnsrsbh" type="nsrsbh">
+				<xs:annotation>
+					<xs:documentation>承受方纳税人识别号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="skssqq" type="skssqq">
+				<xs:annotation>
+					<xs:documentation>税款所属期起</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="skssqz" type="skssqz">
+				<xs:annotation>
+					<xs:documentation>税款所属期止</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="zrfnsrxxForm">
+		<xs:annotation>
+			<xs:documentation>转让方纳税人信息</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="zrfnsrsbh" type="nsrsbh">
+				<xs:annotation>
+					<xs:documentation>转让方纳税人识别号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zrfNsrmc" type="zrfNsrmc">
+				<xs:annotation>
+					<xs:documentation>转让方纳税人名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zrfNsrdz" type="zrfNsrdz">
+				<xs:annotation>
+					<xs:documentation>转让方纳税人地址</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zrfNsrzjlxDm" type="zrfNsrzjlxDm">
+				<xs:annotation>
+					<xs:documentation>转让方身份证件类型</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zrfNsrzjhm" type="zrfNsrzjhm">
+				<xs:annotation>
+					<xs:documentation>转让方证件号码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zrfNsrlxdh" type="zrfNsrlxdh">
+				<xs:annotation>
+					<xs:documentation>转让方联系电话</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zrfHyDm" type="zrfHyDm" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>转让方所属行业</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="csfnsrxxForm">
+		<xs:annotation>
+			<xs:documentation>承受方纳税人信息</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="csfnsrsbh" type="nsrsbh">
+				<xs:annotation>
+					<xs:documentation>承受方纳税人识别号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="csfNsrmc" type="csfNsrmc">
+				<xs:annotation>
+					<xs:documentation>承受方纳税人名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="csfNsrdz" type="csfNsrdz">
+				<xs:annotation>
+					<xs:documentation>承受方纳税人地址</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="csfNsrzjlxDm" type="csfNsrzjlxDm">
+				<xs:annotation>
+					<xs:documentation>承受方身份证件类型</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="csfNsrzjhm" type="csfNsrzjhm">
+				<xs:annotation>
+					<xs:documentation>承受方证件号码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="csfNsrlxdh" type="csfNsrlxdh">
+				<xs:annotation>
+					<xs:documentation>承受方联系电话</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="csfHyDm" type="csfHyDm" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>承受方所属行业</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="syxxForm">
+		<xs:annotation>
+			<xs:documentation>税源信息</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="sybzDm1" type="sybzDm1" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>税源标志代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sybh1" type="sybh1" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>税源编号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="syzlwz" type="syzlwz" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>税源坐落位置</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="xzqhDm" type="xzqhDm" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>行政区划代码||行政区划前2位+国地税标志</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jdxzDm" type="jdxzDm" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>街道乡镇代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="fwsdswjgDm" type="fwsdswjgDm" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>房屋属地税务机关代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="dwlsgxDm" type="dwlsgxDm" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>单位隶属关系代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="pgqsJyjg" type="pgqsJyjg" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>评估契税交易价格</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="wbmjyjg" type="wbmjyjg" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>外部门交易价格</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="cjjg" type="cjjg" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>成交价格</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="scfwQdcb" type="scfwQdcb" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>上次房屋取得成本</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="fwjyfsDm" type="fwjyfsDm" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>房屋交易方式代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="fwmj" type="fwmj" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>房屋面积</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="tnmj" type="tnmj" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>套内面积</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="fwcqzsh" type="fwcqzsh" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>房屋产权证书号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="scfwQdsj" type="scfwQdsj" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>上次房屋取得时间</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="tdzzsKccb" type="tdzzsKccb" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>土地增值税扣除成本</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="grsdsKchlfy" type="grsdsKchlfy" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>个人所得税扣除合理费用</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="fclxDm" type="fclxDm" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>房产类型代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sfesfbz" type="sfesfbz" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>是否二手房标志</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sfzfbz" type="sfzfbz" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>是否住房标志</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sfptzfbz" type="sfptzfbz" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>是否普通住房标志</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sfjtWyptzfbz" type="sfjtWyptzfbz" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>是否家庭唯一普通住房标志</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sfjtWy90yxPtzfbz" type="sfjtWy90yxPtzfbz" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>是否家庭唯一90平方米以下普通住房标志</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="xzqhszDm" type="xzqhszDm" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>行政区划数字代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="fcjyfsDm" type="fcjyfsDm" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>房产交易方式代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="gmfjtwyzfbz" type="bz1" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>购买方家庭唯一住房标志</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="gmfzxqsbz" type="bz1" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>购买方直系亲属标志</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="fwuuid" type="fwuuid" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>UUID||uuid</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="scqdFwfs" type="scqdFwfs" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>上次取得房屋方式</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="chrfwtsDm" type="chrfwtsDm" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>出让方房屋套数代码:01第一套 09 其他 如果传递为空代表09</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="crffwtsDm" type="crffwtsDm" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>承让方房屋套数代码11 第一套 12 第二套 19 其他 如果没有传递代表19</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qsqszydxDm" type="qsqszydxDm" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>房产类型</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zrmj" type="zrmj" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>转让面积</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="htxxForm">
+		<xs:annotation>
+			<xs:documentation>合同信息</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="htbh" type="htbh">
+				<xs:annotation>
+					<xs:documentation>合同编号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="htje" type="je">
+				<xs:annotation>
+					<xs:documentation>合同金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="htqdrq" type="zrhtqdrq">
+				<xs:annotation>
+					<xs:documentation>合同签订日期</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sbrq1" type="sbrq">
+				<xs:annotation>
+					<xs:documentation>申报日期</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="cjjgsfhs" type="bz1">
+				<xs:annotation>
+					<xs:documentation>成交价格是否含税</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bcsbjysfsyzrfzkp" type="bz1">
+				<xs:annotation>
+					<xs:documentation>本次申报交易是否属于转让方自开票</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bcjydfzzsslhzsl" type="sl1">
+				<xs:annotation>
+					<xs:documentation>本次交易代付增值税税率或征收率</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="cezszzsbz" type="bz1">
+				<xs:annotation>
+					<xs:documentation>差额征收增值税标志</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="zrfxxGrid">
+		<xs:annotation>
+			<xs:documentation>转让方税款信息</xs:documentation>
+		</xs:annotation>
+		<xs:sequence maxOccurs="unbounded">
+			<xs:element name="zrfxxGridlb" type="zrfxxGridlbVo">
+				<xs:annotation>
+					<xs:documentation>转让方税款信息</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="zrfxxGridlbVo">
+		<xs:annotation>
+			<xs:documentation>转让方税款信息</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="ewbhxh" type="ewbhxh" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>二维表行序号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="xybz" type="xybz" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>选用标志</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zsxmDm" type="zsxmDm" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>征收项目代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zspmDm" type="zspmDm" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>征收品目代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zszmDm" type="zszmDm" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>征收子目代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jsyj" type="jsyj" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>计税依据</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sl1" type="sl1" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>税率</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ynse" type="ynse" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>应纳税额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="kcse" type="kcse" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>扣除税额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jmse" type="jmse" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>减免税额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bqybtse" type="bqybtse" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>本期应补退税额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ykpje" type="ykpje" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>已开票金额||初始为0，如果开具、作废了发票反写此字段。)</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="skssqq" type="skssqq" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>税款所属期起</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="skssqz" type="skssqz" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>税款所属期止</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ysx" type="ysx" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>应税项总数量或收入总额、应缴费人数、原值、面积、缴费基数等</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yssdl" type="yssdl" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>应税所得率</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sskcs" type="sskcs" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>速算扣除数</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jcx" type="jcx" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>减除项允许减除数量、金额、面积、已安排残疾人数等</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ssjmxzDm" type="ssjmxzDm" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>税收减免性质代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="csfxxGrid">
+		<xs:annotation>
+			<xs:documentation>承受方税款信息</xs:documentation>
+		</xs:annotation>
+		<xs:sequence maxOccurs="unbounded">
+			<xs:element name="csfxxGridlb" type="csfxxGridlbVo">
+				<xs:annotation>
+					<xs:documentation>承受方税款信息</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="csfxxGridlbVo">
+		<xs:annotation>
+			<xs:documentation>承受方税款信息</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="ewbhxh" type="ewbhxh" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>二维表行序号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="xybz" type="xybz" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>选用标志</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zsxmDm" type="zsxmDm" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>征收项目代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zspmDm" type="zspmDm" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>征收品目代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zszmDm" type="zszmDm" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>征收子目代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jsyj" type="jsyj" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>计税依据</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sl1" type="sl1" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>税率</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ynse" type="ynse" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>应纳税额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jmse" type="jmse" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>减免税额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bqybtse" type="bqybtse" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>本期应补退税额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ykpje" type="ykpje" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>已开票金额。)</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="skssqq" type="skssqq" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>税款所属期起</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="skssqz" type="skssqz" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>税款所属期止</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ysx" type="ysx" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>应税项总数量或收入总额、应缴费人数、原值、面积、缴费基数等</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yssdl" type="yssdl" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>应税所得率</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sskcs" type="sskcs" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>速算扣除数</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jcx" type="jcx" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>减除项允许减除数量、金额、面积、已安排残疾人数等</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ssjmxzDm" type="ssjmxzDm" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>税收减免性质代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="fjxxForm">
+		<xs:annotation>
+			<xs:documentation>受理信息</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="bsr" type="slry">
+				<xs:annotation>
+					<xs:documentation>办税人</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="slr" type="slry">
+				<xs:annotation>
+					<xs:documentation>受理人</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="slrq" type="slrq">
+				<xs:annotation>
+					<xs:documentation>受理日期</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="slswjg" type="sbswjgDm">
+				<xs:annotation>
+					<xs:documentation>受理税务机关</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2013 (http://www.altova.com) by  () -->
+<!-- 被2012 () 使用XMLSpy v编辑的 (http://www.altova.com) by -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:include schemaLocation="TaxMLBd_0610337_V1.0.xsd"/>
+	<xs:include schemaLocation="TaxMLBd_0610338_V1.0.xsd"/>
+	<xs:include schemaLocation="TaxMLBd_0610339_V1.0.xsd"/>
+	<xs:complexType name="tzgscwbbywbw">
+		<xs:annotation>
+			<xs:documentation>总业务报文</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="ZcfzbVo" type="tzgszcfzbVO">
+						<xs:annotation>
+							<xs:documentation>资产负债表(适用执行投资公司会计核算办法的公司)</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="LrbVo" type="tzgslrbVO">
+						<xs:annotation>
+							<xs:documentation>利润表(适用执行投资公司会计核算办法的公司)业务报文</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="XjllbVo" type="tzgsxjllbVO">
+						<xs:annotation>
+							<xs:documentation>现金流量表 （适用执行投资公司会计核算办法的公司）</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>			
+		</xs:complexContent>
+	</xs:complexType>
+</xs:schema>

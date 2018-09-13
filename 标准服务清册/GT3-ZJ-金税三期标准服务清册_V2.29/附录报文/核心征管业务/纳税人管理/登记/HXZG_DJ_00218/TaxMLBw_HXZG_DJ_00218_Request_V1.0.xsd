@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2013 (http://www.altova.com) by  () -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:include schemaLocation="TaxMLPublicDJType.xsd"/>
+	<xs:complexType name="HXZGDJ00218Request">
+		<xs:annotation>
+			<xs:documentation>保存流程实例ID查询重点税源监控纳税人认定清册信息</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+		<xs:sequence>
+				
+			<xs:element name="jknd" type="jknd">
+				<xs:annotation>
+					<xs:documentation>监控年度</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+				
+				<xs:element name="lcslid" type="lcslid">
+				<xs:annotation>
+					<xs:documentation>流程实例ID</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+				
+			<xs:element name="zdsyjkrdqcGrid" type="ZdsyjkrdqcGrid">
+				<xs:annotation>
+					<xs:documentation>重点税源监控纳税人认定清册信息</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			
+		</xs:sequence>
+			</xs:extension>
+			</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="ZdsyjkrdqcGrid">
+		<xs:annotation>
+			<xs:documentation>重点税源监控纳税人认定清册信息</xs:documentation>
+		</xs:annotation>
+		<xs:sequence minOccurs="0" maxOccurs="unbounded">
+			<xs:element name="zdsyjkrdqcGridlb" type="DJZdsyjknsrcxqcVO">
+				<xs:annotation>
+					<xs:documentation>重点税源监控纳税人认定清册信息</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

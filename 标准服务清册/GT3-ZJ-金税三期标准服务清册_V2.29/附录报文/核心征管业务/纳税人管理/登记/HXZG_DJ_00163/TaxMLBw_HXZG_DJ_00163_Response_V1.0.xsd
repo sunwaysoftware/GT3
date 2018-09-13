@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2013 (http://www.altova.com) by  () -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:include schemaLocation="TaxMLPublicDJType.xsd"/>
+	<xs:complexType name="HXZGDJ00163Response">
+		<xs:annotation>
+			<xs:documentation>根据登记序号查询本税务机关管辖的已登记房源信息与申报采集而未进行登记的房屋信息返回报文</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="FwztxxGrid" type="FwztxxGrid">
+						<xs:annotation>
+							<xs:documentation>房屋总体信息集合</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="FwsyqkdjxxGrid" type="FwsyqkdjxxGrid">
+						<xs:annotation>
+							<xs:documentation>房屋使用情况登记信息集合</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="FwsbcjxxGrid" type="FwsbcjxxGrid">
+						<xs:annotation>
+							<xs:documentation>房屋申报采集信息</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="FwztxxGrid">
+		<xs:annotation>
+			<xs:documentation>房屋总体信息集合</xs:documentation>
+		</xs:annotation>
+		<xs:sequence minOccurs="0" maxOccurs="unbounded">
+			<xs:element name="FwztxxGridlb" type="FwztxxVO">
+				<xs:annotation>
+					<xs:documentation>房屋总体信息列表</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="FwsyqkdjxxGrid">
+		<xs:annotation>
+			<xs:documentation>房屋使用情况登记信息集合</xs:documentation>
+		</xs:annotation>
+		<xs:sequence minOccurs="0" maxOccurs="unbounded">
+			<xs:element name="FwsyqkdjxxGridlb" type="FwsyqkdjxxVO">
+				<xs:annotation>
+					<xs:documentation>房屋使用情况登记信息列表</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="FwsbcjxxGrid">
+		<xs:annotation>
+			<xs:documentation>房屋申报采集信息</xs:documentation>
+		</xs:annotation>
+		<xs:sequence minOccurs="0" maxOccurs="unbounded">
+			<xs:element name="FwsbcjxxGridlb" type="FwsbcjxxVO">
+				<xs:annotation>
+					<xs:documentation>房屋申报采集信息列表</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="FwsbcjxxVO">
+		<xs:annotation>
+			<xs:documentation>房屋申报采集信息VO</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="uuid" type="uuid">
+				<xs:annotation>
+					<xs:documentation>UUID</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zlbscjuuid" type="zlbscjuuid">
+				<xs:annotation>
+					<xs:documentation>资料报送采集UUID</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="fybh" type="fybh">
+				<xs:annotation>
+					<xs:documentation>房源编号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="fwzh" type="fwzh" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>房屋幢号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="dy" type="dy" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>单元</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="lc1" type="lc1" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>楼层</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="fh" type="fh" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>房号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jgDm" type="jgDm" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>结构代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="cxDm" type="cxDm" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>朝向代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="mj" type="mj" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>房屋面积</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="tnmj" type="tnmj" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>套内面积</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="tdfwdz" type="tdfwdz">
+				<xs:annotation>
+					<xs:documentation>房屋坐落地址</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="xzqhszDm" type="xzqhszDm" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>行政区划数字代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jdxzDm" type="jdxzDm" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>街道乡镇代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zgswskfjDm" type="ssswjgDm" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>所属税务机关代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bdcxmbh" type="bdcxmbh" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>不动产项目编号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="tdsybh" type="tdsybh" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>土地税源编号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="fwcqzsh" type="fwcqzsh" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>房屋产权证书号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="fyjbxxuuid" type="fyjbxxuuid" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>房源基本信息UUID</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 被2011 rel. 2 sp1 (TeaM DJiNN) 使用XMLSpy vTeaM DJiNN编辑的 (http://www.altova.com) by -->
+<!-- edited with XMLSpy v2008 (http://www.altova.com) by TEAM ViRiLiTY (VRL) -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:complexType name="clglzjxxsaveRequest">
+		<xs:annotation>
+			<xs:documentation>残烈孤老证件信息保存请求报文</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="slr" type="slr">
+						<xs:annotation>
+							<xs:documentation>受理人（不能为空）</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="slrq" type="slrq">
+						<xs:annotation>
+							<xs:documentation>受理日期（不能为空）</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="slswjg_dm" type="slswjg_dm">
+						<xs:annotation>
+							<xs:documentation>受理税务机关（不能为空）</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="clglzjxxMxGrid" type="clglzjxxMx" maxOccurs="unbounded">
+						<xs:annotation>
+							<xs:documentation>残烈孤老证件信息明细</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="clglzjxxMx">
+		<xs:annotation>
+			<xs:documentation>残烈孤老证件信息明细</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="djxh" type="djxh">
+				<xs:annotation>
+					<xs:documentation>登记序号（不能为空）</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="xsrylb" type="xsrylb">
+				<xs:annotation>
+					<xs:documentation>享受人员类别(不能为空)</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="cglzjhm" type="cglzjhm">
+				<xs:annotation>
+					<xs:documentation>残孤烈证件号码（享受人员类别为残疾时，残孤烈证件号码不能为空）</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zmcjbmmc" type="zmcjbmmc">
+				<xs:annotation>
+					<xs:documentation>证明出具部门名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="fzjg" type="fzjg">
+				<xs:annotation>
+					<xs:documentation>发证机关（不能为空）</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="fzrq" type="fzrq">
+				<xs:annotation>
+					<xs:documentation>发证日期（不能为空）</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2013 (http://www.altova.com) by  () -->
+<!-- 编辑使用 XMLSpy v2006 U (http://www.altova.com) 由 any (any) -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:complexType name="HXZGDJ00099Request">
+		<xs:annotation>
+			<xs:documentation>特定征收部门登记表保存接入报文</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="tdzsbmJbxxForm" type="tdzsbmJbxxForm">
+						<xs:annotation>
+							<xs:documentation>特定征收部门基本信息</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="YhzhxxGrid" type="YhzhxxGrid">
+						<xs:annotation>
+							<xs:documentation>银行账户信息Grid</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="tdzsbmJbxxForm">
+		<xs:annotation>
+			<xs:documentation>特定征收部门基本信息</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="rwczlx" type="rwczlx">
+				<xs:annotation>
+					<xs:documentation>操作类型</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="tdzsbmlxmc" type="tdzsbmlxmc">
+				<xs:annotation>
+					<xs:documentation>特定征收部门类型名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="swjgDm" type="swjgDm">
+				<xs:annotation>
+					<xs:documentation>税务机关代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="tdzsbmuuid" type="tdzsbmuuid">
+				<xs:annotation>
+					<xs:documentation>特定征收部门UUID</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zgswjguuid" type="zgswjguuid">
+				<xs:annotation>
+					<xs:documentation>主管税务机关UUID</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="djxh" type="djxh">
+				<xs:annotation>
+					<xs:documentation>登记序号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="nsrsbh" type="nsrsbh">
+				<xs:annotation>
+					<xs:documentation>纳税人识别号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="nsrmc" type="nsrmc">
+				<xs:annotation>
+					<xs:documentation>纳税人名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="hyDm" type="hyDm">
+				<xs:annotation>
+					<xs:documentation>行业代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="djzclxDm" type="djzclxDm">
+				<xs:annotation>
+					<xs:documentation>登记注册类型代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="djrDm" type="djrDm">
+				<xs:annotation>
+					<xs:documentation>登记人代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="djrq" type="djrq">
+				<xs:annotation>
+					<xs:documentation>登记日期</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yxqq" type="yxqq">
+				<xs:annotation>
+					<xs:documentation>有效期起</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yxqz" type="yxqz">
+				<xs:annotation>
+					<xs:documentation>有效期止</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="YhzhxxGrid">
+		<xs:annotation>
+			<xs:documentation>存款账户账号信息</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="InsertCkzhzhxxGrid" type="InsertCkzhzhxxGrid">
+				<xs:annotation>
+					<xs:documentation>新增存款账户账号信息Grid</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="UpdateCkzhzhxxGrid" type="UpdateCkzhzhxxGrid">
+				<xs:annotation>
+					<xs:documentation>修改存款账户账号信息Grid</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="DeleteCkzhzhxxGrid" type="DeleteCkzhzhxxGrid">
+				<xs:annotation>
+					<xs:documentation>删除存款账户账号信息Grid</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="InsertCkzhzhxxGrid">
+		<xs:annotation>
+			<xs:documentation>新增存款账户账号信息</xs:documentation>
+		</xs:annotation>
+		<xs:sequence minOccurs="0" maxOccurs="unbounded">
+			<xs:element name="InsertCkzhzhxxGridlb" type="NsrckzhzhxxVO">
+				<xs:annotation>
+					<xs:documentation>新增存款账户账号信息列表</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="UpdateCkzhzhxxGrid">
+		<xs:annotation>
+			<xs:documentation>修改存款账户账号信息</xs:documentation>
+		</xs:annotation>
+		<xs:sequence minOccurs="0" maxOccurs="unbounded">
+			<xs:element name="UpdateCkzhzhxxGridlb" type="NsrckzhzhxxVO">
+				<xs:annotation>
+					<xs:documentation>修改存款账户账号信息列表</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="DeleteCkzhzhxxGrid">
+		<xs:annotation>
+			<xs:documentation>删除存款账户账号信息</xs:documentation>
+		</xs:annotation>
+		<xs:sequence minOccurs="0" maxOccurs="unbounded">
+			<xs:element name="DeleteCkzhzhxxGridlb" type="NsrckzhzhxxVO">
+				<xs:annotation>
+					<xs:documentation>删除存款账户账号信息列表</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="NsrckzhzhxxVO">
+		<xs:annotation>
+			<xs:documentation>纳税人存款账户账号信息</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="ckzhuuid" type="uuid">
+				<xs:annotation>
+					<xs:documentation>存款账号UUID</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="xzqhszDm" type="xzqhszDm">
+				<xs:annotation>
+					<xs:documentation>行政区划数字代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yhhbDm" type="yhhbDm">
+				<xs:annotation>
+					<xs:documentation>银行行别代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yhyywdDm" type="yhyywdDm">
+				<xs:annotation>
+					<xs:documentation>银行营业网点代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zhmc" type="zhmc">
+				<xs:annotation>
+					<xs:documentation>账户名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yhzh" type="yhzh">
+				<xs:annotation>
+					<xs:documentation>银行账号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="djkskzhbz" type="djkskzhbz">
+				<xs:annotation>
+					<xs:documentation>待缴库税款账户标志</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 被2012 () 使用XMLSpy v编辑的 (http://www.altova.com) by -->
+<!-- edited with XMLSpy v2013 (http://www.altova.com) by  () -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:include schemaLocation="TaxMLPublicDJType.xsd"/>
+	<xs:complexType name="HXZGDJ00843Response">
+		<xs:annotation>
+			<xs:documentation>查询固体废弃采集信息返回报文</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="Hbsgtfwcjb" type="Hbsgtfwcjb"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="Hbsgtfwcjb">
+		<xs:annotation>
+			<xs:documentation>固体废弃采集信息</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="DJZhlyssGrid" type="DJZhlyssGrid"/>
+			<xs:element name="DJHgczssGrid" type="DJHgczssGrid"/>
+			<xs:element name="DJHgcccsssGrid" type="DJHgcccsssGrid"/>
+			<xs:element name="DJJshwtwdwclqkGrid" type="DJJshwtwdwclqkGrid"/>
+			<xs:element name="DJGtfwcsqkGrid" type="DJGtfwcsqkGrid"/>
+			<xs:element name="HbsGtfwcjjcxxVO" type="HbsGtfwcjjcxxVO"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="HbsGtfwcjjcxxVO">
+		<xs:annotation>
+			<xs:documentation>固体废弃采集基础信息</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="hbsjcxxuuid" type="hbsjcxxuuid">
+				<xs:annotation>
+					<xs:documentation>环境保护税基础信息uuid</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="xzqhszDm" type="xzqhszDm">
+				<xs:annotation>
+					<xs:documentation>行政区划代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jdxzDm" type="jdxzDm">
+				<xs:annotation>
+					<xs:documentation>街道乡镇</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zgswskfjDm" type="zgswskfjDm">
+				<xs:annotation>
+					<xs:documentation>主管税务科所（分局）</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="gjhbjgDm" type="zgbmmc">
+				<xs:annotation>
+					<xs:documentation>环境保护部门代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zywrwlbsDm" type="zywrwlbsDm">
+				<xs:annotation>
+					<xs:documentation>主要污染物类别</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sfczhygc" type="yxbz">
+				<xs:annotation>
+					<xs:documentation>是否存在海洋工程</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

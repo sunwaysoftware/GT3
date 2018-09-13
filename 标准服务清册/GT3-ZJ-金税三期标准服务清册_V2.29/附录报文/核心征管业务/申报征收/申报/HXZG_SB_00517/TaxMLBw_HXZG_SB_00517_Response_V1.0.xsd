@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 被2012 () 使用XMLSpy v编辑的 (http://www.altova.com) by -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:include schemaLocation="TaxMLPublicSBType.xsd"/>
+	<xs:complexType name="HXZGSB00517Response">
+		<xs:annotation>
+			<xs:documentation>查询一窗式比对异常返回报文</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="SBCxycsbdycReturnVO" type="SBCxycsbdycReturnVO">
+						<xs:annotation>
+							<xs:documentation>查询一窗式比对异常返回VO</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="SBCxycsbdycReturnVO">
+		<xs:annotation>
+			<xs:documentation>查询一窗式比对异常返回VO</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="ycspbsbdyclxDm" type="ycspbsbdyclxDm" nillable="true">
+				<xs:annotation>
+					<xs:documentation>返回码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ycspbsbdyclxclfsmc" type="ycspbsbdyclxclfsmc" nillable="true">
+				<xs:annotation>
+					<xs:documentation>处理结果描述</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ycclfs" type="ycclfs" nillable="true">
+				<xs:annotation>
+					<xs:documentation>一窗式比对异常处理标志</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

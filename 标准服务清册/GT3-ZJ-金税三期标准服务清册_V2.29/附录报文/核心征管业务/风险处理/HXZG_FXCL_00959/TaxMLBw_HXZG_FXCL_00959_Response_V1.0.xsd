@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 被2012 () 使用XMLSpy v编辑的 (http://www.altova.com) by -->
+<!-- edited with XMLSpy v2013 (http://www.altova.com) by  () -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:complexType name="HXZGFXCL00959Response">
+		<xs:annotation>
+			<xs:documentation>违法违章信息查询业务报文</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="FZWfwzxxVO" type="FZWfwzxxVO" minOccurs="0" maxOccurs="unbounded">
+						<xs:annotation>
+							<xs:documentation>违法违章信息VO</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="FZWfwzxxVO">
+		<xs:annotation>
+			<xs:documentation>违法违章信息VO</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="nsrsbh" type="nsrsbh">
+				<xs:annotation>
+					<xs:documentation>纳税人识别号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="nsrmc" type="nsrmc">
+				<xs:annotation>
+					<xs:documentation>纳税人名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ajbh" type="ajbh">
+				<xs:annotation>
+					<xs:documentation>案件编号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ajmc" type="ajmc">
+				<xs:annotation>
+					<xs:documentation>案件名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="wfwzlxDm" type="wfwzlxDm">
+				<xs:annotation>
+					<xs:documentation>违法违章类型</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="wfwzxwmc" type="wfwzxwmc">
+				<xs:annotation>
+					<xs:documentation>违法违章行为名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sssqq" type="sssqq">
+				<xs:annotation>
+					<xs:documentation>所属时期起</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sssqz" type="sssqz">
+				<xs:annotation>
+					<xs:documentation>所属时期止</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="djrq" type="djrq">
+				<xs:annotation>
+					<xs:documentation>登记日期</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

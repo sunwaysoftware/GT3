@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 被2012 () 使用XMLSpy v编辑的 (http://www.altova.com) by -->
+<!-- edited with XMLSpy v2010 rel. 3 (http://www.altova.com) by liuwei (liuweicss) -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:include schemaLocation="TaxMLPublicSBType.xsd"/>
+	<xs:complexType name="HXZGSB10119Response">
+		<xs:annotation>
+			<xs:documentation>企业所得税跨地区汇总纳税分支机构年报2018版初始化返回报文</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="sbxxGrid">
+						<xs:annotation>
+							<xs:documentation>申报数据信息</xs:documentation>
+						</xs:annotation>
+						<xs:complexType>
+							<xs:sequence minOccurs="0" maxOccurs="unbounded">
+								<xs:element name="sbxxGridlb" type="SBSbxxJhVO"/>
+							</xs:sequence>
+						</xs:complexType>
+					</xs:element>
+					<xs:element name="jmxxGrid">
+						<xs:annotation>
+							<xs:documentation>减免数据信息</xs:documentation>
+						</xs:annotation>
+						<xs:complexType>
+							<xs:sequence minOccurs="0" maxOccurs="unbounded">
+								<xs:element name="jmxxGridlb" type="SBJmxxJhVO"/>
+							</xs:sequence>
+						</xs:complexType>
+					</xs:element>
+					<xs:element name="yjxxGrid">
+						<xs:annotation>
+							<xs:documentation>预缴税款数据信息</xs:documentation>
+						</xs:annotation>
+						<xs:complexType>
+							<xs:sequence minOccurs="0" maxOccurs="unbounded">
+								<xs:element name="yjxxGridlb" type="SBYjxxJhVO"/>
+							</xs:sequence>
+						</xs:complexType>
+					</xs:element>
+					<xs:element name="sbQysdszjgxxVO" type="SBQysdszjgxxVO">
+						<xs:annotation>
+							<xs:documentation>企业所得税汇总纳税分支机构分配表总机构情况信息</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="fzjgxxGrid">
+						<xs:annotation>
+							<xs:documentation>企业所得税汇总纳税分支机构分配表分支机构情况信息</xs:documentation>
+						</xs:annotation>
+						<xs:complexType>
+							<xs:sequence minOccurs="0" maxOccurs="unbounded">
+								<xs:element name="fzjgxxGridlb" type="SBQysdsfzjgxxVO"/>
+							</xs:sequence>
+						</xs:complexType>
+					</xs:element>
+					<xs:element name="sbQysdsczzsyjdsbqtxxVO" type="SBQysdsczzsyjdsbqtxxVO">
+						<xs:annotation>
+							<xs:documentation>企业所得税查账征收月季度申报其他数据信息</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="SBQysdsczzsyjdsbqtxxVO">
+		<xs:annotation>
+			<xs:documentation>企业所得税查账征收月季度申报其他数据信息</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="zfjglb" type="bz" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>总分机构类别</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="kdsAndkxqFlag" type="bz" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>跨地区、跨县区标志</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jdftfzjgFlag" type="bz" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>就地分摊分支机构标志</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jdyjbl" type="bl" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>就地预缴比例</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jaqyYjze" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>外地建安企业预缴总额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sqyjje" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>已缴金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="kyyjye" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>可用预缴余额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yyyjje" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>已用预缴金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="mbksehj" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>五年内可结转以后年度弥补亏损金额合计</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yjfsDm" type="yjfsDm" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>预缴方式代码，对应代码表DM_RD_YJFS</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sfxwqybz" type="bz" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>是否小型微利企业标志，0：正常企业，上年应纳税所得额超过30W（2017年之前），上年应纳税所得额超过50W（2017年及以后）||1：小微企业，上年应纳税所得额小于20W||2：小微企业，上年应纳税所得额大于20W小于30W（2017年之前），上一年应纳大于20W小于50W（2017年及以后）||3：小微企业，上年年报或最后一季度申报没有申报||4：小微企业，新开业企业||5：小微企业，内蒙国地税特殊优惠税率享受企业||6：正常企业，上年资产总额、从业人数、所属行业、是否从事限制行业不符合小微标准</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="kdqsssrfpBz" type="bz" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>跨地区税收收入分配标志</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="djrq" type="skssqq">
+				<xs:annotation>
+					<xs:documentation>登记日期</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zxrq" type="skssqq">
+				<xs:annotation>
+					<xs:documentation>注销日期</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zyjbl" type="nsrsbh">
+				<xs:annotation>
+					<xs:documentation>中央级比例</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zjgFtbl" type="nsrsbh">
+				<xs:annotation>
+					<xs:documentation>总机构分摊</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zjgCzjzFtbl" type="nsrsbh">
+				<xs:annotation>
+					<xs:documentation>总机构财政集中分摊</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="fzjgFtbl" type="nsrsbh">
+				<xs:annotation>
+					<xs:documentation>分支机构分摊比例</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="xzKdqbz" type="sfbz">
+				<xs:annotation>
+					<xs:documentation>西藏跨地区标志</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yjfs" type="bz" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>预缴方式，1：按照实际利润额预缴||2：按照上一纳税年度应纳税所得额平均额预缴||3：按照税务机关确定的其他方法预缴</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sbqylx" type="bz" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>企业类型，0：一般企业||1：跨地区经营汇总纳税企业总机构||2：跨地区经营汇总纳税企业分支机构
+</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

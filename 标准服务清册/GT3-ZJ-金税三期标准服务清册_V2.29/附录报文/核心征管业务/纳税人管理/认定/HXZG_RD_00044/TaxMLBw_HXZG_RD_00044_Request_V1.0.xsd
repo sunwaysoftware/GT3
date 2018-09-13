@@ -1,0 +1,38 @@
+<!-- 被2012 () 使用XMLSpy v编辑的 (http://www.altova.com) by -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxMLPublicRDType.xsd"/>
+	<xs:include schemaLocation="TaxMLPublicDJType.xsd"/>
+	<xs:complexType name="HXZGRD00044Request">
+		<xs:annotation>
+			<xs:documentation>保存外埠建筑安装企业实行机构所在地缴纳个人所得税表、认定信息结果表</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="wbjzazqysxjgszdjngrsdsVO" type="wbjzazqysxjgszdjngrsdsVO">
+						<xs:annotation>
+							<xs:documentation>外埠建筑安装企业实行机构所在地缴纳个人所得税</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="wbjzazqysxjgszdjngrsdsVO">
+		<xs:annotation>
+			<xs:documentation>外埠建筑安装企业实行机构所在地缴纳个人所得税表、认定信息结果表</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="jydjngssdssqhzbVO" type="RDJydjngssdssqhzbVO">
+				<xs:annotation>
+					<xs:documentation>建筑安装企业维纳个人所得税申请核准表</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ysqywslxxbVO" type="DJYsqywslxxbVO">
+				<xs:annotation>
+					<xs:documentation>依申请受理信息表</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

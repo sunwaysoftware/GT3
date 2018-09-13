@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 被2011 rel. 2 sp1 (TeaM DJiNN) 使用XMLSpy vTeaM DJiNN编辑的 (http://www.altova.com) by -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:include schemaLocation="TaxMLBd_0610545_V1.0.xsd"/>
+	<xs:include schemaLocation="TaxMLBd_0610546_V1.0.xsd"/>
+	<xs:include schemaLocation="TaxMLBd_0610547_V1.0.xsd"/>
+	<xs:include schemaLocation="TaxMLBd_0610550_V1.0.xsd"/>
+	<xs:complexType name="Sszldcqysjcjywbw">
+		<xs:annotation>
+			<xs:documentation>税收资料调查企业数据采集</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="qgqyssdcbxxbVO" type="qgqyssdcbxxbVO" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>全国企业税收调查表（XXB信息表）</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="qgqyssdcbqybVO" type="qgqyssdcbqybVO" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>3.5.2全国企业税收调查表（B0企业表）</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="qgqyssdcbhwlwbVO" type="qgqyssdcbhwlwbVO" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>3.5.3全国企业税收调查表（B1货物劳务表）</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="qgqyssdcshqksmbVO" type="qgqyssdcshqksmbVO" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>全国企业税收调查表（B2审核情况说明）</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+</xs:schema>

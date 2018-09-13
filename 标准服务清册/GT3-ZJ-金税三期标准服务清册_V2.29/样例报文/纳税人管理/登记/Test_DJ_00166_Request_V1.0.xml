@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<service xmlns="http://www.chinatax.gov.cn/spec/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <head>
+    <tran_id>SWZJ.HXZG.DJ.CXTDXXBYNSRSBHSYBHZLD</tran_id>
+    <channel_id>TEST</channel_id>
+    <tran_seq>de34e2ee3281419f9fed191daf201eb7</tran_seq>
+    <tran_date>20141024</tran_date>
+    <tran_time>041059289</tran_time>
+    <expand>
+      <name>sjry</name>
+      <value>24406060735</value>
+    </expand>
+    <expand>
+      <name>sjjg</name>
+      <value>24406060700</value>
+    </expand>
+  </head>
+  <body><![CDATA[<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<taxML xsi:type="HXZGDJ00166Request" xmlmc="根据指定条件查询土地税源信息" xmlbh="TaxMLBw_HXZG_DJ_00166_Request_V1.0.xsd" bbh="1.0" xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <tdxxcxVO>
+        <djxh>10124406020000000143</djxh>
+        <tdsybh></tdsybh>
+        <xzqhszDm></xzqhszDm>
+        <jdxzDm></jdxzDm>
+        <tdzldz></tdzldz>
+        <ssswjgDm></ssswjgDm>
+    </tdxxcxVO>
+</taxML>
+]]></body>
+</service>

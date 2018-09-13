@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 被2012 () 使用XMLSpy v编辑的 (http://www.altova.com) by -->
+<!-- edited with XMLSpy v2013 (http://www.altova.com) by  () -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:complexType name="FxglRwfk01912Request">
+		<xs:annotation>
+			<xs:documentation>任务反馈请求（核心征管进行风险应对结果反馈GT3-JC2-决策二包管理系统与核心征管集成接口定义）</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="RwfkFxydpjfkForm" type="RwfkFxydpjfkFormVO">
+						<xs:annotation>
+							<xs:documentation>任务反馈风险应对评价反馈Form</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="RwfkFxydpjfkGrid">
+						<xs:annotation>
+							<xs:documentation>任务反馈风险应对评价反馈列表</xs:documentation>
+						</xs:annotation>
+						<xs:complexType>
+							<xs:sequence maxOccurs="unbounded">
+								<xs:element name="RwfkFxydpjfkGridlb" type="RwfkFxydpjfkGridlbVO">
+									<xs:annotation>
+										<xs:documentation>任务反馈风险应对评价反馈明细列表</xs:documentation>
+									</xs:annotation>
+								</xs:element>
+							</xs:sequence>
+						</xs:complexType>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="RwfkFxydpjfkGridlbVO">
+		<xs:annotation>
+			<xs:documentation>纳税评估类风险明细接口表信息</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="fxydxh" type="djxh">
+				<xs:annotation>
+					<xs:documentation>风险应对序号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="RwfkFxydpjfkFormVO">
+		<xs:annotation>
+			<xs:documentation>任务反馈风险应对评价反馈From接口信息表</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="fxydclxh" type="ajbh" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>风险应对处理序号（即应对措施对应编号，一般为纳税评估案卷编号、稽查案件编号、特别纳税调整案件编号。）</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="djxh" type="djxh" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>登记序号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="nsrsbh" type="nsrsbh" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>纳税人识别号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="nsrmc" type="nsrmc" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>纳税人名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ydfs" type="nsrsbh" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>应对方式  (01 稽查，02 纳税评估，03 调查核查 04 事务处理 05提醒)</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="cljg" type="nsrmc" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>处理结果（评估-评估结果， 稽查：案件定性, 调查核实-核查结果）</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sjzl" type="nsrsbh" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>数据质量（1、准确  2、比较准确 3、不准确）</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sfddysbz" type="nsrmc" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>是否达到移送标准（Y是 N否）</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="nsrsfyyj" type="nsrsbh" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>纳税人是否有意见（Y是 N否）</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sfzdaj" type="nsrmc" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>是否重大案件（Y是 N否）</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sk" type="bz" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>税款</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="dzfy" type="bz" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>代征费用</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="znj" type="bz" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>滞纳金</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="fk" type="xgsj" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>罚款</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bz" type="xgsj" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>备注</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="clssq" type="nsrsbh" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>风险应对实施时间起</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="clssz" type="xgsj" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>风险应对实施时间止</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ydryDm" type="swryDm" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>应对人员代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ydryxm" type="nsrmc" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>应对人员姓名</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ydbmDm" type="swjgDm" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>应对部门代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ydbmmc" type="nsrmc" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>应对部门名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ydswjgDm" type="nsrsbh" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>应对税务机关代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ydswjgmc" type="xgsj" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>应对税务机关名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="fksj" type="bz" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>反馈时间(格式 YYYY-MM-DD)</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

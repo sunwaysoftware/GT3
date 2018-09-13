@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2013 (http://www.altova.com) by  () -->
+<!-- 被2012 () 使用XMLSpy v编辑的 (http://www.altova.com) by -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:include schemaLocation="TaxMLBd_0610161_V1.0.xsd"/>
+	<xs:include schemaLocation="TaxMLBd_0610172_V1.0.xsd"/>
+	<xs:include schemaLocation="TaxMLBd_0610182_V1.0.xsd"/>
+	<xs:include schemaLocation="TaxMLBd_0610332_V1.0.xsd"/>
+	<xs:include schemaLocation="TaxMLPublicSBType.xsd"/>
+	<xs:complexType name="qykjzqgsywbw">
+		<xs:annotation>
+			<xs:documentation>证券公司总业务报文</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="zcfzb" type="zcfzbzqgsVO" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>资产负债表</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="lrb" type="lrbzqgsVO" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>利潤表</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="xjllb" type="xjllbzqgsVO" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>現金流量表</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="syzqybdb" type="qybzqgsVO" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>所有者權益變動表</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="ndcwkjbgshbgVO" type="NdcwkjbgshbgVO">
+						<xs:annotation>
+							<xs:documentation>年度财务会计报告审核报告</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="fyazxzfldbcclVO" type="FyazxzfldbcclVO">
+						<xs:annotation>
+							<xs:documentation>费用按照性质分类的补充资料</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="qykjzzfzVO" type="QykjzzfzVO">
+						<xs:annotation>
+							<xs:documentation>财务报表企业会计准则附注VO</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="qtsygxmjsdshzrsyqkVO" type="QtsygxmjsdshzrsyqkVO">
+						<xs:annotation>
+							<xs:documentation>其他综合收益各项目及其所得税影响和转入损益情况VO</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="qtzhsygxmdtjqkVO" type="QtzhsygxmdtjqkVO">
+						<xs:annotation>
+							<xs:documentation>其他综合收益各项目的调节情况VO</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="yfzcfzzhzbVO" type="YfzcfzzhzbVO">
+						<xs:annotation>
+							<xs:documentation>“研发支出”辅助账汇总表VO</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+</xs:schema>

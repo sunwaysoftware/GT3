@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2013 (http://www.altova.com) by  () -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:include schemaLocation="TaxMLPublicYHType.xsd"/>
+	<xs:complexType name="kjysfwmsbayywbw">
+		<xs:annotation>
+			<xs:documentation>跨境应税服务免税备案业务报文</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="kjysfwmsbab" type="kjysfwmsbab">
+						<xs:annotation>
+							<xs:documentation>跨境应税服务免税备案表单</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="kjysfwmsbab">
+		<xs:annotation>
+			<xs:documentation>跨境应税服务免税备案表单</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="balxDm" type="balxDm">
+				<xs:annotation>
+					<xs:documentation>备案类型代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="schlnd" type="schlnd">
+				<xs:annotation>
+					<xs:documentation>首次获利年度</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qddybscjysrrq" type="qddybscjysrrq">
+				<xs:annotation>
+					<xs:documentation>取得第一笔生产经营收入日期</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jbr" type="jbr">
+				<xs:annotation>
+					<xs:documentation>经办人</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="slrDm" type="slrDm">
+				<xs:annotation>
+					<xs:documentation>受理人</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sqrq" type="sqrq">
+				<xs:annotation>
+					<xs:documentation>申请日期</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="slrq" type="slrq">
+				<xs:annotation>
+					<xs:documentation>受理日期</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="slswjgDm" type="slswjgDm">
+				<xs:annotation>
+					<xs:documentation>受理税务机关</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="slswsxDm" type="slswsxDm">
+				<xs:annotation>
+					<xs:documentation>受理税务事项代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="YHKjysfwmsbabVO" type="YHKjysfwmsbabVO"/>
+			<xs:element name="kjysfwmsbabTjclGrid">
+				<xs:complexType>
+					<xs:sequence maxOccurs="unbounded">
+						<xs:element name="kjysfwmsbabTjclGridlb" type="YHKjysfwmsbabTjclVO"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="jmsspjgGrid">
+				<xs:complexType>
+					<xs:sequence maxOccurs="unbounded">
+						<xs:element name="jmsspjgGridlb" type="YHJmsspjgVO"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

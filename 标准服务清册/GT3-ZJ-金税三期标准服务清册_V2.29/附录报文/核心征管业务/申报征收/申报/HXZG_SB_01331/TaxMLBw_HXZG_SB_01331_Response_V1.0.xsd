@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2013 (http://www.altova.com) by  () -->
+<!-- 被2012 () 使用XMLSpy v编辑的 (http://www.altova.com) by -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:complexType name="HXZGSB01331Response">
+		<xs:annotation>
+			<xs:documentation>境内机构和个人发包工程作业或劳务项目报告表返回报文</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="SbJnjgfbgclwbGrid">
+						<xs:annotation>
+							<xs:documentation>境内机构和个人发包工程作业或劳务项目报告表Grid</xs:documentation>
+						</xs:annotation>
+						<xs:complexType>
+							<xs:sequence maxOccurs="unbounded">
+								<xs:element name="SbJnjgfbgclwbGridGridlb" type="SbJnjgfbgclwbGridGridlbVO">
+									<xs:annotation>
+										<xs:documentation>境内机构和个人发包工程作业或劳务项目报告表</xs:documentation>
+									</xs:annotation>
+								</xs:element>
+							</xs:sequence>
+						</xs:complexType>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="SbJnjgfbgclwbGridGridlbVO">
+		<xs:annotation>
+			<xs:documentation>境内机构和个人发包工程作业或劳务项目报告表VO</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="htzh" type="htzh"/>
+			<xs:element name="htmc" type="htmc"/>
+			<xs:element name="htje" type="bz"/>
+			<xs:element name="fkcs" type="fkcs"/>
+			<xs:element name="zyhlwdd" type="zyhlwdd"/>
+			<xs:element name="cbshtglwjflxr" type="cbshtglwjflxr"/>
+			<xs:element name="cbshtglwfdh" type="cbshtglwfdh"/>
+			<xs:element name="djxh" type="djxh"/>
+			<xs:element name="fjmdjxh" type="fjmdjxh"/>
+			<xs:element name="gjhdqszDm" type="gjhdqszDm"/>
+			<xs:element name="htzxqsrq" type="htzxqsrq"/>
+			<xs:element name="htzxzzrq" type="htzxzzrq"/>
+			<xs:element name="qysdssdlxDm" type="qysdssdlxDm"/>
+			<xs:element name="ssxdsdlxDm" type="ssxdsdlxDm"/>
+			<xs:element name="cbshtglwfdz" type="cbshtglwfdz"/>
+			<xs:element name="xmmc" type="xmmc"/>
+			<xs:element name="cbshtglwfmc" type="cbshtglwfmc"/>
+			<xs:element name="zfbz2" type="zfbz2"/>
+			<xs:element name="htbzDm" type="htbz"/>
+			<xs:element name="bh" type="bh"/>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

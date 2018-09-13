@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2011 (http://www.altova.com) by www.hbnu.com (www.hbnu.com) -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:include schemaLocation="TaxMLPublic.xsd"/>
+	<xs:complexType name="qyxtzbywbw">
+		<xs:annotation>
+			<xs:documentation>《权益性投资表》业务报文</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="qyndglywwlbg2016_G109000" type="qyndglywwlbg2016_G109000">
+						<xs:annotation>
+							<xs:documentation>《权益性投资表》</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="qyndglywwlbg2016_G109000">
+		<xs:annotation>
+			<xs:documentation>《权益性投资表》</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="gxhlfpForm" type="gxhlfpForm">
+				<xs:annotation>
+					<xs:documentation>200权益性投资股息、红利分配情况</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qwwgdqkGrid" type="qwwgdqkGrid">
+				<xs:annotation>
+					<xs:documentation>300权益性投资股息、红利分配给前5位股东情况</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qyxtzbGrid" type="qyxtzbGrid">
+				<xs:annotation>
+					<xs:documentation>100权益性投资情况</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="gxhlfpForm">
+		<xs:annotation>
+			<xs:documentation>200权益性投资股息、红利分配情况</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="gxhlje" type="je">
+				<xs:annotation>
+					<xs:documentation>股息、红利金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jwglfgd" type="je">
+				<xs:annotation>
+					<xs:documentation>境外关联方股东</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jwfglfgd" type="je">
+				<xs:annotation>
+					<xs:documentation>境外关联方股东</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jnglfgd" type="je">
+				<xs:annotation>
+					<xs:documentation>境内关联方股东</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jnfglfgd" type="je">
+				<xs:annotation>
+					<xs:documentation>境内非关联方股东</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="qwwgdqkGrid">
+		<xs:annotation>
+			<xs:documentation>300权益性投资股息、红利分配给前5位股东情况</xs:documentation>
+		</xs:annotation>
+		<xs:sequence maxOccurs="unbounded">
+			<xs:element name="qwwgdqkGridlbVO" type="qwwgdqkGridlbVO">
+				<xs:annotation>
+					<xs:documentation>300权益性投资股息、红利分配给前5位股东情况</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="qwwgdqkGridlbVO">
+		<xs:annotation>
+			<xs:documentation>300权益性投资股息、红利分配给前5位股东情况</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="gdmc" type="gdmc">
+				<xs:annotation>
+					<xs:documentation>股东名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="gdglflxDm" type="gdglflxDm">
+				<xs:annotation>
+					<xs:documentation>股东类型，取值代码表DM_SB_GDGLFLX</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="gjhdqszDm" type="gjhdqszDm">
+				<xs:annotation>
+					<xs:documentation>国家（地区），取值代码表DM_GY_GJHDQ</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="gxhlje" type="je">
+				<xs:annotation>
+					<xs:documentation>股息、红利金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="qyxtzbGrid">
+		<xs:annotation>
+			<xs:documentation>100权益性投资情况</xs:documentation>
+		</xs:annotation>
+		<xs:sequence maxOccurs="unbounded">
+			<xs:element name="qyxtzbGridlbVO" type="qyxtzbGridlbVO">
+				<xs:annotation>
+					<xs:documentation>100权益性投资情况</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="qyxtzbGridlbVO">
+		<xs:annotation>
+			<xs:documentation>100权益性投资情况</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="ewbhxh" type="ewbhxh">
+				<xs:annotation>
+					<xs:documentation>二维表行序号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ewbhmc" type="ewbhmc">
+				<xs:annotation>
+					<xs:documentation>二维表行名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="syzqyje" type="je">
+				<xs:annotation>
+					<xs:documentation>所有者权益金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sszbje" type="je">
+				<xs:annotation>
+					<xs:documentation>实收资本（股本）金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zbgjje" type="je">
+				<xs:annotation>
+					<xs:documentation>资本公积金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="pjqytzje" type="je">
+				<xs:annotation>
+					<xs:documentation>平均权益投资金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

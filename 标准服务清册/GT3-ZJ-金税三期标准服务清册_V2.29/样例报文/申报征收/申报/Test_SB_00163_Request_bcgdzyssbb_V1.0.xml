@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<service xmlns="http://www.chinatax.gov.cn/spec/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<head>
+		<tran_id>SWZJ.HXZG.SB.BCGDZYSSBB</tran_id>
+		<channel_id>TEST</channel_id>
+		<tran_seq>e645dbdbbc03462cb99402bfe37f6d79</tran_seq>
+		<tran_date>20120420</tran_date>
+		<tran_time>022034181</tran_time>
+		<expand>
+			<name>sjjg</name>
+			<value>14406810004</value>
+		</expand>
+		<expand>
+			<name>sjry</name>
+			<value>14406811102</value>
+		</expand>
+		<expand>
+			<name>bs_sb_00083</name>
+			<value>05868FA7B76B3C30E053EE171296A903</value>
+		</expand>
+	</head>
+	<body><![CDATA[<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<taxML xsi:type="HXZGSB00163Request" xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<sbxxGrid>
+		<sbxxGridlb>
+			<rdpzuuid>1E5D66138C4AF841F2AABFE8A1A82A14</rdpzuuid>
+		</sbxxGridlb>
+	</sbxxGrid>
+	<jmxxGrid/>
+	<yjxxGrid/>
+	<gdzyssbb>
+		<gdzyssbb>
+			<nsrxxForm>
+				<nsrsbh>440606987654321</nsrsbh>
+				<nsrmc>河南地税测试纳税人</nsrmc>
+				<hyDm>4700</hyDm>
+				<skssqq>2014-11-01</skssqq>
+				<skssqz>2014-11-30</skssqz>
+				<djzclxDm>151</djzclxDm>
+				<sfzjlxDm>202</sfzjlxDm>
+				<tbrq>2014-10-23 21:16:09</tbrq>
+				<sbsxDm1>11</sbsxDm1>
+				<zspmDm>101180102</zspmDm>
+			</nsrxxForm>
+			<gdzyssbForm>
+				<tdsybh>T44060620140000003</tdsybh>
+				<pzzdwh>123123</pzzdwh>
+				<zdsj>2014-10-06 21:16:09</zdsj>
+				<tdzldz>郑州</tdzldz>
+				<zdytDm>11</zdytDm>
+				<pzzdmj>0.0</pzzdmj>
+			</gdzyssbForm>
+			<sbbxxGrid>
+				<sbbxxGridlb>
+					<rdpzuuid>1E5D66138C4AF841F2AABFE8A1A82A14</rdpzuuid>
+					<zspmDm>101180102</zspmDm>
+					<jzse>100000.0</jzse>
+					<szse>100000.0</szse>
+					<sjzdmj>10000.0</sjzdmj>
+					<jmse>0.0</jmse>
+					<zszmDm/>
+					<sysl>10.0</sysl>
+				</sbbxxGridlb>
+			</sbbxxGrid>
+			<slrxxForm>
+				<slr>邓炳沛</slr>
+				<slrq>2014-10-23 21:16:09</slrq>
+				<slswjg>佛山市顺德区地方税务局乐从税务分局</slswjg>
+			</slrxxForm>
+		</gdzyssbb>
+	</gdzyssbb>
+	<sbSBbcTjqtxxVO>
+		<djxh>12440600000000000005</djxh>
+		<zxbztzsuuid/>
+	</sbSBbcTjqtxxVO>
+</taxML>
+]]></body>
+</service>

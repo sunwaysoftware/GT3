@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<service>
+    <head>
+        <tran_id>SWZJ.HXZG.SB.HKYSQYNDQSBC</tran_id>
+        <channel_id>TEST</channel_id>
+        <tran_seq>11111111111111111111111111111111</tran_seq>
+        <tran_date>20140820</tran_date>
+        <tran_time>173655570</tran_time>
+        <expand>
+            <name>identityType</name>
+            <value>49308fd2f75d462594648203c1ae5e93</value>
+        </expand>
+        <expand>
+            <name>sjry</name>
+            <value>24406060733</value>
+        </expand>
+        <expand>
+            <name>sjjg</name>
+            <value>24400000000</value>
+        </expand>
+    </head>
+    <body><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<!--用XMLSpy v2011 rel. 2 sp1产生的 XML文件(http://www.altova.com)-->
+<taxML xsi:type="HXZGSB01815Request" xmlbh="String" bbh="String" xmlmc="String" xsi:schemaLocation="http://www.chinatax.gov.cn/dataspec/ TaxMLBw_HXZG_SB_01815_Request_V1.0.xsd" xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <hkysqyndqssbVO xmlbh="String" bbh="String" xmlmc="String">
+        <hkysqyndqssbGrid>
+            <hkysqyndqssbGridlb>
+                <nsrsbh>aaaaaaaaaaaaaaaaaaaa</nsrsbh>
+                <hkysqymc>黄色石头</hkysqymc>
+                <zjghzdndxse>100</zjghzdndxse>
+                <zjghzdndynse>100</zjghzdndynse>
+                <fzjgnsrsbh>440605234567333</fzjgnsrsbh>
+                <fzjgmc>广东省增值税测试数据</fzjgmc>
+                <szd>生产经营地址</szd>
+                <ndxse>23</ndxse>
+                <ndqsdynse>32</ndqsdynse>
+                <ndyjse>23</ndyjse>
+                <ce>32</ce>
+            </hkysqyndqssbGridlb>
+        </hkysqyndqssbGrid>
+        <sbbheadVO>
+            <nsrsbh>20160310</nsrsbh>
+            <nsrmc>黄色石头</nsrmc>
+            <skssqq>2015-01-01</skssqq>
+            <skssqz>2015-12-31</skssqz>
+            <zjghzdndxse>100</zjghzdndxse>
+            <zjghzdndynse>100</zjghzdndynse>
+        </sbbheadVO>
+    </hkysqyndqssbVO>
+    <djxh>1984031020050826</djxh>
+</taxML>
+]]></body>
+</service>

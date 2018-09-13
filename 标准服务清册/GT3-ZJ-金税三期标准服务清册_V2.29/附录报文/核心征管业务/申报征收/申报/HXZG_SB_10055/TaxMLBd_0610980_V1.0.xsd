@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 被2012 () 使用XMLSpy v编辑的 (http://www.altova.com) by -->
+<!-- edited with XMLSpy v2013 (http://www.altova.com) by  () -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:include schemaLocation="TaxMLPublicSBType.xsd"/>
+	<xs:complexType name="hjbhsnssbbabywbw">
+		<xs:annotation>
+			<xs:documentation>《环境保护税纳税申报表（A表）》业务报文</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="hbssbForm" type="SBHbssbFormVO">
+						<xs:annotation>
+							<xs:documentation>环保税申报Form</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="sbskxxGrid">
+						<xs:annotation>
+							<xs:documentation>申报信息Grid</xs:documentation>
+						</xs:annotation>
+						<xs:complexType>
+							<xs:sequence maxOccurs="unbounded">
+								<xs:element name="sbskxxGridlb" type="SBHbssbnssbbaVO">
+									<xs:annotation>
+										<xs:documentation>申报信息Grid列表</xs:documentation>
+									</xs:annotation>
+								</xs:element>
+							</xs:sequence>
+						</xs:complexType>
+					</xs:element>
+					<xs:element name="dqwrGrid">
+						<xs:annotation>
+							<xs:documentation>大气污染信息Grid</xs:documentation>
+						</xs:annotation>
+						<xs:complexType>
+							<xs:sequence minOccurs="0" maxOccurs="unbounded">
+								<xs:element name="dqwrGridlb" type="SBHbsnssbjsbdqhswrsyVO">
+									<xs:annotation>
+										<xs:documentation>大气污染信息Grid列表</xs:documentation>
+									</xs:annotation>
+								</xs:element>
+							</xs:sequence>
+						</xs:complexType>
+					</xs:element>
+					<xs:element name="swrGrid">
+						<xs:annotation>
+							<xs:documentation>水污染信息Grid</xs:documentation>
+						</xs:annotation>
+						<xs:complexType>
+							<xs:sequence minOccurs="0" maxOccurs="unbounded">
+								<xs:element name="swrGridlb" type="SBHbsnssbjsbdqhswrsyVO">
+									<xs:annotation>
+										<xs:documentation>水污染信息Grid列表</xs:documentation>
+									</xs:annotation>
+								</xs:element>
+							</xs:sequence>
+						</xs:complexType>
+					</xs:element>
+					<xs:element name="gfwrGrid">
+						<xs:annotation>
+							<xs:documentation>固废污染信息Grid</xs:documentation>
+						</xs:annotation>
+						<xs:complexType>
+							<xs:sequence minOccurs="0" maxOccurs="unbounded">
+								<xs:element name="gfwrGridlb" type="SBHbsnssbjsbgtfwsyVO">
+									<xs:annotation>
+										<xs:documentation>固废污染信息Grid列表</xs:documentation>
+									</xs:annotation>
+								</xs:element>
+							</xs:sequence>
+						</xs:complexType>
+					</xs:element>
+					<xs:element name="zswrGrid">
+						<xs:annotation>
+							<xs:documentation>噪声污染信息Grid</xs:documentation>
+						</xs:annotation>
+						<xs:complexType>
+							<xs:sequence minOccurs="0" maxOccurs="unbounded">
+								<xs:element name="zswrGridlb" type="SBHbsnssbjsbzssyVO">
+									<xs:annotation>
+										<xs:documentation>噪声污染信息Grid列表</xs:documentation>
+									</xs:annotation>
+								</xs:element>
+							</xs:sequence>
+						</xs:complexType>
+					</xs:element>
+					<xs:element name="jmsmxGrid">
+						<xs:annotation>
+							<xs:documentation>减免税明细信息Grid</xs:documentation>
+						</xs:annotation>
+						<xs:complexType>
+							<xs:sequence minOccurs="0" maxOccurs="unbounded">
+								<xs:element name="jmsmxGridlb" type="SBHbsnssbjsbjmsmxVO">
+									<xs:annotation>
+										<xs:documentation>减免税明细信息Grid列表</xs:documentation>
+									</xs:annotation>
+								</xs:element>
+							</xs:sequence>
+						</xs:complexType>
+					</xs:element>
+					<xs:element name="hbsslxxForm" type="SBHbsslxxFormVO">
+						<xs:annotation>
+							<xs:documentation>环保税受理信息Form</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+</xs:schema>

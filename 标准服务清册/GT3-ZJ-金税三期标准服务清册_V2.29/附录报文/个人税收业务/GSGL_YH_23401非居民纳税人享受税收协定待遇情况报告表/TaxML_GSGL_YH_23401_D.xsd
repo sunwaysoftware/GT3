@@ -1,0 +1,444 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://www.chinatax.gov.cn/dataspec/" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:include schemaLocation="TaxML_GSGL_YH_23401_Common.xsd"/>
+	<xs:complexType name="yhFjmnsrxsssxddyqkbgbD">
+		<xs:annotation>
+			<xs:documentation>
+			    报告表D表主表信息
+			</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="sdlx" type="maxLength60">
+						<xs:annotation>
+							<xs:documentation>所得类型 (取自dm_gy_ssxdsdlx表，代码值为'15','17','18','19','22','20','23')</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:group ref="kjywrsyxxD"/>
+					<xs:group ref="swjgglsyxxD"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:group name="kjywrsyxxD">
+		<xs:annotation>
+			<xs:documentation>
+			    扣缴义务人使用信息
+			</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:group ref="xsfdlgrlwtkdy"/>
+			<xs:group ref="xsyyryhydytjdy"/>
+			<xs:group ref="xstxjtkdy"/>
+			<xs:group ref="xszffwtkdy"/>
+			<xs:group ref="xsjshyjrytkdy"/>
+			<xs:group ref="xsxstk"/>
+			<xs:group ref="xsgjysxtdy"/>
+		</xs:sequence>
+	</xs:group>
+	<xs:group name="swjgglsyxxD">
+		<xs:annotation>
+			<xs:documentation>
+			    税务机关管理使用信息
+			</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="sflyyzgjnqtdqtlxd" type="length1">
+				<xs:annotation>
+					<xs:documentation>非居民纳税人近三年是否有来源于中国境内其他地区的同类所得(“是”“否”二选一，必录)(选择是时，“非居民纳税人近三年是否就来源于中国境内其他地区的同类所得享受过税收协定待遇？”必录)
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sflyyzgjnqtdqtlxdxsdy" type="length1">
+				<xs:annotation>
+					<xs:documentation>非居民纳税人近三年是否就来源于中国境内其他地区的同类所得享受过税收协定待遇？(条件必录)(选择“是”时，“主管税务机关”“时间（年份）”“所得金额”必录)
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yhBgbDZgswjgsyqkLists" type="YhBgbDZgswjgsyqkVo" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>说明非居民纳税人近三年就来源于中国境内其他地区的同类所得享受税收协定待遇的情况（列表）
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bz" type="maxLength2000">
+				<xs:annotation>
+					<xs:documentation>备注
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:group>
+	<xs:group name="xsfdlgrlwtkdy">
+		<xs:annotation>
+			<xs:documentation>
+			    享受非独立个人劳务（受雇所得）条款待遇
+			</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="sfwcssghdqdbc" type="length1">
+				<xs:annotation>
+					<xs:documentation>该所得是否为从事受雇活动取得的报酬，而不属于应适用税收协定董事费、演艺人员和运动员、退休金、政府服务、教师和研究人员、学生条款的所得？(“是”“否”二选一，选择非独立个人劳务选项，则此项必录)</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sfzdydfqyjygdysqdbc" type="length1">
+				<xs:annotation>
+					<xs:documentation>该所得是否为在缔约对方企业经营国际运输的船舶、飞机、或陆运车辆上从事受雇活动取得的报酬？(“是”“否”二选一，选择非独立个人劳务选项，则此项必录)(当选择“是”时，“非居民纳税人从事受雇活动的国际运输交通工具的具体类型”必录)</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="fjmnsrcssghdgdysjtgjlx" type="maxLength500">
+				<xs:annotation>
+					<xs:documentation>非居民纳税人从事受雇活动的国际运输交通工具的具体类型(条件必录)</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yhBgbDTlqkListsLast" type="YhBgbDTlqkVo" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>非居民纳税人在中国境内停留时间情况1:上一公
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yhBgbDTlqkListsThis" type="YhBgbDTlqkVo" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>非居民纳税人在中国境内停留时间情况2:本年度
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yhBgbDTlqkListsNext" type="YhBgbDTlqkVo" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>非居民纳税人在中国境内停留时间情况3:下一公历
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="gbcsfyssxddydfgzzfhdbgzzf" type="length1">
+				<xs:annotation>
+					<xs:documentation>该报酬是否由为税收协定缔约对方居民的雇主支付或代表该雇主支付(“是”“否”二选一；选择非独立个人劳务选项，则此项必录)</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="gbcsfssxddydfjmszzgcsjgfd" type="length1">
+				<xs:annotation>
+					<xs:documentation>该报酬是否由为税收协定缔约对方居民的雇主设在中国的常设机构或固定基地负担(“是”“否”二选一；选择非独立个人劳务选项，则此项必录)</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:group>
+	<xs:group name="xsyyryhydytjdy">
+		<xs:annotation>
+			<xs:documentation>
+			    享受演艺人员和运动员条款待遇
+			</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="fjmnsrzy" type="maxLength150">
+				<xs:annotation>
+					<xs:documentation>非居民纳税人的职业(选择演艺人员和运动员选项，则此项必录)</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="fjmnsrcshdqk" type="length1">
+				<xs:annotation>
+					<xs:documentation>非居民纳税人从事的活动情况(选择演艺人员和运动员选项，则此项必录)(当选择“政府间文化交流计划”“政府间体育交流计划”时，交流计划名称必录) 1.政府间文化交流计划     请说明文化交流计划名称 2.政府间体育交流计划      请说明文化交流计划名称3.其他</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="whjljhmc" type="maxLength300">
+				<xs:annotation>
+					<xs:documentation>文化交流计划名称(条件必录)</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="fjmnsrzzgkzhdzfzzqk" type="length1">
+				<xs:annotation>
+					<xs:documentation>非居民纳税人在中国开展活动的政府资助情况(选择演艺人员和运动员选项，则此项必录)(当选择“由缔约对方政府或其地方当局资金或它们的公共基金资助”“由中国政府资金或公共资金资助”时，资助者名称必录) 1.由缔约对方政府或其地方当局资金或它们的公共基金资助    请说明资助者名称2.由中国政府资金或公共资金资助   请说明资助者名称3.其他</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zzzmc" type="maxLength300">
+				<xs:annotation>
+					<xs:documentation>资助者名称 (条件必录)</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:group>
+	<xs:group name="xstxjtkdy">
+		<xs:annotation>
+			<xs:documentation>
+			    享受退休金条款待遇
+			</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="txjzfrmc" type="maxLength150">
+				<xs:annotation>
+					<xs:documentation>退休金支付人名称(享受退休金条款待遇，则此项必录) </xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="txjsfgjdydfshbzzf" type="length1">
+				<xs:annotation>
+					<xs:documentation>退休金是否根据缔约对方社会保障制度或公共保险制度支付？(“是”“否”二选一；享受退休金条款待遇，则此项必录) </xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="kszzgjzsj" type="date">
+				<xs:annotation>
+					<xs:documentation>开始在中国居住时间(享受退休金条款待遇，则此项必录) </xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jshjhjszgjzsj" type="date">
+				<xs:annotation>
+					<xs:documentation>结束或计划结束在中国居住时间(享受退休金条款待遇，则此项必录) </xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:group>
+	<xs:group name="xszffwtkdy">
+		<xs:annotation>
+			<xs:documentation>
+			    享受政府服务条款待遇
+			</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="sfdydfzfhqxzqdfdjqdgbc" type="length1">
+				<xs:annotation>
+					<xs:documentation>非居民纳税人是否向缔约对方政府或其行政区或地方当局提供服务而取得该报酬？(“是”“否”二选一；享受政府服务条款待遇，则此项必录) (选择“是”时，非居民纳税人所服务的政府机构名称必录)</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="fjmnsrsfwzfjgmc" type="maxLength300">
+				<xs:annotation>
+					<xs:documentation>非居民纳税人所服务的政府机构名称(条件必录) </xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="fjmnsrqdsdsfwxj" type="length1">
+				<xs:annotation>
+					<xs:documentation>非居民纳税人取得所得是否为退休金？(“是”“否”二选一；享受政府服务条款待遇，则此项必录)(选择“是”时，“该退休金是否是由缔约国一方政府、行政区、地方当局支付的或者从其建立的基金中支付的？”必录) </xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sfdygtfzfhjjzf" type="length1">
+				<xs:annotation>
+					<xs:documentation>该退休金是否是由缔约国一方政府、行政区、地方当局支付的或者从其建立的基金中支付的？(条件必录) </xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sffjmqjjbsytgfwqd" type="length1">
+				<xs:annotation>
+					<xs:documentation>该所得是否因非居民纳税人向缔约对方政府或其地方当局举办的事业提供服务而取得？(“是”“否”二选一；享受政府服务条款待遇，则此项必录) </xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ssfltwsmssqk" type="maxLength1200">
+				<xs:annotation>
+					<xs:documentation>如非居民纳税人需享受的税收协定有特殊规定且非居民纳税人需享受该特殊性条款，请引述该法律条文并说明非居民纳税人符合享受该条款待遇的事实情况。
+							</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:group>
+	<xs:group name="xsjshyjrytkdy">
+		<xs:annotation>
+			<xs:documentation>
+			    享受教师和研究人员条款待遇
+			</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="sfygfwhjlxmhjhzzgtl" type="length1">
+				<xs:annotation>
+					<xs:documentation>非居民纳税人是否因官方文化交流项目或计划在中国停留？(“是”“否”二选；享受教师和研究人员条款待遇，则此项必录)(选择“是”时，“官方文化交流项目或计划名称”必录)
+							</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="gfwhjlxmhjhmc" type="maxLength300">
+				<xs:annotation>
+					<xs:documentation>官方文化交流项目或计划名称(条件必录) 
+							</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="fjmzzgthjxyjfwjgqk" type="length1">
+				<xs:annotation>
+					<xs:documentation>非居民纳税人在中国提供教学、研究服务的机构属以下哪种情况？(享受教师和研究人员条款待遇，则此项必录) 1.教育机构2.科研机构3.博物馆4.其他文化机构
+							</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="fjmnsrtgjxyjfwjgmc" type="maxLength300">
+				<xs:annotation>
+					<xs:documentation>非居民纳税人提供教学、研究服务机构名称(享受教师和研究人员条款待遇，则此项必录)
+							</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sffhqsprkxsdwgdyq" type="length1">
+				<xs:annotation>
+					<xs:documentation>非居民纳税人提供教学、研究服务机构是否符合其受聘人员可享受教师和研究人员条款税收协定待遇的规定要求(“是”“否”二选一；享受教师和研究人员条款待遇，则此项必录)
+							</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="fjmnsrsfyzgjnjyypygx" type="length1">
+				<xs:annotation>
+					<xs:documentation>非居民纳税人是否与中国境内教育或研究机构有聘用关系？(“是”“否”二选一；享受教师和研究人员条款待遇，则此项必录)
+							</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="fjmnsrpyhtksrq" type="date">
+				<xs:annotation>
+					<xs:documentation>非居民纳税人聘用合同开始日期(享受教师和研究人员条款待遇，则此项必录)
+							</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="fjmnsrpyhtjsrq" type="date">
+				<xs:annotation>
+					<xs:documentation>非居民纳税人聘用合同结束日期(终止日期不能小于开始日期；享受教师和研究人员条款待遇，则此项必录)
+							</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="fjmyjxyjfwdycddzgrq" type="date">
+				<xs:annotation>
+					<xs:documentation>非居民纳税人因提供此项教学、研究服务第一次到达中国的日期(享受教师和研究人员条款待遇，则此项必录)
+							</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="fjmnsrzpydwhdlx" type="length1">
+				<xs:annotation>
+					<xs:documentation>非居民纳税人在聘用单位主要从事的活动的类型(享受教师和研究人员条款待遇，则此项必录) 1.教学2.讲座3.研究4.规划、咨询或行政管理活动5.其他
+							</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sffwygglx" type="length1">
+				<xs:annotation>
+					<xs:documentation>如果非居民纳税人从事研究活动，该研究活动是否是服务于公共利益，而不是主要为了某个人或某些人的私人利益而开展
+							</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:group>
+	<xs:group name="xsxstk">
+		<xs:annotation>
+			<xs:documentation>
+			    享受学生条款
+			</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="sfjywjsjypxtlzg" type="length1">
+				<xs:annotation>
+					<xs:documentation>非居民纳税人是否仅由于接受教育、培训或者获取特别的技术经验的目的停留在中国？(“是”“否”二选一；享受学生条款待遇，则此项必录)
+							</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="fjmnsrzzgxxxxjgmc" type="maxLength300">
+				<xs:annotation>
+					<xs:documentation>非居民纳税人在中国学习或实习的学校、机构名称(享受学生条款待遇，则此项必录)
+							</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="fjmnsrzzgxxsxkssj" type="date">
+				<xs:annotation>
+					<xs:documentation>非居民纳税人在中国学习或实习的开始时间(享受学生条款待遇，则此项必录)
+							</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="fjmnsrzzgxxsxjehyjjssj" type="date">
+				<xs:annotation>
+					<xs:documentation>非居民纳税人在中国学习或实习的结束或预计结束时间(享受学生条款待遇，则此项必录)
+							</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="fjmnsrycxxxsxdycddzgrq" type="date">
+				<xs:annotation>
+					<xs:documentation>非居民纳税人因此项学习或实习第一次到达中国的日期(享受学生条款待遇，则此项必录)
+							</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="fjmnsrqdsdqk" type="maxLength20">
+				<xs:annotation>
+					<xs:documentation>非居民纳税人取得所得属于以下哪种情况(多选)(选项内容见表单，可多选；享受学生条款待遇，则此项必录)(当选择“政府或科学、教育、文化机构或其他免税组织给予的助学金、奖学金或奖金 ”，发放者名称必录；当选择“在中国为维持生活从事个人劳务取得的所得 ”时，“如果非居民纳税人在中国为维持生活从事个人劳务活动，取得所得金额和从事个人劳务活动时间是否符合需享受税收协定的相关要求？”必录) 1.为维持生活、接受教育、学习、研究或培训的目的，从中国境外取得的款项 2.政府或科学、教育、文化机构或其他免税组织给予的助学金、奖学金或奖金3.在中国为维持生活从事个人劳务取得的所得4.其他
+							</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="fjmnsrqdzfjxqffzmc" type="maxLength300">
+				<xs:annotation>
+					<xs:documentation>如果非居民纳税人取得政府或科学、教育、文化机构或其他免税组织给予的助学金、奖学金或奖金，请说明上述助学金、奖学金或奖金的发放者名称(条件必录)
+							</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sffhxxsssxdxgyq" type="length1">
+				<xs:annotation>
+					<xs:documentation>如果非居民纳税人在中国为维持生活从事个人劳务活动，取得所得金额和从事个人劳务活动时间是否符合需享受税收协定的相关要求？(条件必录)
+							</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:group>
+	<xs:group name="xsgjysxtdy">
+		<xs:annotation>
+			<xs:documentation>
+			    享受国际运输协定待遇
+			</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="nsrxsxgdysxdxggltw" type="maxLength2000">
+				<xs:annotation>
+					<xs:documentation>请引述纳税人需享受国际运输协定的相关法律条文(享受国际运输协定待遇,则此项必录)
+							</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="nsrkxsxggjysxdtkssqk" type="maxLength2000">
+				<xs:annotation>
+					<xs:documentation>请简要说明纳税人可享受相关国际运输协定条款的事实情况：(享受国际运输协定待遇,则此项必录)
+							</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:group>
+	<xs:complexType name="YhBgbDZgswjgsyqkVo">
+		<xs:annotation>
+			<xs:documentation>
+			    D表_税务机关管理使用信息
+			</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="zgswjgdm" type="zgswjgDm">
+						<xs:annotation>
+							<xs:documentation>主管税务机关
+							</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="sjnf" type="length4">
+						<xs:annotation>
+							<xs:documentation>时间（年份）
+							</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="sdje" type="amount">
+						<xs:annotation>
+							<xs:documentation>所得金额
+							</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="YhBgbDTlqkVo">
+		<xs:annotation>
+			<xs:documentation>
+			    非居民纳税人在中国境内停留时间情况
+			</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="ddzgrq" type="date">
+						<xs:annotation>
+							<xs:documentation>到达中国日期
+							</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="lkzgrq" type="date">
+						<xs:annotation>
+							<xs:documentation>离开中国日期
+							</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="tlts" type="maxLength10">
+						<xs:annotation>
+							<xs:documentation>停留天数
+							</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+</xs:schema>

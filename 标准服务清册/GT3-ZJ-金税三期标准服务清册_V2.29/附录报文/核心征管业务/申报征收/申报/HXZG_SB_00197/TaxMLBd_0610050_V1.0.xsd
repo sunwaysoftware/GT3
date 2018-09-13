@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2010 rel. 3 (http://www.altova.com) by xuxin (csstj) -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:include schemaLocation="TaxMLPublicType.xsd"/>
+	<xs:complexType name="jwsdsdmjsmxsbbywbw">
+		<xs:annotation>
+			<xs:documentation>《中华人民共和国企业所得税年度纳税申报表附表六境外所得税抵免计算明细表》业务报文</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="jwsdsdmjsmxsbb">
+						<xs:annotation>
+							<xs:documentation>《中华人民共和国企业所得税年度纳税申报表附表六境外所得税抵免计算明细表》</xs:documentation>
+						</xs:annotation>
+						<xs:complexType>
+							<xs:sequence>
+								<xs:element name="jwsdsdmjsmxsbbGrid">
+									<xs:annotation>
+										<xs:documentation>境外所得税抵免计算明细表信息</xs:documentation>
+									</xs:annotation>
+									<xs:complexType>
+										<xs:sequence maxOccurs="unbounded">
+											<xs:element name="jwsdsdmjsmxsbbGridlb" type="jwsdsdmjsmxsbbGridlbVO">
+												<xs:annotation>
+													<xs:documentation>境外所得税抵免计算明细表数据对应列表</xs:documentation>
+												</xs:annotation>
+											</xs:element>
+										</xs:sequence>
+									</xs:complexType>
+								</xs:element>
+							</xs:sequence>
+						</xs:complexType>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="jwsdsdmjsmxsbb">
+		<xs:annotation>
+			<xs:documentation>《中华人民共和国企业所得税年度纳税申报表附表六境外所得税抵免计算明细表》</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="jwsdsdmjsmxsbbGrid">
+				<xs:annotation>
+					<xs:documentation>境外所得税抵免计算明细表信息</xs:documentation>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:sequence maxOccurs="unbounded">
+						<xs:element name="jwsdsdmjsmxsbbGridlb" type="jwsdsdmjsmxsbbGridlbVO">
+							<xs:annotation>
+								<xs:documentation>境外所得税抵免计算明细表数据对应列表</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="jwsdsdmjsmxsbbGrid">
+		<xs:annotation>
+			<xs:documentation>境外所得税抵免计算明细表数据对应Grid</xs:documentation>
+		</xs:annotation>
+		<xs:sequence maxOccurs="unbounded">
+			<xs:element name="jwsdsdmjsmxsbbGridlb" type="jwsdsdmjsmxsbbGridlbVO">
+				<xs:annotation>
+					<xs:documentation>境外所得税抵免计算明细表数据对应列表</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="jwsdsdmjsmxsbbGridlbVO">
+		<xs:annotation>
+			<xs:documentation>境外所得税抵免计算明细表数据对应明细</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="ewbhxh" type="ewbhxh">
+				<xs:annotation>
+					<xs:documentation>二维表行序号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qysdsjwsdsdmfsDm" type="qysdsjwsdsdmfsDm" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>企业所得税境外所得税抵免方式代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="gjhdqszDm" type="gjhdqszDm" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>国家或地区数字代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jwsd" type="jwsd" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>境外所得</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jwsdhshssd" type="jwsdhshssd" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>境外所得换算含税所得</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="mbyqndks" type="mbyqndks" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>弥补以前年度亏损||弥补以前年度亏损</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="mssd" type="mssd" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>免税所得</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="mbksqjwyssde" type="mbksqjwyssde" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>弥补亏损前境外应税所得额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="kmbjnks" type="kmbjnks" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>可弥补境内亏损</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jwynssde" type="jwynssde" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>境外应纳税所得额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sl1" type="sl1" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>税率</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jwsdynse" type="jwsdynse" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>境外所得应纳税额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jwsdkdmse" type="jwsdkdmse" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>境外所得可抵免税额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jwsdskdmxe" type="jwsdskdmxe" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>境外所得税款抵免限额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bnkdmdjwsdsk" type="bnkdmdjwsdsk" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>本年可抵免的境外所得税款</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="wcgjwsdskdmxedye" type="wcgjwsdskdmxedye" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>未超过境外所得税款抵免限额的余额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bnkdmyqndsdse" type="bnkdmyqndsdse" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>本年可抵免以前年度所得税额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qwnjwsdyjskwdmye" type="qwnjwsdyjskwdmye" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>前五年境外所得已缴税款未抵免余额||前五年境外所得已缴税款未抵免余额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="dldm" type="dldm" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>定率抵免</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

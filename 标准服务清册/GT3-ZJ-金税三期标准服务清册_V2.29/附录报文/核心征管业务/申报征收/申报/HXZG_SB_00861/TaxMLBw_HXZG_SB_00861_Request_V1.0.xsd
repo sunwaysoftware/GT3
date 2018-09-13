@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2010 rel. 3 (http://www.altova.com) by liuwei (liuweicss) -->
+<!-- 被2011 rel. 2 sp1 (TeaM DJiNN) 使用XMLSpy vTeaM DJiNN编辑的 (http://www.altova.com) by -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:include schemaLocation="TaxMLPublicSBType.xsd"/>
+	<xs:include schemaLocation="TaxMLBd_qysdsndnssb2014_V1.0.xsd"/>
+	<xs:complexType name="HXZGSB00861Request">
+		<xs:annotation>
+			<xs:documentation>居民企业企业所得税查账征收年度申报（2014）错误更正保存信息请求报文</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="sbxxGrid">
+						<xs:annotation>
+							<xs:documentation>申报数据信息</xs:documentation>
+						</xs:annotation>
+						<xs:complexType>
+							<xs:sequence minOccurs="0" maxOccurs="unbounded">
+								<xs:element name="sbxxGridlb" type="SBSbxxTjVO"/>
+							</xs:sequence>
+						</xs:complexType>
+					</xs:element>
+					<xs:element name="jmxxGrid">
+						<xs:annotation>
+							<xs:documentation>减免数据信息</xs:documentation>
+						</xs:annotation>
+						<xs:complexType>
+							<xs:sequence minOccurs="0" maxOccurs="unbounded">
+								<xs:element name="jmxxGridlb" type="SBSbjmTjVO"/>
+							</xs:sequence>
+						</xs:complexType>
+					</xs:element>
+					<xs:element name="yjxxGrid">
+						<xs:annotation>
+							<xs:documentation>预缴税款数据信息</xs:documentation>
+						</xs:annotation>
+						<xs:complexType>
+							<xs:sequence minOccurs="0" maxOccurs="unbounded">
+								<xs:element name="yjxxGridlb" type="SBSbyjTjVO"/>
+							</xs:sequence>
+						</xs:complexType>
+					</xs:element>
+					<xs:element name="zhrmghgjmqycczzndnssbYwbw" type="qysdsCzzsNdnssbVO">
+						<xs:annotation>
+							<xs:documentation>申报纳税人主体数据查询信息对象</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="sbQysdsczzsndsb2014SBbcTjqtxxVO" type="sbQysdsczzsndsb2014SBbcTjqtxxVO">
+						<xs:annotation>
+							<xs:documentation>企业所得税查账征收年度申报2014版申报纳税人申报保存提交其他信息对象</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="sbNsrxxJhVO" type="SBNsrxxJhVO">
+						<xs:annotation>
+							<xs:documentation>申报纳税人主体数据查询信息对象</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="sbQysdsczzsndsb2014SBbcTjqtxxVO">
+		<xs:annotation>
+			<xs:documentation>企业所得税查账征收年度申报2014版申报纳税人申报保存提交其他信息对象</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="djxh" type="djxh">
+				<xs:annotation>
+					<xs:documentation>登记序号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="skssqq" type="skssqq">
+				<xs:annotation>
+					<xs:documentation>税款所属期起</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="skssqz" type="skssqz">
+				<xs:annotation>
+					<xs:documentation>税款所属期止</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="initMbkstzLen" type="bz">
+				<xs:annotation>
+					<xs:documentation>弥补亏损台账年度字符串</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jshKjzyhndmbdkseNd1" type="je">
+				<xs:annotation>
+					<xs:documentation>第一年可结转以后年度弥补亏损额计算后金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sbsxDm1" type="sbsxDm1">
+				<xs:annotation>
+					<xs:documentation>申报属性代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zxbztzsuuid" type="zxbztzsuuid" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>自查补报通知书uuid</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

@@ -1,0 +1,358 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 被2011 rel. 2 sp1 (TeaM DJiNN) 使用XMLSpy vTeaM DJiNN编辑的 (http://www.altova.com) by -->
+<!-- edited with XMLSpy v2008 (http://www.altova.com) by TEAM ViRiLiTY (VRL) -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:complexType name="ssgsgqjlgrsdsyqnsRequest">
+		<xs:annotation>
+			<xs:documentation>上市公司股权激励个人所得税延期纳税备案请求报文</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="jywysbh" type="jywysbh">
+						<xs:annotation>
+							<xs:documentation>交易唯一识别号，对于总局版本代扣代缴客户端存储的是交易报文中的 扩展节点(不能为空)</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="kjywrnsrdjxh" type="kjywrnsrdjxh">
+						<xs:annotation>
+							<xs:documentation>扣缴单位纳税登记序号(不能为空)</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="gpdm" type="gpdm">
+						<xs:annotation>
+							<xs:documentation>股票代码(不能为空)</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="lxr" type="lxr">
+						<xs:annotation>
+							<xs:documentation>联系人</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="lxdh" type="lxdh">
+						<xs:annotation>
+							<xs:documentation>联系电话</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="gqjlxs" type="gqjlxs">
+						<xs:annotation>
+							<xs:documentation>股权激励形式(不能为空)</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="fddbr" type="fddbr">
+						<xs:annotation>
+							<xs:documentation>上市公司法定代表人(不能为空)</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="gsjbr" type="gsjbr">
+						<xs:annotation>
+							<xs:documentation>上市公司经办人</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="tbrq" type="tbrq">
+						<xs:annotation>
+							<xs:documentation>填报日期(默认为系统当前日期,格式：yyyy-MM-dd)</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="bars" type="bars">
+						<xs:annotation>
+							<xs:documentation>备案人数</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="sfdlsb" type="sfdlsb">
+						<xs:annotation>
+							<xs:documentation>是否代理申报(Y/N)(不能为空)</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="dlsbjg" type="dlsbjg">
+						<xs:annotation>
+							<xs:documentation>代理申报机构(当是否代理申报为是时必录)</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="jbr" type="jbr">
+						<xs:annotation>
+							<xs:documentation>经办人(当是否代理申报为是时必录)</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="jbrzyzjhm" type="jbrzyzjhm">
+						<xs:annotation>
+							<xs:documentation>经办人执业证件号码(当代理申报机构录入，经办人执业证件号码必录)</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="slrq" type="slrq">
+						<xs:annotation>
+							<xs:documentation>受理日期(默认为系统当前日期,格式：yyyy-MM-dd)</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="dlsbrq" type="dlsbrq">
+						<xs:annotation>
+							<xs:documentation>代理申报日期(当代理申报机构录入，必录，默认为系统当前日期,格式：yyyy-MM-dd)</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="zgswjgDm" type="zgswjgDm">
+						<xs:annotation>
+							<xs:documentation>主管税务机关代码(不能为空)</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="slrDm" type="slrDm">
+						<xs:annotation>
+							<xs:documentation>受理人代码(不能为空，长度只能为11位)</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="ssgsYqnsGqjlMxGrid" type="ssgsYqnsGqjlMx" maxOccurs="unbounded">
+						<xs:annotation>
+							<xs:documentation>股权奖励分期备案明细</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="ssgsYqnsGqjlMx">
+		<xs:annotation>
+			<xs:documentation>上市公司股权激励个人所得税延期纳税备案明细</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="zwxm" type="xm">
+				<xs:annotation>
+					<xs:documentation>姓名（中文）(不能为空)</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ywxm" type="ywxm">
+				<xs:annotation>
+					<xs:documentation>姓名（英文）</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sfzjlxDm" type="sfzjlxDm">
+				<xs:annotation>
+					<xs:documentation>身份证件类型(不能为空)</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sfzjhm" type="sfzjhm">
+				<xs:annotation>
+					<xs:documentation>身份证件号码(不能为空，如果身份证件类型为居民身份证时，身份证件号码只允许18位)</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="rzsgys" type="rzsgys">
+				<xs:annotation>
+					<xs:documentation>任职受雇月数(不能为空)</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="xqr" type="xqr">
+				<xs:annotation>
+					<xs:documentation>行权日</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="xqrsj" type="xqrsj">
+				<xs:annotation>
+					<xs:documentation>行权日市价</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="xqj" type="xqj">
+				<xs:annotation>
+					<xs:documentation>行权价</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="xqgs" type="xqgs">
+				<xs:annotation>
+					<xs:documentation>行权股数</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="gpdjr" type="gpdjr">
+				<xs:annotation>
+					<xs:documentation>股票登记日</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="gpdjrsj" type="gpdjrsj">
+				<xs:annotation>
+					<xs:documentation>股票登记日市价</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jjr" type="jjr">
+				<xs:annotation>
+					<xs:documentation>解禁日</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jjrsj" type="jjrsj">
+				<xs:annotation>
+					<xs:documentation>解禁日市价</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sjczze" type="sjczze">
+				<xs:annotation>
+					<xs:documentation>实际出资总额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bpcjjs" type="bpcjjs">
+				<xs:annotation>
+					<xs:documentation>本批次解禁数</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zgps" type="zgps">
+				<xs:annotation>
+					<xs:documentation>总股票数</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="syr" type="syr">
+				<xs:annotation>
+					<xs:documentation>授予日</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="syrsj" type="syrsj">
+				<xs:annotation>
+					<xs:documentation>授予日市价</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jlgps" type="jlgps">
+				<xs:annotation>
+					<xs:documentation>奖励股票数</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:simpleType name="kjywrnsrdjxh">
+		<xs:annotation>
+			<xs:documentation>扣缴单位纳税登记序号</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:maxLength value="20"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="gpdm">
+		<xs:annotation>
+			<xs:documentation>股票代码</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:maxLength value="20"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="gqjlxs">
+		<xs:annotation>
+			<xs:documentation>股权激励形式</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:maxLength value="5"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="gsjbr">
+		<xs:annotation>
+			<xs:documentation>上市公司经办人</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:maxLength value="150"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="dlsbjg">
+		<xs:annotation>
+			<xs:documentation>代理申报机构</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:maxLength value="300"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="jbrzyzjhm">
+		<xs:annotation>
+			<xs:documentation>经办人执业证件号码</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:maxLength value="30"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="rzsgys">
+		<xs:annotation>
+			<xs:documentation>任职受雇月数(大于0，保留两位小数)</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:double"/>
+	</xs:simpleType>
+	<xs:simpleType name="bars">
+		<xs:annotation>
+			<xs:documentation>备案人数</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:int"/>
+	</xs:simpleType>
+	<xs:simpleType name="xqr">
+		<xs:annotation>
+			<xs:documentation>行权日</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string"/>
+	</xs:simpleType>
+	<xs:simpleType name="xqrsj">
+		<xs:annotation>
+			<xs:documentation>行权日市价(大于0，保留两位小数)</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:double"/>
+	</xs:simpleType>
+	<xs:simpleType name="xqj">
+		<xs:annotation>
+			<xs:documentation>行权价(大于0，保留两位小数)</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:double"/>
+	</xs:simpleType>
+	<xs:simpleType name="xqgs">
+		<xs:annotation>
+			<xs:documentation>行权股数(大于0，保留两位小数)</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:double"/>
+	</xs:simpleType>
+	<xs:simpleType name="gpdjr">
+		<xs:annotation>
+			<xs:documentation>股票登记日</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string"/>
+	</xs:simpleType>
+	<xs:simpleType name="gpdjrsj">
+		<xs:annotation>
+			<xs:documentation>股票登记日市价(大于0，保留两位小数)</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:double"/>
+	</xs:simpleType>
+	<xs:simpleType name="jjr">
+		<xs:annotation>
+			<xs:documentation>解禁日</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string"/>
+	</xs:simpleType>
+	<xs:simpleType name="jjrsj">
+		<xs:annotation>
+			<xs:documentation>解禁日市价(大于0，保留两位小数)</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:double"/>
+	</xs:simpleType>
+	<xs:simpleType name="sjczze">
+		<xs:annotation>
+			<xs:documentation>实际出资总额(大于0，保留两位小数)</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:double"/>
+	</xs:simpleType>
+	<xs:simpleType name="bpcjjs">
+		<xs:annotation>
+			<xs:documentation>本批次解禁数(大于0，保留两位小数)</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:double"/>
+	</xs:simpleType>
+	<xs:simpleType name="zgps">
+		<xs:annotation>
+			<xs:documentation>总股票数(大于0，保留两位小数)</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:double"/>
+	</xs:simpleType>
+	<xs:simpleType name="syr">
+		<xs:annotation>
+			<xs:documentation>授予日</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string"/>
+	</xs:simpleType>
+	<xs:simpleType name="syrsj">
+		<xs:annotation>
+			<xs:documentation>授予日市价(大于0，保留两位小数)</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:double"/>
+	</xs:simpleType>
+	<xs:simpleType name="jlgps">
+		<xs:annotation>
+			<xs:documentation>奖励股票数(大于0，保留两位小数)</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:double"/>
+	</xs:simpleType>
+</xs:schema>

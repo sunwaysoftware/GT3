@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 被2011 rel. 2 sp1 (TeaM DJiNN) 使用XMLSpy vTeaM DJiNN编辑的 (http://www.altova.com) by -->
+<!-- edited with XMLSpy v2013 (http://www.altova.com) by  () -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:complexType name="HXZGZM00098Request">
+		<xs:annotation>
+			<xs:documentation>注册地国税未自动核销信息确认查询请求报文</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="KqysxFkCxtjVO" type="KqysxFkCxtjVO"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="KqysxFkCxtjVO">
+		<xs:annotation>
+			<xs:documentation>跨区域事项反馈查询条件VO</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="sfybjbz" type="sfybjbz">
+				<xs:annotation>
+					<xs:documentation>办理情况</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bjfs" type="bjfs">
+				<xs:annotation>
+					<xs:documentation>办结方式</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yxqq" type="yxqq">
+				<xs:annotation>
+					<xs:documentation>有效期起</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yxqz" type="yxqz">
+				<xs:annotation>
+					<xs:documentation>有效期止</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="nsrsbh" type="nsrsbh">
+				<xs:annotation>
+					<xs:documentation>纳税人识别号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="wcjyhdssglzmbh" type="wcjyhdssglzmbh">
+				<xs:annotation>
+					<xs:documentation>外管证编号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zgswjDm" type="zgswjDm">
+				<xs:annotation>
+					<xs:documentation>主管税务局代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zgswskfjDm" type="zgswskfjDm">
+				<xs:annotation>
+					<xs:documentation>主管税务科所代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="kqyjydxzqh" type="xzqhszDm">
+				<xs:annotation>
+					<xs:documentation>跨区域行政区划</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

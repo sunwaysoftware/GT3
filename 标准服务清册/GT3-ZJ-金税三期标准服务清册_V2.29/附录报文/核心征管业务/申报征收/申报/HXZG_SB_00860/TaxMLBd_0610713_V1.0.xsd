@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 被2011 rel. 2 sp1 (TeaM DJiNN) 使用XMLSpy vTeaM DJiNN编辑的 (http://www.altova.com) by -->
+<!-- edited with XMLSpy v2010 rel. 3 (http://www.altova.com) by MESMERiZE (MSM) -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:include schemaLocation="TaxMLPublicType.xsd"/>
+	<xs:complexType name="zhlyzysccpqddsryhmxbmxbForm">
+		<xs:annotation>
+			<xs:documentation>综合利用资源生产产品取得的收入优惠明细表(A107012)业务报文</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="zhlyzysccpqddsryhmxbMxbGrid" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>综合利用资源生产产品取得的收入优惠明细表</xs:documentation>
+						</xs:annotation>
+						<xs:complexType>
+							<xs:sequence minOccurs="0" maxOccurs="unbounded">
+								<xs:element name="zhlyzysccpqddsryhmxbmxbgridVO" type="zhlyzysccpqddsryhmxbmxbGridVO"/>
+							</xs:sequence>
+						</xs:complexType>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="zhlyzysccpqddsryhmxbmxbGridVO">
+		<xs:annotation>
+			<xs:documentation>《综合利用资源生产产品取得的收入优惠明细表》</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+<xs:element name="scdcpmc"  type="nsrmc"  minOccurs="0" > <xs:annotation> <xs:documentation>生产的产品名称</xs:documentation></xs:annotation></xs:element>
+<xs:element name="zyzhlyrdzsqdsj"  type="skssqq"  minOccurs="0" > <xs:annotation> <xs:documentation>资源综合利用认定证书基本情况_《资源综合利用认定证书》取得时间</xs:documentation></xs:annotation></xs:element>
+<xs:element name="zyzhlyrdzsyxq"  type="skssqq"  minOccurs="0" > <xs:annotation> <xs:documentation>资源综合利用认定证书基本情况_《资源综合利用认定证书》有效期起</xs:documentation></xs:annotation></xs:element>
+<xs:element name="zyzhlyrdzsyxqz"  type="skssqq"  minOccurs="0" > <xs:annotation> <xs:documentation>资源综合利用认定证书基本情况_《资源综合利用认定证书》有效期止</xs:documentation></xs:annotation></xs:element>
+<xs:element name="zyzhlyrdzsbh"  type="bh"  minOccurs="0" > <xs:annotation> <xs:documentation>资源综合利用认定证书基本情况_《资源综合利用认定证书》编号</xs:documentation></xs:annotation></xs:element>
+<xs:element name="syyhmllb"  type="je"  minOccurs="0" > <xs:annotation> <xs:documentation>属于《资源综合利用企业所得税优惠目录》类别</xs:documentation></xs:annotation></xs:element>
+<xs:element name="zhlydzy"  type="je"  minOccurs="0" > <xs:annotation> <xs:documentation>综合利用的资源</xs:documentation></xs:annotation></xs:element>
+<xs:element name="zyzsccpclbl"  type="je"  minOccurs="0" > <xs:annotation> <xs:documentation>综合利用的资源占生产产品材料的比例</xs:documentation></xs:annotation></xs:element>
+<!--<xs:element name="yhmlgddbz"  type="je"  minOccurs="0" > <xs:annotation> <xs:documentation>《资源综合利用企业所得税优惠目录》规定的标准</xs:documentation></xs:annotation></xs:element>-->
+<xs:element name="fhtjcpqdsrze"  type="je"  minOccurs="0" > <xs:annotation> <xs:documentation>符合条件的综合利用资源生产产品取得的收入总额</xs:documentation></xs:annotation></xs:element>
+<xs:element name="zhlyzyjjsr"  type="je"  minOccurs="0" > <xs:annotation> <xs:documentation>综合利用资源减计收入 </xs:documentation></xs:annotation></xs:element>
+<xs:element name="yhmlgdbz"  type="nsrsbh"  minOccurs="0" > <xs:annotation> <xs:documentation>《资源综合利用企业所得税优惠目录》规定的标准</xs:documentation></xs:annotation></xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

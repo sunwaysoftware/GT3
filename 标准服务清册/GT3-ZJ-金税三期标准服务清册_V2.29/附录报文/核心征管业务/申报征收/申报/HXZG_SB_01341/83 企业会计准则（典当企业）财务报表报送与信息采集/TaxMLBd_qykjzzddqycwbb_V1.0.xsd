@@ -1,0 +1,306 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2013 (http://www.altova.com) by  () -->
+<!-- 被2012 () 使用XMLSpy v编辑的 (http://www.altova.com) by -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:include schemaLocation="TaxMLPublicType.xsd"/>
+	<xs:complexType name="QykjzzddqyZcfzbVO">
+		<xs:annotation>
+			<xs:documentation>资产负债表（适用执行企业会计制度的典当企业）</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="nsrxxForm" type="NsrxxFormVO">
+				<xs:annotation>
+					<xs:documentation>纳税人基本信息</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qykjzzddqyZcfzbGrid">
+				<xs:annotation>
+					<xs:documentation>申报信息</xs:documentation>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:sequence maxOccurs="unbounded">
+						<xs:element name="qykjzzddqyZcfzbGridlb" type="QykjzzddqyZcfzbGridlbVO"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="QykjzzddqyZcfzbGridlbVO">
+		<xs:annotation>
+			<xs:documentation>申报信息</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="ewbhxh" type="ewbhxh">
+				<xs:annotation>
+					<xs:documentation>二维表行序号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="xmmc" type="xmmc">
+				<xs:annotation>
+					<xs:documentation>项目名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ncs" type="ncs">
+				<xs:annotation>
+					<xs:documentation>年初数</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qms" type="je">
+				<xs:annotation>
+					<xs:documentation>期末数</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="QykjzzddqyLrfpbVO">
+		<xs:annotation>
+			<xs:documentation>利润分配表（适用执行企业会计制度的典当企业）</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="qykjzzddqyLrfpbGrid">
+				<xs:annotation>
+					<xs:documentation>申报信息</xs:documentation>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:sequence maxOccurs="unbounded">
+						<xs:element name="qykjzzddqyLrfpbGridlb" type="QykjzzddqyLrfpbGridlbVO"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="QykjzzddqyLrfpbGridlbVO">
+		<xs:annotation>
+			<xs:documentation>申报信息</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="ewbhxh" type="ewbhxh">
+				<xs:annotation>
+					<xs:documentation>二维表行序号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="xmmc" type="xmmc">
+				<xs:annotation>
+					<xs:documentation>项目名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bys" type="bys">
+				<xs:annotation>
+					<xs:documentation>本月数</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bnljs" type="bnljs">
+				<xs:annotation>
+					<xs:documentation>本年累计数</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="QykjzzddqyXjllbVO">
+		<xs:annotation>
+			<xs:documentation>现金流量表（适用执行企业会计制度的典当企业）</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="qykjzzddqyXjllbGrid">
+				<xs:annotation>
+					<xs:documentation>申报信息</xs:documentation>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:sequence maxOccurs="unbounded">
+						<xs:element name="qykjzzddqyXjllbGridlb" type="QykjzzddqyXjllbGridlbVO"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="QykjzzddqyXjllbGridlbVO">
+		<xs:annotation>
+			<xs:documentation>申报信息</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="ewbhxh" type="ewbhxh">
+				<xs:annotation>
+					<xs:documentation>二维表行序号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="xmmc" type="xmmc">
+				<xs:annotation>
+					<xs:documentation>项目名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bnje" type="je">
+				<xs:annotation>
+					<xs:documentation>本年金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="snje" type="je">
+				<xs:annotation>
+					<xs:documentation>上年金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="QykjzzddqySyzqybdbVO">
+		<xs:annotation>
+			<xs:documentation>所有者权益变动表（适用执行企业会计制度的典当企业）</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="qykjzzddqySyzqybdbGrid">
+				<xs:annotation>
+					<xs:documentation>申报信息</xs:documentation>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:sequence maxOccurs="unbounded">
+						<xs:element name="qykjzzddqySyzqybdbGridlb" type="QykjzzddqySyzqybdbGridlbVO"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="QykjzzddqySyzqybdbGridlbVO">
+		<xs:annotation>
+			<xs:documentation>申报信息</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="ewbhxh" type="ewbhxh">
+				<xs:annotation>
+					<xs:documentation>二维表行序号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="xmmc" type="xmmc">
+				<xs:annotation>
+					<xs:documentation>项目名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bnsszbhgb" type="bnsszbhgb">
+				<xs:annotation>
+					<xs:documentation>本年实收资本(或股本)</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bnzbgj" type="bnzbgj">
+				<xs:annotation>
+					<xs:documentation>本年资本公积</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bnjkcg" type="bnjkcg">
+				<xs:annotation>
+					<xs:documentation>本年减库存股</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bnyygj" type="bnyygj">
+				<xs:annotation>
+					<xs:documentation>本年盈余公积</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bnwfplr" type="bnwfplr">
+				<xs:annotation>
+					<xs:documentation>本年未分配利润</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bnsyzqyhj" type="bnsyzqyhj">
+				<xs:annotation>
+					<xs:documentation>本年所有者权益合计</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="snsszbhgb" type="snsszbhgb">
+				<xs:annotation>
+					<xs:documentation>上年实收资本(或股本)</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="snzbgj" type="snzbgj">
+				<xs:annotation>
+					<xs:documentation>上年资本公积</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="snjkcg" type="snjkcg">
+				<xs:annotation>
+					<xs:documentation>上年减库存股</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="snyygj" type="snyygj">
+				<xs:annotation>
+					<xs:documentation>上年盈余公积</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="snwfplr" type="snwfplr">
+				<xs:annotation>
+					<xs:documentation>上年未分配利润</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="snsyzqyhj" type="snsyzqyhj">
+				<xs:annotation>
+					<xs:documentation>上年所有者权益合计</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="DkhdkadbwlfbqkVO">
+		<xs:annotation>
+			<xs:documentation>贷款和垫款按担保物类别分布情况（适用企业会计准则的典当类公司）</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="dkhdkadbwlfbqkGrid">
+				<xs:annotation>
+					<xs:documentation>申报信息</xs:documentation>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:sequence maxOccurs="unbounded">
+						<xs:element name="dkhdkadbwlfbqkGridlb" type="SBZlbsStructdataGyVO"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="YqdkVO">
+		<xs:annotation>
+			<xs:documentation>逾期贷款（适用企业会计准则的典当类公司）</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="yqdkVOGrid">
+				<xs:annotation>
+					<xs:documentation>申报信息</xs:documentation>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:sequence maxOccurs="unbounded">
+						<xs:element name="yqdkGridlb" type="SBZlbsStructdataGyVO"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="JdjeVO">
+		<xs:annotation>
+			<xs:documentation>绝当金额（指绝当涉及的贷款以及应收未收的利息和综合费用）（适用企业会计准则的典当类公司）</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="jdjeGrid">
+				<xs:annotation>
+					<xs:documentation>申报信息</xs:documentation>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:sequence maxOccurs="unbounded">
+						<xs:element name="jdjeGridlb" type="SBZlbsStructdataGyVO"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="LxsrVO">
+		<xs:annotation>
+			<xs:documentation>利息收入（按担保物类别）（适用企业会计准则的典当类公司）</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="lxsrGrid">
+				<xs:annotation>
+					<xs:documentation>申报信息</xs:documentation>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:sequence maxOccurs="unbounded">
+						<xs:element name="lxsrGridlb" type="SBZlbsStructdataGyVO"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

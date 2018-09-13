@@ -1,0 +1,329 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2010 rel. 3 (http://www.altova.com) by xuxin (csstj) -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:include schemaLocation="TaxMLPublicType.xsd"/>
+	<xs:complexType name="yxhhzcytzqyfrhhrynssdedkqkmxsbbywbw">
+		<xs:annotation>
+			<xs:documentation>《有限合伙制创业投资企业法人合伙人应纳税所得额抵扣情况明细表》业务报文</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="yxhhzcytzqyfrhhrynssdedkqkmxsbb">
+						<xs:annotation>
+							<xs:documentation>《跨地区经营汇总纳税企业的分支机构年度纳税申报表》</xs:documentation>
+						</xs:annotation>
+						<xs:complexType>
+							<xs:sequence>
+								<xs:element name="yxhhzcytzqyfrhhrynssdedkqkmxsbbGrid">
+									<xs:annotation>
+										<xs:documentation>有限合伙制创业投资企业法人合伙人应纳税所得额抵扣情况明细表GRID</xs:documentation>
+									</xs:annotation>
+									<xs:complexType>
+										<xs:sequence maxOccurs="unbounded">
+											<xs:element name="yxhhzcytzqyfrhhrynssdedkqkmxsbbGridlb" type="yxhhzcytzqyfrhhrynssdedkqkmxsbbGridlbVO">
+												<xs:annotation>
+													<xs:documentation>有限合伙制创业投资企业法人合伙人应纳税所得额抵扣情况明细表列表</xs:documentation>
+												</xs:annotation>
+											</xs:element>
+										</xs:sequence>
+									</xs:complexType>
+								</xs:element>
+								<xs:element name="yxhhzcytzqyfrhhrynssdedkqkmxsbbzbGrid">
+									<xs:annotation>
+										<xs:documentation>有限合伙制创业投资企业法人合伙人应纳税所得额抵扣情况明细表字表GRID</xs:documentation>
+									</xs:annotation>
+									<xs:complexType>
+										<xs:sequence maxOccurs="unbounded">
+											<xs:element name="yxhhzcytzqyfrhhrynssdedkqkmxsbbzbGridlb" type="yxhhzcytzqyfrhhrynssdedkqkmxsbbzbGridlbVO">
+												<xs:annotation>
+													<xs:documentation>有限合伙制创业投资企业法人合伙人应纳税所得额抵扣情况明细表子表列表</xs:documentation>
+												</xs:annotation>
+											</xs:element>
+										</xs:sequence>
+									</xs:complexType>
+								</xs:element>
+								<xs:element name="yxhhzcytzqyfrhhrynssdedkqkmxsbbtzxxGrid">
+									<xs:annotation>
+										<xs:documentation>有限合伙制创业投资企业法人合伙人应纳税所得额抵扣情况明细表投资信息GRID</xs:documentation>
+									</xs:annotation>
+									<xs:complexType>
+										<xs:sequence maxOccurs="unbounded">
+											<xs:element name="yxhhzcytzqyfrhhrynssdedkqkmxsbbtzxxGridlb" type="yxhhzcytzqyfrhhrynssdedkqkmxsbbtzxxGridlbVO">
+												<xs:annotation>
+													<xs:documentation>有限合伙制创业投资企业法人合伙人应纳税所得额抵扣情况明细表投资信息明细列表</xs:documentation>
+												</xs:annotation>
+											</xs:element>
+										</xs:sequence>
+									</xs:complexType>
+								</xs:element>
+							</xs:sequence>
+						</xs:complexType>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="yxhhzcytzqyfrhhrynssdedkqkmxsbb">
+		<xs:annotation>
+			<xs:documentation>《有限合伙制创业投资企业法人合伙人应纳税所得额抵扣情况明细表》</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="yxhhzcytzqyfrhhrynssdedkqkmxsbbGrid">
+				<xs:annotation>
+					<xs:documentation>有限合伙制创业投资企业法人合伙人应纳税所得额抵扣情况明细表GRID</xs:documentation>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:sequence maxOccurs="unbounded">
+						<xs:element name="yxhhzcytzqyfrhhrynssdedkqkmxsbbGridlb" type="yxhhzcytzqyfrhhrynssdedkqkmxsbbGridlbVO">
+							<xs:annotation>
+								<xs:documentation>有限合伙制创业投资企业法人合伙人应纳税所得额抵扣情况明细表列表</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="yxhhzcytzqyfrhhrynssdedkqkmxsbbzbGrid">
+				<xs:annotation>
+					<xs:documentation>有限合伙制创业投资企业法人合伙人应纳税所得额抵扣情况明细表字表GRID</xs:documentation>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:sequence maxOccurs="unbounded">
+						<xs:element name="yxhhzcytzqyfrhhrynssdedkqkmxsbbzbGridlb" type="yxhhzcytzqyfrhhrynssdedkqkmxsbbzbGridlbVO">
+							<xs:annotation>
+								<xs:documentation>有限合伙制创业投资企业法人合伙人应纳税所得额抵扣情况明细表子表列表</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="yxhhzcytzqyfrhhrynssdedkqkmxsbbtzxxGrid">
+				<xs:annotation>
+					<xs:documentation>有限合伙制创业投资企业法人合伙人应纳税所得额抵扣情况明细表投资信息GRID</xs:documentation>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:sequence maxOccurs="unbounded">
+						<xs:element name="yxhhzcytzqyfrhhrynssdedkqkmxsbbtzxxGridlb" type="yxhhzcytzqyfrhhrynssdedkqkmxsbbtzxxGridlbVO">
+							<xs:annotation>
+								<xs:documentation>有限合伙制创业投资企业法人合伙人应纳税所得额抵扣情况明细表投资信息明细列表</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="yxhhzcytzqyfrhhrynssdedkqkmxsbbGrid">
+		<xs:annotation>
+			<xs:documentation>有限合伙制创业投资企业法人合伙人应纳税所得额抵扣情况明细表申报信息</xs:documentation>
+		</xs:annotation>
+		<xs:sequence maxOccurs="unbounded">
+			<xs:element name="yxhhzcytzqyfrhhrynssdedkqkmxsbbGridlb" type="yxhhzcytzqyfrhhrynssdedkqkmxsbbGridlbVO">
+				<xs:annotation>
+					<xs:documentation>营业税税款分解申报明细列表</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="yxhhzcytzqyfrhhrynssdedkqkmxsbbGridlbVO">
+		<xs:annotation>
+			<xs:documentation>有限合伙制创业投资企业法人合伙人应纳税所得额抵扣情况明细表申报明细列表</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="yxhhzCytzQyNsrsbh" type="nsrsbh" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>有限合伙制创业投资企业名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yxhhzCytzQymc" type="yxhhzCytzQymc" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>有限合伙制创业投资企业名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zgswjgDm" type="zgswjgDm" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>主管税务机关代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bqxzfhyhtjTzehj" type="bqxzfhyhtjTzehj" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>本期新增符合优惠条件的投资额合计</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bqfpynssde" type="bqfpynssde" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>本期分配应纳税所得额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="yxhhzcytzqyfrhhrynssdedkqkmxsbbzbGrid">
+		<xs:annotation>
+			<xs:documentation>有限合伙制创业投资企业法人合伙人应纳税所得额抵扣情况明细表子表申报信息</xs:documentation>
+		</xs:annotation>
+		<xs:sequence maxOccurs="unbounded">
+			<xs:element name="yxhhzcytzqyfrhhrynssdedkqkmxsbbzbGridlb" type="yxhhzcytzqyfrhhrynssdedkqkmxsbbzbGridlbVO">
+				<xs:annotation>
+					<xs:documentation>有限合伙制创业投资企业法人合伙人应纳税所得额抵扣情况明细表子表列表</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="yxhhzcytzqyfrhhrynssdedkqkmxsbbzbGridlbVO">
+		<xs:annotation>
+			<xs:documentation>有限合伙制创业投资企业法人合伙人应纳税所得额抵扣情况明细表字表申报明细列表</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="ewbhxh" type="ewbhxh" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>二维表行序号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="frhhrqyNsrsbh" type="frhhrqyNsrsbh" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>法人合伙人企业纳税人识别号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="frhhrqymc" type="frhhrqymc" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>法人合伙人企业名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="frhhrqyZgswjg" type="frhhrqyZgswjg" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>法人合伙人企业主管税务机关</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qbTze" type="qbTze" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>全部的投资额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="czbl" type="czbl" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>出资比例%</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bqxzfhyhtjTze" type="bqxzfhyhtjTze" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>本期新增符合优惠条件的投资额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bqkdkTze" type="bqkdkTze" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>本期可抵扣的投资额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yqndJzKdktze" type="yqndJzKdktze" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>以前年度结转的可抵扣投资额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ynssdeFpbl" type="ynssdeFpbl" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>应纳税所得额的分配比例</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="frhhrfdYnssde" type="frhhrfdYnssde" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>法人合伙人分得的应纳税所得额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bqdkTze" type="bqdkTze" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>本期抵扣的投资额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jzyhndKdktze" type="jzyhndKdktze" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>结转以后年度的可抵扣投资额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="yxhhzcytzqyfrhhrynssdedkqkmxsbbtzxxGrid">
+		<xs:annotation>
+			<xs:documentation>有限合伙制创业投资企业法人合伙人应纳税所得额抵扣情况明细表投资信息申报信息</xs:documentation>
+		</xs:annotation>
+		<xs:sequence maxOccurs="unbounded">
+			<xs:element name="yxhhzcytzqyfrhhrynssdedkqkmxsbbtzxxGridlb" type="yxhhzcytzqyfrhhrynssdedkqkmxsbbtzxxGridlbVO">
+				<xs:annotation>
+					<xs:documentation>有限合伙制创业投资企业法人合伙人应纳税所得额抵扣情况明细表投资信息明细列表</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="yxhhzcytzqyfrhhrynssdedkqkmxsbbtzxxGridlbVO">
+		<xs:annotation>
+			<xs:documentation>有限合伙制创业投资企业法人合伙人应纳税所得额抵扣情况明细表投资信息申报明细列表</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="ewbhxh" type="ewbhxh">
+				<xs:annotation>
+					<xs:documentation>二维表行序号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="btzqynsrsbh" type="nsrsbh" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>被投资企业纳税人识别号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="btzqymc" type="btzqymc" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>被投资企业名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="tzrq4" type="tzrq4" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>投资日期</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="tze" type="tze" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>投资额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="tzcysj" type="tzcysj" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>投资持有时间</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zgrs" type="zgrs" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>职工人数</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="nxsyye" type="nxsyye" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>年销售营业额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zcze" type="zcze" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>资产总额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="rdgxjsqynd" type="rdgxjsqynd" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>认定高新技术企业年度</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sfyss" type="sfyss" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>是否已上市</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ssrq3" type="ssrq3" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>上市日期</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sffhyhtj" type="sffhyhtj" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>是否符合优惠条件</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

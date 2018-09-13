@@ -1,0 +1,115 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<service xmlns="http://www.chinatax.gov.cn/spec/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <head>
+    <tran_id>SWZJ.HXZG.DJ.BCJZYXMDJB</tran_id>
+    <channel_id>MNQ</channel_id>
+    <tran_seq>0e10b50df9e3430ea93dcf93ebe9b98c</tran_seq>
+    <tran_date>20150202</tran_date>
+    <tran_time>095623902</tran_time>
+    <expand>
+      <name>sjry</name>
+      <value>24406060375</value>
+    </expand>
+    <expand>
+      <name>sjjg</name>
+      <value>24406060013</value>
+    </expand>
+  </head>
+  <body><![CDATA[<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<taxML xsi:type="HXZGDJ00155Request" xmlmc="存建筑业项目登记及变更表" xmlbh="TaxMLBw_HXZG_DJ_00155_Request_V1.0.xsd" bbh="1.0" xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <Jzygcxmdjjbg>
+        <GcxmztxxForm>
+            <jzygcxmuuid>6AF267F539ED4A902D11386D98AAB97B</jzygcxmuuid>
+            <lcslid>F29112A7799048B54F4786FECFF7DF51</lcslid>
+            <djxh>12500100002000000000</djxh>
+            <gcxmbh>G44060520150012</gcxmbh>
+            <gcxmmc>123</gcxmmc>
+            <gcxmdz>123</gcxmdz>
+            <xzqhszDm>440605</xzqhszDm>
+            <jdxzDm>440605100</jdxzDm>
+            <xmfzrxm>12</xmfzrxm>
+            <xmfzrlxdh>111</xmfzrlxdh>
+            <kgrq>2015-01-12</kgrq>
+            <jgrq>2015-01-30</jgrq>
+            <xmytDm>1</xmytDm>
+            <xmys>11.0</xmys>
+            <jzmj>11.0</jzmj>
+            <jzycbfsDm>4</jzycbfsDm>
+            <jsfdjxh>0</jsfdjxh>
+            <jsfnsrsbh>440605000777888</jsfnsrsbh>
+            <jsfnsrmc>111</jsfnsrmc>
+            <jzyfkfsDm>1</jzyfkfsDm>
+            <jzyglxsDm>9</jzyglxsDm>
+            <sjgsdq>24406060000</sjgsdq>
+        </GcxmztxxForm>
+        <InsertJzygcxmTdxxGrid/>
+        <UpdateJzygcxmTdxxGrid/>
+        <DeleteJzygcxmTdxxGrid/>
+        <InsertJzyxmdjSgxkzxxGrid/>
+        <UpdateJzyxmdjSgxkzxxGrid/>
+        <DeleteJzyxmdjSgxkzxxGrid/>
+        <insertJzyxmdjWcjyhdssglzmxxGrid/>
+        <deleteJzyxmdjWcjyhdssglzmxxGrid/>
+        <updateJzyxmdjWcjyhdssglzmxxGrid>
+            <JzyxmdjWcjyhdssglzmxxGridlb>
+                <wjzuuid>FFB2093E10D8DDB801BCEEEA7CCC07D9</wjzuuid>
+                <wcjyhdssglzmbh>123321</wcjyhdssglzmbh>
+                <wcjyhdssglzmffdw>都是</wcjyhdssglzmffdw>
+            </JzyxmdjWcjyhdssglzmxxGridlb>
+        </updateJzyxmdjWcjyhdssglzmxxGrid>
+        <InsertJzyxmdjSyjfbfqkGrid/>
+        <DeleteJzyxmdjSyjfbfqkGrid/>
+        <InsertJzyxmdjFbgcqkGrid/>
+        <DeleteJzyxmdjFbgcqkGrid/>
+        <InsertJzyxmdjThjjfgqkGrid/>
+        <UpdateJzyxmdjThjjfgqkGrid/>
+        <DeleteJzyxmdjThjjfgqkGrid/>
+        <BgdjmxGrid>
+            <BgdjmxGridlb>
+                <djxh>12500100002000000000</djxh>
+                <lcslid>F29112A7799048B54F4786FECFF7DF51</lcslid>
+                <bgxmDm>BDA0110090011</bgxmDm>
+                <bgqnr>2015-01-12 00:00:00</bgqnr>
+                <bghnr>2015-01-12</bghnr>
+                <sjgsdq>24406060000</sjgsdq>
+            </BgdjmxGridlb>
+            <BgdjmxGridlb>
+                <djxh>12500100002000000000</djxh>
+                <lcslid>F29112A7799048B54F4786FECFF7DF51</lcslid>
+                <bgxmDm>BDA0110090008</bgxmDm>
+                <bgqnr>code,440605100|caption,里水镇</bgqnr>
+                <bghnr>440605100</bghnr>
+                <sjgsdq>24406060000</sjgsdq>
+            </BgdjmxGridlb>
+            <BgdjmxGridlb>
+                <djxh>12500100002000000000</djxh>
+                <lcslid>F29112A7799048B54F4786FECFF7DF51</lcslid>
+                <bgxmDm>BDA0110090012</bgxmDm>
+                <bgqnr>2015-01-30 00:00:00</bgqnr>
+                <bghnr>2015-01-30</bghnr>
+                <sjgsdq>24406060000</sjgsdq>
+            </BgdjmxGridlb>
+            <BgdjmxGridlb>
+                <djxh>12500100002000000000</djxh>
+                <lcslid>F29112A7799048B54F4786FECFF7DF51</lcslid>
+                <bgxmDm>BDA0110090020</bgxmDm>
+                <bgqnr>2015-01-31 00:00:00</bgqnr>
+                <bghnr>2015-01-31</bghnr>
+                <sjgsdq>24406060000</sjgsdq>
+            </BgdjmxGridlb>
+        </BgdjmxGrid>
+        <GcxmslxxForm>
+            <jbr>的</jbr>
+            <tbrq>2015-02-18</tbrq>
+            <xmglrqq>2015-01-31</xmglrqq>
+            <xmszddfswjgDm>24406060000</xmszddfswjgDm>
+            <zgswskfjDm></zgswskfjDm>
+            <ssglyDm></ssglyDm>
+            <slrxm>余卉</slrxm>
+            <slrq>2015-02-02</slrq>
+            <slswjgmc>佛山市顺德区地方税务局纳税人服务局</slswjgmc>
+        </GcxmslxxForm>
+    </Jzygcxmdjjbg>
+</taxML>
+]]></body>
+</service>

@@ -1,0 +1,350 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 被2011 rel. 2 sp1 (TeaM DJiNN) 使用XMLSpy vTeaM DJiNN编辑的 (http://www.altova.com) by -->
+<!-- edited with XMLSpy v2013 (http://www.altova.com) by  () -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:include schemaLocation="TaxMLPublicDJType.xsd"/>
+	<xs:complexType name="HXZGDJ00173Request">
+		<xs:annotation>
+			<xs:documentation>保存土地情况登记及变更表请求报文</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="tdqkdjjbgVO" type="tdqkdjjbgVO"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="tdqkdjjbgVO">
+		<xs:annotation>
+			<xs:documentation>土地信息</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="tdztsGrid" type="tdztsGrid"/>
+			<xs:element name="zytdsGrid" type="zytdsGrid">
+				<xs:annotation>
+					<xs:documentation>自用土地信息</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="chuztdsGrid" type="chuztdsGrid">
+				<xs:annotation>
+					<xs:documentation>出租土地信息</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="chengztdsGrid" type="chengztdsGrid">
+				<xs:annotation>
+					<xs:documentation>承租土地信息</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="tddjslxxForm" type="tddjslxxForm">
+				<xs:annotation>
+					<xs:documentation>受理信息</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="djxh" type="djxh">
+				<xs:annotation>
+					<xs:documentation>登记序号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="lcslid" type="lcslid">
+				<xs:annotation>
+					<xs:documentation>流程实例ID</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="hxsbcjtdxxGrid" type="hxsbcjtdxxGrid">
+				<xs:annotation>
+					<xs:documentation>回写土地申报采集信息</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="tdztsGrid">
+		<xs:annotation>
+			<xs:documentation>土地总体信息</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="insertTdztsGrid" type="insertTdztsGrid">
+				<xs:annotation>
+					<xs:documentation>新增土地总体信息</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="updateTdztsGrid" type="updateTdztsGrid">
+				<xs:annotation>
+					<xs:documentation>修改土地总体信息</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="deleteTdztsGrid" type="deleteTdztsGrid">
+				<xs:annotation>
+					<xs:documentation>删除土地总体信息</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="nostatusTdztsGrid" type="nostatusTdztsGrid">
+				<xs:annotation>
+					<xs:documentation>无状态总体信息</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="zytdsGrid">
+		<xs:annotation>
+			<xs:documentation>自用土地使用情况登记信息</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="insertZytdsGrid" type="insertZytdsGrid">
+				<xs:annotation>
+					<xs:documentation>新增自用土地信息</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="updateZytdsGrid" type="updateZytdsGrid">
+				<xs:annotation>
+					<xs:documentation>修改自用土地信息</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="deleteZytdsGrid" type="deleteZytdsGrid">
+				<xs:annotation>
+					<xs:documentation>删除自用土地信息</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="nostatusZytdsGrid" type="nostatusZytdsGrid">
+				<xs:annotation>
+					<xs:documentation>无状态自用土地信息</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="chuztdsGrid">
+		<xs:annotation>
+			<xs:documentation>出租土地使用情况登记信息</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="insertChuztdsGrid" type="insertChuztdsGrid">
+				<xs:annotation>
+					<xs:documentation>新增出租土地信息</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="updateChuztdsGrid" type="updateChuztdsGrid">
+				<xs:annotation>
+					<xs:documentation>修改出租土地信息</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="deleteChuztdsGrid" type="deleteChuztdsGrid">
+				<xs:annotation>
+					<xs:documentation>删除出租土地信息</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="nostatusChuztdsGrid" type="nostatusChuztdsGrid">
+				<xs:annotation>
+					<xs:documentation>无状态出租土地信息</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="chengztdsGrid">
+		<xs:annotation>
+			<xs:documentation>承租土地使用情况登记信息</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="insertChengztdsGrid" type="insertChengztdsGrid">
+				<xs:annotation>
+					<xs:documentation>新增承租土地信息</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="updateChengztdsGrid" type="updateChengztdsGrid">
+				<xs:annotation>
+					<xs:documentation>修改承租土地信息</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="deleteChengztdsGrid" type="deleteChengztdsGrid">
+				<xs:annotation>
+					<xs:documentation>删除承租土地信息</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="nostatusChengztdsGrid" type="nostatusChengztdsGrid">
+				<xs:annotation>
+					<xs:documentation>无状态承租土地信息</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="insertTdztsGrid">
+		<xs:annotation>
+			<xs:documentation>新增土地总体信息</xs:documentation>
+		</xs:annotation>
+		<xs:sequence minOccurs="0" maxOccurs="unbounded">
+			<xs:element name="tdztxxlb" type="tdztxxVO"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="updateTdztsGrid">
+		<xs:annotation>
+			<xs:documentation>修改土地总体信息</xs:documentation>
+		</xs:annotation>
+		<xs:sequence minOccurs="0" maxOccurs="unbounded">
+			<xs:element name="tdztxxlb" type="tdztxxVO"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="deleteTdztsGrid">
+		<xs:annotation>
+			<xs:documentation>删除土地总体信息</xs:documentation>
+		</xs:annotation>
+		<xs:sequence minOccurs="0" maxOccurs="unbounded">
+			<xs:element name="tdztxxlb" type="tdztxxVO"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="insertZytdsGrid">
+		<xs:annotation>
+			<xs:documentation>新增自用土地信息</xs:documentation>
+		</xs:annotation>
+		<xs:sequence minOccurs="0" maxOccurs="unbounded">
+			<xs:element name="insertZytdsGridlb" type="tdsyqkdjxxVO"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="updateZytdsGrid">
+		<xs:annotation>
+			<xs:documentation>修改自用土地信息</xs:documentation>
+		</xs:annotation>
+		<xs:sequence minOccurs="0" maxOccurs="unbounded">
+			<xs:element name="updateZytdsGridlb" type="tdsyqkdjxxVO"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="deleteZytdsGrid">
+		<xs:annotation>
+			<xs:documentation>删除自用土地信息</xs:documentation>
+		</xs:annotation>
+		<xs:sequence minOccurs="0" maxOccurs="unbounded">
+			<xs:element name="deleteZytdsGridlb" type="tdsyqkdjxxVO"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="insertChuztdsGrid">
+		<xs:annotation>
+			<xs:documentation>新增出租土地信息</xs:documentation>
+		</xs:annotation>
+		<xs:sequence minOccurs="0" maxOccurs="unbounded">
+			<xs:element name="insertChuztdsGridlb" type="tdsyqkdjxxVO"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="updateChuztdsGrid">
+		<xs:annotation>
+			<xs:documentation>修改出租土地信息</xs:documentation>
+		</xs:annotation>
+		<xs:sequence minOccurs="0" maxOccurs="unbounded">
+			<xs:element name="updateChuztdsGridlb" type="tdsyqkdjxxVO"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="deleteChuztdsGrid">
+		<xs:annotation>
+			<xs:documentation>删除出租土地信息</xs:documentation>
+		</xs:annotation>
+		<xs:sequence minOccurs="0" maxOccurs="unbounded">
+			<xs:element name="deleteChuztdsGridlb" type="tdsyqkdjxxVO"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="insertChengztdsGrid">
+		<xs:annotation>
+			<xs:documentation>新增承租土地信息</xs:documentation>
+		</xs:annotation>
+		<xs:sequence minOccurs="0" maxOccurs="unbounded">
+			<xs:element name="insertChengztdsGridlb" type="tdsyqkdjxxVO"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="updateChengztdsGrid">
+		<xs:annotation>
+			<xs:documentation>修改承租土地信息</xs:documentation>
+		</xs:annotation>
+		<xs:sequence minOccurs="0" maxOccurs="unbounded">
+			<xs:element name="updateChengztdsGridlb" type="tdsyqkdjxxVO"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="deleteChengztdsGrid">
+		<xs:annotation>
+			<xs:documentation>删除承租土地信息</xs:documentation>
+		</xs:annotation>
+		<xs:sequence minOccurs="0" maxOccurs="unbounded">
+			<xs:element name="deleteChengztdsGridlb" type="tdsyqkdjxxVO"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="hxsbcjtdxxGrid">
+		<xs:annotation>
+			<xs:documentation>回写申报采集土地信息</xs:documentation>
+		</xs:annotation>
+		<xs:sequence minOccurs="0" maxOccurs="unbounded">
+			<xs:element name="hxsbcjxxGridlb" type="hxsbcjtdxxVO"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="hxsbcjtdxxVO">
+		<xs:annotation>
+			<xs:documentation>回写申报采集土地信息VO</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="tdsybh" type="tdsybh">
+				<xs:annotation>
+					<xs:documentation>土地税源编号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="csfdjxh" type="csfdjxh">
+				<xs:annotation>
+					<xs:documentation>成受房登记序号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="tddjslxxForm">
+		<xs:annotation>
+			<xs:documentation>土地登记受理信息</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="tbr" type="tbr">
+				<xs:annotation>
+					<xs:documentation>填表人</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="tbrq" type="tbrq">
+				<xs:annotation>
+					<xs:documentation>填表日期</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="slrDm" type="slrDm">
+				<xs:annotation>
+					<xs:documentation>受理人代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="slrq" type="slrq">
+				<xs:annotation>
+					<xs:documentation>受理日期</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="nostatusTdztsGrid">
+		<xs:annotation>
+			<xs:documentation>无状态土地总体信息</xs:documentation>
+		</xs:annotation>
+		<xs:sequence minOccurs="0" maxOccurs="unbounded">
+			<xs:element name="tdztxxlb" type="tdztxxVO"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="nostatusZytdsGrid">
+		<xs:annotation>
+			<xs:documentation>无状态自用土地信息</xs:documentation>
+		</xs:annotation>
+		<xs:sequence minOccurs="0" maxOccurs="unbounded">
+			<xs:element name="zytdsGridlb" type="tdsyqkdjxxVO"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="nostatusChuztdsGrid">
+		<xs:annotation>
+			<xs:documentation>无状态租土地信息</xs:documentation>
+		</xs:annotation>
+		<xs:sequence minOccurs="0" maxOccurs="unbounded">
+			<xs:element name="chuztdsGridlb" type="tdsyqkdjxxVO"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="nostatusChengztdsGrid">
+		<xs:annotation>
+			<xs:documentation>无状态承租土地信息</xs:documentation>
+		</xs:annotation>
+		<xs:sequence minOccurs="0" maxOccurs="unbounded">
+			<xs:element name="chengztdsGridlb" type="tdsyqkdjxxVO"/>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

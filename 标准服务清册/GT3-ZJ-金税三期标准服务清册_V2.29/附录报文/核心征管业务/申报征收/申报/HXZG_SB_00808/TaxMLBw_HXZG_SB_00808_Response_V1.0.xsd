@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2010 rel. 3 (http://www.altova.com) by MESMERiZE (MSM) -->
+<!-- 被2012 () 使用XMLSpy v编辑的 (http://www.altova.com) by -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:include schemaLocation="TaxMLCGSSBType.xsd"/>
+	<xs:complexType name="HXZGSB00808Response">
+		<xs:annotation>
+			<xs:documentation>查询申报车辆的最低计税价格及限缴日期返回报文</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="zdjsjgxxVO" type="zdjsjgxxVO">
+						<xs:annotation>
+							<xs:documentation>车辆价格信息</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="xjrq" type="xjrq">
+						<xs:annotation>
+							<xs:documentation>限缴日期</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="zdjsjgxxVO">
+		<xs:complexContent>
+			<xs:extension base="SBCgsClxxVO">
+				<xs:sequence>
+					<xs:element name="zdjsjg" type="zdjsjg">
+						<xs:annotation>
+							<xs:documentation>最低计税价格</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+</xs:schema>

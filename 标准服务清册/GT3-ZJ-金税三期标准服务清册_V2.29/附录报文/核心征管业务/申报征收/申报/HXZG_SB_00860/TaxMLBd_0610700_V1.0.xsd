@@ -1,0 +1,300 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 被2011 rel. 2 sp1 (TeaM DJiNN) 使用XMLSpy vTeaM DJiNN编辑的 (http://www.altova.com) by -->
+<!-- edited with XMLSpy v2010 rel. 3 (http://www.altova.com) by liuwei (liuweicss) -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:include schemaLocation="TaxMLPublicType.xsd"/>
+	<xs:complexType name="zgxcnstzmxbForm">
+		<xs:annotation>
+			<xs:documentation>职工薪酬纳税调整明细表(A105050)业务报文</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="zgxcnstzMxbbVO" type="zgxcnstzmxbVO" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>职工薪酬纳税调整明细表</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="zgxcnstzmxbVO">
+		<xs:annotation>
+			<xs:documentation>《职工薪酬纳税调整明细表》</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="gzxjzczzje" type="je">
+				<xs:annotation>
+					<xs:documentation>工资薪金支出账载金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="gzxjzcssje" type="je">
+				<xs:annotation>
+					<xs:documentation>工资薪金支出税收金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="gzxjzcnstzje" type="je">
+				<xs:annotation>
+					<xs:documentation>工资薪金支出纳税调整金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="gqjlzzje" type="je">
+				<xs:annotation>
+					<xs:documentation>股权激励账载金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="gqjlssje" type="je">
+				<xs:annotation>
+					<xs:documentation>股权激励税收金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="gqjlnstzje" type="je">
+				<xs:annotation>
+					<xs:documentation>股权激励纳税调整金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zgflfzczzje" type="je">
+				<xs:annotation>
+					<xs:documentation>职工福利费支出账载金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zgflfzcssgdkcl" type="je">
+				<xs:annotation>
+					<xs:documentation>职工福利费支出税收规定扣除率</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zgflfzcssje" type="je">
+				<xs:annotation>
+					<xs:documentation>职工福利费支出税收金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zgflfzcnstzje" type="je">
+				<xs:annotation>
+					<xs:documentation>职工福利费支出纳税调整金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zgjyjfzczzje" type="je">
+				<xs:annotation>
+					<xs:documentation>职工教育经费支出账载金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zgjyjfzcjzkce" type="je">
+				<xs:annotation>
+					<xs:documentation>职工教育经费支出以前年度累计结转扣除额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zgjyjfzcssje" type="je">
+				<xs:annotation>
+					<xs:documentation>职工教育经费支出税收金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zgjyjfzcnstzje" type="je">
+				<xs:annotation>
+					<xs:documentation>职工教育经费支出纳税调整金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zgjyjfzcndkce" type="je">
+				<xs:annotation>
+					<xs:documentation>职工教育经费支出累计结转以后年度扣除额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="blkcjyjfzzje" type="je">
+				<xs:annotation>
+					<xs:documentation>按税收规定比例扣除的职工教育经费账载金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="blkcjyjfssgdkcl" type="je">
+				<xs:annotation>
+					<xs:documentation>按税收规定比例扣除的职工教育经费税收规定扣除率</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="blkcjyjfjzkce" type="je">
+				<xs:annotation>
+					<xs:documentation>按税收规定比例扣除的职工教育经费以前年度累计结转扣除额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="blkcjyjfssje" type="je">
+				<xs:annotation>
+					<xs:documentation>按税收规定比例扣除的职工教育经费税收金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="blkcjyjfnstzje" type="je">
+				<xs:annotation>
+					<xs:documentation>按税收规定比例扣除的职工教育经费纳税调整金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="blkcjyjfndkce" type="je">
+				<xs:annotation>
+					<xs:documentation>按税收规定比例扣除的职工教育经费累计结转以后年度扣除额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qekcpxfyzzje" type="je">
+				<xs:annotation>
+					<xs:documentation>按税收规定全额扣除的职工培训费用账载金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qekcpxfyssgdkcl" type="je">
+				<xs:annotation>
+					<xs:documentation>按税收规定全额扣除的职工培训费用税收规定扣除率</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qekcpxfyssje" type="je">
+				<xs:annotation>
+					<xs:documentation>按税收规定全额扣除的职工培训费用税收金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qekcpxfynstzje" type="je">
+				<xs:annotation>
+					<xs:documentation>按税收规定全额扣除的职工培训费用纳税调整金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ghjfzczzje" type="je">
+				<xs:annotation>
+					<xs:documentation>工会经费支出账载金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ghjfzcssgdkcl" type="je">
+				<xs:annotation>
+					<xs:documentation>工会经费支出税收规定扣除率</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ghjfzcssje" type="je">
+				<xs:annotation>
+					<xs:documentation>工会经费支出税收金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ghjfzcnstzje" type="je">
+				<xs:annotation>
+					<xs:documentation>工会经费支出纳税调整金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bzxjkzzje" type="je">
+				<xs:annotation>
+					<xs:documentation>各类基本社会保障性缴款账载金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bzxjkssje" type="je">
+				<xs:annotation>
+					<xs:documentation>各类基本社会保障性缴款税收金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bzxjknstzje" type="je">
+				<xs:annotation>
+					<xs:documentation>各类基本社会保障性缴款纳税调整金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zfgjjzzje" type="je">
+				<xs:annotation>
+					<xs:documentation>住房公积金账载金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zfgjjssje" type="je">
+				<xs:annotation>
+					<xs:documentation>住房公积金税收金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zfgjjnstzje" type="je">
+				<xs:annotation>
+					<xs:documentation>住房公积金纳税调整金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bcylbxzzje" type="je">
+				<xs:annotation>
+					<xs:documentation>补充养老保险账载金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bcylbxssgdkcl" type="je">
+				<xs:annotation>
+					<xs:documentation>补充养老保险税收规定扣除率</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bcylbxssje" type="je">
+				<xs:annotation>
+					<xs:documentation>补充养老保税收金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bcylbxnstzje" type="je">
+				<xs:annotation>
+					<xs:documentation>补充养老保纳税调整金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bcylbxzzje1" type="je">
+				<xs:annotation>
+					<xs:documentation>补充医疗保险账载金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bcylbxssgdkcl1" type="je">
+				<xs:annotation>
+					<xs:documentation>补充医疗保险税收规定扣除率</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bcylbxssje1" type="je">
+				<xs:annotation>
+					<xs:documentation>补充医疗保险税收金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bcylbxnstzje1" type="je">
+				<xs:annotation>
+					<xs:documentation>补充医疗保险纳税调整金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qtzzje" type="je">
+				<xs:annotation>
+					<xs:documentation>其他账载金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qtjzkce" type="je">
+				<xs:annotation>
+					<xs:documentation>其他以前年度累计结转扣除额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qtssje" type="je">
+				<xs:annotation>
+					<xs:documentation>其他税收金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qtnstzje" type="je">
+				<xs:annotation>
+					<xs:documentation>其他纳税调整金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qtndkce" type="je">
+				<xs:annotation>
+					<xs:documentation>其他累计结转以后年度扣除额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="hjzzje" type="je">
+				<xs:annotation>
+					<xs:documentation>合计账载金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="hjjzkce" type="je">
+				<xs:annotation>
+					<xs:documentation>合计以前年度累计结转扣除额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="hjssje" type="je">
+				<xs:annotation>
+					<xs:documentation>合计税收金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="hjnstzje" type="je">
+				<xs:annotation>
+					<xs:documentation>合计纳税调整金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="hjndkce" type="je">
+				<xs:annotation>
+					<xs:documentation>合计累计结转以后年度扣除额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sjtbSj" type="je">
+				<xs:annotation>
+					<xs:documentation>数据同步时间</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

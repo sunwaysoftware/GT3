@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:include schemaLocation="TaxMLPublicSFType.xsd"/>
+	<xs:complexType name="SSFWGLSSFW00028Request">
+		<xs:annotation>
+			<xs:documentation>保存涉税专业服务协议变更终止</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="czlxDm" type="czlxDm">
+						<xs:annotation>
+							<xs:documentation>操作类型代码</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="sszyfwxybgzzxxVO" type="sszyfwxybgzzxxVO">
+						<xs:annotation>
+							<xs:documentation>变更终止信息VO</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="bgxmGrid">
+						<xs:annotation>
+							<xs:documentation>协议变更项目list</xs:documentation>
+						</xs:annotation>
+						<xs:complexType>
+							<xs:sequence maxOccurs="unbounded">
+								<xs:element name="bgxmGridlb" type="sszyfwbgmxbVO">
+									<xs:annotation>
+										<xs:documentation>变更明细表VO</xs:documentation>
+									</xs:annotation>
+								</xs:element>
+							</xs:sequence>
+						</xs:complexType>
+					</xs:element>
+					<xs:element name="isExistFj" type="yxbz">
+						<xs:annotation>
+							<xs:documentation>是否存在附件</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="insertBgryGrid">
+						<xs:annotation>
+							<xs:documentation>协议新增人员集</xs:documentation>
+						</xs:annotation>
+						<xs:complexType>
+							<xs:sequence maxOccurs="unbounded">
+								<xs:element name="insertBgryGridlb" type="sszyfwxybgxmrymxbVO">
+									<xs:annotation>
+										<xs:documentation>变更项目人员明细表VO</xs:documentation>
+									</xs:annotation>
+								</xs:element>
+							</xs:sequence>
+						</xs:complexType>
+					</xs:element>
+					<xs:element name="updateBgryGrid">
+						<xs:annotation>
+							<xs:documentation>协议变更人员集</xs:documentation>
+						</xs:annotation>
+						<xs:complexType>
+							<xs:sequence maxOccurs="unbounded">
+								<xs:element name="updateBgryGridlb" type="sszyfwxybgxmrymxbVO">
+									<xs:annotation>
+										<xs:documentation>变更项目人员明细表VO</xs:documentation>
+									</xs:annotation>
+								</xs:element>
+							</xs:sequence>
+						</xs:complexType>
+					</xs:element>
+					<xs:element name="deleteBgryGrid">
+						<xs:annotation>
+							<xs:documentation>协议删除人员集</xs:documentation>
+						</xs:annotation>
+						<xs:complexType>
+							<xs:sequence maxOccurs="unbounded">
+								<xs:element name="deleteBgryGridlb" type="sszyfwxybgxmrymxbVO">
+									<xs:annotation>
+										<xs:documentation>变更项目人员明细表VO</xs:documentation>
+									</xs:annotation>
+								</xs:element>
+							</xs:sequence>
+						</xs:complexType>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+</xs:schema>

@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 被2012 () 使用XMLSpy v编辑的 (http://www.altova.com) by -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:include schemaLocation="TaxMLPublicType.xsd"/>
+	<xs:complexType name="kfjjfymxsbbywbw">
+		<xs:annotation>
+			<xs:documentation>开发间接费用明细申报表业务报文</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="kfjjfymxsbb" type="kfjjfymxsbb">
+						<xs:annotation>
+							<xs:documentation>开发间接费用明细申报表</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="kfjjfymxsbb">
+		<xs:annotation>
+			<xs:documentation>开发间接费用明细申报表</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="kfjjfymxsbbForm">
+				<xs:annotation>
+					<xs:documentation>申报表信息</xs:documentation>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:complexContent>
+						<xs:extension base="kfjjfymxsbbForm"/>
+					</xs:complexContent>
+				</xs:complexType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="kfjjfymxsbbForm">
+		<xs:annotation>
+			<xs:documentation>申报头信息</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="yxpzje1" type="je">
+				<xs:annotation>
+					<xs:documentation>有效凭证金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bckcje1" type="je">
+				<xs:annotation>
+					<xs:documentation>本次扣除金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bcwkcje1" type="je">
+				<xs:annotation>
+					<xs:documentation>本次未扣除金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bz1" type="bz">
+				<xs:annotation>
+					<xs:documentation>备 注</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yxpzje2" type="je">
+				<xs:annotation>
+					<xs:documentation>有效凭证金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bckcje2" type="je">
+				<xs:annotation>
+					<xs:documentation>本次扣除金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bcwkcje2" type="je">
+				<xs:annotation>
+					<xs:documentation>本次未扣除金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bz2" type="bz">
+				<xs:annotation>
+					<xs:documentation>备 注</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yxpzje3" type="je">
+				<xs:annotation>
+					<xs:documentation>有效凭证金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bckcje3" type="je">
+				<xs:annotation>
+					<xs:documentation>本次扣除金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bcwkcje3" type="je">
+				<xs:annotation>
+					<xs:documentation>本次未扣除金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bz3" type="bz">
+				<xs:annotation>
+					<xs:documentation>备 注</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yxpzje4" type="je">
+				<xs:annotation>
+					<xs:documentation>有效凭证金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bckcje4" type="je">
+				<xs:annotation>
+					<xs:documentation>本次扣除金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bcwkcje4" type="je">
+				<xs:annotation>
+					<xs:documentation>本次未扣除金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bz4" type="bz">
+				<xs:annotation>
+					<xs:documentation>备 注</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yxpzje5" type="je">
+				<xs:annotation>
+					<xs:documentation>有效凭证金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bckcje5" type="je">
+				<xs:annotation>
+					<xs:documentation>本次扣除金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bcwkcje5" type="je">
+				<xs:annotation>
+					<xs:documentation>本次未扣除金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bz5" type="bz">
+				<xs:annotation>
+					<xs:documentation>备 注</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yxpzje6" type="je">
+				<xs:annotation>
+					<xs:documentation>有效凭证金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bckcje6" type="je">
+				<xs:annotation>
+					<xs:documentation>本次扣除金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bcwkcje6" type="je">
+				<xs:annotation>
+					<xs:documentation>本次未扣除金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bz6" type="bz">
+				<xs:annotation>
+					<xs:documentation>备 注</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yxpzje7" type="je">
+				<xs:annotation>
+					<xs:documentation>有效凭证金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bckcje7" type="je">
+				<xs:annotation>
+					<xs:documentation>本次扣除金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bcwkcje7" type="je">
+				<xs:annotation>
+					<xs:documentation>本次未扣除金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bz7" type="bz">
+				<xs:annotation>
+					<xs:documentation>备 注</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yxpzje8" type="je">
+				<xs:annotation>
+					<xs:documentation>有效凭证金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bckcje8" type="je">
+				<xs:annotation>
+					<xs:documentation>本次扣除金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bcwkcje8" type="je">
+				<xs:annotation>
+					<xs:documentation>本次未扣除金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bz8" type="bz">
+				<xs:annotation>
+					<xs:documentation>备 注</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yxpzje9" type="je">
+				<xs:annotation>
+					<xs:documentation>有效凭证金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bckcje9" type="je">
+				<xs:annotation>
+					<xs:documentation>本次扣除金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bcwkcje9" type="je">
+				<xs:annotation>
+					<xs:documentation>本次未扣除金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bz9" type="bz">
+				<xs:annotation>
+					<xs:documentation>备 注</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yxpzje10" type="je">
+				<xs:annotation>
+					<xs:documentation>有效凭证金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bckcje10" type="je">
+				<xs:annotation>
+					<xs:documentation>本次扣除金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bcwkcje10" type="je">
+				<xs:annotation>
+					<xs:documentation>本次未扣除金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bz10" type="bz">
+				<xs:annotation>
+					<xs:documentation>备 注</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2013 (http://www.altova.com) by  () -->
+<!-- 被2011 rel. 2 sp1 (TeaM DJiNN) 使用XMLSpy vTeaM DJiNN编辑的 (http://www.altova.com) by -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:include schemaLocation="TaxMLPublicZSType.xsd"/>
+	<xs:complexType name="ZSHXZG00490ResponseVO">
+		<xs:annotation>
+			<xs:documentation>非居民企业所得税核定查询响应报文</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="fjmqysdshdGrid">
+						<xs:complexType>
+							<xs:sequence minOccurs="0" maxOccurs="unbounded">
+								<xs:element name="fjmqysdshdGridlb" type="ZsFjmqysdshdVO"/>
+							</xs:sequence>
+						</xs:complexType>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="ZsFjmqysdshdVO">
+		<xs:annotation>
+			<xs:documentation>非居民企业所得税核定VO</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="fjmqynsrsbh" type="nsrsbh">
+				<xs:annotation>
+					<xs:documentation>纳税人识别号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="fjmqyzwmc" type="nsrmc">
+				<xs:annotation>
+					<xs:documentation>中文名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="fjmqyywmc" type="nsrmc">
+				<xs:annotation>
+					<xs:documentation>非居民企业英文名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="hdqxq" type="hdqxq">
+				<xs:annotation>
+					<xs:documentation>核定期限起</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="hdqxz" type="hdqxz">
+				<xs:annotation>
+					<xs:documentation>核定期限止</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="hdzsfsDm" type="zsfsDm">
+				<xs:annotation>
+					<xs:documentation>核定征收方式</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="hyDm" type="hyDm">
+				<xs:annotation>
+					<xs:documentation>行业</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="hylrl" type="lrl">
+				<xs:annotation>
+					<xs:documentation>行业利润率</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yjqxDm" type="yjqxDm">
+				<xs:annotation>
+					<xs:documentation>预缴期限</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yjfsDm" type="yjfsDm">
+				<xs:annotation>
+					<xs:documentation>预缴方式</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

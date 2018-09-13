@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2013 (http://www.altova.com) by  () -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:include schemaLocation="TaxMLPublicZMType.xsd"/>
+	<xs:complexType name="wcjyzmhxsqb">
+		<xs:annotation>
+			<xs:documentation>外出经营证明核销申请提交</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="zmWcjyzmhxxxVO" type="ZMWcjyzmhxxxVO">
+				<xs:annotation>
+					<xs:documentation>外出经营证明核销申请信息</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="wcjyzmhxlwxxGrid" type="WcjyzmhxlwxxGrid">
+				<xs:annotation>
+					<xs:documentation>外出经营证明核销劳务信息</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="wcjyzmhxhwxxGrid" type="WcjyzmhxhwxxGrid">
+				<xs:annotation>
+					<xs:documentation>外出经营证明核销货物信息</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="wcjyzmhxjnskxxGrid" type="WcjyzmhxjnskxxGrid">
+				<xs:annotation>
+					<xs:documentation>外出经营证明核销缴纳税款信息</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="WcjyzmhxlwxxGrid">
+		<xs:annotation>
+			<xs:documentation>外出经营证明核销劳务信息列表</xs:documentation>
+		</xs:annotation>
+		<xs:sequence minOccurs="0" maxOccurs="unbounded">
+			<xs:element name="WcjyzmhxlwxxGridlb" type="ZMWcjyzmhxxxLwxxVO">
+				<xs:annotation>
+					<xs:documentation>外出经营证明核销劳务信息</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="WcjyzmhxhwxxGrid">
+		<xs:annotation>
+			<xs:documentation>外出经营证明核销货物信息列表</xs:documentation>
+		</xs:annotation>
+		<xs:sequence minOccurs="0" maxOccurs="unbounded">
+			<xs:element name="wcjyzmhxhwxxGridlb" type="ZMWcjyzmhxxxHwxxVO">
+				<xs:annotation>
+					<xs:documentation>外出经营证明核销货物信息</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="WcjyzmhxjnskxxGrid">
+		<xs:annotation>
+			<xs:documentation>外出经营证明核销完税信息列表</xs:documentation>
+		</xs:annotation>
+		<xs:sequence minOccurs="0" maxOccurs="unbounded">
+			<xs:element name="wcjyzmhxjnskxxGridlb" type="ZMWcjyzmhxxxWsxxVO">
+				<xs:annotation>
+					<xs:documentation>外出经营证明核销完税信息</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

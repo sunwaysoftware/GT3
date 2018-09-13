@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 被2012 () 使用XMLSpy v编辑的 (http://www.altova.com) by -->
+<!-- edited with XMLSpy v2013 (http://www.altova.com) by  () -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:complexType name="NSPGZCBS00001Response">
+		<xs:annotation>
+			<xs:documentation>个税写纳税评估自查对照表返回报文</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="XrzcdzbccGrid" type="XrzcdzbccGrid"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="XrzcdzbccGrid">
+		<xs:annotation>
+			<xs:documentation>自查对照表出参信息集合</xs:documentation>
+		</xs:annotation>
+		<xs:sequence maxOccurs="unbounded">
+			<xs:element name="XrzcdzbccGridlb" type="ZcdzbrespoVO">
+				<xs:annotation>
+					<xs:documentation>自查对照表出参信息集合列表</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="ZcdzbrespoVO">
+		<xs:annotation>
+			<xs:documentation>自查对照表出参信息</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="yzpzxh" type="yzpzxh" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>应征凭证序号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zxbztzsuuid" type="uuid" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>自行补正通知书uuid</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="errorMsg" type="yj1" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>返回错误信息</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="resultCode" type="yxbz" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>返回码 （Y：成功 N：失败）</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

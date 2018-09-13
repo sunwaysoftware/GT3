@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2011 (http://www.altova.com) by www.hbnu.com (www.hbnu.com) -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:include schemaLocation="TaxMLPublic.xsd"/>
+	<xs:complexType name="rtzjbywbw">
+		<xs:annotation>
+			<xs:documentation>《融通资金表》业务报文</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="qyndglywwlbg2016_G107000" type="qyndglywwlbg2016_G107000">
+						<xs:annotation>
+							<xs:documentation>《融通资金表》</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="qyndglywwlbg2016_G107000">
+		<xs:annotation>
+			<xs:documentation>《融通资金表》</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="glrrzjGrid" type="glrrzjGrid">
+				<xs:annotation>
+					<xs:documentation>关联融入资金（全部）</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="glrczjGrid" type="glrczjGrid">
+				<xs:annotation>
+					<xs:documentation>关联融出资金（全部）</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="glrrzjGrid">
+		<xs:annotation>
+			<xs:documentation>关联融入资金（全部）</xs:documentation>
+		</xs:annotation>
+		<xs:sequence maxOccurs="unbounded">
+			<xs:element name="glrrzjGridlbVO" type="glrrzjGridlbVO">
+				<xs:annotation>
+					<xs:documentation>关联融入资金（全部）</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="glrrzjGridlbVO">
+		<xs:annotation>
+			<xs:documentation>关联融入资金（全部）</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="gljylx" type="mc">
+				<xs:annotation>
+					<xs:documentation>关联交易类型，默认传值“关联融入资金”</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="glfmc" type="glfmc">
+				<xs:annotation>
+					<xs:documentation>关联方名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="gljynr" type="bz">
+				<xs:annotation>
+					<xs:documentation>关联交易内容，取值为代码表DM_SB_GLJYNR，多个代码用英文逗号分隔</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jdje" type="je">
+				<xs:annotation>
+					<xs:documentation>借贷金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bnsjzyts" type="sl">
+				<xs:annotation>
+					<xs:documentation>本年实际占用天数</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jwgljyjelx" type="je">
+				<xs:annotation>
+					<xs:documentation>境外关联交易金额（利息）</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jngljyjelx" type="je">
+				<xs:annotation>
+					<xs:documentation>境内关联交易金额（利息）</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ndpjglzqtzje" type="je">
+				<xs:annotation>
+					<xs:documentation>年度平均关联债权投资金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="glrczjGrid">
+		<xs:annotation>
+			<xs:documentation>关联融出资金（全部）</xs:documentation>
+		</xs:annotation>
+		<xs:sequence maxOccurs="unbounded">
+			<xs:element name="glrczjGridlbVO" type="glrczjGridlbVO">
+				<xs:annotation>
+					<xs:documentation>关联融出资金（全部）</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="glrczjGridlbVO">
+		<xs:annotation>
+			<xs:documentation>关联融出资金（全部）</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="gljylx" type="mc">
+				<xs:annotation>
+					<xs:documentation>关联交易类型，默认传值“关联融出资金”</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="glfmc" type="glfmc">
+				<xs:annotation>
+					<xs:documentation>关联方名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="gljynr" type="bz">
+				<xs:annotation>
+					<xs:documentation>关联交易内容，取值为代码表DM_SB_GLJYNR，多个代码用英文逗号分隔</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jdje" type="je">
+				<xs:annotation>
+					<xs:documentation>借贷金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bnsjzyts" type="sl">
+				<xs:annotation>
+					<xs:documentation>本年实际占用天数</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jwgljyjelx" type="je">
+				<xs:annotation>
+					<xs:documentation>境外关联交易金额（利息）</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jngljyjelx" type="je">
+				<xs:annotation>
+					<xs:documentation>境内关联交易金额（利息）</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ndpjglzqtzje" type="je">
+				<xs:annotation>
+					<xs:documentation>年度平均关联债权投资金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

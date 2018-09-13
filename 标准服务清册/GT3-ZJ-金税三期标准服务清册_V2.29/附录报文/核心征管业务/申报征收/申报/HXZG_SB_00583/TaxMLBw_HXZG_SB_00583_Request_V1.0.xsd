@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2013 (http://www.altova.com) by  () -->
+<!-- 被2012 () 使用XMLSpy v编辑的 (http://www.altova.com) by -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:include schemaLocation="TaxMLPublicSBType.xsd"/>
+	<xs:complexType name="HXZGSB00583Request">
+		<xs:annotation>
+			<xs:documentation>查询增量房销售采集信息请求报文</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="zrfcsfbz" type="zrfcsfbz">
+						<xs:annotation>
+							<xs:documentation>转让方承受方标志</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="kfqydjxh" type="djxh" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>开发企业登记序号</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="kfqynsrsbh" type="kfqynsrsbh" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>开发企业纳税人识别号</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="kfbdcxmbh" type="kfbdcxmbh" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>开发不动产项目编号</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="gfznsrsbh" type="nsrsbh" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>购房者纳税人识别号</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="cjssqq" type="ssqq">
+						<xs:annotation>
+							<xs:documentation>采集所属期起</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="cjssqz" type="ssqz">
+						<xs:annotation>
+							<xs:documentation>采集所属期止</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="dh" type="dh" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>栋号</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="lc1" type="lc1" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>楼层</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="dyh" type="dyh" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>单元号</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+</xs:schema>

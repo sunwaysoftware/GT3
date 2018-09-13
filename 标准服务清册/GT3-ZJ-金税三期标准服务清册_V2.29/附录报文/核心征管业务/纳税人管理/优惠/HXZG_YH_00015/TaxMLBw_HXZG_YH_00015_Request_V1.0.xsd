@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2013 (http://www.altova.com) by  () -->
+<!-- 编辑使用 XMLSpy v2006 U (http://www.altova.com) 由 any (any) -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:include schemaLocation="TaxMLPublicYHType.xsd"/>
+	<xs:complexType name="HXZGYH00015Request">
+		<xs:annotation>
+			<xs:documentation>职工名册采集保存接入报文</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="rwczlx" type="rwczlx">
+						<xs:annotation>
+							<xs:documentation>任务操作类型</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="YHZgmcVO" type="YHZgmcVO">
+						<xs:annotation>
+							<xs:documentation>职工名册采集</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="slxxForm" type="slxxForm">
+						<xs:annotation>
+							<xs:documentation>受理信息表单</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="slxxForm">
+		<xs:annotation>
+			<xs:documentation>受理信息表单</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="sfzjhm" type="sfzjhm" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>身份证件号码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="djzclxDm" type="djzclxDm" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>登记注册类型</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="isbcslxx" type="bz1">
+				<xs:annotation>
+					<xs:documentation>是否保存受理信息</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="tbr" type="tbr" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>填表人</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="tbrq" type="tbrq" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>填报日期</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

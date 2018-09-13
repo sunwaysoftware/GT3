@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 被2012 () 使用XMLSpy v编辑的 (http://www.altova.com) by -->
+<!-- edited with XMLSpy v2005 rel. 3 U (http://www.altova.com) by  () -->
+<!-- 编辑使用 XMLSpy v2006 U (http://www.altova.com) 由 any (any) -->
+<!-- 编辑使用 XMLSpy v2006 U (http://www.altova.com) 由 any (any) -->
+<!-- 编辑使用 XMLSpy v2006 U (http://www.altova.com) 由 any (any) -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxDoc.xsd"/>
+	<xs:include schemaLocation="TaxMLPublic.xsd"/>
+	<xs:include schemaLocation="TaxMLPublicFPType.xsd"/>
+	<xs:complexType name="HXZGFP00122Request">
+		<xs:annotation>
+			<xs:documentation>保存发票存根联信息</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="FPCglcjBdcfpVOList" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>不动产发票存根联采集集合</xs:documentation>
+						</xs:annotation>
+						<xs:complexType>
+							<xs:sequence maxOccurs="unbounded">
+								<xs:element name="FPCglcjBdcfpVOListlb" type="FPCglcjBdcfpVO"/>
+							</xs:sequence>
+						</xs:complexType>
+					</xs:element>
+					<xs:element name="FPCglcjEscfpVOList" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>二手车发票存根联采集集合</xs:documentation>
+						</xs:annotation>
+						<xs:complexType>
+							<xs:sequence maxOccurs="unbounded">
+								<xs:element name="FPCglcjEscfpVOListlb" type="FPCglcjEscfpVO"/>
+							</xs:sequence>
+						</xs:complexType>
+					</xs:element>
+					<xs:element name="FPCglcjJdcfpVOList" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>机动车发票存根联采集集合</xs:documentation>
+						</xs:annotation>
+						<xs:complexType>
+							<xs:sequence maxOccurs="unbounded">
+								<xs:element name="FPCglcjJdcfpVOListlb" type="FPCglcjJdcfpVO"/>
+							</xs:sequence>
+						</xs:complexType>
+					</xs:element>
+					<xs:element name="FPCglcjJzyfpVOList" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>建筑业发票存根联采集集合</xs:documentation>
+						</xs:annotation>
+						<xs:complexType>
+							<xs:sequence maxOccurs="unbounded">
+								<xs:element name="FPCglcjJzyfpVOListlb" type="FPCglcjJzyfpVO"/>
+							</xs:sequence>
+						</xs:complexType>
+					</xs:element>
+					<xs:element name="FPCglcjTyVOList" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>通用发票存根联采集集合</xs:documentation>
+						</xs:annotation>
+						<xs:complexType>
+							<xs:sequence maxOccurs="unbounded">
+								<xs:element name="FPCglcjTyVOListlb" type="FPCglcjTyVO"/>
+							</xs:sequence>
+						</xs:complexType>
+					</xs:element>
+					<xs:element name="cglType" type="xs:string">
+						<xs:annotation>
+							<xs:documentation>存根联采集类型</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="FPCglcjTyMxVOList" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>通用采集明细集合</xs:documentation>
+						</xs:annotation>
+						<xs:complexType>
+							<xs:sequence maxOccurs="unbounded">
+								<xs:element name="FPCglcjTyMxVOListlb" type="FPCglcjTyMxVO"/>
+							</xs:sequence>
+						</xs:complexType>
+					</xs:element>
+					<xs:element name="cglcjUUID" type="xs:string">
+						<xs:annotation>
+							<xs:documentation>存根联采集UUID</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="xtrq" type="lrrq">
+						<xs:annotation>
+							<xs:documentation>系统日期</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="wfwzBz" type="xs:string">
+						<xs:annotation>
+							<xs:documentation>违法违章标志(Y或N)</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="FPWtdkfpxxcjbVOList" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>委托代开发票存根联采集集合</xs:documentation>
+						</xs:annotation>
+						<xs:complexType>
+							<xs:sequence maxOccurs="unbounded">
+								<xs:element name="FPWtdkfpxxcjbVOListlb" type="FPWtdkfpxxcjbVO"/>
+							</xs:sequence>
+						</xs:complexType>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+</xs:schema>

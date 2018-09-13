@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2013 (http://www.altova.com) by  () -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:include schemaLocation="TaxMLPublicDJType.xsd"/>
+	<xs:complexType name="HXZGDJ00479Response">
+		<xs:annotation>
+			<xs:documentation>查询税务登记证信息和遗失重发信息</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>	
+					<xs:element name="DJNsrzjjcxxVOList" type="DJNsrzjjcxxVOList">
+						<xs:annotation>
+							<xs:documentation>分支机构Grid</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					
+					<xs:element name="DJZjysglCfxxVOList" type="DJZjysglCfxxVOList">
+						<xs:annotation>
+							<xs:documentation>分支机构Grid</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					
+					
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="DJNsrzjjcxxVOList">
+		<xs:annotation>
+			<xs:documentation>单位纳税人登记证采集-分支机构信息</xs:documentation>
+		</xs:annotation>
+		<xs:sequence minOccurs="0" maxOccurs="unbounded">
+			<xs:element name="DJNsrzjjcxxVOlb" type="DJNsrzjjcxxVO">
+				<xs:annotation>
+					<xs:documentation>个体税务登记-分支机构信息列表</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="DJZjysglCfxxVOList">
+		<xs:annotation>
+			<xs:documentation>单位纳税人登记证采集-分支机构信息</xs:documentation>
+		</xs:annotation>
+		<xs:sequence minOccurs="0" maxOccurs="unbounded">
+			<xs:element name="DJZjysglCfxxVOlb" type="DJZjysglCfxxVO">
+				<xs:annotation>
+					<xs:documentation>个体税务登记-分支机构信息列表</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

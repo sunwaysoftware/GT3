@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<service xmlns="http://www.chinatax.gov.cn/spec/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <head>
+    <tran_id>SWZJ.HXZG.DJ.BCLHBZNSRXHDFNSRXX4GS</tran_id>
+    <channel_id>TEST</channel_id>
+    <tran_seq>0efd106700c749728610540da6e46ad3</tran_seq>
+    <tran_date>20141028</tran_date>
+    <tran_time>045252394</tran_time>
+    <expand>
+      <name>sjry</name>
+      <value>24406060735</value>
+    </expand>
+    <expand>
+      <name>sjjg</name>
+      <value>24406060700</value>
+    </expand>
+  </head>
+  <body><![CDATA[<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<taxML xsi:type="HXZGDJ00431Request" xmlmc="联合办证纳税人向对方机关国税写入变更的纳税人信息" xmlbh="TaxMLBw_HXZG_DJ_00431_Request_V1.0.xsd" bbh="1.0" xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <saveDfbgswdjb>
+        <xnsrsbh></xnsrsbh>
+        <ssdabh>10124406020000000100</ssdabh>
+        <kzztdjlxDm>1110</kzztdjlxDm>
+        <gdslxDm>1</gdslxDm>
+        <swryDm>24406060735</swryDm>
+        <GsDfgdjmxGrid>
+            <bgdjmxGridlb>
+                <bgxmDm>011</bgxmDm>
+                <bgqnr>11</bgqnr>
+                <bghnr>24</bghnr>
+            </bgdjmxGridlb>
+        </GsDfgdjmxGrid>
+        <djxh>10124406020000000143</djxh>
+        <lcslid>D0012670DEAA3C46502F361CB02E5611</lcslid>
+	<gdssftbcs>Y</gdssftbcs>
+    </saveDfbgswdjb>
+</taxML>
+]]></body>
+</service>

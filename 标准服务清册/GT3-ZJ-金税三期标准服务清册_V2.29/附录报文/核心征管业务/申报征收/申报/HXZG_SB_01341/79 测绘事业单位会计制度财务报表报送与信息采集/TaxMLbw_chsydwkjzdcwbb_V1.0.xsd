@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2013 (http://www.altova.com) by  () -->
+<!-- 被2011 rel. 2 sp1 (TeaM DJiNN) 使用XMLSpy vTeaM DJiNN编辑的 (http://www.altova.com) by -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:include schemaLocation="TaxMLBd_chsydwkjzdcwbb_V1.0.xsd"/>
+	<xs:include schemaLocation="TaxMLPublicSBType.xsd"/>
+	<xs:complexType name="Chsydwkjzdcwbbywbw">
+		<xs:annotation>
+			<xs:documentation>总业务报文</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="zcfzbybVO" type="ChsydwkjzdZcfzbybVO" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>资产负债表（月报）（适用执行测绘事业单位会计制度的单位）</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="zcfzbnbVO" type="ChsydwkjzdZcfzbnbVO" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>资产负债表（年报）（适用执行测绘事业单位会计制度的单位）</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="zcmxbVO" type="ChsydwkjzdZcmxbVO" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>支出明细表（适用执行测绘事业单位会计制度的单位）</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="srzcbVO" type="ChsydwkjzdSrzcbVO" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>收入支出表（适用执行测绘事业单位会计制度的单位）</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="jzcbdqkbVO" type="ChsydwkjzdJzcbdqkbVO" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>净资产变动情况表（适用执行测绘事业单位会计制度的单位）</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="ndcwkjbgshbgVO" type="NdcwkjbgshbgVO">
+						<xs:annotation>
+							<xs:documentation>年度财务会计报告审核报告</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="yfzcfzzhzbVO" type="YfzcfzzhzbVO">
+						<xs:annotation>
+							<xs:documentation>“研发支出”辅助账汇总表VO</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="sydwkjzdfzForm" type="SydwkjzdfzForm">
+						<xs:annotation>
+							<xs:documentation>事业单位会计制度附注</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+</xs:schema>

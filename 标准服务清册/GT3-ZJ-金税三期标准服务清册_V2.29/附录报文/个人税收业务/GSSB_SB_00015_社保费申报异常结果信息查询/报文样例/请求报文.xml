@@ -1,0 +1,11 @@
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ent="http://entrance.publish.sbf.iitms.gt3.gov/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <ent:service><![CDATA[<?xml version="1.0" encoding="UTF-8" standalone="yes"?><service xmlns="http://www.chinatax.gov.cn/spec/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><head><tran_id>SWZJ.GSGL.SB.SBFQUERYSBYCJGXX</tran_id><channel_id>GDDS.ZJNB.GSHD</channel_id>
+      <tran_seq>036505bbc5024a5c85cbcd2e29695311</tran_seq><tran_date>20150914</tran_date><tran_time>113454304</tran_time><expand><name>identityType</name><value>49308fd2f75d462594648203c1ae5e93</value></expand></head><body><![CDATA[<?xml version="1.0" encoding="UTF-8"?><taxML xsi:type="ShbxfQuerySbycjgRequest" bbh="String" xmlbh="String" xmlmc="String" xsi:schemaLocation="http://www.chinatax.gov.cn/dataspec/TaxMLBw_GSSB_SB_00015_Request_V1.0.xsd" xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<tran_seq>12140100000000006567</tran_seq>
+</taxML>
+]]]]>><![CDATA[</body>
+</service>]]></ent:service>
+   </soapenv:Body>
+</soapenv:Envelope>

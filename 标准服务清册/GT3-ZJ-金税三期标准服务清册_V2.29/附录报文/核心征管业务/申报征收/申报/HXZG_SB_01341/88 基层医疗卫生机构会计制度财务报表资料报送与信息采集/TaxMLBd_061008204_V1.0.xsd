@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 被2012 () 使用XMLSpy v编辑的 (http://www.altova.com) by -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:include schemaLocation="TaxMLPublicType.xsd"/>
+	<xs:complexType name="JcylczbzszmxbVO">
+		<xs:annotation>
+			<xs:documentation>财政补助收支明细表</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="jcylczbzszmxbGrid">
+				<xs:complexType>
+					<xs:sequence maxOccurs="unbounded">
+						<xs:element name="jcylczbzszmxbGridlb" type="JcylczbzszmxbGridlbVO"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="JcylczbzszmxbGridlbVO">
+		<xs:annotation>
+			<xs:documentation>表单申报信息</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="ewbhxh" type="ewbhxh" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>二维表行序号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="xmmc" type="xmmc" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>项目名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bys" type="bys" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ljs" type="ljs_1" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>累计数</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yt" type="yt" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>用途</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="xmzcbzsrmc" type="xmzcbzsrmc" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>项目支出补助收入名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="xmzcmc" type="xmzcmc" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>项目支出名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 被2011 rel. 2 sp1 (TeaM DJiNN) 使用XMLSpy vTeaM DJiNN编辑的 (http://www.altova.com) by -->
+<!-- edited with XMLSpy v2010 rel. 3 (http://www.altova.com) by MESMERiZE (MSM) -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:include schemaLocation="TaxMLPublicType.xsd"/>
+	<xs:complexType name="zwczForm">
+		<xs:annotation>
+			<xs:documentation>《企业重组所得税特殊性税务处理报告表（债务重组）》</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="zwczFormVO" type="zwczFormVO">
+						<xs:annotation>
+							<xs:documentation>企业重组所得税特殊性税务处理报告表（债务重组）</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="zwrxxGrid">
+						<xs:annotation>
+							<xs:documentation>债务人</xs:documentation>
+						</xs:annotation>
+						<xs:complexType>
+							<xs:sequence minOccurs="0" maxOccurs="unbounded">
+								<xs:element name="zwrxxMx" type="zwrxxVO">
+									<xs:annotation>
+										<xs:documentation>债务人信息Grid</xs:documentation>
+									</xs:annotation>
+								</xs:element>
+							</xs:sequence>
+						</xs:complexType>
+					</xs:element>
+					<xs:element name="zqrxxGrid">
+						<xs:annotation>
+							<xs:documentation>债权人</xs:documentation>
+						</xs:annotation>
+						<xs:complexType>
+							<xs:sequence minOccurs="0" maxOccurs="unbounded">
+								<xs:element name="zqrxxMx" type="zqrxxVO">
+									<xs:annotation>
+										<xs:documentation>债权人信息Grid</xs:documentation>
+									</xs:annotation>
+								</xs:element>
+							</xs:sequence>
+						</xs:complexType>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="zwrxxVO">
+		<xs:annotation>
+			<xs:documentation>债务人信息</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="nsrsbh" type="nsrsbh" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>纳税人识别号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="nsrmc" type="nsrmc" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>纳税人名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="swjgmc" type="swjgmc" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>税务机关名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="zqrxxVO">
+		<xs:annotation>
+			<xs:documentation>债权人信息</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="zqrnssbh" type="nsrsbh" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>债权人纳税识别号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zqrmc" type="nsrmc" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>债权人名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zqrsszgswjg" type="swjgmc" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>债权人所属主管税务机关(全称)</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="zwczFormVO">
+		<xs:annotation>
+			<xs:documentation>企业重组所得税特殊性税务处理报告表(债务重组)_主表</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="sbqymc" type="nsrmc" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>申报企业名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zwczfs" type="nsrsbh" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>债务重组方式</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zwzmjz" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>债务人重组业务涉及的债务账面价值</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zwrczywjsjc" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>债务人重组业务涉及的债务计税基础（1）</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yfzkjsjc" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>其中：①应付账款计税基础</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qtyfkjsjc" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>②其他应付款计税基础</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jkjsjc" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>③借款计税基础</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qtzwjsjc" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>④其他债务计税基础</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zcgyjz" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>资产公允价值（2） </xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="xjin" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>其中：①现金</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yhck" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>②银行存款</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="fhbzc" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>③非货币资产</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qtjsjc" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>其他计税基础</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zwrzwczsd" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>债务人债务重组所得</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zwrbndynssde" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>债务人本年度应纳税所得额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sdebz" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>债务人本年度应纳税所得额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="gqzzwrqbgqbl" type="bl" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>占债务人全部股权比例%</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="gyjz" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>债转股取得股权的公允价值（4）</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jsjc" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>债权人原债权的计税基础（即股权的计税基础）</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bqrzwczsd" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>债务人暂不确认的债务重组所得（5）=（1）-（4）</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

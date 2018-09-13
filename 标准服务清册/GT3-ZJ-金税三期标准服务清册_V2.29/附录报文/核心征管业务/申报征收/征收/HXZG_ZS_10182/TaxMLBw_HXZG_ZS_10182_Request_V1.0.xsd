@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 被2011 rel. 2 sp1 (pjf) 使用XMLSpy vcss编辑的 (http://www.altova.com) by -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:include schemaLocation="TaxMLPublicZSType.xsd"/>
+	<xs:complexType name="HXZGZS10182Request">
+		<xs:annotation>
+			<xs:documentation>预缴开票实时扣款</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="djxh" type="djxh">
+						<xs:annotation>
+							<xs:documentation>登记序号</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="yjskxxGrid">
+						<xs:annotation>
+							<xs:documentation>预缴税款信息Grid</xs:documentation>
+						</xs:annotation>
+						<xs:complexType>
+							<xs:sequence maxOccurs="unbounded">
+								<xs:element name="yjskxxlb">
+									<xs:annotation>
+										<xs:documentation>预缴信息列表</xs:documentation>
+									</xs:annotation>
+									<xs:complexType>
+										<xs:sequence>
+											<xs:element name="zsxmDm" type="zsxmDm">
+												<xs:annotation>
+													<xs:documentation>征收项目代码</xs:documentation>
+												</xs:annotation>
+											</xs:element>
+											<xs:element name="zspmDm" type="zspmDm">
+												<xs:annotation>
+													<xs:documentation>征收屏幕代码</xs:documentation>
+												</xs:annotation>
+											</xs:element>
+											<xs:element name="yjje" type="ybtse">
+												<xs:annotation>
+													<xs:documentation>预缴金额</xs:documentation>
+												</xs:annotation>
+											</xs:element>
+											<xs:element name="skssqq" type="skssqq">
+												<xs:annotation>
+													<xs:documentation>税款所属期起</xs:documentation>
+												</xs:annotation>
+											</xs:element>
+											<xs:element name="skssqz" type="skssqz">
+												<xs:annotation>
+													<xs:documentation>税款所属期止</xs:documentation>
+												</xs:annotation>
+											</xs:element>
+										</xs:sequence>
+									</xs:complexType>
+								</xs:element>
+							</xs:sequence>
+						</xs:complexType>
+					</xs:element>
+					<xs:element name="sfxyh" type="sfxyh">
+						<xs:annotation>
+							<xs:documentation>三方协议号</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+</xs:schema>

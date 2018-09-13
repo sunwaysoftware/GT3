@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 被2011 rel. 2 sp1 (TeaM DJiNN) 使用XMLSpy vTeaM DJiNN编辑的 (http://www.altova.com) by -->
+<!-- edited with XMLSpy v2010 rel. 3 (http://www.altova.com) by MESMERiZE (MSM) -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:include schemaLocation="TaxMLPublicType.xsd"/>
+	<xs:complexType name="jwfzjgmbksmxbForm">
+		<xs:annotation>
+			<xs:documentation>境外分支机构弥补亏损明细表(A108020)业务报文</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="jwsdnstzhsdMxbGrid" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>境外分支机构弥补亏损明细表</xs:documentation>
+						</xs:annotation>
+						<xs:complexType>
+							<xs:sequence  maxOccurs="unbounded" minOccurs="0">
+								<xs:element name="jwfzjgmbksmxbgridVO" type="jwfzjgmbksmxbGridVO" minOccurs="0"/>
+							</xs:sequence>
+						</xs:complexType>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="jwfzjgmbksmxbGridVO">
+		<xs:annotation>
+			<xs:documentation>《境外分支机构弥补亏损明细表》</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="gjdq" type="gjhdq" >
+				<xs:annotation>
+					<xs:documentation>国家（地区）</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yqndjzwmbfsjkse" type="je" >
+				<xs:annotation>
+					<xs:documentation>非实际亏损额的弥补以前年度结转尚未弥补的非实际亏损额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bnfsfsjkse" type="je" >
+				<xs:annotation>
+					<xs:documentation>非实际亏损额的弥补本年发生的非实际亏损额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bnmbyqfsjkse" type="je" >
+				<xs:annotation>
+					<xs:documentation>非实际亏损额的弥补本年弥补的以前年度非实际亏损额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jzhndmbfsjkse" type="je" >
+				<xs:annotation>
+					<xs:documentation>非实际亏损额的弥补结转以后年度弥补的非实际亏损额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yqjzwmbsjkseqwn" type="je" >
+				<xs:annotation>
+					<xs:documentation>实际亏损额的弥补_以前年度结转尚未弥补的实际亏损额_前五年</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yqjzwmbsjkseqsin" type="je" >
+				<xs:annotation>
+					<xs:documentation>实际亏损额的弥补_以前年度结转尚未弥补的实际亏损额_前四年</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yqjzwmbsjkseqsann" type="je" >
+				<xs:annotation>
+					<xs:documentation>实际亏损额的弥补_以前年度结转尚未弥补的实际亏损额_前三年</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yqjzwmbsjkseqen" type="je" >
+				<xs:annotation>
+					<xs:documentation>实际亏损额的弥补_以前年度结转尚未弥补的实际亏损额_前二年</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yqjzwmbsjkseqyn" type="je" >
+				<xs:annotation>
+					<xs:documentation>实际亏损额的弥补_以前年度结转尚未弥补的实际亏损额_前一年</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yqjzwmbsjksexj" type="je" >
+				<xs:annotation>
+					<xs:documentation>实际亏损额的弥补_以前年度结转尚未弥补的实际亏损额_小计</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bnfssjkse" type="je" >
+				<xs:annotation>
+					<xs:documentation>实际亏损额的弥补_本年发生的实际亏损额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bnmbyqsjkse" type="je" >
+				<xs:annotation>
+					<xs:documentation>实际亏损额的弥补_本年弥补的以前年度实际亏损额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jzhndmbsjkseqsin" type="je" >
+				<xs:annotation>
+					<xs:documentation>实际亏损额的弥补_结转以后年度弥补的实际亏损额_前四年</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jzhndmbsjkseqsann" type="je" >
+				<xs:annotation>
+					<xs:documentation>实际亏损额的弥补_结转以后年度弥补的实际亏损额_前三年</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jzhndmbsjkseqen" type="je" >
+				<xs:annotation>
+					<xs:documentation>实际亏损额的弥补_结转以后年度弥补的实际亏损额_前二年</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jzhndmbsjkseqyn" type="je" >
+				<xs:annotation>
+					<xs:documentation>实际亏损额的弥补_结转以后年度弥补的实际亏损额_前一年</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jzhndmbsjksebn" type="je" >
+				<xs:annotation>
+					<xs:documentation>实际亏损额的弥补_结转以后年度弥补的实际亏损额_本年</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jzhndmbsjksexj" type="je" >
+				<xs:annotation>
+					<xs:documentation>实际亏损额的弥补_结转以后年度弥补的实际亏损额_小计</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

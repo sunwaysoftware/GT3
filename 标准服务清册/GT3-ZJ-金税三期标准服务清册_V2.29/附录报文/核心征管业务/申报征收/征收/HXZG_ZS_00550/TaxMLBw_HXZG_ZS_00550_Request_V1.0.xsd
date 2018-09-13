@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2013 (http://www.altova.com) by  () -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:complexType name="HXZGZS00550RequestVO">
+		<xs:annotation>
+			<xs:documentation>纳税凭证转开作废</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="nspzhkzfGrid">
+						<xs:complexType>
+							<xs:sequence maxOccurs="unbounded">
+								<xs:element name="zsNspzhkzfGridlb" type="HXZGZS00550ZkzfVO"/>
+							</xs:sequence>
+						</xs:complexType>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+		<xs:complexType name="HXZGZS00550ZkzfVO">
+		<xs:annotation>
+			<xs:documentation>纳税凭证转开作废信息VO</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="zsxmDm" type="zsxmDm">
+						<xs:annotation>
+							<xs:documentation>电子缴税税种</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="zspmDm" type="zspmDm">
+						<xs:annotation>
+							<xs:documentation>品目</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="skssqq" type="skssqq">
+						<xs:annotation>
+							<xs:documentation>税款所属期起</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="skssqz" type="skssqz">
+						<xs:annotation>
+							<xs:documentation>税款所属期止</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="sjje" type="sjje">
+						<xs:annotation>
+							<xs:documentation>实缴（退库）金额</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="zsjgDm" type="zsjgDm">
+						<xs:annotation>
+							<xs:documentation>征收机关</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="dzsphm" type="dzsphm">
+						<xs:annotation>
+							<xs:documentation>电子缴税序号</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="yzpzxh" type="yzpzxh">
+						<xs:annotation>
+							<xs:documentation>应征凭证序号</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="yzppzlDm" >
+						<xs:annotation>
+							<xs:documentation>应征凭证种类代码</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="djxh" type="djxh">
+						<xs:annotation>
+							<xs:documentation>登记序号</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<service>
+  <head>
+    <tran_id>SWZJ.HXZG.SB.BCGLYWWLBGNDSB</tran_id>
+    <channel_id>TEST</channel_id>
+    <tran_seq>11111111111111111111111111111111</tran_seq>
+    <tran_date>20140820</tran_date>
+    <tran_time>173655570</tran_time>
+    <rtn_code>3</rtn_code>
+    <rtn_msg>
+      <Code>000</Code>
+      <Message>系统内部异常</Message>
+      <Reason>调用系统服务出错,异常所在server名myserver，错误原因：1010430006000006:该纳税人重复申报，如有需要请进行申报错误更正。</Reason>
+    </rtn_msg>
+    <expand>
+      <name>identityType</name>
+      <value>49308fd2f75d462594648203c1ae5e93</value>
+    </expand>
+    <expand>
+      <name>sjry</name>
+      <value>24406060733</value>
+    </expand>
+    <expand>
+      <name>sjjg</name>
+      <value>24400000000</value>
+    </expand>
+  </head>
+</service>

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:complexType name="ShbxfrcsbResponse">
+		<xs:annotation>
+			<xs:documentation>社会保险费申报返回报文</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="shbxfrcsbResultList" type="shbxfrcsbResultList"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="shbxfrcsbResultList">
+		<xs:annotation>
+			<xs:documentation>社会保险费日常申报结果列表</xs:documentation>
+		</xs:annotation>
+		<xs:sequence maxOccurs="unbounded">
+			<xs:element name="shbxfrcsbResult" type="shbxfrcsbResult">
+				<xs:annotation>
+					<xs:documentation>社会保险费日常申报结果列表</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="shbxfrcsbResult">
+		<xs:annotation>
+			<xs:documentation>社会保险费日常申报结果</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="yzpzxh" type="yzpzxh">
+				<xs:annotation>
+					<xs:documentation>应征凭证序号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sblshList" type="sblshList">
+				<xs:annotation>
+					<xs:documentation>社会流水号列表</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="sblshList">
+		<xs:annotation>
+			<xs:documentation>社会流水号列表</xs:documentation>
+		</xs:annotation>
+		<xs:sequence maxOccurs="unbounded">
+			<xs:element name="sblsh" type="sblsh">
+				<xs:annotation>
+					<xs:documentation>社会流水号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:simpleType name="sblsh">
+		<xs:annotation>
+			<xs:documentation>社保流水号</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:length value="20"/>
+		</xs:restriction>
+	</xs:simpleType>
+</xs:schema>

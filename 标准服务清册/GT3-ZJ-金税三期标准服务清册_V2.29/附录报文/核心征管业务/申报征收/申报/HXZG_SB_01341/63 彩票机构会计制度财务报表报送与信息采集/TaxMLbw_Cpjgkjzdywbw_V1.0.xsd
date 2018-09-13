@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 被2011 rel. 2 sp1 (TeaM DJiNN) 使用XMLSpy vTeaM DJiNN编辑的 (http://www.altova.com) by -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:include schemaLocation="TaxMLBd_0610643_V1.0.xsd"/>
+	<xs:include schemaLocation="TaxMLBd_0610644_V1.0.xsd"/>
+	<xs:include schemaLocation="TaxMLBd_0610645_V1.0.xsd"/>
+	<xs:include schemaLocation="TaxMLBd_0610646_V1.0.xsd"/>
+	<xs:include schemaLocation="TaxMLBd_0610647_V1.0.xsd"/>
+	<xs:include schemaLocation="TaxMLBd_0610648_V1.0.xsd"/>
+	<xs:include schemaLocation="TaxMLPublicSBType.xsd"/>
+	<xs:complexType name="Cpjgkjzdcwbbywbw">
+		<xs:annotation>
+			<xs:documentation>彩票机构会计制度财务报表报送与信息采集</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="cpjgZcfzbVO" type="cpjgZcfzbVO">
+						<xs:annotation>
+							<xs:documentation>资产负债表</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="cpjgFjjjbdxmVO" type="cpjgFjjjbdxmVO" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>返奖奖金变动明细表</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="cpjgCpzjfpmxVO" type="cpjgCpzjfpmxVO" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>资金分配明细表</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="cpjgSrzcybVO" type="cpjgSrzcybVO" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>收入支出月报表</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="cpjgSrzcnbVO" type="cpjgSrzcnbVO" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>收入支出年报表</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="cpjgCzzhhbzjsrzcbVO" type="cpjgCzzhhbzjsrzcbVO" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>财政专户核拨资金收入支出表</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="ndcwkjbgshbgVO" type="NdcwkjbgshbgVO">
+						<xs:annotation>
+							<xs:documentation>年度财务会计报告审核报告</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="yfzcfzzhzbVO" type="YfzcfzzhzbVO">
+						<xs:annotation>
+							<xs:documentation>“研发支出”辅助账汇总表VO</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="cpjgkjzdfzVO" type="CpjgkjzdfzVO">
+						<xs:annotation>
+							<xs:documentation>彩票机构会计制度附注表</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+</xs:schema>

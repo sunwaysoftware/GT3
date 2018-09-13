@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2013 (http://www.altova.com) by  () -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:complexType name="HXZGDJ00110Response">
+		<xs:annotation>
+			<xs:documentation>根据登记序号查询纳税人外出经营活动税收管理证明信息返回报文</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="WcjyhdssglzmxxGrid" type="WcjyhdssglzmxxGrid">
+						<xs:annotation>
+							<xs:documentation>外出经营活动税收管理证明信息集合</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="WcjyhdssglzmxxGrid">
+		<xs:annotation>
+			<xs:documentation>外出经营活动税收管理证明信息集合</xs:documentation>
+		</xs:annotation>
+		<xs:sequence minOccurs="0" maxOccurs="unbounded">
+			<xs:element name="WcjyhdssglzmxxGridlb" type="WcjyhdssglzmxxVO">
+				<xs:annotation>
+					<xs:documentation>外出经营活动税收管理证明信息列表</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="WcjyhdssglzmxxVO">
+		<xs:annotation>
+			<xs:documentation>外出经营活动税收管理证明信息</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="wcjyzmuuid" type="wcjyzmuuid">
+				<xs:annotation>
+					<xs:documentation>外出经营证明UUID</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="wcjydxzqhszDm" type="wcjydxzqhszDm">
+				<xs:annotation>
+					<xs:documentation>外出经营地行政区划数字代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="wcjyhdssglzmbh" type="wcjyhdssglzmbh">
+				<xs:annotation>
+					<xs:documentation>外出经营活动税收管理证明编号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zmyxqxq" type="zmyxqxq">
+				<xs:annotation>
+					<xs:documentation>证明有效期限起</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zmyxqxz" type="zmyxqxz">
+				<xs:annotation>
+					<xs:documentation>证明有效期限止</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="wszzrq" type="wszzrq" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>文书制作日期</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

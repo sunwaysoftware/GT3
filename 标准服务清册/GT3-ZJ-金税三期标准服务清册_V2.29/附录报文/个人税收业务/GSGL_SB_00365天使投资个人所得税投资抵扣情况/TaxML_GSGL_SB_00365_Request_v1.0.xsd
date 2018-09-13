@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:complexType name="sbTstzGrsdsTzdkqkRequest">
+		<xs:annotation>
+			<xs:documentation>天使投资个人所得税投资抵扣情况报告请求</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="tstzgrjbqk" type="tstzgrjbqk">
+						<xs:annotation>
+							<xs:documentation>天使投资个人基本情况</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="cckjxqyjbqk" type="cckjxqyjbqk">
+						<xs:annotation>
+							<xs:documentation>初创科技型企业基本情况</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="tzdkbaqkGrid" type="tzdkbaqkGrid">
+						<xs:annotation>
+							<xs:documentation>投资抵扣备案情况</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="bwxx" type="bwxx">
+						<xs:annotation>
+							<xs:documentation>表尾信息</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="tstzgrjbqk">
+		<xs:annotation>
+			<xs:documentation>天使投资基本情况</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="djxh" type="djxh">
+				<xs:annotation>
+					<xs:documentation>登记序号（不能为空）</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="cckjxqyjbqk">
+		<xs:annotation>
+			<xs:documentation>初创科技型企业基本情况</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="kjywrdjxh" type="djxh">
+				<xs:annotation>
+					<xs:documentation>初创科技型企业登记序号（不可为空）</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="tzdkbabh" type="tzdkbabh">
+				<xs:annotation>
+					<xs:documentation>
+						投资抵扣备案编号（不可为空,可以允许输入多个备案编号，编号与编号之间用,分隔）
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="tze" type="tstzjelx">
+				<xs:annotation>
+					<xs:documentation>
+						投资额（不可为空,传入的投资额（TZE）不能大于对应的备案信息的投资额的合计值）
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="kdktze" type="tstzjelx">
+				<xs:annotation>
+					<xs:documentation>		可抵扣投资额（不可为空,传入的可抵扣投资额（KDKTZE）不能大于对应的备案信息的投资额合计值*70%）</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="tzdkbaqkGrid">
+		<xs:annotation>
+			<xs:documentation>投资抵扣备案情况</xs:documentation>
+		</xs:annotation>
+		<xs:sequence maxOccurs="unbounded">
+			<xs:element name="tzdkbaqk" type="tzdkbaqk">
+				<xs:annotation>
+					<xs:documentation>投资抵扣备案情况</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="tzdkbaqk">
+		<xs:annotation>
+			<xs:documentation>投资抵扣备案情况</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="gqzrrq" type="rq">
+				<xs:annotation>
+					<xs:documentation>股权转让日期（不可为空，不能大于当前日期,格式为yyyy-mm-dd）</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="gqzrynssde" type="tstzjelx">
+				<xs:annotation>
+					<xs:documentation>股权转让应纳税所得额（不可为空,大于等于0）</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="cyqsqyjzddktze" type="tstzjelx">
+				<xs:annotation>
+					<xs:documentation>从已清算企业结转待抵扣投资额（不可为空,大于等于0）</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bqykdktze" type="tstzjelx">
+				<xs:annotation>
+					<xs:documentation>本企业可抵扣投资额（不可为空,大于等于0）</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="kdktzehj" type="tstzjelx">
+				<xs:annotation>
+					<xs:documentation>
+						可抵扣投资额合计（不可为空,等于从已清算企业结转待抵扣投资额+本企业可抵扣投资额）</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ljydktze" type="tstzjelx">
+				<xs:annotation>
+					<xs:documentation>累计已抵扣投资额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bqdktze" type="tstzjelx">
+				<xs:annotation>
+					<xs:documentation>本期抵扣投资额（不可为空，大于等于0；
+					不能超过min（股权转让应纳税所得额，可抵扣投资额合计-累计已抵扣投资额））
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jzdktze" type="tstzjelx">
+				<xs:annotation>
+					<xs:documentation>结转抵扣投资额（不可为空，大于等于0；需等于可抵扣投资额合计-累计已抵扣投资额-本期抵扣投资额）</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="bwxx">
+		<xs:annotation>
+			<xs:documentation>表尾信息</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="dljg" type="zjdljg">
+				<xs:annotation>
+					<xs:documentation>代理机构名称（长度不能大于300字节）</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="lxr" type="lxr">
+				<xs:annotation>
+					<xs:documentation>联系人名称（长度不能大于150字节）</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="tbrq" type="tbrq">
+				<xs:annotation>
+					<xs:documentation>填报日期（不可为空；不能大于系统日期；格式为yyyy-mm-dd）</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zgswjg" type="swjgDm">
+				<xs:annotation>
+					<xs:documentation>主管税务机关代码（不可为空，取值为受理税务机关代码，长度为11位）</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="slrDm" type="slrDm">
+				<xs:annotation>
+					<xs:documentation>受理人代码（不可为空，长度为11位）</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="slrq" type="slrq">
+				<xs:annotation>
+					<xs:documentation>受理日期（不可为空；不能大于系统日期；格式为yyyy-mm-dd）</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

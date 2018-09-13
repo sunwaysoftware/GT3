@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 被2012 () 使用XMLSpy v编辑的 (http://www.altova.com) by -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:include schemaLocation="TaxMLPublicType.xsd"/>
+	<xs:complexType name="JcyljzcbdbVO">
+		<xs:annotation>
+			<xs:documentation>净资产变动表</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="jcyljzcbdbGrid">
+				<xs:complexType>
+					<xs:sequence maxOccurs="unbounded">
+						<xs:element name="jcyljzcbdbGridlb" type="JcyljzcbdbGridlbVO"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="JcyljzcbdbGridlbVO">
+		<xs:annotation>
+			<xs:documentation>申报信息</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="ewbhxh" type="ewbhxh" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>二维表行序号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="xmmc" type="xmmc" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>项目名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="hj" type="hj" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>合计</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="gdjjxj" type="gdjjxj" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>固定基金小计</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="gdzczy" type="gdzczy" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>固定资产占有</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zjgczy" type="zjgczy" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>在建工程占有</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="wxzczy" type="wxzczy" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>无形资产占有</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="syjj" type="syjj" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>事业基金</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zyjjxj" type="zyjjxj" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>专用基金小计</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ylfxjj" type="ylfxjj" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>医疗风险基金</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zgfljj" type="zgfljj" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>职工福利基金</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jljj" type="jljj" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>奖励基金</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qtzyjj" type="qtzyjj" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>其他专用基金</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="wmbks" type="wmbks" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>未弥补亏损</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jbzcbzjz" type="jbzcbzjz" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>基本支出补助结转</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="xmzcbzjz" type="xmzcbzjz" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>项目支出补助结转</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qtxdytjz" type="qtxdytjz" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>其它限定用途结转</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="lsm" type="lsm" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>列说明</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

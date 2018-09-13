@@ -1,0 +1,310 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 被2011 rel. 2 sp1 (TeaM DJiNN) 使用XMLSpy vTeaM DJiNN编辑的 (http://www.altova.com) by -->
+<!-- edited with XMLSpy v2010 rel. 3 (http://www.altova.com) by liuwei (liuweicss) -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:include schemaLocation="TaxMLPublicType.xsd"/>
+	<xs:complexType name="stxshfdckfqytdywnstzmxbForm">
+		<xs:annotation>
+			<xs:documentation>视同销售和房地产开发企业特定业务纳税调整明细表(A105010)业务报文</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="stxshfdckfqytdywnstzMxbVO" type="stxshfdckfqytdywnstzmxbVO" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>视同销售和房地产开发企业特定业务纳税调整明细表</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="stxshfdckfqytdywnstzmxbVO">
+		<xs:annotation>
+			<xs:documentation>《视同销售和房地产开发企业特定业务纳税调整明细表》</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="stxsyysrssje" type="je">
+				<xs:annotation>
+					<xs:documentation>视同销售（营业）收入税收金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="xtsxyysrnstzje" type="je">
+				<xs:annotation>
+					<xs:documentation>视同销售（营业）收入纳税调整金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="fhbxzcjhsrssje" type="je">
+				<xs:annotation>
+					<xs:documentation>非货币性资产交换视同销售收入税收金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="fhbxzcjhsrnstzje" type="je">
+				<xs:annotation>
+					<xs:documentation>非货币性资产交换视同销售收入纳税调整金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yysctgsrssje" type="je">
+				<xs:annotation>
+					<xs:documentation>用于市场推广或销售视同销售收入税收金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yysctgsrnstzje" type="je">
+				<xs:annotation>
+					<xs:documentation>用于市场推广或销售视同销售收入纳税调整金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yyjjycsrssje" type="je">
+				<xs:annotation>
+					<xs:documentation>用于交际应酬视同销售收入税收金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yyjjycsrnstzje" type="je">
+				<xs:annotation>
+					<xs:documentation>用于交际应酬视同销售收入纳税调整金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yyzgjlsrssje" type="je">
+				<xs:annotation>
+					<xs:documentation>用于职工奖励或福利视同销售收入税收金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yyzgjlsrnstzje" type="je">
+				<xs:annotation>
+					<xs:documentation>用于职工奖励或福利视同销售收入纳税调整金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yygxfpsrssje" type="je">
+				<xs:annotation>
+					<xs:documentation>用于股息分配视同销售收入税收金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yygxfpsrnstzje" type="je">
+				<xs:annotation>
+					<xs:documentation>用于股息分配视同销售收入纳税调整金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yydwjzsrssje" type="je">
+				<xs:annotation>
+					<xs:documentation>用于对外捐赠视同销售收入税收金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yydwjzsrnstzje" type="je">
+				<xs:annotation>
+					<xs:documentation>用于对外捐赠视同销售收入纳税调整金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yydwtzsrssje" type="je">
+				<xs:annotation>
+					<xs:documentation>用于对外投资项目视同销售收入税收金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yydwtzsrnstzje" type="je">
+				<xs:annotation>
+					<xs:documentation>用于对外投资项目视同销售收入纳税调整金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="tglwsrssje" type="je">
+				<xs:annotation>
+					<xs:documentation>提供劳务视同销售收入税收金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="tglwsrnstzje" type="je">
+				<xs:annotation>
+					<xs:documentation>提供劳务视同销售收入纳税调整金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="stxsyysrqtssje" type="je">
+				<xs:annotation>
+					<xs:documentation>其他税收金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="stxsyysrqtnstzje" type="je">
+				<xs:annotation>
+					<xs:documentation>其他纳税调整金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="stxsyycbssje" type="je">
+				<xs:annotation>
+					<xs:documentation>视同销售（营业）成本税收金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="stxsyycbnstzje" type="je">
+				<xs:annotation>
+					<xs:documentation>视同销售（营业）成本纳税调整金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="fhbxzcjhcbssje" type="je">
+				<xs:annotation>
+					<xs:documentation>非货币性资产交换视同销售成本税收金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="fhbxzcjhcbnstzje" type="je">
+				<xs:annotation>
+					<xs:documentation>非货币性资产交换视同销售成本纳税调整金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yysctgcbssje" type="je">
+				<xs:annotation>
+					<xs:documentation>用于市场推广或销售视同销售成税收金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yysctgcbnstzje" type="je">
+				<xs:annotation>
+					<xs:documentation>用于市场推广或销售视同销售成本纳税调整金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yyjjyccbssje" type="je">
+				<xs:annotation>
+					<xs:documentation>用于交际应酬视同销售成本税收金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yyjjyccbnstzje" type="je">
+				<xs:annotation>
+					<xs:documentation>用于交际应酬视同销售成本纳税调整金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yyzgjlcbssje" type="je">
+				<xs:annotation>
+					<xs:documentation>用于职工奖励或福利视同销售成本税收金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yyzgjlcbnstzje" type="je">
+				<xs:annotation>
+					<xs:documentation>用于职工奖励或福利视同销售成本纳税调整金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yygxfpcbssje" type="je">
+				<xs:annotation>
+					<xs:documentation>用于股息分配视同销售成本税收金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yygxfpcbnstzje" type="je">
+				<xs:annotation>
+					<xs:documentation>用于股息分配视同销售成本纳税调整金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yydwjzcbssje" type="je">
+				<xs:annotation>
+					<xs:documentation>用于对外捐赠视同销售成本税收金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yydwjzcbnstzje" type="je">
+				<xs:annotation>
+					<xs:documentation>用于对外捐赠视同销售成本纳税调整金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yydwtzcbssje" type="je">
+				<xs:annotation>
+					<xs:documentation>用于对外投资项目视同销售成本税收金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yydwtzcbnstzje" type="je">
+				<xs:annotation>
+					<xs:documentation>用于对外投资项目视同销售成本纳税人调整额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="tglwcbssje" type="je">
+				<xs:annotation>
+					<xs:documentation>提供劳务视同销售成本税收金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="tglwcbnstzje" type="je">
+				<xs:annotation>
+					<xs:documentation>提供劳务视同销售成本纳税调整金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="stxsyycbqtssje" type="je">
+				<xs:annotation>
+					<xs:documentation>其他税收金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="stxsyycbqtnstzje" type="je">
+				<xs:annotation>
+					<xs:documentation>其他纳税调整金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="fdckfqyssje" type="je">
+				<xs:annotation>
+					<xs:documentation>房地产开发企业特定业务计算的纳税调整额税收金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="fdckfqynstzje" type="je">
+				<xs:annotation>
+					<xs:documentation>房地产开发企业特定业务计算的纳税调整额纳税调整金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="fdckfqytdywssje" type="je">
+				<xs:annotation>
+					<xs:documentation>房地产企业销售未完工开发产品特定业务计算的纳税调整额税收金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="fdckfqytdywnstzje" type="je">
+				<xs:annotation>
+					<xs:documentation>房地产企业销售未完工开发产品特定业务计算的纳税调整额纳税调整金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="xswwgcpsrssje" type="je">
+				<xs:annotation>
+					<xs:documentation>销售未完工产品的收入税收金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="xswwgcpyjmlessje" type="je">
+				<xs:annotation>
+					<xs:documentation>销售未完工产品预计毛利额税收金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="xswwgcpyjmlenstzje" type="je">
+				<xs:annotation>
+					<xs:documentation>销售未完工产品预计毛利额纳税调整金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sjfsdyysjssje" type="je">
+				<xs:annotation>
+					<xs:documentation>实际发生的营业税金及附加、土地增值税税收金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sjfsdyysjnstzje" type="je">
+				<xs:annotation>
+					<xs:documentation>实际发生的营业税金及附加、土地增值税--纳税调整金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="fdcqyxswwgssje" type="je">
+				<xs:annotation>
+					<xs:documentation>房地产企业销售的未完工产品转完工产品特定业务计算的纳税调整额税收金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="fdcqyxswwgnstzje" type="je">
+				<xs:annotation>
+					<xs:documentation>房地产企业销售的未完工产品转完工产品特定业务计算的纳税调整额纳税调整金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="xswwgcpzwgcpssje" type="je">
+				<xs:annotation>
+					<xs:documentation>销售未完工产品转完工产品确认的销售收入税收金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zhdxswwgcpssje" type="je">
+				<xs:annotation>
+					<xs:documentation>转回的销售未完工产品预计毛利额税收金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zhdxswwgcpnstzje" type="je">
+				<xs:annotation>
+					<xs:documentation>转回的销售未完工产品预计毛利额纳税调整金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zhsjfsdyysjssje" type="je">
+				<xs:annotation>
+					<xs:documentation>转回实际发生的营业税金及附加、土地增值税税收金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zhsjfsdyysjnstzje" type="je">
+				<xs:annotation>
+					<xs:documentation>转回实际发生的营业税金及附加、土地增值税纳税调整金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

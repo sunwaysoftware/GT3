@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2013 (http://www.altova.com) by  () -->
+<!-- 被2012 () 使用XMLSpy v编辑的 (http://www.altova.com) by -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:include schemaLocation="TaxMLPublicSBType.xsd"/>
+	<xs:complexType name="HXZGSB00159Request">
+		<xs:annotation>
+			<xs:documentation>境内机构和个人境内机构和个人发包工程作业或劳务合同款项支付情况备案保存接入报文 </xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="Jnjghgrfbgczyhlwhtkxzfqkb" type="Jnjghgrfbgczyhlwhtkxzfqkywbw">
+						<xs:annotation>
+							<xs:documentation>境内机构和个人发包工程作业或劳务项目备案表表单</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="Jnjghgrfbgczyhlwhtkxzfqkywbw">
+		<xs:annotation>
+			<xs:documentation>境内机构和个人境内机构和个人发包工程作业或劳务合同款项支付情况备案业务报文</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="Jnjghgrfbgczyhlwhtkxzfqkb" type="Jnjghgrfbgczyhlwhtkxzfqkb">
+				<xs:annotation>
+					<xs:documentation>境内机构和个人发包工程作业或劳务项目备案表单</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+		<xs:attribute name="bbh"/>
+	</xs:complexType>
+	<xs:complexType name="Jnjghgrfbgczyhlwhtkxzfqkb">
+		<xs:annotation>
+			<xs:documentation>境内机构和个人境内机构和个人发包工程作业或劳务合同款项支付情况表单</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="jbxxForm" type="jbxxForm">
+				<xs:annotation>
+					<xs:documentation>境内机构和个人发包工程作业或劳务项目备案From</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zfkxxxGrid">
+				<xs:complexType>
+					<xs:complexContent>
+						<xs:extension base="zfkxxxGrid">
+							<xs:sequence maxOccurs="unbounded">
+								<xs:element name="zfkxxxGridlbVO" type="zfkxxxGridlbVO"/>
+							</xs:sequence>
+						</xs:extension>
+					</xs:complexContent>
+				</xs:complexType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="jbxxForm">
+		<xs:annotation>
+			<xs:documentation>境内机构和个人境内机构和个人发包工程作业或劳务合同款项支付情况基本信息from</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="uuid" type="uuid" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>UUID</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="fbfnsrsbh" type="fbfnsrsbh" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>发包方纳税人识别号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ybgbbh" type="ybgbbh" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>原报告表编号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="fbfmc" type="fbfmc" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>发包方名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="cbsmc" type="cbsmc" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>承包商名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="nsrjbr" type="nsrjbr" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>纳税人经办人</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="lxdh" type="lxdh" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>联系电话</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="fkpzfs" type="fkpzfs" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>付款凭证份数</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sfjfkpzfyjqbbswjgbaBz" type="sfjfkpzfyjqbbswjgbaBz" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>是否将付款凭证复印件全部报税务机关备案标志</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bgrq1" type="bgrq1" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>报告日期</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="slrDm" type="slrDm" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>报告日期</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="zfkxxxGrid">
+		<xs:annotation>
+			<xs:documentation>境内机构和个人境内机构和个人发包工程作业或劳务合同款项支付情况Grid</xs:documentation>
+		</xs:annotation>
+	</xs:complexType>
+	<xs:complexType name="zfkxxxGridlbVO">
+		<xs:annotation>
+			<xs:documentation>支付款项信息GridlbVO</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="uuid" type="uuid" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>UUID</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sbuuid" type="sbuuid" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>申报UUID</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ewbhxh" type="ewbhxh" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>二维表行序号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zfrq" type="zfrq" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>支付日期</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zfje" type="zfje" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>支付金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="htbz" type="htbz" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>支付币种</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="skrmc" type="skrmc" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>收款人名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="kxxzmc" type="kxxzmc" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>款项性质名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

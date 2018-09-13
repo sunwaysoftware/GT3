@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 被2012 () 使用XMLSpy v编辑的 (http://www.altova.com) by -->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://www.chinatax.gov.cn/dataspec/" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:complexType name="HXZGSB00525Request">
+		<xs:annotation>
+			<xs:documentation>源泉扣缴企业所得税合同备案报文</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="htbaxxCxVo" type="SBKjqysdsHtbaxxCxVo" nillable="true">
+						<xs:annotation>
+							<xs:documentation>源泉扣缴企业所得税合同备案查询VO</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="SBKjqysdsHtbaxxCxVo">
+		<xs:annotation>
+			<xs:documentation>扣缴企业所得税合同备案信息查询VO</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="kjywlx" type="kjywlx">
+				<xs:annotation>
+					<xs:documentation>扣缴业务类型</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="kjrdjxh" type="kjdjxh">
+				<xs:annotation>
+					<xs:documentation>扣缴义务人登记序号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

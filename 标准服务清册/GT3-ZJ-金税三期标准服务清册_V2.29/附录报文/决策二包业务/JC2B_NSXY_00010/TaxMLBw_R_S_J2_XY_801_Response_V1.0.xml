@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<service xmlns="http://www.chinatax.gov.cn/spec/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <head>
+    <tran_id>SWZJ.NSXY.PJJG.AJNSRMDFB</tran_id>
+    <channel_id>SWZJ.ZJNB.NSXY</channel_id>
+    <tran_seq>eea4ff11269045068f421dd3d654804e</tran_seq>
+    <tran_date>20170908</tran_date>
+    <tran_time>09565631</tran_time>
+    <rtn_code>0</rtn_code>
+    <rtn_msg>
+      <Code>000</Code>
+      <Message>交易成功</Message>
+      <Reason>A级纳税人查询成功</Reason>
+    </rtn_msg>
+    <expand>
+      <name>identityType</name>
+      <value></value>
+    </expand>
+    <expand>
+      <name>sjry</name>
+      <value></value>
+    </expand>
+    <expand>
+      <name>sjjg</name>
+      <value></value>
+    </expand>
+  </head>
+  <body><![CDATA[<?xml version="1.0" encoding="UTF-8"?><taxML xsi:type="nsxybwtype"  bbh="v1.0" xmlbh="String" xmlmc="String" xsi:schemaLocation="http://www.chinatax.gov.cn/dataspec/nsxybwxsd" xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<cljg>00</cljg>
+<nsrList>
+<djxh>10114301010000007844</djxh>
+<djxh>10114301010000002775</djxh>
+<djxh>10114301010000002264</djxh>
+<djxh>10114301000168518591</djxh>
+<djxh>10114301000168510693</djxh>
+<djxh>10114301000168212093</djxh>
+<djxh>10114301000168068357</djxh>
+<djxh>10114301000167871721</djxh>
+<djxh>10114301000167366912</djxh>
+</nsrList>
+
+</taxML>]]></body>
+</service>

@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2013 (http://www.altova.com) by  () -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:complexType name="HXZGDJ00381Response">
+		<xs:annotation>
+			<xs:documentation>根据工程项目查询付款方信息、分包工程价款合计</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+			<xs:element name="gcxmfkfxxfbgcjkVo" type="GcxmfkfxxfbgcjkVO">
+						<xs:annotation>
+							<xs:documentation>根据工程项目查询付款方信息、分包工程价款合计</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+		</xs:sequence>
+					</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="GcxmfkfxxfbgcjkVO">
+		<xs:annotation>
+			<xs:documentation>根据工程项目查询付款方信息、分包工程价款合计</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+		<xs:element name="fkfdjxh" type="fkfdjxh">
+				<xs:annotation>
+					<xs:documentation>付款方登记序号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="fkfnsrsbh" type="fkfnsrsbh">
+				<xs:annotation>
+					<xs:documentation>付款方纳税人识别号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="fkfnsrmc" type="nsrmc">
+				<xs:annotation>
+					<xs:documentation>付款方纳税人名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zbgcxmbh" type="zbgcxmbh">
+				<xs:annotation>
+					<xs:documentation>总包工程项目编号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="fbgcjkhj" type="xmys">
+				<xs:annotation>
+					<xs:documentation>分包工程价款合计</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="xmszddfswjgDm" type="xmszddfswjgDm">
+				<xs:annotation>
+					<xs:documentation>项目所在地地方税务机关代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zgswskfjDm" type="zgswskfjDm">
+				<xs:annotation>
+					<xs:documentation>主管税务所（科、分局）代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="fkfsfzjzl" type="fkfsfzjzlDm">
+				<xs:annotation>
+					<xs:documentation>付款方身份证件种类代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="fkfsfzjhm" type="fkfsfzjhm">
+				<xs:annotation>
+					<xs:documentation>付款方身份证件号码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+						<xs:element name="xzqhDm" type="xzqhDm">
+				<xs:annotation>
+					<xs:documentation>行政区划代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+						<xs:element name="jdxzDm" type="jdxzDm">
+				<xs:annotation>
+					<xs:documentation>街道乡镇代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			</xs:sequence>
+			</xs:complexType>
+</xs:schema>

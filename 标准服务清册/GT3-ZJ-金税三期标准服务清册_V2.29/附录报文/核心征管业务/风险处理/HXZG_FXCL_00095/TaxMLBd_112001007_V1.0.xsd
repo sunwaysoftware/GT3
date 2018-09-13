@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 被2012 () 使用XMLSpy v编辑的 (http://www.altova.com) by -->
+<!-- edited with XMLSpy v2013 (http://www.altova.com) by  () -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:complexType name="swjcxmsywbw">
+		<xs:annotation>
+			<xs:documentation>《税务稽查项目书》业务报文</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="swjcxms" type="swjcxms">
+						<xs:annotation>
+							<xs:documentation>税务稽查项目书</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="swjczdxmfxsForm">
+		<xs:annotation>
+			<xs:documentation>税务稽查项目书表单</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="jcaybh" type="jcaybh">
+				<xs:annotation>
+					<xs:documentation>案源编号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jcayxxlyDm" type="jcayxxlyDm">
+				<xs:annotation>
+					<xs:documentation>案源信息来源</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="nsrsbh" type="nsrsbh">
+				<xs:annotation>
+					<xs:documentation>纳税人识别号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="nsrmc" type="nsrmc">
+				<xs:annotation>
+					<xs:documentation>纳税人名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="lxdh" type="lxdh">
+				<xs:annotation>
+					<xs:documentation>电话</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="scjydz" type="scjydz">
+				<xs:annotation>
+					<xs:documentation>地址</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jcdxmc">
+				<xs:annotation>
+					<xs:documentation>稽查对象名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="fxqjq" type="fxqjq">
+				<xs:annotation>
+					<xs:documentation>分析期间起</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="fxqjz" type="fxqjz">
+				<xs:annotation>
+					<xs:documentation>分析期间止</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="fxryDm" type="fxryDm">
+				<xs:annotation>
+					<xs:documentation>分析人员</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="fxrq" type="fxrq">
+				<xs:annotation>
+					<xs:documentation>分析日期</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zbrDm" type="zbrDm">
+				<xs:annotation>
+					<xs:documentation>制表人签名</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zbrq" type="zbrq">
+				<xs:annotation>
+					<xs:documentation>制表日期</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="xabmfzrqm" type="xabmfzrqm">
+				<xs:annotation>
+					<xs:documentation>选案部门负责人签名</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="swjcxmsuuid" type="swjcxmsuuid">
+				<xs:annotation>
+					<xs:documentation>税务稽查项目书UUID</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jcayxxuuid" type="jcayxxuuid">
+				<xs:annotation>
+					<xs:documentation>稽查案源信息UUID</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="swjcxms">
+		<xs:annotation>
+			<xs:documentation>税务稽查项目书</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="swjczdxmfxsForm" type="swjczdxmfxsForm">
+				<xs:annotation>
+					<xs:documentation>税务稽查项目书</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="fjGrid" type="fjGrid">
+				<xs:annotation>
+					<xs:documentation>附件</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="fjGrid">
+		<xs:annotation>
+			<xs:documentation>税务稽查项目书附件</xs:documentation>
+		</xs:annotation>
+		<xs:sequence minOccurs="0" maxOccurs="unbounded">
+			<xs:element name="fjGridlb" type="fjGridlbVO">
+				<xs:annotation>
+					<xs:documentation>附件列表</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="fjGridlbVO">
+		<xs:annotation>
+			<xs:documentation>税务稽查项目书附件列表</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="swjcxmszbuuid" type="swjcxmsuuid">
+				<xs:annotation>
+					<xs:documentation>税务稽查项目书子表UUID</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="fxxm" type="fxxm">
+				<xs:annotation>
+					<xs:documentation>分析项目</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="fxyj" type="fxyj">
+				<xs:annotation>
+					<xs:documentation>分析依据</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="fxyj1" type="fxyj1">
+				<xs:annotation>
+					<xs:documentation>分析意见</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bz" type="bz">
+				<xs:annotation>
+					<xs:documentation>备注</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="swjcxmsuuid" type="swjcxmsuuid">
+				<xs:annotation>
+					<xs:documentation>税务稽查项目书UUID</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

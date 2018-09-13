@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 被2012 () 使用XMLSpy v编辑的 (http://www.altova.com) by -->
+<!-- edited with XMLSpy v2013 (http://www.altova.com) by  () -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:complexType name="HXZGFXCL02006Response">
+		<xs:annotation>
+			<xs:documentation>通过条件（登记序号、文书制作日期起、文书制作日期止，是否接受处罚）查询催报过后系统自动生成的简易处罚决定书返回报文</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="jycfjdsGrid">
+						<xs:annotation>
+							<xs:documentation>简易处罚决定书Grid</xs:documentation>
+						</xs:annotation>
+						<xs:complexType>
+							<xs:sequence minOccurs="0" maxOccurs="unbounded">
+								<xs:element name="jycfjdsGridlb" type="FZSwxzcfjdsjyVO">
+									<xs:annotation>
+										<xs:documentation>简易处罚决定书Gridlb</xs:documentation>
+									</xs:annotation>
+								</xs:element>
+							</xs:sequence>
+						</xs:complexType>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="FZSwxzcfjdsjyVO">
+		<xs:annotation>
+			<xs:documentation>税务行政处罚决定书（简易）信息</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="swxzcfjdsjyuuid" type="swxzcfjdsjyuuid">
+				<xs:annotation>
+					<xs:documentation>税务行政处罚决定书（简易）UUID</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sswfxwdjuuid" type="sswfxwdjuuid" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>税收违法行为登记UUID</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="swjgjg" type="swjgjg" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>税务机构局轨</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zg" type="zg" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>字轨</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="nh" type="nh" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>年号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="wh" type="wh" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>文号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bcfrlxDm" type="bcfrlxDm" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>被处罚人类型代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bcfrmc" type="bcfrmc" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>被处罚人名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bcfrzjlxDm" type="bcfrzjlxDm" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>被处罚人证件代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zjhm" type="zjhm" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>证件号码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="cfdd" type="cfdd" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>处罚地点</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="cfrq" type="cfrq" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>处罚日期</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="wfssjcfyj" type="wfssjcfyj" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>违法事实及处罚依据</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="wfsdDm" type="wfsdDm" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>违法手段代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jnfs" type="jnfs" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>缴纳方式</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jkdd" type="jkdd" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>缴款地点</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="fk1" type="fk1" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>罚款</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="swjgjbrDm" type="swjgjbrDm" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>税务机关经办人代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jbrblrq" type="jbrblrq" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>经办人办理日期</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="swjgfzrmc" type="swjgfzrmc" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>税务机关负责人名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="fzrsprq" type="fzrsprq" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>负责人审批日期</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="wszzrq" type="wszzrq" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>文书制作日期</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="cfswjgDm" type="cfswjgDm" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>处罚税务机关代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="xzfyjgDm" type="xzfyjgDm" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>行政复议机关代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="xzfyjgmc" type="xzfyjgmc" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>行政复议机关名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sfjscf" type="bz1" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>是否接受处罚</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yzpzxh" type="yzpzxh" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>应征凭证序号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="cssbbluuid" type="cssbbluuid" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>陈述申辩笔录UUID</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="lcslid" type="lcslid" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>流程实例ID</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="hdslid" type="hdslid" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>活动实例ID</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sjslid" type="sjslid" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>事件实例ID</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zfrq1" type="zfrq1" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>作废日期</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zfrDm" type="zfrDm" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>作废人代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zfbz1" type="zfbz1" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>作废标志</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

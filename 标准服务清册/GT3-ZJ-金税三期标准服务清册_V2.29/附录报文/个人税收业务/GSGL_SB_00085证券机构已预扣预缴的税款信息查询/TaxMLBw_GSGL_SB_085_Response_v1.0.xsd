@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:complexType name="zjjgYykjSkxxCxResponse">
+		<xs:annotation>
+			<xs:documentation>证券机构已预扣预缴的税款信息查询</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="mxxxlbs" type="mxxxlbs">
+						<xs:annotation>
+							<xs:documentation>明细信息</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="mxxxlbs">
+		<xs:annotation>
+			<xs:documentation>累计数列表</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="mxxxlb" maxOccurs="unbounded">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="kjdjxh" type="kjdjxh">
+							<xs:annotation>
+								<xs:documentation>扣缴义务人登记序号</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+						<xs:element name="ykjse" type="ykjse">
+							<xs:annotation>
+								<xs:documentation>已缴（扣）税额</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

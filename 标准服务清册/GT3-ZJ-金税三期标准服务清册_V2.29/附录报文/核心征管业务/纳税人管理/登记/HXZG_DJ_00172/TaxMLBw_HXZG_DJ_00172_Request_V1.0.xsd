@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2013 (http://www.altova.com) by  () -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:complexType name="HXZGDJ00172Request">
+		<xs:annotation>
+			<xs:documentation>根据指定条件查询本税务机关管辖内的己登记的土地信息接入报文</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="tdxxcxVO" type="tdxxcxVO"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="tdxxcxVO">
+		<xs:annotation>
+			<xs:documentation>土地信息查询条件</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="djxh" type="djxh">
+				<xs:annotation>
+					<xs:documentation>登记序号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="tdsybh" type="tdsybh">
+				<xs:annotation>
+					<xs:documentation>土地税源编号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="xzqhszDm" type="xzqhszDm">
+				<xs:annotation>
+					<xs:documentation>行政区划</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jdxzDm" type="jdxzDm">
+				<xs:annotation>
+					<xs:documentation>土地所处街乡</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ssswjgDm" type="ssswjgDm">
+				<xs:annotation>
+					<xs:documentation>所属税务机关</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zytdzldz" type="zytdzldz">
+				<xs:annotation>
+					<xs:documentation>土地坐落地址</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="cxBz" type="bz">
+				<xs:annotation>
+					<xs:documentation>查询标志</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

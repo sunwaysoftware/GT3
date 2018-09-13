@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2009 (http://www.altova.com) by Administrator (EMBRACE) -->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://www.chinatax.gov.cn/dataspec/" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:complexType name="HXZGDJ00156Response">
+		<xs:annotation>
+			<xs:documentation>根据登记序号查询纳税人土地登记信息与已登记不动产项目信息</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="bdcxmxxtdxx" type="bdcxmxxtdxxVO">
+						<xs:annotation>
+							<xs:documentation>不动产项目信息土地信息</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="bdcxmxxtdxxVO">
+		<xs:annotation>
+			<xs:documentation>不动产项目信息和土地信息</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="bdcxmxxGrid">
+				<xs:complexType>
+					<xs:sequence minOccurs="0" maxOccurs="unbounded">
+						<xs:element name="bdcxmxxGridlb" type="bdcxmxxVO"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="tdxxGrid">
+				<xs:complexType>
+					<xs:sequence minOccurs="0" maxOccurs="unbounded">
+						<xs:element name="tdxxGridlb" type="tdxxVO"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="tdxxVO">
+		<xs:annotation>
+			<xs:documentation>土地信息</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="tdsybh" type="tdsybh">
+				<xs:annotation>
+					<xs:documentation>土地税源编号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="tdzldz" type="tdzldz">
+				<xs:annotation>
+					<xs:documentation>土地坐落位置</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qh" type="qh">
+				<xs:annotation>
+					<xs:documentation>丘号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="tdsyzfzjgmc" type="tdsyzfzjgmc">
+				<xs:annotation>
+					<xs:documentation>土地使用证发放机关</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="tdsyzbh" type="tdsyzbh">
+				<xs:annotation>
+					<xs:documentation>土地使用证编号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="tdzmj" type="tdzmj">
+				<xs:annotation>
+					<xs:documentation>土地使用权面积</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="bdcxmxxVO">
+		<xs:annotation>
+			<xs:documentation>不动产项目信息</xs:documentation>
+		</xs:annotation>
+		<xs:sequence minOccurs="0">
+			<xs:element name="bdcxmbh" type="bdcxmbh">
+				<xs:annotation>
+					<xs:documentation>不动产项目编号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bdcxmmc" type="bdcxmmc">
+				<xs:annotation>
+					<xs:documentation>不动产项目名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2013 (http://www.altova.com) by  () -->
+<!-- 被2012 () 使用XMLSpy v编辑的 (http://www.altova.com) by -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:include schemaLocation="TaxMLPublicSBType.xsd"/>
+	<xs:include schemaLocation="TaxMLBw_sysbmybgcj_V1.0.xsd"/>
+	<xs:complexType name="HXZGSB00338Request">
+		<xs:annotation>
+			<xs:documentation>税源明细报告资料报送保存</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="djxh" type="djxh">
+						<xs:annotation>
+							<xs:documentation>登记序号</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="sbrqq" type="sbrqq">
+						<xs:annotation>
+							<xs:documentation>申报日期起||不带小时分秒</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="sbrqz" type="sbrqz">
+						<xs:annotation>
+							<xs:documentation>申报日期止||不带小时分秒</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="sysbmxbgcjb" type="sybgmxbcjywbw">
+						<xs:annotation>
+							<xs:documentation>税源明细报告采集表</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="zlbscjuuid" type="zlbscjuuid" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>原资料报送采集UUID</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+</xs:schema>

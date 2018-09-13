@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 被2012 () 使用XMLSpy v编辑的 (http://www.altova.com) by -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:include schemaLocation="TaxMLPublicSBType.xsd"/>
+	<xs:include schemaLocation="TaxMLPublicZSType.xsd"/>
+	<xs:include schemaLocation="TaxMLBd_yqtfb_V1.0.xsd"/>
+	<xs:complexType name="HXZGSB00271Response">
+		<xs:annotation>
+			<xs:documentation>印花税申报载入基础信息返回报文</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="sbxxGrid">
+						<xs:complexType>
+							<xs:sequence minOccurs="0" maxOccurs="unbounded">
+								<xs:element name="sbxxGridlb" type="SBSbxxJhVO"/>
+							</xs:sequence>
+						</xs:complexType>
+					</xs:element>
+					<xs:element name="jmxxGrid">
+						<xs:complexType>
+							<xs:sequence minOccurs="0" maxOccurs="unbounded">
+								<xs:element name="jmxxGridlb" type="SBJmxxJhVO"/>
+							</xs:sequence>
+						</xs:complexType>
+					</xs:element>
+					<xs:element name="yjxxGrid">
+						<xs:complexType>
+							<xs:sequence minOccurs="0" maxOccurs="unbounded">
+								<xs:element name="yjxxGridlb" type="SBYjxxJhVO"/>
+							</xs:sequence>
+						</xs:complexType>
+					</xs:element>
+					<xs:element name="hdxxGrid">
+						<xs:complexType>
+							<xs:sequence maxOccurs="unbounded">
+								<xs:element name="hdxxGridlb" type="ZsHdYhshdJgVO"/>
+							</xs:sequence>
+						</xs:complexType>
+					</xs:element>
+					<xs:element name="sbKssssrfpblGrid">
+						<xs:annotation>
+							<xs:documentation>跨省税收收入分配比例信息</xs:documentation>
+						</xs:annotation>
+						<xs:complexType>
+							<xs:sequence minOccurs="0" maxOccurs="unbounded">
+								<xs:element name="sbKssssrfpblGridlb" type="SBKdqsssrfpblqkbVO"/>
+							</xs:sequence>
+						</xs:complexType>
+					</xs:element>
+					<xs:element name="kdqsssrfpBz" type="bz">
+						<xs:annotation>
+							<xs:documentation>跨地区税收收入分配标志</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="yhshdGrid">
+						<xs:complexType>
+							<xs:sequence minOccurs="0" maxOccurs="unbounded">
+								<xs:element name="yhshdGridlb" type="yhshdVO"/>
+							</xs:sequence>
+						</xs:complexType>
+					</xs:element>
+					<xs:element name="yqtfpGrid">
+						<xs:complexType>
+							<xs:sequence maxOccurs="unbounded">
+								<xs:element name="yqtfpGridlb" type="SByqtfpxxVO"/>
+							</xs:sequence>
+						</xs:complexType>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="yhshdVO">
+		<xs:annotation>
+			<xs:documentation>印花税核定VO</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="hdjguuid" type="hdjguuid" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>核定结果uuid</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sqspuuid" type="sqspuuid" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>申请审批UUID</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="lcslid" type="lcslid" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>流程实例ID</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="djxh" type="djxh" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>登记序号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zsxmDm" type="zsxmDm" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>征收项目代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zspmDm" type="zspmDm" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>征收品目代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="hdqxq" type="hdqxq" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>核定期限起</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="hdqxz" type="hdqxz" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>核定期限止</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sjzxqz" type="sjzxqz" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>实际执行期止</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yhszspzlxDm" type="yhszspzlxDm" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>印花税征收凭证类型代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="hdlx2" type="hdlx2" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>核定类型</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="hdde" type="hdde" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>核定定额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="hdbl" type="hdbl" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>核定比例</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bz" type="bz" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>备注</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zgswskfjDm" type="zgswskfjDm" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>主管税务所（科、分局）代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ywpzuuid" type="ywpzuuid" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>业务凭证uuid</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="lrrq" type="lrrq" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>录入日期</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="lrrDm" type="lrrDm" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>录入人代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="xgrq" type="xgrq" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>修改日期</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="xgrDm" type="xgrDm" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>修改人代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

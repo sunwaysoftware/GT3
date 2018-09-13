@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 被2012 () 使用XMLSpy v编辑的 (http://www.altova.com) by -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:include schemaLocation="TaxMLPublicType.xsd"/>
+	<xs:complexType name="lxzcmxsbbywbw">
+		<xs:annotation>
+			<xs:documentation>利息支出明细申报表业务报文</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="lxzcmxsbb" type="lxzcmxsbb">
+						<xs:annotation>
+							<xs:documentation>利息支出明细申报表</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="lxzcmxsbb">
+		<xs:annotation>
+			<xs:documentation>利息支出明细申报表</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="lxzcmxsbbGrid">
+				<xs:annotation>
+					<xs:documentation>申报表信息</xs:documentation>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:complexContent>
+						<xs:extension base="lxzcmxsbbGrid"/>
+					</xs:complexContent>
+				</xs:complexType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="lxzcmxsbbGrid">
+		<xs:sequence maxOccurs="unbounded">
+			<xs:element name="sbxxGridlb" type="lxzcmxsbbGridlbVO"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="lxzcmxsbbGridlbVO">
+		<xs:annotation>
+			<xs:documentation>申报表信息</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="ewbhxh" type="ewbhxh" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>二维表行序号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jrjgmc" type="jrjgmc" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>金融机构名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jkje" type="jkje1" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>借款金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jkqx" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>借款期限利率</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ll" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>利率</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yxlzlxje" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>允许列支利息金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

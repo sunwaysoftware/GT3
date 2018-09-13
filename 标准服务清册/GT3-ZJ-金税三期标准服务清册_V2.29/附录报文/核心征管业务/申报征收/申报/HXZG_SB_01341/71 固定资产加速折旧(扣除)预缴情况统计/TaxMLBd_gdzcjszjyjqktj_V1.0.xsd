@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2013 (http://www.altova.com) by  () -->
+<!-- 被2011 rel. 2 sp1 (TeaM DJiNN) 使用XMLSpy vTeaM DJiNN编辑的 (http://www.altova.com) by -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:include schemaLocation="TaxMLPublicType.xsd"/>
+	<xs:complexType name="gdzcjszjyjqktbywbw">
+		<xs:annotation>
+			<xs:documentation>固定资产加速折旧预缴情况统计表业务报文</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="gdzcjszjyjqktbVO" type="gdzcjszjyjqktbVO">
+						<xs:annotation>
+							<xs:documentation>固定资产加速折旧预缴情况统计表</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="gdzcjszjyjqktbVO">
+		<xs:annotation>
+			<xs:documentation>固定资产加速折旧预缴情况统计表</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="gdzcjszjyjqktbGrid">
+				<xs:annotation>
+					<xs:documentation>申报信息</xs:documentation>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:sequence maxOccurs="unbounded">
+						<xs:element name="gdzcjszjyjqktbGridlb" type="gdzcjszjyjqktjbGridlbVO"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="gdzcjszjyjqktjbGridlbVO">
+		<xs:annotation>
+			<xs:documentation>申报信息</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="ewbhxh" type="ewbhxh">
+				<xs:annotation>
+					<xs:documentation>二维表行序号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="hmc" type="hmc">
+				<xs:annotation>
+					<xs:documentation>行名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="fwjzwyz" type="bns">
+				<xs:annotation>
+					<xs:documentation>房屋建筑物原值</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="fwjzwbqzje" type="bns">
+				<xs:annotation>
+					<xs:documentation>房屋建筑物本期折旧额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="fwjzwljzje" type="bns">
+				<xs:annotation>
+					<xs:documentation>房屋建筑物累计折旧额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jqsbyz" type="bns">
+				<xs:annotation>
+					<xs:documentation>机器设备和其他固定资产原值</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jqsbbqzje" type="bns">
+				<xs:annotation>
+					<xs:documentation>机器设备和其他固定资产本期折旧额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jqsbljzje" type="bns">
+				<xs:annotation>
+					<xs:documentation>机器设备和其他固定资产累计折旧额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="hjyz" type="bns">
+				<xs:annotation>
+					<xs:documentation>合计原值</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="hjbqzczje" type="bns">
+				<xs:annotation>
+					<xs:documentation>合计本期正常折旧额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="hjbqjszje" type="bns">
+				<xs:annotation>
+					<xs:documentation>合计本期加速折旧额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="hjljzczje" type="bns">
+				<xs:annotation>
+					<xs:documentation>合计累计正常折旧额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="hjljjszje" type="bns">
+				<xs:annotation>
+					<xs:documentation>合计累计加速折旧额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="hyDm" type="hyDm">
+				<xs:annotation>
+					<xs:documentation>行业代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="fddbr" type="fddbr">
+				<xs:annotation>
+					<xs:documentation>法定代表人</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="tbr" type="tbr">
+				<xs:annotation>
+					<xs:documentation>填表人</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

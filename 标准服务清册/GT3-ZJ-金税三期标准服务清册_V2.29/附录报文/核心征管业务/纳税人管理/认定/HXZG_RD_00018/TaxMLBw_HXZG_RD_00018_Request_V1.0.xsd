@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 被2011 rel. 2 sp1 (TeaM DJiNN) 使用XMLSpy vTeaM DJiNN编辑的 (http://www.altova.com) by -->
+<!-- edited with XMLSpy v2009 (http://www.altova.com) by Administrator (EMBRACE) -->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://www.chinatax.gov.cn/dataspec/" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:include schemaLocation="TaxMLPublicRDType.xsd"/>
+	<xs:complexType name="ybnsrjybfzsrdsqsqb">
+		<xs:annotation>
+			<xs:documentation>一般纳税人简易办法征收认定申请表</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="insertYbnsrjybfzsGrid">
+				<xs:annotation>
+					<xs:documentation>新增一般纳税人简易办法征收认定申请表</xs:documentation>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:sequence minOccurs="0" maxOccurs="unbounded">
+						<xs:element name="insertYbnsrjybfzsGridlb" type="RDYbnsrjybfzsrdjgbVO">
+							<xs:annotation>
+								<xs:documentation>新增一般纳税人简易办法征收认定申请表列表</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="updateYbnsrjybfzsGrid">
+				<xs:annotation>
+					<xs:documentation>修改一般纳税人简易办法征收认定申请表</xs:documentation>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:sequence minOccurs="0" maxOccurs="unbounded">
+						<xs:element name="updateYbnsrjybfzsGridlb" type="RDYbnsrjybfzsrdjgbVO">
+							<xs:annotation>
+								<xs:documentation>修改一般纳税人简易办法征收认定申请表列表</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="deleteYbnsrjybfzsGrid">
+				<xs:annotation>
+					<xs:documentation>删除一般纳税人简易办法征收认定申请表</xs:documentation>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:sequence minOccurs="0" maxOccurs="unbounded">
+						<xs:element name="deleteYbnsrjybfzsGridlb" type="RDYbnsrjybfzsrdjgbVO">
+							<xs:annotation>
+								<xs:documentation>删除一般纳税人简易办法征收认定申请表列表</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="ybnsrjybfzsGrid">
+				<xs:annotation>
+					<xs:documentation>删除一般纳税人简易办法征收认定申请表</xs:documentation>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:sequence minOccurs="0" maxOccurs="unbounded">
+						<xs:element name="ybnsrjybfzsGridlb" type="RDYbnsrjybfzsrdjgbVO">
+							<xs:annotation>
+								<xs:documentation>删除一般纳税人简易办法征收认定申请表列表</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="HXZGRD00018Request">
+		<xs:annotation>
+			<xs:documentation>一般纳税人简易办法征收认定保存接入报文</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="djxh" type="djxh">
+						<xs:annotation>
+							<xs:documentation>登记序号</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="lcslid" type="lcslid">
+						<xs:annotation>
+							<xs:documentation>流程实例ID</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="zgswskfjDm" type="zgswskfjDm">
+						<xs:annotation>
+							<xs:documentation>主管税务所科分局代码</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="ybnsrjybfzsrdsqsqb" type="ybnsrjybfzsrdsqsqb">
+						<xs:annotation>
+							<xs:documentation>一般纳税人简易办法征收认定申请表</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="fzr" type="cwfzr">
+						<xs:annotation>
+							<xs:documentation>财务负责人</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="jbr" type="jbr">
+						<xs:annotation>
+							<xs:documentation>经办人</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+</xs:schema>

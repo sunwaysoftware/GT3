@@ -1,0 +1,75 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<service xmlns="http://www.chinatax.gov.cn/spec/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <head>
+    <tran_id>SWZJ.HXZG.DJ.BCBGSWJDBXXJYSJX</tran_id>
+    <channel_id>TEST</channel_id>
+    <tran_seq>0efd106700c749728610540da6e46ad3</tran_seq>
+    <tran_date>20141028</tran_date>
+    <tran_time>045134904</tran_time>
+    <expand>
+      <name>sjry</name>
+      <value>24406060735</value>
+    </expand>
+    <expand>
+      <name>sjjg</name>
+      <value>24406060700</value>
+    </expand>
+  </head>
+  <body><![CDATA[<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<taxML xsi:type="HXZGDJ00075Request" xmlmc="保存变更税务登记表信息和对相应的数据进行校验" xmlbh="TaxMLBw_HXZG_DJ_00075_Request_V1.0.xsd" bbh="1.0" xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <bgswdjb>
+        <djxh>10124406020000000143</djxh>
+        <lcslid>D0012670DEAA3C46502F361CB02E5611</lcslid>
+        <zgswskfjDm>24406060700</zgswskfjDm>
+        <pzjguuid>4621AC1306D5AA6DED177C4753539891</pzjguuid>
+        <bgnsrsbhbz>0</bgnsrsbhbz>
+        <bgslxxvo>
+            <djxh>10124406020000000143</djxh>
+            <slswsxDm>SLSXA011002002</slswsxDm>
+            <lcslid>D0012670DEAA3C46502F361CB02E5611</lcslid>
+            <slrDm>24406060735</slrDm>
+            <slrq>2014-10-28</slrq>
+            <slswjgDm>24406060700</slswjgDm>
+            <slyj>同意</slyj>
+            <xgslrqly></xgslrqly>
+            <sqr>456345</sqr>
+            <sqrq>2014-10-28</sqrq>
+            <lrrDm>24406060735</lrrDm>
+            <sjgsdq>24406060700</sjgsdq>
+        </bgslxxvo>
+        <bgdjmxGrid>
+            <bgdjmxGridlb>
+                <bgxmDm>011</bgxmDm>
+                <bgqnr>11</bgqnr>
+                <bghnr>24</bghnr>
+            </bgdjmxGridlb>
+        </bgdjmxGrid>
+        <djZjgxxvo>
+            <zjgnsrsbh></zjgnsrsbh>
+            <zjgdjxh></zjgdjxh>
+            <zjgmc></zjgmc>
+            <zjgzcdz></zjgzcdz>
+            <zjgzcdzyzbm></zjgzcdzyzbm>
+            <zjgfddbrxm></zjgfddbrxm>
+            <zjglxdh></zjglxdh>
+            <zjgjyfw></zjgjyfw>
+        </djZjgxxvo>
+        <insertnsrfyhyxxGrid/>
+        <insertfzjgxxGrid/>
+        <inserttzfxxGrid/>
+        <insertTzzexxGrid/>
+        <insertZczbxxGrid/>
+        <updatensrfyhyxxGrid/>
+        <updatefzjgxxGrid/>
+        <updatetzfxxGrid/>
+        <updateTzzexxGrid/>
+        <updateZczbxxGrid/>
+        <deletensrfyhyxxGrid/>
+        <deletefzjgxxGrid/>
+        <deletetzfxxGrid/>
+        <deleteTzzexxGrid/>
+        <deleteZczbxxGrid/>
+    </bgswdjb>
+</taxML>
+]]></body>
+</service>

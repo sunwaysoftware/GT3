@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 被2011 rel. 2 sp1 (TeaM DJiNN) 使用XMLSpy vTeaM DJiNN编辑的 (http://www.altova.com) by -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:include schemaLocation="TaxMLPublicType.xsd"/>
+	<xs:complexType name="zdsyqyjbxxbVO">
+		<xs:annotation>
+			<xs:documentation>1重点税源企业基本信息表</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="zdsyqyjbxxbGrid">
+				<xs:complexType>
+					<xs:sequence minOccurs="0" maxOccurs="unbounded">
+						<xs:element name="zdsyqyjbxxbGridlbVO" type="zdsyqyjbxxbGridlbVO" minOccurs="0">
+							<xs:annotation>
+								<xs:documentation>节点</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="slxxFormVO" type="slxxFormVO" minOccurs="0"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="zdsyqyjbxxbGridlbVO">
+		<xs:annotation>
+			<xs:documentation>1重点税源企业基本信息表</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="ewbhxh" type="ewbhxh" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>二维表行序号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="hmc" type="hmc" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>行名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zdsyqyjbxxnr" type="zdsyqyjbxxnr" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>重点税源基本信息内容</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sdbz" type="sdbz" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>锁定 标志</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2010 rel. 3 (http://www.altova.com) by xuxin (csstj) -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:include schemaLocation="TaxMLPublicType.xsd"/>
+	<xs:complexType name="sydwshttmbfqydwsrmxsbbywbw">
+		<xs:annotation>
+			<xs:documentation>《中华人民共和国企业所得税年度纳税申报表附表一（3）事业单位、社会团体、民办非企业单位收入明细表》业务报文</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="sydwshttmbfqydwsrmxsbb">
+						<xs:annotation>
+							<xs:documentation>《中华人民共和国企业所得税年度纳税申报表附表一（3）事业单位、社会团体、民办非企业单位收入明细表》</xs:documentation>
+						</xs:annotation>
+						<xs:complexType>
+							<xs:sequence>
+								<xs:element name="sydwshttmbfqydwsrmxsbbFrom" type="sydwshttmbfqydwsrmxsbbFrom">
+									<xs:annotation>
+										<xs:documentation>事业单位、社会团体、民办非企业单位收入明细表申报信息</xs:documentation>
+									</xs:annotation>
+								</xs:element>
+							</xs:sequence>
+						</xs:complexType>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="sydwshttmbfqydwsrmxsbb">
+		<xs:annotation>
+			<xs:documentation>《中华人民共和国企业所得税年度纳税申报表附表一（3）事业单位、社会团体、民办非企业单位收入明细表》</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="sydwshttmbfqydwsrmxsbbFrom" type="sydwshttmbfqydwsrmxsbbFrom">
+				<xs:annotation>
+					<xs:documentation>事业单位、社会团体、民办非企业单位收入明细表申报信息</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="sydwshttmbfqydwsrmxsbbFrom">
+		<xs:annotation>
+			<xs:documentation>事业单位、社会团体、民办非企业单位收入明细表数据对应明细</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="srze" type="srze" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>收入总额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="czbzsr" type="czbzsr" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>财政补助收入</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sjbzsr" type="sjbzsr" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>上级补助收入</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="brzk" type="brzksr" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>拨入专款收入</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sysr" type="sysr" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>事业收入</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jysr" type="jysr" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>经营收入</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="fsdwjk" type="fsdwJksr" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>附属单位缴款收入</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="tzsy" type="tzsy" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>投资收益</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qtsr" type="qtsr" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>其他收入</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bzssrze" type="bzssrze" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>不征税收入总额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="czbk" type="czbk" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>财政拨款</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="xzsyxsf" type="xzsyxsf" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>行政事业性收费</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zfxjj" type="zfxjj" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>政府性基金</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qt" type="qtbzssr" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>其他不征税收入</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ynssrze" type="ynssrze" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>应纳税收入总额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ynssrzezqbsrzebz" type="ynssrzeZqbsrzeBz" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>应纳税收入总额占全部收入总额比重</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

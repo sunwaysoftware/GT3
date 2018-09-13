@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2009 (http://www.altova.com) by Administrator (EMBRACE) -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:include schemaLocation="TaxMLPublicDJType.xsd"/>
+	<xs:complexType name="HXZGDJ00252Response">
+		<xs:annotation>
+			<xs:documentation>投资方信息查询登记返回报文</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+                    <xs:extension base="taxDoc">
+			<xs:sequence>
+			<xs:element name="tzfxxGrid" type="TzfxxGrid"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="TzfxxGrid">
+		<xs:annotation>
+			<xs:documentation>投资方信息（合伙人投资情况）</xs:documentation>
+		</xs:annotation>
+		<xs:sequence minOccurs="0" maxOccurs="unbounded">
+			<xs:element name="tzfxxGridlb" type="DJTzfxxVO"/>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 被2012 () 使用XMLSpy v编辑的 (http://www.altova.com) by -->
+<!-- edited with XMLSpy v2013 (http://www.altova.com) by  () -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:include schemaLocation="TaxMLPublicSBType.xsd"/>
+	<xs:include schemaLocation="TaxMLPublicDJType.xsd"/>
+	<xs:complexType name="HXZGSB10048Response">
+		<xs:annotation>
+			<xs:documentation>环保税申报载入基础数据返回报文</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="cfsbbz" type="bz1">
+						<xs:annotation>
+							<xs:documentation>重复申报标志</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="sqwsbbz" type="bz1">
+						<xs:annotation>
+							<xs:documentation>上期未申报标志</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="yqwsbbz" type="bz1">
+						<xs:annotation>
+							<xs:documentation>逾期未申报标志</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="syxxGrid">
+						<xs:annotation>
+							<xs:documentation>已采集的税源信息Grid</xs:documentation>
+						</xs:annotation>
+						<xs:complexType>
+							<xs:sequence minOccurs="0" maxOccurs="unbounded">
+								<xs:element name="syxxGridlb" type="DJHjbhsSyxxVO" minOccurs="0">
+									<xs:annotation>
+										<xs:documentation>已采集的税源信息Grid列表</xs:documentation>
+									</xs:annotation>
+								</xs:element>
+							</xs:sequence>
+						</xs:complexType>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+</xs:schema>

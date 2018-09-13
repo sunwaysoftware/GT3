@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 被2012 () 使用XMLSpy v编辑的 (http://www.altova.com) by -->
+<!-- edited with XMLSpy v2010 rel. 3 (http://www.altova.com) by MESMERiZE (MSM) -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:complexType name="A108000Ywbd">
+		<xs:annotation>
+			<xs:documentation>境外所得税收抵免明细表(A108000)业务表单</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="jwsdssdmMxbGrid" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>境外所得税收抵免明细表</xs:documentation>
+						</xs:annotation>
+						<xs:complexType>
+							<xs:sequence minOccurs="0" maxOccurs="unbounded">
+								<xs:element name="jwsdssdmmxbgridVO" type="jwsdssdmmxbGridVO" minOccurs="0"/>
+							</xs:sequence>
+						</xs:complexType>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="jwsdssdmmxbGridVO">
+		<xs:annotation>
+			<xs:documentation>《境外所得税收抵免明细表》</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="gjdq" type="gjhdq" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>国家（地区）- 不分国不分项时可空</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jwsqsd" type="je">
+				<xs:annotation>
+					<xs:documentation>境外税前所得</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jwstzhsd" type="je">
+				<xs:annotation>
+					<xs:documentation>境外所得纳税调整后所得</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="mbjwyqnks" type="je">
+				<xs:annotation>
+					<xs:documentation>弥补境外以前年度亏损</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jwynssde" type="je">
+				<xs:annotation>
+					<xs:documentation>境外应纳税所得额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="djjnks" type="je">
+				<xs:annotation>
+					<xs:documentation>抵减境内亏损</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="djjnkshjwyne" type="je">
+				<xs:annotation>
+					<xs:documentation>抵减境内亏损后的境外应纳税所得额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sl2" type="sl">
+				<xs:annotation>
+					<xs:documentation>税率</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jwsdynse1" type="je">
+				<xs:annotation>
+					<xs:documentation>境外所得应纳税额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jwsdkdmse1" type="je">
+				<xs:annotation>
+					<xs:documentation>境外所得可抵免税额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jwsddmxe" type="je">
+				<xs:annotation>
+					<xs:documentation>境外所得抵免限额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bnkdmjwsdse" type="je">
+				<xs:annotation>
+					<xs:documentation>本年可抵免境外所得税额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="wcgjwdmxeye" type="je">
+				<xs:annotation>
+					<xs:documentation>未超过境外所得税抵免限额的余额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="kdmyqnwdmjwsde" type="je">
+				<xs:annotation>
+					<xs:documentation>本年可抵免以前年度未抵免境外所得税额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jyjsdyldyewdme" type="je">
+				<xs:annotation>
+					<xs:documentation>按简易办法计算_按低于12.5%的实际税率计算的抵免额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jyjsldyewdme" type="je">
+				<xs:annotation>
+					<xs:documentation>按简易办法计算_按12.5%计算的抵免额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jyjsldewdme" type="je">
+				<xs:annotation>
+					<xs:documentation>按简易办法计算_按25%计算的抵免额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jyjsxj" type="je">
+				<xs:annotation>
+					<xs:documentation>按简易办法计算_小计</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jwsddmsehj" type="je">
+				<xs:annotation>
+					<xs:documentation>境外所得抵免所得税额合计</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jwsdssdmfs" type="jwsdssdmfs">
+				<xs:annotation>
+					<xs:documentation>境外所得税收抵免方式（1:不分国不分项,2:分国不分项）</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

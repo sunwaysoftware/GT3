@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 被2012 () 使用XMLSpy v编辑的 (http://www.altova.com) by -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:complexType name="HXZGFXCL01867Response">
+		<xs:annotation>
+			<xs:documentation>文书送达回证销号返回报文</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="wsxhfhxxGrid">
+						<xs:annotation>
+							<xs:documentation>文书销号返回信息</xs:documentation>
+						</xs:annotation>
+						<xs:complexType>
+							<xs:sequence maxOccurs="unbounded">
+								<xs:element name="wsxhfhxxGridlb" type="ZHwsxhfhxxVO">
+									<xs:annotation>
+										<xs:documentation>文书销号返回信息列表</xs:documentation>
+									</xs:annotation>
+								</xs:element>
+							</xs:sequence>
+						</xs:complexType>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="ZHwsxhfhxxVO">
+		<xs:annotation>
+			<xs:documentation>销号返回信息</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="sdxxuuid" type="sdxxuuid">
+				<xs:annotation>
+					<xs:documentation>送达信息UUID</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="dzbzdszlDm" type="dzbzdszlDm">
+				<xs:annotation>
+					<xs:documentation>电子表证单书种类代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sdwsuuid" type="sdwsuuid">
+				<xs:annotation>
+					<xs:documentation>送达文书UUID</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="retCode" type="returncode">
+				<xs:annotation>
+					<xs:documentation>返回码（1：成功，0：失败）</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="message" type="message">
+				<xs:annotation>
+					<xs:documentation>返回消息</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="xhrq1" type="xhrq1">
+				<xs:annotation>
+					<xs:documentation>销号日期</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

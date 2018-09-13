@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2013 (http://www.altova.com) by  () -->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://www.chinatax.gov.cn/dataspec/" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:complexType name="HXZGZS00553RequestVO">
+		<xs:annotation>
+			<xs:documentation>社保费写票证使用情况</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="zSpzxxGrid">
+						<xs:complexType>
+							<xs:sequence maxOccurs="unbounded">
+								<xs:element name="zSpzxxGridlb" type="HXZGZS00553pzxxVO"/>
+							</xs:sequence>
+						</xs:complexType>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="HXZGZS00553pzxxVO">
+		<xs:annotation>
+			<xs:documentation>社保费写票证使用情况税票信息VO</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="swryDm" type="swryDm">
+				<xs:annotation>
+					<xs:documentation>操作人员ID</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="pzzlDm" type="pzzlDm">
+				<xs:annotation>
+					<xs:documentation>票证种类</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="pzzgDm" type="pzzgDm">
+				<xs:annotation>
+					<xs:documentation>票证字规</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="pzhm" type="pzhm">
+				<xs:annotation>
+					<xs:documentation>票证号码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="pzztDm" type="pzztDm">
+				<xs:annotation>
+					<xs:documentation>票证状态</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="hjje" type="hjje">
+				<xs:annotation>
+					<xs:documentation>合计金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="kprq" type="kprq">
+				<xs:annotation>
+					<xs:documentation>开票日期</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="kpjgDm" type="kpjgDm">
+				<xs:annotation>
+					<xs:documentation>开票机关代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

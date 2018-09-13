@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 被2012 () 使用XMLSpy v编辑的 (http://www.altova.com) by -->
+<!-- edited with XMLSpy v2013 (http://www.altova.com) by  () -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:include schemaLocation="TaxMLPublicDJType.xsd"/>
+	<xs:complexType name="HXZGDJ00840Response">
+		<xs:annotation>
+			<xs:documentation>查询大气水污染采集信息返回报文</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="Hbsdqswrcjb" type="Hbsdqswrcjb"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="Hbsdqswrcjb">
+		<xs:annotation>
+			<xs:documentation>大气水污染采集信息</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="DqswrwjcxxcjGrid" type="DqswrwjcxxcjGrid"/>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

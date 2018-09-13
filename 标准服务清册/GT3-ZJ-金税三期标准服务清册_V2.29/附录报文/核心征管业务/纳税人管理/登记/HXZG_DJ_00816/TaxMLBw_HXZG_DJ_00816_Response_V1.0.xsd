@@ -1,0 +1,278 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 被2011 rel. 2 sp1 (TeaM DJiNN) 使用XMLSpy vTeaM DJiNN编辑的 (http://www.altova.com) by -->
+<!-- edited with XMLSpy v2013 (http://www.altova.com) by  () -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:include schemaLocation="TaxMLPublicZMType.xsd"/>
+	<xs:include schemaLocation="TaxMLPublicDJType.xsd"/>
+	<xs:include schemaLocation="TaxMLPublic.xsd"/>
+	<xs:complexType name="HXZGDJ00816Response">
+		<xs:annotation>
+			<xs:documentation>查询外埠纳税人经营地报验登记返回报文</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="BydjnsrxxVO" type="BydjnsrxxVO">
+						<xs:annotation>
+							<xs:documentation>报验登记纳税人信息</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="DJSwdjbxxVO" type="DJSwdjbxxVO"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="BydjnsrxxVO">
+		<xs:annotation>
+			<xs:documentation>报验登记纳税人信息</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="ZMWcjyhdssglzmxxVO" type="ZMWcjyhdssglzmxxVO">
+				<xs:annotation>
+					<xs:documentation>外出经营活动税收管理证明申请表</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="WcjyNsrxxVO" type="WcjyNsrxxVO">
+				<xs:annotation>
+					<xs:documentation>外出经营纳税人信息</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="WcjyJzygcxmxxGrid" type="WcjyJzygcxmxxGrid">
+				<xs:annotation>
+					<xs:documentation>外出经营纳税人信息</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="WcjyhdssglzmLwxxGrid" type="WcjyhdssglzmLwxxGrid">
+				<xs:annotation>
+					<xs:documentation>外出经营活动税收活动管理证明（劳务信息）集合</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="WcjyhdssglzmHwxxGrid" type="WcjyhdssglzmHwxxGrid">
+				<xs:annotation>
+					<xs:documentation>外出经营活动税收活动管理证明（货物信息）集合</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="WcjyhdssglzmLwxxGrid">
+		<xs:annotation>
+			<xs:documentation>外出经营活动税收活动管理证明（劳务信息）集合</xs:documentation>
+		</xs:annotation>
+		<xs:sequence minOccurs="0" maxOccurs="unbounded">
+			<xs:element name="WcjyhdssglzmLwxxGridlb" type="ZMWcjyhdssglzmLwxxVO">
+				<xs:annotation>
+					<xs:documentation>外出经营活动税收活动管理证明（劳务信息）列表</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="WcjyhdssglzmHwxxGrid">
+		<xs:annotation>
+			<xs:documentation>外出经营活动税收活动管理证明（货物信息）集合</xs:documentation>
+		</xs:annotation>
+		<xs:sequence minOccurs="0" maxOccurs="unbounded">
+			<xs:element name="WcjyhdssglzmHwxxGridlb" type="ZMWcjyhdssglzmHwxxVO">
+				<xs:annotation>
+					<xs:documentation>外出经营活动税收活动管理证明（货物信息）集合列表</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="WcjyJzygcxmxxGrid">
+		<xs:annotation>
+			<xs:documentation>外出经营建筑业工程项目信息集合</xs:documentation>
+		</xs:annotation>
+		<xs:sequence minOccurs="0" maxOccurs="unbounded">
+			<xs:element name="WcjyJzygcxmxxGridlb" type="WcjyJzygcxmxxVO">
+				<xs:annotation>
+					<xs:documentation>外出经营建筑业工程项目信息列表</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="WcjyJzygcxmxxVO">
+		<xs:annotation>
+			<xs:documentation>外出经营建筑业工程项目信息</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="jzygcxmuuid" type="jzygcxmuuid">
+				<xs:annotation>
+					<xs:documentation>建筑业工程项目编号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="gcxmbh" type="gcxmbh">
+				<xs:annotation>
+					<xs:documentation>工程项目编号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="gcxmmc" type="gcxmmc">
+				<xs:annotation>
+					<xs:documentation>工程项目名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zgswskfjDm" type="zgswskfjDm" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>主管税务科所、分局代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="wcjyhdssglzmbh" type="wcjyhdssglzmbh" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>外出经营活动税收管理证明编号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zmyxqxz" type="zmyxqxz" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>证明有效期限止</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zdxmbz" type="zdxmbz">
+				<xs:annotation>
+					<xs:documentation>重点项目标志</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="WcjyNsrxxVO">
+		<xs:annotation>
+			<xs:documentation>外出经营纳税人信息</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="djxh" type="djxh">
+				<xs:annotation>
+					<xs:documentation>登记序号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="nsrsbh" type="nsrsbh">
+				<xs:annotation>
+					<xs:documentation>纳税人识别号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ynsrsbh" type="nsrsbh">
+				<xs:annotation>
+					<xs:documentation>原纳税人识别号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="shxydm" type="shxydm">
+				<xs:annotation>
+					<xs:documentation>社会信用代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="nsrmc" type="nsrmc">
+				<xs:annotation>
+					<xs:documentation>纳税人名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="djzclxDm" type="djzclxDm" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>登记注册类型代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="fddbrxm" type="fddbrxm" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>法定代表人姓名</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="fddbrsfzjlxDm" type="fddbrsfzjlxDm" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>法定代表人身份证件类型代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="fddbrsfzjhm" type="fddbrsfzjhm" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>法定代表人身份证号码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="nsrztDm" type="nsrztDm">
+				<xs:annotation>
+					<xs:documentation>纳税人状态代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="hyDm" type="hyDm" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>行业代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="dwlsgxDm" type="dwlsgxDm" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>单位隶属关系代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="djrq" type="djrq">
+				<xs:annotation>
+					<xs:documentation>登记日期</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zgswjDm" type="zgswjDm" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>主管税务局代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zgswskfjDm" type="zgswskfjDm" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>主管税务所（科、分局）代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="swdjd" type="swdjd" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>税务登记地</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="wcjyd" type="wcjyd" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>外出经营地</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="wcjyhtzje" type="wcjyhtzje" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>外出经营合同总金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="swdjdswjgyj" type="swdjdswjgyj" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>税务登记地税务机关意见</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="wcjydswjgyj" type="wcjydswjgyj" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>外出经营地税务机关意见</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="wcjyhdssglzmyxqxq" type="wcjyhdssglzmyxqxq" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>外出经营活动税收管理证明有效期限起</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="wcjyhdssglzmyxqxz" type="wcjyhdssglzmyxqxz" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>外出经营活动税收管理证明有效期限止</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="wcjyhdssglzmqfrq" type="wcjyhdssglzmqfrq" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>《外出经营活动税收管理证明》签发日期</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bsrxm" type="bsrxm" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>办税人姓名</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="lxdh" type="lxdh" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>联系电话</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jyfsdmjh" type="jyfsdmjh" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>经营方式代码集合</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bydjuuid" type="bydjuuid" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>报验登记UUID</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2011 (http://www.altova.com) by www.hbnu.com (www.hbnu.com) -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:include schemaLocation="TaxMLPublic.xsd"/>
+	<xs:complexType name="cbftxybywbw">
+		<xs:annotation>
+			<xs:documentation>《成本分摊协议表》业务报文</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="qyndglywwlbg2016_G110000" type="qyndglywwlbg2016_G110000">
+						<xs:annotation>
+							<xs:documentation>《成本分摊协议表》</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="qyndglywwlbg2016_G110000">
+		<xs:annotation>
+			<xs:documentation>《成本分摊协议表》</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="cyfxxGrid" type="cyfxxGrid">
+				<xs:annotation>
+					<xs:documentation>200参与方信息</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qtxxForm" type="qtxxForm">
+				<xs:annotation>
+					<xs:documentation/>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jbxxGrid" type="jbxxGrid">
+				<xs:annotation>
+					<xs:documentation>100基本信息</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="cyfxxGrid">
+		<xs:annotation>
+			<xs:documentation>200参与方信息</xs:documentation>
+		</xs:annotation>
+		<xs:sequence maxOccurs="unbounded">
+			<xs:element name="cyfxxGridlbVO" type="cyfxxGridlbVO">
+				<xs:annotation>
+					<xs:documentation>200参与方信息</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="cyfxxGridlbVO">
+		<xs:annotation>
+			<xs:documentation>200参与方信息</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="cbftxymc" type="cbftxymc">
+				<xs:annotation>
+					<xs:documentation>成本分摊协议名称，为与其参与方信息关联</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="xygcyfmc" type="xygcyfmc">
+				<xs:annotation>
+					<xs:documentation>协议各参与方名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="gjhdqszDm" type="gjhdqszDm">
+				<xs:annotation>
+					<xs:documentation>国家（地区），取值代码表DM_GY_GJHDQ</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="glgxlxDm" type="glgxlxDm">
+				<xs:annotation>
+					<xs:documentation>关联关系类型，取值代码表DM_SB_GLGXLX</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="xyzxrqq" type="xyzxrqq">
+				<xs:annotation>
+					<xs:documentation>参与协议起始日期</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="xyzxrqz" type="xyzxrqz">
+				<xs:annotation>
+					<xs:documentation>参与协议截止日期</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ftcbbz" type="hbszDm">
+				<xs:annotation>
+					<xs:documentation>分摊成本币种，取值代码表DM_GY_HB</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ftcbje" type="je">
+				<xs:annotation>
+					<xs:documentation>分摊成本金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ftcbrmb" type="je">
+				<xs:annotation>
+					<xs:documentation>分摊成本人民币</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jrzfbz" type="hbszDm">
+				<xs:annotation>
+					<xs:documentation>加入支付币种，取值代码表DM_GY_HB</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jrzfje" type="je">
+				<xs:annotation>
+					<xs:documentation>加入支付金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jrzfrmb" type="je">
+				<xs:annotation>
+					<xs:documentation>加入支付人民币</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="tcbcbz" type="hbszDm">
+				<xs:annotation>
+					<xs:documentation>退出补偿币种，取值代码表DM_GY_HB</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="tcbcje" type="je">
+				<xs:annotation>
+					<xs:documentation>退出补偿金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="tcbcrmb" type="je">
+				<xs:annotation>
+					<xs:documentation>退出补偿人民币</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="qtxxForm">
+		<xs:annotation>
+			<xs:documentation/>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="sfczfxycyf" type="sfbz">
+				<xs:annotation>
+					<xs:documentation>是否存在非协议参与方【1:是;0:否】</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="fxycyfsm" type="bz">
+				<xs:annotation>
+					<xs:documentation>附件说明：使用协议成果支付的金额及形式，以及支付金额在参与方之间的分配方式。</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bgzzqk" type="sfbz">
+				<xs:annotation>
+					<xs:documentation>变更终止情况【1:变更;2:终止;0:无变更终止】</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bgzzsm" type="bz">
+				<xs:annotation>
+					<xs:documentation>附件说明：变更或者终止的原因、对已形成协议成果的处理或者分配情况等。</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="jbxxGrid">
+		<xs:annotation>
+			<xs:documentation>100基本信息</xs:documentation>
+		</xs:annotation>
+		<xs:sequence maxOccurs="unbounded">
+			<xs:element name="jbxxGridlbVO" type="jbxxGridlbVO">
+				<xs:annotation>
+					<xs:documentation>100基本信息</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="jbxxGridlbVO">
+		<xs:annotation>
+			<xs:documentation>100基本信息</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="cbftxymc" type="cbftxymc">
+				<xs:annotation>
+					<xs:documentation>成本分摊协议名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="cbftxysjnrlxDm" type="cbftxysjnrlxDm">
+				<xs:annotation>
+					<xs:documentation>协议涉及内容，取值代码表DM_SB_CBFTXYSJNRLX</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qdrq1" type="qdrq1">
+				<xs:annotation>
+					<xs:documentation>签订日期</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="xyqxq" type="xyqxq">
+				<xs:annotation>
+					<xs:documentation>协议期限起始日期</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="xyqxz" type="xyqxz">
+				<xs:annotation>
+					<xs:documentation>协议期限截止日期</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bndyqsybz" type="hbszDm">
+				<xs:annotation>
+					<xs:documentation>本年度预期收益币种，取值代码表DM_GY_HB</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bndyqsyje" type="je">
+				<xs:annotation>
+					<xs:documentation>本年度预期收益金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bndsjfscbbz" type="hbszDm">
+				<xs:annotation>
+					<xs:documentation>本年度实际发生成本币种，取值代码表DM_GY_HB</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bndsjfscbje" type="je">
+				<xs:annotation>
+					<xs:documentation>本年度实际发生成本金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bndsjsybz" type="hbszDm">
+				<xs:annotation>
+					<xs:documentation>本年度实际收益币种，取值代码表DM_GY_HB</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bndsjsyje" type="je">
+				<xs:annotation>
+					<xs:documentation>本年度实际收益金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

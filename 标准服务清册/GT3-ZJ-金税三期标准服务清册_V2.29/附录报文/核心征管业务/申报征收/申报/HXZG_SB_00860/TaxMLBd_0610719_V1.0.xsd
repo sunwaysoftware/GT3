@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 被2011 rel. 2 sp1 (TeaM DJiNN) 使用XMLSpy vTeaM DJiNN编辑的 (http://www.altova.com) by -->
+<!-- edited with XMLSpy v2010 rel. 3 (http://www.altova.com) by MESMERiZE (MSM) -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:include schemaLocation="TaxMLPublicType.xsd"/>
+	<xs:complexType name="gxjsqyyhqkjmxbForm">
+		<xs:annotation>
+			<xs:documentation>高新技术企业优惠情况及明细表(A107041)业务报文</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="gxjsqyyhqkjMxbVO" type="gxjsqyyhqkjmxbVO" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>高新技术企业优惠情况及明细表</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="gxjsqyyhqkjmxbVO">
+		<xs:annotation>
+			<xs:documentation>《高新技术企业优惠情况及明细表》</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="gxjsqyzsbh" type="bh" >
+				<xs:annotation>
+					<xs:documentation>高新技术企业证书编号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="gxjsqyzsqdsj" type="sj" >
+				<xs:annotation>
+					<xs:documentation>高新技术企业证书取得时间</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="cpsygdfw" type="mc" >
+				<xs:annotation>
+					<xs:documentation>产品属于《国家重点。。》规定的范围</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sffszdaqzlsg" type="bz1" >
+				<xs:annotation>
+					<xs:documentation>是否发生重大安全事故</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sfyhjwfwgxw" type="bz1" >
+				<xs:annotation>
+					<xs:documentation>是否环境等违法、违规行为</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sffstpsxw" type="bz1" >
+				<xs:annotation>
+					<xs:documentation>是否发生偷骗税行为</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bngxjscpsr" type="je" >
+				<xs:annotation>
+					<xs:documentation>本年高新技术产品（服务）收入</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qzcpfwsr" type="je" >
+				<xs:annotation>
+					<xs:documentation>其中：产品（服务）收入</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jsxsr" type="je" >
+				<xs:annotation>
+					<xs:documentation>技术性收入</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bnqyzsr" type="je" >
+				<xs:annotation>
+					<xs:documentation>本年企业总收入</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bngxjscpsrzqyzsrbl" type="bl" >
+				<xs:annotation>
+					<xs:documentation>本年高新技术产品（服务）收入占企业总收入的比例</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bnjydxzkyslkjrys" type="sl" >
+				<xs:annotation>
+					<xs:documentation>本年具有大学专科以上学历的科技人员数</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bnyfrys" type="sl" >
+				<xs:annotation>
+					<xs:documentation>本年研发人员数</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bnzgzs" type="sl" >
+				<xs:annotation>
+					<xs:documentation>本年职工总数</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bnjydxzkysxukjrybl" type="bl" >
+				<xs:annotation>
+					<xs:documentation>本年具有大学专科以上学历的科技人员占企业当年职工总数的比例</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bnyfryzqydnzgsbl" type="bl" >
+				<xs:annotation>
+					<xs:documentation>本年研发人员占企业当年职工总数的比例</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bngjgxyffyje" type="je" >
+				<xs:annotation>
+					<xs:documentation>本年归集的高新研发费用金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="nbyjkftr" type="je" >
+				<xs:annotation>
+					<xs:documentation>内部研究开发投入</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ryrg" type="sl" >
+				<xs:annotation>
+					<xs:documentation>人员人工</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zjtr" type="je" >
+				<xs:annotation>
+					<xs:documentation>直接投入</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zjfyycqfytx" type="je" >
+				<xs:annotation>
+					<xs:documentation>折旧费用与长期费用摊销</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sjfy" type="je" >
+				<xs:annotation>
+					<xs:documentation>设计费用</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zbtsf" type="je" >
+				<xs:annotation>
+					<xs:documentation>装备调试费</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="wxzctx" type="je" >
+				<xs:annotation>
+					<xs:documentation>无形资产摊销</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qtfy" type="je" >
+				<xs:annotation>
+					<xs:documentation>其他费用</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qzkjryffyqtfy" type="je" >
+				<xs:annotation>
+					<xs:documentation>可计入研发费用的其他费用</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="wtwbyjkffy" type="je" >
+				<xs:annotation>
+					<xs:documentation>委托外部研究开发费用</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jnwbyff" type="je" >
+				<xs:annotation>
+					<xs:documentation>境内的外部研发费</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jwwbyff" type="je" >
+				<xs:annotation>
+					<xs:documentation>境外的外部研发费</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bnyffysrbl" type="bl" >
+				<xs:annotation>
+					<xs:documentation>本年研发费用占销售（营业）收入比例</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jmsje" type="je" >
+				<xs:annotation>
+					<xs:documentation>减免税金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

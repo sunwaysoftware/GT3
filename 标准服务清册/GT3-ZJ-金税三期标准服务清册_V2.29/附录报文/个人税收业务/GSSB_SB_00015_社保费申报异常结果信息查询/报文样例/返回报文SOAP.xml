@@ -1,0 +1,33 @@
+<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
+   <soap:Body>
+      <service xmlns="http://www.chinatax.gov.cn/spec/">
+	  <![CDATA[<?xml version="1.0" encoding="UTF-8"?><service  xmlns="http://www.chinatax.gov.cn/spec/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><head><tran_id>SWZJ.GSGL.SB.SBFQUERYSBYCJGXX</tran_id><channel_id>GDDS.ZJNB.GSHD</channel_id><tran_seq>036505bbc5024a5c85cbcd2e29695311</tran_seq><tran_date>20150914</tran_date><tran_time>113454304</tran_time><rtn_code>0</rtn_code><rtn_msg><Code>000</Code><Message></Message><Reason></Reason></rtn_msg><expand><name>identityType</name><value>49308fd2f75d462594648203c1ae5e93</value></expand><expand><name>sequenceid</name><value>f1276aede534430794b3b71596985881</value></expand><expand><name>CNodeName</name><value>null</value></expand></head><body>
+	  <![CDATA[<?xml version="1.0" encoding="UTF-8"?><taxML xsi:type="ShbxfQuerySbycjgResponse" xmlbh="" bbh="V1.1" xmlmc="" xsi:schemaLocation="http://www.chinatax.gov.cn/dataspec/TaxMLBw_GSSB_SB_00015_Request_V1.0.xml" xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	  
+	  <SbcljgList>
+		  <SbcljgResponse>
+			  <sbcljgDm>1</sbcljgDm>
+			  <sbsbyy></sbsbyy>
+			  <yzpzxhList>
+				  <yzpzxhResponse>
+					  <yzpzxh>10000000000000004985</yzpzxh>
+					  <sbzt>N</sbzt>
+					  <sbmxList>
+						<sbmxResponse><sblsh>123456</sblsh><xxh>1</xxh><sbjbjgDm>41019910</sbjbjgDm></sbmxResponse>
+					  </sbmxList>
+				  </yzpzxhResponse>
+				  <yzpzxhResponse>
+					  <yzpzxh>10000000000000007952</yzpzxh>
+					  <sbzt>Y</sbzt>
+					  <sbmxList>
+						  <sbmxResponse><sblsh>4c4a74bc209b4c41aee431af9d70267b</sblsh><xxh>0</xxh><sbjbjgDm>41019910</sbjbjgDm></sbmxResponse>
+						  <sbmxResponse><sblsh>ed47ef5b50ff439c87c9f24283abf25a</sblsh><xxh>0</xxh><sbjbjgDm>41019910</sbjbjgDm></sbmxResponse>
+					  </sbmxList>
+				  </yzpzxhResponse>
+			  </yzpzxhList>
+		  </SbcljgResponse>
+	  </SbcljgList>
+	  
+	  </taxML>]]]]>><![CDATA[</body></service>]]></service>
+   </soap:Body>
+</soap:Envelope>

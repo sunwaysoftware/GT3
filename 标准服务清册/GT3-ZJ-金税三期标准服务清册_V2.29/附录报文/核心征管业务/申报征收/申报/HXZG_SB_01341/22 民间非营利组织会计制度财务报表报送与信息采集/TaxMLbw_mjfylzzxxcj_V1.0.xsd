@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2013 (http://www.altova.com) by  () -->
+<!-- 被2011 rel. 2 sp1 (TeaM DJiNN) 使用XMLSpy vTeaM DJiNN编辑的 (http://www.altova.com) by -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:include schemaLocation="TaxMLBd_0610583_V1.0.xsd"/>
+	<xs:include schemaLocation="TaxMLBd_0610584_V1.0.xsd"/>
+	<xs:include schemaLocation="TaxMLBd_0610585_V1.0.xsd"/>
+	<xs:include schemaLocation="TaxMLPublicSBType.xsd"/>
+	<xs:complexType name="mjfylzzywbw">
+		<xs:annotation>
+			<xs:documentation>民间非营利组织总业务报文</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="zcfzb" type="zcfzbmjfylVO" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>资产负债表</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="ywhdb" type="ywhdbmjfylVO" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>业务活动表</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="xjllb" type="xjllbmjfylVO" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>現金流量表</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="ndcwkjbgshbgVO" type="NdcwkjbgshbgVO">
+						<xs:annotation>
+							<xs:documentation>年度财务会计报告审核报告</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="yfzcfzzhzbVO" type="YfzcfzzhzbVO">
+						<xs:annotation>
+							<xs:documentation>“研发支出”辅助账汇总表VO</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="mjfylzzkjzdfzVO" type="MjfylzzkjzdfzVO">
+						<xs:annotation>
+							<xs:documentation>民间非营利组织会计制度附注</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+</xs:schema>

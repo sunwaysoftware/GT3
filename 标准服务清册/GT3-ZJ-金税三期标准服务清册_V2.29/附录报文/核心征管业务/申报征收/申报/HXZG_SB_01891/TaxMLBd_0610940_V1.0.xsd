@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2011 (http://www.altova.com) by www.hbnu.com (www.hbnu.com) -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:include schemaLocation="TaxMLPublic.xsd"/>
+	<xs:complexType name="kgjtcystmdywbywbw">
+		<xs:annotation>
+			<xs:documentation>《跨国集团成员实体名单（英文表）》业务报文</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="qyndglywwlbg2016_G114021" type="qyndglywwlbg2016_G114021">
+						<xs:annotation>
+							<xs:documentation>《跨国集团成员实体名单（英文表）》</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="qyndglywwlbg2016_G114021">
+		<xs:annotation>
+			<xs:documentation>《跨国集团成员实体名单（英文表）》</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="kgqyjtmc" type="nsrmc">
+				<xs:annotation>
+					<xs:documentation>Name of the MNE group</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ssnd" type="ssnd">
+				<xs:annotation>
+					<xs:documentation>Fiscal year concerned</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="kgqyywhdxxywbGrid" type="kgqyywhdxxywbGrid">
+				<xs:annotation>
+					<xs:documentation/>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="kgqyywhdxxywbGrid">
+		<xs:annotation>
+			<xs:documentation/>
+		</xs:annotation>
+		<xs:sequence maxOccurs="unbounded">
+			<xs:element name="kgqyywhdxxywbGridlbVO" type="kgqyywhdxxywbGridlbVO">
+				<xs:annotation>
+					<xs:documentation/>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="kgqyywhdxxywbGridlbVO">
+		<xs:annotation>
+			<xs:documentation/>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="gjhdqszDm" type="gjhdqszDm">
+				<xs:annotation>
+					<xs:documentation>Tax Jurisdiction，取值为代码表DM_GY_GJHDQ</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="cystmc" type="cystmc">
+				<xs:annotation>
+					<xs:documentation>Constituent Entities resident in the Tax Jurisdiction</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zcszd" type="zcszd">
+				<xs:annotation>
+					<xs:documentation>Tax Jurisdiction of organization or incorporation if different from Tax Jurisdiction of Residence</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yffy" type="je">
+				<xs:annotation>
+					<xs:documentation>Research and Development</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="wxzcje" type="je">
+				<xs:annotation>
+					<xs:documentation>Holding or Managing intellectual property</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="wpcgfje" type="je">
+				<xs:annotation>
+					<xs:documentation>Purchasing or Procurement</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sccb1" type="je">
+				<xs:annotation>
+					<xs:documentation>Manufacturing or Production</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="xsfyje" type="je">
+				<xs:annotation>
+					<xs:documentation>Sales, Marketing or Distribution</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="glfyje" type="je">
+				<xs:annotation>
+					<xs:documentation>Administrative, Management or Support Services</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="tglwcbje" type="je">
+				<xs:annotation>
+					<xs:documentation>Provision of Services to unrelated parties</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="rzje" type="je">
+				<xs:annotation>
+					<xs:documentation>Internal Group Finance</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jrfw" type="je">
+				<xs:annotation>
+					<xs:documentation>Regulated Financial Services</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bxfje" type="je">
+				<xs:annotation>
+					<xs:documentation>Insurance</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="cygf" type="je">
+				<xs:annotation>
+					<xs:documentation>Holding shares or other equity instruments</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="fyyqy" type="je">
+				<xs:annotation>
+					<xs:documentation>Dormant</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qt" type="je">
+				<xs:annotation>
+					<xs:documentation>Other</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

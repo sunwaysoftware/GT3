@@ -1,0 +1,663 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:complexType name="grsdsjmssxbgbYwbw">
+		<xs:annotation>
+			<xs:documentation>个人所得税减免税事项报告表</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="grsdsjmssxbgbBzds" type="grsdsjmssxbgbBzds"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="grsdsjmssxbgbBzds">
+		<xs:annotation>
+			<xs:documentation>个人所得税减免税事项报告表表证单书</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="head" type="grsdsjmssxbgbHead">
+				<xs:annotation>
+					<xs:documentation>个人所得税减免税事项报告表表头</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="body" type="grsdsjmssxbgbBody">
+				<xs:annotation>
+					<xs:documentation>个人所得税减免税事项报告表表体</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bodyAffix" type="xs:anySimpleType">
+				<xs:annotation>
+					<xs:documentation>预留：附属表体</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="grsdsjmssxbgbHead">
+		<xs:annotation>
+			<xs:documentation>个人所得税减免税事项报告表表头</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="nsrsbh" type="nsrsbh">
+				<xs:annotation>
+					<xs:documentation>纳税人识别号，为申报主体的纳税人识别号，不能为空</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="nsrmc" type="nsrmc">
+				<xs:annotation>
+					<xs:documentation>纳税人名称，为申报主体的纳税人名称，不能为空</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="djxh" type="djxh">
+				<xs:annotation>
+					<xs:documentation>登记序号，为申报主体的登记序号，不能为空</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="skssqq" type="skssqq">
+				<xs:annotation>
+					<xs:documentation>
+					税款所属时期起，取申报主表的税款所属时期起，不能为空，格式为：YYYY-MM-DD
+				    </xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="skssqz" type="skssqz">
+				<xs:annotation>
+					<xs:documentation>
+					税款所属时期止，取申报主表的税款所属时期止，不能为空，格式为：YYYY-MM-DD
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="tbrq1" type="tbrq">
+				<xs:annotation>
+					<xs:documentation>填表日期，取申报主表的填表日期，格式为：YYYY-MM-DD</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sbrq" type="sbrq">
+				<xs:annotation>
+					<xs:documentation>申报日期，取申报主表的申报日期，不能为空，格式为：YYYY-MM-DD</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="slrxm" type="slrxm">
+				<xs:annotation>
+					<xs:documentation>受理人姓名，取申报主表的受理人姓名，不能为空</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="slrDm" type="slrDm">
+				<xs:annotation>
+					<xs:documentation>受理人代码，取申报主表的受理人代码，不能为空</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="slrq" type="slrq">
+				<xs:annotation>
+					<xs:documentation>受理日期，取申报主表的受理日期，不能为空，格式为：YYYY-MM-DD</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="lrrq" type="lrrq">
+				<xs:annotation>
+					<xs:documentation>录入日期，取申报主表的录入日期，不能为空，格式为：YYYY-MM-DD</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="slswjgDm" type="slswjgDm">
+				<xs:annotation>
+					<xs:documentation>受理税务机关代码，取申报主表的受理税务机关代码，不能为空</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="slswjgMc" type="slswjgmc">
+				<xs:annotation>
+					<xs:documentation>受理税务机关名称，取申报主表的受理税务机关名称，不能为空</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="grsdsjmssxbgbBody">
+		<xs:annotation>
+			<xs:documentation>个人所得税减免税事项报告表表体</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="grsdsjmssxbgbMx" type="grsdsjmssxbgbMx" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>
+					减免税事项报告表明细，对于申报主体是自然人的，没有该部分内容，对于申报主体是扣缴义务人的，该部分必须有
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="grsdsjmssxbgbHz" type="grsdsjmssxbgbHz" minOccurs="1" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>个人所得税减免税事项报告表汇总</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="grsdsjmssxbgbHj" type="grsdsjmssxbgbHj" minOccurs="1" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>个人所得税减免税事项报告表合计</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="grsdsjmssxbgbMx">
+		<xs:sequence>
+			<xs:element name="jmssxMxlb" type="jmssxMxlb" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>减免税事项明细列表</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ssxdMxlb" type="ssxdMxlb" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>税收协定明细列表</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="jmssxMxlb">
+		<xs:sequence>
+			<xs:element name="jmssxMx" type="jmssxMx" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>减免税事项明细</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="ssxdMxlb">
+		<xs:sequence>
+			<xs:element name="ssxdMx" type="ssxdMx" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>税收协定明细</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="grsdsjmssxbgbHz">
+		<xs:sequence>
+			<xs:element name="jmssxHzlb" type="jmssxHzlb" minOccurs="1" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>减免税事项汇总列表</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ssxdHzlb" type="ssxdHzlb" minOccurs="1" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>税收协定汇总列表</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="jmssxHzlb">
+		<xs:sequence>
+			<xs:element name="jmssxHz" type="jmssxHz" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>减免税事项汇总</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="ssxdHzlb">
+		<xs:sequence>
+			<xs:element name="ssxdHz" type="ssxdHz" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>税收协定汇总</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="jmssxMx">
+		<xs:annotation>
+			<xs:documentation>减免税事项明细</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="xh" type="xh">
+				<xs:annotation>
+					<xs:documentation>序号，由1开始递增，不重复，不能为空</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="nsrxm" type="nsrmc">
+				<xs:annotation>
+					<xs:documentation>纳税人姓名，不能为空</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sfzjlxDm" type="sfzjlxDm">
+				<xs:annotation>
+					<xs:documentation>身份证件类型代码，不能为空</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sfzjlxmc" type="sfzjlxmc">
+				<xs:annotation>
+					<xs:documentation>身份证件类型名称，不能为空</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sfzjhm" type="sfzjhm">
+				<xs:annotation>
+					<xs:documentation>身份证件号码，不能为空，当身份证件类型代码为201【居民身份证】时，身份证件号码长度必须为18位</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="nsrsbh" type="nsrsbh">
+				<xs:annotation>
+					<xs:documentation>纳税人识别号，可以为空</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="btfdwdjxh" type="djxh">
+				<xs:annotation>
+					<xs:documentation>被统发单位登记序号，只有在财政统发的情况下需要传递</xs:documentation>
+				</xs:annotation>
+			</xs:element>			
+			<xs:element name="jmxzDm" type="jmxzDm">
+				<xs:annotation>
+					<xs:documentation>减免性质代码，不能为空</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jmxzmc" type="jmxzmc">
+				<xs:annotation>
+					<xs:documentation>减免性质名称，不能为空</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jmsxDm" type="jmsxDm">
+				<xs:annotation>
+					<xs:documentation>减免事项代码，不能为空</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jmsxmc" type="jmsxmc">
+				<xs:annotation>
+					<xs:documentation>减免事项名称，不能为空</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jmse" type="jmse">
+				<xs:annotation>
+					<xs:documentation>减免税额，不能为空</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="ssxdMx">
+		<xs:annotation>
+			<xs:documentation>税收协定明细</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="xh" type="xh">
+				<xs:annotation>
+					<xs:documentation>序号，由1开始递增，不重复，不能为空</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="nsrxm" type="nsrmc">
+				<xs:annotation>
+					<xs:documentation>纳税人姓名，不能为空</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sfzjlxDm" type="sfzjlxDm">
+				<xs:annotation>
+					<xs:documentation>身份证件类型代码，不能为空</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sfzjlxmc" type="sfzjlxmc">
+				<xs:annotation>
+					<xs:documentation>证照类型名称，不能为空</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sfzjhm" type="sfzjhm">
+				<xs:annotation>
+					<xs:documentation>身份证件号码，不能为空，当身份证件类型代码为201【居民身份证】时，身份证件号码长度必须为18位</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="nsrsbh" type="nsrsbh">
+				<xs:annotation>
+					<xs:documentation>纳税人识别号，可以为空</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="btfdwdjxh" type="djxh">
+				<xs:annotation>
+					<xs:documentation>被统发单位登记序号，只有在财政统发的情况下需要传递</xs:documentation>
+				</xs:annotation>
+			</xs:element>	
+			<xs:element name="sdlxDm" type="sdlxDm">
+				<xs:annotation>
+					<xs:documentation>所得类型代码，不能为空</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sdlxmc" type="sdlxmc">
+				<xs:annotation>
+					<xs:documentation>所得类型名称，不能为空</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ssxdDm" type="ssxdDm">
+				<xs:annotation>
+					<xs:documentation>税收协定代码，不能为空</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ssxdmc" type="ssxdmc">
+				<xs:annotation>
+					<xs:documentation>税收协定名称，不能为空</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ssxdtk" type="ssxdtk">
+				<xs:annotation>
+					<xs:documentation>税收协定条款，不能为空</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ssjmsxDm" type="jmsxDm">
+				<xs:annotation>
+					<xs:documentation>税收协定减免事项代码，不能为空</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ssjmsxmc" type="jmsxmc">
+				<xs:annotation>
+					<xs:documentation>税收协定减免事项名称，不能为空</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ssjmxzDm" type="jmxzDm">
+				<xs:annotation>
+					<xs:documentation>税收协定减免性质代码，不能为空</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ssjmxzmc" type="jmxzmc">
+				<xs:annotation>
+					<xs:documentation>税收协定减免性质名称，不能为空</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jmse" type="jmse">
+				<xs:annotation>
+					<xs:documentation>减免税额，不能为空</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="jmssxHz">
+		<xs:annotation>
+			<xs:documentation>减免税事项汇总，扣缴类申报按照jmxzDm、jmsxDm两项内容进行汇总</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="bh" type="xh">
+				<xs:annotation>
+					<xs:documentation>序号，由1开始递增，不重复，不能为空</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="uuid" type="yhpzuuid">
+				<xs:annotation>
+					<xs:documentation>
+					优惠uuid，传递纳税人所使用的优惠信息的uuid；
+				    如果优惠取自个税系统，总局版本取【C00.SB.ZRRJMSPBAZGXXCX.GSCX.zrrjmspbazgxxcx】请求的mxuuid节点，省局版本取【SWZJ.GSGL.SB.CXZRRJMSPBAZGXX】的mxuuid节点；
+				    如果优惠取自征管系统，对应yhpzuuid；
+					如果减免优惠已备案或已审批不能为空
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="tzrdjxh" type="djxh">
+				<xs:annotation>
+					<xs:documentation>
+					投资人登记序号，如果使用投资人的减免文书，必须传递该字段
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="btzdwdjxh" type="djxh">
+				<xs:annotation>
+					<xs:documentation>
+					被投资单位登记序号，如果使用被投资单位的减免文书，必须传递该字段
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yhjmly" type="bz3">
+				<xs:annotation>
+					<xs:documentation>
+					优惠减免来源，1：来自个税系统，2：来自征管系统，如果为空，表示减免税未备案或未审批
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zspmDm" type="zspmDm">
+				<xs:annotation>
+					<xs:documentation>征收品目代码，生产经营类申报如果减免优惠已备案或已审批则此字段不能为空</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jmzlxDm" type="jmzlxDm">
+				<xs:annotation>
+					<xs:documentation>减免征类型代码，生产经营类申报如果减免优惠已备案或已审批则此字段不能为空</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jmfsDm" type="jmfsDm">
+				<xs:annotation>
+					<xs:documentation>减免方式代码，可以为空</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jmlxDm" type="jmlxDm">
+				<xs:annotation>
+					<xs:documentation>减免类型代码，生产经营类申报如果减免优惠已备案或已审批则此字段不能为空</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jmqxq" type="jmqxq">
+				<xs:annotation>
+					<xs:documentation>减免期限起，生产经营类申报如果减免优惠已备案或已审批则此字段不能为空</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jmqxz" type="jmqxz">
+				<xs:annotation>
+					<xs:documentation>减免期限止，生产经营类申报如果减免优惠已备案或已审批则此字段不能为空</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jzfd" type="jzfd">
+				<xs:annotation>
+					<xs:documentation>
+					减征幅度，如果是免征，jzsl、jzed、jzfd都为空，如果是减征，jzsl、jzed、jzfd必传其中之一
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jzsl" type="jzsl">
+				<xs:annotation>
+					<xs:documentation>					   
+					减征税率，如果是免征，jzsl、jzed、jzfd都为空，如果是减征，jzsl、jzed、jzfd必传其中之一
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jzed" type="jzed">
+				<xs:annotation>
+					<xs:documentation>
+					减征额度，如果是免征，jzsl、jzed、jzfd都为空，如果是减征，jzsl、jzed、jzfd必传其中之一
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jmsxDm" type="jmsxDm">
+				<xs:annotation>
+					<xs:documentation>减免事项代码，不能为空</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jmsxmc" type="jmsxmc">
+				<xs:annotation>
+					<xs:documentation>减免事项名称，不能为空</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jmxzDm" type="jmxzDm">
+				<xs:annotation>
+					<xs:documentation>减免性质代码，不能为空</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jmxzdlDm" type="jmxzdlDm">
+				<xs:annotation>
+					<xs:documentation>减免性质大类代码，jmxzDm的5~6位，可以为空</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jmxzxlDm" type="jmxzxlDm">
+				<xs:annotation>
+					<xs:documentation>减免性质小类代码，jmxzDm的7~8位，可以为空</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jmxzmc" type="jmxzmc">
+				<xs:annotation>
+					<xs:documentation>减免性质名称，不能为空</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jmrs" type="kjrs">
+				<xs:annotation>
+					<xs:documentation>减免人数，不能为空</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jmsehz" type="jmse">
+				<xs:annotation>
+					<xs:documentation>减免税额汇总，不能为空</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="ssxdHz">
+		<xs:annotation>
+			<xs:documentation>税收协定汇总，按照xdnrDm、ssxdDm、ssjmsxDm、ssjmxzDm、ssxdtk五项内容进行汇总</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="bh" type="xh">
+				<xs:annotation>
+					<xs:documentation>序号，由1开始递增，不重复，不能为空</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sdlxDm" type="sdlxDm">
+				<xs:annotation>
+					<xs:documentation>所得类型代码，不能为空</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sdlxmc" type="sdlxmc">
+				<xs:annotation>
+					<xs:documentation>所得类型名称，不能为空</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ssxdDm" type="ssxdDm">
+				<xs:annotation>
+					<xs:documentation>税收协定代码，不能为空</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ssxdmc" type="ssxdmc">
+				<xs:annotation>
+					<xs:documentation>税收协定名称，不能为空</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ssxdtk" type="ssxdtk">
+				<xs:annotation>
+					<xs:documentation>税收协定条款，不能为空</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ssjmsxDm" type="jmsxDm">
+				<xs:annotation>
+					<xs:documentation>税收协定减免事项代码，不能为空</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ssjmsxmc" type="jmsxmc">
+				<xs:annotation>
+					<xs:documentation>税收协定减免事项名称，不能为空</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ssjmxzDm" type="jmxzDm">
+				<xs:annotation>
+					<xs:documentation>税收协定减免性质代码，不能为空</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ssjmxzmc" type="jmxzmc">
+				<xs:annotation>
+					<xs:documentation>税收协定减免性质名称，不能为空</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jmrs" type="kjrs">
+				<xs:annotation>
+					<xs:documentation>减免人数，不能为空</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jmsehz" type="jmse">
+				<xs:annotation>
+					<xs:documentation>减免税额汇总，不能为空</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="grsdsjmssxbgbHj">
+		<xs:annotation>
+			<xs:documentation>个人所得税减免税事项报告表合计</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="jmrsHj" type="kjrs">
+				<xs:annotation>
+					<xs:documentation>减免人数合计，不能为空</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jmseHj" type="jmse">
+				<xs:annotation>
+					<xs:documentation>减免税额合计，不能为空</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:simpleType name="jmxzDm">
+		<xs:annotation>
+			<xs:documentation>减免性质代码</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:maxLength value="12"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="jmxzmc">
+		<xs:annotation>
+			<xs:documentation>减免性质代码</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:maxLength value="450"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="jmsxDm">
+		<xs:annotation>
+			<xs:documentation>减免事项代码</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:maxLength value="10"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="jmsxmc">
+		<xs:annotation>
+			<xs:documentation>减免事项名称</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:maxLength value="1500"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="sdlxDm">
+		<xs:annotation>
+			<xs:documentation>
+			所得类型代码，10-股息、11-利息、12-特许权使用费、13-财产收益、07-常设机构和营业利润条款、
+			14-独立个人劳务条款、21-其他、15-非独立个人劳务、17-演艺人员和运动员、
+			18-退休金、19-政府服务、22-教师和研究人员、20-学生、23-国际运输
+			</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:maxLength value="2"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="jmxzxlDm">
+		<xs:annotation>
+			<xs:documentation>
+			减免性质小类代码，jmxzDm的7~8位
+			</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:maxLength value="2"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="jmxzdlDm">
+		<xs:annotation>
+			<xs:documentation>
+			减免性质大类代码，jmxzDm的5~6位
+			</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:maxLength value="2"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="sdlxmc">
+		<xs:annotation>
+			<xs:documentation>
+			所得类型名称，10-股息、11-利息、12-特许权使用费、13-财产收益、07-常设机构和营业利润条款、
+			14-独立个人劳务条款、21-其他、15-非独立个人劳务、17-演艺人员和运动员、
+			18-退休金、19-政府服务、22-教师和研究人员、20-学生、23-国际运输
+			</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:maxLength value="75"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="ssxdtk">
+		<xs:annotation>
+			<xs:documentation>税收协定条款</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:maxLength value="450"/>
+		</xs:restriction>
+	</xs:simpleType>
+</xs:schema>

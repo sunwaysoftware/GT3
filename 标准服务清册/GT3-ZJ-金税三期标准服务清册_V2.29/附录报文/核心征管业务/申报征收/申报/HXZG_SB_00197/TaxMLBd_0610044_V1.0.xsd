@@ -1,0 +1,285 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2010 rel. 3 (http://www.altova.com) by xuxin (csstj) -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:include schemaLocation="TaxMLPublicType.xsd"/>
+	<xs:complexType name="ssyhmxsbbywbw">
+		<xs:annotation>
+			<xs:documentation>《中华人民共和国企业所得税年度纳税申报表附表五税收优惠明细表》业务报文</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="ssyhmxsbb">
+						<xs:annotation>
+							<xs:documentation>《中华人民共和国企业所得税年度纳税申报表附表五税收优惠明细表》</xs:documentation>
+						</xs:annotation>
+						<xs:complexType>
+							<xs:sequence>
+								<xs:element name="ssyhmxsbbFrom" type="ssyhmxsbbFrom">
+									<xs:annotation>
+										<xs:documentation>税收优惠明细表信息</xs:documentation>
+									</xs:annotation>
+								</xs:element>
+							</xs:sequence>
+						</xs:complexType>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="ssyhmxsbb">
+		<xs:annotation>
+			<xs:documentation>《中华人民共和国企业所得税年度纳税申报表附表五税收优惠明细表》</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="ssyhmxsbbFrom" type="ssyhmxsbbFrom">
+				<xs:annotation>
+					<xs:documentation>税收优惠明细表信息</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="ssyhmxsbbFrom">
+		<xs:annotation>
+			<xs:documentation>税收优惠明细表对应明细</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="mssr" type="mssr" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>免税收入</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="gzlxsr" type="gzlxsr" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>国债利息收入</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="fhtjJmqyzjGxhldqyxtzsy" type="fhtjJmqyzjGxhldqyxtzsy" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>符合条件的居民企业之间的股息红利等权益性投资收益</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="fhtjFylzzSr" type="fhtjFylzzSr" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>符合条件的非营利组织的收入</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qtmssr" type="qtmssr" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>其他免税收入</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jjsr" type="jjsr" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>减计收入</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qylyzyscfhgjzcCpsqdJjsr" type="qylyzyscfhgjzcCpsqdJjsr" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>企业综合利用资源生产符合国家产业政策规定的产品所取得的减计收入</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qtjjsr" type="qtjjsr" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>其他减计收入</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jjkcehj" type="jjkcehj" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>加计扣除额合计</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="kfxjsXcpXgyfsYjkffy" type="kfxjsXcpXgyfsYjkffy" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>开发新技术、新产品、新工艺发生的研究开发费用</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="azcjryszfGz" type="azcjryszfGz" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>安置残疾人员所支付的工资</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="gjglazQtjyryzfGz" type="gjglazQtjyryzfGz" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>国家鼓励安置的其他就业人员支付的工资</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qtjjkc" type="qtjjkc" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>其他加计扣除</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jmsdehj" type="jmsdehj" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>减免所得额合计</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="mssd" type="mssd" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>免税所得</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="csscgwslyldlmhmltlsgjgZzmssd" type="csscgwslyldlmhmltlsgjgZzmssd" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>从事蔬菜、谷物、薯类、油料、豆类、棉花、麻类、糖料、水果、坚果的种植免税所得</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="csnzwxpzXymssd" type="csnzwxpzXymssd" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>从事农作物新品种的选育免税所得</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="cszycZzmssd" type="cszycZzmssd" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>从事中药材的种植免税所得</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="cslmPyhzzmssd" type="cslmPyhzzmssd" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>从事林木的培育和种植免税所得</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="cssxJqSymssd" type="cssxJqSymssd" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>从事牲畜、家禽的饲养免税所得</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="cslcpCjmssd" type="cslcpCjmssd" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>从事林产品的采集免税所得</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="csggNcpcjgSyNjtgNjzydmssd" type="csggNcpcjgSyNjtgNjzydmssd" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>从事灌溉、农产品初加工、兽医、农技推广、农机作业和维修等农、林、牧、渔服务业项目免税所得</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="csyyblmssd" type="csyyblmssd" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>从事远洋捕捞免税所得</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qtmssd" type="qtmssd" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>其他免税所得</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jssd" type="jssd" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>减税所得</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="cshhCyjqtylzwhxlzwZzxmjssd" type="cshhCyjqtylzwhxlzwZzxmjssd" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>从事花卉、茶以及其他饮料作物和香料作物的种植项目减税所得</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="cshsyzNlyzxmjssd" type="cshsyzNlyzxmjssd" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>从事海水养殖、内陆养殖项目减税所得</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qtjssd" type="qtjssd" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>其他减税所得</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="csgjzdfcGgjcssxmtzjySd" type="csgjzdfcGgjcssxmtzjySd" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>从事国家重点扶持的公共基础设施项目投资经营的所得</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="csfhtjHjbhJnjsxmSd" type="csfhtjHjbhJnjsxmSd" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>从事符合条件的环境保护、节能节水项目的所得</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="fhtjJszrsd" type="fhtjJszrsd" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>符合条件的技术转让所得</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qtjmsde" type="qtjmsde" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>其他减免所得额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jmshj" type="jmshj" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>减免税合计</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="fhtjXxwlqy" type="fhtjXxwlqy" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>符合条件的小型微利企业</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="gjxyzdfcGxjsqy" type="gjxyzdfcGxjsqy" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>国家需要重点扶持的高新技术企业</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="mzzzdfQyyjnQysdszsydffxBf" type="mzzzdfQyyjnQysdszsydffxBf" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>民族自治地方的企业应缴纳的企业所得税中属于地方分享的部分</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="gdqssyh" type="gdqssyh" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>过渡期税收优惠</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qtjms" type="qtjms" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>其他减免税</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="cytzqydkYnssde" type="cytzqydkYnssde" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>创业投资企业抵扣的应纳税所得额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="dmsdsehj" type="dmsdsehj" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>抵免所得税额合计</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qygzyyhjbhzysbTzedmSe" type="qygzyyhjbhzysbTzedmSe" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>企业购置用于环境保护专用设备的投资额抵免的税额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qygzyyjnjszysbTzedmSe" type="qygzyyjnjszysbTzedmSe" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>企业购置用于节能节水专用设备的投资额抵免的税额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qygzyyaqsczysbTzedmSe" type="qygzyyaqsczysbTzedmSe" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>企业购置用于安全生产专用设备的投资额抵免的税额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qtdmsds" type="qtdmsds" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>其他抵免所得税</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qycyrsQnpjrs" type="qycyrsQnpjrs" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>企业从业人数全年平均人数</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zczeQnpjs" type="zczeQnpjs" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>资产总额全年平均数</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="hyDm" type="hyDm" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>行业代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

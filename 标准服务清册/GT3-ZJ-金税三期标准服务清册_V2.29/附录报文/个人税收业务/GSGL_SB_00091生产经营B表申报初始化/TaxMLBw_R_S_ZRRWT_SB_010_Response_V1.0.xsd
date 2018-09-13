@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:complexType name="scjybbsbcshxxresponse">
+		<xs:annotation>
+			<xs:documentation>生产经营B表申报初始化信息反馈</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="sbcshxx" type="sbcshxx"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="sbcshxx">
+		<xs:annotation>
+			<xs:documentation>申报初始化信息列表</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="rtncode" type="sdsnsfsDm">
+				<xs:annotation>
+					<xs:documentation>初始化结果标志</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="rtnmesg" type="hzyj">
+				<xs:annotation>
+					<xs:documentation>初始化结果说明</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="tyskssqnabsfsb" type="tyskssqnabsfsb">
+				<xs:annotation>
+					<xs:documentation>同一税款所属期内Ａ表是否申报；重复申报状态 1：未申报过 2：申报正在处理（申报过） 3：已申报（申报过）</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sbcshyjse" type="sbcshyjse"/>
+			<xs:element name="sbcshjmxxlb" type="sbcshjmxxlb"/>
+			<xs:element name="sbcshtzfxx" type="sbcshtzfxx"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="sbcshyjse">
+		<xs:annotation>
+			<xs:documentation>申报初始化已缴税额</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="sqyjse" type="yjse">
+				<xs:annotation>
+					<xs:documentation>上期已缴税额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="sbcshjmxxlb">
+		<xs:annotation>
+			<xs:documentation>申报初始化减免信息列表</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="sbcshjmxx" type="sbcshjmxx" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="sbcshjmxx">
+		<xs:annotation>
+			<xs:documentation>申报初始化减免信息</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="yhzt" type="dwdm">
+				<xs:annotation>
+					<xs:documentation>优惠主体；自然人：01、组织：02</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yhpzuuid" type="yhpzuuid">
+				<xs:annotation>
+					<xs:documentation>优惠凭证uuid</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jmssxdm" type="bsm">
+				<xs:annotation>
+					<xs:documentation>减免税事项代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jmqxq" type="jmqxq">
+				<xs:annotation>
+					<xs:documentation>减免期限起；格式：YYYY-MM-DD</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jmqxz" type="jmqxz">
+				<xs:annotation>
+					<xs:documentation>减免期限止；格式：YYYY-MM-DD</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zsxmDm" type="zsxmDm">
+				<xs:annotation>
+					<xs:documentation>征收项目代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zspmDm" type="zspmDm">
+				<xs:annotation>
+					<xs:documentation>征收品目代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jmlxDm" type="jmlxDm">
+				<xs:annotation>
+					<xs:documentation>减免类型；税率式减免：1、税额式减免：2、税基式减免：3、其他：9</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jmed" type="jmed">
+				<xs:annotation>
+					<xs:documentation>减免额度</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jmfd" type="jmfd">
+				<xs:annotation>
+					<xs:documentation>减免幅度</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jmsl" type="jmsl">
+				<xs:annotation>
+					<xs:documentation>减免税率</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jmxzdm" type="jmyjDm">
+				<xs:annotation>
+					<xs:documentation>减免性质代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jmslxDm" type="jmslxDm">
+				<xs:annotation>
+					<xs:documentation>减免税类型；减税：01、免税：02</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jmfsDm" type="jmfsDm">
+				<xs:annotation>
+					<xs:documentation>减免方式</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jmxzdlDm" type="jmxmDm">
+				<xs:annotation>
+					<xs:documentation>减免性质大类代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jmxzxlDm" type="jmxmDm">
+				<xs:annotation>
+					<xs:documentation>减免性质小类代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jmly" type="jmyjsfzqbz">
+				<xs:annotation>
+					<xs:documentation>减免来源 1:个税 2：核心征管</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="sbcshtzfxx">
+		<xs:annotation>
+			<xs:documentation>投资方信息</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="sfytzgx" type="sfytzgx">
+				<xs:annotation>
+					<xs:documentation>是否有投资关系(默认为空，N：没有 Y：有)
+					备注：适用于被投资单位类型为个人独资企业或合伙企业</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="fpbl" type="hhrfpbl">
+				<xs:annotation>
+					<xs:documentation>分配比例</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="lyqd" type="bz3">
+				<xs:annotation>
+					<xs:documentation>来源渠道代码（默认为空，1:来源金三个税系统，2：来源核心征管系统）</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

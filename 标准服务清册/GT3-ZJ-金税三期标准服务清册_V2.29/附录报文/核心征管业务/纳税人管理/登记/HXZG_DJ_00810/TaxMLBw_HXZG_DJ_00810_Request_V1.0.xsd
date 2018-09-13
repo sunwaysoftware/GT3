@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2013 (http://www.altova.com) by  () -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:complexType name="WjzglCxtjVO">
+		<xs:annotation>
+			<xs:documentation>外经证管理查询条件VO</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="wcjyglzmztDm" type="bz1">
+				<xs:annotation>
+					<xs:documentation>外出经营活动管理状态</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="wcjykjdxzqhszDm" type="wcjydxzqhszDm">
+				<xs:annotation>
+					<xs:documentation>开具地行政区划数字代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zmyxqxq" type="zmyxqxq">
+				<xs:annotation>
+					<xs:documentation>证明有效期起</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zmyxqxz" type="zmyxqxz">
+				<xs:annotation>
+					<xs:documentation>证明有效期止</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="nsrmc" type="nsrmc">
+				<xs:annotation>
+					<xs:documentation>纳税人名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="nsrsbh" type="nsrsbh">
+				<xs:annotation>
+					<xs:documentation>纳税人识别号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="dfjgBz" type="bz1">
+				<xs:annotation>
+					<xs:documentation>对方机关标志</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="gdslxDm" type="gdslxDm">
+				<xs:annotation>
+					<xs:documentation>国地税类型代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="HXZGDJ00810Request">
+		<xs:annotation>
+			<xs:documentation>查询外埠纳税人经营地报验登记管理</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="WjzglCxtjVO" type="WjzglCxtjVO">
+						<xs:annotation>
+							<xs:documentation>外经证管理查询条件VO</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+</xs:schema>

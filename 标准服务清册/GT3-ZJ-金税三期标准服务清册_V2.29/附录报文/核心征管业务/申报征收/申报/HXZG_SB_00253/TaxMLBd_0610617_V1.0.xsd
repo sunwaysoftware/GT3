@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 被2012 () 使用XMLSpy v编辑的 (http://www.altova.com) by -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:include schemaLocation="TaxMLPublicType.xsd"/>
+	<xs:complexType name="zrfdcsrmxsbbywbw">
+		<xs:annotation>
+			<xs:documentation>转让房地产收入明细申报表业务报文</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="zrfdcsrmxsbb" type="zrfdcsrmxsbb">
+						<xs:annotation>
+							<xs:documentation>转让房地产收入明细申报表</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="zrfdcsrmxsbb">
+		<xs:annotation>
+			<xs:documentation>转让房地产收入明细申报表</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="zrfdcsrmxsbbForm">
+				<xs:annotation>
+					<xs:documentation>申报表信息</xs:documentation>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:complexContent>
+						<xs:extension base="zrfdcsrmxsbbForm"/>
+					</xs:complexContent>
+				</xs:complexType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="zrfdcsrmxsbbForm">
+		<xs:annotation>
+			<xs:documentation>申报头信息</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="hbxsqddsr" type="je">
+				<xs:annotation>
+					<xs:documentation>货币形式取得的收入金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="hbxsqddsrbz" type="bz">
+				<xs:annotation>
+					<xs:documentation>货币形式取得的收入备注</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="fhbxsr" type="je">
+				<xs:annotation>
+					<xs:documentation>非货币性收入金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="fhbxsrbz" type="bz">
+				<xs:annotation>
+					<xs:documentation>非货币性收入备注</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="stxssr" type="je">
+				<xs:annotation>
+					<xs:documentation>视同销售收入金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="stxssrbz" type="bz">
+				<xs:annotation>
+					<xs:documentation>视同销售收入备注</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zrsrxshj" type="je">
+				<xs:annotation>
+					<xs:documentation>合 计金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zrsrxshjbz" type="bz">
+				<xs:annotation>
+					<xs:documentation>合 计备注</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="xshbje" type="je">
+				<xs:annotation>
+					<xs:documentation>销售货币金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="xshbjebz" type="bz">
+				<xs:annotation>
+					<xs:documentation>销售货币金额备注</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="hqfhbje" type="je">
+				<xs:annotation>
+					<xs:documentation>换取非货币性资产作价金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="hqfhbjebz" type="bz">
+				<xs:annotation>
+					<xs:documentation>换取非货币性资产作价金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="fpgdzjje" type="je">
+				<xs:annotation>
+					<xs:documentation>分配股东作价金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="fpgdzjjebz" type="bz">
+				<xs:annotation>
+					<xs:documentation>分配股东作价金额备注</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="fptzrzjje" type="je">
+				<xs:annotation>
+					<xs:documentation>分配投资人作价金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="fptzrzjjebz" type="bz">
+				<xs:annotation>
+					<xs:documentation>分配投资人作价金额备注</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zgflje" type="je">
+				<xs:annotation>
+					<xs:documentation>用于职工福利作价金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zgfljebz" type="bz">
+				<xs:annotation>
+					<xs:documentation>用于职工福利作价金额备注</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zgjlje" type="je">
+				<xs:annotation>
+					<xs:documentation>用于职工奖励作价金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zgjljebz" type="bz">
+				<xs:annotation>
+					<xs:documentation>用于职工奖励作价金额备注</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zzzjje" type="je">
+				<xs:annotation>
+					<xs:documentation>用于赞助作价金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zzzjjebz" type="bz">
+				<xs:annotation>
+					<xs:documentation>用于赞助作价金额备注</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="dwtzje" type="je">
+				<xs:annotation>
+					<xs:documentation>对外投资金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="dwtzjebz" type="bz">
+				<xs:annotation>
+					<xs:documentation>对外投资金额备注</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="dczwje" type="je">
+				<xs:annotation>
+					<xs:documentation>抵偿债务金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="dczwjebz" type="bz">
+				<xs:annotation>
+					<xs:documentation>抵偿债务金额备注</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qdqtsyje" type="je">
+				<xs:annotation>
+					<xs:documentation>取得其他收益金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qdqtsyjebz" type="bz">
+				<xs:annotation>
+					<xs:documentation>取得其他收益金额备注</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zrsrlbhj" type="je">
+				<xs:annotation>
+					<xs:documentation>合 计金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zrsrlbhjbz" type="bz">
+				<xs:annotation>
+					<xs:documentation>合 计金额备注</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

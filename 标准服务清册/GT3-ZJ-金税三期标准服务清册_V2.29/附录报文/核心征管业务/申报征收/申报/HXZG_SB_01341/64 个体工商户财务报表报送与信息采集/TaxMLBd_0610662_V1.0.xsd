@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2010 rel. 3 (http://www.altova.com) by xiang (hbnu) -->
+<!-- 被2011 rel. 2 sp1 (TeaM DJiNN) 使用XMLSpy vTeaM DJiNN编辑的 (http://www.altova.com) by -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:include schemaLocation="TaxMLPublicType.xsd"/>
+	<xs:complexType name="sygtgshyssdbxxFormVO">
+		<xs:annotation>
+			<xs:documentation>应税所得表（适用执行个体工商户会计制度的单位）</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="yysr" type="yysr" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>营业收入</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yyzj" type="yysje" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>营业税金</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yycb" type="yycb" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>营业成本</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yyfy" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>营业费用</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yywsz" type="yywSrzzje" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>营业外收支</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bnjysd" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>本年经营所得</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ymbdyqndks" type="ymbksje" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>应弥补的以前年度亏损</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bnyssd" type="bnYsk" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>本年应税所得</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

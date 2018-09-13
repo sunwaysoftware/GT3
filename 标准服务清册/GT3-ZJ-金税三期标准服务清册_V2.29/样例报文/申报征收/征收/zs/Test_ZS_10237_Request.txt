@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<service xmlns="http://www.chinatax.gov.cn/spec/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<head>
+		<tran_id>SWZJ.HXZG.ZS.YBZSKPPL</tran_id>
+		<channel_id>TEST</channel_id>
+		<tran_seq>e645dbdbbc03462cb99402bfe37f6d79</tran_seq>
+		<tran_date>20120420</tran_date>
+		<tran_time>022034181</tran_time> <expand>
+      <name>identityType</name>
+      <value>3327006290056</value>
+    </expand>
+    <expand>
+      <name>sjry</name>
+      <value>24406060735</value>
+    </expand>
+    <expand>
+      <name>sjjg</name>
+      <value>24406060700</value>
+    </expand>
+	</head>
+	<body><![CDATA[<taxML xsi:type="HXZGZS10237Request" bbh="String" xmlbh="String" xmlmc="String" xsi:schemaLocation="http://www.chinatax.gov.cn/dataspec/ TaxMLBw_HXZG_ZS_10237_Request_V1.0.xsd" xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<djxh>12442009981051063272</djxh>
+	<skssswjgDm>24406050000</skssswjgDm>
+  <ZSkpFormVO>
+    <sfjnfs>72</sfjnfs>
+    <sfdysp>1</sfdysp>
+    <znjtsjscs>1</znjtsjscs>
+    <pzzl>000001031</pzzl>
+    <pzzg>2441031143</pzzg>
+    <pzqshm>20000267</pzqshm>
+    <kprq>20170209</kprq>
+  </ZSkpFormVO>
+	<yzpzxhGrid>
+		<yzpzxhGridlb>
+			<yzpzxh>10024417000000020031</yzpzxh>
+			<yzpzmxxhGrid>
+				<yzpzmxxhGridlb>
+					<yzpzmxxh>6</yzpzmxxh>
+					<zsuuid>9B729188167A8448C3BA957ECCAC28EB</zsuuid>
+				</yzpzmxxhGridlb>
+				
+				<yzpzmxxhGridlb>
+					<yzpzmxxh>7</yzpzmxxh>
+					<zsuuid>78AA1CCCCFB3F1F1909EDA36E42A35C0</zsuuid>
+				</yzpzmxxhGridlb>
+			</yzpzmxxhGrid>
+		</yzpzxhGridlb>
+	</yzpzxhGrid>
+</taxML>]]></body>
+</service>

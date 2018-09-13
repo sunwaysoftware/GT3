@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2010 rel. 3 (http://www.altova.com) by MESMERiZE (MSM) -->
+<!-- 被2012 () 使用XMLSpy v编辑的 (http://www.altova.com) by -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:include schemaLocation="TaxMLBw_clgzssb_V1.0.xsd"/>
+	<xs:include schemaLocation="TaxMLPublicSBType.xsd"/>
+	<xs:complexType name="HXZGSB00081Response">
+		<xs:annotation>
+			<xs:documentation>车辆购置税车辆识别代号监控返回报文</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="SBCgsClsbdhJkResVO" type="SBCgsClsbdhJkResVO">
+						<xs:annotation>
+							<xs:documentation>车辆购置税车辆识别号监控返回值对象</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="SBCgsClsbdhJkResVO">
+		<xs:annotation>
+			<xs:documentation>车辆购置税车辆识别号监控返回值对象</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="isTscl" type="bz">
+				<xs:annotation>
+					<xs:documentation>是否退税处理标志</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="reCode" type="bz">
+				<xs:annotation>
+					<xs:documentation>返回标志 0:重复申报，1：已经暂存（应急模式）状态，2：已申报待开具状态，100：未申报状态</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="clgzssbywbw" type="clgzssbywbw">
+				<xs:annotation>
+					<xs:documentation>车购税申报表对象</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="cgssbuuidSaved" type="cgssbuuid">
+				<xs:annotation>
+					<xs:documentation>已完税的车购税申报主键</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="wszmhmSaved" type="wszmhm">
+				<xs:annotation>
+					<xs:documentation>已完税的车购税申报完税证明号码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="SBCgsJmxxVO" type="SBCgsJmxxVO">
+				<xs:annotation>
+					<xs:documentation>车购税减免监控返回值对象</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="SBCgsClsbdhJkKzVO" type="SBCgsClsbdhJkKzVO">
+				<xs:annotation>
+					<xs:documentation>车购税车价号监控扩展对象</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="SBCgsClsbdhJkKzVO">
+		<xs:annotation>
+			<xs:documentation>车购税车价号监控扩展对象</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="sfxny" type="bz">
+				<xs:annotation>
+					<xs:documentation>是否新能源标志</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="SBCgsJmxxVO">
+		<xs:annotation>
+			<xs:documentation>车购税减免监控返回值对象</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="sbjmxxvo" type="SBJmxxJhVO">
+				<xs:annotation>
+					<xs:documentation>减免信息值对象，优惠域服务返回</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jmzg" type="bz">
+				<xs:annotation>
+					<xs:documentation>减免资格标志Y有减免资格，N不具有减免资格</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jmzgDjxh" type="djxh">
+				<xs:annotation>
+					<xs:documentation>车辆识别代号对应的减免信息中的登记序号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jmzgClsbdh" type="clsbdh">
+				<xs:annotation>
+					<xs:documentation>车辆识别代号对应的减免信息中的车辆识别代号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jmzgNsrsbh" type="nsrsbh">
+				<xs:annotation>
+					<xs:documentation>车辆识别代号对应的减免信息中的纳税人识别号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jmzgNsrmc" type="nsrmc">
+				<xs:annotation>
+					<xs:documentation>车辆识别代号对应的减免信息中的纳税人名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yhmstcBz" type="bz">
+				<xs:annotation>
+					<xs:documentation>优惠免税图册标志（设有固定装置的车辆，必须具有免税图册）</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="hgfwdwglxryBz" type="bz">
+				<xs:annotation>
+					<xs:documentation>回国服务的在外留学人员享受免税资格标志</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="cqlhdjzjBz" type="bz">
+				<xs:annotation>
+					<xs:documentation>长期来华定居专家享受免税资格标志</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="clsbdh" type="clsbdh">
+				<xs:annotation>
+					<xs:documentation>车架号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="clgzsmjstjDm" type="clgzsmjstjDm">
+				<xs:annotation>
+					<xs:documentation>车辆购置税免减税条件代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

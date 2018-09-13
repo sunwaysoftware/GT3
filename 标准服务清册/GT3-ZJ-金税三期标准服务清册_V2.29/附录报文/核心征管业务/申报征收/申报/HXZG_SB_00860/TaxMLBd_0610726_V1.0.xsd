@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 被2011 rel. 2 sp1 (TeaM DJiNN) 使用XMLSpy vTeaM DJiNN编辑的 (http://www.altova.com) by -->
+<!-- edited with XMLSpy v2010 rel. 3 (http://www.altova.com) by MESMERiZE (MSM) -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:include schemaLocation="TaxMLPublicType.xsd"/>
+	<xs:complexType name="kdqjyhznsqyndftqysdsmxbForm">
+		<xs:annotation>
+			<xs:documentation>跨地区经营汇总纳税企业年度分摊企业所得税明细表(A109000)业务报文</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="kdqjyhznsqyndftqysdMxbVO" type="kdqjyhznsqyndftqysdmxbVO" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>跨地区经营汇总纳税企业年度分摊企业所得税明细表</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="kdqjyhznsqyndftqysdmxbVO">
+		<xs:annotation>
+			<xs:documentation>《跨地区经营汇总纳税企业年度分摊企业所得税明细表》</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="zjgsjynsdse" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>总机构实际应纳所得税额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jwsdynsdse1" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>减：境外所得应纳所得税额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jwsddmsdse" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>加：境外所得抵免所得税额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zjgyyftdbnsjynsdse" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>总机构用于分摊的本年实际应纳所得税</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bnljyysds" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>本年累计已预分、已分摊所得税</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zjgxqzjgldyfsdse" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>总机构向其直接管理的建筑项目部所在地预分的所得税额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zjgyftsdse" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>总机构已分摊所得税额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="czjzyfpsdse" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>财政集中已分配所得税额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zjgfzjgftsde" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>总机构所属分支机构已分摊所得税额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zjgztscftsdse" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>其中：总机构主体生产经营部门已分摊所得税额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zjgbnyftybtse" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>总机构本年度应分摊的应补（退）的所得税</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zjgftybtse" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>总机构分摊本年应补（退）的所得税额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="czjzfpybtse" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>财政集中分配本年应补（退）的所得税额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zjgssfzftybtse" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>总机构所属分支机构分摊本年应补（退）的所得税额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zjgztscjybmybtse" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>其中：总机构主体生产经营部门分摊本年应补（退）的所得税额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zjgjwsddmhynse" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>总机构境外所得抵免后的应纳所得税额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zjgbnybtse" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>总机构本年应补（退）的所得税额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

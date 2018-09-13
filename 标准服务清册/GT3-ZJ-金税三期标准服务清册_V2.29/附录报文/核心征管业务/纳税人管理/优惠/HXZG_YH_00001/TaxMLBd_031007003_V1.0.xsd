@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2013 (http://www.altova.com) by  () -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:include schemaLocation="TaxMLPublicYHType.xsd"/>
+	<xs:include schemaLocation="TaxMLPublicDJType.xsd"/>
+	<xs:complexType name="gdzcjszjhsdzjnxbaqkywbw">
+		<xs:annotation>
+			<xs:documentation>固定资产加速折旧或缩短折旧年限备案信息采集业务报文</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="gdzcjszjhsdzjnxbaqkb" type="gdzcjszjhsdzjnxbaqkb"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="gdzcjszjhsdzjnxbaqkb">
+		<xs:annotation>
+			<xs:documentation>固定资产加速折旧或缩短折旧年限备案表单</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="YHSqkcsqbabVO" type="YHSqkcsqbabVO"/>
+			<xs:element name="gdzczjBaqkGrid">
+				<xs:complexType>
+					<xs:sequence maxOccurs="unbounded">
+						<xs:element name="gdzczjBaqkGridlb" type="YHSqkcGdzcjszjxxVO"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="DJYsqywslxxbVO" type="DJYsqywslxxbVO"/>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2013 (http://www.altova.com) by  () -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:include schemaLocation="TaxMLPublicType.xsd"/>
+	<xs:include schemaLocation="TaxMLBd_0610068_V1.0.xsd"/>
+	<xs:include schemaLocation="TaxMLBd_0610059_V1.0.xsd"/>
+	<xs:include schemaLocation="TaxMLBd_0610060_V1.0.xsd"/>
+	<xs:include schemaLocation="TaxMLBd_0610061_V1.0.xsd"/>
+	<xs:include schemaLocation="TaxMLBd_0610062_V1.0.xsd"/>
+	<xs:include schemaLocation="TaxMLBd_0610063_V1.0.xsd"/>
+	<xs:include schemaLocation="TaxMLBd_0610064_V1.0.xsd"/>
+	<xs:include schemaLocation="TaxMLBd_0610065_V1.0.xsd"/>
+	<xs:include schemaLocation="TaxMLBd_0610066_V1.0.xsd"/>
+	<xs:include schemaLocation="TaxMLBd_0610067_V1.0.xsd"/>
+	<xs:complexType name="glywwlbgsbbywbw">
+		<xs:annotation>
+			<xs:documentation>《中华人民共和国企业年度关联业务往来报告表》业务报文</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="glgxsbb" type="glgxsbb">
+						<xs:annotation>
+							<xs:documentation>《中华人民共和国企业年度关联业务往来报告表表一关联关系表》</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="gljyhzsbb" type="gljyhzsbb">
+						<xs:annotation>
+							<xs:documentation>《中华人民共和国企业年度关联业务往来报告表表二关联交易汇总表》</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="gxsbb" type="gxsbb">
+						<xs:annotation>
+							<xs:documentation>《中华人民共和国企业年度关联业务往来报告表表三购销表》</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="lwsbb" type="lwsbb">
+						<xs:annotation>
+							<xs:documentation>《中华人民共和国企业年度关联业务往来报告表表四劳务表》</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="wxzcsbb" type="wxzcsbb">
+						<xs:annotation>
+							<xs:documentation>《中华人民共和国企业年度关联业务往来报告表表五无形资产表》</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="gdzcsbb" type="gdzcsbb">
+						<xs:annotation>
+							<xs:documentation>《中华人民共和国企业年度关联业务往来报告表表六固定资产表》</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="rtzjsbb" type="rtzjsbb">
+						<xs:annotation>
+							<xs:documentation>《中华人民共和国企业年度关联业务往来报告表表七融通资金表》</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="dwtzqksbb" type="dwtzqksbb">
+						<xs:annotation>
+							<xs:documentation>《中华人民共和国企业年度关联业务往来报告表表八对外投资情况表》</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="dwzfkxqksbb" type="dwzfkxqksbb">
+						<xs:annotation>
+							<xs:documentation>《中华人民共和国企业年度关联业务往来报告表表九对外支付款项情况表》</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="qyndglywwlbgbd" type="qyndglywwlbgbd">
+						<xs:annotation>
+							<xs:documentation>企业年度关联业务往来报告表(主表)</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+</xs:schema>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2013 (http://www.altova.com) by  () -->
+<!-- 被2011 rel. 2 sp1 (TeaM DJiNN) 使用XMLSpy vTeaM DJiNN编辑的 (http://www.altova.com) by -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:include schemaLocation="TaxMLBd_ddlxqymcxxb_V1.0.xsd"/>
+	<xs:include schemaLocation="TaxMLBd_xsjgqd_V1.0.xsd"/>
+	<xs:complexType name="ddlxqymcywbw">
+		<xs:annotation>
+			<xs:documentation>总业务报文</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="ddlxqymc" type="ddlxqymcVO">
+						<xs:annotation>
+							<xs:documentation>定点联系企业名册信息表</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="xsjgqd" type="xsjgqdVO" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>下属机构清单</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+</xs:schema>

@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 被2011 rel. 2 sp1 (TeaM DJiNN) 使用XMLSpy vTeaM DJiNN编辑的 (http://www.altova.com) by -->
+<!-- edited with XMLSpy v2010 rel. 3 (http://www.altova.com) by MESMERiZE (MSM) -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:include schemaLocation="TaxMLPublicType.xsd"/>
+	<xs:complexType name="rjjcdlqyyhqkjmxbForm">
+		<xs:annotation>
+			<xs:documentation>软件、集成电路企业优惠情况及明细表(A107042)业务报文</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="rjjcdlqyyhqkjMxbVO" type="rjjcdlqyyhqkjmxbVO" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>软件、集成电路企业优惠情况及明细表</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="rjjcdlqyyhqkjmxbVO">
+		<xs:annotation>
+			<xs:documentation>《软件、集成电路企业优惠情况及明细表》</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="qyclrq" type="sj" >
+				<xs:annotation>
+					<xs:documentation>企业成立日期</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="rjqyzsqerq" type="sj" >
+				<xs:annotation>
+					<xs:documentation>软件企业证书取得日期</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="rjqyrdzsbh" type="bh" >
+				<xs:annotation>
+					<xs:documentation>软件企业认定证书编号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="rjcpdjzsbh" type="bh" >
+				<xs:annotation>
+					<xs:documentation>软件产品登记证书编号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jsjjczzdjrdzsbh" type="bh" >
+				<xs:annotation>
+					<xs:documentation>计算机信息系统集成资质等级认定证书编号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jcdlscqyrdwh" type="bh" >
+				<xs:annotation>
+					<xs:documentation>集成电路生产企业认定文号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jcdlscqyrdbh" type="bh" >
+				<xs:annotation>
+					<xs:documentation>集成电路设计企业认定证书编号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qybnypjzgzrs" type="sl" >
+				<xs:annotation>
+					<xs:documentation>企业本年月平均职工总人数</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qdldhtgxdzyszgrs" type="sl" >
+				<xs:annotation>
+					<xs:documentation>其中:签订劳动合同关系且具有大学专科以上学历的职工人数</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yjkfryrs" type="sl" >
+				<xs:annotation>
+					<xs:documentation>研究开发人员人数</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qdldhtdzyszpjzgbl" type="bl" >
+				<xs:annotation>
+					<xs:documentation>签订劳动合同关系且具有大学专科以上学历的职工人数占企业当年月平均职工总人数的比例</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yfryzpjzgbl" type="bl" >
+				<xs:annotation>
+					<xs:documentation>研究开发人员占企业本年月平均职工总数的比例</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qysrze" type="je" >
+				<xs:annotation>
+					<xs:documentation>企业收入总额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jcdlzzsr" type="je" >
+				<xs:annotation>
+					<xs:documentation>集成电路制造销售（营业）收入</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jcdlzzsrzqysrbl" type="bl" >
+				<xs:annotation>
+					<xs:documentation>集成电路制造销售（营业）收入占企业收入总额的比例</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jcdlsjxssr" type="je" >
+				<xs:annotation>
+					<xs:documentation>集成电路设计销售（营业）收入</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jcdlzzsjsr" type="je" >
+				<xs:annotation>
+					<xs:documentation>集成电路自主设计销售（营业）收入</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jcdlsjsrzzebl" type="bl" >
+				<xs:annotation>
+					<xs:documentation>集成电路设计企业的集成电路设计销售（营业）收入占企业收入总额的比例</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jcdlzzsjzzebl" type="je" >
+				<xs:annotation>
+					<xs:documentation>集成电路自主设计销售（营业）收入占企业收入总额的比例</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="rjcpkfsr" type="je" >
+				<xs:annotation>
+					<xs:documentation>软件产品开发销售（营业）收入</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qrsrjcpxxcpkfsr" type="je" >
+				<xs:annotation>
+					<xs:documentation>嵌入式软件产品和信息系统集成产品开发销售（营业）收入</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="rjcpzzkfsr" type="je" >
+				<xs:annotation>
+					<xs:documentation>软件产品自主开发销售（营业）收入</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qrsrjhxxcpzzkfsr" type="je" >
+				<xs:annotation>
+					<xs:documentation>嵌入式软件产品和信息系统集成产品自主开发销售（营业）收入</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="rjcpkfsrzzebl" type="bl" >
+				<xs:annotation>
+					<xs:documentation>软件企业的软件产品开发销售（营业）收入占企业收入总额的比例</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qrsrjhxxcpkfsrzzebl" type="bl" >
+				<xs:annotation>
+					<xs:documentation>嵌入式软件产品和信息系统集成产品开发销售（营业）收入占企业收入总额的比例</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="rjcpzzkfsrzzebl" type="bl" >
+				<xs:annotation>
+					<xs:documentation>软件产品自主开发销售（营业）收入占企业收入总额的比例</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qrrjhxxcpzzkfsrzzebl" type="bl" >
+				<xs:annotation>
+					<xs:documentation>嵌入式软件产品和信息系统集成产品自主开发销售（营业）收入占企业收入总额的比例</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yffyze" type="je" >
+				<xs:annotation>
+					<xs:documentation>研究开发费用总额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jnqyyffyje" type="je" >
+				<xs:annotation>
+					<xs:documentation>企业在中国境内发生的研究开发费用金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yffyzzebl" type="bl" >
+				<xs:annotation>
+					<xs:documentation>研究开发费用总额占企业销售（营业）收入总额的比例</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jnqyyffyzyfzebl" type="bl" >
+				<xs:annotation>
+					<xs:documentation>企业在中国境内发生的研究开发费用金额占研究开发费用总额的比例</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qyzgzs" type="sl" >
+				<xs:annotation>
+					<xs:documentation>企业职工总数</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="rjcpkfjsfwry" type="je" >
+				<xs:annotation>
+					<xs:documentation>从事软件产品开发和技术服务的技术人员</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="rjcpkfjsfwryzzsbl" type="bl" >
+				<xs:annotation>
+					<xs:documentation>从事软件产品开发和技术服务的技术人员占企业职工总数的比例</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qynzsr" type="je" >
+				<xs:annotation>
+					<xs:documentation>企业年总收入</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qynrjsr" type="je" >
+				<xs:annotation>
+					<xs:documentation>企业年软件销售收入</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zcrjsr" type="je" >
+				<xs:annotation>
+					<xs:documentation>自产软件销售收入</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="rjsrzzsrbl" type="bl" >
+				<xs:annotation>
+					<xs:documentation>软件销售收入占企业年总收入比例</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zcrjsrzxsbl" type="je" >
+				<xs:annotation>
+					<xs:documentation>自产软件收入占软件销售收入比例</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="rjjscpyfjf" type="je" >
+				<xs:annotation>
+					<xs:documentation>软件技术及产品的研究开发经费</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="rjjscpyfjfzsrbl" type="bl" >
+				<xs:annotation>
+					<xs:documentation>软件技术及产品的研究开发经费占企业年软件收入比例</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jmsje" type="je" >
+				<xs:annotation>
+					<xs:documentation>减免税金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

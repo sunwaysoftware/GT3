@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 被2011 rel. 2 sp1 (TeaM DJiNN) 使用XMLSpy vTeaM DJiNN编辑的 (http://www.altova.com) by -->
+<!-- edited with XMLSpy v2013 (http://www.altova.com) by  () -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:complexType name="NsrlxfswhVO">
+		<xs:annotation>
+			<xs:documentation>纳税人联系方式</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="djxh" type="djxh">
+				<xs:annotation>
+					<xs:documentation>登记序号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="fddbryddh" type="fddbryddh">
+				<xs:annotation>
+					<xs:documentation>法定代表人移动电话</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="fddbrdzxx" type="fddbrdzxx">
+				<xs:annotation>
+					<xs:documentation>法定代表人电子信箱</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="fddbrgddh" type="fddbrgddh">
+				<xs:annotation>
+					<xs:documentation>法定代表人固定电话</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="cwfzrxm" type="cwfzrxm">
+				<xs:annotation>
+					<xs:documentation>财务负责人姓名</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="cwfzrsfzjzlDm" type="cwfzrsfzjzlDm">
+				<xs:annotation>
+					<xs:documentation>财务负责人身份证件种类代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="cwfzrsfzjhm" type="cwfzrsfzjhm">
+				<xs:annotation>
+					<xs:documentation>财务负责人身份证件号码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="cwfzrgddh" type="cwfzrgddh">
+				<xs:annotation>
+					<xs:documentation>财务负责人固定电话</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="cwfzryddh" type="cwfzryddh">
+				<xs:annotation>
+					<xs:documentation>财务负责人移动电话</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="cwfzrdzxx" type="cwfzrdzxx">
+				<xs:annotation>
+					<xs:documentation>财务负责人电子信箱</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bsryddh" type="bsryddh">
+				<xs:annotation>
+					<xs:documentation>办税人移动电话</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bsrxm" type="bsrxm">
+				<xs:annotation>
+					<xs:documentation>办税人姓名</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bsrdzxx" type="bsrdzxx">
+				<xs:annotation>
+					<xs:documentation>办税人电子信箱</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bsrsfzjzlDm" type="bsrsfzjzlDm">
+				<xs:annotation>
+					<xs:documentation>办税人身份证件种类代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bsrsfzjhm" type="bsrsfzjhm">
+				<xs:annotation>
+					<xs:documentation>办税人身份证件号码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bsrgddh" type="bsrgddh">
+				<xs:annotation>
+					<xs:documentation>办税人固定电话</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="swdlrlxdh" type="swdlrlxdh">
+				<xs:annotation>
+					<xs:documentation>税务代理人联系电话</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="swdlrmc" type="swdlrmc">
+				<xs:annotation>
+					<xs:documentation>税务代理人名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="swdlrdzxx" type="swdlrdzxx">
+				<xs:annotation>
+					<xs:documentation>税务代理人电子信箱</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="swdlrnsrsbh" type="swdlrnsrsbh">
+				<xs:annotation>
+					<xs:documentation>税务代理人纳税人识别号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="hjszd" type="hjszd">
+				<xs:annotation>
+					<xs:documentation>户籍所在地</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="gjhdqszDm" type="gjhdqszDm">
+				<xs:annotation>
+					<xs:documentation>国家或地区数字代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="HXZGDJ00564Request">
+		<xs:annotation>
+			<xs:documentation>保存纳税人联系方式维护信息接入报文</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="nsrlxfswhVO" type="NsrlxfswhVO"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+</xs:schema>

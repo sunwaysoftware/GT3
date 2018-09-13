@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2011 (http://www.altova.com) by www.hbnu.com (www.hbnu.com) -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:include schemaLocation="TaxMLBd_0610766_V1.0.xsd"/>
+	<xs:include schemaLocation="TaxMLBd_0610767_V1.0.xsd"/>
+	<xs:include schemaLocation="TaxMLBd_0610768_V1.0.xsd"/>
+	<xs:include schemaLocation="TaxMLBd_0610769_V1.0.xsd"/>
+	<xs:include schemaLocation="TaxMLBd_0610770_V1.0.xsd"/>
+	<xs:include schemaLocation="TaxMLBd_0610771_V1.0.xsd"/>
+	<xs:include schemaLocation="TaxMLBd_0610772_V1.0.xsd"/>
+	<xs:include schemaLocation="TaxMLBd_0610773_V1.0.xsd"/>
+	<xs:include schemaLocation="TaxMLBd_0610774_V1.0.xsd"/>
+	<xs:include schemaLocation="TaxMLBd_0610775_V1.0.xsd"/>
+	<xs:include schemaLocation="TaxMLBd_0610538_V1.0.xsd"/>
+	<xs:complexType name="fjmqysdsndnssbbjssb2015ywbw">
+		<xs:annotation>
+			<xs:documentation>《中华人民共和国非居民企业所得税年度纳税申报表2015（适用于据实申报企业）》业务报文2015</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="fjmqysdsNdnssbb" type="fjmqysdsNdnssbb">
+						<xs:annotation>
+							<xs:documentation>非居民企业所得税据实申报年度申报纳税申报表2015</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="fjmqysdsYbqysrmxb" type="fjmqysdsYbqysrmxb">
+						<xs:annotation>
+							<xs:documentation>非居民企业所得税据实申报年度申报一般企业收入明细表2015</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="fjmqysdsJrqysrmxb" type="fjmqysdsJrqysrmxb">
+						<xs:annotation>
+							<xs:documentation>非居民企业所得税据实申报年度申报金融企业收入明细表2015</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="fjmqysdsYbqycbzcmxb" type="fjmqysdsYbqycbzcmxb">
+						<xs:annotation>
+							<xs:documentation>非居民企业所得税据实申报年度申报一般企业成本支出明细表2015</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="fjmqysdsJrqyzcmxb" type="fjmqysdsJrqyzcmxb">
+						<xs:annotation>
+							<xs:documentation>非居民企业所得税据实申报年度申报金融企业支出明细表2015</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="fjmqysdsQjfymxb" type="fjmqysdsQjfymxb">
+						<xs:annotation>
+							<xs:documentation>非居民企业所得税据实申报年度申报期间费用明细表2015</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="fjmqysdsNstzxmmxb" type="fjmqysdsNstzxmmxb">
+						<xs:annotation>
+							<xs:documentation>非居民企业所得税据实申报年度申报纳税调整项目明细表2015</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="fjmqysdsSsyhmxb" type="fjmqysdsSsyhmxb">
+						<xs:annotation>
+							<xs:documentation>非居民企业所得税据实申报年度申报税收优惠明细表2015</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="fjmqysdsJssbMbksmxsbb" type="fjmqysdsJssbMbksmxsbb">
+						<xs:annotation>
+							<xs:documentation>非居民企业所得税据实申报年度申报弥补亏损明细表2015</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="fjmqysdsDwhzkcsyqyktkffyndmxb" type="fjmqysdsDwhzkcsyqyktkffyndmxb">
+						<xs:annotation>
+							<xs:documentation>非居民企业所得税对外合作开采石油企业勘探开发费用年度明细表2015</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="hsyqscssqzfqkb" type="hsyqscssqzfqkb">
+						<xs:annotation>
+							<xs:documentation>海上油气生产设施弃置费情况表</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+</xs:schema>

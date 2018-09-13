@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 被2012 () 使用XMLSpy v编辑的 (http://www.altova.com) by -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:complexType name="yyssb04_fwyjcxmjemxsbbywbw">
+		<xs:annotation>
+			<xs:documentation>《服务业减除项目金额明细申报表》业务报文</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="yyssb04_fwyjcxmjemxsbb" type="yyssb04_fwyjcxmjemxsbb">
+						<xs:annotation>
+							<xs:documentation>《服务业减除项目金额明细申报表》</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="yyssb04_fwyjcxmjemxsbb">
+		<xs:annotation>
+			<xs:documentation>《服务业减除项目金额明细申报表》</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="fwyjcxmjemxsbbGrid" type="fwyjcxmjemxsbbGrid">
+				<xs:annotation>
+					<xs:documentation>服务业减除项目金额明细申报表</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="fwyjcxmjemxsbbGrid">
+		<xs:annotation>
+			<xs:documentation>申报信息</xs:documentation>
+		</xs:annotation>
+		<xs:sequence maxOccurs="unbounded">
+			<xs:element name="fwyjcxmjemxsbbGridlb" type="fwyjcxmjemxsbbGridlb">
+				<xs:annotation>
+					<xs:documentation>服务业减除项目金额明细申报表列表</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="fwyjcxmjemxsbbGridlb">
+		<xs:annotation>
+			<xs:documentation>服务业减除项目金额明细申报表列表</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="ysxmDm" type="zspmDm">
+				<xs:annotation>
+					<xs:documentation>应税项目</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jcxmmc" type="xmmc">
+				<xs:annotation>
+					<xs:documentation>减除项目名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jcxmje" type="je">
+				<xs:annotation>
+					<xs:documentation>减除项目金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

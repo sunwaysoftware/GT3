@@ -1,0 +1,328 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 被2011 rel. 2 sp1 (TeaM DJiNN) 使用XMLSpy vTeaM DJiNN编辑的 (http://www.altova.com) by -->
+<!-- edited with XMLSpy v2008 (http://www.altova.com) by TEAM ViRiLiTY (VRL) -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:complexType name="gqjlgrsdsfqbaRequest">
+		<xs:annotation>
+			<xs:documentation>股权奖励个人所得税分期备案表请求报文</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="jywysbh" type="jywysbh">
+						<xs:annotation>
+							<xs:documentation>交易唯一识别号，对于总局版本代扣代缴客户端存储的是交易报文中的 扩展节点(不能为空)</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="kjywrnsrdjxh" type="kjywrnsrdjxh">
+						<xs:annotation>
+							<xs:documentation>扣缴单位纳税登记序号(不能为空)</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="gxjgsqzsbh" type="gxjgsqzsbh">
+						<xs:annotation>
+							<xs:documentation>高新技术企业证书编号(不能为空)</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="zgb" type="zgb">
+						<xs:annotation>
+							<xs:documentation>总股本（实收资本）</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="lxr" type="lxr">
+						<xs:annotation>
+							<xs:documentation>联系人(不能为空)</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="lxdh" type="lxdh">
+						<xs:annotation>
+							<xs:documentation>联系电话(不能为空)</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="gqjgqdff" type="gqjgqdff">
+						<xs:annotation>
+							<xs:documentation>股权确认方法(不能为空)</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="qthlff" type="qthlff">
+						<xs:annotation>
+							<xs:documentation>其他合理方法</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="dlsbjg" type="dlsbjg">
+						<xs:annotation>
+							<xs:documentation>代理申报机构</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="zgswjgDm" type="zgswjgDm">
+						<xs:annotation>
+							<xs:documentation>主管税务机关(默认为当前操作员所在税务机关)</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="mgjg" type="mgjg">
+						<xs:annotation>
+							<xs:documentation>每股价格(不能为空)</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="sfdlsb" type="sfdlsb">
+						<xs:annotation>
+							<xs:documentation>是否代理申报(Y/N)(不能为空)</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="kjdwfzr" type="kjdwfzr">
+						<xs:annotation>
+							<xs:documentation>扣缴单位负责人(当是否代理申报为空时必录)</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="jbr" type="jbr">
+						<xs:annotation>
+							<xs:documentation>经办人</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="slr" type="slr">
+						<xs:annotation>
+							<xs:documentation>受理人(默认为当前操作员)</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="jbrzyzjhm" type="jbrzyzjhm">
+						<xs:annotation>
+							<xs:documentation>经办人执业证件号码(当代理申报机构录入，经办人执业证件号码必录)</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="slrq" type="slrq">
+						<xs:annotation>
+							<xs:documentation>受理日期(默认为系统当前日期,格式：yyyy-MM-dd)</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="dlsbrq" type="dlsbrq">
+						<xs:annotation>
+							<xs:documentation>代理申报日期(默认为系统当前日期,格式：yyyy-MM-dd)</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="lrrDm" type="lrrDm">
+						<xs:annotation>
+							<xs:documentation>录入人代码</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="fqbaGqjlMxGrid" type="fqbaGqjlMx" maxOccurs="unbounded">
+						<xs:annotation>
+							<xs:documentation>股权奖励分期备案明细</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="fqbaGqjlMx">
+		<xs:annotation>
+			<xs:documentation>股权奖励分期备案明细</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="xm" type="xm">
+				<xs:annotation>
+					<xs:documentation>姓名(不能为空)</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sfzjhm" type="sfzjhm">
+				<xs:annotation>
+					<xs:documentation>身份证件号码(不能为空，如果身份证件类型为居民身份证时，身份证件号码只允许18位)</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sfzjlxDm" type="sfzjlxDm">
+				<xs:annotation>
+					<xs:documentation>身份证件类型(不能为空)</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="gqjlsj" type="gqjlsj">
+				<xs:annotation>
+					<xs:documentation>股权奖励时间(不能为空)</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="hdgfs" type="hdgfs">
+				<xs:annotation>
+					<xs:documentation>获得股份数(不能为空)</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="cgbl" type="cgbl">
+				<xs:annotation>
+					<xs:documentation>持股比例（1%~100%）(不能为空)</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jsjg" type="jsjg">
+				<xs:annotation>
+					<xs:documentation>计税价格(不能为空)</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jjgrsds" type="jjgrsds">
+				<xs:annotation>
+					<xs:documentation>应缴个人所得税(不能为空)</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jhjssj_1" type="jhjssj">
+				<xs:annotation>
+					<xs:documentation>计划缴税时间第一年</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jhjsje_1" type="jhjsje">
+				<xs:annotation>
+					<xs:documentation>计划缴税金额第一年</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jhjssj_2" type="jhjssj">
+				<xs:annotation>
+					<xs:documentation>计划缴税时间第二年</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jhjsje_2" type="jhjsje">
+				<xs:annotation>
+					<xs:documentation>计划缴税金额第二年</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jhjssj_3" type="jhjssj">
+				<xs:annotation>
+					<xs:documentation>计划缴税时间第三年</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jhjsje_3" type="jhjsje">
+				<xs:annotation>
+					<xs:documentation>计划缴税金额第三年</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jhjssj_4" type="jhjssj">
+				<xs:annotation>
+					<xs:documentation>计划缴税时间第四年</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jhjsje_4" type="jhjsje">
+				<xs:annotation>
+					<xs:documentation>计划缴税金额第四年</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jhjssj_5" type="jhjssj">
+				<xs:annotation>
+					<xs:documentation>计划缴税时间第五年</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jhjsje_5" type="jhjsje">
+				<xs:annotation>
+					<xs:documentation>计划缴税金额第五年</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:simpleType name="kjywrnsrdjxh">
+		<xs:annotation>
+			<xs:documentation>扣缴单位纳税登记序号</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:maxLength value="20"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="gxjgsqzsbh">
+		<xs:annotation>
+			<xs:documentation>高新技术企业证书编号</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:maxLength value="60"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="zgb">
+		<xs:annotation>
+			<xs:documentation>总股本（实收资本）</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:double"/>
+	</xs:simpleType>
+	<xs:simpleType name="gqjgqdff">
+		<xs:annotation>
+			<xs:documentation>股权确认方法</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:maxLength value="1"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="qthlff">
+		<xs:annotation>
+			<xs:documentation>其他合理方法</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:maxLength value="60"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="dlsbjg">
+		<xs:annotation>
+			<xs:documentation>代理申报机构</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:maxLength value="300"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="slr">
+		<xs:annotation>
+			<xs:documentation>受理人</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:maxLength value="75"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="slrMc">
+		<xs:annotation>
+			<xs:documentation>受理人名称</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:maxLength value="300"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="jbrzyzjhm">
+		<xs:annotation>
+			<xs:documentation>经办人执业证件号码</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:maxLength value="20"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="mgjg">
+		<xs:annotation>
+			<xs:documentation>每股价格</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:double"/>
+	</xs:simpleType>
+	<xs:simpleType name="gqjlsj">
+		<xs:annotation>
+			<xs:documentation>股权奖励时间：格式(yyyy-mm-dd)</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string"/>
+	</xs:simpleType>
+	<xs:simpleType name="hdgfs">
+		<xs:annotation>
+			<xs:documentation>获得股份数</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:long"/>
+	</xs:simpleType>
+	<xs:simpleType name="jjgrsds">
+		<xs:annotation>
+			<xs:documentation>应缴个人所得税</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:double"/>
+	</xs:simpleType>
+	<xs:simpleType name="jhjssj">
+		<xs:annotation>
+			<xs:documentation>计划缴税时间：格式(yyyy-mm-dd)</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string"/>
+	</xs:simpleType>
+	<xs:simpleType name="jhjsje">
+		<xs:annotation>
+			<xs:documentation>计划缴税金额</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:double"/>
+	</xs:simpleType>
+	<xs:simpleType name="kjdwfzr">
+		<xs:annotation>
+			<xs:documentation>扣缴单位负责人</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:length value="150"/>
+		</xs:restriction>
+	</xs:simpleType>
+</xs:schema>

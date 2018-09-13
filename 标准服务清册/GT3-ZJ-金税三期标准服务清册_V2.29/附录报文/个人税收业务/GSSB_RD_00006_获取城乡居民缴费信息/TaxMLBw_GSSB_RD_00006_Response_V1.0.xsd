@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2011 (http://www.altova.com) by adwadwa (TeaM DJiNN) -->
+<!-- 被2011 rel. 2 sp1 (pjf) 使用XMLSpy vcss编辑的 (http://www.altova.com) by -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:complexType name="GSSBRD00006Response">
+		<xs:annotation>
+			<xs:documentation>获取城乡居民缴费信息响应报文</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="CxjmjfxxResultList" type="CxjmjfxxResultList"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>	
+	<xs:complexType name="CxjmjfxxResultList">
+		<xs:annotation>
+			<xs:documentation>获取城乡居民缴费信息结果列表</xs:documentation>
+		</xs:annotation>
+		<xs:sequence maxOccurs="unbounded">
+			<xs:element name="CxjmjfxxResult" type="CxjmjfxxResult">
+				<xs:annotation>
+					<xs:documentation>获取城乡居民缴费信息结果</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="CxjmjfxxResult">
+		<xs:annotation>
+			<xs:documentation>获取城乡居民缴费信息结果</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="sbwylsh" type="sblsh" >
+				<xs:annotation>
+					<xs:documentation>社保唯一流水号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="xxh" type="mxxh">
+				<xs:annotation>
+					<xs:documentation>小序号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jfdxlx" type="jfdxlx" >
+				<xs:annotation>
+					<xs:documentation>缴费对象类型</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="xzqh" type="xzqh2" >
+				<xs:annotation>
+					<xs:documentation>行政区划代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sqbm" type="sqbm">
+				<xs:annotation>
+					<xs:documentation>社区编码代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zjlx" type="sfzjlx" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>身份证件类型</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zjhm" type="sfzjhm" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>身份证件号码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="xm" type="xm" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>姓名</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zsxmdm" type="zsxmDm">
+				<xs:annotation>
+					<xs:documentation>征收项目代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zspmdm" type="zspmDm">
+				<xs:annotation>
+					<xs:documentation>征收品目代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="skssqq" type="skssqq">
+				<xs:annotation>
+					<xs:documentation>税款所属期起</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="skssqz" type="skssqz">
+				<xs:annotation>
+					<xs:documentation>税款所属期止</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jfrs" type="jfrs">
+				<xs:annotation>
+					<xs:documentation>缴费人数</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yjje" type="yjfe">
+				<xs:annotation>
+					<xs:documentation>应缴金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

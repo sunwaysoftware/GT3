@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2013 (http://www.altova.com) by  () -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:include schemaLocation="TaxMLPublicDJType.xsd"/>
+	<xs:complexType name="HXZGDJ00365Response">
+		<xs:annotation>
+			<xs:documentation>根据登记序号和所属期查询汇总纳税企业备案下一机构信息请求反馈报文</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+		<xs:sequence>
+
+			
+				<xs:element name="hznsqyxxbabXyjgxxGrid" type="HznsqyxxbabXyjgxxGrid">
+				<xs:annotation>
+					<xs:documentation>汇总纳税企业信息备案下一级机构信息</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+			</xs:extension>
+			</xs:complexContent>
+	</xs:complexType>
+
+			
+	<xs:complexType name="HznsqyxxbabXyjgxxGrid">
+		<xs:annotation>
+			<xs:documentation>汇总纳税企业信息备案下一级机构信息列表</xs:documentation>
+		</xs:annotation>
+		<xs:sequence minOccurs="0" maxOccurs="unbounded">
+			<xs:element name="hznsqyxxbabXyjgxxGridlb" type="DJHznsqyxxbabXyjgxxVO">
+				<xs:annotation>
+					<xs:documentation>汇总纳税企业信息备案下一级机构信息</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	
+</xs:schema>

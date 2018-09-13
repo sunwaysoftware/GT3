@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 被2012 () 使用XMLSpy v编辑的 (http://www.altova.com) by -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:complexType name="HXZGFXCL00335Request">
+		<xs:annotation>
+			<xs:documentation>根据条件查询税务行政处罚情况表(稽查处罚)信息</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="swxzcfqkbjccfuuid" type="swxzcfqkbjccfuuid">
+						<xs:annotation>
+							<xs:documentation>税务行政处罚情况表（稽查处罚）UUID</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="jcajxxuuid" type="jcajxxuuid" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>稽查案件信息UUID</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="jcajxzcfscbguuid" type="jcajxzcfscbguuid" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>稽查案件行政处罚审查报告UUID</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="cbskhfkbguuid" type="cbskhfkbguuid" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>查补税款或罚款变更UUID</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+</xs:schema>

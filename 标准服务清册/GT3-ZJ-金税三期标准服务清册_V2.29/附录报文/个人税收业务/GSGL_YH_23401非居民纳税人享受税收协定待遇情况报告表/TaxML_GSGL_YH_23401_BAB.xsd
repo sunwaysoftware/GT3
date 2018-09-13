@@ -1,0 +1,138 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://www.chinatax.gov.cn/dataspec/" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:include schemaLocation="TaxML_GSGL_YH_23401_Common.xsd"/>
+	
+	<xs:complexType name="yhFjmxsssxddybab">
+		<xs:annotation>
+			<xs:documentation>
+			    备案表
+			</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="yhFjmxsssxddybabMxLists" type="YhFjmxsssxddybabMxVo" maxOccurs="unbounded">
+						<xs:annotation>
+							<xs:documentation>
+							非居民纳税人享受税收协定待遇备案表明细表
+							</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="nsrjbr" type="maxLength150">
+						<xs:annotation>
+							<xs:documentation>
+							纳税人经办人
+							</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="sqrq" type="date">
+						<xs:annotation>
+							<xs:documentation>
+							申请日期
+							</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="slr" type="maxLength150">
+						<xs:annotation>
+							<xs:documentation>
+							受理人
+							</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="slrdm" type="length11">
+						<xs:annotation>
+							<xs:documentation>
+							受理人代码
+							</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="slrq" type="date">
+						<xs:annotation>
+							<xs:documentation>
+							受理日期
+							</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="slswjg" type="length11">
+						<xs:annotation>
+							<xs:documentation>
+							受理税务机关
+							</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	
+		<xs:complexType name="YhFjmxsssxddybabMxVo">
+		<xs:annotation>
+			<xs:documentation>
+			    非居民纳税人享受税收协定待遇备案表明细表
+			</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="fjmnsrxsssxddm" type="maxLength150">
+						<xs:annotation>
+							<xs:documentation>
+							非居民纳税人享受税收协定代码(必录) 填写码值 取表DM_GY_SSXD
+							</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="xdlx" type="maxLength150">
+						<xs:annotation>
+							<xs:documentation>
+							所得类型(必录)
+							</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="xsyhsx_dm" type="maxLength13">
+						<xs:annotation>
+							<xs:documentation>
+							税收优惠事项(必录)
+							</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="jmxz_dm" type="maxLength10">
+						<xs:annotation>
+							<xs:documentation>
+							减免性质代码(必录)
+							</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="jmxzdl_dm" type="length2">
+						<xs:annotation>
+							<xs:documentation>
+							减免性质大类(必录)
+							</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="jmxzxl_dm" type="length2">
+						<xs:annotation>
+							<xs:documentation>
+							减免性质小类(必录)
+							</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="yxqq_dm" type="date">
+						<xs:annotation>
+							<xs:documentation>
+							有效期起(必录)
+							</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="yxqz_dm" type="date">
+						<xs:annotation>
+							<xs:documentation>
+							有效期止(必录)
+							</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+</xs:schema>

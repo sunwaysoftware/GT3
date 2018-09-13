@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2013 (http://www.altova.com) by  () -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:include schemaLocation="TaxMLPublicDJType.xsd"/>
+	<xs:include schemaLocation="TaxMLPublicRDType.xsd"/>
+	<xs:complexType name="HXZGDJ00856Request">
+		<xs:annotation>
+			<xs:documentation>保存增值税一般纳税人2小规模纳税人流水表并取消纳税人一般人资格</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="vo" type="DJYbnsrtoxgmnsrVO">
+						<xs:annotation>
+							<xs:documentation>一般纳税人转小规模纳税人VO</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="zgxxList">
+						<xs:annotation>
+							<xs:documentation>纳税人资格信息集合</xs:documentation>
+						</xs:annotation>
+						<xs:complexType>
+							<xs:sequence maxOccurs="unbounded">
+								<xs:element name="zgxxGridlb" type="RDNsrzgxxJgbVO">
+									<xs:annotation>
+										<xs:documentation>一般纳税人资格list</xs:documentation>
+									</xs:annotation>
+								</xs:element>
+							</xs:sequence>
+						</xs:complexType>
+					</xs:element>
+					<xs:element name="wsVO" type="DJYbnsr2XgmnsrWsVO">
+						<xs:annotation>
+							<xs:documentation>一般纳税人转小规模纳税人文书VO</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+</xs:schema>

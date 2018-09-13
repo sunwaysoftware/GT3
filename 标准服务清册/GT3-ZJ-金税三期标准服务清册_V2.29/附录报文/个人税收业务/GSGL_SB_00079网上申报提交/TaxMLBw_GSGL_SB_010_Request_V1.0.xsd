@@ -1,0 +1,342 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 被2012 () 使用XMLSpy v编辑的 (http://www.altova.com) by -->
+<!-- edited with XMLSpy v2010 rel. 3 (http://www.altova.com) by MESMERiZE (MSM) -->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://www.chinatax.gov.cn/dataspec/" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:complexType name="sbbyzxxbcrequest">
+		<xs:annotation>
+			<xs:documentation>申报表应征信息保存请求</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="sbbyzxxHead" type="sbbyzxxHead" maxOccurs="1">
+						<xs:annotation>
+							<xs:documentation>申报表应征信息表头</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="sbbyzxx" type="sbbyzxx" maxOccurs="unbounded">
+						<xs:annotation>
+							<xs:documentation>申报表应征信息</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="sbbyzxxHead">
+		<xs:annotation>
+			<xs:documentation>申报表应征信息表头</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="sfmxsb" type="bz3">
+				<xs:annotation>
+					<xs:documentation>
+					是否明细申报，1：是（包含申报明细文件）， 0：否（不包含申报明细文件），必填；
+					针对扣缴个人所得税报告表（以及子表），当明细数据中有一条为汇总申报，则改字段传0，只有全部为明细申报时，该字段才为1；
+					其他扣缴类申报，该字段都传1
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ywdx" type="bz3">
+				<xs:annotation>
+					<xs:documentation>
+					业务对象，1：自然人，2：扣缴义务人，必填，如果不传入按照2处理
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="sbbyzxx">
+		<xs:annotation>
+			<xs:documentation>
+			    申报表应征信息，一般情况下按照zspmDm、sl1进行汇总；
+			    针对《中央证券登记结算公司代扣代缴上市公司股息红利扣缴个人所得税报告表》按如下的规则汇总：
+			    1、能取到上市公司的登记序号，则按照zspmDm、sl1、ssgsdjxh等条件进行汇总，上市公司的信息都不能为空；
+			    2、“是否沪港通”选择“是”的情况，如果取不到上市公司的登记序号，则按照zspmDm、sl1等条件进行汇总，
+			        上市公司的信息全部传空值（将多条上市公司的信息汇总为一条）；
+			</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="xh" type="xh">
+				<xs:annotation>
+					<xs:documentation>序号，必填</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="kjywrdjxh" type="djxh">
+				<xs:annotation>
+					<xs:documentation>扣缴义务人登记序号，必填</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="kjywrsbh" type="kjywrsbh">
+				<xs:annotation>
+					<xs:documentation>扣缴义务人识别号，必填</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="kjywrmc" type="kjywrmc">
+				<xs:annotation>
+					<xs:documentation>扣缴义务人名称，必填</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sfhgt" type="bz3">
+				<xs:annotation>
+					<xs:documentation>
+						是否沪港通，1：是， 0：否，《中央证券登记结算公司代扣代缴上市公司股息红利扣缴个人所得税报告表》当具备申报沪港通资格的扣缴义务人必填该字段		             
+                    </xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ssgsdjxh" type="djxh">
+				<xs:annotation>
+					<xs:documentation>
+					    上市公司登记序号，《中央证券登记结算公司代扣代缴上市公司股息红利扣缴个人所得税报告表》当sfhgt为0时必填
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ssgsnsrsbh" type="kjywrsbh">
+				<xs:annotation>
+					<xs:documentation>
+					     上市公司纳税人识别号，《中央证券登记结算公司代扣代缴上市公司股息红利扣缴个人所得税报告表》当sfhgt为0时必填
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ssgsnsrmc" type="kjywrmc">
+				<xs:annotation>
+					<xs:documentation>
+					     上市公司纳税人名称，《中央证券登记结算公司代扣代缴上市公司股息红利扣缴个人所得税报告表》当sfhgt为0时必填
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zsjgDm" type="zsjgDm">
+				<xs:annotation>
+					<xs:documentation>征收机关代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zgswjgDm" type="zgswjgDm">
+				<xs:annotation>
+					<xs:documentation>主管税务机关代码，必填</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zgswskfjDm" type="zgswskfjDm">
+				<xs:annotation>
+					<xs:documentation>主管税务所（科、分局）代码，必填</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="djzclxDm" type="djzclxDm">
+				<xs:annotation>
+					<xs:documentation>登记注册类型代码，必填</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="dwlsgxDm" type="dwlsgxDm">
+				<xs:annotation>
+					<xs:documentation>隶属关系代码，必填</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zsxmDm" type="zsxmDm">
+				<xs:annotation>
+					<xs:documentation>征收项目代码，必填</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="grsdssdxmDm" type="grsdssdxmDm">
+				<xs:annotation>
+					<xs:documentation>个人所得税所得项目代码，必填</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zspmDm" type="zspmDm">
+				<xs:annotation>
+					<xs:documentation>征收品目代码，必填</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="skssqq" type="skssqq">
+				<xs:annotation>
+					<xs:documentation>税款所属期起，必填</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="skssqz" type="skssqz">
+				<xs:annotation>
+					<xs:documentation>税款所属期止，必填</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="hssrtjlx" type="djzclxDm">
+				<xs:annotation>
+					<xs:documentation>自然人登记注册类型代码,必填。
+						431:大陆(居民身份证、军官证、中国护照、士兵证、武警警官证)、
+						432:港澳台(港澳居民来往内地通行证、台湾居民来往大陆通行证、香港永久性居民身份证、台湾身份证、澳门特别行政区永久性居民身份证)、
+						433:外国(外国护照、外交官证、外国人永久居留身份证（外国人永久居留证）),
+						如果是汇总申报则填431</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sl1" type="sl1">
+				<xs:annotation>
+					<xs:documentation>税率，必填</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yjse" type="yjse">
+				<xs:annotation>
+					<xs:documentation>已缴税额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ybtse" type="ybtse">
+				<xs:annotation>
+					<xs:documentation>税额（应补退税额），必填</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ynssde" type="ynssde">
+				<xs:annotation>
+					<xs:documentation>应纳税所得额，必填</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ynse" type="ynse">
+				<xs:annotation>
+					<xs:documentation>应纳税额，必填</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="mssre" type="sre">
+				<xs:annotation>
+					<xs:documentation>免税收入额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sre" type="sre">
+				<xs:annotation>
+					<xs:documentation>收入额，必填</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yzpzzlDm" type="yzpzzlDm">
+				<xs:annotation>
+					<xs:documentation>应征凭证种类代码，必填</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jkqx" type="jkqx">
+				<xs:annotation>
+					<xs:documentation>缴款期限</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yskmDm" type="yskmDm">
+				<xs:annotation>
+					<xs:documentation>预算科目代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ysfpblDm" type="ysfpblDm">
+				<xs:annotation>
+					<xs:documentation>预算分配比例代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="skgkDm" type="skgkDm">
+				<xs:annotation>
+					<xs:documentation>收款国库代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zsdlfsDm" type="zsdlfsDm">
+				<xs:annotation>
+					<xs:documentation>征收代理方式代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="nssbrq" type="nssbrq">
+				<xs:annotation>
+					<xs:documentation>纳税申报日期，必填</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="skzlDm" type="skzlDm">
+				<xs:annotation>
+					<xs:documentation>税款种类代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sksxDm" type="sksxDm">
+				<xs:annotation>
+					<xs:documentation>税款属性代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sbfsDm" type="sbfsDm">
+				<xs:annotation>
+					<xs:documentation>申报方式代码，必填</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yjkqx" type="yjkqx">
+				<xs:annotation>
+					<xs:documentation>原缴款期限</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yzfsrq" type="yzfsrq">
+				<xs:annotation>
+					<xs:documentation>应征发生日期</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="hyDm" type="hyDm">
+				<xs:annotation>
+					<xs:documentation>行业代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zsfsDm" type="zsfsDm">
+				<xs:annotation>
+					<xs:documentation>征收方式代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zzsnsrlxDm" type="zzsnsrlxDm">
+				<xs:annotation>
+					<xs:documentation>增值税纳税人类型代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="kssl" type="kssl">
+				<xs:annotation>
+					<xs:documentation>课税数量</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="kjskrc" type="pchm">
+				<xs:annotation>
+					<xs:documentation>扣缴税款人次，必填</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zfsrrc" type="pchm">
+				<xs:annotation>
+					<xs:documentation>支付收入人次，必填</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jsyj" type="jsyj">
+				<xs:annotation>
+					<xs:documentation>计税依据</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="kcse" type="kcse">
+				<xs:annotation>
+					<xs:documentation>扣除税额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jdxzDm" type="jdxzDm">
+				<xs:annotation>
+					<xs:documentation>街道乡镇代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ssglyDm" type="ssglyDm">
+				<xs:annotation>
+					<xs:documentation>税收管理员代码，必填</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="skssswjgDm" type="skssswjgDm">
+				<xs:annotation>
+					<xs:documentation>税款所属税务机构代码，必填</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="lrrDm" type="lrrDm">
+				<xs:annotation>
+					<xs:documentation>录入人代码，必填（如果没有，取99999999999）</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zcbbtzsxh" type="zcbbtzsxh">
+				<xs:annotation>
+					<xs:documentation>自查补报通知书序号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="zcbbtzsxh">
+		<xs:annotation>
+			<xs:documentation>自查补报通知书序号</xs:documentation>
+		</xs:annotation>
+		<xs:sequence maxOccurs="unbounded">
+			<xs:element name="zxbztzsuuid" type="zxbztzsuuid">
+				<xs:annotation>
+					<xs:documentation>自查补报通知书序号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

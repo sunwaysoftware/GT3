@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2013 (http://www.altova.com) by  () -->
+<!-- 被2012 () 使用XMLSpy v编辑的 (http://www.altova.com) by -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:include schemaLocation="TaxMLPublicType.xsd"/>
+	<xs:complexType name="snyrlyscwghykcydtjbVO">
+		<xs:annotation>
+			<xs:documentation>消费税退（免）税调查表</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="dwnsrxxFormVO" type="dwnsrxxFormVO">
+				<xs:annotation>
+					<xs:documentation>单位纳税人信息</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bdGridVO">
+				<xs:annotation>
+					<xs:documentation>石脑油、燃料油定点直供计划表</xs:documentation>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:sequence maxOccurs="unbounded">
+						<xs:element name="bdGridlbVO" type="bdGridlbVO"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="fjxxFormVO" type="fjxxFormVO">
+				<xs:annotation>
+					<xs:documentation>附加信息</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="bdGridlbVO">
+		<xs:annotation>
+			<xs:documentation>下属机构清单</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="qyzbmc" type="qyzbmc">
+				<xs:annotation>
+					<xs:documentation>企业总部名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ewbhxh" type="ewbhxh">
+				<xs:annotation>
+					<xs:documentation>行号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="nd" type="nd">
+				<xs:annotation>
+					<xs:documentation>年度</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="tbrxm" type="tbrxm">
+				<xs:annotation>
+					<xs:documentation>填报人姓名</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="tbrq" type="tbrq">
+				<xs:annotation>
+					<xs:documentation>填报日期</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="scqyNsrsbh" type="scqyNsrsbh">
+				<xs:annotation>
+					<xs:documentation>生产企业纳税人识别号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="scqyNsrmc" type="scqyNsrmc">
+				<xs:annotation>
+					<xs:documentation>生产企业纳税人名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="syqyNsrsbh" type="syqyNsrsbh">
+				<xs:annotation>
+					<xs:documentation>使用企业纳税人识别号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="syqyNsrmc" type="syqyNsrmc">
+				<xs:annotation>
+					<xs:documentation>使用企业纳税人名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jhgysny" type="jhgysny">
+				<xs:annotation>
+					<xs:documentation>计划供应数量石脑油</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jhgyrly" type="jhgyrly">
+				<xs:annotation>
+					<xs:documentation>计划供应数量燃料油</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	
+	<xs:complexType name="dwnsrxxFormVO">
+		<xs:annotation>
+			<xs:documentation>单位纳税人信息</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="nsrsbh" type="nsrsbh">
+				<xs:annotation>
+					<xs:documentation>纳税人识别号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="skssqq" type="skssqq">
+				<xs:annotation>
+					<xs:documentation>所属期起</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="skssqz" type="skssqz">
+				<xs:annotation>
+					<xs:documentation>所属期止</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="nsrmc" type="nsrmc">
+				<xs:annotation>
+					<xs:documentation>纳税人名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bsrq" type="bsrq">
+				<xs:annotation>
+					<xs:documentation>报送日期</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="fjxxFormVO">
+		<xs:annotation>
+			<xs:documentation>附加信息</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="tbrmc" type="nsrmc">
+				<xs:annotation>
+					<xs:documentation>填报名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="tbrq" type="tbrq">
+				<xs:annotation>
+					<xs:documentation>填报日期</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

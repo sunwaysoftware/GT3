@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2011 (http://www.altova.com) by adwadwa (TeaM DJiNN) -->
+<!-- 被2012 () 使用XMLSpy v编辑的 (http://www.altova.com) by -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:complexType name="GSSBSB00016Response">
+		<xs:annotation>
+			<xs:documentation>社保费自行申报初始化响应报文</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="sbxzxxlb">
+						<xs:annotation>
+							<xs:documentation>险种信息列表</xs:documentation>
+						</xs:annotation>
+						<xs:complexType>
+							<xs:sequence minOccurs="0" maxOccurs="unbounded">
+								<xs:element name="sbxzxxlb" type="SbXzxxVO"/>
+							</xs:sequence>
+						</xs:complexType>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="SbXzxxVO">
+		<xs:annotation>
+			<xs:documentation>险种信息信息</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="sbjbjgDm">
+				<xs:annotation>
+					<xs:documentation>社保经办机构代码（字段不能为空，字段长度:20）</xs:documentation>
+				</xs:annotation>
+				<xs:simpleType>
+					<xs:restriction base="sbjbjg">
+						<xs:length value="20"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="sbbm">
+				<xs:annotation>
+					<xs:documentation>社保编码（字段不能为空，字段长度:30）</xs:documentation>
+				</xs:annotation>
+				<xs:simpleType>
+					<xs:restriction base="sbbm">
+						<xs:length value="30"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="zsxmDm">
+				<xs:annotation>
+					<xs:documentation>征收项目代码（字段不能为空，字段长度:5）</xs:documentation>
+				</xs:annotation>
+				<xs:simpleType>
+					<xs:restriction base="zsxmDm">
+						<xs:length value="5"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="zspmDm" type="zspmDm">
+				<xs:annotation>
+					<xs:documentation>征收品目代码（字段不能为空，字段长度:9）</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sjzspmDm" type="zspmDm">
+				<xs:annotation>
+					<xs:documentation>上级征收品目代码（字段不能为空，字段长度:9）</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zszmDm" type="zszmDm" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>征收子目代码（字段长度:16）</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jfbl" type="jffl">
+				<xs:annotation>
+					<xs:documentation>费率（字段不能为空，字段长度：16,6）</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sbjbjgmc" type="sbjbjgmc">
+				<xs:annotation>
+					<xs:documentation>社保经办机构名称（字段不能为空，字段长度（100））</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yxqq" type="yxqq">
+				<xs:annotation>
+					<xs:documentation>有效期起（字段不能为空，字段格式:YYYY-MM—DD）</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yxqz" type="yxqz">
+				<xs:annotation>
+					<xs:documentation>有效期止（字段不能为空，字段格式:YYYY-MM—DD）</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

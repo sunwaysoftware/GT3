@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 被2011 rel. 2 sp1 (TeaM DJiNN) 使用XMLSpy vTeaM DJiNN编辑的 (http://www.altova.com) by -->
+<!-- edited with XMLSpy v2010 rel. 3 (http://www.altova.com) by MESMERiZE (MSM) -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:complexType name="A107042Ywbd">
+		<xs:annotation>
+			<xs:documentation>软件、集成电路企业优惠情况及明细表(A107042)表单</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="rjjcdlqyyhqkjmxbForm" type="rjjcdlqyyhqkjmxbFormVO"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="rjjcdlqyyhqkjmxbFormVO">
+		<xs:annotation>
+			<xs:documentation>《软件、集成电路企业优惠情况及明细表》</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="qybnypjzgzrs" type="sl">
+				<xs:annotation>
+					<xs:documentation>企业本年月平均职工总人数</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qdldhtgxdzyszgrs" type="sl">
+				<xs:annotation>
+					<xs:documentation>其中:签订劳动合同关系且具有大学专科以上学历的职工人数</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yjkfryrs" type="sl">
+				<xs:annotation>
+					<xs:documentation>研究开发人员人数</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qdldhtdzyszpjzgbl" type="bl">
+				<xs:annotation>
+					<xs:documentation>签订劳动合同关系且具有大学专科以上学历的职工人数占企业当年月平均职工总人数的比例</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yfryzpjzgbl" type="bl">
+				<xs:annotation>
+					<xs:documentation>研究开发人员占企业本年月平均职工总数的比例||小数格式</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qysrze" type="je">
+				<xs:annotation>
+					<xs:documentation>企业收入总额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="fhtjxssr" type="je">
+				<xs:annotation>
+					<xs:documentation>符合条件的销售（营业）收入</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="fhtjsrzzsrbl" type="bl">
+				<xs:annotation>
+					<xs:documentation>符合条件的收入占收入总额的比例||小数格式</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zjsjkfsr" type="je">
+				<xs:annotation>
+					<xs:documentation>自主设计/开发销售（营业）收入</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zjsjkfsrzbl" type="bl">
+				<xs:annotation>
+					<xs:documentation>自主设计/开发收入占企业收入总额的比例||小数格式</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="xzbalysr" type="je">
+				<xs:annotation>
+					<xs:documentation>选择备案领域的销售（营业）收入</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="lyxssrzfhtjsrbl" type="bl">
+				<xs:annotation>
+					<xs:documentation>领域内的销售收入占符合条件的销售收入的比例||小数格式</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jmsje" type="je">
+				<xs:annotation>
+					<xs:documentation>减免税金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sfrjqy" type="djlxDm">
+				<xs:annotation>
+					<xs:documentation>是否软件企业||1一般企业，2嵌入式或信息系统集成软件</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qylxDm" type="qylxDm">
+				<xs:annotation>
+					<xs:documentation>企业类型代码||1大型，2领域，3出口</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sdsjcdljmlxDm" type="czfsDm">
+				<xs:annotation>
+					<xs:documentation>减免方式||11集成电路生产企业-线宽小于0.8微米（含）-二免三减半，12集成电路生产企业-线宽小于0.25微米-五免五减半，13集成电路生产企业-线宽小于0.25微米-15%税率，14集成电路生产企业-投资额超过80亿元-五免五减半，15集成电路生产企业-投资额超过80亿元-15%税率，21集成电路设计企业-新办符合条件-二免三减半，22集成电路设计企业-重点企业（大型或领域）-10%税率，31软件企业（一般软件或嵌入式或信息系统集成软件）-新办符合条件-二免三减半，32软件企业（一般软件或嵌入式或信息系统集成软件）-重点企业（大型、领域或出口）-10%税率，41集成电路封装测试企业-二免三减半，51集成电路关键专用材料或专用设备生产企业-（关键专用材料或专用设备）-二免三减半</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sfzysbscqy" type="qylxDm">
+				<xs:annotation>
+					<xs:documentation>是否专用设备生产企业||1关键专用材料2专用设备</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="hlnd" type="nd">
+				<xs:annotation>
+					<xs:documentation>获利年度</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sdssylyDm" type="gxjsqylxDm">
+				<xs:annotation>
+					<xs:documentation>适用领域||当企业类型选择了“领域”后，本项传值取自DM_SB_GJGHBJNZDRJHJCDLSJLY</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ndrjsrckzemy" type="je">
+				<xs:annotation>
+					<xs:documentation>年度软件出口收入总额（美元）</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ndrjsrckzermb" type="je">
+				<xs:annotation>
+					<xs:documentation>年度软件出口收入总额（人民币）</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="rjcksrzezbqyndsrzebl" type="je">
+				<xs:annotation>
+					<xs:documentation>软件出口收入总额占本企业年度收入总额比例||小数格式</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="cpsyml" type="nsrdz">
+				<xs:annotation>
+					<xs:documentation>产品适用目录||企业类型为“五、集成电路关键专用材料或专用设备生产企业”时，本项传值取自DM_SB_JCDLXGQYSDSYHML</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yffyze" type="je">
+				<xs:annotation>
+					<xs:documentation>研究开发费用总额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jnqyyffyje" type="je">
+				<xs:annotation>
+					<xs:documentation>其中：企业在中国境内发生的研究开发费用金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yffyzzebl" type="bl">
+				<xs:annotation>
+					<xs:documentation>研究开发费用占收入总额的比例||小数格式</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jnqyyffyzyfzebl" type="bl">
+				<xs:annotation>
+					<xs:documentation>境内研究开发费用占研究开发费用总额的比例||小数格式</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

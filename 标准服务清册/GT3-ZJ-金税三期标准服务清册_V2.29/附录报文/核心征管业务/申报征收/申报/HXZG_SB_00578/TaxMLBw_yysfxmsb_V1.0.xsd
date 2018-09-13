@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 被2011 rel. 2 sp1 (TeaM DJiNN) 使用XMLSpy vTeaM DJiNN编辑的 (http://www.altova.com) by -->
+<!-- edited with XMLSpy v2009 (http://www.altova.com) by Administrator (EMBRACE) -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:include schemaLocation="TaxMLPublicType.xsd"/>
+	<xs:include schemaLocation="TaxMLBd_0610083_V1.0.xsd"/>
+	<xs:include schemaLocation="TaxMLBd_0610024_V1.0.xsd"/>
+	<xs:include schemaLocation="TaxMLBd_0610085_V1.0.xsd"/>
+	<xs:include schemaLocation="TaxMLBd_xsbdcsbb_V1.0.xsd"/>
+	<xs:include schemaLocation="TaxMLBd_jzyxmxx_V1.0.xsd"/>
+	<xs:include schemaLocation="TaxMLBd_bdcxmxx_V1.0.xsd"/>
+	<xs:include schemaLocation="TaxMLBd_yysfxmjmsmxsbb_V1.0.xsd"/>
+	<xs:complexType name="yysfxmsbywbw">
+		<xs:annotation>
+			<xs:documentation>《营业税分项目申报》业务报文</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="yysfxmsbsbb" type="yysfxmsbsbb">
+						<xs:annotation>
+							<xs:documentation>《营业税分项目申报申报表》</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="yysfxmsbjzysbb" type="yysfxmsbjzysbb" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>《营业税分项目申报建筑业申报表》</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="yysfxmsbjzysbydtgjzylwqksbb" type="yysfxmsbjzysbydtgjzylwqksbb" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>《营业税分项目申报建筑业申报异地提供建筑业劳务情况申报表》</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="yysfxmsbxsbdcsbb" type="yysfxmsbxsbdcsbb" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>《营业税分项目申报销售不动产申报表》</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="yysfxmfjssbnssbb" type="yysfxmfjssb" minOccurs="0"/>
+					<xs:element name="yysfxmjmsmxsbb" type="yysfxmjmsmxsbb_yysfxmjmsmxsbb" minOccurs="0"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+</xs:schema>

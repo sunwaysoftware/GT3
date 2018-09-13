@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 被2011 rel. 2 sp1 (TeaM DJiNN) 使用XMLSpy vTeaM DJiNN编辑的 (http://www.altova.com) by -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:complexType name="ZSHXZG00501ResponseVO">
+		<xs:annotation>
+			<xs:documentation>核定征收方式信息查询响应报文</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="zshdzsfsGrid">
+						<xs:complexType>
+							<xs:sequence minOccurs="0" maxOccurs="unbounded">
+								<xs:element name="hdzsfsGridlb" type="ZSHdzsfsVO"/>
+							</xs:sequence>
+						</xs:complexType>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="ZSHdzsfsVO">
+		<xs:annotation>
+			<xs:documentation>核定征收方式信息VO</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="zsfsDm" type="zsfsDm">
+				<xs:annotation>
+					<xs:documentation>征收方式代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="hdse" type="hdse">
+				<xs:annotation>
+					<xs:documentation>核定应纳税额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sl" minOccurs="0" type="sl">
+				<xs:annotation>
+					<xs:documentation>核定征收率</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yssdl" minOccurs="0" type="yssdl">
+				<xs:annotation>
+					<xs:documentation>核定应纳税所得率</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ynse" minOccurs="0" type="ynse">
+				<xs:annotation>
+					<xs:documentation>核定应纳税所得额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="skssqq" minOccurs="1"  type="skssqq">
+					<xs:annotation>
+						<xs:documentation>税款所属期起</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element name="skssqz" minOccurs="1" type="skssqz">
+					<xs:annotation>
+						<xs:documentation>税款所属期止</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

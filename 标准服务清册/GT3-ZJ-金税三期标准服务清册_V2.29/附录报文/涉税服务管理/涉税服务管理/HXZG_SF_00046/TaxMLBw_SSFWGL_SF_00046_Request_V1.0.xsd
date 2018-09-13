@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:include schemaLocation="TaxMLPublicSFType.xsd"/>
+	<xs:complexType name="SSFWGLSSFW00046Request">
+		<xs:annotation>
+			<xs:documentation> 查询恢复表数据：</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="sszyfwjgxh" type="sszyfwjgxh">
+						<xs:annotation>
+							<xs:documentation>涉税专业机构序号</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="xyrqq" type="qsjsr">
+						<xs:annotation>
+							<xs:documentation>协议日期起</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="xyrqz" type="qsjsr">
+						<xs:annotation>
+							<xs:documentation>协议日期止</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="zzrqq" type="qsjsr">
+						<xs:annotation>
+							<xs:documentation>中止日期起</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+</xs:schema>

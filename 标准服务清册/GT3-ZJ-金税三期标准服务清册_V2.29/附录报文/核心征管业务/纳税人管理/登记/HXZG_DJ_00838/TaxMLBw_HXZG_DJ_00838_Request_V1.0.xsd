@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 被2012 () 使用XMLSpy v编辑的 (http://www.altova.com) by -->
+<!-- edited with XMLSpy v2013 (http://www.altova.com) by  () -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:include schemaLocation="TaxMLPublicDJType.xsd"/>
+	<xs:complexType name="HXZGDJ00838Request">
+		<xs:annotation>
+			<xs:documentation>保存环保税固体废物采集信息请求报文</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="Hbsgtfwcjxx" type="Hbsgtfwcjxx"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="Hbsgtfwcjxx">
+		<xs:annotation>
+			<xs:documentation>环保税固体废物采集信息</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="insertDJGtfwcsqkGrid" type="insertDJGtfwcsqkGrid"/>
+			<xs:element name="updateDJGtfwcsqkGrid" type="updateDJGtfwcsqkGrid"/>
+			<xs:element name="deleteDJGtfwcsqkGrid" type="deleteDJGtfwcsqkGrid"/>
+			<xs:element name="insertDJGtfwwrfzssGrid" type="insertDJGtfwwrfzssGrid"/>
+			<xs:element name="updateDJGtfwwrfzssGrid" type="updateDJGtfwwrfzssGrid"/>
+			<xs:element name="deleteDJGtfwwrfzssGrid" type="deleteDJGtfwwrfzssGrid"/>
+			<xs:element name="insertDJJshwtwdwclqkGrid" type="insertDJJshwtwdwclqkGrid"/>
+			<xs:element name="updateDJJshwtwdwclqkGrid" type="updateDJJshwtwdwclqkGrid"/>
+			<xs:element name="deleteDJJshwtwdwclqkGrid" type="deleteDJJshwtwdwclqkGrid"/>
+			<xs:element name="GtfwcjjcxxVO" type="GtfwcjjcxxVO"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="insertDJGtfwcsqkGrid">
+		<xs:annotation>
+			<xs:documentation>新增固体废物产生情况集合</xs:documentation>
+		</xs:annotation>
+		<xs:sequence minOccurs="0" maxOccurs="unbounded">
+			<xs:element name="insertDJGtfwcsqkGridlb" type="DJGtfwcsqkVO"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="updateDJGtfwcsqkGrid">
+		<xs:annotation>
+			<xs:documentation>修改固体废物产生情况集合</xs:documentation>
+		</xs:annotation>
+		<xs:sequence minOccurs="0" maxOccurs="unbounded">
+			<xs:element name="updateDJGtfwcsqkGridlb" type="DJGtfwcsqkVO"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="deleteDJGtfwcsqkGrid">
+		<xs:annotation>
+			<xs:documentation>删除固体废物产生情况集合</xs:documentation>
+		</xs:annotation>
+		<xs:sequence minOccurs="0" maxOccurs="unbounded">
+			<xs:element name="deleteDJGtfwcsqkGridlb" type="DJGtfwcsqkVO"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="insertDJGtfwwrfzssGrid">
+		<xs:annotation>
+			<xs:documentation>新增固体废物污染防治设施集合</xs:documentation>
+		</xs:annotation>
+		<xs:sequence minOccurs="0" maxOccurs="unbounded">
+			<xs:element name="insertDJGtfwwrfzssGridlb" type="DJGtfwwrfzssVO"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="updateDJGtfwwrfzssGrid">
+		<xs:annotation>
+			<xs:documentation>修改固体废物污染防治设施集合</xs:documentation>
+		</xs:annotation>
+		<xs:sequence minOccurs="0" maxOccurs="unbounded">
+			<xs:element name="updateDJGtfwwrfzssGridlb" type="DJGtfwwrfzssVO"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="deleteDJGtfwwrfzssGrid">
+		<xs:annotation>
+			<xs:documentation>删除固体废物污染防治设施集合</xs:documentation>
+		</xs:annotation>
+		<xs:sequence minOccurs="0" maxOccurs="unbounded">
+			<xs:element name="deleteDJGtfwwrfzssGridlb" type="DJGtfwwrfzssVO"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="insertDJJshwtwdwclqkGrid">
+		<xs:annotation>
+			<xs:documentation>新增接收或委托外单位处理情况集合</xs:documentation>
+		</xs:annotation>
+		<xs:sequence minOccurs="0" maxOccurs="unbounded">
+			<xs:element name="insertDJJshwtwdwclqkGridlb" type="DJJshwtwdwclqkVO"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="updateDJJshwtwdwclqkGrid">
+		<xs:annotation>
+			<xs:documentation>修改接收或委托外单位处理情况集合</xs:documentation>
+		</xs:annotation>
+		<xs:sequence minOccurs="0" maxOccurs="unbounded">
+			<xs:element name="updateDJJshwtwdwclqkGridlb" type="DJJshwtwdwclqkVO"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="deleteDJJshwtwdwclqkGrid">
+		<xs:annotation>
+			<xs:documentation>删除接收或委托外单位处理情况集合</xs:documentation>
+		</xs:annotation>
+		<xs:sequence minOccurs="0" maxOccurs="unbounded">
+			<xs:element name="deleteDJJshwtwdwclqkGridlb" type="DJJshwtwdwclqkVO"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="GtfwcjjcxxVO">
+		<xs:annotation>
+			<xs:documentation>固体废物采集基础信息</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="hbsjcxxuuid" type="hbsjcxxuuid">
+				<xs:annotation>
+					<xs:documentation>环境保护税基础信息uuid</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="xzqhszDm" type="xzqhszDm">
+				<xs:annotation>
+					<xs:documentation>行政区划代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jdxzDm" type="jdxzDm">
+				<xs:annotation>
+					<xs:documentation>街道乡镇</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zgswskfjDm" type="zgswskfjDm">
+				<xs:annotation>
+					<xs:documentation>主管税务科所（分局）</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="gjhbjgDm" type="gjhbjgDm">
+				<xs:annotation>
+					<xs:documentation>环境保护部门代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

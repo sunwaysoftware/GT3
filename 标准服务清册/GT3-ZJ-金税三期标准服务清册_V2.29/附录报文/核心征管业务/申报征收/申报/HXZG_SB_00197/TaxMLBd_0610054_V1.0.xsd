@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2010 rel. 3 (http://www.altova.com) by xuxin (csstj) -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:include schemaLocation="TaxMLPublicType.xsd"/>
+	<xs:complexType name="cbfymxsbbywbw">
+		<xs:annotation>
+			<xs:documentation>《中华人民共和国企业所得税年度纳税申报表附表二（1）成本费用明细表》业务报文</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="cbfymxsbb">
+						<xs:annotation>
+							<xs:documentation>《中华人民共和国企业所得税年度纳税申报表附表二（1）成本费用明细表》</xs:documentation>
+						</xs:annotation>
+						<xs:complexType>
+							<xs:sequence>
+								<xs:element name="cbfymxsbbFrom" type="cbfymxsbbFrom">
+									<xs:annotation>
+										<xs:documentation>成本费用明细表申报信息</xs:documentation>
+									</xs:annotation>
+								</xs:element>
+							</xs:sequence>
+						</xs:complexType>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="cbfymxsbb">
+		<xs:annotation>
+			<xs:documentation>《中华人民共和国企业所得税年度纳税申报表附表二（1）成本费用明细表》</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="cbfymxsbbFrom" type="cbfymxsbbFrom">
+				<xs:annotation>
+					<xs:documentation>成本费用明细表申报信息</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="cbfymxsbbFrom">
+		<xs:annotation>
+			<xs:documentation>成本费用明细表数据对应明细</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="ewbhxh" type="ewbhxh">
+				<xs:annotation>
+					<xs:documentation>二维表行序号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="hmc" type="hmc">
+				<xs:annotation>
+					<xs:documentation>行名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="xsyycbhj" type="xsyycbhj" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>销售（营业）成本合计</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zyywcb" type="zyywcb" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>主营业务成本</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="xshwcb" type="xshwcb" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>销售货物成本</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="tglwcb" type="tglwcb" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>提供劳务成本</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="rdzcsyqcb" type="rdzcsyqCb" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>让渡资产使用权成本</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jzhtcb" type="jzhtcb" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>建造合同成本</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qtywcb" type="qtywcb" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>其他业务成本</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="clxscb" type="clxscb" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>材料销售成本</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="dgdxfy" type="dgdxfy" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>代购代销费用</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bzwczcb" type="bzwczcb" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>包装物出租成本</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qtywcbqt" type="qtywQtcb" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>其他业务的其他成本</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="stxscb" type="stxscb" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>视同销售成本</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="fhbxjystxscb" type="fhbxjyStxscb" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>非货币性交易视同销售成本</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="hwcclwstxscb" type="hwcclwstxscb" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>货物财产劳务视同销售成本</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qtstxscb" type="qtstxscb" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>其他视同销售成本</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yywzc" type="yywzc" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>营业外支出</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="gdzcpk" type="gdzcPk" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>固定资产盘亏</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="czgdzcjss" type="czgdzcjss" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>处置固定资产净损失</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="cswxzcss" type="cswxzcss" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>出售无形资产损失</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zwczss" type="zwzzss" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>债务重组损失</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="fkzc" type="fkzc" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>罚款支出</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="fcss" type="fcss" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>非常损失</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jzzc" type="jzzc" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>捐赠支出</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yywzcqt" type="qtyywzc" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>其他营业外支出</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qjfy" type="qjfy" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>期间费用</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="xsyyfy" type="xsYyFy" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>销售营业费用</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="glfy" type="glfy" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>管理费用</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="cwfy" type="cwfy" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>财务费用</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

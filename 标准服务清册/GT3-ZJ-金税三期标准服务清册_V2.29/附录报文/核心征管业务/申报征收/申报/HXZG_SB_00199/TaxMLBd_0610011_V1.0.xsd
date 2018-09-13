@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2013 (http://www.altova.com) by  () -->
+<!-- 被2011 rel. 2 sp1 (TeaM DJiNN) 使用XMLSpy vTeaM DJiNN编辑的 (http://www.altova.com) by -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:include schemaLocation="TaxMLPublicType.xsd"/>
+	<xs:complexType name="fzqcsymxbywbw">
+		<xs:annotation>
+			<xs:documentation>《负债清偿损益明细表》业务报文</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="fzqcsymxb" type="fzqcsymxb">
+						<xs:annotation>
+							<xs:documentation>《负债清偿损益明细表》</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="fzqcsymxb">
+		<xs:annotation>
+			<xs:documentation>《负债清偿损益明细表》</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="fzqcsymxbxxGrid">
+				<xs:annotation>
+					<xs:documentation>负债清偿损益明细表信息</xs:documentation>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:sequence minOccurs="0" maxOccurs="unbounded">
+						<xs:element name="fzqcsymxbxxGridlb" type="fzqcsymxbxxGridlbVo">
+							<xs:annotation>
+								<xs:documentation>负债清偿损益明细表信息</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="fzqcsymxbxxGrid">
+		<xs:annotation>
+			<xs:documentation>负债清偿损益明细表信息</xs:documentation>
+		</xs:annotation>
+		<xs:sequence minOccurs="0" maxOccurs="unbounded">
+			<xs:element name="fzqcsymxbxxGridlb" type="fzqcsymxbxxGridlbVo">
+				<xs:annotation>
+					<xs:documentation>负债清偿损益明细信息</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="fzqcsymxbxxGridlbVo">
+		<xs:annotation>
+			<xs:documentation>负债清偿损益明细表信息</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="dqjk" type="dqjk" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>短期借款</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jyxjrfz" type="jyxjrfz" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>交易性金融负债# </xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yfpj" type="yfpj" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>应付票据</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yfzk" type="yfzk" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>应付账款</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yszk" type="yszk" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>预收账款</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yfzgxc" type="yfzgxc" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>应付职工薪酬#</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yfgz" type="yfgz" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>应付工资*</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yfflf" type="yfflf" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>应付福利费*</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yjsf" type="yjsf" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>应交税费</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yflx" type="yflx" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>应付利息</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yfgl" type="yfgl" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>应付股利</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qtyjk" type="qtyjk" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>其他应交款*</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qtyfk" type="qtyfk" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>其他应付款</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ytfy" type="ytfy" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>预提费用*</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ynndqdfldfz" type="ynndqdfldfz" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>一年内到期的非流动负债</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qtldfz" type="qtldfz" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>其他流动负债</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="cqjk" type="cqjk" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>长期借款</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yfzq" type="yfzq" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>应付债券</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="cqyfk" type="cqyfk" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>长期应付款</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zxyfk" type="zxyfk" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>专项应付款</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yjfz" type="yjfz" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>预警分值</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qtfldfz" type="qtfldfz" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>其他非流动负债</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zj" type="zj" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>总计</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="lmc" type="lmc" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>列名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ewblxh" type="ewblxh" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>二维表列序号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

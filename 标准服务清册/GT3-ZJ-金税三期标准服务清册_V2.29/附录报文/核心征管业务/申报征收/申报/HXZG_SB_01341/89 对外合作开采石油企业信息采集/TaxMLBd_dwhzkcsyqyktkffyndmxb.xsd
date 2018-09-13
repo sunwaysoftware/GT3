@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 被2012 () 使用XMLSpy v编辑的 (http://www.altova.com) by -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:include schemaLocation="TaxMLPublic.xsd"/>
+	<xs:include schemaLocation="TaxMLPublicType.xsd"/>
+	<xs:complexType name="NdmxbVO">
+		<xs:annotation>
+			<xs:documentation>对外合作开采石油企业勘探开发费用年度明细表</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="nsrxxForm" type="NsrxxFormVO"/>
+			<xs:element name="NdmxbGrid">
+				<xs:complexType>
+					<xs:sequence maxOccurs="unbounded">
+						<xs:element name="NdmxbGridlb" type="NdmxbGridlbVO"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="NdmxbGridlbVO">
+		<xs:sequence>
+			<xs:element name="ewbhxh" type="ewbhxh">
+				<xs:annotation>
+					<xs:documentation>二维表行序号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="xmmc" type="xmmc">
+				<xs:annotation>
+					<xs:documentation>项目名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bl" type="bl">
+				<xs:annotation>
+					<xs:documentation>比例</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ktzyf" type="ktzyf">
+				<xs:annotation>
+					<xs:documentation>勘探作业费</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ktjklx" type="ktjklx">
+				<xs:annotation>
+					<xs:documentation>勘探借款利息</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ktjyglf" type="ktjyglf">
+				<xs:annotation>
+					<xs:documentation>勘探经营管理费</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ktsjglf" type="ktsjglf">
+				<xs:annotation>
+					<xs:documentation>勘探上级管理费</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="kthj" type="kthj">
+				<xs:annotation>
+					<xs:documentation>勘探合计</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="kfzyf" type="kfzyf">
+				<xs:annotation>
+					<xs:documentation>开发作业费</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="kfjklx" type="kfjklx">
+				<xs:annotation>
+					<xs:documentation>开发借款利息</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="kfjyglf" type="kfjyglf">
+				<xs:annotation>
+					<xs:documentation>开发经营管理费</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="kfsjglf" type="kfsjglf">
+				<xs:annotation>
+					<xs:documentation>开发上级管理费</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="kfhj" type="kfhj">
+				<xs:annotation>
+					<xs:documentation>开发合计</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zj" type="zj">
+				<xs:annotation>
+					<xs:documentation>总计</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ktfyytxe" type="ktfyytxe">
+				<xs:annotation>
+					<xs:documentation>勘探费用已摊销额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="kffyyzje" type="kffyyzje">
+				<xs:annotation>
+					<xs:documentation>开发费用已折旧额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ktfydtxe" type="ktfydtxe">
+				<xs:annotation>
+					<xs:documentation>勘探费用待摊销额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="kffydzje" type="kffydzje">
+				<xs:annotation>
+					<xs:documentation>开发费用待折旧额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="tbrq" type="tbrq">
+				<xs:annotation>
+					<xs:documentation>填报日期</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qyfzrxm" type="qyfzrxm">
+				<xs:annotation>
+					<xs:documentation>企业负责人姓名</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zkjsxm" type="zkjsxm">
+				<xs:annotation>
+					<xs:documentation>总会计师姓名</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

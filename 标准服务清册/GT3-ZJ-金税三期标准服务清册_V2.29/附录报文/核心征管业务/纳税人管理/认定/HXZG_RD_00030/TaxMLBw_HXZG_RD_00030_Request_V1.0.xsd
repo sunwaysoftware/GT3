@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2010 rel. 3 (http://www.altova.com) by MESMERiZE (MSM) -->
+<!-- 编辑使用 XMLSpy v2006 U (http://www.altova.com) 由 any (any) -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:include schemaLocation="TaxMLPublicRDType.xsd"/>
+	<xs:complexType name="HXZGRD00030Request">
+		<xs:annotation>
+			<xs:documentation>保存汇总纳税企业认定申请表信息保存接入报文</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="insertmxxxGrid" type="bhznsrqdGrid">
+						<xs:annotation>
+							<xs:documentation>新增汇总纳税认定明细表</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="nonstatusmxxxGrid" type="bhznsrqdGrid">
+						<xs:annotation>
+							<xs:documentation>无状态汇总纳税认定明细表</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="hzrjbxxvo" type="hzrjbxxFormVO">
+						<xs:annotation>
+							<xs:documentation>汇总纳税企业认定申请表信息</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="djxh" type="djxh">
+						<xs:annotation>
+							<xs:documentation>登记序号</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="lcswsxDm" type="lcswsxDm">
+						<xs:annotation>
+							<xs:documentation>流程税务事项代码</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="hzrjbxxFormVO">
+		<xs:annotation>
+			<xs:documentation>汇总纳税认定申请表-汇总人基本信息</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="nsrsbh" type="nsrsbh">
+				<xs:annotation>
+					<xs:documentation>纳税人识别号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="nsrmc" type="nsrmc">
+				<xs:annotation>
+					<xs:documentation>纳税人名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zsxmDm" type="spwh">
+				<xs:annotation>
+					<xs:documentation>汇总税种</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ssswjgDm" type="spwh">
+				<xs:annotation>
+					<xs:documentation>所属税务机关</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sqrq" type="sqrq">
+				<xs:annotation>
+					<xs:documentation>申请日期</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="hznsfwDm" type="hznsfwDm">
+				<xs:annotation>
+					<xs:documentation>汇总纳税范围</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="hzqylxDm" type="hzqylxDm">
+				<xs:annotation>
+					<xs:documentation>汇总企业类型代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="hznsuuid" type="hznsuuid">
+				<xs:annotation>
+					<xs:documentation>汇总纳税UUID</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jbrxm" type="jbrxm">
+				<xs:annotation>
+					<xs:documentation>经办人项目</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sflsqy" type="bjw">
+				<xs:annotation>
+					<xs:documentation>是否连锁企业</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="bhznsrqdGrid">
+		<xs:annotation>
+			<xs:documentation>汇总纳税认定申请表-被汇总纳税人清单</xs:documentation>
+		</xs:annotation>
+		<xs:sequence maxOccurs="unbounded">
+			<xs:element name="mxxxGridlb" type="RDHznsqyrdsqBhzmxxxVO">
+				<xs:annotation>
+					<xs:documentation>汇总纳税认定明细列表</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

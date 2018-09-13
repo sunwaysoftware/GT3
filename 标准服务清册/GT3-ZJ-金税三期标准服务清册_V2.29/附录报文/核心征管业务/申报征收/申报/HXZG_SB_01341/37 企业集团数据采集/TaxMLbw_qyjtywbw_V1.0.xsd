@@ -1,0 +1,288 @@
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" version="1.0" targetNamespace="http://www.chinatax.gov.cn/dataspec/">
+    <xs:include schemaLocation="TaxML.xsd"/>
+    <xs:complexType name="qyjtywbw">
+        <xs:annotation>
+            <xs:documentation>总业务报文</xs:documentation>
+        </xs:annotation>
+        <xs:complexContent>
+            <xs:extension base="taxDoc">
+                <xs:sequence>
+                    <xs:element name="qyjtssdcb" type="qyjtssdcb" minOccurs="0">
+                        <xs:annotation>
+                            <xs:documentation>企业集团税收调查表</xs:documentation>
+                        </xs:annotation>
+                    </xs:element>
+                    <xs:element name="qyjtcydwssdcb" type="qyjtcydwssdcb" minOccurs="0">
+                        <xs:annotation>
+                            <xs:documentation>企业集团成员单位税收调查表</xs:documentation>
+                        </xs:annotation>
+                    </xs:element>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    <xs:complexType name="qyjtssdcb">
+        <xs:annotation>
+            <xs:documentation>企业集团税收调查表</xs:documentation>
+        </xs:annotation>
+        <xs:sequence>
+            <xs:element name="qyjtssdcbxxForm" type="qyjtssdcbxxFormVO">
+                <xs:annotation>
+                    <xs:documentation>企业集团税收调查表</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="qyjtssdcbyczbForm" type="qyjtssdcbyczbFormVO">
+                <xs:annotation>
+                    <xs:documentation>企业集团税收调查表预测指标</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="qyjtssdcbmxGrid">
+                <xs:annotation>
+                    <xs:documentation>企业集团税收调查表明细表Grid</xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="qyjtssdcbmxGridlb" type="qyjtssdcbmxGridlbVO" maxOccurs="unbounded">
+                            <xs:annotation>
+                                <xs:documentation>企业集团税收调查表明细表Gridlb</xs:documentation>
+                            </xs:annotation>
+                        </xs:element>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="fjxxForm" type="fjxxFormVO"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="qyjtssdcbxxFormVO">
+        <xs:sequence>
+            <xs:element name="qymc" type="qymc" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>企业名称</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="frdwdm" type="frdwdm" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>法人单位代码</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="xzqhszDm" type="xzqhszDm" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>行政区划数字代码</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="hyDm" type="hyDm" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>行业代码</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="djzclxDm" type="djzclxDm" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>登记注册类型代码</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="fddbrxm" type="fddbrxm" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>法定代表人姓名</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="cwfzrxm" type="cwfzrxm" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>财务负责人姓名</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="lxdh" type="lxdh" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>联系电话</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="dzxx" type="dzxx" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>电子信箱</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="qydz" type="qydz" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>企业地址</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="yzbm" type="yzbm" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>邮政编码</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="gszgjgDm" type="gszgjgDm" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>国税主管机关</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="dszgjgDm" type="dszgjgDm" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>地税主管机关</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="xscydwgs" type="xscydwgs" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>下属成员单位个数</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="qyzgrs" type="qyzgrs" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>企业职工人数</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="sfqyjtcydw" type="sfqyjtcydw" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>是否企业集团成员单位</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+        </xs:sequence>
+        <xs:annotation>
+            <xs:documentation>企业集团成员单位税收调查表VO</xs:documentation>
+        </xs:annotation>
+    </xs:complexType>
+
+    <xs:complexType name="qyjtssdcbyczbFormVO">
+        <xs:sequence>
+            <xs:element name="nd" type="nd" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>年度</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="yjbnYysr" type="yjbnYysr" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>预计本年的营业收入</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="yjbnLrze" type="yjbnLrze" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>预计本年的利润总额</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="yjbnJngnssze" type="yjbnJngnssze" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>预计本年缴纳国内税收总额</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="sszeZzs" type="sszeZzs" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>税收总额增值税</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="sszeXfs" type="sszeXfs" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>税收总额消费税</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="sszeYys" type="sszeYys" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>税收总额营业税</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="sszeQysds" type="sszeQysds" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>税收总额企业所得税</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="bzQnlj" type="bzQnlj" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>备注全年累计或期末</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="bzSntq" type="bzSntq" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>备注上年同期</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="sfqyjtcydw" type="sfqyjtcydw" minOccurs="0"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="qyjtssdcbmxGridlbVO">
+        <xs:annotation>
+            <xs:documentation>企业集团税收调查表明细表Gridlb</xs:documentation>
+        </xs:annotation>
+        <xs:sequence>
+            <xs:element name="ewbhxh" type="ewbhxh" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>二维表行序号</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="zbmc2" type="zbmc2" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>指标名称</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="qnljhqms" type="qnljhqms" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>全年累计或期末数</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="sntq" type="sntq" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>上年同期</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="sfqyjtcydw" type="sfqyjtcydw" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>是否企业集团成员单位</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="fjxxFormVO">
+        <xs:annotation>
+            <xs:documentation>附加信息</xs:documentation>
+        </xs:annotation>
+        <xs:sequence>
+            <xs:element name="slrDm" type="slrDm" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>受理人代码</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="slrq" type="slrq" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>受理日期</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="swjgmc" type="swjgmc" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>税务机关名称</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="qyjtcydwssdcb">
+        <xs:annotation>
+            <xs:documentation>企业集团成员单位税收调查表</xs:documentation>
+        </xs:annotation>
+        <xs:sequence>
+            <xs:element name="qyjtcydwssdcbxxForm" type="qyjtssdcbxxFormVO">
+                <xs:annotation>
+                    <xs:documentation>企业集团税收调查表</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="qyjtcydwssdcbmxGrid">
+                <xs:annotation>
+                    <xs:documentation>企业集团成员税收调查表预测指标Grid</xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="qyjtcydwssdcbmxGridlb" type="qyjtssdcbmxGridlbVO" maxOccurs="unbounded">
+                            <xs:annotation>
+                                <xs:documentation>企业集团成员税收调查表预测指标Gridlb</xs:documentation>
+                            </xs:annotation>
+                        </xs:element>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="cydwfjxxForm" type="fjxxFormVO">
+                <xs:annotation>
+                    <xs:documentation>附加信息</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+</xs:schema>

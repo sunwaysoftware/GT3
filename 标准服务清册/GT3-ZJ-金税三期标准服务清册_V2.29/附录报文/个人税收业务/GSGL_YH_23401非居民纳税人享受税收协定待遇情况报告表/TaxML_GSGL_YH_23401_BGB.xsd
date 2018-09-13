@@ -1,0 +1,599 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://www.chinatax.gov.cn/dataspec/" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	
+	<xs:complexType name="yhFjmnsrssjmsfxxbgb">
+		<xs:annotation>
+			<xs:documentation>
+			    身份信息报告表
+			</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:group ref="sfxxbgb"/>
+					<xs:group  ref="fjmnsrjbxx"></xs:group>
+					<xs:group  ref="kjywrsyxx"></xs:group>
+					<xs:group  ref="swjgglsyxx"></xs:group>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	
+	<xs:group name="sfxxbgb">
+		<xs:annotation>
+			<xs:documentation>
+			    身份信息报告表
+			</xs:documentation>
+		</xs:annotation>
+		
+			<xs:sequence>
+				<xs:element name="sbqxDm" type="ssxdsdlxDm">
+					<xs:annotation>
+						<xs:documentation>申报情形代码 1.自行申报,2.扣缴申报,3.退税（必录）</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element name="kjywrdjxh" type="xs:string">
+					<xs:annotation>
+						<xs:documentation>扣缴义务人登记序号</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element name="kjywrmc" type="xs:string">
+					<xs:annotation>
+						<xs:documentation>扣缴义务人名称</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element name="kjywrnsrsbh" type="xs:string">
+					<xs:annotation>
+						<xs:documentation>扣缴义务人纳税人识别号</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+			</xs:sequence>
+			
+	</xs:group>
+	
+	<xs:group name="fjmnsrjbxx">
+		<xs:annotation>
+			<xs:documentation>
+			    非居民纳税人基本信息
+			</xs:documentation>
+		</xs:annotation>
+		
+				<xs:sequence>
+					<xs:element name="fjmnsrdjxh" type="xs:string">
+						<xs:annotation>
+							<xs:documentation>非居民纳税人登记序号（必录）</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="fjmnsrzzglxdz" type="fjmnsrzzglxdz">
+						<xs:annotation>
+							<xs:documentation>非居民纳税人在中国联系地址
+							</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="fjmnsrzzgyzbm" type="fjmnsrzzgyzbm">
+						<xs:annotation>
+							<xs:documentation>非居民纳税人在中国邮政编码
+							</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="fjmnsrzjmgdqlxdz" type="fjmnsrzzglxdz">
+						<xs:annotation>
+							<xs:documentation>非居民纳税人在居民国（地区）联系地址（必录）
+							</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="fjmnsrzjmgdqyzbm" type="fjmnsrzzgyzbm">
+						<xs:annotation>
+							<xs:documentation>非居民纳税人在居民国（地区）邮政编码（必录）
+							</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="fjmnsrzzgdlxdh" type="fjmnsrzzgdlxdh">
+						<xs:annotation>
+							<xs:documentation>非居民纳税人在中国的联系电话
+							</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="fjmnsrzjmgdqlxdh" type="fjmnsrzzgdlxdh">
+						<xs:annotation>
+							<xs:documentation>非居民纳税人在居民国（地区）的联系电话（必录）
+							</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="fjmnsrjmgdqDm" type="fjmnsrjmgdq">
+						<xs:annotation>
+							<xs:documentation>非居民纳税人的居民国（地区）（必录）填写码值 取表DM_GY_GJHDQ
+							</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="fjmnsrxsssxdDm" type="fjmnsrxsssxdmc">
+						<xs:annotation>
+							<xs:documentation>非居民纳税人享受税收协定名称（必录）填写码值 取表DM_GY_SSXD
+							</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			
+	</xs:group>
+	
+	<xs:group name="kjywrsyxx">
+		<xs:annotation>
+			<xs:documentation>
+			    扣缴义务人使用信息
+			</xs:documentation>
+		</xs:annotation>
+		
+				<xs:sequence>
+					<xs:element name="fjmnsrgddydfgnflyj" type="fjmnsrgddydfgnflyj">
+						<xs:annotation>
+							<xs:documentation>请引述非居民纳税人构成缔约对方税收居民的缔约对方国内法律依据（必录）
+							</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="fjmnsrngcdydfsdjmssqk" type="fjmnsrngcdydfsdjmssqk">
+						<xs:annotation>
+							<xs:documentation>请简要说明非居民纳税人能构成缔约对方税收居民的事实情况：（必录）
+							</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			
+	</xs:group>
+	
+	<xs:group name="swjgglsyxx">
+		<xs:annotation>
+			<xs:documentation>
+			    税务机关管理使用信息
+			</xs:documentation>
+		</xs:annotation>
+		
+				<xs:sequence>
+					<xs:element name="sfgczgssjm" type="sfgczgssjm">
+						<xs:annotation>
+							<xs:documentation>根据《中华人民共和国个人所得税法》规定，在中国境内有住所或者无住所而在境内居住满一年的人是中国的税收居民。根据该法律规定，非居民纳税人是否构成中国的税收居民是 Y, 否 N （必录）
+							</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="sfzzgjnczzs" type="sfzzgjnczzs">
+						<xs:annotation>
+							<xs:documentation>非居民纳税人在中国境内是否有住所是 Y, 否 N （必录）
+							</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="fjmnsrzzgjusjqk" type="fjmnsrzzgjusjqk">
+						<xs:annotation>
+							<xs:documentation>非居民纳税人在中国居住时间是以下哪种情况:1在一个纳税年度中在中国境内连续或者累计居住不超过183天（含183天),2在一个纳税年度中在中国境内居住超过183天但不满1年（临时离境不扣减天数）3,在中国境内居住满1年未满5年,4 在中国境内居住满5年（含5年） （必录）
+							</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="fjmnsryjxjzszdqk" type="fjmnsryjxjzszdqk">
+						<xs:annotation>
+							<xs:documentation>非居民纳税人的永久性住所所在地属于以下哪种情况 （必录）1.非居民纳税人仅在需享受税收协定缔约对方国家（地区）拥有永久性住所,2.非居民纳税人仅在中国拥有永久性住所,3.非居民纳税人在需享受税收协定缔约对方国家（地区）和中国均拥有永久性住所,4.非居民在需享受税收协定缔约对方国家（地区）和中国均没有永久性住所
+							</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="sfmnsrdsgyjxzsgjhdq" type="sfmnsrdsgyjxzsgjhdq">
+						<xs:annotation>
+							<xs:documentation>非居民纳税人如在第三国（地区）拥有永久性住所，请说明具体国家（地区）
+							</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="fjmnsrdzylyzszsdqk" type="fjmnsrdzylyzszsdqk">
+						<xs:annotation>
+							<xs:documentation>非居民纳税人的重要利益中心所在地属于以下哪种情况？（必录）1.非居民纳税人的重要利益中心在需享受税收协定缔约对方国家（地区）2.非居民纳税人的重要利益中心在中国3.非居民纳税人的重要利益中心在第三国（地区）4.非居民纳税人无法确定重要利益中心在何地</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="fjmnsrdtcyzyshd" type="fjmnsrdtcyzyshd">
+						<xs:annotation>
+							<xs:documentation>非居民纳税人的家庭成员主要生活地（如涉及多个国家或地区，请全部列明）（必录）</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="fjmnsrxgxjuszdqk" type="fjmnsrxgxjuszdqk">
+						<xs:annotation>
+							<xs:documentation>非居民纳税人的习惯性居所所在地属于以下哪种情况？（必录）1.非居民纳税人的习惯性居所在需享受税收协定缔约对方国家（地区）2.非居民纳税人的习惯性居所在中国3.非居民纳税人的习惯性居所在第三国（地区）4.非居民纳税人无法确定习惯性居住地</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="fjmdcgjqk" type="fjmdcgjqk">
+						<xs:annotation>
+							<xs:documentation>非居民纳税人的国籍（多重国籍请全部列明）（必录）</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="sfbydzchjjlsze" type="sfbydzchjjlsze">
+						<xs:annotation>
+							<xs:documentation>非居民纳税人在中国保有的资产和经济利益总额是否超过在需享受税收协定缔约对方国家（地区）保有的资产和经济利益总额:是 Y, 否 N（必录）
+							</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element  name="yhSfxxbgbNsqkLists" type="YhSfxxbgbNsqk" maxOccurs="unbounded">
+						<xs:annotation>
+							<xs:documentation>非居民纳税人从中国取得的所得在居民国（地区）纳税情况（限于列入税收协定适用范围的税种）（必录）
+							</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="fjmnsrdshgcgjdqssjm" type="fjmnsrdshgcgjdqssjm">
+						<xs:annotation>
+							<xs:documentation>根据第三国（地区）法律规定，非居民纳税人同时还构成哪些国家（地区）的税收居民（涉及多个国家或地区的请全部列明）（必录）
+							</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="bz" type="sf_bz">
+						<xs:annotation>
+							<xs:documentation>备注
+							</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="kjywr" type="kjywr">
+						<xs:annotation>
+							<xs:documentation>扣缴义务人
+				</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="kjywrjbr" type="kjywrjbr">
+						<xs:annotation>
+							<xs:documentation>扣缴义务人经办人
+				</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="kjywrtbrq" type="kjywrtbrq">
+						<xs:annotation>
+							<xs:documentation>扣缴义务人填表日期
+				</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="dlsbzjjg" type="dlsbzjjg">
+						<xs:annotation>
+							<xs:documentation>代理申报中介机构
+				</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="dlsbzjjgjbr" type="dlsbzjjgjbr">
+						<xs:annotation>
+							<xs:documentation>代理申报中介机构经办人
+				</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="dlsbzjjgsbrq" type="dlsbzjjgsbrq">
+						<xs:annotation>
+							<xs:documentation>代理申报中介机构申报日期
+				</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="zgswjg_dm" type="zgswjgDm">
+						<xs:annotation>
+							<xs:documentation>主管税务机关（必录）
+				</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="slr" type="slr">
+						<xs:annotation>
+							<xs:documentation>受理人（必录）
+				</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="slrq" type="slrq">
+						<xs:annotation>
+							<xs:documentation>受理日期（必录）
+				</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			
+	</xs:group>
+	<xs:complexType name="YhSfxxbgbNsqk">
+		<xs:annotation>
+			<xs:documentation>非居民纳税人从中国取得的所得在居民国（地区）纳税情况（限于列入税收协定适用范围的税种）
+				</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="szdm" type="szDm">
+						<xs:annotation>
+							<xs:documentation>税种代码（必录）
+					</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="fdsl" type="fdsl">
+						<xs:annotation>
+							<xs:documentation>法定税率（必录）（0,1）
+					</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="flyjjtwms" type="flyjjtwms">
+						<xs:annotation>
+							<xs:documentation>享受居民国（地区）国内减免税优惠的法律依据 及条文描述（必录）
+					</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:simpleType name="fjmnsrdzylyzszsdqk">
+		<xs:annotation>
+			<xs:documentation>非居民纳税人的重要利益中心所在地属于以下哪种情况？（必录）
+	</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:length value="1"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="fjmnsrdtcyzyshd">
+		<xs:annotation>
+			<xs:documentation>非居民纳税人的家庭成员主要生活地（如涉及多个国家或地区，请全部列明）（必录）
+	</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:maxLength value="500"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="fjmnsrxgxjuszdqk">
+		<xs:annotation>
+			<xs:documentation>非居民纳税人的习惯性居所所在地属于以下哪种情况？（必录）
+	</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:length value="1"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="fjmdcgjqk">
+		<xs:annotation>
+			<xs:documentation>非居民纳税人的国籍（多重国籍请全部列明）（必录）
+	</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:maxLength value="500"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="sfbydzchjjlsze">
+		<xs:annotation>
+			<xs:documentation>非居民纳税人在中国保有的资产和经济利益总额是否超过在需享受税收协定缔约对方国家（地区）保有的资产和经济利益总额:是 Y, 否 N（必录）
+	</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:length value="1"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="fjmnsrdshgcgjdqssjm">
+		<xs:annotation>
+			<xs:documentation>根据第三国（地区）法律规定，非居民纳税人同时还构成哪些国家（地区）的税收居民（涉及多个国家或地区的请全部列明
+	</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:maxLength value="500"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="sf_bz">
+		<xs:annotation>
+			<xs:documentation>备注
+	</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:maxLength value="2000"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="smxxssxd">
+		<xs:annotation>
+			<xs:documentation>税收协定 主表没发现这个字段暂时
+	</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:maxLength value="2000"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="fjmnsrzzgdlxdz">
+		<xs:annotation>
+			<xs:documentation>中国联系地址
+	</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:maxLength value="300"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="kjywr">
+		<xs:annotation>
+			<xs:documentation>扣缴义务人
+	</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:maxLength value="300"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="kjywrjbr">
+		<xs:annotation>
+			<xs:documentation>扣缴义务人经办人
+	</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:maxLength value="300"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="kjywrtbrq">
+		<xs:annotation>
+			<xs:documentation>扣缴义务人填表日期
+	</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+	</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="dlsbzjjg">
+		<xs:annotation>
+			<xs:documentation>代理申报中介机构
+	</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:maxLength value="300"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="dlsbzjjgjbr">
+		<xs:annotation>
+			<xs:documentation>代理申报中介机构经办人
+	</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:maxLength value="300"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="dlsbzjjgsbrq">
+		<xs:annotation>
+			<xs:documentation>代理申报中介机构申报日期
+	</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+	</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="slr">
+		<xs:annotation>
+			<xs:documentation>受理人
+	</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:length value="11"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="sfmnsrdsgyjxzsgjhdq">
+		<xs:annotation>
+			<xs:documentation>非居民纳税人如在第三国（地区）拥有永久性住所，请说明具体国家（地区）
+	</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:maxLength value="100"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="fjmnsrjmgdq">
+		<xs:annotation>
+			<xs:documentation>非居民纳税人的居民国（地区）（必录）填写码值
+	</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:length value="3"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="fjmnsrxsssxdmc">
+		<xs:annotation>
+			<xs:documentation>非居民纳税人享受税收协定名称 填写码值
+	</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:maxLength value="150"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="fjmnsrgddydfgnflyj">
+		<xs:annotation>
+			<xs:documentation>请引述非居民纳税人构成缔约对方税收居民的缔约对方国内法律依据
+	</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:maxLength value="500"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="fjmnsrngcdydfsdjmssqk">
+		<xs:annotation>
+			<xs:documentation>请简要说明非居民纳税人能构成缔约对方税收居民的事实情况：
+	</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:maxLength value="500"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="sfgczgssjm">
+		<xs:annotation>
+			<xs:documentation>根据《中华人民共和国个人所得税法》规定，在中国境内有住所或者无住所而在境内居住满一年的人是中国的税收居民。根据该法律规定，非居民纳税人是否构成中国的税收居民是 Y, 否 N 
+	</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:length value="1"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="sfzzgjnczzs">
+		<xs:annotation>
+			<xs:documentation>非居民纳税人在中国境内是否有住所是 Y, 否 N 
+	</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:length value="1"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="fjmnsrzzgjusjqk">
+		<xs:annotation>
+			<xs:documentation>非居民纳税人在中国居住时间是以下哪种情况:1在一个纳税年度中在中国境内连续或者累计居住不超过183天（含183天),2在一个纳税年度中在中国境内居住超过183天但不满1年（临时离境不扣减天数）3,在中国境内居住满1年未满5年,4 在中国境内居住满5年（含5年） 
+	</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:length value="1"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="fjmnsryjxjzszdqk">
+		<xs:annotation>
+			<xs:documentation>非居民纳税人的永久性住所所在地属于以下哪种情况:1.非居民纳税人仅在需享受税收协定缔约对方国家（地区）拥有永久性住所,2.非居民纳税人仅在中国拥有永久性住所,3.非居民纳税人在需享受税收协定缔约对方国家（地区）和中国均拥有永久性住所,4.非居民在需享受税收协定缔约对方国家（地区）和中国均没有永久性住所
+	</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:length value="1"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="sf_sbqx">
+		<xs:annotation>
+			<xs:documentation>申报情形:自行申报、扣缴申报、退税 三选一 
+	</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:length value="1"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="kjywrnsrmc">
+		<xs:annotation>
+			<xs:documentation>扣缴义务人纳税人名称 
+	</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:maxLength value="300"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="fjmnsrzzglxdz">
+		<xs:annotation>
+			<xs:documentation>非居民纳税人在中国联系地址 
+	</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:maxLength value="300"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="fjmnsrzzgyzbm">
+		<xs:annotation>
+			<xs:documentation>非居民纳税人在中国邮政编码 
+	</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:length value="6"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="flyjjtwms">
+		<xs:annotation>
+			<xs:documentation>享受居民国（地区）国内减免税优惠的法律依据 及条文描述
+	</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:maxLength value="2000"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="fjmnsrsfzjhm">
+		<xs:annotation>
+			<xs:documentation>非居民纳税人身份证件号码
+	</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:maxLength value="20"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="fjmnsrzzgdlxdh">
+		<xs:annotation>
+			<xs:documentation>非居民纳税人在中国的联系电话
+	</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:maxLength value="60"/>
+		</xs:restriction>
+	</xs:simpleType>
+</xs:schema>

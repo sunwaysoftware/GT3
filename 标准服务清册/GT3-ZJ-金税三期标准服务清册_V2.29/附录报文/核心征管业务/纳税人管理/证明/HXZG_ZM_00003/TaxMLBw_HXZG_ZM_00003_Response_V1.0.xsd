@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 被2012 () 使用XMLSpy v编辑的 (http://www.altova.com) by -->
+<!-- edited with XMLSpy v2013 (http://www.altova.com) by  () -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:include schemaLocation="TaxMLPublicZMType.xsd"/>
+	<xs:complexType name="HXZGZM00003Response">
+		<xs:annotation>
+			<xs:documentation>根据外出经营证明UUID查询外出经营活动税收管理证明信息返回报文</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="zmWcjyhdssglzmxxVO" type="ZMWcjyhdssglzmxxVO">
+						<xs:annotation>
+							<xs:documentation>外出经营证明申请表信息</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="wcjyzmlwxxGrid" type="WcjyzmlwxxGrid">
+						<xs:annotation>
+							<xs:documentation>劳务信息</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="wcjyzmhwxxGrid" type="WcjyzmhwxxGrid">
+						<xs:annotation>
+							<xs:documentation>货物信息</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="SwjgVO" type="SwjgVO">
+						<xs:annotation>
+							<xs:documentation>受理税务机关</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="WcjyzmlwxxGrid">
+		<xs:annotation>
+			<xs:documentation>劳务信息列表</xs:documentation>
+		</xs:annotation>
+		<xs:sequence minOccurs="0" maxOccurs="unbounded">
+			<xs:element name="WcjyzmlwxxGridlb" type="ZMWcjyhdssglzmLwxxVO">
+				<xs:annotation>
+					<xs:documentation>劳务信息</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="WcjyzmhwxxGrid">
+		<xs:annotation>
+			<xs:documentation>货物信息列表</xs:documentation>
+		</xs:annotation>
+		<xs:sequence minOccurs="0" maxOccurs="unbounded">
+			<xs:element name="wcjyzmhwxxGridlb" type="ZMWcjyhdssglzmHwxxVO">
+				<xs:annotation>
+					<xs:documentation>货物信息</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="SwjgVO">
+		<xs:annotation>
+			<xs:documentation>税务机关VO</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="uuid" type="uuid">
+				<xs:annotation>
+					<xs:documentation>uuid</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zmyxqxq" type="zmyxqxq">
+				<xs:annotation>
+					<xs:documentation>证明有效期限起</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zmyxqxz" type="zmyxqxz">
+				<xs:annotation>
+					<xs:documentation>证明有效期限止</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jydswjgDm" type="jydswjgDm">
+				<xs:annotation>
+					<xs:documentation>经营地税务机关代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jydswjgmc" type="jydswjgmc">
+				<xs:annotation>
+					<xs:documentation>经营地税务机关名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="slrDm" type="slrDm">
+				<xs:annotation>
+					<xs:documentation>受理人</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="slrmc" type="xs:string">
+				<xs:annotation>
+					<xs:documentation>受理人名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="slswjgDm" type="slswjgDm">
+				<xs:annotation>
+					<xs:documentation>受理税务机关代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="slswjgmc" type="slswjgmc">
+				<xs:annotation>
+					<xs:documentation>受理税务机关名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="slrq" type="slrq">
+				<xs:annotation>
+					<xs:documentation>受理日期</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

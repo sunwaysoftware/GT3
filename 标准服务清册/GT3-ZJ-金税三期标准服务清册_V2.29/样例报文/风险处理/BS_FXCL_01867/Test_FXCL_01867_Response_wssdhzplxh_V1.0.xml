@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<service xmlns="http://www.chinatax.gov.cn/spec/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<head>
+		<tran_id>SWZJ.HXZG.ZH.WSSDHZPLXH</tran_id>
+		<channel_id>TEST</channel_id>
+		<tran_seq>e645dbdbbc03462cb99402bfe37f6d78</tran_seq>
+		<tran_date>20120420</tran_date>
+		<tran_time>022034181</tran_time>
+		<rtn_code>0</rtn_code>
+		<rtn_msg>
+			<Code>000</Code>
+			<Message/>
+			<Reason/>
+		</rtn_msg>
+	</head>
+	<body><![CDATA[<?xml version="1.0" encoding="UTF-8" standalone="yes"?><taxML xsi:type="HXZGFXCL01867Response" xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><wsxhfhxxGrid><wsxhfhxxGridlb><sdxxuuid>FCA30BA714FEA959D5E58012E5BC0AEB</sdxxuuid><dzbzdszlDm>BDA1220074</dzbzdszlDm><sdwsuuid>E0E4F5C97C5B7E5B1EBFA7906C498DF8</sdwsuuid><retCode>0</retCode><message>直接送达时受达人（wssdrxm）与代收人（dsr）其中之一不可为空。</message></wsxhfhxxGridlb><wsxhfhxxGridlb><sdxxuuid>aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</sdxxuuid><dzbzdszlDm>aaaaaaaaaa</dzbzdszlDm><sdwsuuid>aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</sdwsuuid><retCode>0</retCode><message>是否妥投（sftt）数据错误，请检查。</message></wsxhfhxxGridlb><wsxhfhxxGridlb><sdxxuuid>086483452F5CF152B31FBCB67F384169</sdxxuuid><dzbzdszlDm>BDA1220074</dzbzdszlDm><sdwsuuid>404A5B216CD354C0FE68869E641712AB</sdwsuuid><retCode>1</retCode><message>送达销号成功。</message></wsxhfhxxGridlb><wsxhfhxxGridlb><sdxxuuid>FCA30BA714FEA959D5E58012E5BC0AEB</sdxxuuid><dzbzdszlDm>BDA1220074</dzbzdszlDm><sdwsuuid>C1042D37FD5BD23D331763AB5E182814</sdwsuuid><retCode>1</retCode><message>送达销号成功。</message></wsxhfhxxGridlb><wsxhfhxxGridlb><sdxxuuid>FCA30BA714FEA959D5E58012E5BC0AEB</sdxxuuid><dzbzdszlDm>BDA1220074</dzbzdszlDm><sdwsuuid>404A5B216CD354C0FE68869E641712CC</sdwsuuid><retCode>0</retCode><message>根据sdwsuuid:404A5B216CD354C0FE68869E641712CC未查询到送达回证和送达信息，请检查数据。</message></wsxhfhxxGridlb></wsxhfhxxGrid></taxML>]]></body>
+</service>

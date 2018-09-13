@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2013 (http://www.altova.com) by  () -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:include schemaLocation="TaxMLPublicType.xsd"/>
+	<xs:complexType name="rtzjsbbywbw">
+		<xs:annotation>
+			<xs:documentation>《中华人民共和国企业年度关联业务往来报告表表七融通资金表》业务报文</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="rtzjsbb">
+						<xs:annotation>
+							<xs:documentation>《中华人民共和国企业年度关联业务往来报告表表七融通资金表》</xs:documentation>
+						</xs:annotation>
+						<xs:complexType>
+							<xs:sequence>
+								<xs:element name="rtzjsbbGrid">
+									<xs:annotation>
+										<xs:documentation>融通资金表数据对应Grid</xs:documentation>
+									</xs:annotation>
+									<xs:complexType>
+										<xs:sequence maxOccurs="unbounded">
+											<xs:element name="rtzjsbbGridlb" type="rtzjsbbGridlbVO">
+												<xs:annotation>
+													<xs:documentation>融通资金表数据对应列表</xs:documentation>
+												</xs:annotation>
+											</xs:element>
+										</xs:sequence>
+									</xs:complexType>
+								</xs:element>
+							</xs:sequence>
+						</xs:complexType>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="rtzjsbb">
+		<xs:annotation>
+			<xs:documentation>《中华人民共和国企业年度关联业务往来报告表表七融通资金表》</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="rtzjsbbGrid">
+				<xs:annotation>
+					<xs:documentation>融通资金表数据对应Grid</xs:documentation>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:sequence maxOccurs="unbounded">
+						<xs:element name="rtzjsbbGridlb" type="rtzjsbbGridlbVO">
+							<xs:annotation>
+								<xs:documentation>融通资金表数据对应列表</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="rtzjsbbHjFormList">
+				<xs:annotation>
+					<xs:documentation>融通资金表合计表</xs:documentation>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:sequence minOccurs="0" maxOccurs="2">
+						<xs:element name="rtzjsbbHjForm" type="rtzjsbbHjFormVO"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="rtzjsbbGrid">
+		<xs:annotation>
+			<xs:documentation>融通资金表数据对应Grid</xs:documentation>
+		</xs:annotation>
+		<xs:sequence maxOccurs="unbounded">
+			<xs:element name="rtzjsbbGridlb" type="rtzjsbbGridlbVO">
+				<xs:annotation>
+					<xs:documentation>融通资金表数据对应列表</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="rtzjsbbGridlbVO">
+		<xs:annotation>
+			<xs:documentation>融通资金表数据对应明细</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="dbfl" type="dbfl" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>担保费率</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="dbf" type="dbf" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>担保费</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="dbfmc" type="dbfmc" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>担保方名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yjlxsr" type="yjlxsr" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>应计利息收入</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yjlxzc" type="yjlxzc" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>应计利息支出</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="rzsjq" type="ssqq" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>融资时间起</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="rzsjz" type="ssqz" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>融资时间止</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ll" type="ll" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>利率</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="rzjeRcje" type="rzjeRcje" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>融资金额融出金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="rzjeRrje" type="rzjeRrje" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>融资金额融入金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bzDm" type="bzDm" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>币制代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="gjhdq" type="gjhdq" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>国家或地区</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="dxmc" type="dxmc" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>境外/境内关联方名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="dxlx" type="dxlx" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>对象类型境外/境内</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zqxtzyqyqyxtzbl" type="tzbl" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>债券性投资与企业权益性投资的比例</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="rrzjzj" type="zj" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>融入资金总计</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="rczjzj" type="zj" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>融出资金总计</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yjlxzczj" type="zj" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>应计利息支出总计</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yjlxsrzj" type="zj" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>应计利息收入总计</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="dbfzj" type="zj" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>担保费总计</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="rtzjsbbHjFormVO">
+		<xs:annotation>
+			<xs:documentation>融通资金表数据合计</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="dxlx" type="dxlx" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>对象类型境外/境内</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="rzrrjeqthj" type="hj1" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>融资融入金额其他合计</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yjlxzcqthj" type="hj1" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>应计利息支出其他合计</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="dbfqthj" type="hj1" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>担保费其他合计</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="rzrcjeqthj" type="hj1" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>融资融出金额其他合计</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yjlxsrqthj" type="hj1" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>应计利息收入其他合计</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="dbfqthj1" type="hj1" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>担保费其他合计1</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="rzrrjehj" type="hj1" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>融资融入金额合计</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="rzrcjehj" type="hj1" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>融资融出金额合计</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yjlxzchj" type="hj1" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>应计利息支出合计</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yjlxsrhj" type="hj1" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>应计利息收入合计</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="dbfhj" type="hj1" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>担保费合计</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

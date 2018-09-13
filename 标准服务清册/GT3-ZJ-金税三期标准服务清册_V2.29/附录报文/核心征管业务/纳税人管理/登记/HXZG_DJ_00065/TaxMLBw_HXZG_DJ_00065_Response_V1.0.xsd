@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2013 (http://www.altova.com) by  () -->
+<!-- 编辑使用 XMLSpy v2006 U (http://www.altova.com) 由 any (any) -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:include schemaLocation="TaxMLPublicDJType.xsd"/>
+	<xs:complexType name="HXZGDJ00068Response">
+		<xs:annotation>
+			<xs:documentation>主管税务所（科、分局）查询响应业务报文</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="zgswskfjfpxxForm" type="DJZgswskfjfpQdxxVO">
+						<xs:annotation>
+							<xs:documentation>主管税务所（科、分局）分配信息VO</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="zgswskfjfpxxGrid" type="ZgswskfjfpxxGrid">
+						<xs:annotation>
+							<xs:documentation>主管税务所（科、分局）分配信息-清册信息</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="ZgswskfjfpxxGrid">
+		<xs:annotation>
+			<xs:documentation>主管税务所（科、分局）分配信息-清册信息</xs:documentation>
+		</xs:annotation>
+		<xs:sequence maxOccurs="unbounded">
+			<xs:element name="ZgswskfjfpxxGridlb" type="DJZgswskfjfpqcVO">
+				<xs:annotation>
+					<xs:documentation>主管税务所（科、分局）分配信息-清册信息VO</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

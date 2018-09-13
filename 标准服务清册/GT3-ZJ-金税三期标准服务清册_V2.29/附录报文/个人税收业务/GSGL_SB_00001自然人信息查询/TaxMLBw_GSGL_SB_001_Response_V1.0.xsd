@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2010 rel. 3 (http://www.altova.com) by MESMERiZE (MSM) -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:complexType name="zrrxxcxresponse">
+		<xs:annotation>
+			<xs:documentation>自然人信息查询</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="zrrxxgrid" type="zrrxxgrid">
+						<xs:annotation>
+							<xs:documentation>自然人信息</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="zrrxxgrid">
+		<xs:annotation>
+			<xs:documentation>自然人信息</xs:documentation>
+		</xs:annotation>
+		<xs:sequence maxOccurs="unbounded">
+			<xs:element name="zrrxxlb" type="zrrxxlb">
+				<xs:annotation>
+					<xs:documentation>自然人信息列表</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="zrrxxlb">
+		<xs:annotation>
+			<xs:documentation>自然人信息列表</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="nsrsbh" type="nsrsbh">
+				<xs:annotation>
+					<xs:documentation>纳税人识别号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="djxh" type="djxh">
+				<xs:annotation>
+					<xs:documentation>登记序号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sfzjlxdm" type="sfzjlxDm">
+				<xs:annotation>
+					<xs:documentation>证件种类代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zjhm" type="zjhm">
+				<xs:annotation>
+					<xs:documentation>证件号码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="xm" type="xm">
+				<xs:annotation>
+					<xs:documentation>姓名（中英文)</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zyDm" type="zyDm" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>职业</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="lxdh" type="lxdh" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>联系电话（先取固定电话，如果为空则取移动电话）</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="txdz" type="txdz1" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>通讯地址（境内联系地址）</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jzdz" type="jnjzddz" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>经常居住地址（先取经常居住地址，如果为空则取境内联系地址）</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="hjdz" type="hjdz" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>户籍地址（户籍所在地）</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jzdzyzbm" type="jzdzyzbm" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>经常居住地邮政编码（如果经常居住地址不为空，则取经常居住地邮政编码，如果为空则取境内居住地邮政编码）</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="gjDm" type="gjhdqszDm" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>国籍代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zzjbs" type="zzjbs" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>主证件标示(并档之前，所有证件的主证件标志，zzjbs字段的值全部为Y；并档之后，有效纳税人识别号对应证件的主证件标示zzjbs字段值为Y，其余的全部为N。)
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zrrzgswfplb" type="zrrzgswfplb">
+				<xs:annotation>
+					<xs:documentation>自然人主管税务分配信息列表</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="zrrzgswfplb">
+		<xs:annotation>
+			<xs:documentation>自然人主管税务分配信息列表</xs:documentation>
+		</xs:annotation>
+		<xs:sequence maxOccurs="unbounded">
+			<xs:element name="zrrzgswfp" type="zrrzgswfp">
+				<xs:annotation>
+					<xs:documentation>自然人主管税务分配信息列表</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="zrrzgswfp">
+		<xs:annotation>
+			<xs:documentation>自然人主管税务分配信息列表</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="zgswjg_dm" type="zgswjg_dm">
+				<xs:annotation>
+					<xs:documentation>主管税务机关代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zgswks_dm" type="zgswks_dm">
+				<xs:annotation>
+					<xs:documentation>主管税务科所代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2013 (http://www.altova.com) by  () -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:complexType name="HXZGDJ00833Request">
+		<xs:annotation>
+			<xs:documentation>组织临时登记查询对方机关纳税人信息接入报文</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="nsrmc" type="nsrmc">
+						<xs:annotation>
+							<xs:documentation>纳税人名称</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="nsrsbh" type="nsrsbh">
+						<xs:annotation>
+							<xs:documentation>纳税人识别号</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="zzjgDm" type="zzjgDm">
+						<xs:annotation>
+							<xs:documentation>组织机构代码</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="fddbrxm" type="fddbrxm">
+						<xs:annotation>
+							<xs:documentation>法定代表人姓名</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="fddbrsfzjhm" type="fddbrsfzjhm">
+						<xs:annotation>
+							<xs:documentation>法定代表人身份证件号码</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="fddbrsfzjlxDm" type="fddbrsfzjlxDm">
+						<xs:annotation>
+							<xs:documentation>法定代表人身份证件类型代码</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="swjgDm" type="swjgDm">
+						<xs:annotation>
+							<xs:documentation>税务机关代码</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+</xs:schema>

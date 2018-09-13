@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<service>
+    <head>
+        <tran_id>SWZJ.J2KQ.QT.CXGLYCNSRMX</tran_id>
+        <channel_id>SWZJ.ZJNB.ZJFXGL</channel_id>
+        <tran_seq>12345678901234567890123456789012</tran_seq>
+        <tran_date>20141121</tran_date>
+        <tran_time>142601489</tran_time>
+		<expand>
+		  <name>identityType</name>
+		  <value>SWZJ.ZJNB.ZJFXGL</value>
+		</expand>
+		<expand>
+		  <name>sjry</name>
+		  <value>发送人员代码</value>
+		</expand>
+		<expand>
+		  <name>sjjg</name>
+		  <value>发送机关代码</value>
+		</expand>
+    </head>
+    <body>
+        <![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+        <taxML xsi:type="RSJ2FX902Request" xmlbh="" bbh="v1.0" xmlmc="TaxML_I_JC_jyztcx_Request_v1.0.xml" xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+		    <yyfwdm>FXGLKQY002</yyfwdm>
+            <nsrdzdah>10113604000012345678</nsrdzdah>	
+			<ywhj>1010</ywhj>			
+        </taxML>]]>
+    </body>
+</service>

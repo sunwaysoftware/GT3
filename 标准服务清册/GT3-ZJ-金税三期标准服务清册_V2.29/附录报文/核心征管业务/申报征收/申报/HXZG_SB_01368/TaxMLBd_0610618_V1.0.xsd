@@ -1,0 +1,446 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 被2012 () 使用XMLSpy v编辑的 (http://www.altova.com) by -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:include schemaLocation="TaxMLPublicType.xsd"/>
+	<xs:complexType name="kcxmcbjzmxsbbywbw">
+		<xs:annotation>
+			<xs:documentation>扣除项目成本结转明细申报表业务报文</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="kcxmcbjzmxsbb" type="kcxmcbjzmxsbb">
+						<xs:annotation>
+							<xs:documentation>扣除项目成本结转明细申报表</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="kcxmcbjzmxsbb">
+		<xs:annotation>
+			<xs:documentation>扣除项目成本结转明细申报表</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="kcxmcbjzmxsbbForm">
+				<xs:annotation>
+					<xs:documentation>申报表信息</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="kcxmcbjzmxsbbForm">
+		<xs:annotation>
+			<xs:documentation>申报头信息</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="zcbfy1" type="je">
+				<xs:annotation>
+					<xs:documentation>取得土地使用权所支付的金额总成本费用</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ksjztdmj1" type="je">
+				<xs:annotation>
+					<xs:documentation>可售建筑(土地)面积</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="dwzj1" type="je">
+				<xs:annotation>
+					<xs:documentation>单位造价 </xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ljysjztdmj1" type="je">
+				<xs:annotation>
+					<xs:documentation>累计已售建筑(土地)面积 </xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ysmjzzksmjbl1" type="je">
+				<xs:annotation>
+					<xs:documentation>已售面积占总可售面积</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="xscb1" type="je">
+				<xs:annotation>
+					<xs:documentation>销售成本 </xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zmyjcb1" type="je">
+				<xs:annotation>
+					<xs:documentation>账面已结成本 </xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="cys1" type="je">
+				<xs:annotation>
+					<xs:documentation>差异数 </xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zcbfy2" type="je">
+				<xs:annotation>
+					<xs:documentation>房地产开发成本总成本费用</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ksjztdmj2" type="je">
+				<xs:annotation>
+					<xs:documentation>可售建筑(土地)面积</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ljysjztdmj2" type="je">
+				<xs:annotation>
+					<xs:documentation>累计已售建筑(土地)面积 </xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zcbfy3" type="je">
+				<xs:annotation>
+					<xs:documentation>土地征用及拆迁补偿费 总成本费用</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ksjztdmj3" type="je">
+				<xs:annotation>
+					<xs:documentation>可售建筑(土地)面积</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="dwzj3" type="je">
+				<xs:annotation>
+					<xs:documentation>单位造价 </xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ljysjztdmj3" type="je">
+				<xs:annotation>
+					<xs:documentation>累计已售建筑(土地)面积 </xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ysmjzzksmjbl3" type="je">
+				<xs:annotation>
+					<xs:documentation>已售面积占总可售面积</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="xscb3" type="je">
+				<xs:annotation>
+					<xs:documentation>销售成本 </xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zmyjcb3" type="je">
+				<xs:annotation>
+					<xs:documentation>账面已结成本 </xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="cys3" type="je">
+				<xs:annotation>
+					<xs:documentation>差异数 </xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zcbfy4" type="je">
+				<xs:annotation>
+					<xs:documentation>前期工程费 总成本费用</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ksjztdmj4" type="je">
+				<xs:annotation>
+					<xs:documentation>可售建筑(土地)面积</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="dwzj3" type="je">
+				<xs:annotation>
+					<xs:documentation>单位造价 </xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ljysjztdmj4" type="je">
+				<xs:annotation>
+					<xs:documentation>累计已售建筑(土地)面积 </xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ysmjzzksmjbl4" type="je">
+				<xs:annotation>
+					<xs:documentation>已售面积占总可售面积</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="xscb4" type="je">
+				<xs:annotation>
+					<xs:documentation>销售成本 </xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zmyjcb4" type="je">
+				<xs:annotation>
+					<xs:documentation>账面已结成本 </xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="cys4" type="je">
+				<xs:annotation>
+					<xs:documentation>差异数 </xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zcbfy5" type="je">
+				<xs:annotation>
+					<xs:documentation>建筑安装工程费  总成本费用</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ksjztdmj5" type="je">
+				<xs:annotation>
+					<xs:documentation>可售建筑(土地)面积</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="dwzj5" type="je">
+				<xs:annotation>
+					<xs:documentation>单位造价 </xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ljysjztdmj5" type="je">
+				<xs:annotation>
+					<xs:documentation>累计已售建筑(土地)面积 </xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ysmjzzksmjbl5" type="je">
+				<xs:annotation>
+					<xs:documentation>已售面积占总可售面积</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="xscb5" type="je">
+				<xs:annotation>
+					<xs:documentation>销售成本 </xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zmyjcb5" type="je">
+				<xs:annotation>
+					<xs:documentation>账面已结成本 </xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="cys5" type="je">
+				<xs:annotation>
+					<xs:documentation>差异数 </xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zcbfy6" type="je">
+				<xs:annotation>
+					<xs:documentation>基础设施费 总成本费用</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ksjztdmj6" type="je">
+				<xs:annotation>
+					<xs:documentation>可售建筑(土地)面积</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="dwzj6" type="je">
+				<xs:annotation>
+					<xs:documentation>单位造价 </xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ljysjztdmj6" type="je">
+				<xs:annotation>
+					<xs:documentation>累计已售建筑(土地)面积 </xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ysmjzzksmjbl6" type="je">
+				<xs:annotation>
+					<xs:documentation>已售面积占总可售面积</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="xscb6" type="je">
+				<xs:annotation>
+					<xs:documentation>销售成本 </xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zmyjcb6" type="je">
+				<xs:annotation>
+					<xs:documentation>账面已结成本 </xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="cys6" type="je">
+				<xs:annotation>
+					<xs:documentation>差异数 </xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zcbfy7" type="je">
+				<xs:annotation>
+					<xs:documentation>公共配套设施费 总成本费用</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ksjztdmj7" type="je">
+				<xs:annotation>
+					<xs:documentation>可售建筑(土地)面积</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="dwzj7" type="je">
+				<xs:annotation>
+					<xs:documentation>单位造价 </xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ljysjztdmj7" type="je">
+				<xs:annotation>
+					<xs:documentation>累计已售建筑(土地)面积 </xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ysmjzzksmjbl7" type="je">
+				<xs:annotation>
+					<xs:documentation>已售面积占总可售面积</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="xscb7" type="je">
+				<xs:annotation>
+					<xs:documentation>销售成本 </xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zmyjcb7" type="je">
+				<xs:annotation>
+					<xs:documentation>账面已结成本 </xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="cys7" type="je">
+				<xs:annotation>
+					<xs:documentation>差异数 </xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zcbfy8" type="je">
+				<xs:annotation>
+					<xs:documentation>开发间接费用 总成本费用</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ksjztdmj8" type="je">
+				<xs:annotation>
+					<xs:documentation>可售建筑(土地)面积</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="dwzj8" type="je">
+				<xs:annotation>
+					<xs:documentation>单位造价 </xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ljysjztdmj8" type="je">
+				<xs:annotation>
+					<xs:documentation>累计已售建筑(土地)面积 </xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ysmjzzksmjbl8" type="je">
+				<xs:annotation>
+					<xs:documentation>已售面积占总可售面积</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="xscb8" type="je">
+				<xs:annotation>
+					<xs:documentation>销售成本 </xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zmyjcb8" type="je">
+				<xs:annotation>
+					<xs:documentation>账面已结成本 </xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="cys8" type="je">
+				<xs:annotation>
+					<xs:documentation>差异数 </xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zcbfy9" type="je">
+				<xs:annotation>
+					<xs:documentation>房地产开发费用 总成本费用</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ksjztdmj9" type="je">
+				<xs:annotation>
+					<xs:documentation>可售建筑(土地)面积</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ljysjztdmj9" type="je">
+				<xs:annotation>
+					<xs:documentation>累计已售建筑(土地)面积 </xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zcbfy10" type="je">
+				<xs:annotation>
+					<xs:documentation>利息支出 总成本费用</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ksjztdmj10" type="je">
+				<xs:annotation>
+					<xs:documentation>可售建筑(土地)面积</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="dwzj10" type="je">
+				<xs:annotation>
+					<xs:documentation>单位造价 </xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ljysjztdmj10" type="je">
+				<xs:annotation>
+					<xs:documentation>累计已售建筑(土地)面积 </xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ysmjzzksmjbl10" type="je">
+				<xs:annotation>
+					<xs:documentation>已售面积占总可售面积</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="xscb10" type="je">
+				<xs:annotation>
+					<xs:documentation>销售成本 </xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zmyjcb10" type="je">
+				<xs:annotation>
+					<xs:documentation>账面已结成本 </xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="cys10" type="je">
+				<xs:annotation>
+					<xs:documentation>差异数 </xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zcbfy11" type="je">
+				<xs:annotation>
+					<xs:documentation>其他房地产开发费用 总成本费用</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ksjztdmj11" type="je">
+				<xs:annotation>
+					<xs:documentation>可售建筑(土地)面积</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="dwzj11" type="je">
+				<xs:annotation>
+					<xs:documentation>单位造价 </xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ljysjztdmj11" type="je">
+				<xs:annotation>
+					<xs:documentation>累计已售建筑(土地)面积 </xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ysmjzzksmjbl11" type="je">
+				<xs:annotation>
+					<xs:documentation>已售面积占总可售面积</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="xscb11" type="je">
+				<xs:annotation>
+					<xs:documentation>销售成本 </xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zmyjcb11" type="je">
+				<xs:annotation>
+					<xs:documentation>账面已结成本 </xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="cys11" type="je">
+				<xs:annotation>
+					<xs:documentation>差异数 </xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zcbfy12" type="je">
+				<xs:annotation>
+					<xs:documentation>合 计 总成本费用</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ksjztdmj12" type="je">
+				<xs:annotation>
+					<xs:documentation>可售建筑(土地)面积</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ljysjztdmj12" type="je">
+				<xs:annotation>
+					<xs:documentation>累计已售建筑(土地)面积 </xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

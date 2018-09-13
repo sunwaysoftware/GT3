@@ -1,0 +1,403 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 被2011 rel. 2 sp1 (TeaM DJiNN) 使用XMLSpy vTeaM DJiNN编辑的 (http://www.altova.com) by -->
+<!-- edited with XMLSpy v2010 rel. 3 (http://www.altova.com) by liuwei (liuweicss) -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:include schemaLocation="TaxMLPublicSBType.xsd"/>
+	<xs:include schemaLocation="TaxMLBw_qysdsczzsyjdsb2018_V1.0.xsd"/>
+	<xs:complexType name="HXZGSB10121Response">
+		<xs:annotation>
+			<xs:documentation>居民企业（查账征收）企业所得税月（季）度申报（2018版）错误更正基础数据信息返回报文</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="sbxxGrid">
+						<xs:annotation>
+							<xs:documentation>申报数据信息</xs:documentation>
+						</xs:annotation>
+						<xs:complexType>
+							<xs:sequence minOccurs="0" maxOccurs="unbounded">
+								<xs:element name="sbxxGridlb" type="SBSbxxJhVO"/>
+							</xs:sequence>
+						</xs:complexType>
+					</xs:element>
+					<xs:element name="jmxxGrid">
+						<xs:annotation>
+							<xs:documentation>减免数据信息</xs:documentation>
+						</xs:annotation>
+						<xs:complexType>
+							<xs:sequence minOccurs="0" maxOccurs="unbounded">
+								<xs:element name="jmxxGridlb" type="SBJmxxJhVO"/>
+							</xs:sequence>
+						</xs:complexType>
+					</xs:element>
+					<xs:element name="yjxxGrid">
+						<xs:annotation>
+							<xs:documentation>预缴税款数据信息</xs:documentation>
+						</xs:annotation>
+						<xs:complexType>
+							<xs:sequence minOccurs="0" maxOccurs="unbounded">
+								<xs:element name="yjxxGridlb" type="SBYjxxJhVO"/>
+							</xs:sequence>
+						</xs:complexType>
+					</xs:element>
+					<xs:element name="sbQysdszjgxxVO" type="SBQysdszjgxxVO">
+						<xs:annotation>
+							<xs:documentation>企业所得税汇总纳税分支机构分配表总机构情况信息</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="fzjgxxGrid">
+						<xs:annotation>
+							<xs:documentation>企业所得税汇总纳税分支机构分配表分支机构情况信息</xs:documentation>
+						</xs:annotation>
+						<xs:complexType>
+							<xs:sequence minOccurs="0" maxOccurs="unbounded">
+								<xs:element name="fzjgxxGridlb" type="SBQysdsfzjgxxVO"/>
+							</xs:sequence>
+						</xs:complexType>
+					</xs:element>
+					<xs:element name="sbQysdsczzsyjdsbqtxxVO" type="SBQysdsczzsyjdsbqtxxVO">
+						<xs:annotation>
+							<xs:documentation>企业所得税查账征收月季度申报其他数据信息</xs:documentation>
+						</xs:annotation>
+					</xs:element>					
+					<xs:element name="qysdsczzsyjdSbbdxxVO" type="jmczyjdsbYwbw">
+						<xs:annotation>
+							<xs:documentation>居民企业（查账征收）企业所得税月季度申报申报表单数据信息</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="sbKssssrfpblGrid">
+						<xs:annotation>
+							<xs:documentation>跨省税收收入分配比例信息</xs:documentation>
+						</xs:annotation>
+						<xs:complexType>
+							<xs:sequence minOccurs="0" maxOccurs="unbounded">
+								<xs:element name="sbKssssrfpblGridlb" type="SBKdqsssrfpblqkbVO"/>
+							</xs:sequence>
+						</xs:complexType>
+					</xs:element>
+					<xs:element name="sqsbxxVO" type="sqsbxxVO">
+						<xs:annotation>
+							<xs:documentation>企业所得税查账征收月季度申报上期申报累计数信息</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="sbFbTwoOldGrid">
+						<xs:annotation>
+							<xs:documentation>企业所得税查账征收月季度申报期初数数据（2015版）-固定资产加速折旧表(附表2)累计数</xs:documentation>
+						</xs:annotation>
+						<xs:complexType>
+							<xs:sequence minOccurs="0" maxOccurs="unbounded">
+								<xs:element name="sbFbTwoOldGridlb" type="sbFbTwoOldVO"/>
+							</xs:sequence>
+						</xs:complexType>
+					</xs:element>
+					<xs:element name="sbFbTwoGrid">
+						<xs:annotation>
+							<xs:documentation>企业所得税查账征收月季度申报期初数数据（2018版）-固定资产加速折旧表(A202020)累计数</xs:documentation>
+						</xs:annotation>
+						<xs:complexType>
+							<xs:sequence minOccurs="0" maxOccurs="unbounded">
+								<xs:element name="sbFbTwoGridlb" type="sbFbTwoVO"/>
+							</xs:sequence>
+						</xs:complexType>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="SBQysdsczzsyjdsbqtxxVO">
+		<xs:annotation>
+			<xs:documentation>企业所得税查账征收月季度申报其他数据信息</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="zfjglb" type="bz" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>总分机构类别，0：一般企业||1：按比例预缴的二级分支机构||2：只申报不缴纳的企业||3：非跨地区转移的汇总企业总机构||4：分支机构||5：跨省或者跨市或者跨县区的汇总企业总机构</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="tsnsrlxDm" type="bz" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>特殊纳税人类型代码，06：省内按特定比例就地预缴企业所得税二级分支机构||10：中石油、中石化按照年度应纳所得税额50%比例就地预缴企业所得税二级分支机构</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="kdsAndkxqFlag" type="bz" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>跨地区、跨县区标志</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jdftfzjgFlag" type="bz" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>就地分摊分支机构标志</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jdyjbl" type="bl" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>就地预缴比例</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jaqyYjze" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>外地建安企业预缴总额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sqyjje" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>已缴金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="kyyjye" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>可用预缴余额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yyyjje" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>已用预缴金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="mbksehj" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>五年内可结转以后年度弥补亏损金额合计</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yjfsDm" type="yjfsDm" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>预缴方式代码，对应代码表DM_RD_YJFS</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sfxwqybz" type="bz" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>是否小型微利企业标志，0：正常企业，上年应纳税所得额超过30W（2017年之前），上年应纳税所得额超过50W（2017年及以后）||1：小微企业，上年应纳税所得额小于20W||2：小微企业，上年应纳税所得额大于20W小于30W（2017年之前），上一年应纳大于20W小于50W（2017年及以后）||3：小微企业，上年年报或最后一季度申报没有申报||4：小微企业，新开业企业||5：小微企业，内蒙国地税特殊优惠税率享受企业||6：正常企业，上年资产总额、从业人数、所属行业、是否从事限制行业不符合小微标准</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="kdqsssrfpBz" type="bz" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>跨地区税收收入分配标志</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="djrq" type="skssqq">
+				<xs:annotation>
+					<xs:documentation>登记日期</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zxrq" type="skssqq">
+				<xs:annotation>
+					<xs:documentation>注销日期</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zyjbl" type="nsrsbh">
+				<xs:annotation>
+					<xs:documentation>中央级比例</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zjgFtbl" type="nsrsbh">
+				<xs:annotation>
+					<xs:documentation>总机构分摊</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zjgCzjzFtbl" type="nsrsbh">
+				<xs:annotation>
+					<xs:documentation>总机构财政集中分摊</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="fzjgFtbl" type="nsrsbh">
+				<xs:annotation>
+					<xs:documentation>分支机构分摊比例</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="xzKdqbz" type="sfbz">
+				<xs:annotation>
+					<xs:documentation>西藏跨地区标志</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yjfs" type="bz" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>预缴方式，1：按照实际利润额预缴||2：按照上一纳税年度应纳税所得额平均额预缴||3：按照税务机关确定的其他方法预缴</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sbqylx" type="bz" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>企业类型，0：一般企业||1：跨地区经营汇总纳税企业总机构||2：跨地区经营汇总纳税企业分支机构
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="sqsbxxVO">
+		<xs:annotation>
+			<xs:documentation>企业所得税查账征收月季度申报上期申报相关数据信息</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="tdywjsdynssdeLj" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>A200000表--加：特定业务计算的应纳税所得额本年累计金额--上期累计金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="tdywyjzsdseLj" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>A200000表--特定业务预缴（征）所得税额本年累计金额--上期累计金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sfsyxxwlqy" type="bz1" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>A200000表--是否属于小型微利企业</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jmdffxsdsdmzzzdfqyLj" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>A201030表--民族自治地方的自治机关对本民族自治地方的企业应缴纳的企业所得税中属于地方分享的部分减征或免征--上期累计金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="sbFbTwoOldVO">
+		<xs:annotation>
+			<xs:documentation>2015版固定资产加速折旧(扣除)优惠明细表</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="ewbhxh" type="ewbhxh" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>二维表行序号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="hmc" type="nsrmc" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>行名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="fwjzwyz" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>房屋建租房屋原值||房屋建租房屋原值</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="fwjzwbqzjkce" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>房屋、建筑物本期折旧（扣除）额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="fwjzwljzjkce" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>房屋、建筑物累计折旧（扣除）额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jqsbhqtgdzcyz" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>机器设备和其他固定资产原值</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jqsbhqtgdzcbqzjkce" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>机器设备和其他固定资产本期折旧（扣除）额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jqsbhqtgdzcljzjkce" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>机器设备和其他固定资产累计折旧（扣除）额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="hjyz" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>合计原值||合计原值</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="hjkjzjebqzje" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>合计本期折旧（扣除）额会计折旧额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="hjzczjebqzje" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>合计本期折旧（扣除）额正常折旧额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="hjbqzjkcebqzje" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>合计本期折旧（扣除）额税收加速折旧额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="hjnstzebqzje" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>合计本期折旧（扣除）额纳税调整额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="hjjszjyhtjebqzje" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>合计本期折旧（扣除）额加速折旧优惠统计额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="hjkjzjeljzjkce" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>合计本累计折旧（扣除）额会计折旧额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="hjzczjeljzjkce" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>合计本累计折旧（扣除）额正常折旧额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="hjbqzjkceljzjkce" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>合计本累计折旧（扣除）额税收加速折旧额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="hjnstzeljzjkce" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>合计本累计折旧（扣除）额纳税调整额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="hjjszjyhtjeljzjkce" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>合计本累计折旧（扣除）额加速折旧优惠统计额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="sbFbTwoVO">
+		<xs:annotation>
+			<xs:documentation>2018版固定资产加速折旧(扣除)优惠明细表</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="ewbhxh" type="ewbhxh" minOccurs="1">
+				<xs:annotation>
+					<xs:documentation>二维表行序号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="hmc" type="nsrmc" minOccurs="1">
+				<xs:annotation>
+					<xs:documentation>二维表行名称||二维表行名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zcyz" type="je" minOccurs="1">
+				<xs:annotation>
+					<xs:documentation>资产原值</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zzzjjeLj" type="je" minOccurs="1">
+				<xs:annotation>
+					<xs:documentation>本年累计折旧（扣除）金额 账载折旧金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="azssybgdjsdzjjeLj" type="je" minOccurs="1">
+				<xs:annotation>
+					<xs:documentation>本年累计折旧（扣除）金额 按照税收一般规定计算的折旧金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="xsjszjyhjsdzjjeLj" type="je" minOccurs="1">
+				<xs:annotation>
+					<xs:documentation>本年累计折旧（扣除）金额 享受加速折旧优惠计算的折旧金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="nstjjeLj" type="je" minOccurs="1">
+				<xs:annotation>
+					<xs:documentation>本年累计折旧（扣除）金额 纳税调减金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="xsjszjyhjeLj" type="je" minOccurs="1">
+				<xs:annotation>
+					<xs:documentation>本年累计折旧（扣除）金额 享受加速折旧优惠金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

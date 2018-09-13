@@ -1,0 +1,321 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2010 rel. 3 (http://www.altova.com) by MESMERiZE (MSM) -->
+<!-- 被2011 rel. 2 sp1 (TeaM DJiNN) 使用XMLSpy vTeaM DJiNN编辑的 (http://www.altova.com) by -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:include schemaLocation="TaxMLPublicType.xsd"/>
+	<xs:complexType name="snyrlyscwghykcydtjbywbw">
+		<xs:annotation>
+			<xs:documentation>石脑油、燃料油生产、外购、耗用、库存月度统计表业务报文</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="snyrlyscwghykcydtjb" type="snyrlyscwghykcydtjb">
+						<xs:annotation>
+							<xs:documentation>石脑油、燃料油生产、外购、耗用、库存月度统计表</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="snyrlyscwghykcydtjb">
+		<xs:annotation>
+			<xs:documentation>石脑油、燃料油生产、外购、耗用、库存月度统计表</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="cpqkGrid">
+				<xs:annotation>
+					<xs:documentation>产品情况</xs:documentation>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:sequence minOccurs="0" maxOccurs="unbounded">
+						<xs:element name="cpqkGridlb" type="cpqkGridlbVO"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="ddzgjhqkGrid">
+				<xs:annotation>
+					<xs:documentation>定点直供计划情况</xs:documentation>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:sequence minOccurs="0" maxOccurs="unbounded">
+						<xs:element name="ddzgjhqkGridlb" type="ddzgjhqkGridlbVO"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="kchyqkGrid">
+				<xs:annotation>
+					<xs:documentation>库存耗用情况</xs:documentation>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:sequence minOccurs="0" maxOccurs="unbounded">
+						<xs:element name="kchyqkGridlb" type="kchyqkGridlbVO"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="cpqkGridlbVO">
+		<xs:annotation>
+			<xs:documentation>产品情况</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="ewbhxh" type="ewbhxh">
+				<xs:annotation>
+					<xs:documentation>二维表行序号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="cpmc1" type="cpmc1">
+				<xs:annotation>
+					<xs:documentation>产品名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="cl" type="cl">
+				<xs:annotation>
+					<xs:documentation>产量</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="cpycpbl" type="zrrtzbl">
+				<xs:annotation>
+					<xs:documentation>比例</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="ddzgjhqkGridlbVO">
+		<xs:annotation>
+			<xs:documentation>定点直供计划情况</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="ewbhxh" type="ewbhxh">
+				<xs:annotation>
+					<xs:documentation>二维表行序号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="xmmc" type="xmmc">
+				<xs:annotation>
+					<xs:documentation>项目名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="gcRly" type="gcRly">
+				<xs:annotation>
+					<xs:documentation>生产企业定点直供计划（供出）燃料油</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="gcSny" type="gcSny">
+				<xs:annotation>
+					<xs:documentation>生产企业定点直供计划（供出）石脑油</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qygrRly" type="qygrRly">
+				<xs:annotation>
+					<xs:documentation>使用企业定点直供计划（购入）_燃料油</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qygrSny" type="qygrSny">
+				<xs:annotation>
+					<xs:documentation>使用企业定点直供计划（购入）_石脑油</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="kchyqkGridlbVO">
+		<xs:annotation>
+			<xs:documentation>库存耗用情况</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="ewblxh" type="ewblxh">
+				<xs:annotation>
+					<xs:documentation>二维表列序号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="lmc" type="lmc">
+				<xs:annotation>
+					<xs:documentation>列名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qckcypsl" type="qckcypsl">
+				<xs:annotation>
+					<xs:documentation>期初库存油品数量</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bqscypsl" type="bqscypsl">
+				<xs:annotation>
+					<xs:documentation>本期生产油品数量</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bqxshsypsl" type="bqxshsypsl">
+				<xs:annotation>
+					<xs:documentation>本期销售含税油品数量</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bqzxddzgjhxsypsl" type="bqzxddzgjhxsypsl">
+				<xs:annotation>
+					<xs:documentation>本期执行定点直供计划销售油品数量</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bqhzfwbzzszyfpypsl" type="bqhzfwbzzszyfpypsl">
+				<xs:annotation>
+					<xs:documentation>本期汉字防伪版增值税专用发票油品数量</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="kjptbzzszyfpypsl" type="kjptbzzszyfpypsl">
+				<xs:annotation>
+					<xs:documentation>开具普通版增值税专用发票油品数量</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="scyxftlcphyypsl" type="scyxftlcphyypsl">
+				<xs:annotation>
+					<xs:documentation>生产乙烯芳烃类产品耗用油品数量</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="scyxlcphyypsl" type="scyxlcphyypsl">
+				<xs:annotation>
+					<xs:documentation>生产乙烯类产品耗用油品数量</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="scftlcphyypsl" type="scftlcphyypsl">
+				<xs:annotation>
+					<xs:documentation>生产芳烃类产品耗用油品数量</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="scfyxftlcphyypsl" type="scfyxftlcphyypsl">
+				<xs:annotation>
+					<xs:documentation>生产非乙烯芳烃类产品耗用油品数量</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qmkcsl" type="qmkcsl">
+				<xs:annotation>
+					<xs:documentation>期末库存数量</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="wgqckcypsl" type="wgqckcypsl">
+				<xs:annotation>
+					<xs:documentation>外购期初库存油品数量</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qckcmsypsl" type="qckcmsypsl">
+				<xs:annotation>
+					<xs:documentation>期初库存免税油品数量</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qckchsypsl" type="qckchsypsl">
+				<xs:annotation>
+					<xs:documentation>期初库存含税油品数量</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="dqwgypsl" type="dqwgypsl">
+				<xs:annotation>
+					<xs:documentation>当期外购油品数量</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="dqwgmsypsl" type="dqwgmsypsl">
+				<xs:annotation>
+					<xs:documentation>当期外购免税油品数量</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="dqwghsypsl" type="dqwghsypsl">
+				<xs:annotation>
+					<xs:documentation>当期外购含税油品数量</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bqxsypsl" type="bqxsypsl">
+				<xs:annotation>
+					<xs:documentation>本期销售油品数量</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bqxsmsypsl" type="bqxsmsypsl">
+				<xs:annotation>
+					<xs:documentation>本期销售免税油品数量</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="wgbqxshsypsl" type="wgbqxshsypsl">
+				<xs:annotation>
+					<xs:documentation>外购本期销售含税油品数量</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="wgscfyxftlcphyypsl" type="wgscfyxftlcphyypsl">
+				<xs:annotation>
+					<xs:documentation>外购生产非乙烯芳烃类产品耗用油品数量</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="scmsypsl" type="scmsypsl">
+				<xs:annotation>
+					<xs:documentation>生产免税油品数量</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="schsypsl" type="schsypsl">
+				<xs:annotation>
+					<xs:documentation>生产含税油品数量</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="kyyscyxftypsl" type="kyyscyxftypsl">
+				<xs:annotation>
+					<xs:documentation>可用于生产乙烯芳烃油品数量</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="kyyscmsypsl" type="kyyscmsypsl">
+				<xs:annotation>
+					<xs:documentation>可用于生产免税油品数量</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="kyyschsypsl" type="kyyschsypsl">
+				<xs:annotation>
+					<xs:documentation>可用于生产含税油品数量</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sjscyxlcphyypsl" type="sjscyxlcphyypsl">
+				<xs:annotation>
+					<xs:documentation>实际生产乙烯类产品耗用油品数量</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sjscyxmsypsl" type="sjscyxmsypsl">
+				<xs:annotation>
+					<xs:documentation>实际生产乙烯免税油品数量</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sjscyxhsypsl" type="sjscyxhsypsl">
+				<xs:annotation>
+					<xs:documentation>实际生产乙烯含税油品数量</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sjscftlcphyypsl" type="sjscftlcphyypsl">
+				<xs:annotation>
+					<xs:documentation>实际生产芳烃类产品耗用油品数量</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sjscftmsypsl" type="sjscftmsypsl">
+				<xs:annotation>
+					<xs:documentation>实际生产芳烃免税油品数量</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sjschsypsl" type="sjschsypsl">
+				<xs:annotation>
+					<xs:documentation>实际生产含税油品数量</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sqtshsypsl" type="sqtshsypsl">
+				<xs:annotation>
+					<xs:documentation>申请退税含税油品数量</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qmkcypsl" type="qmkcypsl">
+				<xs:annotation>
+					<xs:documentation>期末库存油品数量</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qmkcmsypsl" type="qmkcmsypsl">
+				<xs:annotation>
+					<xs:documentation>期末库存免税油品数量</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qmkchsypsl" type="qmkchsypsl">
+				<xs:annotation>
+					<xs:documentation>期末库存含税油品数量</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

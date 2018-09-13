@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2011 (http://www.altova.com) by www.hbnu.com (www.hbnu.com) -->
+<!-- 被2012 () 使用XMLSpy v编辑的 (http://www.altova.com) by -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:include schemaLocation="TaxMLPublicSBType.xsd"/>
+	<xs:include schemaLocation="TaxMLBw_fjmqysdsndnssbbjssb2015_V1.0.xsd"/>
+	<xs:complexType name="HXZGSB01675Request">
+		<xs:annotation>
+			<xs:documentation>非居民企业（据实申报）企业所得税年度申报申报保存接入报文</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="fjmqysdsndnssbbjsSbbdxxVO" type="fjmqysdsndnssbbjssb2015ywbw">
+						<xs:annotation>
+							<xs:documentation>非居民企业（据实申报）企业所得税年度申报申报表单数据信息</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="sbFjmQysdsjssbNdsbTjqtxxVO" type="sbFjmQysdsjssbNdsbTjqtxxVO">
+						<xs:annotation>
+							<xs:documentation>非居民企业（据实申报）企业所得税年度申报申报保存提交其他信息对象</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="sbFjmQysdsjssbNdsbTjqtxxVO">
+		<xs:annotation>
+			<xs:documentation>非居民企业（据实申报）企业所得税年度申报申报保存提交其他信息对象</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="djxh" type="djxh">
+				<xs:annotation>
+					<xs:documentation>登记序号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zxbztzsuuid" type="zxbztzsuuid">
+				<xs:annotation>
+					<xs:documentation>纳税自查补报通知书唯一标示</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="initMbkstzLen" type="bz">
+				<xs:annotation>
+					<xs:documentation>弥补亏损台账年度字符串</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jshKjzyhndmbdkseNd1" type="je">
+				<xs:annotation>
+					<xs:documentation>第一年可结转以后年度弥补亏损额计算后金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

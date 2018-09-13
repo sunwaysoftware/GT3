@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 被2012 () 使用XMLSpy v编辑的 (http://www.altova.com) by -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:complexType name="jrbxyyyssb10_cjywsrmxbywbw">
+		<xs:annotation>
+			<xs:documentation>《储金业务收入明细表》业务报文</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="jrbxyyyssb10_cjywsrmxb" type="jrbxyyyssb10_cjywsrmxb">
+						<xs:annotation>
+							<xs:documentation>《储金业务收入明细表》</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="jrbxyyyssb10_cjywsrmxb">
+		<xs:annotation>
+			<xs:documentation>《储金业务收入明细表》</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="cjywsrmxbGrid" type="cjywsrmxbGrid">
+				<xs:annotation>
+					<xs:documentation>金融保险业营业税申报-储金业务收入明细表</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="cjywsrmxbGridlb">
+		<xs:annotation>
+			<xs:documentation>金融保险业营业税申报-储金业务收入明细表</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="ewbhxh" type="ewbhxh">
+				<xs:annotation>
+					<xs:documentation>二维表行序号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bzDm" type="bzDm">
+				<xs:annotation>
+					<xs:documentation>币制代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zhl" type="je">
+				<xs:annotation>
+					<xs:documentation>折合率</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qccjye" type="je">
+				<xs:annotation>
+					<xs:documentation>期初储金余额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qmcjye" type="je">
+				<xs:annotation>
+					<xs:documentation>期末储金余额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yll" type="je">
+				<xs:annotation>
+					<xs:documentation>月利率</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yssr" type="je">
+				<xs:annotation>
+					<xs:documentation>应税收入</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zrmbYssr" type="je">
+				<xs:annotation>
+					<xs:documentation>折人民币应税收入</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="mssr" type="je">
+				<xs:annotation>
+					<xs:documentation>免税收入</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zrmbMssr" type="je">
+				<xs:annotation>
+					<xs:documentation>折人民币免税收入</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="cjywsrmxbGrid">
+		<xs:annotation>
+			<xs:documentation>金融保险业营业税申报-储金业务收入明细表</xs:documentation>
+		</xs:annotation>
+		<xs:sequence maxOccurs="unbounded">
+			<xs:element name="cjywsrmxbGridlb" type="cjywsrmxbGridlb"/>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

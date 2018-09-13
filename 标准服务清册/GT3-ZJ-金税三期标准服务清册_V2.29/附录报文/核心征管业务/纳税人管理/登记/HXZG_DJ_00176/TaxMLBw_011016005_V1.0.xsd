@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2013 (http://www.altova.com) by  () -->
+<!-- 编辑使用 XMLSpy v2006 U (http://www.altova.com) 由 any (any) -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:include schemaLocation="TaxMLPublicDJType.xsd"/>
+	<xs:complexType name="ccqkdjbywbw">
+		<xs:annotation>
+			<xs:documentation>车船情况登记表业务报文</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="ccqkdjb" type="ccqkdjb">
+						<xs:annotation>
+							<xs:documentation>车船情况登记表</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="ccqkdjb">
+		<xs:annotation>
+			<xs:documentation>车船情况登记表</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="ccqkdjbSlxxForm" type="ccqkdjbSlxxForm">
+				<xs:annotation>
+					<xs:documentation>基本信息</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ClqkxxsGrid" type="ClqkxxsGrid">
+				<xs:annotation>
+					<xs:documentation>车辆情况信息Grid</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="CbqkxxsGrid" type="CbqkxxsGrid">
+				<xs:annotation>
+					<xs:documentation>船舶情况信息Grid</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="ccqkdjbSlxxForm">
+		<xs:annotation>
+			<xs:documentation>受理信息</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="sqr" type="sqr">
+				<xs:annotation>
+					<xs:documentation>填报人</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sqrq" type="sqrq">
+				<xs:annotation>
+					<xs:documentation>填报日期</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="slrDm" type="slrDm">
+				<xs:annotation>
+					<xs:documentation>受理人代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="slrq" type="slrq">
+				<xs:annotation>
+					<xs:documentation>受理日期</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="ClqkxxsGrid">
+		<xs:annotation>
+			<xs:documentation>车辆情况信息</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="InsertClqkxxGrid" type="InsertClqkxxGrid">
+				<xs:annotation>
+					<xs:documentation>新增车辆情况信息Grid</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="UpdateClqkxxGrid" type="UpdateClqkxxGrid">
+				<xs:annotation>
+					<xs:documentation>修改车辆情况信息Grid</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="DeleteClqkxxGrid" type="DeleteClqkxxGrid">
+				<xs:annotation>
+					<xs:documentation>删除车辆情况信息Grid</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="InsertClqkxxGrid">
+		<xs:annotation>
+			<xs:documentation>新增车辆情况信息Grid</xs:documentation>
+		</xs:annotation>
+		<xs:sequence minOccurs="0" maxOccurs="unbounded">
+			<xs:element name="InsertClqkxxGridlb" type="DJClqkxxVO">
+				<xs:annotation>
+					<xs:documentation>新增车辆情况信息列表</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="UpdateClqkxxGrid">
+		<xs:annotation>
+			<xs:documentation>修改车辆情况信息</xs:documentation>
+		</xs:annotation>
+		<xs:sequence minOccurs="0" maxOccurs="unbounded">
+			<xs:element name="UpdateClqkxxGridlb" type="DJClqkxxVO">
+				<xs:annotation>
+					<xs:documentation>修改车辆情况信息列表</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="DeleteClqkxxGrid">
+		<xs:annotation>
+			<xs:documentation>删除车辆情况信息</xs:documentation>
+		</xs:annotation>
+		<xs:sequence minOccurs="0" maxOccurs="unbounded">
+			<xs:element name="DeleteClqkxxGridlb" type="DJClqkxxVO">
+				<xs:annotation>
+					<xs:documentation>删除车辆情况信息列表</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="CbqkxxsGrid">
+		<xs:annotation>
+			<xs:documentation>车辆情况信息</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="InsertCbqkxxGrid" type="InsertCbqkxxGrid">
+				<xs:annotation>
+					<xs:documentation>新增船舶情况信息Grid</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="UpdateCbqkxxGrid" type="UpdateCbqkxxGrid">
+				<xs:annotation>
+					<xs:documentation>修改船舶情况信息Grid</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="DeleteCbqkxxGrid" type="DeleteCbqkxxGrid">
+				<xs:annotation>
+					<xs:documentation>删除船舶情况信息Grid</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="InsertCbqkxxGrid">
+		<xs:annotation>
+			<xs:documentation>新增船舶情况信息Grid</xs:documentation>
+		</xs:annotation>
+		<xs:sequence minOccurs="0" maxOccurs="unbounded">
+			<xs:element name="InsertCbqkxxGridlb" type="DJCbqkxxVO">
+				<xs:annotation>
+					<xs:documentation>新增船舶情况信息列表</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="UpdateCbqkxxGrid">
+		<xs:annotation>
+			<xs:documentation>修改船舶情况信息</xs:documentation>
+		</xs:annotation>
+		<xs:sequence minOccurs="0" maxOccurs="unbounded">
+			<xs:element name="UpdateCbqkxxGridlb" type="DJCbqkxxVO">
+				<xs:annotation>
+					<xs:documentation>修改船舶情况信息列表</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="DeleteCbqkxxGrid">
+		<xs:annotation>
+			<xs:documentation>删除船舶情况信息</xs:documentation>
+		</xs:annotation>
+		<xs:sequence minOccurs="0" maxOccurs="unbounded">
+			<xs:element name="DeleteCbqkxxGridlb" type="DJCbqkxxVO">
+				<xs:annotation>
+					<xs:documentation>删除船舶情况信息列表</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

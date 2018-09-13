@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:complexType name="cxbtfdwgrsdsdkdjxxresponse">
+		<xs:annotation>
+			<xs:documentation>查询被统发单位个人所得税代扣代缴信息反馈</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="dkdjmxlb" type="dkdjmxlb"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="dkdjmxlb">
+		<xs:annotation>
+			<xs:documentation>代扣代缴明细列表</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="dkdjmx" type="dkdjmx" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="dkdjmx">
+		<xs:annotation>
+			<xs:documentation>代扣代缴明细信息</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="xh" type="xh">
+				<xs:annotation>
+					<xs:documentation>序号，不重复，不为空</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sfmxsb" type="bz3">
+				<xs:annotation>
+					<xs:documentation>是否明细申报，1：是， 0：否，不为空</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="nsrxm" type="nsrmc">
+				<xs:annotation>
+					<xs:documentation>纳税人姓名，当sfmxsb为1时不为空</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sfzjlxDm" type="sfzjlxDm">
+				<xs:annotation>
+					<xs:documentation>证照类型代码，当sfmxsb为1时不为空</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sfzjhm" type="sfzjhm">
+				<xs:annotation>
+					<xs:documentation>证照号码，当sfmxsb为1时不为空</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sdxmdm" type="grsdssdxmDm">
+				<xs:annotation>
+					<xs:documentation>所得项目代码，不为空</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sdqjq" type="sdqjq">
+				<xs:annotation>
+					<xs:documentation>所得期间起，格式为yyyy-mm-dd，不为空</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sdqjz" type="sdqjz">
+				<xs:annotation>
+					<xs:documentation>所得期间止，格式为yyyy-mm-dd，不为空</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sre" type="sre">
+				<xs:annotation>
+					<xs:documentation>收入额，不为空</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="mssdje" type="mssdje">
+				<xs:annotation>
+					<xs:documentation>（免税所得）其他免税所得金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="kjryxjjlmsbf" type="mssdje">
+				<xs:annotation>
+					<xs:documentation>（免税所得）科技人员现金奖励免税部分</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ylbxje" type="ylbxjjje">
+				<xs:annotation>
+					<xs:documentation>养老保险金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yilbxje" type="ylbxjjje">
+				<xs:annotation>
+					<xs:documentation>医疗保险金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sybxje" type="ylbxjjje">
+				<xs:annotation>
+					<xs:documentation>失业保险金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zfgjjje" type="zfgjjje">
+				<xs:annotation>
+					<xs:documentation>住房公积金金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ccyzje" type="zfgjjje">
+				<xs:annotation>
+					<xs:documentation>财产原值金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yxkcdfye" type="zykcdsf">
+				<xs:annotation>
+					<xs:documentation>允许扣除的费用额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sqkcxmqtje" type="zykcdsf">
+				<xs:annotation>
+					<xs:documentation>（税前扣除项目）其他金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sqkcxmjehj" type="kcxmjehj">
+				<xs:annotation>
+					<xs:documentation>税前扣除项目金额合计</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jcfye" type="fykcbz">
+				<xs:annotation>
+					<xs:documentation>减除费用额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zykcdjze" type="zykcdjze">
+				<xs:annotation>
+					<xs:documentation>准予扣除的捐赠额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ynssde" type="ynssde">
+				<xs:annotation>
+					<xs:documentation>应纳税所得额，不为空</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sl1" type="sl1">
+				<xs:annotation>
+					<xs:documentation>税率，不为空</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sskcs" type="sskcs">
+				<xs:annotation>
+					<xs:documentation>速算扣除数</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ynse" type="ynse">
+				<xs:annotation>
+					<xs:documentation>应纳（扣缴）税额，不为空</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jmse" type="jmse">
+				<xs:annotation>
+					<xs:documentation>减免税额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yingkjse" type="ykse">
+				<xs:annotation>
+					<xs:documentation>应扣缴税额，不为空</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ykjse" type="ykse">
+				<xs:annotation>
+					<xs:documentation>已扣缴税额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ybtse" type="ybtse">
+				<xs:annotation>
+					<xs:documentation>应补退税额，不为空</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="syjkx" type="syjkx">
+				<xs:annotation>
+					<xs:documentation>商业健康保险费</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="tzdk" type="tzdk">
+				<xs:annotation>
+					<xs:documentation>投资抵扣</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="nj" type="nj">
+				<xs:annotation>
+					<xs:documentation>年金</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="syylbx" type="ylbxjjje">
+				<xs:annotation>
+					<xs:documentation>税延养老保险</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bz" type="bz">
+				<xs:annotation>
+					<xs:documentation>备注</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:include schemaLocation="TaxMLCGSSBType.xsd"/>
+	<xs:complexType name="HXZGSB00081Request">
+		<xs:annotation>
+			<xs:documentation>车辆购置税车辆识别代号监控接入报文</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="SBCgsCxVO" type="SBCgsCxVO">
+						<xs:annotation>
+							<xs:documentation>车购税查询通用条件</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="isNeedJmVal" type="bz">
+						<xs:annotation>
+							<xs:documentation>是否需要减免监控</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="ywlx" type="ywlx" nillable="true">
+						<xs:annotation>
+							<xs:documentation>业务类型 1：新办申报，2重新申报</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="callScense" type="bz" nillable="true">
+						<xs:annotation>
+							<xs:documentation>调用场景区分标志：场景一、传入 hgz 重复申报情况下需要查询合格证的新能源标志和挂车免税标识(因新需求重复申报允许计税方式选择免税计税)；场景二、为空，区别与场景一，后续如果调用场景增多，则扩展用于区分。</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+</xs:schema>

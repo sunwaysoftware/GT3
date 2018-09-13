@@ -1,0 +1,1229 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<service xmlns="http://www.chinatax.gov.cn/spec/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <head>
+    <tran_id>SWZJ.HXZG.SB.BCZLBSCJBSJ</tran_id>
+    <channel_id>MNQ</channel_id>
+    <tran_seq>ece934b6abaa4f1e9be7926c1f119c3a</tran_seq>
+    <tran_date>20141024</tran_date>
+    <tran_time>113128168</tran_time>
+    <expand>
+      <name>sjry</name>
+      <value>24406060735</value>
+    </expand>
+    <expand>
+      <name>sjjg</name>
+      <value>24406060700</value>
+    </expand>
+  </head>
+  <body><![CDATA[<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<taxML xsi:type="HXZGSB00470Request" xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <zlbsbcVO>
+        <SB100BdxxVO>
+            <zlbsuuid>14FD3597EDC7B3A91FD53EE4EAF9D595</zlbsuuid>
+            <djxh>12440600000000000712</djxh>
+            <zlbsdlDm>ZL1001</zlbsdlDm>
+            <zlbsxlDm>ZL1001028</zlbsxlDm>
+            <zllx>0</zllx>
+            <zlsl>1.0</zlsl>
+            <cfdz>1</cfdz>
+            <cjbdxml><![CDATA[<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<taxML xmlns="http://www.chinatax.gov.cn/dataspec/">
+    <zcfzb>
+        <nsrxxForm>
+            <nsrsbh>440606345667865</nsrsbh>
+            <nsrmc>yangjing测试纳税人</nsrmc>
+            <bsrq>2014-11-20 20:04:13</bsrq>
+            <skssqq>2016-12-01</skssqq>
+            <skssqz>2016-12-31</skssqz>
+        </nsrxxForm>
+        <bdxxGrid>
+            <zcfzbdxxGridlb>
+                <ewbhxh>1</ewbhxh>
+                <zcxmmc>        货币资金</zcxmmc>
+                <ncsZc>44.0</ncsZc>
+                <qmsZc>4.0</qmsZc>
+                <qyxmmc>        短期借款</qyxmmc>
+                <ncsQy>44.0</ncsQy>
+                <qmsQy>4.0</qmsQy>
+            </zcfzbdxxGridlb>
+            <zcfzbdxxGridlb>
+                <ewbhxh>2</ewbhxh>
+                <zcxmmc>        短期投资</zcxmmc>
+                <ncsZc>0.0</ncsZc>
+                <qmsZc>0.0</qmsZc>
+                <qyxmmc>        应缴税费</qyxmmc>
+                <ncsQy>0.0</ncsQy>
+                <qmsQy>0.0</qmsQy>
+            </zcfzbdxxGridlb>
+            <zcfzbdxxGridlb>
+                <ewbhxh>3</ewbhxh>
+                <zcxmmc>        财政应返还额度</zcxmmc>
+                <ncsZc>0.0</ncsZc>
+                <qmsZc>0.0</qmsZc>
+                <qyxmmc>        应缴国库款</qyxmmc>
+                <ncsQy>0.0</ncsQy>
+                <qmsQy>0.0</qmsQy>
+            </zcfzbdxxGridlb>
+            <zcfzbdxxGridlb>
+                <ewbhxh>4</ewbhxh>
+                <zcxmmc>        应收票据</zcxmmc>
+                <ncsZc>0.0</ncsZc>
+                <qmsZc>0.0</qmsZc>
+                <qyxmmc>        应缴财政专户款</qyxmmc>
+                <ncsQy>0.0</ncsQy>
+                <qmsQy>0.0</qmsQy>
+            </zcfzbdxxGridlb>
+            <zcfzbdxxGridlb>
+                <ewbhxh>5</ewbhxh>
+                <zcxmmc>        应收账款</zcxmmc>
+                <ncsZc>0.0</ncsZc>
+                <qmsZc>0.0</qmsZc>
+                <qyxmmc>        应付职工薪酬</qyxmmc>
+                <ncsQy>0.0</ncsQy>
+                <qmsQy>0.0</qmsQy>
+            </zcfzbdxxGridlb>
+            <zcfzbdxxGridlb>
+                <ewbhxh>6</ewbhxh>
+                <zcxmmc>        预付账款</zcxmmc>
+                <ncsZc>0.0</ncsZc>
+                <qmsZc>0.0</qmsZc>
+                <qyxmmc>        应付票据</qyxmmc>
+                <ncsQy>0.0</ncsQy>
+                <qmsQy>0.0</qmsQy>
+            </zcfzbdxxGridlb>
+            <zcfzbdxxGridlb>
+                <ewbhxh>7</ewbhxh>
+                <zcxmmc>        其他应收款</zcxmmc>
+                <ncsZc>0.0</ncsZc>
+                <qmsZc>0.0</qmsZc>
+                <qyxmmc>        应付账款</qyxmmc>
+                <ncsQy>0.0</ncsQy>
+                <qmsQy>0.0</qmsQy>
+            </zcfzbdxxGridlb>
+            <zcfzbdxxGridlb>
+                <ewbhxh>8</ewbhxh>
+                <zcxmmc>        库存材料</zcxmmc>
+                <ncsZc>0.0</ncsZc>
+                <qmsZc>0.0</qmsZc>
+                <qyxmmc>        预收账款</qyxmmc>
+                <ncsQy>0.0</ncsQy>
+                <qmsQy>0.0</qmsQy>
+            </zcfzbdxxGridlb>
+            <zcfzbdxxGridlb>
+                <ewbhxh>9</ewbhxh>
+                <zcxmmc>        科技产品</zcxmmc>
+                <ncsZc>0.0</ncsZc>
+                <qmsZc>0.0</qmsZc>
+                <qyxmmc>        其他应付款</qyxmmc>
+                <ncsQy>0.0</ncsQy>
+                <qmsQy>0.0</qmsQy>
+            </zcfzbdxxGridlb>
+            <zcfzbdxxGridlb>
+                <ewbhxh>10</ewbhxh>
+                <zcxmmc>        流动资产合计</zcxmmc>
+                <ncsZc>44.0</ncsZc>
+                <qmsZc>4.0</qmsZc>
+                <qyxmmc>        其他流动负债</qyxmmc>
+                <ncsQy>0.0</ncsQy>
+                <qmsQy>0.0</qmsQy>
+            </zcfzbdxxGridlb>
+            <zcfzbdxxGridlb>
+                <ewbhxh>11</ewbhxh>
+                <qyxmmc>        流动负债合计</qyxmmc>
+                <ncsQy>44.0</ncsQy>
+                <qmsQy>4.0</qmsQy>
+            </zcfzbdxxGridlb>
+            <zcfzbdxxGridlb>
+                <ewbhxh>12</ewbhxh>
+                <zcxmmc>        长期投资</zcxmmc>
+                <ncsZc>0.0</ncsZc>
+                <qmsZc>0.0</qmsZc>
+            </zcfzbdxxGridlb>
+            <zcfzbdxxGridlb>
+                <ewbhxh>13</ewbhxh>
+                <zcxmmc>        固定资产</zcxmmc>
+                <ncsZc>0.0</ncsZc>
+                <qmsZc>0.0</qmsZc>
+                <qyxmmc>        长期借款</qyxmmc>
+                <ncsQy>0.0</ncsQy>
+                <qmsQy>0.0</qmsQy>
+            </zcfzbdxxGridlb>
+            <zcfzbdxxGridlb>
+                <ewbhxh>14</ewbhxh>
+                <zcxmmc>         固定资产原价</zcxmmc>
+                <ncsZc>0.0</ncsZc>
+                <qmsZc>0.0</qmsZc>
+                <qyxmmc>        长期应付款</qyxmmc>
+                <ncsQy>0.0</ncsQy>
+                <qmsQy>0.0</qmsQy>
+            </zcfzbdxxGridlb>
+            <zcfzbdxxGridlb>
+                <ewbhxh>15</ewbhxh>
+                <zcxmmc>        减：累计折旧</zcxmmc>
+                <ncsZc>0.0</ncsZc>
+                <qmsZc>0.0</qmsZc>
+                <qyxmmc>非流动负债合计：</qyxmmc>
+                <ncsQy>0.0</ncsQy>
+                <qmsQy>0.0</qmsQy>
+            </zcfzbdxxGridlb>
+            <zcfzbdxxGridlb>
+                <ewbhxh>16</ewbhxh>
+                <zcxmmc>        在建工程</zcxmmc>
+                <ncsZc>0.0</ncsZc>
+                <qmsZc>0.0</qmsZc>
+                <qyxmmc>        负债合计</qyxmmc>
+                <ncsQy>44.0</ncsQy>
+                <qmsQy>4.0</qmsQy>
+            </zcfzbdxxGridlb>
+            <zcfzbdxxGridlb>
+                <ewbhxh>17</ewbhxh>
+                <zcxmmc>        无形资产</zcxmmc>
+                <ncsZc>0.0</ncsZc>
+                <qmsZc>0.0</qmsZc>
+            </zcfzbdxxGridlb>
+            <zcfzbdxxGridlb>
+                <ewbhxh>18</ewbhxh>
+                <zcxmmc>         无形资产原价</zcxmmc>
+                <ncsZc>0.0</ncsZc>
+                <qmsZc>0.0</qmsZc>
+                <qyxmmc>        事业基金</qyxmmc>
+                <ncsQy>0.0</ncsQy>
+                <qmsQy>0.0</qmsQy>
+            </zcfzbdxxGridlb>
+            <zcfzbdxxGridlb>
+                <ewbhxh>19</ewbhxh>
+                <zcxmmc>        减：累计摊销</zcxmmc>
+                <ncsZc>0.0</ncsZc>
+                <qmsZc>0.0</qmsZc>
+                <qyxmmc>        非流动资产基金</qyxmmc>
+                <ncsQy>0.0</ncsQy>
+                <qmsQy>0.0</qmsQy>
+            </zcfzbdxxGridlb>
+            <zcfzbdxxGridlb>
+                <ewbhxh>20</ewbhxh>
+                <zcxmmc>        待处置资产损溢</zcxmmc>
+                <ncsZc>0.0</ncsZc>
+                <qmsZc>0.0</qmsZc>
+                <qyxmmc>        专用基金</qyxmmc>
+                <ncsQy>0.0</ncsQy>
+                <qmsQy>0.0</qmsQy>
+            </zcfzbdxxGridlb>
+            <zcfzbdxxGridlb>
+                <ewbhxh>21</ewbhxh>
+                <zcxmmc>        非流动资产合计</zcxmmc>
+                <ncsZc>0.0</ncsZc>
+                <qmsZc>0.0</qmsZc>
+                <qyxmmc>        财政补助结转</qyxmmc>
+                <ncsQy>0.0</ncsQy>
+                <qmsQy>0.0</qmsQy>
+            </zcfzbdxxGridlb>
+            <zcfzbdxxGridlb>
+                <ewbhxh>22</ewbhxh>
+                <qyxmmc>        财政补助结余</qyxmmc>
+                <ncsQy>0.0</ncsQy>
+                <qmsQy>0.0</qmsQy>
+            </zcfzbdxxGridlb>
+            <zcfzbdxxGridlb>
+                <ewbhxh>23</ewbhxh>
+                <qyxmmc>        非财政补助结转</qyxmmc>
+                <ncsQy>0.0</ncsQy>
+                <qmsQy>0.0</qmsQy>
+            </zcfzbdxxGridlb>
+            <zcfzbdxxGridlb>
+                <ewbhxh>24</ewbhxh>
+                <qyxmmc>        非财政补助结余</qyxmmc>
+                <ncsQy>0.0</ncsQy>
+                <qmsQy>0.0</qmsQy>
+            </zcfzbdxxGridlb>
+            <zcfzbdxxGridlb>
+                <ewbhxh>25</ewbhxh>
+                <qyxmmc>        1.事业结余</qyxmmc>
+                <ncsQy>0.0</ncsQy>
+                <qmsQy>0.0</qmsQy>
+            </zcfzbdxxGridlb>
+            <zcfzbdxxGridlb>
+                <ewbhxh>26</ewbhxh>
+                <qyxmmc>        2.经营结余</qyxmmc>
+                <ncsQy>0.0</ncsQy>
+                <qmsQy>0.0</qmsQy>
+            </zcfzbdxxGridlb>
+            <zcfzbdxxGridlb>
+                <ewbhxh>27</ewbhxh>
+                <qyxmmc>净资产合计</qyxmmc>
+                <ncsQy>0.0</ncsQy>
+                <qmsQy>0.0</qmsQy>
+            </zcfzbdxxGridlb>
+            <zcfzbdxxGridlb>
+                <ewbhxh>28</ewbhxh>
+                <zcxmmc>        资产总计</zcxmmc>
+                <ncsZc>44.0</ncsZc>
+                <qmsZc>4.0</qmsZc>
+                <qyxmmc>负债和净资产总计</qyxmmc>
+                <ncsQy>44.0</ncsQy>
+                <qmsQy>4.0</qmsQy>
+            </zcfzbdxxGridlb>
+        </bdxxGrid>
+        <slxxForm>
+            <slrDm>邓炳沛</slrDm>
+            <slswjgDm>佛山市顺德区地方税务局乐从税务分局</slswjgDm>
+            <slrq>2014-11-20 20:04:13</slrq>
+        </slxxForm>
+    </zcfzb>
+    <srzcbyb>
+        <srzcbybGrid>
+            <srzcbybGridlb>
+                <ewbhxh>1</ewbhxh>
+                <xmmc>一、本期收入</xmmc>
+                <bys>4342.0</bys>
+                <bnljs>0.0</bnljs>
+            </srzcbybGridlb>
+            <srzcbybGridlb>
+                <ewbhxh>2</ewbhxh>
+                <xmmc>    （一）财政补助收入</xmmc>
+                <bys>4342.0</bys>
+                <bnljs>0.0</bnljs>
+            </srzcbybGridlb>
+            <srzcbybGridlb>
+                <ewbhxh>3</ewbhxh>
+                <xmmc>    （二）事业收入</xmmc>
+                <bys>0.0</bys>
+                <bnljs>0.0</bnljs>
+            </srzcbybGridlb>
+            <srzcbybGridlb>
+                <ewbhxh>4</ewbhxh>
+                <xmmc>       1.科研收入</xmmc>
+                <bys>0.0</bys>
+                <bnljs>0.0</bnljs>
+            </srzcbybGridlb>
+            <srzcbybGridlb>
+                <ewbhxh>5</ewbhxh>
+                <xmmc>       2.非科研收入</xmmc>
+                <bys>0.0</bys>
+                <bnljs>0.0</bnljs>
+            </srzcbybGridlb>
+            <srzcbybGridlb>
+                <ewbhxh>6</ewbhxh>
+                <xmmc>        （1）技术收入</xmmc>
+                <bys>0.0</bys>
+                <bnljs>0.0</bnljs>
+            </srzcbybGridlb>
+            <srzcbybGridlb>
+                <ewbhxh>7</ewbhxh>
+                <xmmc>        （2）学术活动收入</xmmc>
+                <bys>0.0</bys>
+                <bnljs>0.0</bnljs>
+            </srzcbybGridlb>
+            <srzcbybGridlb>
+                <ewbhxh>8</ewbhxh>
+                <xmmc>        （3）科普活动收入</xmmc>
+                <bys>0.0</bys>
+                <bnljs>0.0</bnljs>
+            </srzcbybGridlb>
+            <srzcbybGridlb>
+                <ewbhxh>9</ewbhxh>
+                <xmmc>        （4）试制产品收入入</xmmc>
+                <bys>0.0</bys>
+                <bnljs>0.0</bnljs>
+            </srzcbybGridlb>
+            <srzcbybGridlb>
+                <ewbhxh>10</ewbhxh>
+                <xmmc>        （5）教学活动收入</xmmc>
+                <bys>0.0</bys>
+                <bnljs>0.0</bnljs>
+            </srzcbybGridlb>
+            <srzcbybGridlb>
+                <ewbhxh>11</ewbhxh>
+                <xmmc>    （三）上级补助收入</xmmc>
+                <bys>0.0</bys>
+                <bnljs>0.0</bnljs>
+            </srzcbybGridlb>
+            <srzcbybGridlb>
+                <ewbhxh>12</ewbhxh>
+                <xmmc>     （四）附属单位上缴收入</xmmc>
+                <bys>0.0</bys>
+                <bnljs>0.0</bnljs>
+            </srzcbybGridlb>
+            <srzcbybGridlb>
+                <ewbhxh>13</ewbhxh>
+                <xmmc>     （五）经营收入</xmmc>
+                <bys>0.0</bys>
+                <bnljs>0.0</bnljs>
+            </srzcbybGridlb>
+            <srzcbybGridlb>
+                <ewbhxh>14</ewbhxh>
+                <xmmc>    （六）其他收入</xmmc>
+                <bys>0.0</bys>
+                <bnljs>0.0</bnljs>
+            </srzcbybGridlb>
+            <srzcbybGridlb>
+                <ewbhxh>15</ewbhxh>
+                <xmmc>二、本期支出</xmmc>
+                <bys>0.0</bys>
+                <bnljs>0.0</bnljs>
+            </srzcbybGridlb>
+            <srzcbybGridlb>
+                <ewbhxh>16</ewbhxh>
+                <xmmc>    （一）事业支出（财政补助支出）</xmmc>
+                <bys>0.0</bys>
+                <bnljs>0.0</bnljs>
+            </srzcbybGridlb>
+            <srzcbybGridlb>
+                <ewbhxh>17</ewbhxh>
+                <xmmc>       1.科研支出</xmmc>
+                <bys>0.0</bys>
+                <bnljs>0.0</bnljs>
+            </srzcbybGridlb>
+            <srzcbybGridlb>
+                <ewbhxh>18</ewbhxh>
+                <xmmc>       2.非科研支出</xmmc>
+                <bys>0.0</bys>
+                <bnljs>0.0</bnljs>
+            </srzcbybGridlb>
+            <srzcbybGridlb>
+                <ewbhxh>19</ewbhxh>
+                <xmmc>        （1）技术支出</xmmc>
+                <bys>0.0</bys>
+                <bnljs>0.0</bnljs>
+            </srzcbybGridlb>
+            <srzcbybGridlb>
+                <ewbhxh>20</ewbhxh>
+                <xmmc>        （2）学术活动支出</xmmc>
+                <bys>0.0</bys>
+                <bnljs>0.0</bnljs>
+            </srzcbybGridlb>
+            <srzcbybGridlb>
+                <ewbhxh>21</ewbhxh>
+                <xmmc>        （3）科普活动支出</xmmc>
+                <bys>0.0</bys>
+                <bnljs>0.0</bnljs>
+            </srzcbybGridlb>
+            <srzcbybGridlb>
+                <ewbhxh>22</ewbhxh>
+                <xmmc>        （4）试制产品支出</xmmc>
+                <bys>0.0</bys>
+                <bnljs>0.0</bnljs>
+            </srzcbybGridlb>
+            <srzcbybGridlb>
+                <ewbhxh>23</ewbhxh>
+                <xmmc>        （5）教学活动支出</xmmc>
+                <bys>0.0</bys>
+                <bnljs>0.0</bnljs>
+            </srzcbybGridlb>
+            <srzcbybGridlb>
+                <ewbhxh>24</ewbhxh>
+                <xmmc>       3.行政管理支出</xmmc>
+                <bys>0.0</bys>
+                <bnljs>0.0</bnljs>
+            </srzcbybGridlb>
+            <srzcbybGridlb>
+                <ewbhxh>25</ewbhxh>
+                <xmmc>       4.后勤保障支出</xmmc>
+                <bys>0.0</bys>
+                <bnljs>0.0</bnljs>
+            </srzcbybGridlb>
+            <srzcbybGridlb>
+                <ewbhxh>26</ewbhxh>
+                <xmmc>       5.离退休支出</xmmc>
+                <bys>0.0</bys>
+                <bnljs>0.0</bnljs>
+            </srzcbybGridlb>
+            <srzcbybGridlb>
+                <ewbhxh>27</ewbhxh>
+                <xmmc>    （二）非财政补助支出</xmmc>
+                <bys>0.0</bys>
+                <bnljs>0.0</bnljs>
+            </srzcbybGridlb>
+            <srzcbybGridlb>
+                <ewbhxh>28</ewbhxh>
+                <xmmc>       1.事业支出</xmmc>
+                <bys>0.0</bys>
+                <bnljs>0.0</bnljs>
+            </srzcbybGridlb>
+            <srzcbybGridlb>
+                <ewbhxh>29</ewbhxh>
+                <xmmc>        （1）科研支出</xmmc>
+                <bys>0.0</bys>
+                <bnljs>0.0</bnljs>
+            </srzcbybGridlb>
+            <srzcbybGridlb>
+                <ewbhxh>30</ewbhxh>
+                <xmmc>        （2）非科研支出</xmmc>
+                <bys>0.0</bys>
+                <bnljs>0.0</bnljs>
+            </srzcbybGridlb>
+            <srzcbybGridlb>
+                <ewbhxh>31</ewbhxh>
+                <xmmc>            ① 技术支出</xmmc>
+                <bys>0.0</bys>
+                <bnljs>0.0</bnljs>
+            </srzcbybGridlb>
+            <srzcbybGridlb>
+                <ewbhxh>32</ewbhxh>
+                <xmmc>            ② 学术活动支出</xmmc>
+                <bys>0.0</bys>
+                <bnljs>0.0</bnljs>
+            </srzcbybGridlb>
+            <srzcbybGridlb>
+                <ewbhxh>33</ewbhxh>
+                <xmmc>            ③ 科普活动支出</xmmc>
+                <bys>0.0</bys>
+                <bnljs>0.0</bnljs>
+            </srzcbybGridlb>
+            <srzcbybGridlb>
+                <ewbhxh>34</ewbhxh>
+                <xmmc>            ④ 试制产品支出</xmmc>
+                <bys>0.0</bys>
+                <bnljs>0.0</bnljs>
+            </srzcbybGridlb>
+            <srzcbybGridlb>
+                <ewbhxh>35</ewbhxh>
+                <xmmc>            ⑤ 教学活动支出</xmmc>
+                <bys>0.0</bys>
+                <bnljs>0.0</bnljs>
+            </srzcbybGridlb>
+            <srzcbybGridlb>
+                <ewbhxh>36</ewbhxh>
+                <xmmc>        （3）行政管理支出</xmmc>
+                <bys>0.0</bys>
+                <bnljs>0.0</bnljs>
+            </srzcbybGridlb>
+            <srzcbybGridlb>
+                <ewbhxh>37</ewbhxh>
+                <xmmc>        （4）后勤保障支出</xmmc>
+                <bys>0.0</bys>
+                <bnljs>0.0</bnljs>
+            </srzcbybGridlb>
+            <srzcbybGridlb>
+                <ewbhxh>38</ewbhxh>
+                <xmmc>        （5）离退休支出</xmmc>
+                <bys>0.0</bys>
+                <bnljs>0.0</bnljs>
+            </srzcbybGridlb>
+            <srzcbybGridlb>
+                <ewbhxh>39</ewbhxh>
+                <xmmc>       2.上缴上级支出</xmmc>
+                <bys>0.0</bys>
+                <bnljs>0.0</bnljs>
+            </srzcbybGridlb>
+            <srzcbybGridlb>
+                <ewbhxh>40</ewbhxh>
+                <xmmc>       3.对附属单位补助支出</xmmc>
+                <bys>0.0</bys>
+                <bnljs>0.0</bnljs>
+            </srzcbybGridlb>
+            <srzcbybGridlb>
+                <ewbhxh>41</ewbhxh>
+                <xmmc>       4.经营支出</xmmc>
+                <bys>0.0</bys>
+                <bnljs>0.0</bnljs>
+            </srzcbybGridlb>
+            <srzcbybGridlb>
+                <ewbhxh>42</ewbhxh>
+                <xmmc>       5.其他支出</xmmc>
+                <bys>0.0</bys>
+                <bnljs>0.0</bnljs>
+            </srzcbybGridlb>
+            <srzcbybGridlb>
+                <ewbhxh>43</ewbhxh>
+                <xmmc>三、本期结转结余</xmmc>
+                <bys>4342.0</bys>
+                <bnljs>0.0</bnljs>
+            </srzcbybGridlb>
+            <srzcbybGridlb>
+                <ewbhxh>44</ewbhxh>
+                <xmmc>       1.财政补助结转结余</xmmc>
+                <bys>4342.0</bys>
+                <bnljs>0.0</bnljs>
+            </srzcbybGridlb>
+            <srzcbybGridlb>
+                <ewbhxh>45</ewbhxh>
+                <xmmc>       2.事业结转结余</xmmc>
+                <bys>0.0</bys>
+                <bnljs>0.0</bnljs>
+            </srzcbybGridlb>
+            <srzcbybGridlb>
+                <ewbhxh>46</ewbhxh>
+                <xmmc>       3.经营结余</xmmc>
+                <bys>0.0</bys>
+                <bnljs>0.0</bnljs>
+            </srzcbybGridlb>
+            <srzcbybGridlb>
+                <ewbhxh>47</ewbhxh>
+                <xmmc>四、弥补以前年度经营亏损后的经营结余</xmmc>
+                <bys>0.0</bys>
+                <bnljs>0.0</bnljs>
+            </srzcbybGridlb>
+            <srzcbybGridlb>
+                <ewbhxh>48</ewbhxh>
+                <xmmc>五、本年非财政补助结转结余</xmmc>
+                <bys>0.0</bys>
+                <bnljs>0.0</bnljs>
+            </srzcbybGridlb>
+            <srzcbybGridlb>
+                <ewbhxh>49</ewbhxh>
+                <xmmc>       减：非财政补助结转</xmmc>
+                <bys>0.0</bys>
+                <bnljs>0.0</bnljs>
+            </srzcbybGridlb>
+            <srzcbybGridlb>
+                <ewbhxh>50</ewbhxh>
+                <xmmc>六、本年非财政补助结余</xmmc>
+                <bys>0.0</bys>
+                <bnljs>0.0</bnljs>
+            </srzcbybGridlb>
+            <srzcbybGridlb>
+                <ewbhxh>51</ewbhxh>
+                <xmmc>       减：应缴企业所得税 </xmmc>
+                <bys>0.0</bys>
+                <bnljs>0.0</bnljs>
+            </srzcbybGridlb>
+            <srzcbybGridlb>
+                <ewbhxh>52</ewbhxh>
+                <xmmc>       减：提取专用基金</xmmc>
+                <bys>0.0</bys>
+                <bnljs>0.0</bnljs>
+            </srzcbybGridlb>
+            <srzcbybGridlb>
+                <ewbhxh>53</ewbhxh>
+                <xmmc>七、转入事业基金</xmmc>
+                <bys>0.0</bys>
+                <bnljs>0.0</bnljs>
+            </srzcbybGridlb>
+        </srzcbybGrid>
+    </srzcbyb>
+    <srzcbnb>
+        <nsrxxForm>
+            <nsrsbh>440606345667865</nsrsbh>
+            <nsrmc>yangjing测试纳税人</nsrmc>
+            <bsrq>2014-11-20 20:04:13</bsrq>
+            <skssqq>2014-11-18 20:04:13</skssqq>
+            <skssqz>2014-11-17</skssqz>
+        </nsrxxForm>
+        <srzcbnbGrid>
+            <srzcbnbGridlb>
+                <ewbhxh>1</ewbhxh>
+                <xmmc>一、本期收入</xmmc>
+                <bys>0.0</bys>
+                <bnljs>344.0</bnljs>
+            </srzcbnbGridlb>
+            <srzcbnbGridlb>
+                <ewbhxh>2</ewbhxh>
+                <xmmc>    （一）财政补助收入</xmmc>
+                <bys>0.0</bys>
+                <bnljs>0.0</bnljs>
+            </srzcbnbGridlb>
+            <srzcbnbGridlb>
+                <ewbhxh>3</ewbhxh>
+                <xmmc>    （二）事业收入</xmmc>
+                <bys>0.0</bys>
+                <bnljs>0.0</bnljs>
+            </srzcbnbGridlb>
+            <srzcbnbGridlb>
+                <ewbhxh>4</ewbhxh>
+                <xmmc>       1.科研收入</xmmc>
+                <bys>0.0</bys>
+                <bnljs>0.0</bnljs>
+            </srzcbnbGridlb>
+            <srzcbnbGridlb>
+                <ewbhxh>5</ewbhxh>
+                <xmmc>       2.非科研收入</xmmc>
+                <bys>0.0</bys>
+                <bnljs>0.0</bnljs>
+            </srzcbnbGridlb>
+            <srzcbnbGridlb>
+                <ewbhxh>6</ewbhxh>
+                <xmmc>        （1）技术收入</xmmc>
+                <bys>0.0</bys>
+                <bnljs>0.0</bnljs>
+            </srzcbnbGridlb>
+            <srzcbnbGridlb>
+                <ewbhxh>7</ewbhxh>
+                <xmmc>        （2）学术活动收入</xmmc>
+                <bys>0.0</bys>
+                <bnljs>0.0</bnljs>
+            </srzcbnbGridlb>
+            <srzcbnbGridlb>
+                <ewbhxh>8</ewbhxh>
+                <xmmc>        （3）科普活动收入</xmmc>
+                <bys>0.0</bys>
+                <bnljs>0.0</bnljs>
+            </srzcbnbGridlb>
+            <srzcbnbGridlb>
+                <ewbhxh>9</ewbhxh>
+                <xmmc>        （4）试制产品收入</xmmc>
+                <bys>0.0</bys>
+                <bnljs>0.0</bnljs>
+            </srzcbnbGridlb>
+            <srzcbnbGridlb>
+                <ewbhxh>10</ewbhxh>
+                <xmmc>        （5）教学活动收入</xmmc>
+                <bys>0.0</bys>
+                <bnljs>0.0</bnljs>
+            </srzcbnbGridlb>
+            <srzcbnbGridlb>
+                <ewbhxh>11</ewbhxh>
+                <xmmc>    （三）上级补助收入</xmmc>
+                <bys>0.0</bys>
+                <bnljs>0.0</bnljs>
+            </srzcbnbGridlb>
+            <srzcbnbGridlb>
+                <ewbhxh>12</ewbhxh>
+                <xmmc>     （四）附属单位上缴收入</xmmc>
+                <bys>0.0</bys>
+                <bnljs>0.0</bnljs>
+            </srzcbnbGridlb>
+            <srzcbnbGridlb>
+                <ewbhxh>13</ewbhxh>
+                <xmmc>     （五）经营收入</xmmc>
+                <bys>0.0</bys>
+                <bnljs>0.0</bnljs>
+            </srzcbnbGridlb>
+            <srzcbnbGridlb>
+                <ewbhxh>14</ewbhxh>
+                <xmmc>    （六）其他收入</xmmc>
+                <bys>0.0</bys>
+                <bnljs>0.0</bnljs>
+            </srzcbnbGridlb>
+            <srzcbnbGridlb>
+                <ewbhxh>15</ewbhxh>
+                <xmmc>二、本期支出</xmmc>
+                <bys>0.0</bys>
+                <bnljs>0.0</bnljs>
+            </srzcbnbGridlb>
+            <srzcbnbGridlb>
+                <ewbhxh>16</ewbhxh>
+                <xmmc>    （一）事业支出（财政补助支出）</xmmc>
+                <bys>0.0</bys>
+                <bnljs>0.0</bnljs>
+            </srzcbnbGridlb>
+            <srzcbnbGridlb>
+                <ewbhxh>17</ewbhxh>
+                <xmmc>       1.科研支出</xmmc>
+                <bys>0.0</bys>
+                <bnljs>0.0</bnljs>
+            </srzcbnbGridlb>
+            <srzcbnbGridlb>
+                <ewbhxh>18</ewbhxh>
+                <xmmc>       2.非科研支出</xmmc>
+                <bys>0.0</bys>
+                <bnljs>0.0</bnljs>
+            </srzcbnbGridlb>
+            <srzcbnbGridlb>
+                <ewbhxh>19</ewbhxh>
+                <xmmc>        （1）技术支出</xmmc>
+                <bys>0.0</bys>
+                <bnljs>0.0</bnljs>
+            </srzcbnbGridlb>
+            <srzcbnbGridlb>
+                <ewbhxh>20</ewbhxh>
+                <xmmc>        （2）学术活动支出</xmmc>
+                <bys>0.0</bys>
+                <bnljs>0.0</bnljs>
+            </srzcbnbGridlb>
+            <srzcbnbGridlb>
+                <ewbhxh>21</ewbhxh>
+                <xmmc>        （3）科普活动支出</xmmc>
+                <bys>0.0</bys>
+                <bnljs>0.0</bnljs>
+            </srzcbnbGridlb>
+            <srzcbnbGridlb>
+                <ewbhxh>22</ewbhxh>
+                <xmmc>        （4）试制产品支出</xmmc>
+                <bys>0.0</bys>
+                <bnljs>0.0</bnljs>
+            </srzcbnbGridlb>
+            <srzcbnbGridlb>
+                <ewbhxh>23</ewbhxh>
+                <xmmc>        （5）教学活动支出</xmmc>
+                <bys>0.0</bys>
+                <bnljs>0.0</bnljs>
+            </srzcbnbGridlb>
+            <srzcbnbGridlb>
+                <ewbhxh>24</ewbhxh>
+                <xmmc>       3.行政管理支出</xmmc>
+                <bys>0.0</bys>
+                <bnljs>0.0</bnljs>
+            </srzcbnbGridlb>
+            <srzcbnbGridlb>
+                <ewbhxh>25</ewbhxh>
+                <xmmc>       4.后勤保障支出</xmmc>
+                <bys>0.0</bys>
+                <bnljs>0.0</bnljs>
+            </srzcbnbGridlb>
+            <srzcbnbGridlb>
+                <ewbhxh>26</ewbhxh>
+                <xmmc>       5.离退休支出</xmmc>
+                <bys>0.0</bys>
+                <bnljs>0.0</bnljs>
+            </srzcbnbGridlb>
+            <srzcbnbGridlb>
+                <ewbhxh>27</ewbhxh>
+                <xmmc>    （二）非财政补助支出</xmmc>
+                <bys>0.0</bys>
+                <bnljs>0.0</bnljs>
+            </srzcbnbGridlb>
+            <srzcbnbGridlb>
+                <ewbhxh>28</ewbhxh>
+                <xmmc>       1.事业支出</xmmc>
+                <bys>0.0</bys>
+                <bnljs>0.0</bnljs>
+            </srzcbnbGridlb>
+            <srzcbnbGridlb>
+                <ewbhxh>29</ewbhxh>
+                <xmmc>        （1）科研支出</xmmc>
+                <bys>0.0</bys>
+                <bnljs>0.0</bnljs>
+            </srzcbnbGridlb>
+            <srzcbnbGridlb>
+                <ewbhxh>30</ewbhxh>
+                <xmmc>        （2）非科研支出</xmmc>
+                <bys>0.0</bys>
+                <bnljs>0.0</bnljs>
+            </srzcbnbGridlb>
+            <srzcbnbGridlb>
+                <ewbhxh>31</ewbhxh>
+                <xmmc>            ① 技术支出</xmmc>
+                <bys>0.0</bys>
+                <bnljs>0.0</bnljs>
+            </srzcbnbGridlb>
+            <srzcbnbGridlb>
+                <ewbhxh>32</ewbhxh>
+                <xmmc>            ② 学术活动支出</xmmc>
+                <bys>0.0</bys>
+                <bnljs>0.0</bnljs>
+            </srzcbnbGridlb>
+            <srzcbnbGridlb>
+                <ewbhxh>33</ewbhxh>
+                <xmmc>            ③ 科普活动支出</xmmc>
+                <bys>0.0</bys>
+                <bnljs>0.0</bnljs>
+            </srzcbnbGridlb>
+            <srzcbnbGridlb>
+                <ewbhxh>34</ewbhxh>
+                <xmmc>            ④ 试制产品支出</xmmc>
+                <bys>0.0</bys>
+                <bnljs>0.0</bnljs>
+            </srzcbnbGridlb>
+            <srzcbnbGridlb>
+                <ewbhxh>35</ewbhxh>
+                <xmmc>            ⑤ 教学活动支出</xmmc>
+                <bys>0.0</bys>
+                <bnljs>0.0</bnljs>
+            </srzcbnbGridlb>
+            <srzcbnbGridlb>
+                <ewbhxh>36</ewbhxh>
+                <xmmc>        （3）行政管理支出</xmmc>
+                <bys>0.0</bys>
+                <bnljs>0.0</bnljs>
+            </srzcbnbGridlb>
+            <srzcbnbGridlb>
+                <ewbhxh>37</ewbhxh>
+                <xmmc>        （4）后勤保障支出</xmmc>
+                <bys>0.0</bys>
+                <bnljs>0.0</bnljs>
+            </srzcbnbGridlb>
+            <srzcbnbGridlb>
+                <ewbhxh>38</ewbhxh>
+                <xmmc>        （5）离退休支出</xmmc>
+                <bys>0.0</bys>
+                <bnljs>0.0</bnljs>
+            </srzcbnbGridlb>
+            <srzcbnbGridlb>
+                <ewbhxh>39</ewbhxh>
+                <xmmc>       2.上缴上级支出</xmmc>
+                <bys>0.0</bys>
+                <bnljs>0.0</bnljs>
+            </srzcbnbGridlb>
+            <srzcbnbGridlb>
+                <ewbhxh>40</ewbhxh>
+                <xmmc>       3.对附属单位补助支出</xmmc>
+                <bys>0.0</bys>
+                <bnljs>0.0</bnljs>
+            </srzcbnbGridlb>
+            <srzcbnbGridlb>
+                <ewbhxh>41</ewbhxh>
+                <xmmc>       4.经营支出</xmmc>
+                <bys>0.0</bys>
+                <bnljs>0.0</bnljs>
+            </srzcbnbGridlb>
+            <srzcbnbGridlb>
+                <ewbhxh>42</ewbhxh>
+                <xmmc>       5.其他支出</xmmc>
+                <bys>0.0</bys>
+                <bnljs>0.0</bnljs>
+            </srzcbnbGridlb>
+            <srzcbnbGridlb>
+                <ewbhxh>43</ewbhxh>
+                <xmmc>三、本期结转结余</xmmc>
+                <bys>0.0</bys>
+                <bnljs>0.0</bnljs>
+            </srzcbnbGridlb>
+            <srzcbnbGridlb>
+                <ewbhxh>44</ewbhxh>
+                <xmmc>       1.财政补助结转结余</xmmc>
+                <bys>0.0</bys>
+                <bnljs>0.0</bnljs>
+            </srzcbnbGridlb>
+            <srzcbnbGridlb>
+                <ewbhxh>45</ewbhxh>
+                <xmmc>       2.事业结转结余</xmmc>
+                <bys>0.0</bys>
+                <bnljs>0.0</bnljs>
+            </srzcbnbGridlb>
+            <srzcbnbGridlb>
+                <ewbhxh>46</ewbhxh>
+                <xmmc>       3.经营结余</xmmc>
+                <bys>0.0</bys>
+                <bnljs>0.0</bnljs>
+            </srzcbnbGridlb>
+            <srzcbnbGridlb>
+                <ewbhxh>47</ewbhxh>
+                <xmmc>四、弥补以前年度经营亏损后的经营结余</xmmc>
+                <bys>0.0</bys>
+                <bnljs>0.0</bnljs>
+            </srzcbnbGridlb>
+            <srzcbnbGridlb>
+                <ewbhxh>48</ewbhxh>
+                <xmmc>五、本年非财政补助结转结余</xmmc>
+                <bys>0.0</bys>
+                <bnljs>0.0</bnljs>
+            </srzcbnbGridlb>
+            <srzcbnbGridlb>
+                <ewbhxh>49</ewbhxh>
+                <xmmc>       减：非财政补助结转</xmmc>
+                <bys>0.0</bys>
+                <bnljs>0.0</bnljs>
+            </srzcbnbGridlb>
+            <srzcbnbGridlb>
+                <ewbhxh>50</ewbhxh>
+                <xmmc>六、本年非财政补助结余</xmmc>
+                <bys>0.0</bys>
+                <bnljs>0.0</bnljs>
+            </srzcbnbGridlb>
+            <srzcbnbGridlb>
+                <ewbhxh>51</ewbhxh>
+                <xmmc>       减：应缴企业所得税 </xmmc>
+                <bys>0.0</bys>
+                <bnljs>0.0</bnljs>
+            </srzcbnbGridlb>
+            <srzcbnbGridlb>
+                <ewbhxh>52</ewbhxh>
+                <xmmc>       减：提取专用基金</xmmc>
+                <bys>0.0</bys>
+                <bnljs>0.0</bnljs>
+            </srzcbnbGridlb>
+            <srzcbnbGridlb>
+                <ewbhxh>53</ewbhxh>
+                <xmmc>七、转入事业基金</xmmc>
+                <bys>0.0</bys>
+                <bnljs>0.0</bnljs>
+            </srzcbnbGridlb>
+        </srzcbnbGrid>
+    </srzcbnb>
+    <czbzsrzc>
+        <czbzsrzcGrid>
+            <czbzsrzcbGridlb>
+                <ewbhxh>1</ewbhxh>
+                <xmmc>一、年初财政补助结转结余</xmmc>
+                <bns>0.0</bns>
+                <sns>0.0</sns>
+            </czbzsrzcbGridlb>
+            <czbzsrzcbGridlb>
+                <ewbhxh>2</ewbhxh>
+                <xmmc>    （一）基本支出结转</xmmc>
+                <bns>0.0</bns>
+                <sns>0.0</sns>
+            </czbzsrzcbGridlb>
+            <czbzsrzcbGridlb>
+                <ewbhxh>3</ewbhxh>
+                <xmmc>                 1.人员经费</xmmc>
+                <bns>0.0</bns>
+                <sns>0.0</sns>
+            </czbzsrzcbGridlb>
+            <czbzsrzcbGridlb>
+                <ewbhxh>4</ewbhxh>
+                <xmmc>                 2.日常公用经费</xmmc>
+                <bns>0.0</bns>
+                <sns>0.0</sns>
+            </czbzsrzcbGridlb>
+            <czbzsrzcbGridlb>
+                <ewbhxh>5</ewbhxh>
+                <xmmc>    （二）项目支出结转</xmmc>
+                <bns>0.0</bns>
+                <sns>0.0</sns>
+            </czbzsrzcbGridlb>
+            <czbzsrzcbGridlb>
+                <ewbhxh>6</ewbhxh>
+                <xmmc>             ××项目</xmmc>
+                <bns>0.0</bns>
+                <sns>0.0</sns>
+            </czbzsrzcbGridlb>
+            <czbzsrzcbGridlb>
+                <ewbhxh>7</ewbhxh>
+                <xmmc>    （三）项目支出结余</xmmc>
+                <bns>0.0</bns>
+                <sns>0.0</sns>
+            </czbzsrzcbGridlb>
+            <czbzsrzcbGridlb>
+                <ewbhxh>8</ewbhxh>
+                <xmmc>二、调整年初财政补助结转结余</xmmc>
+                <bns>234.0</bns>
+                <sns>0.0</sns>
+            </czbzsrzcbGridlb>
+            <czbzsrzcbGridlb>
+                <ewbhxh>9</ewbhxh>
+                <xmmc>    （一）基本支出结转</xmmc>
+                <bns>0.0</bns>
+                <sns>0.0</sns>
+            </czbzsrzcbGridlb>
+            <czbzsrzcbGridlb>
+                <ewbhxh>10</ewbhxh>
+                <xmmc>             1.人员经费</xmmc>
+                <bns>0.0</bns>
+                <sns>0.0</sns>
+            </czbzsrzcbGridlb>
+            <czbzsrzcbGridlb>
+                <ewbhxh>11</ewbhxh>
+                <xmmc>             2.日常公用经费</xmmc>
+                <bns>0.0</bns>
+                <sns>0.0</sns>
+            </czbzsrzcbGridlb>
+            <czbzsrzcbGridlb>
+                <ewbhxh>12</ewbhxh>
+                <xmmc>    （二）项目支出结转</xmmc>
+                <bns>0.0</bns>
+                <sns>0.0</sns>
+            </czbzsrzcbGridlb>
+            <czbzsrzcbGridlb>
+                <ewbhxh>13</ewbhxh>
+                <xmmc>             ××项目</xmmc>
+                <bns>0.0</bns>
+                <sns>0.0</sns>
+            </czbzsrzcbGridlb>
+            <czbzsrzcbGridlb>
+                <ewbhxh>14</ewbhxh>
+                <xmmc>    （三）项目支出结余</xmmc>
+                <bns>0.0</bns>
+                <sns>0.0</sns>
+            </czbzsrzcbGridlb>
+            <czbzsrzcbGridlb>
+                <ewbhxh>15</ewbhxh>
+                <xmmc>三、本年归集调入财政补助结转结余</xmmc>
+                <bns>0.0</bns>
+                <sns>0.0</sns>
+            </czbzsrzcbGridlb>
+            <czbzsrzcbGridlb>
+                <ewbhxh>16</ewbhxh>
+                <xmmc>    （一）基本支出结转</xmmc>
+                <bns>0.0</bns>
+                <sns>0.0</sns>
+            </czbzsrzcbGridlb>
+            <czbzsrzcbGridlb>
+                <ewbhxh>17</ewbhxh>
+                <xmmc>             1.人员经费</xmmc>
+                <bns>0.0</bns>
+                <sns>0.0</sns>
+            </czbzsrzcbGridlb>
+            <czbzsrzcbGridlb>
+                <ewbhxh>18</ewbhxh>
+                <xmmc>             2.日常公用经费</xmmc>
+                <bns>0.0</bns>
+                <sns>0.0</sns>
+            </czbzsrzcbGridlb>
+            <czbzsrzcbGridlb>
+                <ewbhxh>19</ewbhxh>
+                <xmmc>    （二）项目支出结转</xmmc>
+                <bns>0.0</bns>
+                <sns>0.0</sns>
+            </czbzsrzcbGridlb>
+            <czbzsrzcbGridlb>
+                <ewbhxh>20</ewbhxh>
+                <xmmc>             ××项目</xmmc>
+                <bns>0.0</bns>
+                <sns>0.0</sns>
+            </czbzsrzcbGridlb>
+            <czbzsrzcbGridlb>
+                <ewbhxh>21</ewbhxh>
+                <xmmc>    （三）项目支出结余</xmmc>
+                <bns>0.0</bns>
+                <sns>0.0</sns>
+            </czbzsrzcbGridlb>
+            <czbzsrzcbGridlb>
+                <ewbhxh>22</ewbhxh>
+                <xmmc>四、本年上缴财政补助结转结余</xmmc>
+                <bns>0.0</bns>
+                <sns>0.0</sns>
+            </czbzsrzcbGridlb>
+            <czbzsrzcbGridlb>
+                <ewbhxh>23</ewbhxh>
+                <xmmc>    （一）基本支出结转</xmmc>
+                <bns>0.0</bns>
+                <sns>0.0</sns>
+            </czbzsrzcbGridlb>
+            <czbzsrzcbGridlb>
+                <ewbhxh>24</ewbhxh>
+                <xmmc>             1.人员经费</xmmc>
+                <bns>0.0</bns>
+                <sns>0.0</sns>
+            </czbzsrzcbGridlb>
+            <czbzsrzcbGridlb>
+                <ewbhxh>25</ewbhxh>
+                <xmmc>             2.日常公用经费</xmmc>
+                <bns>0.0</bns>
+                <sns>0.0</sns>
+            </czbzsrzcbGridlb>
+            <czbzsrzcbGridlb>
+                <ewbhxh>26</ewbhxh>
+                <xmmc>    （二）项目支出结转</xmmc>
+                <bns>0.0</bns>
+                <sns>0.0</sns>
+            </czbzsrzcbGridlb>
+            <czbzsrzcbGridlb>
+                <ewbhxh>27</ewbhxh>
+                <xmmc>             ××项目</xmmc>
+                <bns>0.0</bns>
+                <sns>0.0</sns>
+            </czbzsrzcbGridlb>
+            <czbzsrzcbGridlb>
+                <ewbhxh>28</ewbhxh>
+                <xmmc>    （三）项目支出结余</xmmc>
+                <bns>0.0</bns>
+                <sns>0.0</sns>
+            </czbzsrzcbGridlb>
+            <czbzsrzcbGridlb>
+                <ewbhxh>29</ewbhxh>
+                <xmmc>五、本年财政补助收入</xmmc>
+                <bns>0.0</bns>
+                <sns>0.0</sns>
+            </czbzsrzcbGridlb>
+            <czbzsrzcbGridlb>
+                <ewbhxh>30</ewbhxh>
+                <xmmc>    （一）基本支出</xmmc>
+                <bns>0.0</bns>
+                <sns>0.0</sns>
+            </czbzsrzcbGridlb>
+            <czbzsrzcbGridlb>
+                <ewbhxh>31</ewbhxh>
+                <xmmc>             1.人员经费</xmmc>
+                <bns>0.0</bns>
+                <sns>0.0</sns>
+            </czbzsrzcbGridlb>
+            <czbzsrzcbGridlb>
+                <ewbhxh>32</ewbhxh>
+                <xmmc>             2.日常公用经费</xmmc>
+                <bns>0.0</bns>
+                <sns>0.0</sns>
+            </czbzsrzcbGridlb>
+            <czbzsrzcbGridlb>
+                <ewbhxh>33</ewbhxh>
+                <xmmc>	    （二）项目支出</xmmc>
+                <bns>0.0</bns>
+                <sns>0.0</sns>
+            </czbzsrzcbGridlb>
+            <czbzsrzcbGridlb>
+                <ewbhxh>34</ewbhxh>
+                <xmmc>             ××项目</xmmc>
+                <bns>0.0</bns>
+                <sns>0.0</sns>
+            </czbzsrzcbGridlb>
+            <czbzsrzcbGridlb>
+                <ewbhxh>35</ewbhxh>
+                <xmmc>六、本年财政补助支出</xmmc>
+                <bns>0.0</bns>
+                <sns>0.0</sns>
+            </czbzsrzcbGridlb>
+            <czbzsrzcbGridlb>
+                <ewbhxh>36</ewbhxh>
+                <xmmc>    （一）基本支出</xmmc>
+                <bns>0.0</bns>
+                <sns>0.0</sns>
+            </czbzsrzcbGridlb>
+            <czbzsrzcbGridlb>
+                <ewbhxh>37</ewbhxh>
+                <xmmc>             1.人员经费</xmmc>
+                <bns>0.0</bns>
+                <sns>0.0</sns>
+            </czbzsrzcbGridlb>
+            <czbzsrzcbGridlb>
+                <ewbhxh>38</ewbhxh>
+                <xmmc>	             2.日常公用经费</xmmc>
+                <bns>0.0</bns>
+                <sns>0.0</sns>
+            </czbzsrzcbGridlb>
+            <czbzsrzcbGridlb>
+                <ewbhxh>39</ewbhxh>
+                <xmmc>    （二）项目支出</xmmc>
+                <bns>0.0</bns>
+                <sns>0.0</sns>
+            </czbzsrzcbGridlb>
+            <czbzsrzcbGridlb>
+                <ewbhxh>40</ewbhxh>
+                <xmmc>             ××项目</xmmc>
+                <bns>0.0</bns>
+                <sns>0.0</sns>
+            </czbzsrzcbGridlb>
+            <czbzsrzcbGridlb>
+                <ewbhxh>41</ewbhxh>
+                <xmmc>七、年末财政补助结转结余</xmmc>
+                <bns>0.0</bns>
+                <sns>0.0</sns>
+            </czbzsrzcbGridlb>
+            <czbzsrzcbGridlb>
+                <ewbhxh>42</ewbhxh>
+                <xmmc>    （一）基本支出结转</xmmc>
+                <bns>0.0</bns>
+                <sns>0.0</sns>
+            </czbzsrzcbGridlb>
+            <czbzsrzcbGridlb>
+                <ewbhxh>43</ewbhxh>
+                <xmmc>             1.人员经费</xmmc>
+                <bns>0.0</bns>
+                <sns>0.0</sns>
+            </czbzsrzcbGridlb>
+            <czbzsrzcbGridlb>
+                <ewbhxh>44</ewbhxh>
+                <xmmc>             2.日常公用经费</xmmc>
+                <bns>0.0</bns>
+                <sns>0.0</sns>
+            </czbzsrzcbGridlb>
+            <czbzsrzcbGridlb>
+                <ewbhxh>45</ewbhxh>
+                <xmmc>    （二）项目支出结转</xmmc>
+                <bns>0.0</bns>
+                <sns>0.0</sns>
+            </czbzsrzcbGridlb>
+            <czbzsrzcbGridlb>
+                <ewbhxh>46</ewbhxh>
+                <xmmc>             ××项目</xmmc>
+                <bns>0.0</bns>
+                <sns>0.0</sns>
+            </czbzsrzcbGridlb>
+            <czbzsrzcbGridlb>
+                <ewbhxh>47</ewbhxh>
+                <xmmc>    （三）项目支出结余</xmmc>
+                <bns>0.0</bns>
+                <sns>0.0</sns>
+            </czbzsrzcbGridlb>
+        </czbzsrzcGrid>
+    </czbzsrzc>
+</taxML>]]]]><![CDATA[>
+</cjbdxml>
+            <dzbzdszlDm>BDA0610165</dzbzdszlDm>
+            <SBCjbmxGrid>
+                <SBCjbmxGridlb>
+                    <zlbsuuid>14FD3597EDC7B3A91FD53EE4EAF9D595</zlbsuuid>
+                    <djxh>12440600000000000712</djxh>
+                    <ssqq>2014-10-01 00:00:00</ssqq>
+                    <ssqz>2014-10-31 00:00:00</ssqz>
+                    <bszlDm>ZLA0610164</bszlDm>
+                </SBCjbmxGridlb>
+            </SBCjbmxGrid>
+        </SB100BdxxVO>
+        <gzbz>N</gzbz>
+        <slswsxDm>SLSXC132002005</slswsxDm>
+        <ywbwname xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema">gov.gt3.vo.sbzs.sb.sb126.Kxsydwkjzdcwbbywbw</ywbwname>
+        <xmlCode>TaxMLbw_Kxdwkjzdywbw_V1.0.xsd</xmlCode>
+    </zlbsbcVO>
+</taxML>
+]]></body>
+</service>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 被2012 () 使用XMLSpy v编辑的 (http://www.altova.com) by -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:include schemaLocation="TaxMLPublicSBType.xsd"/>
+	<xs:include schemaLocation="TaxMLBw_szyssb_V1.0.xsd"/>
+	
+	
+	<xs:complexType name="HXZGSB01845Request">
+		<xs:annotation>
+			<xs:documentation>水资源税申报保存服务</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="szyvo" type="szyssbywbw">
+						<xs:annotation>
+							<xs:documentation>水资源税业务报文</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="nsrjhvo" type="SBNsrxxJhVO">
+						<xs:annotation>
+							<xs:documentation>纳税人vo</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+</xs:schema>

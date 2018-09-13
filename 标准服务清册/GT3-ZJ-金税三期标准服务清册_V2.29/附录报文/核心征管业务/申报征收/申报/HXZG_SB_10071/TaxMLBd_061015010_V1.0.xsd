@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 被2012 () 使用XMLSpy v编辑的 (http://www.altova.com) by -->
+<!-- edited with XMLSpy v2010 rel. 3 (http://www.altova.com) by liuwei (liuweicss) -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:complexType name="A101010ywbw">
+		<xs:annotation>
+			<xs:documentation>061015010《一般企业收入明细表》（A101010）业务报文</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="A101010Ywbd" type="A101010Ywbd">
+				<xs:annotation>
+					<xs:documentation>061015010《一般企业收入明细表》（A101010）表单</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="ybqysrmxbForm">
+		<xs:annotation>
+			<xs:documentation>061015010《一般企业收入明细表》（A101010）申报信息</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="yysr" type="je">
+				<xs:annotation>
+					<xs:documentation>营业收入</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zyywsr" type="je">
+				<xs:annotation>
+					<xs:documentation>主营业务收入</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="xsspsr" type="je">
+				<xs:annotation>
+					<xs:documentation>销售商品收入</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zyywsrfhbxzcjhsr" type="je">
+				<xs:annotation>
+					<xs:documentation>其中：非货币性资产交换收入</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="tglwsr" type="je">
+				<xs:annotation>
+					<xs:documentation>提供劳务收入</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jzhtsr" type="je">
+				<xs:annotation>
+					<xs:documentation>建造合同收入</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="rdzcsyqsr" type="je">
+				<xs:annotation>
+					<xs:documentation>让渡资产使用权收入</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zyywsrqt" type="je">
+				<xs:annotation>
+					<xs:documentation>主营业务收入_其他</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qtywsr" type="je">
+				<xs:annotation>
+					<xs:documentation>其他业务收入</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="xsclsr" type="je">
+				<xs:annotation>
+					<xs:documentation>销售材料收入</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qtywsrfhbxzcjhsr" type="je">
+				<xs:annotation>
+					<xs:documentation>其中：非货币性资产交换收入</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="czgdzcsr" type="je">
+				<xs:annotation>
+					<xs:documentation>出租固定资产收入</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="czwxzcsr" type="je">
+				<xs:annotation>
+					<xs:documentation>出租无形资产收入</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="czbzwhspsr" type="je">
+				<xs:annotation>
+					<xs:documentation>出租包装物和商品收入</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qtywsrqt" type="je">
+				<xs:annotation>
+					<xs:documentation>其他业务收入_其他</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yywsr" type="je">
+				<xs:annotation>
+					<xs:documentation>营业外收入</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="fldzcczld" type="je">
+				<xs:annotation>
+					<xs:documentation>非流动资产处置利得</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="fhbxzcjhld" type="je">
+				<xs:annotation>
+					<xs:documentation>非货币性资产交换利得</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zwczld" type="je">
+				<xs:annotation>
+					<xs:documentation>债务重组利得</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zfbzld" type="je">
+				<xs:annotation>
+					<xs:documentation>政府补助利得</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="pyld" type="je">
+				<xs:annotation>
+					<xs:documentation>盘盈利得</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jzld" type="je">
+				<xs:annotation>
+					<xs:documentation>捐赠利得</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="fmld" type="je">
+				<xs:annotation>
+					<xs:documentation>罚没利得</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qswfbcdyfkx" type="je">
+				<xs:annotation>
+					<xs:documentation>确实无法偿付的应付款项</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="hzly" type="je">
+				<xs:annotation>
+					<xs:documentation>汇兑收益</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yywsrqt" type="je">
+				<xs:annotation>
+					<xs:documentation>营业外收入_其他</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="A101010Ywbd">
+		<xs:annotation>
+			<xs:documentation>061015010《一般企业收入明细表》（A101010）表单</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="ybqysrmxbForm" type="ybqysrmxbForm">
+						<xs:annotation>
+							<xs:documentation>061015010《一般企业收入明细表》（A101010）申报信息</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+</xs:schema>

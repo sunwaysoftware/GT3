@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 被2012 () 使用XMLSpy v编辑的 (http://www.altova.com) by -->
+<!-- edited with XMLSpy v2013 (http://www.altova.com) by  () -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:complexType name="swxzcftztzsywbw">
+		<xs:annotation>
+			<xs:documentation>《税务行政处罚听证通知书》业务报文</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="swxzcftztzs" type="FZSwxzcftztzsVO">
+						<xs:annotation>
+							<xs:documentation>《税务行政处罚听证通知书》</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="FZSwxzcftztzsVO">
+		<xs:annotation>
+			<xs:documentation>《税务行政处罚听证通知书》VO</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="swxzcftztzsuuid" type="swxzcftztzsuuid">
+				<xs:annotation>
+					<xs:documentation>税务行政处罚听证通知书UUID</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="tzzcsqwtsuuid" type="tzzcsqwtsuuid">
+				<xs:annotation>
+					<xs:documentation>听证主持授权委托书UUID</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sswfxwdjuuid" type="sswfxwdjuuid">
+				<xs:annotation>
+					<xs:documentation>税收违法行为登记UUID</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="swjgjg" type="swjgjg">
+				<xs:annotation>
+					<xs:documentation>税务机构局轨</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zg" type="zg">
+				<xs:annotation>
+					<xs:documentation>字轨</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="nh" type="nh">
+				<xs:annotation>
+					<xs:documentation>年号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="wh" type="wh">
+				<xs:annotation>
+					<xs:documentation>文号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="tzsj" type="tzsj">
+				<xs:annotation>
+					<xs:documentation>听证时间</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="tzdd" type="tzdd">
+				<xs:annotation>
+					<xs:documentation>听证地点</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="tzzcr" type="tzzcr">
+				<xs:annotation>
+					<xs:documentation>听证主持人</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="wszzrq" type="wszzrq">
+				<xs:annotation>
+					<xs:documentation>文书制作日期</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zjbz" type="zjbz">
+				<xs:annotation>
+					<xs:documentation>终结标志</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zzbz" type="zzbz">
+				<xs:annotation>
+					<xs:documentation>中止标志</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="shbxfbz" type="shbxfbz">
+				<xs:annotation>
+					<xs:documentation>社会保险费标志</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="hdslid" type="hdslid">
+				<xs:annotation>
+					<xs:documentation>活动实例ID</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sjslid" type="sjslid">
+				<xs:annotation>
+					<xs:documentation>事件实例ID</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="wszg" type="wszg">
+				<xs:annotation>
+					<xs:documentation>文书字轨</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

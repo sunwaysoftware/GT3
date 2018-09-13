@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2013 (http://www.altova.com) by  () -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:complexType name="zjzbfywbw">
+		<xs:annotation>
+			<xs:documentation>证件增补发业务报文</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="zjzbf" type="zjzbf">
+						<xs:annotation>
+							<xs:documentation>证件增补发</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="zjzbf">
+		<xs:annotation>
+			<xs:documentation>证件增补发</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="zjzbfJbxxForm" type="zjzbfJbxxForm">
+				<xs:annotation>
+					<xs:documentation>证件增补发-纳税人基本信息</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="swzjsqxxForm" type="swzjsqxxForm">
+				<xs:annotation>
+					<xs:documentation>证件增补发-税务证件申请信息</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sqzjxxGrid" type="sqzjxxGrid">
+				<xs:annotation>
+					<xs:documentation>证件增补发-申请证件信息</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="slqkxxForm" type="slqkxxForm">
+				<xs:annotation>
+					<xs:documentation>证件增补发-受理情况</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="zjzbfJbxxForm">
+		<xs:annotation>
+			<xs:documentation>证件增补发-纳税人基本信息</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="nsrsbh" type="nsrsbh">
+				<xs:annotation>
+					<xs:documentation>纳税人识别号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="nsrmc" type="nsrmc">
+				<xs:annotation>
+					<xs:documentation>纳税人名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="fddbrhfzrhyzxm" type="fddbrhfzrhyzxm" nillable="true">
+				<xs:annotation>
+					<xs:documentation>法定代表人（负责人）姓名</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="swzjsqxxForm">
+		<xs:annotation>
+			<xs:documentation>证件增补发-税务证件申请信息</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="bsrxm" type="bsrxm">
+				<xs:annotation>
+					<xs:documentation>办税人姓名</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sqly" type="sqly">
+				<xs:annotation>
+					<xs:documentation>申请理由</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sqrq" type="sqrq">
+				<xs:annotation>
+					<xs:documentation>申请日期</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="sqzjxxGrid">
+		<xs:annotation>
+			<xs:documentation>证件增补发-申请证件信息</xs:documentation>
+		</xs:annotation>
+		<xs:sequence minOccurs="0" maxOccurs="unbounded">
+			<xs:element name="sqzjxxGridlb" type="zjzbfSqzjxxVO">
+				<xs:annotation>
+					<xs:documentation>申请证件信息列表</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="slqkxxForm">
+		<xs:annotation>
+			<xs:documentation>证件增补发-受理情况</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="slyj" type="slyj">
+				<xs:annotation>
+					<xs:documentation>受理意见</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="slrDm" type="slrDm">
+				<xs:annotation>
+					<xs:documentation>受理人</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="slrq" type="slrq">
+				<xs:annotation>
+					<xs:documentation>受理日期</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="zjzbfSqzjxxVO">
+		<xs:annotation>
+			<xs:documentation>申请证件信息列表</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="swzjsqlxDm" type="swzjsqlxDm">
+				<xs:annotation>
+					<xs:documentation>申请类型</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="swzjzlDm" type="swzjzlDm">
+				<xs:annotation>
+					<xs:documentation>申请税务证件名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sqffzjsl" type="sqffzjsl">
+				<xs:annotation>
+					<xs:documentation>申请发放证件数量</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

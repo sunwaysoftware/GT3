@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2010 rel. 3 (http://www.altova.com) by xuxin (csstj) -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:include schemaLocation="TaxMLPublicType.xsd"/>
+	<xs:complexType name="qysdsyjdsbczzs_qysdsskfjsbbywbw">
+		<xs:annotation>
+			<xs:documentation>《企业所得税税款分解表》业务报文</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="qysdsyjdsbczzs_qysdsskfjsbb">
+						<xs:annotation>
+							<xs:documentation>《企业所得税税款分解表》</xs:documentation>
+						</xs:annotation>
+						<xs:complexType>
+							<xs:sequence>
+								<xs:element name="qysdsfjbhead" type="qysdsskfjsbbheadVO">
+									<xs:annotation>
+										<xs:documentation>企业所得税税款分解表表头</xs:documentation>
+									</xs:annotation>
+								</xs:element>
+								<xs:element name="qysdsskfjsbbGrid">
+									<xs:annotation>
+										<xs:documentation>企业所得税税款分解表信息</xs:documentation>
+									</xs:annotation>
+									<xs:complexType>
+										<xs:sequence maxOccurs="unbounded">
+											<xs:element name="qysdsskfjsbbGridlb" type="qysdsskfjsbbGridlbVO">
+												<xs:annotation>
+													<xs:documentation>企业所得税税款分解表列表</xs:documentation>
+												</xs:annotation>
+											</xs:element>
+										</xs:sequence>
+									</xs:complexType>
+								</xs:element>
+							</xs:sequence>
+						</xs:complexType>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="qysdsyjdsbczzs_qysdsskfjsbb">
+		<xs:annotation>
+			<xs:documentation>《企业所得税税款分解表》</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="qysdsfjbhead" type="qysdsskfjsbbheadVO">
+				<xs:annotation>
+					<xs:documentation>企业所得税税款分解表表头</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qysdsskfjsbbGrid">
+				<xs:annotation>
+					<xs:documentation>企业所得税税款分解表信息</xs:documentation>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:sequence maxOccurs="unbounded">
+						<xs:element name="qysdsskfjsbbGridlb" type="qysdsskfjsbbGridlbVO">
+							<xs:annotation>
+								<xs:documentation>企业所得税税款分解表列表</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="qysdsskfjsbbGrid">
+		<xs:annotation>
+			<xs:documentation>企业所得税税款分解表对应Grid</xs:documentation>
+		</xs:annotation>
+		<xs:sequence maxOccurs="unbounded">
+			<xs:element name="qysdsskfjsbbGridlb" type="qysdsskfjsbbGridlbVO">
+				<xs:annotation>
+					<xs:documentation>企业所得税税款分解表列表</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="qysdsskfjsbbGridlbVO">
+		<xs:annotation>
+			<xs:documentation>企业所得税税款分解表对应明细</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="ewbhxh" type="ewbhxh" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>二维表行序号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="szd" type="szd">
+				<xs:annotation>
+					<xs:documentation>所在地</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zgswjgDm" type="zgswjgDm" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>主管税务机关代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="fjbl" type="fjbl" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>分解比例%</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bqynse" type="bqynse" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>本期应纳税额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="qysdsskfjsbbheadVO">
+		<xs:annotation>
+			<xs:documentation>企业所得税月（季）度预缴纳税申报表（A类）表头信息</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="sbbheadVO">
+				<xs:sequence>
+					<xs:element name="tbrq" type="tbrq">
+						<xs:annotation>
+							<xs:documentation>填表日期</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+</xs:schema>

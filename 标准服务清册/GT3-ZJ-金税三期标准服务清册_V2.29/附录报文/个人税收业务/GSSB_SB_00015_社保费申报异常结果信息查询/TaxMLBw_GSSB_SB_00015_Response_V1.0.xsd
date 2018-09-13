@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:complexType name="ShbxfQuerySbycjgResponse">
+		<xs:annotation>
+			<xs:documentation>社会保险费申报异常结果查询返回报文</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="sbcljgList">
+						<xs:annotation>
+							<xs:documentation>申报处理结果列表</xs:documentation>
+						</xs:annotation>
+						<xs:complexType>
+							<xs:sequence minOccurs="0" maxOccurs="unbounded">
+								<xs:element name="sbcljgResponse" type="sbcljgResponse"/>
+							</xs:sequence>
+						</xs:complexType>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="sbcljgResponse">
+		<xs:annotation>
+			<xs:documentation>申报处理结果列表明细</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="sbcljgDm" type="sbcljgDm">
+				<xs:annotation>
+					<xs:documentation>
+					申报处理结果：
+					0：申报处理中
+					1：申报成功
+					2：申报失败
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sbsbyy" type="sbsbyy">
+				<xs:annotation>
+					<xs:documentation>申报失败原因</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yzpzxhList">
+				<xs:annotation>
+					<xs:documentation>应征凭证序号列表</xs:documentation>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:sequence minOccurs="0" maxOccurs="unbounded">
+						<xs:element name="yzpzxhResponse" type="yzpzxhResponse"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="yzpzxhResponse">
+		<xs:annotation>
+			<xs:documentation>应征凭证序号列表明细</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="yzpzxh" type="yzpzxh">
+				<xs:annotation>
+					<xs:documentation>应征凭证序号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sbzt" type="sbzt">
+				<xs:annotation>
+					<xs:documentation>
+					申报状态：
+					Y:正常
+					N:作废
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sbmxList">
+				<xs:annotation>
+					<xs:documentation>申报明细列表</xs:documentation>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:sequence minOccurs="0" maxOccurs="unbounded">
+						<xs:element name="sbmxResponse" type="sbmxResponse"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="sbmxResponse">
+		<xs:annotation>
+			<xs:documentation>申报明细</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="sblsh" type="sblsh">
+				<xs:annotation>
+					<xs:documentation>社保流水号（字段不能为空，字段长度:32）</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="xxh" type="xxh">
+				<xs:annotation>
+					<xs:documentation>小序号（字段不能为空，字段长度:10）</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sbjbjgDm" type="sbjbjgDm">
+				<xs:annotation>
+					<xs:documentation>社保经办机构代码（字段不能为空，字段长度:20）</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

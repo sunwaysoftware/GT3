@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:complexType name="cxxsgzrsdkjgrsdsmxjlrresponse">
+		<xs:annotation>
+			<xs:documentation>查询限售股转让所得扣缴个人所得税明细记录</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="xsgzrsdkjgrsdsmxjl" type="xsgzrsdkjgrsdsmxjl">
+						<xs:annotation>
+							<xs:documentation>限售股转让所得扣缴个人所得税明细记录</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="xsgzrsdkjgrsdsmxjl">
+		<xs:annotation>
+			<xs:documentation>限售股转让所得扣缴个人所得税明细记录</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="xsgzrsdkjgrsdsmxjlMx" type="xsgzrsdkjgrsdsmxjlMx" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="xsgzrsdkjgrsdsmxjlMx">
+		<xs:annotation>
+			<xs:documentation>限售股转让所得扣缴个人所得税明细记录明细</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="sfzjlxDm" type="sfzjlxDm">
+				<xs:annotation>
+					<xs:documentation>身份证件类型代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sfzjhm" type="sfzjhm">
+				<xs:annotation>
+					<xs:documentation>身份证件号码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="nsrxm" type="xm">
+				<xs:annotation>
+					<xs:documentation>纳税人姓名</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sdkdjdsdjse" type="sjje">
+				<xs:annotation>
+					<xs:documentation>实代扣代缴代收代缴税额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="djxh" type="djxh">
+				<xs:annotation>
+					<xs:documentation>登记序号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="nsrsbh" type="nsrsbh">
+				<xs:annotation>
+					<xs:documentation>纳税人识别号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

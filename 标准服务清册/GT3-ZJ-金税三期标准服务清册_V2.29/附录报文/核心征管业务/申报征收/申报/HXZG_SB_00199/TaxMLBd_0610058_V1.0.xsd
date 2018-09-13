@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2013 (http://www.altova.com) by  () -->
+<!-- 被2011 rel. 2 sp1 (TeaM DJiNN) 使用XMLSpy vTeaM DJiNN编辑的 (http://www.altova.com) by -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:include schemaLocation="TaxMLPublicType.xsd"/>
+	<xs:complexType name="qyqssdssbbzbywbw">
+		<xs:annotation>
+			<xs:documentation>《中华人民共和国企业清算所得税申报表》业务报文</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="qyqssdssbb" type="qyqssdssbb">
+						<xs:annotation>
+							<xs:documentation>《中华人民共和国企业清算所得税申报表》</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="qyqssdssbb">
+		<xs:annotation>
+			<xs:documentation>《中华人民共和国企业清算所得税申报表》</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="qyqssdsNsrxxForm" type="sbbheadkz2VO">
+				<xs:annotation>
+					<xs:documentation>居民企业清算企业所得税申报-纳税人信息</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qyqssdsSbbxxForm" type="qyqssdsSbbxxForm">
+				<xs:annotation>
+					<xs:documentation>居民企业清算企业所得税申报-申报表信息-申报表信息</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qyqssdsBlxxForm" type="qyqssdsBlxxForm">
+				<xs:annotation>
+					<xs:documentation>办理信息</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="qyqssdsSbbxxForm">
+		<xs:annotation>
+			<xs:documentation>申报表信息</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="zcczsyYnssde" type="zcczsyYnssde" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>应纳税所得额计算资产处置损益填附表一</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="fzqcsyYnssde" type="fzqcsyYnssde" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>应纳税所得额计算负债清偿损益填附表二</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qsfyYnssde" type="qsfyYnssde" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>应纳税所得额计算清算费用</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qssjjfjYnssde" type="qssjjfjYnssde" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>应纳税所得额计算清算税金及附加</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qtsdhzcYnssde" type="qtsdhzcYnssde" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>应纳税所得额计算其他所得或支出</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qssdYnssde" type="qssdYnssde" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>应纳税所得额计算清算所得</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="mssrYnssde" type="mssrYnssde" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>应纳税所得额计算免税收入</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bzssrYnssde" type="bzssrYnssde" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>应纳税所得额计算不征税收入</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qtmssdYnssde" type="qtmssdYnssde" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>应纳税所得额计算其他免税所得</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="mbyqndksYnssde" type="mbyqndksYnssde" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>应纳税所得额计算弥补以前年度亏损</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ynssde" type="ynssde" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>应纳税所得额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sl25Ynsdse" type="sl25Ynsdse" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>应纳所得税额计算税率</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ynsdse" type="ynsdse" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>应纳所得税额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ybtsdseJmqysdse" type="ybtsdseJmqysdse" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>应补退所得税额计算减免企业所得税额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jwybsdse" type="jwybsdse" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>境外应补所得税额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jnwsjynsdse" type="jnwsjynsdse" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>境内外实际应纳所得税额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yqnsndybtsdse" type="yqnsndybtsdse" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>应补退所得税额计算以前纳税年度应补退所得税额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sjybtsdse" type="sjybtsdse" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>应补退所得税额计算实际应补退所得税额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="qyqssdsBlxxForm">
+		<xs:annotation>
+			<xs:documentation>办理信息</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="sfdlsb" type="bz1">
+				<xs:annotation>
+					<xs:documentation>是否代理申报</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="slrxm" type="slrxm">
+				<xs:annotation>
+					<xs:documentation>受理人</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="slrq" type="slrq">
+				<xs:annotation>
+					<xs:documentation>受理日期</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bsrxm" type="bsrxm">
+				<xs:annotation>
+					<xs:documentation>办税人姓名</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qsz" type="bsrxm">
+				<xs:annotation>
+					<xs:documentation>清算组</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="dlsbrq" type="dlsbrq">
+				<xs:annotation>
+					<xs:documentation>代理申报日期</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="dlsbzjjg" type="bsrxm">
+				<xs:annotation>
+					<xs:documentation>代理申报中介结构</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="dljgjbr" type="jbrxm">
+				<xs:annotation>
+					<xs:documentation>代理机构经办人</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jbrzyzjhm" type="jbrzyzjhm">
+				<xs:annotation>
+					<xs:documentation>经办人执业证件号码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

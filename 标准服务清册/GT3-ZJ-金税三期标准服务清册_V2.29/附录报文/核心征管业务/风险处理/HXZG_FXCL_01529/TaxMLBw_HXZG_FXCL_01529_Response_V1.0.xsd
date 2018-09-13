@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 被2012 () 使用XMLSpy v编辑的 (http://www.altova.com) by -->
+<!-- edited with XMLSpy v2013 (http://www.altova.com) by  () -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:complexType name="HXZGFXCL01529Response">
+		<xs:annotation>
+			<xs:documentation>根据登记序号和评估案卷编号查询纳税评估报告信息业务报文</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="nspgbgxx" type="PScxnspgbgNFVO">
+						<xs:annotation>
+							<xs:documentation>根据登记序号和评估案卷编号查询纳税评估报告信息业务报文</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="PScxnspgbgNFVO">
+		<xs:annotation>
+			<xs:documentation>根据登记序号和评估案卷编号查询纳税评估报告信息业务报文</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="djxh">
+				<xs:annotation>
+					<xs:documentation>登记序号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="pgxmmc" type="djxh">
+				<xs:annotation>
+					<xs:documentation>评估项目名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="pgajbh" type="pgajbh">
+				<xs:annotation>
+					<xs:documentation>评估案卷编号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ydwtfx" type="ydwtfx">
+				<xs:annotation>
+					<xs:documentation>疑点问题分析</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="pgssqq" type="pgssqq">
+				<xs:annotation>
+					<xs:documentation>评估所属期起</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="pgssqz" type="pgssqz">
+				<xs:annotation>
+					<xs:documentation>评估所属期止</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="xmsssj" type="xmsssj">
+				<xs:annotation>
+					<xs:documentation>项目实施时间</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="nspgcljy_dm" type="nspgcljyDm">
+				<xs:annotation>
+					<xs:documentation>纳税评估处理建议代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="pgjbqk" type="pgjbqk">
+				<xs:annotation>
+					<xs:documentation>评估基本情况</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="rdjl" type="rdjl">
+				<xs:annotation>
+					<xs:documentation>认定结论</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zgjy" type="zgjy">
+				<xs:annotation>
+					<xs:documentation>征管建议</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="nspgcljy" type="nspgcljy">
+				<xs:annotation>
+					<xs:documentation>纳税评估处理建议</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

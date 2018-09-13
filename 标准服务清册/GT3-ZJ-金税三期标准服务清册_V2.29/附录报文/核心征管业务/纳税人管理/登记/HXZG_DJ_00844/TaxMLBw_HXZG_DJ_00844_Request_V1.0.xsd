@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 被2012 () 使用XMLSpy v编辑的 (http://www.altova.com) by -->
+<!-- edited with XMLSpy v2013 (http://www.altova.com) by  () -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:include schemaLocation="TaxMLPublicDJType.xsd"/>
+	<xs:complexType name="HXZGDJ00844Request">
+		<xs:annotation>
+			<xs:documentation>保存环境保护税登记信息请求报文</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="Hjbhssydjb" type="Hjbhssydjb"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="Hjbhssydjb">
+		<xs:annotation>
+			<xs:documentation>环境保护税税源登记表</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="insertHjbhsSyxxGrid" type="insertHjbhsSyxxGrid">
+				<xs:annotation>
+					<xs:documentation>新增环境保护税税源信息</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="updateHjbhsSyxxGrid" type="updateHjbhsSyxxGrid">
+				<xs:annotation>
+					<xs:documentation>修改环境保护税税源信息</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="deleteHjbhsSyxxGrid" type="deleteHjbhsSyxxGrid">
+				<xs:annotation>
+					<xs:documentation>删除环境保护税税源信息</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="DJYsqywslxxbVO" type="DJYsqywslxxbVO"/>
+			<xs:element name="DJHbsjcxxcjbVO" type="DJHbsjcxxcjbVO"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="insertHjbhsSyxxGrid">
+		<xs:annotation>
+			<xs:documentation>新增环境保护税基础信息税源信息集合</xs:documentation>
+		</xs:annotation>
+		<xs:sequence minOccurs="0" maxOccurs="unbounded">
+			<xs:element name="insertHjbhsSyxxGridlb" type="DJHjbhsSyxxVO">
+				<xs:annotation>
+					<xs:documentation>新增环境保护税基础信息税源信息列表</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="updateHjbhsSyxxGrid">
+		<xs:annotation>
+			<xs:documentation>修改环境保护税基础信息税源信息集合</xs:documentation>
+		</xs:annotation>
+		<xs:sequence minOccurs="0" maxOccurs="unbounded">
+			<xs:element name="updateHjbhsSyxxGridlb" type="DJHjbhsSyxxVO">
+				<xs:annotation>
+					<xs:documentation>修改环境保护税基础信息税源信息列表</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="deleteHjbhsSyxxGrid">
+		<xs:annotation>
+			<xs:documentation>删除环境保护税基础信息税源信息集合</xs:documentation>
+		</xs:annotation>
+		<xs:sequence minOccurs="0" maxOccurs="unbounded">
+			<xs:element name="deleteHjbhsSyxxGridlb" type="DJHjbhsSyxxVO">
+				<xs:annotation>
+					<xs:documentation>删除环境保护税基础信息税源信息列表</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="DjhbsslxxVO">
+		<xs:annotation>
+			<xs:documentation>环保税受理信息</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="tbrq" type="tbrq">
+				<xs:annotation>
+					<xs:documentation>填报日期</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jbr" type="jbr">
+				<xs:annotation>
+					<xs:documentation>经办人</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="tbrxm" type="tbrxm">
+				<xs:annotation>
+					<xs:documentation>填报人</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zgswjgDm" type="zgswjgDm">
+				<xs:annotation>
+					<xs:documentation>主管税务机关</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="slrDm" type="slrDm">
+				<xs:annotation>
+					<xs:documentation>受理人员</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="slrq" type="slrq">
+				<xs:annotation>
+					<xs:documentation>受理日期</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

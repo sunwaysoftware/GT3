@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 被2011 rel. 2 sp1 (TeaM DJiNN) 使用XMLSpy vTeaM DJiNN编辑的 (http://www.altova.com) by -->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://www.chinatax.gov.cn/dataspec/" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:complexType name="ZSHXZG00383RequestVO">
+		<xs:annotation>
+			<xs:documentation>国库扣款状态请求报文</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="dzsphm" type="dzsphm">
+						<xs:annotation>
+							<xs:documentation>电子税票号码</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="skjnfsDm"  type="dzsphm">
+						<xs:annotation>
+							<xs:documentation>税款缴纳方式</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="kprq" type="dzsphm">
+						<xs:annotation>
+							<xs:documentation>开票日期</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="skssswjgDm" type="dzsphm">
+						<xs:annotation>
+							<xs:documentation>税款所属机关代码</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+</xs:schema>

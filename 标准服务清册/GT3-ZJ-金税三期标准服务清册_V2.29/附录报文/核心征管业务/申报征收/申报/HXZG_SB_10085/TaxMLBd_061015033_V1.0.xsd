@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 被2011 rel. 2 sp1 (TeaM DJiNN) 使用XMLSpy vTeaM DJiNN编辑的 (http://www.altova.com) by -->
+<!-- edited with XMLSpy v2010 rel. 3 (http://www.altova.com) by MESMERiZE (MSM) -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:complexType name="A107011Ywbd">
+		<xs:annotation>
+			<xs:documentation>符合条件的居民企业之间的股息、红利等权益性投资收益优惠明细表(A107011)表单</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="fhtjdjmqyzjdgxmxGrid">
+						<xs:annotation>
+							<xs:documentation>符合条件的居民企业之间的股息、红利等权益性投资收益优惠明细表</xs:documentation>
+						</xs:annotation>
+						<xs:complexType>
+							<xs:sequence minOccurs="0" maxOccurs="unbounded">
+								<xs:element name="fhtjdjmqyzjdgxmxGridlb" type="fhtjdjmqyzjdgxmxGridlbVO"/>
+							</xs:sequence>
+						</xs:complexType>
+					</xs:element>
+					<xs:element name="gptzhjForm" type="gptzhjForm">
+						<xs:annotation>
+							<xs:documentation>合计</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="fhtjdjmqyzjdgxmxGridlbVO">
+		<xs:annotation>
+			<xs:documentation>《符合条件的居民企业之间的股息、红利等权益性投资收益优惠明细表》</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="btzqy" type="dwmc">
+				<xs:annotation>
+					<xs:documentation>被投资企业</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="btzqyshxydm" type="nsrsbh">
+				<xs:annotation>
+					<xs:documentation>被投资企业统一社会信用代码（纳税人识别号）</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="tzxz" type="myxz">
+				<xs:annotation>
+					<xs:documentation>投资性质||取自代码表DM_SB_XSGXHLDQYXTZYHDLX</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="tzcb" type="je">
+				<xs:annotation>
+					<xs:documentation>投资成本</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="tzbl" type="tzbl">
+				<xs:annotation>
+					<xs:documentation>投资比例||小数格式</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="btzlrfpqrjejdsj" type="sj">
+				<xs:annotation>
+					<xs:documentation>被投资企业利润分配确认金额_被投资企业做出利润分配或转股决定时间</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="btzlrfpqrjesyje" type="je">
+				<xs:annotation>
+					<xs:documentation>被投资企业利润分配确认金额_依决定归属于本公司的股息、红利等权益性投资收益金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="btzqsqrjeqssyzc" type="je">
+				<xs:annotation>
+					<xs:documentation>被投资企业清算确认金额_分得的被投资企业清算剩余资产</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="btzqsqrjeljwfplryygj" type="je">
+				<xs:annotation>
+					<xs:documentation>被投资企业清算确认金额_被清算企业累计未分配利润和累计盈余公积应享有部分</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="btzqsqrjeyqrgxsd" type="je">
+				<xs:annotation>
+					<xs:documentation>被投资企业清算确认金额_应确认的股息所得</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="chjstzqrjezc" type="je">
+				<xs:annotation>
+					<xs:documentation>撤回或减少投资确认金额_从被投资企业撤回或减少投资取得的资产</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="chjstzqrjejstzbl" type="tzbl">
+				<xs:annotation>
+					<xs:documentation>撤回或减少投资确认金额_减少投资比例||小数格式</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="chjstzqrjeshcstzcb" type="je">
+				<xs:annotation>
+					<xs:documentation>撤回或减少投资确认金额_收回初始投资成本</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="chjstzqrjeqdcgsh" type="je">
+				<xs:annotation>
+					<xs:documentation>撤回或减少投资确认金额_取得资产中超过收回初始投资成本部分</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="chjstzqrjeljwfplryygj" type="je">
+				<xs:annotation>
+					<xs:documentation>撤回或减少投资确认金额_撤回或减少投资应享有被投资企业累计未分配利润和累计盈余公积</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="chjstzqrjeyqrgxsd" type="je">
+				<xs:annotation>
+					<xs:documentation>撤回或减少投资确认金额_应确认的股息所得</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="hj" type="je">
+				<xs:annotation>
+					<xs:documentation>合计</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="gptzhjForm">
+		<xs:annotation>
+			<xs:documentation>《符合条件的居民企业之间的股息、红利等权益性投资收益优惠明细表》</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="hjje" type="je">
+				<xs:annotation>
+					<xs:documentation>合计金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="gptzhgthghj" type="je">
+				<xs:annotation>
+					<xs:documentation>其中：股票投资—沪港通H股</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="gptzsgthghj" type="je">
+				<xs:annotation>
+					<xs:documentation>股票投资—深港通H股</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

@@ -1,0 +1,414 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 被2012 () 使用XMLSpy v编辑的 (http://www.altova.com) by -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:complexType name="dkdjcklxsdgrsds">
+		<xs:annotation>
+			<xs:documentation>扣缴存款利息所得个人所得税申报主表报文</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="dkdjcklxsd" type="dkdjcklxsdGrsdssb">
+						<xs:annotation>
+							<xs:documentation>扣缴存款利息所得个人所得税申报主表报文</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="dkdjcklxsdGrsdssb">
+		<xs:annotation>
+			<xs:documentation>代扣代缴文化事业建设费申报</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="nsrxxForm" type="nsrxxForm">
+				<xs:annotation>
+					<xs:documentation>纳税人基本信息</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="kjzbvoGrid" type="sbbxxForm">
+				<xs:annotation>
+					<xs:documentation>申报信息</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="slxxform" type="slxxForm">
+				<xs:annotation>
+					<xs:documentation>受理信息</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="nsrxxForm">
+		<xs:annotation>
+			<xs:documentation>纳税人基本信息</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="nsrsbh" type="nsrsbh" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>扣缴义务人识别号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="nsrmc" type="nsrmc" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>扣缴义务人名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sbrq1" type="sbrq1">
+				<xs:annotation>
+					<xs:documentation>填表日期</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="skssqq" type="skssqq">
+				<xs:annotation>
+					<xs:documentation>税款所属期起</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="skssqz" type="skssqz">
+				<xs:annotation>
+					<xs:documentation>税款所属期止</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="lxdh" type="lxdh">
+				<xs:annotation>
+					<xs:documentation>联系电话</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="sbbxxForm">
+		<xs:annotation>
+			<xs:documentation>申报信息</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="hqllxrmb" type="je">
+				<xs:annotation>
+					<xs:documentation>活期类利息人民币</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="hqllxwb" type="je">
+				<xs:annotation>
+					<xs:documentation>活期类利息外币</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="hqllxhj" type="je">
+				<xs:annotation>
+					<xs:documentation>活期类利息合计</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="hqlsl" type="sl">
+				<xs:annotation>
+					<xs:documentation>活期类税率</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="hqlkjsdse" type="je">
+				<xs:annotation>
+					<xs:documentation>活期类扣缴所得税额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="hqlkjskrc" type="je">
+				<xs:annotation>
+					<xs:documentation>活期类扣缴税款人次</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="hqlyermb" type="je">
+				<xs:annotation>
+					<xs:documentation>活期类本期存款余额人民币</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="hqlyewb" type="je">
+				<xs:annotation>
+					<xs:documentation>活期类本期存款余额外币</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="hqlyehj" type="je">
+				<xs:annotation>
+					<xs:documentation>活期类本期存款余额合计</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="dqllxrmb" type="je">
+				<xs:annotation>
+					<xs:documentation>定期类利息人民币</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="dqllxwb" type="je">
+				<xs:annotation>
+					<xs:documentation>定期类利息外币</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="dqllxhj" type="je">
+				<xs:annotation>
+					<xs:documentation>定期类利息合计</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="dqlsl" type="sl">
+				<xs:annotation>
+					<xs:documentation>定期类利息税率</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="dqlkjsdse" type="je">
+				<xs:annotation>
+					<xs:documentation>定期类利息扣缴所得税</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="dqlkjskrc" type="je">
+				<xs:annotation>
+					<xs:documentation>定期类扣缴利息次数</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="dqlyermb" type="je">
+				<xs:annotation>
+					<xs:documentation>定期类存款余额人民币</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="dqlyewb" type="je">
+				<xs:annotation>
+					<xs:documentation>定期类存款余额外币</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="dqlyehj" type="je">
+				<xs:annotation>
+					<xs:documentation>定期类存款余额合计</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ynqlxrmb" type="je">
+				<xs:annotation>
+					<xs:documentation>一年期利息人民币</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ynqlxwb" type="je">
+				<xs:annotation>
+					<xs:documentation>一年期利息外币</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ynqlxhj" type="je">
+				<xs:annotation>
+					<xs:documentation>一年期利息合计</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ynqsl" type="sl">
+				<xs:annotation>
+					<xs:documentation>一年期利息利率</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ynqkjsdse" type="je">
+				<xs:annotation>
+					<xs:documentation>一年期利息扣缴所得税</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ynqkjskrc" type="je">
+				<xs:annotation>
+					<xs:documentation>一年期利息扣缴所得税次数</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ynqyermb" type="je">
+				<xs:annotation>
+					<xs:documentation>一年期余款人民币</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ynqyewb" type="je">
+				<xs:annotation>
+					<xs:documentation>一年期余款外币</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ynqyehj" type="je">
+				<xs:annotation>
+					<xs:documentation>一年期余款合计</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="hjlxrmb" type="je">
+				<xs:annotation>
+					<xs:documentation>合计人民币</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="hjlxwb" type="je">
+				<xs:annotation>
+					<xs:documentation>合计外币</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="hjlxhj" type="je">
+				<xs:annotation>
+					<xs:documentation>合计的合计</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="hjkjsdse" type="je">
+				<xs:annotation>
+					<xs:documentation>合计扣缴所得税额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="hjkjskrc" type="je">
+				<xs:annotation>
+					<xs:documentation>合计扣缴所得次数</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="hjyermb" type="je">
+				<xs:annotation>
+					<xs:documentation>合计余额人民币</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="hjyewb" type="je">
+				<xs:annotation>
+					<xs:documentation>合计余额外币</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="hjyehj" type="je">
+				<xs:annotation>
+					<xs:documentation>合计余额的合计</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jycxlxrmb" type="je">
+				<xs:annotation>
+					<xs:documentation>教育储蓄利息人民币</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jycxlxwb" type="je">
+				<xs:annotation>
+					<xs:documentation>教育储蓄利息外币</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jycxlxhj" type="je">
+				<xs:annotation>
+					<xs:documentation>教育储蓄利息合计</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jycxyermb" type="je">
+				<xs:annotation>
+					<xs:documentation>教育储蓄余额人民币</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jycxyewb" type="je">
+				<xs:annotation>
+					<xs:documentation>教育储蓄余款外币</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jycxyehj" type="je">
+				<xs:annotation>
+					<xs:documentation>教育储蓄余额合计</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qtzxlxrmb" type="je">
+				<xs:annotation>
+					<xs:documentation>其他专项利息人民币</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qtzxlxwb" type="je">
+				<xs:annotation>
+					<xs:documentation>其他专项利息外币</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qtzxlxhj" type="je">
+				<xs:annotation>
+					<xs:documentation>其他专项利息合计</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qtzxyermb" type="je">
+				<xs:annotation>
+					<xs:documentation>其他专项余额人民币</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qtzxyewb" type="je">
+				<xs:annotation>
+					<xs:documentation>其他专项余额外币</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qtzxyehj" type="je">
+				<xs:annotation>
+					<xs:documentation>其他专项余额合计</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bzlxrmb" type="bz">
+				<xs:annotation>
+					<xs:documentation>备注类型利息人民币</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bzlxwb" type="bz">
+				<xs:annotation>
+					<xs:documentation>备注类型利息外币</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bzlxhj" type="bz">
+				<xs:annotation>
+					<xs:documentation>备注类型利息合计</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bzyermb" type="bz">
+				<xs:annotation>
+					<xs:documentation>备注类型余额人民币</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bzyewb" type="bz">
+				<xs:annotation>
+					<xs:documentation>备注类型余额外币</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bzyehj" type="bz">
+				<xs:annotation>
+					<xs:documentation>备注类型余额合计</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="xssr" type="je">
+				<xs:annotation>
+					<xs:documentation>xssr</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sl1" type="sl">
+				<xs:annotation>
+					<xs:documentation>sl1</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ynse" type="je">
+				<xs:annotation>
+					<xs:documentation>ynse</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ybtse" type="je">
+				<xs:annotation>
+					<xs:documentation>ybtse</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ysxssrje" type="je">
+				<xs:annotation>
+					<xs:documentation>je</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="slxxForm">
+		<xs:annotation>
+			<xs:documentation>受理信息</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="slrq" type="slrq">
+				<xs:annotation>
+					<xs:documentation>受理日期</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="slrdm" type="nsrmc">
+				<xs:annotation>
+					<xs:documentation>受理人</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="slswjgdm" type="swjgmc">
+				<xs:annotation>
+					<xs:documentation>受理税务机关</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ssgly" type="nsrmc">
+				<xs:annotation>
+					<xs:documentation>税收管理员</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="shrq" type="skssqq">
+				<xs:annotation>
+					<xs:documentation>审核日期</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="shjl" type="shjl">
+				<xs:annotation>
+					<xs:documentation>审核记录</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

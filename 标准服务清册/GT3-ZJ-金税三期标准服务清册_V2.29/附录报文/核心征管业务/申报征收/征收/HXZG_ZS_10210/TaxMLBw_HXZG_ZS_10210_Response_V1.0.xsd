@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2013 (http://www.altova.com) by  () -->
+<!-- 被2011 rel. 2 sp1 (pjf) 使用XMLSpy vcss编辑的 (http://www.altova.com) by -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:include schemaLocation="TaxMLPublicZSType.xsd"/>
+	<xs:complexType name="HXZGZS10210Response">
+		<xs:annotation>
+			<xs:documentation>计算社保费滞纳金金额</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="znje" type="je">
+						<xs:annotation>
+							<xs:documentation>滞纳金额</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="znts" type="znfkts">
+						<xs:annotation>
+							<xs:documentation>滞纳天数</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="zsl" type="zsl">
+						<xs:annotation>
+							<xs:documentation>征收率</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="byjsrqq" type="byjsrqq" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>不予加收日期起</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="byjsrqz" type="byjsrqz" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>不予加收日期止</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="qrmxuuid" type="qrmxuuid" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>确认明细UUID</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+</xs:schema>

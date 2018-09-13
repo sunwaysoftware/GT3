@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:complexType name="tyspxxywbd">
+		<xs:annotation>
+			<xs:documentation>通用审批信息业务表单</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="tyspxx" type="tyspxx">
+						<xs:annotation>
+							<xs:documentation>通用审批信息</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="tyspxx">
+		<xs:annotation>
+			<xs:documentation>通用审批信息</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="opinionForm" type="opinionForm">
+				<xs:annotation>
+					<xs:documentation>审批意见</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="diplomaHistoryGrid" type="diplomaHistoryGrid">
+				<xs:annotation>
+					<xs:documentation>文书审批流转历史</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="opinionForm">
+		<xs:annotation>
+			<xs:documentation>审批意见</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="result" type="spjg">
+				<xs:annotation>
+					<xs:documentation>审批结果</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="opinion" type="spyjxx">
+				<xs:annotation>
+					<xs:documentation>审批意见</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="spy" type="sprDm">
+				<xs:annotation>
+					<xs:documentation>审批人</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="spsj" type="spsj">
+				<xs:annotation>
+					<xs:documentation>审批时间</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="spswjg" type="spswjg">
+				<xs:annotation>
+					<xs:documentation>审批税务机关</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="diplomaHistoryGrid">
+		<xs:annotation>
+			<xs:documentation>文书审批流转历史</xs:documentation>
+		</xs:annotation>
+		<xs:sequence minOccurs="0" maxOccurs="unbounded">
+			<xs:element name="diplomaHistoryGridlb" type="diplomaHistoryGridlb">
+				<xs:annotation>
+					<xs:documentation>文书审批流转历史列表</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="diplomaHistoryGridlb">
+		<xs:annotation>
+			<xs:documentation>文书审批流转历史列表</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="hdmc" type="sphj">
+				<xs:annotation>
+					<xs:documentation>审批环节</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="spr" type="sprDm">
+				<xs:annotation>
+					<xs:documentation>审批人</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="spjg" type="spjg">
+				<xs:annotation>
+					<xs:documentation>审批结果</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="spyj" type="spyjxx">
+				<xs:annotation>
+					<xs:documentation>审批意见</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="spsj" type="spsj">
+				<xs:annotation>
+					<xs:documentation>审批时间</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2013 (http://www.altova.com) by  () -->
+<!-- 编辑使用 XMLSpy v2006 U (http://www.altova.com) 由 any (any) -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:include schemaLocation="TaxMLBw_011029003_V1.0.xsd"/>
+	<xs:complexType name="HXZGDJ00095Request">
+		<xs:annotation>
+			<xs:documentation>纳税人存款账户账号报告表保存接入报文</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="djxh" type="djxh">
+						<xs:annotation>
+							<xs:documentation>登记序号</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="djxhdf" type="djxh">
+						<xs:annotation>
+							<xs:documentation>对方登记序号</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="ckzhxxdfbz" type="bz1">
+						<xs:annotation>
+							<xs:documentation>对方是否存在存款账户标志</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="lcslid" type="lcslid">
+						<xs:annotation>
+							<xs:documentation>流程实例ID</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="zgswskfjDm" type="zgswskfjDm">
+						<xs:annotation>
+							<xs:documentation>主管税务所科分局代码</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="slswsxDm" type="slswsxDm">
+						<xs:annotation>
+							<xs:documentation>受理税务事项</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="nsrckzhzhbgb" type="nsrckzhzhbgb">
+						<xs:annotation>
+							<xs:documentation>纳税人存款账户账号报告表</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+</xs:schema>

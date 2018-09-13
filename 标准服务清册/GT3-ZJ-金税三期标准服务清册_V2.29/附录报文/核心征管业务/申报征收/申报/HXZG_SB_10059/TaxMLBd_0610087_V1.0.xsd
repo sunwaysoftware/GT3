@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 被2011 rel. 2 sp1 (TeaM DJiNN) 使用XMLSpy vTeaM DJiNN编辑的 (http://www.altova.com) by -->
+<!-- edited with XMLSpy v2010 rel. 3 (http://www.altova.com) by MESMERiZE (MSM) -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:include schemaLocation="TaxMLPublicType.xsd"/>
+	<xs:complexType name="yhdzdjsjgbjqdywbw">
+		<xs:annotation>
+			<xs:documentation>已核定最低计税价格白酒清单业务报文</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="yhdzdjsjgbjqd" type="yhdzdjsjgbjqd">
+						<xs:annotation>
+							<xs:documentation>已核定最低计税价格白酒清单</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="yhdzdjsjgbjqd">
+		<xs:annotation>
+			<xs:documentation>已核定最低计税价格白酒清单</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="yhdzdjsjgbjqdGrid">
+				<xs:complexType>
+					<xs:sequence minOccurs="0" maxOccurs="unbounded">
+						<xs:element name="yhdzdjsjgbjqdGridlb" type="yhdzdjsjgbjqdGridlbVO"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="yhdzdjsjgbjqdGridlbVO">
+		<xs:sequence>
+			<xs:element name="ewbhxh" type="ewbhxh">
+				<xs:annotation>
+					<xs:documentation>二维表行序号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="pm" type="pm">
+				<xs:annotation>
+					<xs:documentation>品名</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="gg" type="gg">
+				<xs:annotation>
+					<xs:documentation>规格</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ccjg" type="ccjg">
+				<xs:annotation>
+					<xs:documentation>出厂价格</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="hdxfszdjsjg" type="hdxfszdjsjg">
+				<xs:annotation>
+					<xs:documentation>核定消费税最低计税价格</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bz" type="bz" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>备注</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

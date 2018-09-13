@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+		被2011 rel. 2 sp1 (TeaM DJiNN) 使用XMLSpy vTeaM DJiNN编辑的
+		(http://www.altova.com) by
+	-->
+<!--
+		edited with XMLSpy v2010 rel. 3 (http://www.altova.com) by MESMERiZE
+		(MSM)
+	-->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:include schemaLocation="TaxMLPublic.xsd"/>
+	<xs:complexType name="A107010Ywbd">
+		<xs:annotation>
+			<xs:documentation>《免税、减计收入及加计扣除额优惠明细表》表单</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="msjjsrjjjkcyhmxForm" type="msjjsrjjjkcyhmxForm" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>免税、减计收入及加计扣除额优惠明细表</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="msjjsrjjjkcyhmxForm">
+		<xs:annotation>
+			<xs:documentation>《免税、减计收入及加计扣除优惠明细表》</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="mssr" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>一、免税收入（2+3+6+7+…+16）</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="gzlxsr" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>（一）国债利息收入免征企业所得税</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qyxtzsy" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>（二）符合条件的居民企业之间的股息、红利等权益性投资收益免征企业所得税（填写A107011）</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="hgttzsy" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>其中：内地居民企业通过沪港通投资且连续持有H股满12个月取得的股息红利所得免征企业所得税（填写A107011）</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sgttzsy" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>内地居民企业通过深港通投资且连续持有H股满12个月取得的股息红利所得免征企业所得税（填写A107011）</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="fylzzsr" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>（三）符合条件的非营利组织的收入免征企业所得税</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="kjqyfhqfylzzsr" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>（四）符合条件的非营利组织（科技企业孵化器）的收入免征企业所得税</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="gjdxkjyfylzzsr" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>（五）符合条件的非营利组织（国家大学科技园）的收入免征企业所得税</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qjfzjzjjsr" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>（六）中国清洁发展机制基金取得的收入免征企业所得税</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zqtzjjfpsr" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>（七）投资者从证券投资基金分配中取得的收入免征企业所得税</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="dfzfzqlxsr" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>（八）取得的地方政府债券利息收入免征企业所得税</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bxbzjjsr" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>（九）中国保险保障基金有限责任公司取得的保险保障基金等收入免征企业所得税</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zydsdggdsfsr" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>（十）中央电视台的广告费和有线电视费收入免征企业所得税</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="awhjdahqdsr" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>（十一）中国奥委会取得北京冬奥组委支付的收入免征企业所得税</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="cawhqdsr" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>（十二）中国残奥委会取得北京冬奥组委分期支付的收入免征企业所得税</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qtmssr" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>（十三）其他</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jjsr" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>二、减计收入（18+19+23+24）</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="lyzysccp" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>（一）综合利用资源生产产品取得的收入在计算应纳税所得额时减计收入</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="snlxbfsr" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>（二）金融、保险等机构取得的涉农利息、保费减计收入（20+21+22）</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jrjgnhxedklxsr" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>1.金融机构取得的涉农贷款利息收入在计算应纳税所得额时减计收入</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zzyyzybxbfsr" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>2.保险机构取得的涉农保费收入在计算应纳税所得额时减计收入</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="nhxedklxsr" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>3.小额贷款公司取得的农户小额贷款利息收入在计算应纳税所得额时减计收入</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zqlxsr" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>（三）取得铁路债券利息收入减半征收企业所得税</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qtjjsr" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>（四）其他</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jjkc" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>三、加计扣除（26+27+28+29+30）</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yjkffy" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>（一）开发新技术、新产品、新工艺发生的研究开发费用加计扣除（填写A107012）</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="kjxzxqyyff" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>（二）科技型中小企业开发新技术、新产品、新工艺发生的研究开发费用加计扣除（填写A107012）</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="cysjxgf" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>（三）企业为获得创新性、创意性、突破性的产品进行创意设计活动发生的相关费用加计扣除</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="gjzfgzjjck" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>（四）安置残疾人员所支付的工资加计扣除</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jjkcqtzxyh" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>（五）其他</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="hj" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>合计（1+17+25）</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

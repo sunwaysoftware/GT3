@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 被2012 () 使用XMLSpy v编辑的 (http://www.altova.com) by -->
+<!-- edited with XMLSpy v2013 (http://www.altova.com) by  () -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:complexType name="RSJ2XY106Request">
+		<xs:annotation>
+			<xs:documentation>复评申请受理输入报文</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="ReqVO" type="ReqVO">
+						<xs:annotation>
+							<xs:documentation>补评申请受理请求信息</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="ReqVO">
+		<xs:annotation>
+			<xs:documentation>复评申请受理请求信息</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="nsrsbh" type="nsrsbh">
+				<xs:annotation>
+					<xs:documentation>纳税人识别号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="nsrmc" type="nsrmc">
+				<xs:annotation>
+					<xs:documentation>纳税人名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="fpnd" type="nd">
+				<xs:annotation>
+					<xs:documentation>申请复评的年度</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="djxh" type="djxh">
+				<xs:annotation>
+					<xs:documentation>登记序号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jbr" type="jbr">
+				<xs:annotation>
+					<xs:documentation>经办人</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jbrdh" type="jbrdh">
+				<xs:annotation>
+					<xs:documentation>经办人联系电话	</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="gsswjg" type="xs:string">
+				<xs:annotation>
+					<xs:documentation>国税主管税务机关</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="dsswjg" type="xs:string">
+				<xs:annotation>
+					<xs:documentation>地税主管税务机关</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sqyy" type="xs:string">
+				<xs:annotation>
+					<xs:documentation>申请原因</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="slr" type="xs:string">
+				<xs:annotation>
+					<xs:documentation>受理人</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="slrq">
+				<xs:annotation>
+					<xs:documentation>受理日期</xs:documentation>
+				</xs:annotation>
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:length value="30"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

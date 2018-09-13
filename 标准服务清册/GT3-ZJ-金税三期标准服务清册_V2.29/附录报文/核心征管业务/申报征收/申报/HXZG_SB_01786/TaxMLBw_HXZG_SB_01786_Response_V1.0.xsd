@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2011 rel. 2 (http://www.altova.com) by pl (css) -->
+<!-- 被2012 () 使用XMLSpy v编辑的 (http://www.altova.com) by -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:include schemaLocation="TaxMLPublicSBType.xsd"/>
+	<xs:complexType name="HXZGSB01786Response">
+		<xs:annotation>
+			<xs:documentation>查询延期申报</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="cfsbbz" type="xs:string">
+						<xs:annotation>
+							<xs:documentation>重复申报标志</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="cfsbmes" type="xs:string">
+						<xs:annotation>
+							<xs:documentation>重复申报消息</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				    <xs:element name="yqsbbz" type="xs:string">
+						<xs:annotation>
+							<xs:documentation>延期申报标志</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="yqsbmes" type="xs:string">
+						<xs:annotation>
+							<xs:documentation>延期申报消息</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					 <xs:element name="sqwsbbz" type="xs:string">
+						<xs:annotation>
+							<xs:documentation>上期未申报标志</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="sqwsbmes" type="xs:string">
+						<xs:annotation>
+							<xs:documentation>上期未申报消息</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+</xs:schema>

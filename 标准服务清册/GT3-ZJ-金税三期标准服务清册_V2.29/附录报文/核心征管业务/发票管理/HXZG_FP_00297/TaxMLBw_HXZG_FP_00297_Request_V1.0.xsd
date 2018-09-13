@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 被2012 () 使用XMLSpy v编辑的 (http://www.altova.com) by -->
+<!-- edited with XMLSpy v2005 rel. 3 U (http://www.altova.com) by  () -->
+<!-- 编辑使用 XMLSpy v2006 U (http://www.altova.com) 由 any (any) -->
+<!-- 编辑使用 XMLSpy v2006 U (http://www.altova.com) 由 any (any) -->
+<!-- 编辑使用 XMLSpy v2006 U (http://www.altova.com) 由 any (any) -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxDoc.xsd"/>
+	<xs:include schemaLocation="TaxMLPublic.xsd"/>
+	<xs:include schemaLocation="TaxMLPublicFPType.xsd"/>
+	<xs:complexType name="HXZGFP00297Request">
+		<xs:annotation>
+			<xs:documentation>保存发票领用邮寄信息</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="fpLyyjVOGrid">
+						<xs:annotation>
+							<xs:documentation>领用邮寄信息VOlist</xs:documentation>
+						</xs:annotation>
+						<xs:complexType>
+							<xs:sequence maxOccurs="unbounded">
+								<xs:element name="fpLyyjVOGridlb">
+									<xs:annotation>
+										<xs:documentation>领用邮寄信息VOlist列表</xs:documentation>
+									</xs:annotation>
+									<xs:complexType>
+										<xs:sequence>
+											<xs:element name="fplyyjuuid" type="uuid">
+												<xs:annotation>
+													<xs:documentation>发票领用邮寄uuid</xs:documentation>
+												</xs:annotation>
+											</xs:element>
+											<xs:element name="lyuuid" type="uuid">
+												<xs:annotation>
+													<xs:documentation>领用uuid</xs:documentation>
+												</xs:annotation>
+											</xs:element>
+											<xs:element name="djxh" type="djxh">
+												<xs:annotation>
+													<xs:documentation>登记序号</xs:documentation>
+												</xs:annotation>
+											</xs:element>
+											<xs:element name="pslsh" type="zjcc">
+												<xs:annotation>
+													<xs:documentation>配送流水号</xs:documentation>
+												</xs:annotation>
+											</xs:element>
+											<xs:element name="gprxm" type="gprxm">
+												<xs:annotation>
+													<xs:documentation>购票人姓名</xs:documentation>
+												</xs:annotation>
+											</xs:element>
+											<xs:element name="sfzjlxDm" type="sfzjlxDm">
+												<xs:annotation>
+													<xs:documentation>身份证件类型代码</xs:documentation>
+												</xs:annotation>
+											</xs:element>
+											<xs:element name="sfzjhm" type="sfzjhm">
+												<xs:annotation>
+													<xs:documentation>身份证件号码</xs:documentation>
+												</xs:annotation>
+											</xs:element>
+											<xs:element name="fpkfDm" type="fpkfDm">
+												<xs:annotation>
+													<xs:documentation>发票库房代码、</xs:documentation>
+												</xs:annotation>
+											</xs:element>
+											<xs:element name="fpzlDm" type="fpzlDm">
+												<xs:annotation>
+													<xs:documentation>发票种类代码</xs:documentation>
+												</xs:annotation>
+											</xs:element>
+											<xs:element name="fpDm" type="fpDm">
+												<xs:annotation>
+													<xs:documentation>发票代码</xs:documentation>
+												</xs:annotation>
+											</xs:element>
+											<xs:element name="bs" type="bs">
+												<xs:annotation>
+													<xs:documentation>本数</xs:documentation>
+												</xs:annotation>
+											</xs:element>
+											<xs:element name="fpqshm" type="fpqshm">
+												<xs:annotation>
+													<xs:documentation>发票起始号码</xs:documentation>
+												</xs:annotation>
+											</xs:element>
+											<xs:element name="fpzzhm" type="fpzzhm">
+												<xs:annotation>
+													<xs:documentation>发票终止号码</xs:documentation>
+												</xs:annotation>
+											</xs:element>
+											<xs:element name="fpztDm" type="fpztDm">
+												<xs:annotation>
+													<xs:documentation>发票状态代码</xs:documentation>
+												</xs:annotation>
+											</xs:element>
+											<xs:element name="swjgDm" type="swjgDm">
+												<xs:annotation>
+													<xs:documentation>税务机关代码</xs:documentation>
+												</xs:annotation>
+											</xs:element>
+											<xs:element name="wtdkbz" type="wtdkbz">
+												<xs:annotation>
+													<xs:documentation>委托代开标志</xs:documentation>
+												</xs:annotation>
+											</xs:element>
+											<xs:element name="yjlqztDm" type="bz1">
+												<xs:annotation>
+													<xs:documentation>邮寄领取状态代码</xs:documentation>
+												</xs:annotation>
+											</xs:element>
+											<xs:element name="yxbz" type="bz1">
+												<xs:annotation>
+													<xs:documentation>有效标志</xs:documentation>
+												</xs:annotation>
+											</xs:element>
+											<xs:element name="sjgsdq" type="sjgsdq">
+												<xs:annotation>
+													<xs:documentation>数据归属地区</xs:documentation>
+												</xs:annotation>
+											</xs:element>
+											<xs:element name="xgrDm" type="xgrDm">
+												<xs:annotation>
+													<xs:documentation>修改人代码</xs:documentation>
+												</xs:annotation>
+											</xs:element>
+											<xs:element name="xgrq" type="xgrq">
+												<xs:annotation>
+													<xs:documentation>修改日期</xs:documentation>
+												</xs:annotation>
+											</xs:element>
+											<xs:element name="lrrDm" type="lrrDm">
+												<xs:annotation>
+													<xs:documentation>录入人代码</xs:documentation>
+												</xs:annotation>
+											</xs:element>
+											<xs:element name="lrrq" type="lrrq">
+												<xs:annotation>
+													<xs:documentation>录入日期</xs:documentation>
+												</xs:annotation>
+											</xs:element>
+											<xs:element name="zgswskfjDm" type="zgswskfjDm">
+												<xs:annotation>
+													<xs:documentation>主管税务所科分局代码</xs:documentation>
+												</xs:annotation>
+											</xs:element>
+										</xs:sequence>
+									</xs:complexType>
+								</xs:element>
+							</xs:sequence>
+						</xs:complexType>
+					</xs:element>
+					<xs:element name="saveType" type="xs:string">
+						<xs:annotation>
+							<xs:documentation>保存类型</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+</xs:schema>

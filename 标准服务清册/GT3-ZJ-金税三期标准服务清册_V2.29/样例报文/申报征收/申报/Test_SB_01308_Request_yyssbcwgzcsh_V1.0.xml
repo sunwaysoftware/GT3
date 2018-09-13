@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<service>
+	<head>
+		<tran_id>SWZJ.HXZG.SB.YHSCWGZSBBC</tran_id>
+		<channel_id>TEST</channel_id>
+		<tran_seq>11111111111111111111111111111111</tran_seq>
+		<tran_date>20140820</tran_date>
+		<tran_time>173655570</tran_time>
+		<expand>
+			<name>identityType</name>
+			<value>49308fd2f75d462594648203c1ae5e93</value>
+		</expand>
+		<expand>
+			<name>sjry</name>
+			<value>24406060733</value>
+		</expand>
+		<expand>
+			<name>sjjg</name>
+			<value>24400000000</value>
+		</expand>
+	</head>
+	<body><![CDATA[<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<taxML xsi:type="HXZGSB01308Request" xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<yyssbbdxxVO>
+		<yhssb>
+			<sbbhead>
+				<nsrmc>申报测试专用--勿动 </nsrmc>
+				<skssqq>2014-11-01</skssqq>
+				<skssqz>2014-11-30</skssqz>
+				<nsrsbh>372924199010101558</nsrsbh>
+				<sblx>11</sblx>
+				<sbrq1>2014-12-17 15:18:18</sbrq1>
+				<hyDm/>
+				<xzqhszDm/>
+				<jdxzDm/>
+				<zgswskfjDm/>
+			</sbbhead>
+			<yhssbGrid>
+				<yhssbGridlb>
+					<rdpzuuid xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema">BF98C8FAFFBBD52AE6803C0E4041E7B8</rdpzuuid>
+					<yhpzuuid/>
+					<zspmDm>101110104</zspmDm>
+					<jsje>2000000.0</jsje>
+					<hdzsHdde>0.0</hdzsHdde>
+					<hdzsHdbl>0.0</hdzsHdbl>
+					<sysl>3.0E-4</sysl>
+					<bqynse>600.0</bqynse>
+					<jmse>0.0</jmse>
+					<bqyjse1>0.0</bqyjse1>
+					<bqybtse>600.0</bqybtse>
+				</yhssbGridlb>
+			</yhssbGrid>
+			<slrxxForm>
+				<slr>申报测试专用--勿动 </slr>
+				<slrq>2014-12-17 15:18:18</slrq>
+				<slswjg>佛山市顺德区地方税务局乐从税务分局</slswjg>
+			</slrxxForm>
+		</yhssb>
+	</yyssbbdxxVO>
+	<sbbcTjqtxxVO>
+              <scenceCs>cwgzbz</scenceCs>	
+         </sbbcTjqtxxVO>
+	<sbNsrxxVO>
+		<djxh>12440600000000000471</djxh>
+		<skssqq xsi:nil="true"/>
+		<skssqz xsi:nil="true"/>
+		<yzpzzlDm>BDA0610084</yzpzzlDm>
+		<sbrq1>2014-12-17</sbrq1>
+		<pzxh>10024414000000635042</pzxh>
+		<sbuuid>DF73AC792042ADBBDE8463892059374F</sbuuid>
+	</sbNsrxxVO>
+</taxML>
+]]></body>
+</service>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 被2012 () 使用XMLSpy v编辑的 (http://www.altova.com) by -->
+<!-- edited with XMLSpy v2013 (http://www.altova.com) by  () -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:include schemaLocation="TaxMLPublicDJType.xsd"/>
+	<xs:complexType name="HXZGDJ00842Response">
+		<xs:annotation>
+			<xs:documentation>查询产排污系数采集信息返回报文</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="Hbscpwxscjb" type="Hbscpwxscjb"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="Hbscpwxscjb">
+		<xs:annotation>
+			<xs:documentation>产排污系数采集信息</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="PwxsjcxxcjGrid" type="PwxsjcxxcjGrid"/>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

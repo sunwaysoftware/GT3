@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- 被2012 () 使用XMLSpy v编辑的 (http://www.altova.com) by -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="http://www.chinatax.gov.cn/dataspec/">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:complexType name="qgqyssdcshqksmbVO">
+		<xs:annotation>
+			<xs:documentation>全国企业税收调查表（B2审核情况说明表）</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="qgqyssdcshqksmbGrid">
+				<xs:annotation>
+					<xs:documentation>全国企业税收调查表（B2审核情况说明表）</xs:documentation>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:sequence maxOccurs="unbounded">
+						<xs:element name="qgqyssdcshqksmbGridlb" type="qgqyssdcshqksmbGridlbVO"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="qgqyssdcshqksmbGridlbVO">
+		<xs:annotation>
+			<xs:documentation>报送信息</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="nsrsbh" type="nsrsbh">
+				<xs:annotation>
+					<xs:documentation>纳税人识别号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="nsrmc" type="nsrmc">
+				<xs:annotation>
+					<xs:documentation>纳税人识别号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element minOccurs="0" name="djxh" type="djxh">
+				<xs:annotation>
+					<xs:documentation>登记序号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="formname" type="xs:string">
+				<xs:annotation>
+					<xs:documentation>表名</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bcbgjz" type="xs:string">
+				<xs:annotation>
+					<xs:documentation>变长表关键字</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="shtag" type="xs:string">
+				<xs:annotation>
+					<xs:documentation>审核tag</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="shgs" type="xs:string">
+				<xs:annotation>
+					<xs:documentation>审核公式</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="shqksm" type="xs:string">
+				<xs:annotation>
+					<xs:documentation>审核情况说明</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="shtsxx" type="xs:string">
+				<xs:annotation>
+					<xs:documentation>审核提示信息</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zlbscjuuid" type="zlbscjuuid">
+				<xs:annotation>
+					<xs:documentation>采集uuid</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

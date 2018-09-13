@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2013 (http://www.altova.com) by  () -->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://www.chinatax.gov.cn/dataspec/" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:complexType name="HXZGYH00078Response">
+		<xs:annotation>
+			<xs:documentation>企业职工人数，残疾人数信息返回报文</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="zgmctjVO" type="zgmctjVO" minOccurs="0"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="zgmctjVO">
+		<xs:annotation>
+			<xs:documentation>职工名册统计信息</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="cjrs" type="xs:int">
+				<xs:annotation>
+					<xs:documentation>残疾人数</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zgrs" type="xs:int">
+				<xs:annotation>
+					<xs:documentation>职工人数</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

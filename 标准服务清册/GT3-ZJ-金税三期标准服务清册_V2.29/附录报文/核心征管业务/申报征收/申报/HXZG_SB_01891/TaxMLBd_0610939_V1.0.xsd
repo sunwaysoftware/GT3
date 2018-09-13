@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2011 (http://www.altova.com) by www.hbnu.com (www.hbnu.com) -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:include schemaLocation="TaxMLPublic.xsd"/>
+	<xs:complexType name="kgjtcystmdywbw">
+		<xs:annotation>
+			<xs:documentation>《跨国集团成员实体名单》业务报文</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="qyndglywwlbg2016_G114020" type="qyndglywwlbg2016_G114020">
+						<xs:annotation>
+							<xs:documentation>《跨国集团成员实体名单》</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="qyndglywwlbg2016_G114020">
+		<xs:annotation>
+			<xs:documentation>《跨国集团成员实体名单》</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="kgqyjtmc" type="nsrmc">
+				<xs:annotation>
+					<xs:documentation>跨国企业集团名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="skssqq" type="skssqq">
+				<xs:annotation>
+					<xs:documentation>会计年度起</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="skssqz" type="skssqz">
+				<xs:annotation>
+					<xs:documentation>会计年度止</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="kgqyywhdxxGrid" type="kgqyywhdxxGrid">
+				<xs:annotation>
+					<xs:documentation/>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="kgqyywhdxxGrid">
+		<xs:annotation>
+			<xs:documentation/>
+		</xs:annotation>
+		<xs:sequence maxOccurs="unbounded">
+			<xs:element name="kgqyywhdxxGridlbVO" type="kgqyywhdxxGridlbVO">
+				<xs:annotation>
+					<xs:documentation/>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="kgqyywhdxxGridlbVO">
+		<xs:annotation>
+			<xs:documentation/>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="gjhdqszDm" type="gjhdqszDm">
+				<xs:annotation>
+					<xs:documentation>国家（地区），取值为代码表DM_GY_GJHDQ</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="cystmc" type="cystmc">
+				<xs:annotation>
+					<xs:documentation>该国家（地区）的成员实体名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zcszd" type="zcszd">
+				<xs:annotation>
+					<xs:documentation>成员实体注册成立地</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yffy" type="je">
+				<xs:annotation>
+					<xs:documentation>研发</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="wxzcje" type="je">
+				<xs:annotation>
+					<xs:documentation>持有或管理无形资产</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="wpcgfje" type="je">
+				<xs:annotation>
+					<xs:documentation>采购</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sccb1" type="je">
+				<xs:annotation>
+					<xs:documentation>生产制造</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="xsfyje" type="je">
+				<xs:annotation>
+					<xs:documentation>销售、市场营销或分销</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="glfyje" type="je">
+				<xs:annotation>
+					<xs:documentation>行政、管理或支持服务</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="tglwcbje" type="je">
+				<xs:annotation>
+					<xs:documentation>向非关联方提供劳务</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="rzje" type="je">
+				<xs:annotation>
+					<xs:documentation>集团内部融资</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jrfw" type="je">
+				<xs:annotation>
+					<xs:documentation>金融服务</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bxfje" type="je">
+				<xs:annotation>
+					<xs:documentation>保险</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="cygf" type="je">
+				<xs:annotation>
+					<xs:documentation>持有股份或其他权益工具</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="fyyqy" type="je">
+				<xs:annotation>
+					<xs:documentation>非营运企业</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qt" type="je">
+				<xs:annotation>
+					<xs:documentation>其他</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

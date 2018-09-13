@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2013 (http://www.altova.com) by  () -->
+<!-- 被2012 () 使用XMLSpy v编辑的 (http://www.altova.com) by -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:include schemaLocation="TaxMLBw_clgzssb_V1.0.xsd"/>
+	<xs:include schemaLocation="TaxMLPublicSBType.xsd"/>
+	<xs:complexType name="HXZGSB00084Request">
+		<xs:annotation>
+			<xs:documentation>车辆购置查询车架信息接入报文</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="clgzssbywbw" type="clgzssbywbw">
+						<xs:annotation>
+							<xs:documentation>《车辆购置税纳税申报表》</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="jmxxGrid">
+						<xs:annotation>
+							<xs:documentation>车辆购置税纳税申报减免数据信息</xs:documentation>
+						</xs:annotation>
+						<xs:complexType>
+							<xs:sequence minOccurs="0" maxOccurs="unbounded">
+								<xs:element name="jmxxGridlb" type="SBSbjmTjVO"/>
+							</xs:sequence>
+						</xs:complexType>
+					</xs:element>
+					<xs:element name="YsptAffixVO" type="YsptAffixVO">
+						<xs:annotation>
+							<xs:documentation>车购税保存扩展信息</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="SBCgsSaveAffixVO" type="SBCgsSaveAffixVO">
+						<xs:annotation>
+							<xs:documentation>车购税保存扩展信息</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="SBCgsSaveAffixVO">
+		<xs:sequence>
+			<xs:element name="msbz" type="bz">
+				<xs:annotation>
+					<xs:documentation>模式标志：ms0初始模式;ms1中机合格证模式;ms2应急模式</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="lcslid" type="lcslid">
+				<xs:annotation>
+					<xs:documentation>车购税保存扩展信息</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="flcrwmxuuid" type="flcrwmxuuid">
+				<xs:annotation>
+					<xs:documentation>车购税保存扩展信息</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sbbwz" type="sbbwz">
+				<xs:annotation>
+					<xs:documentation>车购税保存扩展信息</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zsjgDm" type="swjgDm">
+				<xs:annotation>
+					<xs:documentation>征收机关代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="fj2" type="fj2">
+				<xs:annotation>
+					<xs:documentation>图片附件</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="YsptAffixVO">
+		<xs:sequence>
+			<xs:element name="lsid" type="lcslid">
+				<xs:annotation>
+					<xs:documentation>车购税保存扩展信息</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sbbwz" type="sbbwz">
+				<xs:annotation>
+					<xs:documentation>车购税保存扩展信息</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

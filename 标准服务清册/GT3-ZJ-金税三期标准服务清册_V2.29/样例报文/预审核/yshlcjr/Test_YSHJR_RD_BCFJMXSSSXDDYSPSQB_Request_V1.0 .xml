@@ -1,0 +1,121 @@
+<service xmlns="http://www.chinatax.gov.cn/spec/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<head>
+		<tran_id>SWZJ.HXZG.YSH.BCXXCJBSJ</tran_id>
+		<channel_id>TEST</channel_id>
+		<tran_seq>C000BNFZC25001201305030505267890</tran_seq>
+		<tran_date>20140826</tran_date>
+		<tran_time>173435849</tran_time>
+                       <expand>
+      <name>sjry</name>
+      <value>24406060735</value>
+    </expand>
+    <expand>
+      <name>sjjg</name>
+      <value>24406060700</value>
+    </expand>	</head> 
+<body><![CDATA[<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<taxML xsi:type="HXZGYSH00006Request" xmlbh="HXZGYSH00006Request" bbh="V1.1" xmlmc="渠道业务审核接入报文" xsi:schemaLocation="http://www.chinatax.gov.cn/dataspec/ TaxMLBw_HXZG_YSH_00006_Request_V1.1.xsd" xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<fileInfor>
+		<fileGrid>
+			<fileGridlb>
+				<filepath>2</filepath>
+				<filetype>2</filetype>
+				<filename>2</filename>
+				<fileindex>2</fileindex>
+			</fileGridlb>
+		</fileGrid>
+		<fileInforVO>
+			<fileSize>3</fileSize>
+			<recordNumber>3</recordNumber>
+			<nsrSwjgDm>3</nsrSwjgDm>
+		</fileInforVO>
+	</fileInfor>
+	<qdywshRequestVO>
+		<qxswjgDm>24406060700</qxswjgDm>
+		<djxh>12440600000000000114</djxh>
+		<lcswsxDm>LCSXA041011001</lcswsxDm>
+		<slswsxDm>SLSXA041011002</slswsxDm>
+		<dzbzdszlDm>BDA0410031</dzbzdszlDm>
+		<xtbm>C000BNFZC</xtbm>
+		<xzqhDm>440605</xzqhDm>
+		<nsrmc>广东省佛山市香格里拉酒店</nsrmc>
+		<nsrsbh>440606558888888</nsrsbh>
+		<request>&lt;?xml version="1.0" encoding="UTF-8" standalone="yes"?&gt;
+&lt;taxML xsi:type="HXZGRD00034Request" xmlmc="保存非居民享受税收协定待遇审批申请表" xmlbh="TaxMLBw_HXZG_RD_00034_Request_V1.0.xsd" bbh="1.0" xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"&gt;
+    &lt;djxh&gt;12440600000000000114&lt;/djxh&gt;
+    &lt;zgswskfjDm&gt;24406060700&lt;/zgswskfjDm&gt;
+    &lt;xduuid&gt;&lt;/xduuid&gt;
+    &lt;fjmxsssxddybaxxb&gt;
+        &lt;fjmxsssxddyspsqxxb&gt;
+            &lt;nsrjndz&gt;乐从&lt;/nsrjndz&gt;
+            &lt;nsrlx1&gt;Y&lt;/nsrlx1&gt;
+            &lt;jnlxdh&gt;3223243&lt;/jnlxdh&gt;
+            &lt;jnyzbm&gt;434343&lt;/jnyzbm&gt;
+            &lt;nsrjwdz&gt;米国&lt;/nsrjwdz&gt;
+            &lt;jwlxdh&gt;43433232&lt;/jwlxdh&gt;
+            &lt;jwyzbm&gt;324345&lt;/jwyzbm&gt;
+            &lt;fhgdly&gt;无&lt;/fhgdly&gt;
+            &lt;smnr&gt;我谨声明以上呈报事项准确无误。&lt;/smnr&gt;
+            &lt;smrq&gt;2014-11-01 00:20:27&lt;/smrq&gt;
+            &lt;smrxm&gt;邓生&lt;/smrxm&gt;
+            &lt;sqrxm&gt;邓生&lt;/sqrxm&gt;
+            &lt;sqrxmyw&gt;dengsir&lt;/sqrxmyw&gt;
+            &lt;flmc&gt;法律&lt;/flmc&gt;
+            &lt;flyjt&gt;12&lt;/flyjt&gt;
+            &lt;flyjk&gt;3&lt;/flyjk&gt;
+            &lt;gjhdqszDm&gt;840&lt;/gjhdqszDm&gt;
+            &lt;sqrhm&gt;4333232&lt;/sqrhm&gt;
+            &lt;cjzmswjgmc&gt;美局&lt;/cjzmswjgmc&gt;
+            &lt;cjzmrq&gt;2014-11-01&lt;/cjzmrq&gt;
+            &lt;slswsxDm&gt;SLSXA041011002&lt;/slswsxDm&gt;
+        &lt;/fjmxsssxddyspsqxxb&gt;
+        &lt;insertSpsqSsxdxxGrid&gt;
+            &lt;insertSpsqSsxdxxGridlb&gt;
+                &lt;xm1&gt;非居备案&lt;/xm1&gt;
+                &lt;ssxdsdlxDm&gt;10&lt;/ssxdsdlxDm&gt;
+                &lt;fjmnsfsDm&gt;1&lt;/fjmnsfsDm&gt;
+                &lt;kjywrdjxh&gt;10124406020000000256&lt;/kjywrdjxh&gt;
+                &lt;zfrhkjywrmc&gt;单位纳税人（分3）&lt;/zfrhkjywrmc&gt;
+                &lt;zfrhkjywrnssbh&gt;440605654738902&lt;/zfrhkjywrnssbh&gt;
+                &lt;xyt&gt;9&lt;/xyt&gt;
+                &lt;xyk&gt;2&lt;/xyk&gt;
+                &lt;sfsygljy&gt;N&lt;/sfsygljy&gt;
+                &lt;srehynssde&gt;01&lt;/srehynssde&gt;
+                &lt;jmse&gt;1200.0&lt;/jmse&gt;
+                &lt;xdsl&gt;0.1&lt;/xdsl&gt;
+                &lt;bz&gt;无&lt;/bz&gt;
+            &lt;/insertSpsqSsxdxxGridlb&gt;
+        &lt;/insertSpsqSsxdxxGrid&gt;
+        &lt;updateSpsqSsxdxxGrid/&gt;
+        &lt;deleteSpsqSsxdxxGrid/&gt;
+        &lt;insertSsxdzllsqdGrid/&gt;
+        &lt;deleteSsxdzllsqdGrid/&gt;
+        &lt;updateSsxdzllsqdGrid/&gt;
+        &lt;bcsqfbzlqdGrid&gt;
+            &lt;bcsqfbzlqdGridlb&gt;
+                &lt;flzlmc&gt;《非居民享受税收协定待遇审批申请表》&lt;/flzlmc&gt;
+                &lt;flzlDm&gt;000635&lt;/flzlDm&gt;
+                &lt;slswsxDm&gt;SLSXA041011002&lt;/slswsxDm&gt;
+            &lt;/bcsqfbzlqdGridlb&gt;
+        &lt;/bcsqfbzlqdGrid&gt;
+    &lt;/fjmxsssxddybaxxb&gt;
+&lt;/taxML&gt;
+</request>
+		<procStartOrgID>24406060700</procStartOrgID>
+		<userList>
+<userListlb>
+				<swryDm></swryDm>
+				<swryxm></swryxm>
+				<jgDm>24406060700</jgDm>
+				<jgmc></jgmc>
+				<gwDm>244900000001</gwDm>
+				<gwmc></gwmc>
+				<swrysfDm></swrysfDm>
+				<gwxh></gwxh>
+			</userListlb>
+</userList>
+		<procStartPerformer>24406060735</procStartPerformer>
+	</qdywshRequestVO>
+</taxML>
+]]></body>
+</service>

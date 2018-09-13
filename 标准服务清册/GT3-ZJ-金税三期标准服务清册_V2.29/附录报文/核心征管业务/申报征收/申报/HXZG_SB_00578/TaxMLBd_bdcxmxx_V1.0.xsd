@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 被2011 rel. 2 sp1 (TeaM DJiNN) 使用XMLSpy vTeaM DJiNN编辑的 (http://www.altova.com) by -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:complexType name="bdcxmxxywbw">
+		<xs:annotation>
+			<xs:documentation>不动产项目信息业务报文</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="bdcxmxx" type="bdcxmxx">
+						<xs:annotation>
+							<xs:documentation>不动产项目信息</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="bdcxmxx">
+		<xs:annotation>
+			<xs:documentation>不动产项目信息</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="fb1Grid">
+				<xs:annotation>
+					<xs:documentation>不动产项目信息</xs:documentation>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:sequence minOccurs="0" maxOccurs="unbounded">
+						<xs:element name="yysbdcGridlb" type="yysbdcGridlbVo">
+							<xs:annotation>
+								<xs:documentation>不动产项目信息</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="yysbdcGrid">
+		<xs:annotation>
+			<xs:documentation>"申报信息"</xs:documentation>
+		</xs:annotation>
+		<xs:sequence minOccurs="0" maxOccurs="unbounded">
+			<xs:element name="yysbdcGridlb" type="yysbdcGridlbVo">
+				<xs:annotation>
+					<xs:documentation>不动产项目信息</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="yysbdcGridlbVo">
+		<xs:annotation>
+			<xs:documentation>不动产项目信息</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="xybz" type="xybz">
+				<xs:annotation>
+					<xs:documentation>选用标志</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bdcxmbh" type="bdcxmbh">
+				<xs:annotation>
+					<xs:documentation>不动产项目编号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bdcxmmc" type="bdcxmmc">
+				<xs:annotation>
+					<xs:documentation>不动产项目名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bdcxmdz" type="bdcxmdz">
+				<xs:annotation>
+					<xs:documentation>不动产项目地址</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="kgrq" type="kgrq">
+				<xs:annotation>
+					<xs:documentation>开工日期</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yjjgrq" type="yjjgrq">
+				<xs:annotation>
+					<xs:documentation>预计竣工日期</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="xmyt" type="xmyt">
+				<xs:annotation>
+					<xs:documentation>项目用途</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ghjzzmj" type="ghjzzmj">
+				<xs:annotation>
+					<xs:documentation>规划建筑总面积平方米</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

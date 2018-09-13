@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="UTF-8"?>
+	<!--
+		被2011 rel. 2 sp1 (TeaM DJiNN) 使用XMLSpy vTeaM DJiNN编辑的
+		(http://www.altova.com) by
+	-->
+	<!--
+		edited with XMLSpy v2010 rel. 3 (http://www.altova.com) by MESMERiZE
+		(MSM)
+	-->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/"
+	xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/"
+	elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd" />
+	<xs:include schemaLocation="TaxMLPublicType.xsd" />
+	<xs:complexType name="jmsdsyhmxbForm">
+		<xs:annotation>
+			<xs:documentation>减免所得税优惠明细表(A107040)业务报文</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="jmsdsyhMxbVO" type="jmsdsyhmxbVO"
+						minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>减免所得税优惠明细表</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="jmsdsyhmxbVO">
+		<xs:annotation>
+			<xs:documentation>《减免所得税优惠明细表》</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="fhtjxxwlqy" type="je">
+				<xs:annotation>
+					<xs:documentation>符合条件的小型微利企业</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="gjzdfcgxjsqy" type="je">
+				<xs:annotation>
+					<xs:documentation>国家需要重点扶持的高新技术企业</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jmdfmzzzdfqy" type="je">
+				<xs:annotation>
+					<xs:documentation>减免地方分享所得税的民族自治地方企业</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qtzxyh" type="je">
+				<xs:annotation>
+					<xs:documentation>其他专项优惠</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="tqxqgxjsqy" type="je">
+				<xs:annotation>
+					<xs:documentation>经济特区和上海浦东新区新设立的高新技术企业</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="whsydwzzqy" type="je">
+				<xs:annotation>
+					<xs:documentation>经营性文化事业单位转制企业</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="dmqy" type="je">
+				<xs:annotation>
+					<xs:documentation>动漫企业</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="szssyzqy" type="je">
+				<xs:annotation>
+					<xs:documentation>受灾地区损失严重的企业</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="szncxys" type="je">
+				<xs:annotation>
+					<xs:documentation>受灾地区农村信用社</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="szcjyqy" type="je">
+				<xs:annotation>
+					<xs:documentation>受灾地区的促进就业企业</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jsxjfwqy" type="je">
+				<xs:annotation>
+					<xs:documentation>技术先进型服务企业</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="xjxbqy" type="je">
+				<xs:annotation>
+					<xs:documentation>新疆困难地区新办企业</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="xjkfqxbqy" type="je">
+				<xs:annotation>
+					<xs:documentation>新疆喀什、霍尔果斯特殊经济开发区新办企业</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="cjzdqtcyjy" type="je">
+				<xs:annotation>
+					<xs:documentation>支持和促进重点群体创业就业企业</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="xkxyldbwmdjcdlqy" type="je">
+				<xs:annotation>
+					<xs:documentation>集成电路线宽小于0.8微米（含）的集成电路生产企业</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="xkxyldewwmdjcdlqy" type="je">
+				<xs:annotation>
+					<xs:documentation>集成电路线宽小于0.25微米的集成电路生产企业</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="cgbsyjcdlscqy" type="je">
+				<xs:annotation>
+					<xs:documentation>投资额超过80亿元人民币的集成电路生产企业</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="xbjcdlsjqy" type="je">
+				<xs:annotation>
+					<xs:documentation>新办集成电路设计企业</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="gjghzdjcdlsjqy" type="je">
+				<xs:annotation>
+					<xs:documentation>国家规划布局内重点集成电路设计企业</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="fhtjrjqy" type="je">
+				<xs:annotation>
+					<xs:documentation>符合条件的软件企业</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="gjghzdrjqy" type="je">
+				<xs:annotation>
+					<xs:documentation>国家规划布局内重点软件企业</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="xbdqglcyqy" type="je">
+				<xs:annotation>
+					<xs:documentation>设在西部地区的鼓励类产业企业</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sczbscryzmypqy" type="je">
+				<xs:annotation>
+					<xs:documentation>符合条件的生产和装配伤残人员专门用品企业</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zgczzcxgxjsqy" type="je">
+				<xs:annotation>
+					<xs:documentation>中关村国家自主创新示范区从事文化产业支撑技术等领域的高新技术企业
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="xsgdqyhqy" type="je">
+				<xs:annotation>
+					<xs:documentation>享受过渡期税收优惠企业</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="xdfwhzqqy" type="je">
+				<xs:annotation>
+					<xs:documentation>横琴新区、平潭综合实验区和前海深港现代化服务业合作区企业</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qt" type="je">
+				<xs:annotation>
+					<xs:documentation>其他</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="fdsljbqysdsdjjmsyh" type="je">
+				<xs:annotation>
+					<xs:documentation>项目所得额按法定税率减半征收企业所得税叠加享受减免税优惠</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="hj" type="je">
+				<xs:annotation>
+					<xs:documentation>合计</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qt1" type="nsrsbh">
+				<xs:annotation>
+					<xs:documentation>（二十三）其他(页面上23行对应的其他栏次的减免性质)</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+	<!-- edited with XMLSpy v2013 (http://www.altova.com) by  () -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/"
+	xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/"
+	elementFormDefault="qualified" attributeFormDefault="unqualified">
+    <xs:include schemaLocation="TaxML.xsd" />
+	<xs:include schemaLocation="TaxMLPublicZMType.xsd" />
+	<xs:complexType name="HXZGZM00013Request">
+		<xs:annotation>
+			<xs:documentation>保存接入报文</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="djxh" type="djxh">
+						<xs:annotation>
+							<xs:documentation>登记序号</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="zgswskfjDm" type="zgswskfjDm">
+						<xs:annotation>
+							<xs:documentation>主管税务所科分局代码</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+
+					<xs:element name="ZMZgssjmsfzmxxVO" type="ZMZgssjmsfzmxxVO">
+						<xs:annotation>
+							<xs:documentation>中国税收居民身份证明申请表</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="xdxxGrid">
+						<xs:annotation>
+							<xs:documentation>中国税收居民身份证明协定信息集合</xs:documentation>
+						</xs:annotation>
+						<xs:complexType>
+							<xs:sequence minOccurs="0" maxOccurs="unbounded">
+								<xs:element name="xdxxGridlb" type="ZMZzgsszmsfzmXsxdxxVO">
+									<xs:annotation>
+										<xs:documentation>中国税收居民身份证明协定信息</xs:documentation>
+									</xs:annotation>
+								</xs:element>
+							</xs:sequence>
+						</xs:complexType>
+					</xs:element>
+					<xs:element name="ZMZgsszmsfzmFzjghzhbxxVO" type="ZMZgsszmsfzmFzjghzhbxxVO">
+						<xs:annotation>
+							<xs:documentation>中国税收居民身份证明申请表</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="nsrywmc" type="nsrywmc">
+						<xs:annotation>
+							<xs:documentation>纳税人英文名称</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="bh" type="bh">
+						<xs:annotation>
+							<xs:documentation>编号</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+</xs:schema>

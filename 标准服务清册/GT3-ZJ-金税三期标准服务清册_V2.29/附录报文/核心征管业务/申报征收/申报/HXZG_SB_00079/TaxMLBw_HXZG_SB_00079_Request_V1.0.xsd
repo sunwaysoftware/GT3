@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2010 rel. 3 (http://www.altova.com) by MESMERiZE (MSM) -->
+<!-- 被2012 () 使用XMLSpy v编辑的 (http://www.altova.com) by -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:include schemaLocation="TaxMLCGSSBType.xsd"/>
+	<xs:complexType name="HXZGSB00079Request">
+		<xs:annotation>
+			<xs:documentation>（车购税业务）查询车辆购置税减免备案接入报文</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="SBCgsCxVO" type="SBCgsCxVO">
+						<xs:annotation>
+							<xs:documentation>车购税查询信息</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="SBCgsCljgxxVO" type="SBCgsCljgxxVO">
+						<xs:annotation>
+							<xs:documentation>车购税车价信息</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="clgzsmjstjDm" type="clgzsmjstjDm">
+						<xs:annotation>
+							<xs:documentation>车辆购置税免减税条件代码（允许为空,用于特殊种类的校验比如农用三轮车）</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+</xs:schema>

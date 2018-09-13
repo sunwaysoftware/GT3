@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2013 (http://www.altova.com) by  () -->
+<!-- 被2012 () 使用XMLSpy v编辑的 (http://www.altova.com) by -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:include schemaLocation="TaxMLPublicSBType.xsd"/>
+	<xs:complexType name="HXZGSB00036Request">
+		<xs:annotation>
+			<xs:documentation>根据登记序号、税源标志查询人有效的税源信息请求报文</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="djxh" type="djxh" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>登记序号[登记序号和项目编号至少传入一项]</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="sybz" type="sybz">
+						<xs:annotation>
+							<xs:documentation>税源标志</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="xmbh" type="xmbh" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>项目编号[登记序号和项目编号至少传入一项]</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="ssqq" type="ssqq">
+						<xs:annotation>
+							<xs:documentation>所属期起</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="ssqz" type="ssqz">
+						<xs:annotation>
+							<xs:documentation>所属期止</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+</xs:schema>

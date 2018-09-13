@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 被2011 rel. 2 sp1 (TeaM DJiNN) 使用XMLSpy vTeaM DJiNN编辑的 (http://www.altova.com) by -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:include schemaLocation="TaxMLPublicType.xsd"/>
+	<xs:complexType name="qgqyssdcbqybVO">
+		<xs:annotation>
+			<xs:documentation>全国企业税收调查表（B0企业表）</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="qgqyssdcbqybGrid">
+				<xs:annotation>
+					<xs:documentation>报送信息</xs:documentation>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:sequence maxOccurs="unbounded">
+						<xs:element name="qgqyssdcbqybGridlbVO" type="qgqyssdcbqybGridlbVO"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="NsrxxFormVO" type="NsrxxFormVO"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="qgqyssdcbqybGridlbVO">
+		<xs:annotation>
+			<xs:documentation>报送信息</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="ewbhxh" type="ewbhxh" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>二维表行序号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="hmc" type="hmc" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>行名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ljs1" type="ljs1" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>累计数</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

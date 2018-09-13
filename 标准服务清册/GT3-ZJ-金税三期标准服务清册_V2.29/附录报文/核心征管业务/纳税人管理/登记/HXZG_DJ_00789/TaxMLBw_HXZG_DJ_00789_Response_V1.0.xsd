@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2013 (http://www.altova.com) by  () -->
+<!-- 编辑使用 XMLSpy v2006 U (http://www.altova.com) 由 any (any) -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:include schemaLocation="TaxMLPublic.xsd"/>
+	<xs:include schemaLocation="TaxMLPublicDJType.xsd"/>
+	<xs:complexType name="HwysxgmdkzzsfpbadjxxVO">
+		<xs:sequence>
+			<xs:element name="hwywxgmdkzzsfpVO" type="DJHwysxgmdkzzsfpVO"/>
+			<xs:element name="hwysxgmdkzzsfpDljyxkxxInsertGrid" type="HwysxgmdkzzsfpDljyxkxxGrid"/>
+			<xs:element name="hwysxgmdkzzsfpDljyxkxxUpdateGrid" type="HwysxgmdkzzsfpDljyxkxxGrid"/>
+			<xs:element name="hwysxgmdkzzsfpDljyxkxxDeleteGrid" type="HwysxgmdkzzsfpDljyxkxxGrid"/>
+			<xs:element name="hwysxgmdkzzsfpSljyxkxxInsertGrid" type="HwysxgmdkzzsfpSljyxkxxGrid"/>
+			<xs:element name="hwysxgmdkzzsfpSljyxkxxUpdateGrid" type="HwysxgmdkzzsfpSljyxkxxGrid"/>
+			<xs:element name="hwysxgmdkzzsfpSljyxkxxDeleteGrid" type="HwysxgmdkzzsfpSljyxkxxGrid"/>
+			<xs:element name="hwysxgmdkzzsfpDlyszxxInsetGrid" type="HwysxgmdkzzsfpDlyszxxGrid"/>
+			<xs:element name="hwysxgmdkzzsfpDlyszxxUpdateGrid" type="HwysxgmdkzzsfpDlyszxxGrid"/>
+			<xs:element name="hwysxgmdkzzsfpDlyszxxDeleteGrid" type="HwysxgmdkzzsfpDlyszxxGrid"/>
+			<xs:element name="hwysxgmdkzzsfpDlyszxxNochangeGrid" type="HwysxgmdkzzsfpDlyszxxGrid"/>
+			<xs:element name="hwysxgmdkzzsfpSlyszxxInsetGrid" type="HwysxgmdkzzsfpSlyszxxGrid"/>
+			<xs:element name="hwysxgmdkzzsfpSlyszxxUpdateGrid" type="HwysxgmdkzzsfpSlyszxxGrid"/>
+			<xs:element name="hwysxgmdkzzsfpSlyszxxDeleteGrid" type="HwysxgmdkzzsfpSlyszxxGrid"/>
+			<xs:element name="hwysxgmdkzzsfpSlyszxxNochangeGrid" type="HwysxgmdkzzsfpSlyszxxGrid"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="HwysxgmdkzzsfpDljyxkxxGrid">
+		<xs:annotation>
+			<xs:documentation>附表1Grid</xs:documentation>
+		</xs:annotation>
+		<xs:sequence minOccurs="0" maxOccurs="unbounded">
+			<xs:element name="hwysxgmdkzzsfpDljyxkxxGridlb" type="DJHwysxgmdkzzsfpDljyxkxxVO"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="HwysxgmdkzzsfpSljyxkxxGrid">
+		<xs:annotation>
+			<xs:documentation>附表2Grid</xs:documentation>
+		</xs:annotation>
+		<xs:sequence minOccurs="0" maxOccurs="unbounded">
+			<xs:element name="hwysxgmdkzzsfpSljyxkxxGridlb" type="DJHwysxgmdkzzsfpSljyxkxxVO"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="HwysxgmdkzzsfpDlyszxxGrid">
+		<xs:annotation>
+			<xs:documentation>附表3Grid</xs:documentation>
+		</xs:annotation>
+		<xs:sequence minOccurs="0" maxOccurs="unbounded">
+			<xs:element name="hwysxgmdkzzsfpDlyszxxGridlb" type="DJHwysxgmdkzzsfpDlyszxxVO"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="HwysxgmdkzzsfpSlyszxxGrid">
+		<xs:annotation>
+			<xs:documentation>附表4Grid</xs:documentation>
+		</xs:annotation>
+		<xs:sequence minOccurs="0" maxOccurs="unbounded">
+			<xs:element name="hwysxgmdkzzsfpSlyszxxGridlb" type="DJHwysxgmdkzzsfpSlyszxxVO"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="HXZGDJ00789Response">
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="HwysxgmdkzzsfpbadjxxVO" type="HwysxgmdkzzsfpbadjxxVO"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+</xs:schema>

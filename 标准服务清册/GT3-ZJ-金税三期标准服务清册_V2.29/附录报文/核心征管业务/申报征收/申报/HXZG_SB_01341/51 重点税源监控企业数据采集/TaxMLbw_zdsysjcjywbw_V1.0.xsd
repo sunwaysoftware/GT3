@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2010 rel. 3 (http://www.altova.com) by MESMERiZE (MSM) -->
+<!-- 被2011 rel. 2 sp1 (TeaM DJiNN) 使用XMLSpy vTeaM DJiNN编辑的 (http://www.altova.com) by -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:include schemaLocation="TaxMLBd_zdsyqyjbxxb_V1.0.xsd"/>
+	<xs:include schemaLocation="TaxMLBd_zdsyqyssxxybb01_V1.0.xsd"/>
+	<xs:include schemaLocation="TaxMLBd_zdsygyqyzycpyssxxybb02_V1.0.xsd"/>
+	<xs:include schemaLocation="TaxMLBd_zdsyqycwxxjb03_V1.0.xsd"/>
+	<xs:include schemaLocation="TaxMLBd_zdsyfdcqykfjyxxjb04_V1.0.xsd"/>
+	<xs:include schemaLocation="TaxMLBd_zdsyqyjqdcwjjbb05_V1.0.xsd"/>
+	<xs:complexType name="zdsysjcjywbw">
+		<xs:annotation>
+			<xs:documentation>重点税源总业务报文</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="zdsy00" type="zdsyqyjbxxbVO" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>1重点税源企业基本信息表</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="zdsy01" type="zdsyqyssxxybb01VO" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>2重点税源企业税收信息（月报）表</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="zdsy02" type="zdsygyqyzycpyssxx02VO" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>3重点税源工业企业主要产品与税收信息（月报）表</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="zdsy03" type="zdsyqycwxxjbb03VO" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>4重点税源企业财务信息（季报）表</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="zdsy04" type="zdsyfdcqykfjyxxjb04VO" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>5重点税源房地产企业开发经营信息（季报）表</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="zdsy05" type="zdsyqyjqdcwjjbb05VO" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>6重点税源企业景气调查问卷（季报）表</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+</xs:schema>

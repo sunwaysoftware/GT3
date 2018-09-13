@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 被2011 rel. 2 sp1 (TeaM DJiNN) 使用XMLSpy vTeaM DJiNN编辑的 (http://www.altova.com) by -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:complexType name="HXZGZS00325ResponseVO">
+		<xs:annotation>
+			<xs:documentation>扣款情况查询响应报文</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="kkqkGrid">
+						<xs:complexType>
+							<xs:sequence minOccurs="0" maxOccurs="unbounded">
+								<xs:element name="kkqkGridGridlb" type="KkxxVO"/>
+							</xs:sequence>
+						</xs:complexType>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="KkxxVO">
+		<xs:annotation>
+			<xs:documentation>扣款信息VO</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="yzpzxh" type="yzpzxh">
+				<xs:annotation>
+					<xs:documentation>应征凭证序号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yjkje" type="je">
+				<xs:annotation>
+					<xs:documentation>已缴款金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="wjkje" type="je">
+				<xs:annotation>
+					<xs:documentation>未缴款金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="djje" type="je">
+				<xs:annotation>
+					<xs:documentation>抵缴金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="hxje" type="je">
+				<xs:annotation>
+					<xs:documentation>核销金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

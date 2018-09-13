@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2011 (http://www.altova.com) by www.hbnu.com (www.hbnu.com) -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:include schemaLocation="TaxMLPublic.xsd"/>
+	<xs:complexType name="jwglfxxbywbw">
+		<xs:annotation>
+			<xs:documentation>《境外关联方信息表》业务报文</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="qyndglywwlbg2016_G112000hj" type="qyndglywwlbg2016_G112000hj">
+						<xs:annotation>
+							<xs:documentation>《境外关联方信息表》</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="qyndglywwlbg2016_G112000hj">
+		<xs:annotation>
+			<xs:documentation>《境外关联方信息表》</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="glfxxhj" type="glfxxhj">
+				<xs:annotation>
+					<xs:documentation>境外关联方信息表</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="glfxxhj">
+		<xs:annotation>
+			<xs:documentation>境外关联方信息表</xs:documentation>
+		</xs:annotation>
+		<xs:sequence maxOccurs="unbounded">
+			<xs:element name="glfxxhjlbVO" type="glfxxhjlbVO">
+				<xs:annotation>
+					<xs:documentation>境外关联方信息表</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="glfxxhjlbVO">
+		<xs:annotation>
+			<xs:documentation>境外关联方信息表</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="nsrmc" type="nsrmc">
+				<xs:annotation>
+					<xs:documentation>纳税人名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="nsrsbh" type="nsrsbh">
+				<xs:annotation>
+					<xs:documentation>纳税人识别号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zcdgj" type="gjhdqszDm">
+				<xs:annotation>
+					<xs:documentation>国家（地区），取值代码表DM_GY_GJHDQ</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jydgj" type="gjhdqszDm">
+				<xs:annotation>
+					<xs:documentation>国家（地区），取值代码表DM_GY_GJHDQ</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jyfw" type="jyfw">
+				<xs:annotation>
+					<xs:documentation>经营范围</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sysdsxzdszmc" type="sysdsxzdszmc">
+				<xs:annotation>
+					<xs:documentation>适用所得税性质的税种名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sjsf" type="je">
+				<xs:annotation>
+					<xs:documentation>实际税负</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zczbbz" type="hbszDm">
+				<xs:annotation>
+					<xs:documentation>币种，取值代码表DM_GY_HB</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zczb" type="je">
+				<xs:annotation>
+					<xs:documentation>金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="tzzebz" type="hbszDm">
+				<xs:annotation>
+					<xs:documentation>币种，取值代码表DM_GY_HB</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="tzze" type="je">
+				<xs:annotation>
+					<xs:documentation>金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ssyh" type="ssyh">
+				<xs:annotation>
+					<xs:documentation>享受所得税性质的税种的税收优惠</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="hyDm" type="hyDm">
+				<xs:annotation>
+					<xs:documentation>所属行业，取值代码表DM_GY_HY</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="nsndqsrq" type="nsndqsrq">
+				<xs:annotation>
+					<xs:documentation>所在国纳税年度起始日期</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="nsndjzrq" type="nsndjzrq">
+				<xs:annotation>
+					<xs:documentation>所在国纳税年度截止日期</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sfdlfr" type="sfdlfr">
+				<xs:annotation>
+					<xs:documentation>独立法人【1:是;0:否】</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="fddbr" type="fddbr">
+				<xs:annotation>
+					<xs:documentation>法定代表人或负责人</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sfdlhs" type="sfdlhs">
+				<xs:annotation>
+					<xs:documentation>独立核算【1:是;0:否】</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sfbzgbcwbb" type="sfbzgbcwbb">
+				<xs:annotation>
+					<xs:documentation>编制个别财务报表【1:是;0:否】</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sfyss" type="sfyss">
+				<xs:annotation>
+					<xs:documentation>上市公司【1:是;0:否】</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ssgpdm" type="ssgpdm">
+				<xs:annotation>
+					<xs:documentation>上市股票代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ssjysmc" type="ssjysmc">
+				<xs:annotation>
+					<xs:documentation>上市交易所</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jzbwb" type="hbszDm">
+				<xs:annotation>
+					<xs:documentation>记账本位币，取值代码表DM_GY_HB</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

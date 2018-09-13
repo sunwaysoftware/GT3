@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<service xmlns="http://www.chinatax.gov.cn/spec/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <head>
+    <tran_id>SWZJ.NSXY.PJJG.DTGLJGCX</tran_id>
+    <channel_id>SWZJ.ZJNB.NSXY</channel_id>
+    <tran_seq>eea4ff11269045068f421dd3d654804e</tran_seq>
+    <tran_date>20170908</tran_date>
+    <tran_time>102840995</tran_time>
+    <rtn_code>0</rtn_code>
+    <rtn_msg>
+      <Code>000</Code>
+      <Message>交易成功</Message>
+      <Reason>动态管理结果查询成功</Reason>
+    </rtn_msg>
+    <expand>
+      <name>identityType</name>
+      <value></value>
+    </expand>
+    <expand>
+      <name>sjry</name>
+      <value></value>
+    </expand>
+    <expand>
+      <name>sjjg</name>
+      <value></value>
+    </expand>
+  </head>
+  <body><![CDATA[<?xml version="1.0" encoding="UTF-8"?><taxML xsi:type="RSJ2XY904Response"  bbh="v1.0" xmlbh="String" xmlmc="String" xsi:schemaLocation="http://www.chinatax.gov.cn/dataspec/TaxMLBw_R_S_J2_XY_904_Response_V1.0" xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<pjjg>B</pjjg>
+<pjfs>90</pjfs>
+<pjjb>B</pjjb>
+<pjnd>2016</pjnd>
+<djxh>10114301000168724403</djxh>
+<nsrsbh>430124351681098</nsrsbh>
+<nsrmc>**迪**车贸易有限公司</nsrmc>
+<zblist>
+<zb>
+<zbdm>MX113000000000200700</zbdm>
+<zbmc>010104.评价年度内非正常原因增值税或营业税连续3个月或累计6个月零申报、负申报的</zbmc>
+<zbpjfs>101</zbpjfs>
+</zb>
+<zb>
+<zbdm>MX113000000000201064</zbdm>
+<zbmc>040204.不能按照国家统一的会计制度规定设置账簿，并根据合法、有效凭证核算，向税务机关提供准确税务资料的</zbmc>
+<zbpjfs>0</zbpjfs>
+</zb>
+</zblist>
+<dtgllx>3</dtgllx>
+
+
+</taxML>]]></body>
+</service>

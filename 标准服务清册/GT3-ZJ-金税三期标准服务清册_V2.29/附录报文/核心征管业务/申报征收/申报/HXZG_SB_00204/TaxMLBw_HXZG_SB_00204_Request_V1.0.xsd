@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2013 (http://www.altova.com) by  () -->
+<!-- 被2012 () 使用XMLSpy v编辑的 (http://www.altova.com) by -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:include schemaLocation="TaxMLPublicSBType.xsd"/>
+	<xs:include schemaLocation="TaxMLBw_tdjysb_V1.0.xsd"/>
+	<xs:complexType name="HXZGSB00204Request">
+		<xs:annotation>
+			<xs:documentation>土地交易申报保存请求报文</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="zrfsbzzxx">
+						<xs:annotation>
+							<xs:documentation>转让方申报组装数据</xs:documentation>
+						</xs:annotation>
+						<xs:complexType>
+							<xs:sequence>
+								<xs:element name="sbxxGrid">
+									<xs:annotation>
+										<xs:documentation>申报数据信息</xs:documentation>
+									</xs:annotation>
+									<xs:complexType>
+										<xs:sequence minOccurs="0" maxOccurs="unbounded">
+											<xs:element name="sbxxGridlb" type="SBSbxxTjVO"/>
+										</xs:sequence>
+									</xs:complexType>
+								</xs:element>
+								<xs:element name="jmxxGrid">
+									<xs:annotation>
+										<xs:documentation>减免数据信息</xs:documentation>
+									</xs:annotation>
+									<xs:complexType>
+										<xs:sequence minOccurs="0" maxOccurs="unbounded">
+											<xs:element name="jmxxGridlb" type="SBSbjmTjVO"/>
+										</xs:sequence>
+									</xs:complexType>
+								</xs:element>
+								<xs:element name="yjxxGrid">
+									<xs:annotation>
+										<xs:documentation>预缴税款数据信息</xs:documentation>
+									</xs:annotation>
+									<xs:complexType>
+										<xs:sequence minOccurs="0" maxOccurs="unbounded">
+											<xs:element name="yjxxGridlb" type="SBSbyjTjVO"/>
+										</xs:sequence>
+									</xs:complexType>
+								</xs:element>
+								<xs:element name="sbSBbcTjqtxxVO" type="SBSBbcTjqtxxVO">
+									<xs:annotation>
+										<xs:documentation>申报纳税人申报保存提交其他信息对象</xs:documentation>
+									</xs:annotation>
+								</xs:element>
+							</xs:sequence>
+						</xs:complexType>
+					</xs:element>
+					<xs:element name="srfsbzzxx">
+						<xs:annotation>
+							<xs:documentation>受让方申报组装数据</xs:documentation>
+						</xs:annotation>
+						<xs:complexType>
+							<xs:sequence>
+								<xs:element name="srfsbxxGrid">
+									<xs:annotation>
+										<xs:documentation>受让方申报数据信息</xs:documentation>
+									</xs:annotation>
+									<xs:complexType>
+										<xs:sequence minOccurs="0" maxOccurs="unbounded">
+											<xs:element name="gmfsbxxGridlb" type="SBSbxxTjVO"/>
+										</xs:sequence>
+									</xs:complexType>
+								</xs:element>
+								<xs:element name="srfjmxxGrid">
+									<xs:annotation>
+										<xs:documentation>受让方减免数据信息</xs:documentation>
+									</xs:annotation>
+									<xs:complexType>
+										<xs:sequence minOccurs="0" maxOccurs="unbounded">
+											<xs:element name="gmfjmxxGridlb" type="SBSbjmTjVO"/>
+										</xs:sequence>
+									</xs:complexType>
+								</xs:element>
+								<xs:element name="srfyjxxGrid">
+									<xs:annotation>
+										<xs:documentation>受让方预缴税款数据信息</xs:documentation>
+									</xs:annotation>
+									<xs:complexType>
+										<xs:sequence minOccurs="0" maxOccurs="unbounded">
+											<xs:element name="gmfyjxxGridlb" type="SBSbyjTjVO"/>
+										</xs:sequence>
+									</xs:complexType>
+								</xs:element>
+								<xs:element name="srfsbSBbcTjqtxxVO" type="SBSBbcTjqtxxVO">
+									<xs:annotation>
+										<xs:documentation>受让方申报纳税人申报保存提交其他信息对象</xs:documentation>
+									</xs:annotation>
+								</xs:element>
+							</xs:sequence>
+						</xs:complexType>
+					</xs:element>
+					<xs:element name="tdjysbywbw" type="tdjysbywbw">
+						<xs:annotation>
+							<xs:documentation>土地交易申报申报申报表单数据信息</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="jyflx" type="bz1">
+						<xs:annotation>
+							<xs:documentation>交易方类型：0 转让 1受让 2 双方</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="czrfs" type="czrfs">
+						<xs:annotation>
+							<xs:documentation>出转让方式</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+</xs:schema>

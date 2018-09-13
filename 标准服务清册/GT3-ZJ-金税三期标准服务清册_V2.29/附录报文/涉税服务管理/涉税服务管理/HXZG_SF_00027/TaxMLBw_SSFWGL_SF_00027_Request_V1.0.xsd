@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:include schemaLocation="TaxMLPublicSFType.xsd"/>
+	<xs:complexType name="SSFWGLSSFW00027Request">
+		<xs:annotation>
+			<xs:documentation>保存涉税专业服务协议采集信息</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="sszyfwxyxxbVO" type="sszyfwxyxxbVO">
+						<xs:annotation>
+							<xs:documentation>涉税专业服务信息VO</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="sszyfwxyxmGrid">
+						<xs:annotation>
+							<xs:documentation>协议项目Grid</xs:documentation>
+						</xs:annotation>
+						<xs:complexType>
+							<xs:sequence maxOccurs="unbounded">
+								<xs:element name="sszyfwxyxmGridlb" type="sszyfwxyxmVO">
+									<xs:annotation>
+										<xs:documentation>涉税专业服务协议项目信息</xs:documentation>
+									</xs:annotation>
+								</xs:element>
+							</xs:sequence>
+						</xs:complexType>
+					</xs:element>
+					<xs:element name="isExistFj" type="yxbz">
+						<xs:annotation>
+							<xs:documentation>是否存在附件</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="ksdjSwdjbxxVO" type="DJSwdjbxxVO">
+						<xs:annotation>
+							<xs:documentation>税务登记vo</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="jgxxVO" type="ssfwjgxxVO">
+						<xs:annotation>
+							<xs:documentation>涉税机构信息vo</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="sszyfwryGrid">
+						<xs:annotation>
+							<xs:documentation>协议人员表</xs:documentation>
+						</xs:annotation>
+						<xs:complexType>
+							<xs:sequence maxOccurs="unbounded">
+								<xs:element name="sszyfwryGridlb" type="sszyfwryxxbVO">
+									<xs:annotation>
+										<xs:documentation>协议人员</xs:documentation>
+									</xs:annotation>
+								</xs:element>
+							</xs:sequence>
+						</xs:complexType>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+</xs:schema>

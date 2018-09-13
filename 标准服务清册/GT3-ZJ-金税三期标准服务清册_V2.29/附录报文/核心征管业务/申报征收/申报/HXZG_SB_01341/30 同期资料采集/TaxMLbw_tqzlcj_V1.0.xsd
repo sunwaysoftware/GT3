@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2013 (http://www.altova.com) by  () -->
+<!-- 被2011 rel. 2 sp1 (TeaM DJiNN) 使用XMLSpy vTeaM DJiNN编辑的 (http://www.altova.com) by -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:include schemaLocation="TaxMLBd_0610159_V1.0.xsd"/>
+	<xs:include schemaLocation="TaxMLBd_0610539_V1.0.xsd"/>
+	<xs:include schemaLocation="TaxMLBd_0610543_V1.0.xsd"/>
+	<xs:include schemaLocation="TaxMLBd_0610544_V1.0.xsd"/>
+	<xs:complexType name="tqzlcjywbw">
+		<xs:annotation>
+			<xs:documentation>总业务报文</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="qykbxysfxb" type="qykbxysfxbVO" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>企业可比性因素分析表</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="qytqzldjb" type="qytqzldjbVO" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>企业同期资料登记表</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="qygnfxfxb" type="qygnfxfxbVO" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>企业功能风险分析表</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="qyndgljyb" type="qyndgljybVO" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>企业年度关联交易财务状况表</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="tqzlcj">
+		<xs:annotation>
+			<xs:documentation>同期资料采集</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="qykbxysfxbywbw" type="qykbxysfxbywbw">
+				<xs:annotation>
+					<xs:documentation>企业可比性因素分析表</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qytqzldjbywbw" type="qytqzldjbywbw">
+				<xs:annotation>
+					<xs:documentation>企业同期资料登记表</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qygnfxfxbywbw" type="qygnfxfxbywbw">
+				<xs:annotation>
+					<xs:documentation>企业弄能风险分析表</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qyndgljybywbw" type="qyndgljybywbw" nillable="true">
+				<xs:annotation>
+					<xs:documentation>企业年度关联交易财务状况分析表</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

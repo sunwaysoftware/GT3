@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2010 rel. 3 (http://www.altova.com) by liuwei (liuweicss) -->
+<!-- 被2011 rel. 2 sp1 (TeaM DJiNN) 使用XMLSpy vTeaM DJiNN编辑的 (http://www.altova.com) by -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxMLPublicSBType.xsd"/>
+	<xs:complexType name="fqdqdzcpcljjsbmxxxGrid">
+		<xs:annotation>
+			<xs:documentation>>废弃电器电子产品处理基金申报明细信息</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence maxOccurs="unbounded">
+					<xs:element name="fqdqdzcpcljjsbmxxxGridlb">
+						<xs:complexType>
+							<xs:sequence>
+								<xs:element name="xh" type="xh">
+									<xs:annotation>
+										<xs:documentation>序号</xs:documentation>
+									</xs:annotation>
+								</xs:element>
+								<xs:element name="yzjjcpmc" type="zspmmc">
+									<xs:annotation>
+										<xs:documentation>应征基金产品名称</xs:documentation>
+									</xs:annotation>
+								</xs:element>
+								<xs:element name="zspm_dm" type="zspmDm">
+									<xs:annotation>
+										<xs:documentation>征收品目代码</xs:documentation>
+									</xs:annotation>
+								</xs:element>
+								<xs:element name="zsbz_1" type="je">
+									<xs:annotation>
+										<xs:documentation>征收标准</xs:documentation>
+									</xs:annotation>
+								</xs:element>
+								<xs:element name="yyjje" type="je">
+									<xs:annotation>
+										<xs:documentation>已预缴金额</xs:documentation>
+									</xs:annotation>
+								</xs:element>
+								<xs:element name="bqxssl" type="sl">
+									<xs:annotation>
+										<xs:documentation>本期销售数量</xs:documentation>
+									</xs:annotation>
+								</xs:element>
+								<xs:element name="yzxssl" type="sl">
+									<xs:annotation>
+										<xs:documentation>应征销售数量</xs:documentation>
+									</xs:annotation>
+								</xs:element>
+								<xs:element name="ckmzxssl" type="sl">
+									<xs:annotation>
+										<xs:documentation>出口免征销售数量</xs:documentation>
+									</xs:annotation>
+								</xs:element>
+								<xs:element name="bqyzje" type="je">
+									<xs:annotation>
+										<xs:documentation>本期应征金额</xs:documentation>
+									</xs:annotation>
+								</xs:element>
+								<xs:element name="bqkkcsl" type="sl">
+									<xs:annotation>
+										<xs:documentation>本期可扣除数量</xs:documentation>
+									</xs:annotation>
+								</xs:element>
+								<xs:element name="jksl" type="sl">
+									<xs:annotation>
+										<xs:documentation>进口数量</xs:documentation>
+									</xs:annotation>
+								</xs:element>
+								<xs:element name="gngjsl" type="sl">
+									<xs:annotation>
+										<xs:documentation>国内购进数量</xs:documentation>
+									</xs:annotation>
+								</xs:element>
+								<xs:element name="wtjgshsl" type="sl">
+									<xs:annotation>
+										<xs:documentation>委托加工收回数量</xs:documentation>
+									</xs:annotation>
+								</xs:element>
+								<xs:element name="yzjjcpkdthsl" type="sl">
+									<xs:annotation>
+										<xs:documentation>已征基金产品可抵退货数量</xs:documentation>
+									</xs:annotation>
+								</xs:element>
+								<xs:element name="bqkkcje" type="je">
+									<xs:annotation>
+										<xs:documentation>本期可扣除金额</xs:documentation>
+									</xs:annotation>
+								</xs:element>
+							</xs:sequence>
+						</xs:complexType>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+</xs:schema>

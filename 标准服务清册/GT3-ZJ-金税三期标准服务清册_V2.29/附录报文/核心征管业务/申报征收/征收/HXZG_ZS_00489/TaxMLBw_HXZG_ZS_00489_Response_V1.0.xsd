@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2013 (http://www.altova.com) by  () -->
+<!-- 被2011 rel. 2 sp1 (TeaM DJiNN) 使用XMLSpy vTeaM DJiNN编辑的 (http://www.altova.com) by -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:include schemaLocation="TaxMLPublicZSType.xsd"/>
+	<xs:complexType name="ZSHXZG00489ResponseVO">
+		<xs:annotation>
+			<xs:documentation>居民企业所得税核定查询响应报文</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="Zs00489jmqysdshdGrid">
+						<xs:complexType>
+							<xs:sequence minOccurs="0" maxOccurs="unbounded">
+								<xs:element name="jmqysdshdGridlb" type="Zs00489JmqysdshdVO"/>
+							</xs:sequence>
+						</xs:complexType>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="Zs00489JmqysdshdVO">
+		<xs:annotation>
+			<xs:documentation>居民企业所得税核定VO</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="nsrsbh" type="nsrsbh">
+				<xs:annotation>
+					<xs:documentation>纳税人识别号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="nsrmc" type="nsrmc">
+				<xs:annotation>
+					<xs:documentation>纳税人名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="hylb" type="hylbDm">
+				<xs:annotation>
+					<xs:documentation>行业类别</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="snsdse" type="snsdse">
+				<xs:annotation>
+					<xs:documentation>上年所得税额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="snzsfs" type="zsfsDm">
+				<xs:annotation>
+					<xs:documentation>上年征收方式</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="hdqxq" type="hdqxq">
+				<xs:annotation>
+					<xs:documentation>核定期限起</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="hdqxz" type="hdqxz">
+				<xs:annotation>
+					<xs:documentation>核定期限止</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="hdff" type="hdff">
+				<xs:annotation>
+					<xs:documentation>核定方法</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="nhdynssde" type="nhdynssde">
+				<xs:annotation>
+					<xs:documentation>年核定应纳税所得额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sl" type="sl">
+				<xs:annotation>
+					<xs:documentation>税率</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="nhdsdse" type="nhdsdse">
+				<xs:annotation>
+					<xs:documentation>年核定所得税额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="asrhdyssdlxmmc" type="xmmc">
+				<xs:annotation>
+					<xs:documentation>按收入核定应税所得率的项目名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="asrhdyssdl" type="yssdl">
+				<xs:annotation>
+					<xs:documentation>按收入核定应税所得率</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="acbfyhdyssdl" type="yssdl">
+				<xs:annotation>
+					<xs:documentation>按成本费用核定应税所得率</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qysdsyjqx" type="yjqxDm">
+				<xs:annotation>
+					<xs:documentation>企业所得税预缴期限</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qysdsyjfs" type="yjfsDm">
+				<xs:annotation>
+					<xs:documentation>企业所得税预缴方式</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

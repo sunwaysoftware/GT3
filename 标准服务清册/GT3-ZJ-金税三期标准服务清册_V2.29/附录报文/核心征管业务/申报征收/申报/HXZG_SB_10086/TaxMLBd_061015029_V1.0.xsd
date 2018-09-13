@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 被2012 () 使用XMLSpy v编辑的 (http://www.altova.com) by -->
+<!-- edited with XMLSpy v2013 (http://www.altova.com) by  () -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:complexType name="A105110Ywbd">
+		<xs:annotation>
+			<xs:documentation>政策性搬迁纳税调整明细表(A105110)业务报文</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="zcxbqnstzMxbForm" type="zcxbqnstzmxbVO" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>政策性搬迁纳税调整明细表</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="zcxbqnstzmxbVO">
+		<xs:annotation>
+			<xs:documentation>《政策性搬迁纳税调整明细表》</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="bqsr" type="je">
+				<xs:annotation>
+					<xs:documentation>搬迁收入</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bqbcsr" type="je">
+				<xs:annotation>
+					<xs:documentation>搬迁补偿收入</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="dbzyzcjzdbc" type="je">
+				<xs:annotation>
+					<xs:documentation>对被征用资产价值的补偿</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ybqazegydbc" type="je">
+				<xs:annotation>
+					<xs:documentation>因搬迁、安置而给予的补偿</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="dtctyxcd" type="je">
+				<xs:annotation>
+					<xs:documentation>对停产停业形成的损失而给予的补偿</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zcbqqdbx" type="je">
+				<xs:annotation>
+					<xs:documentation>资产搬迁过程中遭到毁损而取得的保险赔款</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qtbcsr" type="je">
+				<xs:annotation>
+					<xs:documentation>其他补偿收入</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bqzcczsr" type="je">
+				<xs:annotation>
+					<xs:documentation>搬迁资产处置收入</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bqzc" type="je">
+				<xs:annotation>
+					<xs:documentation>搬迁支出</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bqfyzc" type="je">
+				<xs:annotation>
+					<xs:documentation>搬迁费用支出</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="azzgsjfsdfy" type="je">
+				<xs:annotation>
+					<xs:documentation>安置职工实际发生的费用</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="tgqjzfgzgdgzfl" type="je">
+				<xs:annotation>
+					<xs:documentation>停工期间支付给职工的工资及福利费</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="lscfbqzcefsdfy" type="je">
+				<xs:annotation>
+					<xs:documentation>临时存放搬迁资产而发生的费用</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="glzcbqazfy" type="je">
+				<xs:annotation>
+					<xs:documentation>各类资产搬迁安装费用</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qtybqxgfy" type="je">
+				<xs:annotation>
+					<xs:documentation>其他与搬迁相关的费用</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bqzcczzc" type="je">
+				<xs:annotation>
+					<xs:documentation>搬迁资产处置支出</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bqsdhss" type="je">
+				<xs:annotation>
+					<xs:documentation>搬迁所得或损失</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yjbnsbqsdhss" type="je">
+				<xs:annotation>
+					<xs:documentation>应计入本年应纳税所得额的搬迁所得或损失</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bqsd" type="je">
+				<xs:annotation>
+					<xs:documentation>搬迁所得</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bqssycxkc" type="je">
+				<xs:annotation>
+					<xs:documentation>搬迁损失一次性扣除</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bqssfqkc" type="je">
+				<xs:annotation>
+					<xs:documentation>搬迁损失分期扣除</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="dqsybqsyss" type="je">
+				<xs:annotation>
+					<xs:documentation>计入当期损益的搬迁收益或损失</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yqbqsskcje" type="je">
+				<xs:annotation>
+					<xs:documentation>以前年度搬迁损失当期扣除金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="nstzje" type="je">
+				<xs:annotation>
+					<xs:documentation>纳税调整金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

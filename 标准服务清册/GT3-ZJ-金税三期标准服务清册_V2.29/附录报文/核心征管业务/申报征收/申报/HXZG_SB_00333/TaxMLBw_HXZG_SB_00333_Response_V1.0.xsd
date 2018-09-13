@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2013 (http://www.altova.com) by  () -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:include schemaLocation="TaxMLPublicSBType.xsd"/>
+	<xs:complexType name="HXZGSB00333Response">
+		<xs:annotation>
+			<xs:documentation>土地交易信息采集初始化-查询土地税源信息</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="tdxxGrid">
+						<xs:annotation>
+							<xs:documentation>土地信息Grid</xs:documentation>
+						</xs:annotation>
+						<xs:complexType>
+							<xs:sequence minOccurs="0" maxOccurs="unbounded">
+								<xs:element name="tdxxGridlb" type="tdxxGridlbVO">
+									<xs:annotation>
+										<xs:documentation>土地税源信息Gridlb</xs:documentation>
+									</xs:annotation>
+								</xs:element>
+							</xs:sequence>
+						</xs:complexType>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="tdxxGridlbVO">
+		<xs:annotation>
+			<xs:documentation>土地信息GridlbVO</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="djxh" type="djxh" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>登记序号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="czrfs" type="czrfs" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>出转让方式</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="tdzldz" type="tdzlwz" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>土地坐落位置</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qh" type="qh" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>丘号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="tdsybh" type="tdsybh" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>土地税源编号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="czrsj" type="czrsj" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>出转让时间</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="tdytDm" type="tdytDm" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>土地用途代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="tddjDm" type="tddjDm" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>土地等级代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sz1" type="sz1" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>四至</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="tdsdswjgDm" type="tdsdswjgDm" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>土地属地税务机关代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="tdsyzbh" type="tdsyzbh" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>土地使用证编号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="tdmj" type="tdmj" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>土地面积</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="mstdmj" type="mstdmj" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>免税土地面积</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ystdmj" type="ystdmj" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>应税土地面积</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="dwse" type="dwse" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>单位税额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="nynse" type="nynse" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>年应纳税额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="nsqxDm" type="nsqxDm" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>纳税期限代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sbqxDm" type="sbqxDm" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>申报期限代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jkqxDm" type="jkqxDm" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>缴款期限代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yskmDm" type="yskmDm" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>预算科目代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ysfpblDm" type="ysfpblDm" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>预算分配比例代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="skgkDm" type="skgkDm" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>收款国库代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zscztdsysbz" type="zscztdsysbz">
+				<xs:annotation>
+					<xs:documentation>征收城镇土地使用税标志</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zspmDm" type="zspmDm">
+				<xs:annotation>
+					<xs:documentation>征收品目代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="tdczrmc" type="tdczrmc" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>土地出租人名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="tdczrsfzjhm" type="tdczrsfzjhm" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>土地出租人身份证件号码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="czrsfzjzlDm" type="czrsfzjzlDm" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>出租人身份证件种类代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

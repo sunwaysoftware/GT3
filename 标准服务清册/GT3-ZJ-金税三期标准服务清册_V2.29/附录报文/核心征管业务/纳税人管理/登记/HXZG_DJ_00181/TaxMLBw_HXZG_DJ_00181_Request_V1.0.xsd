@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2013 (http://www.altova.com) by  () -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:include schemaLocation="TaxMLPublicDJType.xsd"/>
+	<xs:complexType name="bgkjskdjswdjb">
+		<xs:annotation>
+			<xs:documentation>变更扣缴税款登记表信息</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="djxh" type="djxh">
+				<xs:annotation>
+					<xs:documentation>登记序号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="lcslid" type="lcslid">
+				<xs:annotation>
+					<xs:documentation>流程实例ID</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zgswskfjDm" type="zgswskfjDm">
+				<xs:annotation>
+					<xs:documentation>主管税务所科分局代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="pzjguuid" type="pzjguuid">
+				<xs:annotation>
+					<xs:documentation>批准机构uuid</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="xnsrsbh" type="nsrsbh">
+				<xs:annotation>
+					<xs:documentation>新纳税人识别号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bgslxxvo" type="DJYsqywslxxbVO">
+				<xs:annotation>
+					<xs:documentation>受理信息</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bgkjskdjdjmxGrid" type="bgkjskdjdjmxGrid">
+				<xs:annotation>
+					<xs:documentation>变更税务登记明细信息</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="insertdkdjdsdjskywqkGrid" type="bgbcdkdjdsdjskywqkGrid">
+				<xs:annotation>
+					<xs:documentation>纳税人信息投资总额信息</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="updatedkdjdsdjskywqkGrid" type="bgbcdkdjdsdjskywqkGrid">
+				<xs:annotation>
+					<xs:documentation>纳税人信息投资总额信息</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="deletedkdjdsdjskywqkGrid" type="bgbcdkdjdsdjskywqkGrid">
+				<xs:annotation>
+					<xs:documentation>纳税人信息投资总额信息</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="bgkjskdjdjmxGrid">
+		<xs:annotation>
+			<xs:documentation>变更登记明细信息列表</xs:documentation>
+		</xs:annotation>
+		<xs:sequence minOccurs="0" maxOccurs="unbounded">
+			<xs:element name="bgdjmxGridlb" type="DJBgdjmxVO">
+				<xs:annotation>
+					<xs:documentation>变更税务登记明细信息</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="bgbcdkdjdsdjskywqkGrid">
+		<xs:annotation>
+			<xs:documentation>变更登记明细信息列表</xs:documentation>
+		</xs:annotation>
+		<xs:sequence minOccurs="0" maxOccurs="unbounded">
+			<xs:element name="bgbcdkdjdsdjskywqkGridlb" type="DJDkdjdsdjskywqkVO">
+				<xs:annotation>
+					<xs:documentation>变更登记明细信息列表</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="HXZGDJ00181Request">
+		<xs:annotation>
+			<xs:documentation>保存变更扣缴税款登记表信息接入报文</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="bgkjskdjswdjb" type="bgkjskdjswdjb">
+						<xs:annotation>
+							<xs:documentation>变更税务登记采集表提交</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+</xs:schema>

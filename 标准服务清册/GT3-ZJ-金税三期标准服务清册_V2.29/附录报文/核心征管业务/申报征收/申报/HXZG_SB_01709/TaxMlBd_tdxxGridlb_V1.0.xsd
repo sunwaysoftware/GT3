@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 被2012 () 使用XMLSpy v编辑的 (http://www.altova.com) by -->
+<!-- edited with XMLSpy v2013 (http://www.altova.com) by  () -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:include schemaLocation="TaxMLPublicType.xsd"/>
+	<xs:complexType name="TdxxGridlbVO">
+		<xs:annotation>
+			<xs:documentation>土地信息VO</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="djxh" type="djxh" nillable="true">
+				<xs:annotation>
+					<xs:documentation>登记序号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="czrfs" type="czrfs" nillable="true">
+				<xs:annotation>
+					<xs:documentation>czrfs</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="tdzldz" type="tdzldz" nillable="true">
+				<xs:annotation>
+					<xs:documentation>tdzldz</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qh" type="qh" nillable="true">
+				<xs:annotation>
+					<xs:documentation>qh</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="tdsybh" type="tdsybh" nillable="true">
+				<xs:annotation>
+					<xs:documentation>tdsybh</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="czrsj" type="czrsj" nillable="true">
+				<xs:annotation>
+					<xs:documentation>czrsj</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="tdytDm" type="tdytDm" nillable="true">
+				<xs:annotation>
+					<xs:documentation>tdytDm</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="tddjDm" type="tddjDm" nillable="true">
+				<xs:annotation>
+					<xs:documentation>tddjDm</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sz1" type="sz1" nillable="true">
+				<xs:annotation>
+					<xs:documentation>sz1</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="tdsdswjgDm" type="tdsdswjgDm" nillable="true">
+				<xs:annotation>
+					<xs:documentation>tdsdswjgDm</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="tdsyzbh" type="tdsyzbh" nillable="true">
+				<xs:annotation>
+					<xs:documentation>tdsyzbh</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="tdmj" type="tdmj" nillable="true">
+				<xs:annotation>
+					<xs:documentation>tdmj</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="mstdmj" type="mstdmj" nillable="true">
+				<xs:annotation>
+					<xs:documentation>mstdmj</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ystdmj" type="ystdmj" nillable="true">
+				<xs:annotation>
+					<xs:documentation>ystdmj</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="dwse" type="dwse" nillable="true">
+				<xs:annotation>
+					<xs:documentation>dwse</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="nynse" type="nynse" nillable="true">
+				<xs:annotation>
+					<xs:documentation>nynse</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="nsqxDm" type="nsqxDm" nillable="true">
+				<xs:annotation>
+					<xs:documentation>nsqxDm</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sbqxDm" type="sbqxDm" nillable="true">
+				<xs:annotation>
+					<xs:documentation>sbqxDm</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jkqxDm" type="jkqxDm">
+				<xs:annotation>
+					<xs:documentation>jkqxDm</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yskmDm" type="yskmDm" nillable="true">
+				<xs:annotation>
+					<xs:documentation>yskmDm</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ysfpblDm" type="ysfpblDm" nillable="true">
+				<xs:annotation>
+					<xs:documentation>ysfpblDm</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="skgkDm" type="skgkDm" nillable="true">
+				<xs:annotation>
+					<xs:documentation>skgkDm</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zscztdsysbz" type="zscztdsysbz" nillable="true">
+				<xs:annotation>
+					<xs:documentation>zscztdsysbz</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zspmDm" type="zspmDm">
+				<xs:annotation>
+					<xs:documentation>zspmDm</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="tdczrmc" type="tdczrmc">
+				<xs:annotation>
+					<xs:documentation>tdczrmc</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="tdczrsfzjhm" type="tdczrsfzjhm" nillable="true">
+				<xs:annotation>
+					<xs:documentation>tdczrsfzjhm</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="czrsfzjzlDm" type="czrsfzjzlDm" nillable="true">
+				<xs:annotation>
+					<xs:documentation>czrsfzjzlDm</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yxqq" type="yxqq" nillable="true">
+				<xs:annotation>
+					<xs:documentation>yxqq</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yxqz" type="yxqz" nillable="true">
+				<xs:annotation>
+					<xs:documentation>yxqz</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jdxzDm" type="jdxzDm" nillable="true">
+				<xs:annotation>
+					<xs:documentation>jdxzDm</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zgswskfjDm" type="zgswskfjDm" nillable="true">
+				<xs:annotation>
+					<xs:documentation>zgswskfjDm</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="xzqhszDm" type="xzqhszDm" nillable="true">
+				<xs:annotation>
+					<xs:documentation>xzqhszDm</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="tdsyzfzjgmc" type="tdsyzfzjgmc" nillable="true">
+				<xs:annotation>
+					<xs:documentation>tdsyzfzjgmc</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

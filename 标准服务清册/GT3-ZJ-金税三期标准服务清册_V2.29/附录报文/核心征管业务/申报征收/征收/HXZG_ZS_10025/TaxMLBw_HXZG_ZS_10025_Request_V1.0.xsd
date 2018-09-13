@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 被2011 rel. 2 sp1 (pjf) 使用XMLSpy vcss编辑的 (http://www.altova.com) by -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:include schemaLocation="TaxMLPublicZSType.xsd"/>
+	<xs:complexType name="HXZGZS10025Request">
+		<xs:annotation>
+			<xs:documentation>税库银税款缴纳</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="djxh" type="djxh">
+						<xs:annotation>
+							<xs:documentation>登记序号</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="yzpzxhGrid">
+						<xs:annotation>
+							<xs:documentation>应征凭证序号集合</xs:documentation>
+						</xs:annotation>
+						<xs:complexType>
+							<xs:sequence maxOccurs="unbounded">
+								<xs:element name="yzpzxhGridlb">
+									<xs:annotation>
+										<xs:documentation>应征凭证序号列表</xs:documentation>
+									</xs:annotation>
+									<xs:complexType>
+										<xs:sequence>
+											<xs:element name="yzpzxh" type="yzpzxh">
+												<xs:annotation>
+													<xs:documentation>应征凭证序号</xs:documentation>
+												</xs:annotation>
+											</xs:element>
+											<xs:element name="yzpzmxxhGrid" minOccurs="0">
+												<xs:annotation>
+													<xs:documentation>应征凭证明细序号集合</xs:documentation>
+												</xs:annotation>
+												<xs:complexType>
+													<xs:sequence maxOccurs="unbounded">
+														<xs:element name="yzpzmxxhGridlb">
+															<xs:annotation>
+																<xs:documentation>应征凭证序号列表</xs:documentation>
+															</xs:annotation>
+															<xs:complexType>
+																<xs:sequence>
+																	<xs:element name="yzpzmxxh" type="yzpzmxxh">
+																		<xs:annotation>
+																			<xs:documentation>应征凭证明细序号</xs:documentation>
+																		</xs:annotation>
+																	</xs:element>
+																	<xs:element name="zsuuid" type="zsuuid">
+																		<xs:annotation>
+																			<xs:documentation>征收UUID</xs:documentation>
+																		</xs:annotation>
+																	</xs:element>
+																	<xs:element name="kkje" type="ybtse" minOccurs="0">
+																		<xs:annotation>
+																			<xs:documentation>扣款金额</xs:documentation>
+																		</xs:annotation>
+																	</xs:element>
+																</xs:sequence>
+															</xs:complexType>
+														</xs:element>
+													</xs:sequence>
+												</xs:complexType>
+											</xs:element>
+										</xs:sequence>
+									</xs:complexType>
+								</xs:element>
+							</xs:sequence>
+						</xs:complexType>
+					</xs:element>
+					<xs:element name="sfxyh" type="sfxyh">
+						<xs:annotation>
+							<xs:documentation>三方协议号</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="zgswjgDm" type="zsjgDm">
+						<xs:annotation>
+							<xs:documentation>主管税务所科分局代码</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="lrrDm" type="lrrDm">
+						<xs:annotation>
+							<xs:documentation>录入人代码</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+</xs:schema>

@@ -1,0 +1,347 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2013 (http://www.altova.com) by  () -->
+<!-- 被2011 rel. 2 sp1 (TeaM DJiNN) 使用XMLSpy vTeaM DJiNN编辑的 (http://www.altova.com) by -->
+<!-- 编辑使用 XMLSpy v2006 U (http://www.altova.com) 由 any (any) -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:include schemaLocation="TaxMLPublicType.xsd"/>
+	<xs:include schemaLocation="TaxMLBd_yqtfb_V1.0.xsd"/>
+	<xs:complexType name="gdzyssbbdywbw">
+		<xs:annotation>
+			<xs:documentation>耕地占用税纳税申报业务报文</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="gdzyssbb" type="gdzyssbb">
+						<xs:annotation>
+							<xs:documentation>耕地占用税纳税申报</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="gdzyssbb">
+		<xs:annotation>
+			<xs:documentation>耕地占用税纳税申报</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="nsrxxForm" type="nsrxxForm">
+				<xs:annotation>
+					<xs:documentation>耕地占用税申报</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="gdzyssbForm" type="gdzyssbForm">
+				<xs:annotation>
+					<xs:documentation>耕地占用税纳税申报表信息</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sbbxxGrid">
+				<xs:annotation>
+					<xs:documentation>申报表信息</xs:documentation>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:sequence maxOccurs="unbounded">
+						<xs:element name="sbbxxGridlb" type="sbbxxGridlbVo">
+							<xs:annotation>
+								<xs:documentation>申报表信息</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="slrxxForm" type="slrxxForm">
+				<xs:annotation>
+					<xs:documentation>受理人信息</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yqtfb" type="yqtfb">
+       			 <xs:annotation>
+           		 	<xs:documentation>油气田附表</xs:documentation>
+        		</xs:annotation>
+    		</xs:element>     
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="nsrxxForm">
+		<xs:annotation>
+			<xs:documentation>耕地占用税申报</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="nsrsbh" type="nsrsbh" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>纳税人识别号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="tdsybh" type="tdsybh" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>土地税源编号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="skssqq" type="skssqq" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>税款所属期起</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="skssqz" type="skssqz" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>税款所属期止</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="tbrq" type="tbrq" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>填报日期</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="nsrmc" type="nsrmc" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>纳税人名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="djlxDm" type="djlxDm" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>登记类型代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="djzclxDm" type="djzclxDm" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>登记注册类型代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="hyDm" type="hyDm" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>行业代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sfzjlxDm" type="sfzjlxDm" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>身份证件类型代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sfzjhm" type="sfzjhm" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>身份证件号码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="xzqhszDm" type="xzqhszDm" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>行政区划数字代码，自然人时传入，用于过滤街道乡镇</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jdxzDm" type="hyDm" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>街道乡镇代码，自然人时传入</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zgswskfjDm" type="zgswskfjDm" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>主管税务科所分局代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="lxr" type="lxr" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>联系人</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="lxfs" type="lxfs" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>联系方式</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sbsxDm1" type="sbsxDm" minOccurs="0"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="gdzyssbForm">
+		<xs:annotation>
+			<xs:documentation>耕地占用税纳税申报表信息</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="xmmc" type="xmmc" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>项目名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="pzzdbm" type="nsrmc" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>批准占地部门</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="pzzdwh" type="pzzdwh" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>批准占地文号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zdsj" type="zdsj" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>占地时间</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="tdzldz" type="tdzldz" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>土地坐落地址</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zdytDm" type="zdytDm" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>占地用途</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zdfs1Dm" type="zdfsDm" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>占地方式代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="pzzdmj" type="pzzdmj" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>批准占地面积</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sjzdmj" type="sjzdmj" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>实际占地面积</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="pzsj" type="zdsj" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>批准时间</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="setgbl1" type="sl1" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>税额提高比例</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jjkfq" type="bz1" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>经济开发区(1是,2否)</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="sbbxxGrid">
+		<xs:annotation>
+			<xs:documentation>申报表信息</xs:documentation>
+		</xs:annotation>
+		<xs:sequence maxOccurs="unbounded">
+			<xs:element name="sbbxxGridlb" type="sbbxxGridlbVo">
+				<xs:annotation>
+					<xs:documentation>申报表信息</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="sbbxxGridlbVo">
+		<xs:annotation>
+			<xs:documentation>申报表信息</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="rdpzuuid" type="rdpzuuid" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>认定凭证uuid</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zspmDm" type="zspmDm" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>征收品目代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zszmDm" type="zszmDm" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>征收子目代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sjzdmj" type="sjzdmj" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>实际占地面积</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sysl" type="sysl" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>适用税率</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jzse" type="jzse" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>计征税额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jmmj" type="mj" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>减免面积</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jsmj" type="mj" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>减税面积</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="msmj" type="mj" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>免税面积</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ssjmxzDm" type="ssjmxzDm" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>税收减免性质代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jmse" type="jmse" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>减免税额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jsse" type="jmse" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>减税税额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="msse" type="jmse" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>免税税额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="szse" type="szse" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>实征税额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yjse" type="yjse" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>已缴税额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="slrxxForm">
+		<xs:annotation>
+			<xs:documentation>受理人信息</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="slr" type="slrxm" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>受理人</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="slrq" type="slrq" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>受理日期</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="slswjg" type="slswjgmc" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>受理税务机关</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="dlr" type="slrxm" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>代理人</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="dlrsfzjhm1" type="sfzjhm" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>代理人身份证件号码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

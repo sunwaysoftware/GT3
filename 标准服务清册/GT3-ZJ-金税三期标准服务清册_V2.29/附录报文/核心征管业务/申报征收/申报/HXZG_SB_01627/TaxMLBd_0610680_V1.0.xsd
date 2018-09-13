@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 被2012 () 使用XMLSpy v编辑的 (http://www.altova.com) by -->
+<!-- edited with XMLSpy v2010 rel. 3 (http://www.altova.com) by MESMERiZE (MSM) -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:complexType name="fcssbb02_czjzfcsbbxx">
+		<xs:annotation>
+			<xs:documentation>从租计征房产税明细表</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="czjzfcsmxbGrid" type="czjzfcsmxbGrid">
+				<xs:annotation>
+					<xs:documentation>从租计征房产税明细表信息</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="czjzfcsmxbGrid">
+		<xs:annotation>
+			<xs:documentation>从租计征房产税明细表信息</xs:documentation>
+		</xs:annotation>
+		<xs:sequence maxOccurs="unbounded">
+			<xs:element name="czjzfcsmxbGridlb" type="czjzfcsmxbGridlbVO">
+				<xs:annotation>
+					<xs:documentation>从租计征房产税明细表信息列表</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="czjzfcsmxbGridlbVO">
+		<xs:annotation>
+			<xs:documentation>从租计征房产税明细表信息列表</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="uuid" type="uuid" nillable="true">
+				<xs:annotation>
+					<xs:documentation>UUID</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="pzxh" type="pzxh" nillable="true">
+				<xs:annotation>
+					<xs:documentation>凭证序号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="djxh" type="djxh" nillable="true">
+				<xs:annotation>
+					<xs:documentation>登记序号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="fybh" type="fybh" nillable="true">
+				<xs:annotation>
+					<xs:documentation>房源编号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="fwcqzsh" type="fwcqzsh" nillable="true">
+				<xs:annotation>
+					<xs:documentation>房屋产权证书号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="tdsybh" type="tdsybh" nillable="true">
+				<xs:annotation>
+					<xs:documentation>土地税源编号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="czfcmj" type="czfcmj" nillable="true">
+				<xs:annotation>
+					<xs:documentation>出租房产面积</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zspmDm" type="zspmDm" nillable="true">
+				<xs:annotation>
+					<xs:documentation>征收品目代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="fcmc" type="fcmc" nillable="true">
+				<xs:annotation>
+					<xs:documentation>房产名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="fcytDm" type="fcytDm" nillable="true">
+				<xs:annotation>
+					<xs:documentation>房产用途代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="dh1" type="dh1" nillable="true">
+				<xs:annotation>
+					<xs:documentation>地号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="pkbz" type="pkbz" nillable="true">
+				<xs:annotation>
+					<xs:documentation>批扣标志</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="xzqhszDm" type="xzqhszDm" nillable="true">
+				<xs:annotation>
+					<xs:documentation>行政区划数字代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="xxdz" type="xxdz" nillable="true">
+				<xs:annotation>
+					<xs:documentation>详细地址</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zgswskfjDm" type="zgswskfjDm" nillable="true">
+				<xs:annotation>
+					<xs:documentation>主管税务所（科、分局）代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zfrq1" type="zfrq1" nillable="true">
+				<xs:annotation>
+					<xs:documentation>作废日期</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sl1" type="sl1" nillable="true">
+				<xs:annotation>
+					<xs:documentation>税率</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="htzjzsr" type="htzjzsr" nillable="true">
+				<xs:annotation>
+					<xs:documentation>合同租金总收入</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="czfnsrsbh" type="czfnsrsbh" nillable="true">
+				<xs:annotation>
+					<xs:documentation>承租方纳税识别号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="czfnsrmc" type="czfnsrmc" nillable="true">
+				<xs:annotation>
+					<xs:documentation>承租方纳税人名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zlrqq" type="zlrqq" nillable="true">
+				<xs:annotation>
+					<xs:documentation>租赁日期起</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zlrqz" type="zlrqz" nillable="true">
+				<xs:annotation>
+					<xs:documentation>租赁日期止</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ssjmxzDm" type="ssjmxzDm" nillable="true">
+				<xs:annotation>
+					<xs:documentation>税收减免性质代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bqjmse" type="bqjmse" nillable="true">
+				<xs:annotation>
+					<xs:documentation>本期减免税额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="nsqxDm" type="nsqxDm" nillable="true">
+				<xs:annotation>
+					<xs:documentation>纳税期限代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sbqxDm" type="sbqxDm" nillable="true">
+				<xs:annotation>
+					<xs:documentation>申报期限代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jkqxDm" type="jkqxDm" nillable="true">
+				<xs:annotation>
+					<xs:documentation>缴款期限代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="czxzDm" type="czxzDm" nillable="true">
+				<xs:annotation>
+					<xs:documentation>出租性质代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bqyszjsr" type="bqyszjsr" nillable="true">
+				<xs:annotation>
+					<xs:documentation>本期应税租金收入</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="mxsbbz1" type="mxsbbz1" nillable="true">
+				<xs:annotation>
+					<xs:documentation>明细申报标志</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jdxzDm" type="jdxzDm" nillable="true">
+				<xs:annotation>
+					<xs:documentation>街道乡镇代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bqynse" type="bqynse" nillable="true">
+				<xs:annotation>
+					<xs:documentation>本期应纳税额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

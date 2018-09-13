@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 被2012 () 使用XMLSpy v编辑的 (http://www.altova.com) by -->
+<!-- edited with XMLSpy v2013 (http://www.altova.com) by  () -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:include schemaLocation="TaxMLPublicFZType.xsd"/>
+	<xs:complexType name="cfsphwhzqtccqdywbw">
+		<xs:annotation>
+			<xs:documentation>《查封商品、货物或者其他财产清单》业务报文</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="cfsphwhzqtccqd" type="cfsphwhzqtccqdVO">
+						<xs:annotation>
+							<xs:documentation>《查封商品、货物或者其他财产清单》</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="cfsphwhzqtccqdVO">
+		<xs:annotation>
+			<xs:documentation>《查封商品、货物或者其他财产清单》</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="jdswszgForm" type="jdswszgForm">
+				<xs:annotation>
+					<xs:documentation>《税收保全措施决定书（查封/扣押适用）》文书字轨Form</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="cfqdzbGrid" type="cfqdzbGrid">
+				<xs:annotation>
+					<xs:documentation>录入清单</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="cfqdxxForm" type="cfqdxxForm">
+				<xs:annotation>
+					<xs:documentation>查封商品、货物或者其他财产清单Form</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="jdswszgForm">
+		<xs:annotation>
+			<xs:documentation>《税收保全措施决定书（查封/扣押适用）》文书字轨Form</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="ssbqcsjdswszg" type="ssbqcsjdswszg">
+				<xs:annotation>
+					<xs:documentation>《税收保全措施决定书（查封/扣押适用）》文书字轨</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="cfqdzbGrid">
+		<xs:annotation>
+			<xs:documentation>录入清单</xs:documentation>
+		</xs:annotation>
+		<xs:sequence maxOccurs="unbounded">
+			<xs:element name="cfqdzbGridlb" type="cfqdzbGridlb">
+				<xs:annotation>
+					<xs:documentation>录入清单列表</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="cfqdzbGridlb">
+		<xs:annotation>
+			<xs:documentation>录入清单列表</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="sphwhzqtcczbuuid" type="sphwhzqtcczbuuid">
+				<xs:annotation>
+					<xs:documentation>商品、货物或者其他财产子表UUID</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ywzjuuid" type="ywzjuuid">
+				<xs:annotation>
+					<xs:documentation>业务主键uuid</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="xh" type="xh">
+				<xs:annotation>
+					<xs:documentation>序号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sphwhzqtccmc" type="sphwhzqtccmc">
+				<xs:annotation>
+					<xs:documentation>商品、货物或者其他财产名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jldwDm" type="jldwDm">
+				<xs:annotation>
+					<xs:documentation>计量单位代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sl" type="sl">
+				<xs:annotation>
+					<xs:documentation>数量</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="dj" type="dj">
+				<xs:annotation>
+					<xs:documentation>单价</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="je" type="je">
+				<xs:annotation>
+					<xs:documentation>金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bz" type="bz">
+				<xs:annotation>
+					<xs:documentation>备注</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="cfqdxxForm">
+		<xs:annotation>
+			<xs:documentation>查封商品、货物或者其他财产清单Form</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="sphwhzqtccuuid" type="sphwhzqtccuuid">
+				<xs:annotation>
+					<xs:documentation>商品、货物或者其他财产UUID</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ajxxuuid" type="ajxxuuid">
+				<xs:annotation>
+					<xs:documentation>案件信息UUID</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jdsuuid" type="jdsuuid">
+				<xs:annotation>
+					<xs:documentation>决定书UUID</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jehj" type="jehj">
+				<xs:annotation>
+					<xs:documentation>金额合计</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zxr" type="zxr">
+				<xs:annotation>
+					<xs:documentation>执行人</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zxrq1" type="zxrq1">
+				<xs:annotation>
+					<xs:documentation>执行日期</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bzxrmc" type="bzxrmc">
+				<xs:annotation>
+					<xs:documentation>被执行人</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="cfbcgyy" type="cfbcgyy">
+				<xs:annotation>
+					<xs:documentation>查封不成功原因</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="dzbzdszlDm" type="dzbzdszlDm">
+				<xs:annotation>
+					<xs:documentation>电子表证单书种类代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="lcslid" type="lcslid">
+				<xs:annotation>
+					<xs:documentation>流程实例ID</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sjslid" type="sjslid">
+				<xs:annotation>
+					<xs:documentation>事件实例ID</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="hdslid" type="hdslid">
+				<xs:annotation>
+					<xs:documentation>活动实例ID</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

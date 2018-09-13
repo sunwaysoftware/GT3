@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 被2012 () 使用XMLSpy v编辑的 (http://www.altova.com) by -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:include schemaLocation="TaxMLPublicType.xsd"/>
+	<xs:include schemaLocation="TaxMLBd_0610316_V1.0.xsd"/>
+	<xs:include schemaLocation="TaxMLBd_0610317_V1.0.xsd"/>
+	<xs:include schemaLocation="TaxMLBd_0610318_V1.0.xsd"/>
+	<xs:include schemaLocation="TaxMLBd_0610319_V1.0.xsd"/>
+	<xs:complexType name="SBXzdwkjzdcwbbywbw">
+		<xs:annotation>
+			<xs:documentation>行政单位会计制度财务报表报送与信息采集总业务报文</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="zcfzbVO" type="SBXzdwkjzdzcfzbVO">
+						<xs:annotation>
+							<xs:documentation>资产负债表</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="srzcbybVO" type="SBXzdwkjzdsrzcbybVO">
+						<xs:annotation>
+							<xs:documentation>收入支出表月报</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="srzcbnbVO" type="SBXzdwkjzdsrzcbnbVO">
+						<xs:annotation>
+							<xs:documentation>收入支出表年报</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="czbksrzcbVO" type="SBXzdwkjzdczbksrzcbVO">
+						<xs:annotation>
+							<xs:documentation>财政拨款收入支出表</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+</xs:schema>

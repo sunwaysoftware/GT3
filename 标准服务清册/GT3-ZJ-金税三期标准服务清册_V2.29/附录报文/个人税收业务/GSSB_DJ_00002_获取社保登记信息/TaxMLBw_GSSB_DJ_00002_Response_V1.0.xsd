@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 被2012 () 使用XMLSpy v编辑的 (http://www.altova.com) by -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:complexType name="GSSBDJ00002Response">
+		<xs:annotation>
+			<xs:documentation>获取社保登记信息</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="sbdjxxGrid">
+						<xs:annotation>
+							<xs:documentation>社保登记信息列表</xs:documentation>
+						</xs:annotation>
+						<xs:complexType>
+							<xs:sequence maxOccurs="unbounded">
+								<xs:element name="sbdjxxlb" type="SbDjxxDTO"/>
+							</xs:sequence>
+						</xs:complexType>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="SbDjxxDTO">
+		<xs:annotation>
+			<xs:documentation>登记社保户信息DTO</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="sbjbjgDm" type="sbjbjgDm">
+				<xs:annotation>
+					<xs:documentation>社保经办机构代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sbbm" type="sbbm">
+				<xs:annotation>
+					<xs:documentation>社保编码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="cblxDm" type="cblxDm">
+				<xs:annotation>
+					<xs:documentation>参保类型</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jfrztDm" type="jfrztDm">
+				<xs:annotation>
+					<xs:documentation>社保登记状态</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zgswjgDm" type="zgswjgDm">
+				<xs:annotation>
+					<xs:documentation>主管税务机关代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zgswskfjDm" type="zgswskfjDm">
+				<xs:annotation>
+					<xs:documentation>主管税务所（科、分局）代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ssglyDm" type="ssglyDm">
+				<xs:annotation>
+					<xs:documentation>税收管理员代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jfrlx" type="jfrlx">
+				<xs:annotation>
+					<xs:documentation>缴费人类型</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sfqzsbh" type="sfqzsbh" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>是否为全责模式社保户(Y)</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2010 rel. 3 (http://www.altova.com) by MESMERiZE (MSM) -->
+<!-- 被2012 () 使用XMLSpy v编辑的 (http://www.altova.com) by -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:complexType name="HXZGSB00755Request">
+		<xs:annotation>
+			<xs:documentation>查询车辆购置税完税证明信息接入报文</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="clsbdh" type="clsbdh" nillable="true">
+						<xs:annotation>
+							<xs:documentation>车辆识别代号（允许为空，但车辆识别代号、完税证明号码不能同时为空）</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="wszmhm" type="wszmhm" nillable="true">
+						<xs:annotation>
+							<xs:documentation>完税证明号码（允许为空，但车辆识别代号、完税证明号码不能同时为空）</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+</xs:schema>

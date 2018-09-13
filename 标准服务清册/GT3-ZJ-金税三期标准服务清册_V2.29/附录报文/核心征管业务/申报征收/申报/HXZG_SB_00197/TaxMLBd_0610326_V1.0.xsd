@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2010 rel. 3 (http://www.altova.com) by xuxin (csstj) -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:complexType name="dwhzkcsyqyktkffyndmxbywbw">
+		<xs:annotation>
+			<xs:documentation>《对外合作开采石油企业勘探开发费用年度明细表》业务报文</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="dwhzkcsyqyktkffyndmxbGrid">
+						<xs:annotation>
+							<xs:documentation>《对外合作开采石油企业勘探开发费用年度明细表》</xs:documentation>
+						</xs:annotation>
+						<xs:complexType>
+							<xs:sequence maxOccurs="unbounded">
+								<xs:element name="dwhzkcsyqyktkffyndmxbGridlb" type="dwhzkcsyqyktkffyndmxbGridlbVO">
+									<xs:annotation>
+										<xs:documentation>《对外合作开采石油企业勘探开发费用年度明细表》</xs:documentation>
+									</xs:annotation>
+								</xs:element>
+							</xs:sequence>
+						</xs:complexType>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="dwhzkcsyqyktkffyndmxb">
+		<xs:annotation>
+			<xs:documentation>《对外合作开采石油企业勘探开发费用年度明细表》</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="dwhzkcsyqyktkffyndmxbGrid">
+				<xs:annotation>
+					<xs:documentation>《对外合作开采石油企业勘探开发费用年度明细表》</xs:documentation>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:sequence maxOccurs="unbounded">
+						<xs:element name="dwhzkcsyqyktkffyndmxbGridlb" type="dwhzkcsyqyktkffyndmxbGridlbVO">
+							<xs:annotation>
+								<xs:documentation>《对外合作开采石油企业勘探开发费用年度明细表》</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="dwhzkcsyqyktkffyndmxbGridlbVO">
+		<xs:annotation>
+			<xs:documentation>对外合作开采石油企业勘探开发费用年度明细表</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="pzxh" type="pzxh">
+				<xs:annotation>
+					<xs:documentation>凭证序号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ewbhxh" type="ewbhxh" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>二维表行序号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="hmc" type="hmc" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>行名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="clhzbftfy1" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>从联合帐本分摊费用1</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="clhzbftfy2" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>从联合帐本分摊费用2</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="clhzbftfy3" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>从联合帐本分摊费用3</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="clhzbftfybqshj" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>从联合帐本分摊费用本期数合计</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="clhzbftfyljzs" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>从联合帐本分摊费用累计总数</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bnlrlhzbgsjtft" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>不能列入联合帐本的费用公司集团分摊</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bnlrlhzbddfs" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>不能列入联合帐本的费用单独发生</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bnlrlhzbbqshj" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>不能列入联合帐本的费用本期数合计</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bnlrlhzbljzs" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>不能列入联合帐本的费用累计总数</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

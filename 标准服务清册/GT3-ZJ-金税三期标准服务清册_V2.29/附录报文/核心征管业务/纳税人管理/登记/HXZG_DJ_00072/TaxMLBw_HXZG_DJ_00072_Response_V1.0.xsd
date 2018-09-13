@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2013 (http://www.altova.com) by  () -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:complexType name="HXZGDJ00072Response">
+		<xs:annotation>
+			<xs:documentation>查询组织机构代码、纳税人名称等询已登记纳税人信息返回报文</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="nsrxxGrid" type="nsrxxGrid"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="DJZzlsdjNsrxxVO">
+		<xs:annotation>
+			<xs:documentation>纳税人全部信息（基本信息、扩展信息、批准机构信息、主管税务机关信息、附营行业信息）</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="djxh" type="djxh">
+				<xs:annotation>
+					<xs:documentation>登记序号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="nsrsbh" type="nsrsbh">
+				<xs:annotation>
+					<xs:documentation>纳税人识别号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="nsrmc" type="nsrmc">
+				<xs:annotation>
+					<xs:documentation>纳税人名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="kzztdjlxDm" type="kzztdjlxDm">
+				<xs:annotation>
+					<xs:documentation>课征主体登记类型代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="djzclxDm" type="djzclxDm" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>登记注册类型代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="fddbrxm" type="fddbrxm" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>法定代表人姓名</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="fddbrsfzjlxDm" type="fddbrsfzjlxDm" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>法定代表人身份证件类型代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="scjydz" type="scjydz" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>生产经营地址</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="fddbrsfzjhm" type="fddbrsfzjhm" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>法定代表人身份证号码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="scjydzxzqhszDm" type="scjydzxzqhszDm" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>生产经营地址行政区划数字代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="nsrztDm" type="nsrztDm">
+				<xs:annotation>
+					<xs:documentation>纳税人状态代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="hyDm" type="hyDm" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>行业代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zcdz" type="zcdz" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>注册地址</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zcdzxzqhszDm" type="zcdzxzqhszDm" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>注册地址行政区划数字代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jdxzDm" type="jdxzDm" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>街道乡镇代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="dwlsgxDm" type="dwlsgxDm" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>单位隶属关系代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zzjgDm" type="zzjgDm" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>组织机构代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="kqccsztdjbz" type="kqccsztdjbz">
+				<xs:annotation>
+					<xs:documentation>跨区财产税主体登记标志</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="hjszd" type="hjszd" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>户籍所在地</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jyfw" type="jyfw" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>经营范围</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zcdlxdh" type="zcdlxdh" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>注册地联系电话</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zcdyzbm" type="zcdyzbm" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>注册地邮政编码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="scjydlxdh" type="scjydlxdh" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>生产经营地联系电话</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="scjydyzbm" type="scjydyzbm" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>生产经营地邮政编码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zzjglxDm" type="zzjglxDm" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>组织机构类型代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bsrxm" type="bsrxm" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>办税人姓名</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="lsswdjyxqq" type="lsswdjyxqq" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>临时税务登记有效期起</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="lsswdjyxqz" type="lsswdjyxqz" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>临时税务登记有效期止</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="whsyjsfjfxxdjbz" type="whsyjsfjfxxdjbz">
+				<xs:annotation>
+					<xs:documentation>文化事业建设费缴费信息登记标志</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="pzjguuid" type="pzjguuid">
+				<xs:annotation>
+					<xs:documentation>批准机构UUID</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zzlxDm" type="zzlxDm" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>执照类型代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zzhm" type="zzhm" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>证照编号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zgswjDm" type="zgswjDm">
+				<xs:annotation>
+					<xs:documentation>主管税务机关代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zgswskfjDm" type="zgswskfjDm">
+				<xs:annotation>
+					<xs:documentation>主管税务所科分局代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ssglyDm" type="ssglyDm">
+				<xs:annotation>
+					<xs:documentation>税收管理员代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="gjhdqszDm" type="gjhdqszDm">
+				<xs:annotation>
+					<xs:documentation>国家或地区数字代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="shxydm" type="nsrsbh">
+				<xs:annotation>
+					<xs:documentation>社会信用代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ynsrsbh" type="nsrsbh" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>原纳税人识别号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="szgjdqnsrsbh" type="nsrsbh">
+				<xs:annotation>
+					<xs:documentation>所在国家和地区纳税人识别号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="nsrywmc" type="nsrmc">
+				<xs:annotation>
+					<xs:documentation>纳税人英文名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ywzcdz" type="ywzcdz">
+				<xs:annotation>
+					<xs:documentation>英文注册地址</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="nsrxxGrid">
+		<xs:annotation>
+			<xs:documentation>纳税人信息Grid</xs:documentation>
+		</xs:annotation>
+		<xs:sequence maxOccurs="unbounded">
+			<xs:element name="nsrxxGridlb" type="DJZzlsdjNsrxxVO"/>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

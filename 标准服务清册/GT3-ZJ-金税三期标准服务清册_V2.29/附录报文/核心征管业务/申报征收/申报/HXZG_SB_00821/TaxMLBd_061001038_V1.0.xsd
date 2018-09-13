@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2009 (http://www.altova.com) by Administrator (EMBRACE) -->
+<!-- 被2012 () 使用XMLSpy v编辑的 (http://www.altova.com) by -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:complexType name="yyssb01_jtysyyysnssbbywbw">
+		<xs:annotation>
+			<xs:documentation>《交通运输业营业税纳税申报表》业务报文</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="yyssb01_jtysyyysnssbb" type="yyssb01_jtysyyysnssbb">
+						<xs:annotation>
+							<xs:documentation>《交通运输业营业税纳税申报表》</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="yyssb01_jtysyyysnssbb">
+		<xs:annotation>
+			<xs:documentation>《交通运输业营业税纳税申报表》</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="jtysyyysnssbbGrid" type="jtysyyysnssbbGrid">
+				<xs:annotation>
+					<xs:documentation>交通运输业营业税纳税申报明细</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="jtysyyysnssbbGrid">
+		<xs:annotation>
+			<xs:documentation>申报信息</xs:documentation>
+		</xs:annotation>
+		<xs:sequence maxOccurs="unbounded">
+			<xs:element name="jtysyyysnssbbGridlb" type="jtysyyysnssbbGridlb">
+				<xs:annotation>
+					<xs:documentation>交通运输业营业税纳税申报明细列表</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="jtysyyysnssbbGridlb">
+		<xs:annotation>
+			<xs:documentation>交通运输业营业税纳税申报明细列表</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="hmc" type="hmc" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>行名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ysxmDm" type="zspmDm" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>应税项目</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yssr" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>应税收入</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ysjcxmjexj" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>应税减除项目金额小计</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zfhzysfyfje" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>支付合作运输方运费金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qtjcxmje" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>其他减除项目金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ysyye" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>应税营业额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="mssr" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>免税收入</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sl1" type="sl1" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>税率</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bqskxj" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>本期税款小计</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bqynse" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>本期应纳税额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="mjse" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>本期免（减）税额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qcqjse" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>期初欠缴税额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qqdjse" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>前期多缴税额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bqyjsexj" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>本期已缴税额小计</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yjbqynse" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>已缴本期应纳税额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bqyjqjse" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>本期已缴欠缴税额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bqyjnsexj" type="bqyjnsexj" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>本期应缴税额小计</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bqqmyjse" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>本期期末应缴税额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bqqmyjqjse" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>本期期末应缴欠缴税额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

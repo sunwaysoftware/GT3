@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2010 rel. 3 (http://www.altova.com) by MESMERiZE (MSM) -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:complexType name="HXZGSB00304Response">
+		<xs:annotation>
+			<xs:documentation>根据免税类别查询车辆购置税免税图册信息</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="clgzsmstcGrid" type="ClgzsmstcGrid">
+						<xs:annotation>
+							<xs:documentation>车辆购置税免税图册</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="ClgzsmstcGrid">
+		<xs:annotation>
+			<xs:documentation>车辆购置税免税图册</xs:documentation>
+		</xs:annotation>
+		<xs:sequence maxOccurs="unbounded">
+			<xs:element name="clgzsmstcGridlb" type="SBCgsYhMstcxxVO">
+				<xs:annotation>
+					<xs:documentation>车辆购置税免税图册</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="SBCgsYhMstcxxVO">
+		<xs:annotation>
+			<xs:documentation>车辆购置税免税图册</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="mstcuuid" type="mstcuuid">
+				<xs:annotation>
+					<xs:documentation>免税图册UUID</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bbuuid" type="bbuuid" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>版本UUID</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="lcslid" type="lcslid">
+				<xs:annotation>
+					<xs:documentation>流程实例ID</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="xh" type="xh" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>序号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="nh" type="nh" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>年号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="nnch" type="nnch" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>年内册号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="cnyh" type="cnyh" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>册内页号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="mslbDm" type="mslbDm" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>免税类别代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="msmxDm" type="msmxDm" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>免税明细代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="cp" type="cp">
+				<xs:annotation>
+					<xs:documentation>厂牌</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="xh3" type="xh3">
+				<xs:annotation>
+					<xs:documentation>型号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="scqymc" type="scqymc">
+				<xs:annotation>
+					<xs:documentation>生产企业名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="clyt" type="clyt" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>车辆用途</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="clgzsrlnyzlDm" type="clgzsrlnyzlDm" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>燃料（能源）种类代码||燃料（能源）种类代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zygdzz" type="zygdzz">
+				<xs:annotation>
+					<xs:documentation>主要固定装置</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="cltpn" type="cltpn" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>车辆图片（外）</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="cltpw" type="cltpw" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>车辆图片（外）</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="lrrDm" type="lrrDm">
+				<xs:annotation>
+					<xs:documentation>录入人代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="lrrq" type="lrrq">
+				<xs:annotation>
+					<xs:documentation>录入日期</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="xgrDm" type="xgrDm" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>修改人代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="xgrq" type="xgrq" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>修改日期</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sjgsdq" type="sjgsdq">
+				<xs:annotation>
+					<xs:documentation>数据归属地区</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

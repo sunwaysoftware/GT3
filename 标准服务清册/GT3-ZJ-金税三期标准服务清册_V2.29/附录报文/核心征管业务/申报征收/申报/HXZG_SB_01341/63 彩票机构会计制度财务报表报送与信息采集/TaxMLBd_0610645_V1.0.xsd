@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 被2011 rel. 2 sp1 (TeaM DJiNN) 使用XMLSpy vTeaM DJiNN编辑的 (http://www.altova.com) by -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:include schemaLocation="TaxMLPublicType.xsd"/>
+	<xs:complexType name="cpjgCpzjfpmxVO">
+		<xs:annotation>
+			<xs:documentation>彩票机构会计制度彩票资金分配明细表VO</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="NsrxxFormVO" type="NsrxxFormVO"/>
+			<xs:element name="cpjgCpzjfpmxGrid">
+				<xs:annotation>
+					<xs:documentation>报送信息</xs:documentation>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:sequence maxOccurs="unbounded">
+						<xs:element name="cpjgCpzjfpmxGridlbVO" type="cpjgCpzjfpmxGridlbVO"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="cpjgCpzjfpmxGridlbVO">
+		<xs:annotation>
+			<xs:documentation>报送信息</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="ewbhxh" type="ewbhxh" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>二维表行序号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="hmc" type="hmc" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>行名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="cpxse" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>彩票销售额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jtbl" type="bl" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>计提比例</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jtjeJj" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>计提金额_奖金</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jtjeTjjj" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>计提金额_调节基金</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jtjeXj" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>计提金额_小计</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zjje" type="zjje" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>中奖金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="cpgyjJtbl" type="bl" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>彩票公益金_计提比例</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="cpgyjJtje" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>彩票公益金_计提金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="cpgyjQjjjzre" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>彩票公益金_弃奖奖金转入额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="cpgyjSjsje" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>彩票公益金_实际上缴额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="cpywfFxjg" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>彩票业务费_发行机构</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="cpywfSjxsjg" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>彩票业务费_省级销售机构</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="cpywfSjyx" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>彩票业务费_省级以下</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="cpywfXj" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>彩票业务费_小计</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="cpdxf" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>彩票代销费</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

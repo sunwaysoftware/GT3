@@ -1,0 +1,368 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 被2012 () 使用XMLSpy v编辑的 (http://www.altova.com) by -->
+<!-- edited with XMLSpy v2013 (http://www.altova.com) by  () -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:complexType name="ZdsswfajxxgbResponse">
+		<xs:annotation>
+			<xs:documentation>重大案件信息公布业务报文</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="ZdsswfajxxgbFrForm" type="ZdsswfajxxgbFrForm">
+						<xs:annotation>
+							<xs:documentation>重大案件信息公布法人</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="ZdsswfajxxgbZrrForm" type="ZdsswfajxxgbZrrForm">
+						<xs:annotation>
+							<xs:documentation>重大案件信息公布自然人</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="reCode" type="nsrmc" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>返回标志（1：有满足条件的案件，0：没有）</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="reMessage" type="nr" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>返回信息</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="ZdsswfajxxgbFrForm">
+		<xs:annotation>
+			<xs:documentation>重大案件信息公布法人列表</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="ZdsswfajxxgbfrGrid">
+				<xs:annotation>
+					<xs:documentation>重大案件信息公布法人列表</xs:documentation>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:sequence maxOccurs="100">
+						<xs:element name="ZdsswfajxxgbfrGridlb" type="ZdsswfajxxgbfrGridlbVO">
+							<xs:annotation>
+								<xs:documentation>重大案件信息公布法人列表</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="ZdsswfajxxgbZrrForm">
+		<xs:annotation>
+			<xs:documentation>重大案件信息公布自然人列表</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="ZdsswfajxxgbzrrGrid">
+				<xs:annotation>
+					<xs:documentation>重大案件信息公布自然人列表</xs:documentation>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:sequence maxOccurs="100">
+						<xs:element name="ZdsswfajxxgbzrrGridlb" type="ZdsswfajxxgbzrrGridlbVO">
+							<xs:annotation>
+								<xs:documentation>重大案件信息公布自然人列表</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="ZdsswfajxxgbfrGridlbVO">
+		<xs:annotation>
+			<xs:documentation>重大案件信息公布法人信息</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="zdsswfajxxgbdjbuuid" type="uuid" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>公布登记表uuid</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="djxh" type="djxh" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>登记序号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="nsrsbh" type="nsrsbh" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>纳税人识别号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="nsrmc" type="nsrmc">
+				<xs:annotation>
+					<xs:documentation>纳税人名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zcdz" type="zcdz" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>注册地址</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="fddbrxm" type="nsrmc" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>法定代表人姓名</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="fddbrfzrxb" type="nsrmc" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>法定代表人性别</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="fddbrsfzjlxDm" type="nsrmc" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>法定代表人身份证件类型代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="fddbrsfzjhm" type="nsrmc" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>法定代表人身份证号码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jfypjqddsjzrrxm" type="nsrmc" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>经法院判决确定的实际责任人姓名</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jfypjqddsjzrrxbDm" type="nsrmc" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>经法院判决确定的实际责任人性别</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jfypjqddsjzrrzjmc" type="nsrmc" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>经法院判决确定的实际责任人证件名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jfypjqddsjzrrzjzjhm" type="nsrmc" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>经法院判决确定的实际责任人证件号码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="wfssfssfddbrfzrxm" type="nsrmc" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>违法事实发生时的法定代表人（责任人）姓名</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="wfssfssfddbrfzrxb" type="nsrmc" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>违法事实发生时的法定代表人（责任人）性别</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="wfssfssfddbrfzrzjmc" type="nsrmc" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>违法事实发生时的法定代表人（责任人）证件名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="wfssfssfddbrfzrzjhm" type="nsrmc" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>违法事实发生时的法定代表人（责任人）证件号码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jfypjqdfyzjzzdcwryxm" type="nsrmc" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>经法院判决确定负有直接责任的财务人员姓名</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jfypjqdfyzjzzdcwryxb" type="nsrmc" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>经法院判决确定负有直接责任的财务人员性别</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jfypjqdfyzjzzdcwrysfzhm" type="nsrmc" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>经法院判决确定负有直接责任的财务人员身份证号码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="fyzjzrdsszyfwjgnsrsbh" type="nsrmc" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>负有直接责任的涉税专业服务机构的纳税人识别号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="fyzjzrdsszyfwjgzcdz" type="nsrmc" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>负有直接责任的涉税专业服务机构的注册地址</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="fyzjzrdsszyfwjgzjzrrxm" type="nsrmc" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>负有直接责任涉税专业服务机构的直接责任人姓名</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="fyzjzrdsszyfwjgzjzrrxb" type="nsrmc" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>负有直接责任涉税专业服务机构的直接责任人姓名性别</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="fyzjzrdsszyfwjgzjzrrzjhm" type="nsrmc" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>负有直接责任涉税专业服务机构的直接责任人身份证证件号码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zyzgzsbh" type="nsrmc" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>负有直接责任涉税专业服务机构的直接责任人职业资格证书编号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zdsswfajxzlxmc" type="nsrmc" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>案件性质</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zywfss" type="nsrmc" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>主要违法事实</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="flyjjclcfqk" type="nsrmc" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>相关法律依据及处理处罚情况</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="swcljdswszg" type="nsrmc" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>税务处理决定书文书字轨</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="swxzcfjdswszg" type="nsrmc" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>税务行政处罚决定书文书字轨</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ggrq" type="nsrmc" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>公告日期</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ajztDm" type="nsrmc" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>案件状态</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="ZdsswfajxxgbzrrGridlbVO">
+		<xs:annotation>
+			<xs:documentation>重大案件信息公布自然人信息</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="zdsswfajxxgbdjbuuid" type="uuid" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>公布登记表uuid</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="djxh" type="djxh" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>登记序号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="nsrsbh" type="nsrsbh" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>姓名</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="nsrmc" type="nsrmc">
+				<xs:annotation>
+					<xs:documentation>性别</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="fddbrxm" type="nsrmc" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>姓名</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="fddbrfzrxb" type="nsrmc" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>性别</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="fddbrsfzjlxDm" type="nsrmc" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>证件名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="fddbrsfzjhm" type="nsrmc" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>证件号码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="fyzjzrdsszyfwjgmc" type="nsrmc" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>负有直接责任的涉税专业服务机构名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="fyzjzrdsszyfwjgnsrsbh" type="nsrmc" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>负有直接责任的涉税专业服务机构的纳税人识别号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="fyzjzrdsszyfwjgzcdz" type="nsrmc" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>负有直接责任的涉税专业服务机构的注册地址</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="fyzjzrdsszyfwjgzjzrrxm" type="nsrmc" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>负有直接责任涉税专业服务机构的直接责任人姓名</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="fyzjzrdsszyfwjgzjzrrxb" type="nsrmc" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>负有直接责任涉税专业服务机构的直接责任人姓名性别</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="fyzjzrdsszyfwjgzjzrrzjhm" type="nsrmc" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>负有直接责任涉税专业服务机构的直接责任人身份证证件号码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zyzgzsbh" type="nsrmc" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>负有直接责任涉税专业服务机构的直接责任人职业资格证书编号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zdsswfajxzlxmc" type="nsrmc" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>案件性质</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zywfss" type="nsrmc" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>主要违法事实</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="flyjjclcfqk" type="nsrmc" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>相关法律依据及处理处罚情况</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="swcljdswszg" type="nsrmc" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>税务处理决定书文书字轨</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="swxzcfjdswszg" type="nsrmc" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>税务行政处罚决定书文书字轨</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ggrq" type="nsrmc" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>公告日期</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ajztDm" type="nsrmc" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>案件状态</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

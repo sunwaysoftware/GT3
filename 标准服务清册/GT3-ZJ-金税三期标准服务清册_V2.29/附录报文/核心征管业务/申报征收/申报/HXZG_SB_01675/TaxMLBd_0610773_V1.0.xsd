@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2011 (http://www.altova.com) by www.hbnu.com (www.hbnu.com) -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:complexType name="fjmqysdsSsyhmxb">
+		<xs:annotation>
+			<xs:documentation>《中华人民共和国非居民企业所得税税收优惠明细表（适用于据实申报企业）</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="fjmqysdsSsyhmxbForm" type="fjmqysdsSsyhmxbForm">
+				<xs:annotation>
+					<xs:documentation>非居民企业所得税税收优惠明细表（适用于据实申报企业）信息</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="fjmqysdsSsyhmxbForm">
+		<xs:annotation>
+			<xs:documentation>非居民企业所得税税收优惠明细表（适用于据实申报企业）</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="msjjsrjjjkc" type="msjjsrjjjkc">
+				<xs:annotation>
+					<xs:documentation>免税、减计收入及加计扣除</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="mssr" type="mssr">
+				<xs:annotation>
+					<xs:documentation>免税收入</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="gzlxsr" type="gzlxsr">
+				<xs:annotation>
+					<xs:documentation>国债利息收入</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="cjmqyqdygjgcsysjlxdgxhl" type="je">
+				<xs:annotation>
+					<xs:documentation>从居民企业取得与该机构、场所有实际联系的股息、红利</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="fhtjdfylzzdsr" type="je">
+				<xs:annotation>
+					<xs:documentation>符合条件的非营利组织的收入</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qdddfzfzqlxsdhsr" type="je">
+				<xs:annotation>
+					<xs:documentation>取得的地方政府债券利息所得或收入</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="hxlahszh" type="je">
+				<xs:annotation>
+					<xs:documentation>海峡两岸海上直航</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="hxlakzzh" type="je">
+				<xs:annotation>
+					<xs:documentation>海峡两岸空中直航</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qtjmxmmcjjmxzdm1" type="bzdsDm">
+				<xs:annotation>
+					<xs:documentation>免税收入其他减免项目名称及减免性质代码1</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qtjmxmmcjjmxzdmje1" type="je">
+				<xs:annotation>
+					<xs:documentation>免税收入其他减免项目名称及减免性质代码金额1</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qtjmxmmcjjmxzdm2" type="bzdsDm">
+				<xs:annotation>
+					<xs:documentation>免税收入其他减免项目名称及减免性质代码2</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qtjmxmmcjjmxzdmje2" type="je">
+				<xs:annotation>
+					<xs:documentation>免税收入其他减免项目名称及减免性质代码金额2</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jjsr" type="je">
+				<xs:annotation>
+					<xs:documentation>减计收入</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zhlyzysccpqddsr" type="je">
+				<xs:annotation>
+					<xs:documentation>综合利用资源生产产品取得的收入</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jrbxdjgqddsnlxbfsr" type="je">
+				<xs:annotation>
+					<xs:documentation>金融、保险等机构取得的涉农利息、保费收入</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qddzgtljszqlxsr" type="je">
+				<xs:annotation>
+					<xs:documentation>取得的中国铁路建设债券利息收入</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qtjmxmmcjjmxzdm3" type="bzdsDm">
+				<xs:annotation>
+					<xs:documentation>减计收入其他减免项目名称及减免性质代码3</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qtjmxmmcjjmxzdmje3" type="je">
+				<xs:annotation>
+					<xs:documentation>减计收入其他减免项目名称及减免性质代码金额3</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qtjmxmmcjjmxzdm4" type="bzdsDm">
+				<xs:annotation>
+					<xs:documentation>减计收入其他减免项目名称及减免性质代码4</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qtjmxmmcjjmxzdmje4" type="je">
+				<xs:annotation>
+					<xs:documentation>减计收入其他减免项目名称及减免性质代码金额4</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jjkc" type="je">
+				<xs:annotation>
+					<xs:documentation>加计扣除</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="azcjryjgjglazdqtjyryszfdgzjjkc" type="je">
+				<xs:annotation>
+					<xs:documentation>安置残疾人员及国家鼓励安置的其他就业人员所支付的工资加计扣除</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qtjmxmmcjjmxzdm5" type="bzdsDm">
+				<xs:annotation>
+					<xs:documentation>加计扣除其他减免项目名称及减免性质代码5</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qtjmxmmcjjmxzdmje5" type="je">
+				<xs:annotation>
+					<xs:documentation>加计扣除其他减免项目名称及减免性质代码金额5</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qtjmxmmcjjmxzdm6" type="bzdsDm">
+				<xs:annotation>
+					<xs:documentation>加计扣除其他减免项目名称及减免性质代码6</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qtjmxmmcjjmxzdmje6" type="je">
+				<xs:annotation>
+					<xs:documentation>加计扣除其他减免项目名称及减免性质代码金额6</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jmsde" type="je">
+				<xs:annotation>
+					<xs:documentation>减免所得税</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="szxbdqdgllcyqy" type="je">
+				<xs:annotation>
+					<xs:documentation>设在西部地区的鼓励类产业企业</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="hqxqptzhsyqhqhsgxdfwyhzqqy" type="je">
+				<xs:annotation>
+					<xs:documentation>横琴新区、平潭综合实验区和前海深港现代服务业合作区企业</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="gjysjmsds" type="je">
+				<xs:annotation>
+					<xs:documentation>国际运输减免所得税</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qtjmxmmcjjmxzdm7" type="bzdsDm">
+				<xs:annotation>
+					<xs:documentation>减免所得税其他减免项目名称及减免性质代码7</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qtjmxmmcjjmxzdmje7" type="je">
+				<xs:annotation>
+					<xs:documentation>减免所得税其他减免项目名称及减免性质代码金额7</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qtjmxmmcjjmxzdm8" type="bzdsDm">
+				<xs:annotation>
+					<xs:documentation>减免所得税其他减免项目名称及减免性质代码8</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qtjmxmmcjjmxzdmje8" type="je">
+				<xs:annotation>
+					<xs:documentation>减免所得税其他减免项目名称及减免性质代码金额8</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="dmsds" type="je">
+				<xs:annotation>
+					<xs:documentation>抵免所得税</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bnyxdmdhjbhjnjsaqsczysbtze" type="je">
+				<xs:annotation>
+					<xs:documentation>本年允许抵免的环境保护、节能节水、安全生产专用设备投资额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qtjmxmmcjjmxzdm9" type="bzdsDm">
+				<xs:annotation>
+					<xs:documentation>抵免所得税其他减免项目名称及减免性质代码9</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qtjmxmmcjjmxzdmje9" type="je">
+				<xs:annotation>
+					<xs:documentation>抵免所得税其他减免项目名称及减免性质代码金额9</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qtjmxmmcjjmxzdm10" type="bzdsDm">
+				<xs:annotation>
+					<xs:documentation>抵免所得税其他减免项目名称及减免性质代码10</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qtjmxmmcjjmxzdmje10" type="je">
+				<xs:annotation>
+					<xs:documentation>抵免所得税其他减免项目名称及减免性质代码金额10</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qt" type="je">
+				<xs:annotation>
+					<xs:documentation>其他</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qtjmxmmcjjmxzdm011" type="bzdsDm">
+				<xs:annotation>
+					<xs:documentation>其他其他减免项目名称及减免性质代码11</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qtjmxmmcjjmxzdmje11" type="je">
+				<xs:annotation>
+					<xs:documentation>其他其他减免项目名称及减免性质代码金额11</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qtjmxmmcjjmxzdm012" type="bzdsDm">
+				<xs:annotation>
+					<xs:documentation>其他其他减免项目名称及减免性质代码12</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qtjmxmmcjjmxzdmje12" type="je">
+				<xs:annotation>
+					<xs:documentation>其他其他减免项目名称及减免性质代码金额12</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="hj" type="je">
+				<xs:annotation>
+					<xs:documentation> 合计</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2009 (http://www.altova.com) by Administrator (EMBRACE) -->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://www.chinatax.gov.cn/dataspec/" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:include schemaLocation="TaxMLPublicRDType.xsd"/>
+	<xs:include schemaLocation="TaxMLPublicDJType.xsd"/>
+	<xs:complexType name="HXZGRD00037Request">
+		<xs:annotation>
+			<xs:documentation>保存非居民享受税收协定待遇备案报告表信息</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="djxh" type="djxh">
+						<xs:annotation>
+							<xs:documentation>登记序号</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="lcslid" type="lcslid">
+						<xs:annotation>
+							<xs:documentation>流程实例ID</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="zgswskfjDm" type="zgswskfjDm">
+						<xs:annotation>
+							<xs:documentation>主观税务所科分局代码</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="slswsxDm" type="slswsxDm">
+						<xs:annotation>
+							<xs:documentation>受理税务事项代码</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="fjmxsssxddybaxxb" type="fjmxsssxddybaxxbVO">
+						<xs:annotation>
+							<xs:documentation>非居民享受税收协定待遇备案信息表</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="fjmxsssxddybaxxbVO">
+		<xs:annotation>
+			<xs:documentation>非居民享受税收协定待遇备案信息表</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="rdssxddysqspb" type="RDSsxddysqspbVO">
+				<xs:annotation>
+					<xs:documentation>非居民享受税收协定待遇申请审批表</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="insertSsxdxxGrid">
+				<xs:annotation>
+					<xs:documentation>非居民享受税收协定待遇备案信息-税收协定信息新增</xs:documentation>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:sequence minOccurs="0" maxOccurs="unbounded">
+						<xs:element name="insertSsxdxxGridlb" type="RDSsxddyspsqmxbVO">
+							<xs:annotation>
+								<xs:documentation>非居民享受税收协定待遇备案信息-税收协定信息新增列表</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="updateSsxdxxGrid">
+				<xs:annotation>
+					<xs:documentation>非居民享受税收协定待遇备案信息-税收协定信息修改</xs:documentation>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:sequence minOccurs="0" maxOccurs="unbounded">
+						<xs:element name="updateSsxdxxGridlb" type="RDSsxddyspsqmxbVO">
+							<xs:annotation>
+								<xs:documentation>非居民享受税收协定待遇备案信息-税收协定信息修改列表</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="deleteSsxdxxGrid">
+				<xs:annotation>
+					<xs:documentation>非居民享受税收协定待遇备案信息-税收协定信息删除</xs:documentation>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:sequence minOccurs="0" maxOccurs="unbounded">
+						<xs:element name="deleteSsxdxxGridlb" type="RDSsxddyspsqmxbVO">
+							<xs:annotation>
+								<xs:documentation>非居民享受税收协定待遇备案信息-税收协定信息删除列表</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="fjmxsssxddybaSqxxForm" type="DJYsqywslxxbVO">
+				<xs:annotation>
+					<xs:documentation>备案申请信息</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ssxdzllsqdGrid">
+				<xs:annotation>
+					<xs:documentation>税收协定资料历史清单</xs:documentation>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:sequence minOccurs="0" maxOccurs="unbounded">
+						<xs:element name="ssxdzllsqdGridlb" type="RDSsxddyspFbzlVO">
+							<xs:annotation>
+								<xs:documentation>税收协定资料历史清单列表</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

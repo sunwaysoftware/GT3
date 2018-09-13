@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2011 (http://www.altova.com) by www.hbnu.com (www.hbnu.com) -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:include schemaLocation="TaxMLPublic.xsd"/>
+	<xs:complexType name="sdsshywhdgbfbbywbywbw">
+		<xs:annotation>
+			<xs:documentation>《国别报告－所得、税收和业务活动国别分布表（英文表）》业务报文</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="qyndglywwlbg2016_G114011" type="qyndglywwlbg2016_G114011">
+						<xs:annotation>
+							<xs:documentation>《国别报告－所得、税收和业务活动国别分布表（英文表）》</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="qyndglywwlbg2016_G114011">
+		<xs:annotation>
+			<xs:documentation>《国别报告－所得、税收和业务活动国别分布表（英文表）》</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="kgqyjtmc" type="nsrmc">
+				<xs:annotation>
+					<xs:documentation>Name of the MNE group</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ssnd" type="ssnd">
+				<xs:annotation>
+					<xs:documentation>Fiscal year concerned</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="gbbgywbGrid" type="gbbgywbGrid">
+				<xs:annotation>
+					<xs:documentation>Overview of allocation of income, taxes and business activities by tax jurisdiction</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="gbbgywbGrid">
+		<xs:annotation>
+			<xs:documentation>Overview of allocation of income, taxes and business activities by tax jurisdiction</xs:documentation>
+		</xs:annotation>
+		<xs:sequence maxOccurs="unbounded">
+			<xs:element name="gbbgywbGridlbVO" type="gbbgywbGridlbVO">
+				<xs:annotation>
+					<xs:documentation>Overview of allocation of income, taxes and business activities by tax jurisdiction</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="gbbgywbGridlbVO">
+		<xs:annotation>
+			<xs:documentation>Overview of allocation of income, taxes and business activities by tax jurisdiction</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="gjhdqszDm" type="gjhdqszDm">
+				<xs:annotation>
+					<xs:documentation>Tax Jurisdiction,取值为代码表DM_GY_GJHDQ</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="fglfsr" type="je">
+				<xs:annotation>
+					<xs:documentation>Revenues Unrelated Party</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="glfsr" type="je">
+				<xs:annotation>
+					<xs:documentation>Revenues Related Party</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zjsr" type="je">
+				<xs:annotation>
+					<xs:documentation>Revenues Total</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sqlr" type="je">
+				<xs:annotation>
+					<xs:documentation>Profit (Loss) efore Income Tax</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yjnqysds" type="je">
+				<xs:annotation>
+					<xs:documentation>Income Tax Paid(on cash basis)</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bnjtdsqysds" type="je">
+				<xs:annotation>
+					<xs:documentation>Income Tax Accrued-current year</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zczb" type="je">
+				<xs:annotation>
+					<xs:documentation>Stated capital</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="lcsy" type="je">
+				<xs:annotation>
+					<xs:documentation>Accumulated earnings</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="gyrs" type="ggrs">
+				<xs:annotation>
+					<xs:documentation>Number of Employees</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yxzc" type="je">
+				<xs:annotation>
+					<xs:documentation>Tangible Assets other than Cash and Cash Equivalents</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2010 rel. 3 (http://www.altova.com) by MESMERiZE (MSM) -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:complexType name="HXZGDJ00506Response">
+		<xs:annotation>
+			<xs:documentation>查询汇总纳税企业信息备案项目部信息返回报文</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="nsrXmbGrid" type="nsrXmbGrid">
+						<xs:annotation>
+							<xs:documentation>纳税人项目部信息</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="nsrXmbGrid">
+		<xs:annotation>
+			<xs:documentation>纳税人项目部信息</xs:documentation>
+		</xs:annotation>
+		<xs:sequence maxOccurs="unbounded">
+			<xs:element name="nsrXmbGridlb" type="nsrxmbxxVO">
+				<xs:annotation>
+					<xs:documentation>纳税人项目部信息列表</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="nsrxmbxxVO">
+		<xs:annotation>
+			<xs:documentation>纳税人项目部信息</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="xmbdjxh" type="xmbdjxh">
+				<xs:annotation>
+					<xs:documentation>项目部登记序号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="gcxmbh" type="gcxmbh">
+				<xs:annotation>
+					<xs:documentation>工程项目编号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="gcxmmc" type="gcxmmc">
+				<xs:annotation>
+					<xs:documentation>工程项目名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="gcxmdz" type="gcxmdz">
+				<xs:annotation>
+					<xs:documentation>工程项目地址</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

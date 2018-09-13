@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2013 (http://www.altova.com) by  () -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:include schemaLocation="TaxMLBd_031003002_V1.0.xsd"/>
+	<xs:complexType name="HXZGYH00072Request">
+		<xs:annotation>
+			<xs:documentation>变更纳税人减免税申请表信息</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="jmsqxxbg" type="jmsqxxbg">
+						<xs:annotation>
+							<xs:documentation>纳税人减免税申请表信息</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="lcslid" type="lcslid">
+						<xs:annotation>
+							<xs:documentation>流程实例ID</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="hdslid" type="hdslid">
+						<xs:annotation>
+							<xs:documentation>活动实例ID</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="sjgsdq" type="sjgsdq">
+						<xs:annotation>
+							<xs:documentation>数据归属地区</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="lcswsxDm" type="lcswsxDm">
+						<xs:annotation>
+							<xs:documentation>流程税务事项代码</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="slswsxDm" type="slswsxDm">
+						<xs:annotation>
+							<xs:documentation>受理税务事项代码</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+</xs:schema>

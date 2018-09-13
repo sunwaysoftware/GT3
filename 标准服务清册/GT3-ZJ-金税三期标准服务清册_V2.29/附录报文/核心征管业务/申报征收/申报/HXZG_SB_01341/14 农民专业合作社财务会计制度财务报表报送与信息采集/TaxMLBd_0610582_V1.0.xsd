@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 被2011 rel. 2 sp1 (TeaM DJiNN) 使用XMLSpy vTeaM DJiNN编辑的 (http://www.altova.com) by -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:complexType name="nyhzscyqybdbywbw">
+		<xs:annotation>
+			<xs:documentation>成员权益变动表（适用执行农民专业合作社财务会计制度的单位）业务报文</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="nyhzscyqybdb" type="nyhzscyqybdbVO">
+						<xs:annotation>
+							<xs:documentation>成员权益变动表（适用执行农民专业合作社财务会计制度的单位）</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="nyhzscyqybdbVO">
+		<xs:annotation>
+			<xs:documentation>成员权益变动表（适用执行农民专业合作社财务会计制度的单位）</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="nsrxxForm3" type="nsrxxForm3VO">
+				<xs:annotation>
+					<xs:documentation>纳税人基本信息</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="nyhzscyqybdbGrid">
+				<xs:annotation>
+					<xs:documentation>成员权益变动表</xs:documentation>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:sequence maxOccurs="unbounded">
+						<xs:element name="nyhzscyqybdbGridlb" type="nyhzscyqybdbGridlbVO"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="nsrxxForm3VO">
+		<xs:annotation>
+			<xs:documentation>申报表头信息</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="nsrsbh" type="nsrsbh">
+				<xs:annotation>
+					<xs:documentation>纳税人识别号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="nsrmc" type="nsrmc">
+				<xs:annotation>
+					<xs:documentation>纳税人名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bsrq" type="bsrq">
+				<xs:annotation>
+					<xs:documentation>报送日期、</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="skssqq" type="skssqq">
+				<xs:annotation>
+					<xs:documentation>税款所属期起</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="skssqz" type="skssqz">
+				<xs:annotation>
+					<xs:documentation>税款所属期止</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="nyhzscyqybdbGridlbVO">
+		<xs:annotation>
+			<xs:documentation>申报信息</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="ewbhxh" type="ewbhxh" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>二维表行序号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="hmc" type="hmc" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>行名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="gj" type="bnzbgj" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>股金</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zxjj" type="bnzbgj" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>专项基金</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zbgj" type="bnzbgj" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>资本公积</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yygj" type="bnzbgj" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>盈余公积</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="wfpyy" type="bnzbgj" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>未分配盈余</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="hjje" type="hjje" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>合计金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

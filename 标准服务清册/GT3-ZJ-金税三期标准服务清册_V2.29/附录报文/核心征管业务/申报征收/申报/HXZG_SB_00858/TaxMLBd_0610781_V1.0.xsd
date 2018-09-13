@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 被2011 rel. 2 sp1 (TeaM DJiNN) 使用XMLSpy vTeaM DJiNN编辑的 (http://www.altova.com) by -->
+<!-- edited with XMLSpy v2010 rel. 3 (http://www.altova.com) by MESMERiZE (MSM) -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:include schemaLocation="TaxMLPublicType.xsd"/>
+	<xs:complexType name="fhbxzctzdynstzmxbForm">
+		<xs:annotation>
+			<xs:documentation>非货币性资产投资递延纳税调整明细表</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="fhbxzctzdynstzmxbFormGrid">
+						<xs:annotation>
+							<xs:documentation>非货币性资产投资递延纳税调整明细表</xs:documentation>
+						</xs:annotation>
+						<xs:complexType>
+							<xs:sequence minOccurs="0" maxOccurs="unbounded">
+								<xs:element name="fhbxzctzdynstzmxbFormVO" type="fhbxzctzdynstzmxbFormVO"/>
+							</xs:sequence>
+						</xs:complexType>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="fhbxzctzdynstzmxbFormVO">
+		<xs:annotation>
+			<xs:documentation>《非货币性资产投资递延纳税调整明细表》</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="nsrsbh" type="nsrsbh" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>纳税人识别号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="nsrmc" type="nsrmc" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>纳税人名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zgswjgmc" type="zgswjgmc" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>主管税务机关名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sfwglqy" type="nsrsbh" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>与投资方是否为关联企业||与投资方是否为关联企业,Y是,N否</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="gyjz" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>公允价值||公允价值</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zmjz" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>账面价值||账面价值</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jsjc" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>计税基础</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="fhbxzczrsrsxnd" type="nsrsbh" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>非货币性资产转让收入实现年度||非货币性资产转让收入实现年度</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bnzzje" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>本年账载金额||本年账载金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="fhbxzczrsd" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>非货币性资产转让所得（税收金额）||非货币性资产转让所得（税收金额）</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="fqqrsssdnx" type="nsrsbh" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>分期确认税收所得年限||分期确认税收所得年限</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="fqjyqrsssde" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>分期均匀确认税收所得额||分期均匀确认税收所得额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bnssje" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>本年税收金额||本年税收金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qsind" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>前四年度-金额||前四年度-金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qsannd" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>前三年度-金额||前三年度</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qernd" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>前二年度-金额||前二年度</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qyind" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>前一年度-金额||前一年度</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bn" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>本年-金额||本年</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jzyhnddyqrsdssje" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>结转以后年度递延确认所得税收金额||结转以后年度递延确认所得税收金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

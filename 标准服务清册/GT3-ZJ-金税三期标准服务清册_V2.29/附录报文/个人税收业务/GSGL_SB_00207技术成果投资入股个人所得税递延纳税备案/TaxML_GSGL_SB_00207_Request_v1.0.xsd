@@ -1,0 +1,301 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 被2011 rel. 2 sp1 (TeaM DJiNN) 使用XMLSpy vTeaM DJiNN编辑的 (http://www.altova.com) by -->
+<!-- edited with XMLSpy v2008 (http://www.altova.com) by TEAM ViRiLiTY (VRL) -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:complexType name="jscgtzrggrsdsdynsbaRequest">
+		<xs:annotation>
+			<xs:documentation>技术成果投资入股个人所得税递延纳税备案表请求报文</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="jywysbh" type="jywysbh">
+						<xs:annotation>
+							<xs:documentation>交易唯一识别号</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="kjywrdjxh" type="djxh">
+						<xs:annotation>
+							<xs:documentation>扣缴义务人登记序号（不可为空）</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="lxr" type="lxr">
+						<xs:annotation>
+							<xs:documentation>联系人</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="lxdh" type="lxdh">
+						<xs:annotation>
+							<xs:documentation>联系电话</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="jscgmc" type="jscgmc">
+						<xs:annotation>
+							<xs:documentation>技术成果名称(不能为空)</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="jscglx" type="jscglx">
+						<xs:annotation>
+							<xs:documentation>技术成果类型(不能为空)（1:技术成果类型,2:计算机软件著作权,3:集成电路布图设计专有权,4:植物新品种权,5:生物医药新品种,6:其他技术成果
+）</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="fzbm" type="fzbm">
+						<xs:annotation>
+							<xs:documentation>发证部门(不能为空)</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="jscgzsbh" type="jscgzsbh">
+						<xs:annotation>
+							<xs:documentation>技术成果证书编号(不能为空)</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="sjrs" type="sjrs">
+						<xs:annotation>
+							<xs:documentation>涉及人数（不可为空）</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="pgj" type="pgj">
+						<xs:annotation>
+							<xs:documentation>评估价(协议价)(不能为空,大于等于0，保留2位小数)</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="jscgyz" type="jscgyz">
+						<xs:annotation>
+							<xs:documentation>技术成果原值(不能为空,大于等于0，保留2位小数)</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="hlsf" type="hlsf">
+						<xs:annotation>
+							<xs:documentation>合理税费(不能为空,大于等于0，保留2位小数)</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="btzgsfddbr" type="btzgsfddbr">
+						<xs:annotation>
+							<xs:documentation>被投资公司法定代表人(不能为空)</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="btzgsjbr" type="btzgsjbr">
+						<xs:annotation>
+							<xs:documentation>被投资公司经办人(“是否代理申报”为否时必录)</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="tbrq" type="tbrq">
+						<xs:annotation>
+							<xs:documentation>填报日期(不能为空，默认为系统当前日期,格式：yyyy-MM-dd)</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="sfdlsb" type="sfdlsb">
+						<xs:annotation>
+							<xs:documentation>是否代理申报(不能为空，Y或N)</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="jbrzyzjhm" type="jbrzyzjhm">
+						<xs:annotation>
+							<xs:documentation>经办人执业证件号码(“是否代理申报”为是时必录)</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="jbr" type="jbr">
+						<xs:annotation>
+							<xs:documentation>经办人(“是否代理申报”为是时必录)</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="dlsbjg" type="dlsbjg">
+						<xs:annotation>
+							<xs:documentation>代理申报机构(“是否代理申报”为是时必录)</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="dlsbrq" type="dlsbrq">
+						<xs:annotation>
+							<xs:documentation>代理申报日期(“是否代理申报”为是时必录)</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="zgswjgDm" type="zgswjgDm">
+						<xs:annotation>
+							<xs:documentation>主管税务机关代码(不能为空)</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="slr" type="slr">
+						<xs:annotation>
+							<xs:documentation>受理人(不能为空)</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="slrq" type="slrq">
+						<xs:annotation>
+							<xs:documentation>受理日期(不能为空,格式：yyyy-MM-dd)</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="jscgtzrggrMxGrid" type="jscgtzrggrMx" maxOccurs="unbounded">
+						<xs:annotation>
+							<xs:documentation>技术成果投资入股个人基本情况明细</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="jscgtzrggrMx">
+		<xs:annotation>
+			<xs:documentation>技术成果投资入股个人基本情况明细</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="zwxm" type="xm">
+				<xs:annotation>
+					<xs:documentation>姓名(中文)(不可为空)</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ywxm" type="ywxm">
+				<xs:annotation>
+					<xs:documentation>姓名(英文)(条件必录)</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sfzjhm" type="sfzjhm">
+				<xs:annotation>
+					<xs:documentation>身份证件号码(不能为空，如果身份证件类型为居民身份证时，身份证件号码只允许18位)</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sfzjlxDm" type="sfzjlxDm">
+				<xs:annotation>
+					<xs:documentation>身份证件类型(不能为空)</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="lxdz" type="lxdz">
+				<xs:annotation>
+					<xs:documentation>联系地址</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="lxdh" type="lxdh">
+				<xs:annotation>
+					<xs:documentation>联系电话</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="cgbl" type="cgbl">
+				<xs:annotation>
+					<xs:documentation>持股比例（1%~100%）(不能为空,(0,100]，保留两位小数)</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="gs" type="gs">
+				<xs:annotation>
+					<xs:documentation>股数(不能为空,大于0，保留两位小数)</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:simpleType name="jscgmc">
+		<xs:annotation>
+			<xs:documentation>技术成果名称</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:maxLength value="20"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="jscglx">
+		<xs:annotation>
+			<xs:documentation>技术成果类型</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string"/>
+	</xs:simpleType>
+	<xs:simpleType name="fzbm">
+		<xs:annotation>
+			<xs:documentation>发证部门</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:maxLength value="20"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="jscgzsbh">
+		<xs:annotation>
+			<xs:documentation>技术成果证书编号</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:maxLength value="75"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="sjrs">
+		<xs:annotation>
+			<xs:documentation>涉及人数</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string"/>
+	</xs:simpleType>
+	<xs:simpleType name="pgj">
+		<xs:annotation>
+			<xs:documentation>评估价</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:double"/>
+	</xs:simpleType>
+	<xs:simpleType name="jscgyz">
+		<xs:annotation>
+			<xs:documentation>技术成果原值</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string"/>
+	</xs:simpleType>
+	<xs:simpleType name="hlsf">
+		<xs:annotation>
+			<xs:documentation>合理税费</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:double"/>
+	</xs:simpleType>
+	<xs:simpleType name="btzgsfddbr">
+		<xs:annotation>
+			<xs:documentation>被投资公司法定代表人</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:maxLength value="150"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="btzgsjbr">
+		<xs:annotation>
+			<xs:documentation>被投资公司经办人</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:maxLength value="150"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="jbrzyzjhm">
+		<xs:annotation>
+			<xs:documentation>经办人执业证件号码</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:maxLength value="20"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="jbr">
+		<xs:annotation>
+			<xs:documentation>经办人</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:maxLength value="150"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="dlsbjg">
+		<xs:annotation>
+			<xs:documentation>代理申报机构</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:maxLength value="300"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="slr">
+		<xs:annotation>
+			<xs:documentation>受理人（代码）（不能为空，长度只能为11位）</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:maxLength value="11"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="lxdz">
+		<xs:annotation>
+			<xs:documentation>联系地址</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:maxLength value="20"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="gs">
+		<xs:annotation>
+			<xs:documentation>股数</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:double"/>
+	</xs:simpleType>
+</xs:schema>

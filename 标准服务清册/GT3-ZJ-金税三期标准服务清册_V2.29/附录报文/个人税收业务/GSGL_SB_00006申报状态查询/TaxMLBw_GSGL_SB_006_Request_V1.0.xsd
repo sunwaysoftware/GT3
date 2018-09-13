@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:complexType name="sbztcxrequest">
+		<xs:annotation>
+			<xs:documentation>申报状态查询请求</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="yzpzzlDm" type="yzpzzlDm">
+						<xs:annotation>
+							<xs:documentation>应征凭证种类代码，用来区分是那种申报查询，不可为空</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="djxh" type="djxh">
+						<xs:annotation>
+							<xs:documentation>登记序号，不可为空</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="tzdwdjxh" type="djxh">
+						<xs:annotation>
+							<xs:documentation>投资单位登记序号，在生产经营所得申报查询时，不可为空，其他申报查询时都为空</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="skssqq" type="skssqq">
+						<xs:annotation>
+							<xs:documentation>税款所属期起，不可为空</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="skssqz" type="skssqz">
+						<xs:annotation>
+							<xs:documentation>税款所属期止，不可为空</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="gpdm" type="gpDm">
+						<xs:annotation>
+							<xs:documentation>股票代码，在限售股清算申报查询时不可为空，其他的查询都为空</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="zspmDm" type="zspmDm">
+						<xs:annotation>
+							<xs:documentation>
+							征收品目代码，在生产经营所得申报查询时，不可为空，其他申报查询时都为空
+							</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="kjdjxh" type="djxh">
+						<xs:annotation>
+							<xs:documentation>
+							 扣缴义务人登记序号，如果是限售股清算申报，不能为空，其他申报为空
+							</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+						<xs:element name="bmbh" type="bmbh">
+						<xs:annotation>
+							<xs:documentation>
+							  部门编号：可以为空
+							</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="btzdwlx" type="bz3">
+						<xs:annotation>
+							<xs:documentation>用于生产经营C表申报状态查询。被投资单位类型:是否两个或两个以上个人独资企业或个体工商户情况 0：否 1：是（分配比例默认都为100%） 生产经营必传，承包承租时不需传</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+</xs:schema>

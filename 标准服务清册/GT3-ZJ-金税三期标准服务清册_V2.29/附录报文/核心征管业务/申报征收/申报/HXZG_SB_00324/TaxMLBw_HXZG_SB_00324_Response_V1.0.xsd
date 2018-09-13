@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2013 (http://www.altova.com) by  () -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:include schemaLocation="TaxMLPublicSBType.xsd"/>
+	<xs:complexType name="HXZGSB00324Response">
+		<xs:annotation>
+			<xs:documentation>根据全县获取特殊纳税人类型</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="tsnsrlxGrid">
+						<xs:annotation>
+							<xs:documentation>特殊纳税人类型Grid</xs:documentation>
+						</xs:annotation>
+						<xs:complexType>
+							<xs:sequence minOccurs="0" maxOccurs="unbounded">
+								<xs:element name="tsnsrlxGridlb" type="tsnsrlxGridlbVO">
+									<xs:annotation>
+										<xs:documentation>特殊纳税人类型Gridlb</xs:documentation>
+									</xs:annotation>
+								</xs:element>
+							</xs:sequence>
+						</xs:complexType>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="tsnsrlxGridlbVO">
+		<xs:annotation>
+			<xs:documentation>特殊纳税人类型GridlbVO</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="tsnsrlxDm" type="tsnsrlxDm">
+				<xs:annotation>
+					<xs:documentation>特殊纳税人类型代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="tsnsrlxmc" type="tsnsrlxmc" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>特殊纳税人类型名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="whqx" type="whqx" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>维护权限||特殊纳税人类型表使用</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

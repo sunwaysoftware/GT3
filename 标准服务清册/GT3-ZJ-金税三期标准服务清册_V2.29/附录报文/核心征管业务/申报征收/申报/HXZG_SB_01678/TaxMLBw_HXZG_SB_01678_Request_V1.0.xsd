@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2010 (http://www.altova.com) by MESMERiZE (MiZE) -->
+<!-- 被2012 () 使用XMLSpy v编辑的 (http://www.altova.com) by -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:include schemaLocation="TaxMLPublic.xsd"/>
+	<xs:complexType name="ysbxhList">
+		<xs:annotation>
+			<xs:documentation>预申报序号列表</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="ysbxhmx" maxOccurs="unbounded">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="ysbxh" type="ysbxh">
+							<xs:annotation>
+								<xs:documentation>预申报序号</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+						<xs:element name="xh" type="xh">
+							<xs:annotation>
+								<xs:documentation>序号</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="HXZGSB01678Request">
+		<xs:annotation>
+			<xs:documentation>作废社保费批扣清册请求报文</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="ysbxhList" type="ysbxhList">
+						<xs:annotation>
+							<xs:documentation>预申报序号列表</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="skssswjgDm" type="skssswjgDm"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+</xs:schema>

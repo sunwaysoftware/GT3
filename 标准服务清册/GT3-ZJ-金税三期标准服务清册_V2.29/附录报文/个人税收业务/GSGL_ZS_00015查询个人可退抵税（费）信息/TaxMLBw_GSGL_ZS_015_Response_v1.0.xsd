@@ -1,0 +1,84 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:complexType name="cxgrktdsfxxresponse">
+		<xs:annotation>
+			<xs:documentation>查询个人可退抵税（费）信息</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="yzpzxh" type="yzpzxh">
+						<xs:annotation>
+							<xs:documentation>应征凭证序号</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="ttsjlxDm" type="ttsjlxDm">
+						<xs:annotation>
+							<xs:documentation>提退税金类型代码</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="djxh" type="djxh">
+						<xs:annotation>
+							<xs:documentation>个人登记序号</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="ktdsfxxs" type="ktdsfxxs">
+						<xs:annotation>
+							<xs:documentation>可退抵税（费）信息</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="ktdsfxxs">
+		<xs:annotation>
+			<xs:documentation>可退抵税（费）信息</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="ktdsfxx" maxOccurs="unbounded">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="zsxmmc" type="zsxmmc">
+							<xs:annotation>
+								<xs:documentation>征收项目名称</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+						<xs:element name="zsxmDm" type="zsxmDm">
+							<xs:annotation>
+								<xs:documentation>征收项目代码</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+						<xs:element name="zspmmc" type="zspmmc">
+							<xs:annotation>
+								<xs:documentation>征收品目名称</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+						<xs:element name="zspmDm" type="zspmDm">
+							<xs:annotation>
+								<xs:documentation>征收品目代码</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+						<xs:element name="fkssqq" type="sfkssqq">
+							<xs:annotation>
+								<xs:documentation>费款所属期起</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+						<xs:element name="fkssqz" type="sfkssqz">
+							<xs:annotation>
+								<xs:documentation>费款所属期止</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+						<xs:element name="sbje" type="sbje">
+							<xs:annotation>
+								<xs:documentation>申报金额</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+						
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2013 (http://www.altova.com) by  () -->
+<!-- 被2011 rel. 2 sp1 (TeaM DJiNN) 使用XMLSpy vTeaM DJiNN编辑的 (http://www.altova.com) by -->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://www.chinatax.gov.cn/dataspec/" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:complexType name="HXZGZS10214Request">
+		<xs:annotation>
+			<xs:documentation>查询纳税人（自然人）退库明细</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="djxh">
+						<xs:annotation>
+							<xs:documentation>登记序号</xs:documentation>
+						</xs:annotation>
+						<xs:simpleType>
+							<xs:restriction base="djxh"/>
+						</xs:simpleType>
+					</xs:element>
+					<xs:element name="skssqq" type="skssqq" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>税款所属期起</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="skssqz" type="skssqz" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>税款所属期止</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="zsxmDm" type="zsxmDm" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>征收项目</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="zspmDm" type="zspmDm" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>征收品目</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="rkrqq" type="thrq1" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>提退日期起</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="rkrqz" type="thrq1" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>提退日期止</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="yzpzxh" type="yzpzxh" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>应征凭证序号</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="zsuuid" type="zsuuid" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>征收uuid</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+</xs:schema>

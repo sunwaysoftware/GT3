@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 被2012 () 使用XMLSpy v编辑的 (http://www.altova.com) by -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxMLBd_112004026_V1.0.xsd"/>
+	<xs:include schemaLocation="TaxMLPublicJCType.xsd"/>
+	<xs:complexType name="HXZGFXCL00078Request">
+		<xs:annotation>
+			<xs:documentation>保存税收违法案件证据及其他资料交接清单接入报文</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="sswfajzjjqtzljjqd">
+						<xs:annotation>
+							<xs:documentation>稽查案源信息uuid</xs:documentation>
+						</xs:annotation>
+						<xs:complexType>
+							<xs:sequence>
+								<xs:element name="jjajjbxxForm" type="jjajjbxxForm">
+									<xs:annotation>
+										<xs:documentation>交接清单案件基本信息</xs:documentation>
+									</xs:annotation>
+								</xs:element>
+								<xs:element name="jjqdGrid">
+									<xs:complexType>
+										<xs:sequence minOccurs="0" maxOccurs="unbounded">
+											<xs:element name="jjqdGridlb" type="JCGyfjVO"/>
+										</xs:sequence>
+									</xs:complexType>
+								</xs:element>
+								<xs:element name="jjxxForm" type="jjxxForm"/>
+							</xs:sequence>
+						</xs:complexType>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+</xs:schema>

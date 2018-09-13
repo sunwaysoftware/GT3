@@ -1,0 +1,370 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:include schemaLocation="TaxMLPublicType.xsd"/>
+	<xs:complexType name="fjmqysdsjdnssbbsyyjssbqyssyhmxb2015ywbw">
+		<xs:annotation>
+			<xs:documentation>《中华人民共和国非居民企业所得税季度纳税申报表（适用于据实申报企业）》税收优惠明细表业务报文</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="fjmqysdsjdnssbbsyyjssbqyssyhmxb2015" type="fjmqysdsjdnssbbsyyjssbqyssyhmxb2015">
+						<xs:annotation>
+							<xs:documentation>《中华人民共和国非居民企业所得税季度纳税申报表（适用于据实申报企业）》2015版税收优惠明细表</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="fjmqysdsjdnssbbsyyjssbqyssyhmxb2015">
+		<xs:annotation>
+			<xs:documentation>《中华人民共和国非居民企业所得税季度纳税申报表（适用于据实申报企业）》2015版税收优惠明细表</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="fjmqysdsjssbjdsbssyhmxb2015Form" type="fjmqysdsjssbjdsbssyhmxb2015Form">
+				<xs:annotation>
+					<xs:documentation>中华人民共和国非居民企业所得税季度纳税申报表（适用于据实申报企业）申报信息2015税收优惠明细表</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="fjmqysdsjssbjdsbssyhmxb2015Form">
+		<xs:annotation>
+			<xs:documentation>中华人民共和国非居民企业所得税季度纳税申报表（适用于据实申报企业）申报信息2015税收优惠明细表</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="msjjsrjjjkcbqje" type="je">
+				<xs:annotation>
+					<xs:documentation>免税、减计收入及加计扣除本期金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="msjjsrjjjkcljje" type="je">
+				<xs:annotation>
+					<xs:documentation>免税、减计收入及加计扣除累计金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="mssrbqje" type="je">
+				<xs:annotation>
+					<xs:documentation>免税收入本期金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="mssrljje" type="je">
+				<xs:annotation>
+					<xs:documentation>免税收入累计金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="gzlxsrbqje" type="je">
+				<xs:annotation>
+					<xs:documentation>国债利息收入本期金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="gzlxsrljje" type="je">
+				<xs:annotation>
+					<xs:documentation>国债利息收入累计金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="gxhlbqje" type="je">
+				<xs:annotation>
+					<xs:documentation>从居民企业取得与该机构、场所有实际联系的股息、红利本期金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="gxhlljje" type="je">
+				<xs:annotation>
+					<xs:documentation>从居民企业取得与该机构、场所有实际联系的股息、红利累计金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="fhtjdfylzzsrbqje" type="je">
+				<xs:annotation>
+					<xs:documentation>符合条件的非营利组织的收入本期金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="fhtjdfylzzsrljje" type="je">
+				<xs:annotation>
+					<xs:documentation>符合条件的非营利组织的收入累计金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="dfzfzqlxsdhsrbqje" type="je">
+				<xs:annotation>
+					<xs:documentation>取得的地方政府债券利息所得或收入本期金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="dfzfzqlxsdhsrljje" type="je">
+				<xs:annotation>
+					<xs:documentation>取得的地方政府债券利息所得或收入累计金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qtjmxmmcjjmxzdm1" type="jmxzDm">
+				<xs:annotation>
+					<xs:documentation>其他减免项目名称及减免性质代码1</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qtjmxmmcjjmxzdmbqje1" type="je">
+				<xs:annotation>
+					<xs:documentation>其他减免项目名称及减免性质代码本期金额1</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qtjmxmmcjjmxzdmljje1" type="je">
+				<xs:annotation>
+					<xs:documentation>其他减免项目名称及减免性质代码累计金额1</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qtjmxmmcjjmxzdm2" type="jmxzDm">
+				<xs:annotation>
+					<xs:documentation>其他减免项目名称及减免性质代码2</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qtjmxmmcjjmxzdmbqje2" type="je">
+				<xs:annotation>
+					<xs:documentation>其他减免项目名称及减免性质代码本期金额2</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qtjmxmmcjjmxzdmljje2" type="je">
+				<xs:annotation>
+					<xs:documentation>其他减免项目名称及减免性质代码累计金额2</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jjsrbqje" type="je">
+				<xs:annotation>
+					<xs:documentation>减计收入本期金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jjsrljje" type="je">
+				<xs:annotation>
+					<xs:documentation>减计收入累计金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zhlyzysccpqddsrbqje" type="je">
+				<xs:annotation>
+					<xs:documentation>综合利用资源生产产品取得的收入本期金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zhlyzysccpqddsrljje" type="je">
+				<xs:annotation>
+					<xs:documentation>综合利用资源生产产品取得的收入累计金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jrbxdjgqddsnlxbfsrbqje" type="je">
+				<xs:annotation>
+					<xs:documentation>金融、保险等机构取得的涉农利息、保费收入本期金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jrbxdjgqddsnlxbfsrljje" type="je">
+				<xs:annotation>
+					<xs:documentation>金融、保险等机构取得的涉农利息、保费收入累计金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qddzgtljszqlxsrbqje" type="je">
+				<xs:annotation>
+					<xs:documentation>取得的中国铁路建设债券利息收入本期金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qddzgtljszqlxsrljje" type="je">
+				<xs:annotation>
+					<xs:documentation>取得的中国铁路建设债券利息收入累计金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qtjmxmmcjjmxzdm3" type="jmxzDm">
+				<xs:annotation>
+					<xs:documentation>其他减免项目名称及减免性质代码3</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qtjmxmmcjjmxzdmbqje3" type="je">
+				<xs:annotation>
+					<xs:documentation>其他减免项目名称及减免性质代码本期金额3</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qtjmxmmcjjmxzdmljje3" type="je">
+				<xs:annotation>
+					<xs:documentation>其他减免项目名称及减免性质代码累计金额3</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qtjmxmmcjjmxzdm4" type="jmxzDm">
+				<xs:annotation>
+					<xs:documentation>其他减免项目名称及减免性质代码4</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qtjmxmmcjjmxzdmbqje4" type="je">
+				<xs:annotation>
+					<xs:documentation>其他减免项目名称及减免性质代码本期金额4</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qtjmxmmcjjmxzdmljje4" type="je">
+				<xs:annotation>
+					<xs:documentation>其他减免项目名称及减免性质代码累计金额4</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jjkcbqje" type="je">
+				<xs:annotation>
+					<xs:documentation>加计扣除本期金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jjkcljje" type="je">
+				<xs:annotation>
+					<xs:documentation>加计扣除累计金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qtjmxmmcjjmxzdm5" type="jmxzDm">
+				<xs:annotation>
+					<xs:documentation>其他减免项目名称及减免性质代码5</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qtjmxmmcjjmxzdmbqje5" type="je">
+				<xs:annotation>
+					<xs:documentation>其他减免项目名称及减免性质代码本期金额5</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qtjmxmmcjjmxzdmljje5" type="je">
+				<xs:annotation>
+					<xs:documentation>其他减免项目名称及减免性质代码累计金额5</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qtjmxmmcjjmxzdm6" type="jmxzDm">
+				<xs:annotation>
+					<xs:documentation>其他减免项目名称及减免性质代码6</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qtjmxmmcjjmxzdmbqje6" type="je">
+				<xs:annotation>
+					<xs:documentation>其他减免项目名称及减免性质代码本期金额6</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qtjmxmmcjjmxzdmljje6" type="je">
+				<xs:annotation>
+					<xs:documentation>其他减免项目名称及减免性质代码累计金额6</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jmsdsbqje" type="je">
+				<xs:annotation>
+					<xs:documentation>减免所得税本期金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jmsdsljje" type="je">
+				<xs:annotation>
+					<xs:documentation>减免所得税累计金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="xbdqgllcyqybqje" type="je">
+				<xs:annotation>
+					<xs:documentation>设在西部地区的鼓励类产业企业本期金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="xbdqgllcyqyljje" type="je">
+				<xs:annotation>
+					<xs:documentation>设在西部地区的鼓励类产业企业累计金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="xdfwyhzqqybqje" type="je">
+				<xs:annotation>
+					<xs:documentation>横琴新区平潭综合实验区和前海深港现代服务业合作区企业本期金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="xdfwyhzqqyljje" type="je">
+				<xs:annotation>
+					<xs:documentation>横琴新区平潭综合实验区和前海深港现代服务业合作区企业累计金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="gjysjmsdsbqje" type="je">
+				<xs:annotation>
+					<xs:documentation>国际运输减免所得税本期金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="gjysjmsdsljje" type="je">
+				<xs:annotation>
+					<xs:documentation>国际运输减免所得税累计金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qtjmxmmcjjmxzdm7" type="jmxzDm">
+				<xs:annotation>
+					<xs:documentation>其他减免项目名称及减免性质代码7</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qtjmxmmcjjmxzdmbqje7" type="je">
+				<xs:annotation>
+					<xs:documentation>其他减免项目名称及减免性质代码本期金额7</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qtjmxmmcjjmxzdmljje7" type="je">
+				<xs:annotation>
+					<xs:documentation>其他减免项目名称及减免性质代码累计金额7</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qtjmxmmcjjmxzdm8" type="jmxzDm">
+				<xs:annotation>
+					<xs:documentation>其他减免项目名称及减免性质代码8</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qtjmxmmcjjmxzdmbqje8" type="je">
+				<xs:annotation>
+					<xs:documentation>其他减免项目名称及减免性质代码本期金额8</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qtjmxmmcjjmxzdmljje8" type="je">
+				<xs:annotation>
+					<xs:documentation>其他减免项目名称及减免性质代码累计金额8</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="gdzcjszjkcbqje" type="je">
+				<xs:annotation>
+					<xs:documentation>固定资产加速折旧（扣除）本期金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="gdzcjszjkcljje" type="je">
+				<xs:annotation>
+					<xs:documentation>固定资产加速折旧（扣除）累计金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qtbqje" type="je">
+				<xs:annotation>
+					<xs:documentation>其他本期金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qtljje" type="je">
+				<xs:annotation>
+					<xs:documentation>其他累计金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qtjmxmmcjjmxzdm9" type="jmxzDm">
+				<xs:annotation>
+					<xs:documentation>其他减免项目名称及减免性质代码9</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qtjmxmmcjjmxzdmbqje9" type="je">
+				<xs:annotation>
+					<xs:documentation>其他减免项目名称及减免性质代码本期金额9</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qtjmxmmcjjmxzdmljje9" type="je">
+				<xs:annotation>
+					<xs:documentation>其他减免项目名称及减免性质代码累计金额9</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qtjmxmmcjjmxzdm10" type="jmxzDm">
+				<xs:annotation>
+					<xs:documentation>其他减免项目名称及减免性质代码10</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qtjmxmmcjjmxzdmbqje10" type="je">
+				<xs:annotation>
+					<xs:documentation>其他减免项目名称及减免性质代码本期金额10</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qtjmxmmcjjmxzdmljje10" type="je">
+				<xs:annotation>
+					<xs:documentation>其他减免项目名称及减免性质代码累计金额10</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="hjbqje" type="je">
+				<xs:annotation>
+					<xs:documentation>合计本期金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="hjljje" type="je">
+				<xs:annotation>
+					<xs:documentation>合计累计金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

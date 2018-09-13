@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 被2011 rel. 2 sp1 (TeaM DJiNN) 使用XMLSpy vTeaM DJiNN编辑的 (http://www.altova.com) by -->
+<!-- edited with XMLSpy v2008 (http://www.altova.com) by TEAM ViRiLiTY (VRL) -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:complexType name="GswszmkjcxRequest">
+		<xs:annotation>
+			<xs:documentation>个税完税证明开具记录查询请求报文</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="sfzjlxDm" type="sfzjlxDm">
+						<xs:annotation>
+							<xs:documentation>身份证件类型(不能为空)</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="sfzjhm" type="sfzjhm">
+						<xs:annotation>
+							<xs:documentation>身份证件号码(不能为空)</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="xm" type="xm">
+						<xs:annotation>
+							<xs:documentation>姓名(不能为空)</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="pzzg" type="pzzg">
+						<xs:annotation>
+							<xs:documentation>票证字轨(不能为空)</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="pzhm" type="pzhm">
+						<xs:annotation>
+							<xs:documentation>票证号码(不能为空)</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="kjje" type="kjje">
+						<xs:annotation>
+							<xs:documentation>开具金额(可以为空)</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+</xs:schema>

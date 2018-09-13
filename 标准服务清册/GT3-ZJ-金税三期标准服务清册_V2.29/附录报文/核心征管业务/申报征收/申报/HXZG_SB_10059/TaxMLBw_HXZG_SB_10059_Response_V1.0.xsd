@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2010 rel. 3 (http://www.altova.com) by MESMERiZE (MSM) -->
+<!-- 被2012 () 使用XMLSpy v编辑的 (http://www.altova.com) by -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:include schemaLocation="TaxMLPublicSBType.xsd"/>
+	<xs:complexType name="HXZGSB10059Response">
+		<xs:annotation>
+			<xs:documentation>成品油消费税比对返回报文</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="fhbz" type="nsrlxDm">
+						<xs:annotation>
+							<xs:documentation>比对返回标志(A:系统参数设置不比对,B:非成品油生产企业不比对,C:获取发票信息为空不必对,N:比对不通过,Y:比对通过)</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="gluuid" type="uuid">
+						<xs:annotation>
+							<xs:documentation>关联uuid,用于保存时更新比对表的sbuuid以及pzxh</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="bdxfList" type="bdxfGrid">
+						<xs:annotation>
+							<xs:documentation>比对相符list</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="bdbxfList" type="bdbxfGrid">
+						<xs:annotation>
+							<xs:documentation>比对不相符list</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="bdyc" type="bdycMap">
+						<xs:annotation>
+							<xs:documentation>比对不通过异常提示信息</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="bdxfGrid">
+		<xs:sequence minOccurs="0" maxOccurs="unbounded">
+			<xs:element name="bdbxfGridlb" type="bdjgVO"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="bdbxfGrid">
+		<xs:sequence minOccurs="0" maxOccurs="unbounded">
+			<xs:element name="bdbxfGridlb" type="bdjgVO"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="bdjgVO">
+		<xs:sequence>
+			<xs:element name="bdfh" type="bz1">
+				<xs:annotation>
+					<xs:documentation>比对符号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bdxmmc" type="bz1">
+				<xs:annotation>
+					<xs:documentation>比对项目名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="fplmc" type="bz1">
+				<xs:annotation>
+					<xs:documentation>发票列名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sblmc" type="bz1">
+				<xs:annotation>
+					<xs:documentation>申报列名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bdtgbz" type="bz1">
+				<xs:annotation>
+					<xs:documentation>比对通过标志,Y通过,N不通过</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="bdycMap">
+		<xs:sequence>
+			<xs:element name="bdycyy" type="bz1">
+				<xs:annotation>
+					<xs:documentation>比对异常原因</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

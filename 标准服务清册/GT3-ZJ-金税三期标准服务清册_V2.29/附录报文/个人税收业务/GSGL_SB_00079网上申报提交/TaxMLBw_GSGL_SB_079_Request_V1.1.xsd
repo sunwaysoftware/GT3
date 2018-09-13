@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:complexType name="sbxxbcrequest">
+		<xs:annotation>
+			<xs:documentation>申报信息保存请求</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="jywysbh" type="sourcemessageid">
+						<xs:annotation>
+							<xs:documentation>交易唯一识别号，传递一个uuid</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="yzpzzlDm" type="yzpzzlDm">
+						<xs:annotation>
+							<xs:documentation>应征凭证种类代码，不可为空</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="djxh" type="djxh">
+						<xs:annotation>
+							<xs:documentation>登记序号，不可为空</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="sblxDm" type="sblx">
+						<xs:annotation>
+							<xs:documentation>0：正常申报，1：更正申报（修正申报），不可为空</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="ywbw" type="nr">
+						<xs:annotation>
+							<xs:documentation>业务报文，不可为空</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="sssqq" type="skssqq">
+						<xs:annotation>
+							<xs:documentation>所属时期起</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="sssqz" type="skssqz">
+						<xs:annotation>
+							<xs:documentation>所属时期止</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="slswjgDm" type="slswjgDm">
+						<xs:annotation>
+							<xs:documentation>受理税务机关代码</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="version" type="version">
+						<xs:annotation>
+							<xs:documentation>版本号</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="yzpzxh" type="yzpzxh">
+						<xs:annotation>
+							<xs:documentation>应征凭证序号,限售股清算申报、自行申报A表更正申报时必须传，否则无法进行更正申报</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="ywlxDm" type="ywlx">
+						<xs:annotation>
+							<xs:documentation>
+							业务类型代码,因为目前扣缴个人所得税报告表被拆分为多张申报表，无法通过yzpzzlDm区分是哪种，需要根据该字段进行判断，
+							该字段的值来自于个税系统的代码表dm_ywlx和cs_ywlxbbhdz，如果不传递按照以前的逻辑处理。
+							目前的传值规则：
+							《中央证券登记结算公司代扣代缴上市公司股息红利扣缴个人所得税报告表》的业务类型传A061005014， 《对企事业承包承租扣缴个人所得税报告表》的业务类型传A061005012，《扣缴个人所得税报告表》传A061005001 ，《广东版-扣缴个人所得税报告表》传A061005011， 其他所有的申报表传空值即可（以后如果有开发子表，再通知传具体的业务类型）
+							</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+</xs:schema>

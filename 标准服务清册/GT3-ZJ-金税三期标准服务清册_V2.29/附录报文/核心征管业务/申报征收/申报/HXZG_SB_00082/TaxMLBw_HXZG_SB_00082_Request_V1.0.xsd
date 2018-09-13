@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2010 rel. 3 (http://www.altova.com) by MESMERiZE (MSM) -->
+<!-- 被2012 () 使用XMLSpy v编辑的 (http://www.altova.com) by -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:complexType name="HXZGSB00082Request">
+		<xs:annotation>
+			<xs:documentation>查询车辆购置税车型车价信息接入报文</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="SBCgsClxhCxVO" type="SBCgsClxhCxVO">
+						<xs:annotation>
+							<xs:documentation>车购税车辆型号查询信息</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="SBCgsClxhCxVO">
+		<xs:annotation>
+			<xs:documentation>车购税车辆型号查询信息</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="clxlh" type="clxlh">
+				<xs:annotation>
+					<xs:documentation>车辆序列号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="clcp" type="clcp">
+				<xs:annotation>
+					<xs:documentation>车辆厂牌</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="clxh" type="clxh">
+				<xs:annotation>
+					<xs:documentation>车辆型号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="clcpxh" type="clcpxh">
+				<xs:annotation>
+					<xs:documentation>车辆厂牌型号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="clscqymc" type="clscqymc">
+				<xs:annotation>
+					<xs:documentation>车辆生产企业名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="listSize" type="zdcd">
+				<xs:annotation>
+					<xs:documentation>返回结果集范围大小限制</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jqbz" type="bz1">
+				<xs:annotation>
+					<xs:documentation>精确标志</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

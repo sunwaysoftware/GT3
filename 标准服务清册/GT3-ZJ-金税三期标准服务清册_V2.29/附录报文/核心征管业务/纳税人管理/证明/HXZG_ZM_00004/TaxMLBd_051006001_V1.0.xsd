@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 被2011 rel. 2 sp1 (TeaM DJiNN) 使用XMLSpy vTeaM DJiNN编辑的 (http://www.altova.com) by -->
+<!-- edited with XMLSpy v2013 (http://www.altova.com) by  () -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:include schemaLocation="TaxMLPublicZMType.xsd"/>
+	<xs:complexType name="wcjyzmsqb">
+		<xs:annotation>
+			<xs:documentation>外出经营证明申请提交</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="zmWcjyhdssglzmxxVO" type="ZMWcjyhdssglzmxxVO">
+				<xs:annotation>
+					<xs:documentation>外出经营证明申请表信息</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="insertLwxxGrid" type="WcjyzmlwxxGrid">
+				<xs:annotation>
+					<xs:documentation>新增劳务信息</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="updateLwxxGrid" type="WcjyzmlwxxGrid">
+				<xs:annotation>
+					<xs:documentation>修改劳务信息</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="deleteLwxxGrid" type="WcjyzmlwxxGrid">
+				<xs:annotation>
+					<xs:documentation>删除劳务信息</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="insertHwxxGrid" type="WcjyzmhwxxGrid">
+				<xs:annotation>
+					<xs:documentation>新增货物信息</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="updateHwxxGrid" type="WcjyzmhwxxGrid">
+				<xs:annotation>
+					<xs:documentation>修改货物信息</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="deleteHwxxGrid" type="WcjyzmhwxxGrid">
+				<xs:annotation>
+					<xs:documentation>删除货物信息</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="WcjyzmlwxxGrid">
+		<xs:annotation>
+			<xs:documentation>劳务信息列表</xs:documentation>
+		</xs:annotation>
+		<xs:sequence minOccurs="0" maxOccurs="unbounded">
+			<xs:element name="WcjyzmlwxxGridlb" type="ZMWcjyhdssglzmLwxxVO">
+				<xs:annotation>
+					<xs:documentation>劳务信息</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="WcjyzmhwxxGrid">
+		<xs:annotation>
+			<xs:documentation>货物信息列表</xs:documentation>
+		</xs:annotation>
+		<xs:sequence minOccurs="0" maxOccurs="unbounded">
+			<xs:element name="wcjyzmhwxxGridlb" type="ZMWcjyhdssglzmHwxxVO">
+				<xs:annotation>
+					<xs:documentation>货物信息</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

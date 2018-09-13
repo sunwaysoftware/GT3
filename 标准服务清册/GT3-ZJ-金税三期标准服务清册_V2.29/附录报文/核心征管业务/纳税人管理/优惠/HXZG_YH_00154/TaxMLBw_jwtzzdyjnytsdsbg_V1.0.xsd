@@ -1,0 +1,1316 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2009 (http://www.altova.com) by Administrator (EMBRACE) -->
+<!-- 编辑使用 XMLSpy v2006 U (http://www.altova.com) 由 any (any) -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:complexType name="jwtzzdyjnytsdsbgywbw">
+		<xs:annotation>
+			<xs:documentation>境外投资者递延缴纳预提所得税报告业务报文</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="jwtzzdyjnytsdsbg" type="jwtzzdyjnytsdsbg">
+						<xs:annotation>
+							<xs:documentation>境外投资者递延缴纳预提所得税报告</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="jwtzzdyjnytsdsbg">
+		<xs:annotation>
+			<xs:documentation>境外投资者递延缴纳预提所得税报告</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="dyjnytsdsbgbFrom" type="yhDyjnytsdsbgbVO">
+				<xs:annotation>
+					<xs:documentation>境外投资者递延缴纳预提所得税报告</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="insertBtzqyjbxxGrid" type="insertBtzqyjbxxGrid">
+				<xs:annotation>
+					<xs:documentation>被投资企业基本信息(新增)</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="updateBtzqyjbxxGrid" type="updateBtzqyjbxxGrid">
+				<xs:annotation>
+					<xs:documentation>被投资企业基本信息(修改)</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="deleteBtzqyjbxxGrid" type="deleteBtzqyjbxxGrid">
+				<xs:annotation>
+					<xs:documentation>被投资企业基本信息(删除)</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			
+			<xs:element name="nonStatusBtzqyjbxxGrid" type="nonStatusBtzqyjbxxGrid">
+				<xs:annotation>
+					<xs:documentation>被投资企业基本信息(无状态)</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="wctzssxmlxGrid" type="wctzssxmlxGrid">
+				<xs:annotation>
+					<xs:documentation>被投资企业外商投资所属项目类型Grid</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zxbtzssxmlxGrid" type="zxbtzssxmlxGrid">
+				<xs:annotation>
+					<xs:documentation>中西部投资所属项目类型Grid</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="insertXzhzzjnjmqysszihzbbGrid" type="insertXzhzzjnjmqysszihzbbGrid">
+				<xs:annotation>
+					<xs:documentation>新增或转增境内居民企业实收资本或资本公积填报（新增）</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="deleteXzhzzjnjmqysszihzbbGrid" type="deleteXzhzzjnjmqysszihzbbGrid">
+				<xs:annotation>
+					<xs:documentation>新增或转增境内居民企业实收资本或资本公积填报（删除）</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="updateXzhzzjnjmqysszihzbbGrid" type="updateXzhzzjnjmqysszihzbbGrid">
+				<xs:annotation>
+					<xs:documentation>新增或转增境内居民企业实收资本或资本公积填报（修改）</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="insertZzgjntzxjjmqytbGrid" type="insertZzgjntzxjjmqytbGrid">
+				<xs:annotation>
+					<xs:documentation>在中国境内投资新建居民企业填报（新增）</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="deleteZzgjntzxjjmqytbGrid" type="deleteZzgjntzxjjmqytbGrid">
+				<xs:annotation>
+					<xs:documentation>在中国境内投资新建居民企业填报（删除）</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="updateZzgjntzxjjmqytbGrid" type="updateZzgjntzxjjmqytbGrid">
+				<xs:annotation>
+					<xs:documentation>在中国境内投资新建居民企业填报（修改）</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="insertCfglfsgzgjnjmqygqGrid" type="insertCfglfsgzgjnjmqygqGrid">
+				<xs:annotation>
+					<xs:documentation>从非关联方收购中国境内居民企业股权填报（新增）</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="deleteCfglfsgzgjnjmqygqGrid" type="deleteCfglfsgzgjnjmqygqGrid">
+				<xs:annotation>
+					<xs:documentation>从非关联方收购中国境内居民企业股权填报（删除）</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="updateCfglfsgzgjnjmqygqGrid" type="updateCfglfsgzgjnjmqygqGrid">
+				<xs:annotation>
+					<xs:documentation>从非关联方收购中国境内居民企业股权填报（修改）</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="insertZbxsdysdytbxxGrid" type="insertZbxsdysdytbxxGrid">
+				<xs:annotation>
+					<xs:documentation>追补享受递延税待遇填报信息（新增）</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="deleteZbxsdysdytbxxGrid" type="deleteZbxsdysdytbxxGrid">
+				<xs:annotation>
+					<xs:documentation>追补享受递延税待遇填报信息（删除）</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="updateZbxsdysdytbxxGrid" type="updateZbxsdysdytbxxGrid">
+				<xs:annotation>
+					<xs:documentation>追补享受递延税待遇填报信息（修改）</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="insertJwjmfbzlxxGrid" type="insertJwjmfbzlxxGrid">
+				<xs:annotation>
+					<xs:documentation>境外非居民企业附列资料（新增）</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="deleteJwjmfbzlxxGrid" type="deleteJwjmfbzlxxGrid">
+				<xs:annotation>
+					<xs:documentation>境外非居民企业附列资料（删除）</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="updateJwjmfbzlxxGrid" type="updateJwjmfbzlxxGrid">
+				<xs:annotation>
+					<xs:documentation>境外非居民企业附列资料（修改）</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="insertXjfszfGrid" type="insertXjfszfGrid">
+				<xs:annotation>
+					<xs:documentation>现金方式支付（新增）</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="deleteXjfszfGrid" type="deleteXjfszfGrid">
+				<xs:annotation>
+					<xs:documentation>现金方式支付（删除）</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="updateXjfszfGrid" type="updateXjfszfGrid">
+				<xs:annotation>
+					<xs:documentation>现金方式支付（修改）</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="insertFxjzffszfGrid" type="insertFxjzffszfGrid">
+				<xs:annotation>
+					<xs:documentation>非现金支付方式支付（新增）</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="deleteFxjzffszfGrid" type="deleteFxjzffszfGrid">
+				<xs:annotation>
+					<xs:documentation>非现金支付方式支付（删除）</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="updateFxjzffszfGrid" type="updateFxjzffszfGrid">
+				<xs:annotation>
+					<xs:documentation>非现金支付方式支付（修改）</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="insertJnjmfbzlqdGrid" type="insertJnjmfbzlqdGrid">
+				<xs:annotation>
+					<xs:documentation>境内居民企业附列资料（新增）</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="deleteJnjmfbzlqdGrid" type="deleteJnjmfbzlqdGrid">
+				<xs:annotation>
+					<xs:documentation>境内居民企业附列资料（删除）</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="updateJnjmfbzlqdGrid" type="updateJnjmfbzlqdGrid">
+				<xs:annotation>
+					<xs:documentation>境内居民企业附列资料（修改）</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="yhDyjnytsdsbgbVO">
+		<xs:annotation>
+			<xs:documentation>境外投资者递延缴纳预提所得税报告</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="dyytbguuid" type="dyytbguuid">
+				<xs:annotation>
+					<xs:documentation>递延预提报告uuid</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jwtzzdjxh" type="jwtzzdjxh">
+				<xs:annotation>
+					<xs:documentation>境外投资者登记序号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="dynsxxbgbh" type="dynsxxbgbh">
+				<xs:annotation>
+					<xs:documentation>递延纳税信息报告编号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jwtzzwwmc" type="jwtzzwwmc">
+				<xs:annotation>
+					<xs:documentation>境外投资者外文名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jwtzzlxfs" type="jwtzzlxfs">
+				<xs:annotation>
+					<xs:documentation>境外投资者联系方式</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jwtzzszjmgdqszDm" type="jwtzzszjmgdqszDm">
+				<xs:annotation>
+					<xs:documentation>境外投资者所在居民国（地区）</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jwtzzzjmgdqnssbh" type="jwtzzzjmgdqnssbh" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>在居民国（地区）纳税识别号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jwtzzdlrmc" type="jwtzzdlrmc" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>境外投资者代理人名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jwtzzjbxxdlrlxfs" type="jwtzzjbxxdlrlxfs" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>代理人联系方式</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="btzqysfwjnwdssgs" type="btzqysfwjnwdssgs">
+				<xs:annotation>
+					<xs:documentation>被投资企业是否为境内外的上市公司</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="fhtjdzltz" type="fhtjdzltz">
+				<xs:annotation>
+					<xs:documentation>符合条件的战略投资</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jwtzzzjtzfs" type="jwtzzzjtzfs">
+				<xs:annotation>
+					<xs:documentation>境外投资者直接投资方式</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jwtzzxm" type="jwtzzxm">
+				<xs:annotation>
+					<xs:documentation>境外投资者姓名</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="smrq" type="smrq">
+				<xs:annotation>
+					<xs:documentation>声明日期</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jnjmnsrdjxh" type="jnjmnsrdjxh">
+				<xs:annotation>
+					<xs:documentation>境内居民纳税人登记序号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bcsjfpdgxhlze" type="bcsjfpdgxhlze">
+				<xs:annotation>
+					<xs:documentation>本次实际分配的股息红利总额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="xsdynsdgxhlje" type="xsdynsdgxhlje">
+				<xs:annotation>
+					<xs:documentation>其中：享受递延纳税的股息红利金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="xsdynsdgxhlzffshyyzfdzclxDm" type="xsdynsdgxhlzffshyyzfdzclxDm">
+				<xs:annotation>
+					<xs:documentation>享受递延纳税的股息红利支付方式和用于支付的资产类型代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="fplrdjmqyjbrmc" type="fplrdjmqyjbrmc">
+				<xs:annotation>
+					<xs:documentation>分配利润的居民企业经办人名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sqrq" type="sqrq">
+				<xs:annotation>
+					<xs:documentation>申请日期</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="slswjgDm" type="slswjgDm">
+				<xs:annotation>
+					<xs:documentation>受理税务机关代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="slr" type="slr">
+				<xs:annotation>
+					<xs:documentation>受理人姓名</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="slrq" type="slrq">
+				<xs:annotation>
+					<xs:documentation>受理日期</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sfkyxsdynady" type="sfkyxsdynady">
+				<xs:annotation>
+					<xs:documentation>是否可以享受递延纳税待遇</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ssjmxzDm" type="ssjmxzDm" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>税收减免性质代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="swsxDm" type="swsxDm" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>税务事项代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zfbz1" type="zfbz1">
+				<xs:annotation>
+					<xs:documentation>作废标志</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zfrDm" type="zfrDm" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>作废人代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zfrq" type="zfrq" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>支付日期</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="lrrq" type="lrrq">
+				<xs:annotation>
+					<xs:documentation>录入日期</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="lrrDm" type="lrrDm">
+				<xs:annotation>
+					<xs:documentation>录入人代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="xgrq" type="xgrq" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>修改日期</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="xgrDm" type="xgrDm" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>修改人代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sjgsdq" type="sjgsdq">
+				<xs:annotation>
+					<xs:documentation>数据归属地区</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="nsrsbh" type="nsrsbh" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>纳税人识别号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="nsrmc" type="nsrmc" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>纳税人名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="shxydm" type="shxydm" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>社会信用代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="xtbm" type="xtbm" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>系统编码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jnqynsrsbh" type="nsrsbh" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>境内企业纳税人识别号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jnqynsrmc" type="nsrmc" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>境内企业纳税人名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="yhBtzqyjbxxVO">
+		<xs:annotation>
+			<xs:documentation>境外投资者递延缴纳预提所得税被投资企业基本信息</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="btzqyjbxxuuid" type="btzqyjbxxuuid">
+				<xs:annotation>
+					<xs:documentation>被投资企业基本信息UUID</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="dyytbguuid" type="dyytbguuid">
+				<xs:annotation>
+					<xs:documentation>递延预提报告uuid</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="btzqynsrsbh" type="btzqynsrsbh">
+				<xs:annotation>
+					<xs:documentation>被投资企业纳税人识别号（社会信用代码）</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="btzqydjxh" type="btzqydjxh">
+				<xs:annotation>
+					<xs:documentation>被投资企业登记序号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="btzqymc" type="btzqymc">
+				<xs:annotation>
+					<xs:documentation>被投资企业名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="xzqhszDm" type="xzqhszDm">
+				<xs:annotation>
+					<xs:documentation>行政区划数字代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zgswjgDm" type="zgswjgDm">
+				<xs:annotation>
+					<xs:documentation>主管税务机关代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zgswjgmc" type="zgswjgmc">
+				<xs:annotation>
+					<xs:documentation>主管税务机关名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="csglltzxmssml" type="csglltzxmssml">
+				<xs:annotation>
+					<xs:documentation>从事鼓励类投资项目所属目录</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jhkzdygllxgdjyhd" type="jhkzdygllxgdjyhd">
+				<xs:annotation>
+					<xs:documentation>计划开展的与鼓励类相关的经营活动</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="dynsxxbh" type="dynsxxbh">
+				<xs:annotation>
+					<xs:documentation> 递延纳税信息编号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yxbz" type="yxbz">
+				<xs:annotation>
+					<xs:documentation>有效标志</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="lrrq" type="lrrq">
+				<xs:annotation>
+					<xs:documentation>录入日期</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="lrrDm" type="lrrDm">
+				<xs:annotation>
+					<xs:documentation>录入人代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="xgrq" type="xgrq" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>修改日期</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="xgrDm" type="xgrDm" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>修改人代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sjgsdq" type="sjgsdq">
+				<xs:annotation>
+					<xs:documentation>数据归属地区</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="yhWctzssxmlxVO">
+		<xs:annotation>
+			<xs:documentation>被投资企业外商投资所属项目类型</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="wcssxmlxuuid" type="wcssxmlxuuid">
+				<xs:annotation>
+					<xs:documentation>外商投资所属项目类型uuid</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="btzqyjbxxuuid" type="btzqyjbxxuuid">
+				<xs:annotation>
+					<xs:documentation>被投资企业基本信息UUID</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="dyytbguuid" type="dyytbguuid">
+				<xs:annotation>
+					<xs:documentation>递延预提报告uuid</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="wcssxmlxdlDm" type="wcssxmlxdlDm">
+				<xs:annotation>
+					<xs:documentation>外商所属项目类型大类代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="wcssxmlxzlDm" type="wcssxmlxzlDm" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>外商所属项目类型中类代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="wcssxmlxxlDm" type="wcssxmlxxlDm" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>外商所属项目类型小类代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="wstzcyzdmlxmlxjh" type="wstzcyzdmlxmlxjh" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>外商投资产业指导目录项目类型集合</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yxbz" type="yxbz">
+				<xs:annotation>
+					<xs:documentation>有效标志</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="lrrq" type="lrrq">
+				<xs:annotation>
+					<xs:documentation>录入日期</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="lrrDm" type="lrrDm">
+				<xs:annotation>
+					<xs:documentation>录入人代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="xgrq" type="xgrq" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>修改日期</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="xgrDm" type="xgrDm" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>修改人代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sjgsdq" type="sjgsdq">
+				<xs:annotation>
+					<xs:documentation>数据归属地区</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="yhZxbtzssxmlxVO">
+		<xs:annotation>
+			<xs:documentation>被投资企业中西部投资所属项目类型</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="zxbssxmlxuuid" type="zxbssxmlxuuid">
+				<xs:annotation>
+					<xs:documentation>中西部所属项目类型uuid</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="btzqyjbxxuuid" type="btzqyjbxxuuid">
+				<xs:annotation>
+					<xs:documentation>被投资企业基本信息UUID</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="dyytbguuid" type="dyytbguuid">
+				<xs:annotation>
+					<xs:documentation>递延预提报告uuid</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sjzxbdxwstzyscymlxmlxDm" type="sjzxbdxwstzyscymlxmlxDm">
+				<xs:annotation>
+					<xs:documentation>上级中西部地区外商投资优势产业目录项目类型代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zxbdxwstzyscymlxmlxjh" type="zxbdxwstzyscymlxmlxjh">
+				<xs:annotation>
+					<xs:documentation>中西部地区外商投资优势产业目录项目类型集合</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yxbz" type="yxbz" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>有效标志</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="lrrq" type="lrrq">
+				<xs:annotation>
+					<xs:documentation>录入日期</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="lrrDm" type="lrrDm">
+				<xs:annotation>
+					<xs:documentation>录入人代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="xgrq" type="xgrq" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>修改日期</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="xgrDm" type="xgrDm" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>修改人代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sjgsdq" type="sjgsdq">
+				<xs:annotation>
+					<xs:documentation>数据归属地区</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="yhZjtzxxVO">
+		<xs:annotation>
+			<xs:documentation>境外投资者递延缴纳预提所得税直接投资相关信息</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="zjtzxxuuid" type="zjtzxxuuid">
+				<xs:annotation>
+					<xs:documentation>直接投资信息UUID</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="dyytbguuid" type="dyytbguuid">
+				<xs:annotation>
+					<xs:documentation>递延预提报告uuid</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="btzqyjbxxuuid" type="btzqyjbxxuuid">
+				<xs:annotation>
+					<xs:documentation>被投资企业基本信息UUID</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jwtzzzjtzfsDm" type="jwtzzzjtzfsDm">
+				<xs:annotation>
+					<xs:documentation>境外投资者直接投资方式代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zjtzqynsrsbh" type="zjtzqynsrsbh" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>直接投资企业纳税人识别号（社会信用代码）</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zjtzqydjxh" type="zjtzqydjxh" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>直接投资企业登记序号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zjtzqymc" type="zjtzqymc" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>直接投资企业名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zgswjgDm" type="zgswjgDm" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>主管税务机关代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zgswjgmc" type="zgswjgmc" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>主管税务机关名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="xzhzzqysszbje" type="xzhzzqysszbje" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>新增或转增被投资企业实收资本金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="xzhzzqyzbgjje" type="xzhzzqyzbgjje" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>新增或转增被投资企业资本公积金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="skzh" type="skzh" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>收款账号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ydtzhzfqx" type="ydtzhzfqx" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>约定投资或支付期限</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="dxjjmqytzje" type="dxjjmqytzje" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>对新建居民企业投资金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="gqsrje" type="gqsrje" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>股权受让金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="gqzrfmc" type="gqzrfmc" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>股权转让方（被收购企业的股东）名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yxbz" type="yxbz">
+				<xs:annotation>
+					<xs:documentation>有效标志</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="lrrq" type="lrrq">
+				<xs:annotation>
+					<xs:documentation>录入日期</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="lrrDm" type="lrrDm">
+				<xs:annotation>
+					<xs:documentation>录入人代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="xgrq" type="xgrq" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>修改日期</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="xgrDm" type="xgrDm" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>修改人代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sjgsdq" type="sjgsdq">
+				<xs:annotation>
+					<xs:documentation>数据归属地区</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="yhZbxsdynsdyxxVO">
+		<xs:annotation>
+			<xs:documentation>境外投资者递延缴追补享受递延纳税待遇填报信息</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="zbxsdynsdyuuid" type="zbxsdynsdyuuid">
+				<xs:annotation>
+					<xs:documentation>追补享受递延纳税待遇UUID</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="dyytbguuid" type="dyytbguuid">
+				<xs:annotation>
+					<xs:documentation>递延预提报告uuid</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ykjhsbgxhlytsdsje" type="ykjhsbgxhlytsdsje" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>已扣缴/申报股息红利预提所得税金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ykjhsbgxhlytsdswspzhm" type="ykjhsbgxhlytsdswspzhm" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>已扣缴/申报股息红利预提所得税完税凭证号码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ykjhsbgxhlytsdswsrq" type="ykjhsbgxhlytsdswsrq" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>已扣缴/申报股息红利预提所得税完税日期</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bcsqtsje" type="bcsqtsje" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>本次申请退税金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yxbz" type="yxbz">
+				<xs:annotation>
+					<xs:documentation>有效标志</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="lrrq" type="lrrq">
+				<xs:annotation>
+					<xs:documentation>录入日期</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="lrrDm" type="lrrDm">
+				<xs:annotation>
+					<xs:documentation>录入人代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="xgrDm" type="xgrDm" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>修改人代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="xgrq" type="xgrq" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>修改日期</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sjgsdq" type="sjgsdq">
+				<xs:annotation>
+					<xs:documentation>数据归属地区</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="yhJwtzfbzlqdVO">
+		<xs:annotation>
+			<xs:documentation>境外投资者递延缴纳附报资料</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="fbzluuid" type="fbzluuid">
+				<xs:annotation>
+					<xs:documentation>附报资料UUID</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="dyytbguuid" type="dyytbguuid">
+				<xs:annotation>
+					<xs:documentation>递延预提报告uuid</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="fbzlbDm" type="fbzlbDm">
+				<xs:annotation>
+					<xs:documentation>附报提报类型代码||01：境外投资附报资料清单；02：分配利润的境内居民企业附报资料清单</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="fbzlsm" type="fbzlsm" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>附报资料说明</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yxbz" type="yxbz">
+				<xs:annotation>
+					<xs:documentation>有效标志</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="lrrq" type="lrrq">
+				<xs:annotation>
+					<xs:documentation>录入日期</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="lrrDm" type="lrrDm">
+				<xs:annotation>
+					<xs:documentation>录入人代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="xgrq" type="xgrq" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>修改日期</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="xgrDm" type="xgrDm">
+				<xs:annotation>
+					<xs:documentation>修改人代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sjgsdq" type="sjgsdq">
+				<xs:annotation>
+					<xs:documentation>数据归属地区</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="yhGxhlzfxxVO">
+		<xs:annotation>
+			<xs:documentation>境外投资者递延缴纳股息红利支付信息</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="gxhlzfxxuuid" type="gxhlzfxxuuid">
+				<xs:annotation>
+					<xs:documentation>股息红利支付信息uuid</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="dyytbguuid" type="dyytbguuid">
+				<xs:annotation>
+					<xs:documentation>递延预提报告uuid</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="xsdynsdgxhlzffshyyzfdzclxDm" type="xsdynsdgxhlzffshyyzfdzclxDm">
+				<xs:annotation>
+					<xs:documentation>享受递延纳税的股息红利支付方式和用于支付的资产类型代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="fkrzh" type="fkrzh" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>付款人账号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="rq" type="rq" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>日期</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="je" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="skrmc" type="skrmc" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>收款人名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="skrzh" type="skrzh" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>收款人账号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yyzfdezcmc" type="mc" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>用于支付的资产名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yyzfdezclxDm" type="yyzfdezclxDm" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>用于支付的资产类型</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="stgxfprq" type="stgxfprq" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>视同股息分配日期</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zjfpje" type="zjfpje" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>折价分配金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="srrmc" type="srrmc" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>受让人名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yxbz" type="yxbz">
+				<xs:annotation>
+					<xs:documentation>有效标志</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="lrrq" type="lrrq">
+				<xs:annotation>
+					<xs:documentation>录入日期</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="lrrDm" type="lrrDm">
+				<xs:annotation>
+					<xs:documentation>录入人代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="xgrq" type="xgrq" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>修改日期</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="xgrDm" type="xgrDm" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>修改人代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="insertXzhzzjnjmqysszihzbbGrid">
+		<xs:annotation>
+			<xs:documentation>新增或转增境内居民企业实收资本或资本公积填报（新增）</xs:documentation>
+		</xs:annotation>
+		<xs:sequence maxOccurs="unbounded">
+			<xs:element name="insertXzhzzjnjmqysszihzbbGridlb" type="yhZjtzxxVO">
+				<xs:annotation>
+					<xs:documentation>新增或转增境内居民企业实收资本或资本公积填报（新增）</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="deleteXzhzzjnjmqysszihzbbGrid">
+		<xs:annotation>
+			<xs:documentation>新增或转增境内居民企业实收资本或资本公积填报（删除）</xs:documentation>
+		</xs:annotation>
+		<xs:sequence maxOccurs="unbounded">
+			<xs:element name="deleteXzhzzjnjmqysszihzbbGridlb" type="yhZjtzxxVO">
+				<xs:annotation>
+					<xs:documentation>新增或转增境内居民企业实收资本或资本公积填报（删除）</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="updateXzhzzjnjmqysszihzbbGrid">
+		<xs:annotation>
+			<xs:documentation>新增或转增境内居民企业实收资本或资本公积填报（修改）</xs:documentation>
+		</xs:annotation>
+		<xs:sequence maxOccurs="unbounded">
+			<xs:element name="updateXzhzzjnjmqysszihzbbGridlb" type="yhZjtzxxVO">
+				<xs:annotation>
+					<xs:documentation>新增或转增境内居民企业实收资本或资本公积填报（修改）</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="insertZzgjntzxjjmqytbGrid">
+		<xs:annotation>
+			<xs:documentation>在中国境内投资新建居民企业填报（新增）</xs:documentation>
+		</xs:annotation>
+		<xs:sequence maxOccurs="unbounded">
+			<xs:element name="insertZzgjntzxjjmqytbGridlb" type="yhZjtzxxVO">
+				<xs:annotation>
+					<xs:documentation>在中国境内投资新建居民企业填报（新增）</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="deleteZzgjntzxjjmqytbGrid">
+		<xs:annotation>
+			<xs:documentation>在中国境内投资新建居民企业填报（新增）</xs:documentation>
+		</xs:annotation>
+		<xs:sequence maxOccurs="unbounded">
+			<xs:element name="deleteZzgjntzxjjmqytbGridlb" type="yhZjtzxxVO">
+				<xs:annotation>
+					<xs:documentation>在中国境内投资新建居民企业填报（删除）</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="updateZzgjntzxjjmqytbGrid">
+		<xs:annotation>
+			<xs:documentation>在中国境内投资新建居民企业填报（修改）</xs:documentation>
+		</xs:annotation>
+		<xs:sequence maxOccurs="unbounded">
+			<xs:element name="updateZzgjntzxjjmqytbGridlb" type="yhZjtzxxVO">
+				<xs:annotation>
+					<xs:documentation>在中国境内投资新建居民企业填报（修改）</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="insertCfglfsgzgjnjmqygqGrid">
+		<xs:annotation>
+			<xs:documentation>从非关联方收购中国境内居民企业股权填报（新增）</xs:documentation>
+		</xs:annotation>
+		<xs:sequence maxOccurs="unbounded">
+			<xs:element name="insertCfglfsgzgjnjmqygqGridlb" type="yhZjtzxxVO">
+				<xs:annotation>
+					<xs:documentation>从非关联方收购中国境内居民企业股权填报（新增）</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="deleteCfglfsgzgjnjmqygqGrid">
+		<xs:annotation>
+			<xs:documentation>从非关联方收购中国境内居民企业股权填报（删除）</xs:documentation>
+		</xs:annotation>
+		<xs:sequence maxOccurs="unbounded">
+			<xs:element name="deleteCfglfsgzgjnjmqygqGridlb" type="yhZjtzxxVO">
+				<xs:annotation>
+					<xs:documentation>从非关联方收购中国境内居民企业股权填报（删除）</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="updateCfglfsgzgjnjmqygqGrid">
+		<xs:annotation>
+			<xs:documentation>从非关联方收购中国境内居民企业股权填报（修改）</xs:documentation>
+		</xs:annotation>
+		<xs:sequence maxOccurs="unbounded">
+			<xs:element name="updateCfglfsgzgjnjmqygqGridlb" type="yhZjtzxxVO">
+				<xs:annotation>
+					<xs:documentation>从非关联方收购中国境内居民企业股权填报（修改）</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="insertZbxsdysdytbxxGrid">
+		<xs:annotation>
+			<xs:documentation>追补享受递延税待遇填报信息（新增）</xs:documentation>
+		</xs:annotation>
+		<xs:sequence maxOccurs="unbounded">
+			<xs:element name="insertZbxsdysdytbxxGridlb" type="yhZbxsdynsdyxxVO">
+				<xs:annotation>
+					<xs:documentation>追补享受递延税待遇填报信息（新增）</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="deleteZbxsdysdytbxxGrid">
+		<xs:annotation>
+			<xs:documentation>追补享受递延税待遇填报信息（删除）</xs:documentation>
+		</xs:annotation>
+		<xs:sequence maxOccurs="unbounded">
+			<xs:element name="deleteZbxsdysdytbxxGridlb" type="yhZbxsdynsdyxxVO">
+				<xs:annotation>
+					<xs:documentation>追补享受递延税待遇填报信息（删除）</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="updateZbxsdysdytbxxGrid">
+		<xs:annotation>
+			<xs:documentation>追补享受递延税待遇填报信息（修改）</xs:documentation>
+		</xs:annotation>
+		<xs:sequence maxOccurs="unbounded">
+			<xs:element name="updateZbxsdysdytbxxGridlb" type="yhZbxsdynsdyxxVO">
+				<xs:annotation>
+					<xs:documentation>追补享受递延税待遇填报信息（修改）</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="insertJwjmfbzlxxGrid">
+		<xs:annotation>
+			<xs:documentation>境外非居民企业附列资料（新增）</xs:documentation>
+		</xs:annotation>
+		<xs:sequence maxOccurs="unbounded">
+			<xs:element name="insertJwjmfbzlxxGridlb" type="yhJwtzfbzlqdVO">
+				<xs:annotation>
+					<xs:documentation>境外非居民企业附列资料（新增）</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="deleteJwjmfbzlxxGrid">
+		<xs:annotation>
+			<xs:documentation>境外非居民企业附列资料（删除）</xs:documentation>
+		</xs:annotation>
+		<xs:sequence maxOccurs="unbounded">
+			<xs:element name="deleteJwjmfbzlxxGridlb" type="yhJwtzfbzlqdVO">
+				<xs:annotation>
+					<xs:documentation>境外非居民企业附列资料（删除）</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="updateJwjmfbzlxxGrid">
+		<xs:annotation>
+			<xs:documentation>境外非居民企业附列资料（修改）</xs:documentation>
+		</xs:annotation>
+		<xs:sequence maxOccurs="unbounded">
+			<xs:element name="updateJwjmfbzlxxGridlb" type="yhJwtzfbzlqdVO">
+				<xs:annotation>
+					<xs:documentation>境外非居民企业附列资料（修改）</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="insertXjfszfGrid">
+		<xs:annotation>
+			<xs:documentation>现金方式支付（新增）</xs:documentation>
+		</xs:annotation>
+		<xs:sequence maxOccurs="unbounded">
+			<xs:element name="insertXjfszfGridlb" type="yhGxhlzfxxVO">
+				<xs:annotation>
+					<xs:documentation>现金方式支付（新增）</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="deleteXjfszfGrid">
+		<xs:annotation>
+			<xs:documentation>现金方式支付（删除）</xs:documentation>
+		</xs:annotation>
+		<xs:sequence maxOccurs="unbounded">
+			<xs:element name="deleteXjfszfGridlb" type="yhGxhlzfxxVO">
+				<xs:annotation>
+					<xs:documentation>现金方式支付（删除）</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="updateXjfszfGrid">
+		<xs:annotation>
+			<xs:documentation>现金方式支付（修改）</xs:documentation>
+		</xs:annotation>
+		<xs:sequence maxOccurs="unbounded">
+			<xs:element name="updateXjfszfGridlb" type="yhGxhlzfxxVO">
+				<xs:annotation>
+					<xs:documentation>现金方式支付（修改）</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="insertFxjzffszfGrid">
+		<xs:annotation>
+			<xs:documentation>非现金支付方式支付（新增）</xs:documentation>
+		</xs:annotation>
+		<xs:sequence maxOccurs="unbounded">
+			<xs:element name="insertFxjzffszfGridlb" type="yhGxhlzfxxVO">
+				<xs:annotation>
+					<xs:documentation>非现金支付方式支付（新增）</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="deleteFxjzffszfGrid">
+		<xs:annotation>
+			<xs:documentation>非现金支付方式支付（删除）</xs:documentation>
+		</xs:annotation>
+		<xs:sequence maxOccurs="unbounded">
+			<xs:element name="deleteFxjzffszfGridlb" type="yhGxhlzfxxVO">
+				<xs:annotation>
+					<xs:documentation>非现金支付方式支付（删除）</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="updateFxjzffszfGrid">
+		<xs:annotation>
+			<xs:documentation>非现金支付方式支付（修改）</xs:documentation>
+		</xs:annotation>
+		<xs:sequence maxOccurs="unbounded">
+			<xs:element name="updateFxjzffszfGridlb" type="yhGxhlzfxxVO">
+				<xs:annotation>
+					<xs:documentation>非现金支付方式支付（修改）</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="insertJnjmfbzlqdGrid">
+		<xs:annotation>
+			<xs:documentation>境内居民企业附列资料（新增）</xs:documentation>
+		</xs:annotation>
+		<xs:sequence maxOccurs="unbounded">
+			<xs:element name="insertJnjmfbzlqdGridlb" type="yhJwtzfbzlqdVO">
+				<xs:annotation>
+					<xs:documentation>境内居民企业附列资料（新增）</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="deleteJnjmfbzlqdGrid">
+		<xs:annotation>
+			<xs:documentation>境内居民企业附列资料（删除）</xs:documentation>
+		</xs:annotation>
+		<xs:sequence maxOccurs="unbounded">
+			<xs:element name="deleteJnjmfbzlqdGridlb" type="yhJwtzfbzlqdVO">
+				<xs:annotation>
+					<xs:documentation>境内居民企业附列资料（删除）</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="updateJnjmfbzlqdGrid">
+		<xs:annotation>
+			<xs:documentation>境内居民企业附列资料（修改）</xs:documentation>
+		</xs:annotation>
+		<xs:sequence maxOccurs="unbounded">
+			<xs:element name="updateJnjmfbzlqdGridlb" type="yhJwtzfbzlqdVO">
+				<xs:annotation>
+					<xs:documentation>境内居民企业附列资料（修改）</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="zxbtzssxmlxGrid">
+		<xs:annotation>
+			<xs:documentation>中西部投资所属项目类型Grid</xs:documentation>
+		</xs:annotation>
+		<xs:sequence maxOccurs="unbounded">
+			<xs:element name="zxbtzssxmlxGridlb" type="yhZxbtzssxmlxVO">
+				<xs:annotation>
+					<xs:documentation>中西部投资所属项目类型Grid</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="wctzssxmlxGrid">
+		<xs:annotation>
+			<xs:documentation>被投资企业外商投资所属项目类型Grid</xs:documentation>
+		</xs:annotation>
+		<xs:sequence maxOccurs="unbounded">
+			<xs:element name="wctzssxmlxGridlb" type="yhWctzssxmlxVO">
+				<xs:annotation>
+					<xs:documentation>被投资企业外商投资所属项目类型Grid</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="insertBtzqyjbxxGrid">
+		<xs:annotation>
+			<xs:documentation>被投资企业基本信息(新增)</xs:documentation>
+		</xs:annotation>
+		<xs:sequence maxOccurs="unbounded">
+			<xs:element name="insertBtzqyjbxxGridlb" type="yhBtzqyjbxxVO">
+				<xs:annotation>
+					<xs:documentation>被投资企业基本信息(新增)</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="updateBtzqyjbxxGrid">
+		<xs:annotation>
+			<xs:documentation>被投资企业基本信息(修改)</xs:documentation>
+		</xs:annotation>
+		<xs:sequence maxOccurs="unbounded">
+			<xs:element name="updateBtzqyjbxxGridlb" type="yhBtzqyjbxxVO">
+				<xs:annotation>
+					<xs:documentation>被投资企业基本信息(修改)</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="deleteBtzqyjbxxGrid">
+		<xs:annotation>
+			<xs:documentation>被投资企业基本信息(删除)</xs:documentation>
+		</xs:annotation>
+		<xs:sequence maxOccurs="unbounded">
+			<xs:element name="deleteBtzqyjbxxGridlb" type="yhBtzqyjbxxVO">
+				<xs:annotation>
+					<xs:documentation>被投资企业基本信息(删除)</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="nonStatusBtzqyjbxxGrid">
+		<xs:annotation>
+			<xs:documentation>被投资企业基本信息(无状态)</xs:documentation>
+		</xs:annotation>
+		<xs:sequence maxOccurs="unbounded">
+			<xs:element name="nonStatusBtzqyjbxxGridlb" type="yhBtzqyjbxxVO">
+				<xs:annotation>
+					<xs:documentation>被投资企业基本信息(无状态)</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

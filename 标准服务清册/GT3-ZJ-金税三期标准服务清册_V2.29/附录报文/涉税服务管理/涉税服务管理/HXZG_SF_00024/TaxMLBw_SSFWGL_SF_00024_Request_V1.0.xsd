@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 被2012 () 使用XMLSpy v编辑的 (http://www.altova.com) by -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:include schemaLocation="TaxMLPublicSSFWType.xsd"/>
+	<xs:complexType name="SSFWGLSSFW00024Request">
+		<xs:annotation>
+			<xs:documentation>保存涉税专业服务专项报告</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="sszyfwzxbgVO" type="SFSszyfwzxbgVO">
+						<xs:annotation>
+							<xs:documentation>涉税专业服务专项报告</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="wtmxVOGrid">
+						<xs:annotation>
+							<xs:documentation>专项报告委托项目信息列表</xs:documentation>
+						</xs:annotation>
+						<xs:complexType>
+							<xs:sequence maxOccurs="unbounded">
+								<xs:element name="wtmxVOGridlb" type="SFZxbgwtxmxxVO">
+									<xs:annotation>
+										<xs:documentation>专项报告委托项目信息</xs:documentation>
+									</xs:annotation>
+								</xs:element>
+							</xs:sequence>
+						</xs:complexType>
+					</xs:element>
+					<xs:element name="tyshxydm" type="tyshxydm">
+						<xs:annotation>
+							<xs:documentation>统一社会信用代码</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="ywbgqsrGrid">
+						<xs:annotation>
+							<xs:documentation>业务报告签署人列表</xs:documentation>
+						</xs:annotation>
+						<xs:complexType>
+							<xs:sequence maxOccurs="unbounded">
+								<xs:element name="ywbgqsrGridlb" type="SFZxbgywbgqsrVO"/>
+							</xs:sequence>
+						</xs:complexType>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="ryxxGrid">
+		<xs:annotation>
+			<xs:documentation>经营信息表格</xs:documentation>
+		</xs:annotation>
+		<xs:sequence minOccurs="0" maxOccurs="unbounded">
+			<xs:element name="ryxxGridlb" type="SFZxbgryxxVO">
+				<xs:annotation>
+					<xs:documentation>人员信息VO列表</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="ryxxGrid1">
+		<xs:annotation>
+			<xs:documentation>业务信息表格</xs:documentation>
+		</xs:annotation>
+		<xs:sequence minOccurs="0" maxOccurs="unbounded">
+			<xs:element name="ryxxGrid1lb" type="SFZxbgryxxMap">
+				<xs:annotation>
+					<xs:documentation>业务信息列表</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="SFZxbgywbgqsrVO">
+		<xs:annotation>
+			<xs:documentation>涉税专业服务专项报告业务报告签署人</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="ywqsuuid" type="uuid">
+				<xs:annotation>
+					<xs:documentation>业务签署uuid</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="wtxmuuid" type="uuid">
+				<xs:annotation>
+					<xs:documentation>委托项目UUID</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sszyfwwtxmDm" type="sszyfwwtxmDm">
+				<xs:annotation>
+					<xs:documentation>涉税专业服务委托项目代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ywbgqsr" type="xm">
+				<xs:annotation>
+					<xs:documentation>业务报告签署人</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

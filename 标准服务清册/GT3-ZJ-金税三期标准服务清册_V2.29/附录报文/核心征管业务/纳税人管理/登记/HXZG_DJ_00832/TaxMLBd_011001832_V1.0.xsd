@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2013 (http://www.altova.com) by  () -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:include schemaLocation="TaxMLPublicDJType.xsd"/>
+	<xs:complexType name="DwNsrfyhyxxGrid">
+		<xs:annotation>
+			<xs:documentation>纳税人附营行业信息列表</xs:documentation>
+		</xs:annotation>
+		<xs:sequence minOccurs="0" maxOccurs="unbounded">
+			<xs:element name="nsrfyhyxxGridlb" type="DJNsrfyhyxxVO">
+				<xs:annotation>
+					<xs:documentation>纳税人附营行业信息</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="DwFzjgxxGrid">
+		<xs:annotation>
+			<xs:documentation>分支机构信息列表</xs:documentation>
+		</xs:annotation>
+		<xs:sequence minOccurs="0" maxOccurs="unbounded">
+			<xs:element name="tzjgxxGridlb" type="DJFzjgxxVO">
+				<xs:annotation>
+					<xs:documentation>分支机构信息</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="DwTzfxxGrid">
+		<xs:annotation>
+			<xs:documentation>投资方信息列表</xs:documentation>
+		</xs:annotation>
+		<xs:sequence minOccurs="0" maxOccurs="unbounded">
+			<xs:element name="tzfxxGridlb" type="DJTzfxxVO">
+				<xs:annotation>
+					<xs:documentation>投资方信息信息</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="DwDkdjdsdjskxxGrid">
+		<xs:annotation>
+			<xs:documentation>代扣代缴、代收代缴税款信息</xs:documentation>
+		</xs:annotation>
+		<xs:sequence minOccurs="0" maxOccurs="unbounded">
+			<xs:element name="dkdjdsdjskxxGridlb" type="DJDkdjdsdjskywqkVO">
+				<xs:annotation>
+					<xs:documentation>主管税务机关信息</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="dwTzzexxGrid">
+		<xs:annotation>
+			<xs:documentation>纳税人信息投资总额信息</xs:documentation>
+		</xs:annotation>
+		<xs:sequence minOccurs="0" maxOccurs="unbounded">
+			<xs:element name="TzzexxGridlb" type="DJNsrxxTzzexxVO">
+				<xs:annotation>
+					<xs:documentation>纳税人信息投资总额信息信息</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="dwZczbxxGrid">
+		<xs:annotation>
+			<xs:documentation>纳税人信息（注册资本信息）</xs:documentation>
+		</xs:annotation>
+		<xs:sequence minOccurs="0" maxOccurs="unbounded">
+			<xs:element name="ZczbxxGridlb" type="DJNsrxxZczbxxVO">
+				<xs:annotation>
+					<xs:documentation>纳税人信息（注册资本信息）信息</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="Szhyswdjcjb">
+		<xs:annotation>
+			<xs:documentation>三证合一税务登记采集表</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="djSwdjbxxvo" type="DJSwdjbxxVO">
+				<xs:annotation>
+					<xs:documentation>税务登记表信息</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="djpzjgxxvo" type="DJPzjgxxVO">
+				<xs:annotation>
+					<xs:documentation>批准机构信息</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="djZjgxxvo" type="DJZjgxxVO">
+				<xs:annotation>
+					<xs:documentation>总机构信息</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="DwFzjgxxGrid" type="DwFzjgxxGrid">
+				<xs:annotation>
+					<xs:documentation>分支机构信息</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="insertdwnsrfyhyxxGrid" type="DwNsrfyhyxxGrid">
+				<xs:annotation>
+					<xs:documentation>纳税人附营行业信息</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="updatedwnsrfyhyxxGrid" type="DwNsrfyhyxxGrid">
+				<xs:annotation>
+					<xs:documentation>纳税人附营行业信息</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="deletedwnsrfyhyxxGrid" type="DwNsrfyhyxxGrid">
+				<xs:annotation>
+					<xs:documentation>纳税人附营行业信息</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="insertdwtzfxxGrid" type="DwTzfxxGrid">
+				<xs:annotation>
+					<xs:documentation>投资方信息</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="updatedwtzfxxGrid" type="DwTzfxxGrid">
+				<xs:annotation>
+					<xs:documentation>投资方信息</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="deletedwtzfxxGrid" type="DwTzfxxGrid">
+				<xs:annotation>
+					<xs:documentation>投资方信息</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="dkdjdsdjskxxGrid" type="DwDkdjdsdjskxxGrid">
+				<xs:annotation>
+					<xs:documentation>代扣代缴、代收代缴税款信息</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="insertdwTzzexxGrid" type="dwTzzexxGrid">
+				<xs:annotation>
+					<xs:documentation>纳税人信息投资总额信息</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="insertdwZczbxxGrid" type="dwZczbxxGrid">
+				<xs:annotation>
+					<xs:documentation>纳税人信息（注册资本信息）</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="updatedwTzzexxGrid" type="dwTzzexxGrid">
+				<xs:annotation>
+					<xs:documentation>纳税人信息投资总额信息</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="updatedwZczbxxGrid" type="dwZczbxxGrid">
+				<xs:annotation>
+					<xs:documentation>纳税人信息（注册资本信息）</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="deletedwTzzexxGrid" type="dwTzzexxGrid">
+				<xs:annotation>
+					<xs:documentation>纳税人信息投资总额信息</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="deletedwZczbxxGrid" type="dwZczbxxGrid">
+				<xs:annotation>
+					<xs:documentation>纳税人信息（注册资本信息）</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

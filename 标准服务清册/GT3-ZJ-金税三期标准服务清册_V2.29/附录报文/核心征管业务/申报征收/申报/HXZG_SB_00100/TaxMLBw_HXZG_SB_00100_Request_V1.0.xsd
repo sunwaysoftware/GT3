@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2010 (http://www.altova.com) by MESMERiZE (MiZE) -->
+<!-- 被2012 () 使用XMLSpy v编辑的 (http://www.altova.com) by -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:include schemaLocation="TaxMLPublicSBType.xsd"/>
+	<xs:include schemaLocation="TaxMLBw_wtdz_V1.0.xsd"/>
+	<xs:complexType name="HXZGSB00100Request">
+		<xs:annotation>
+			<xs:documentation>委托代征申报导入数据接入报文</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="wtdzywbw" type="wtdzywbw">
+						<xs:annotation>
+							<xs:documentation>委托代征业务报文</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="bctjqtxx" type="SBSBbcTjqtxxVO">
+						<xs:annotation>
+							<xs:documentation>保存提交其他信息</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+</xs:schema>

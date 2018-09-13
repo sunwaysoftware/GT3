@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2013 (http://www.altova.com) by  () -->
+<!-- 被2011 rel. 2 sp1 (TeaM DJiNN) 使用XMLSpy vTeaM DJiNN编辑的 (http://www.altova.com) by -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:complexType name="HXZGZS10264Response">
+		<xs:annotation>
+			<xs:documentation>缴款记录查询</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="nsrlsjfGrid">
+						<xs:complexType>
+							<xs:sequence maxOccurs="unbounded">
+								<xs:element name="nsrlsjfGridlb" type="spmxVO"/>
+							</xs:sequence>
+						</xs:complexType>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="spmxVO">
+		<xs:annotation>
+			<xs:documentation>税票明细VO</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="nsrsbh" type="nsrsbh"/>
+			<xs:element name="djxh" type="djxh"/>
+			<xs:element name="skssqq" type="skssqq"/>
+			<xs:element name="skssqz" type="skssqz"/>
+			<xs:element name="zsxmDm" type="zsxmDm"/>
+			<xs:element name="zspmDm" type="zspmDm"/>
+			<xs:element name="ybtse" type="ybtse"/>
+			<xs:element name="yzpzxh" type="yzpzxh"/>
+			<xs:element name="nssbrq" type="nssbrq"/>
+			<xs:element name="sbfsDm" type="sbfsDm"/>
+			<xs:element name="yzclrq" type="yzclrq"/>
+			<xs:element name="jkqx" type="jkqx"/>
+			<xs:element name="sjse" type="sjse"/>
+			<xs:element name="dzsphm" type="dzsphm"/>
+			<xs:element name="pzzlDm" type="pzzlDm"/>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

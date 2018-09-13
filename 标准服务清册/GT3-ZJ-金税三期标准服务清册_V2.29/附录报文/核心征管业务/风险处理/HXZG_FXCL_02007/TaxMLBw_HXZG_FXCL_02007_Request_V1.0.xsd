@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 被2012 () 使用XMLSpy v编辑的 (http://www.altova.com) by -->
+<!-- edited with XMLSpy v2013 (http://www.altova.com) by  () -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:complexType name="FZ02007ReqVO">
+		<xs:annotation>
+			<xs:documentation>接入报文VO(登记序号、简易处罚决定书uuid、是否接受处罚（Y/N/null）、文书送达方式代码（可以为空，为空默认直接送达）)</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="djxh" type="djxh">
+				<xs:annotation>
+					<xs:documentation>登记序号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="swxzcfjdsjyuuid" type="swxzcfjdsjyuuid">
+				<xs:annotation>
+					<xs:documentation>简易处罚决定书uuid</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sfjscf" type="bz1">
+				<xs:annotation>
+					<xs:documentation>是否接受处罚Y/N/NULL</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="wssdfsDm" type="wssdfsDm">
+				<xs:annotation>
+					<xs:documentation>文书送达方式代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="HXZGFXCL02007Request">
+		<xs:annotation>
+			<xs:documentation>网厅向核心返回纳税人是否同意接受处罚的结果信息，如果纳税人确认接受处罚，系统自动送达销号简易处罚决定书，自动办结简易处罚流程，如果纳税人不同意，由操作人员自行登录系统后处理接入报文</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="dclxxGrid">
+						<xs:annotation>
+							<xs:documentation>待处理信息Grid</xs:documentation>
+						</xs:annotation>
+						<xs:complexType>
+							<xs:sequence minOccurs="0" maxOccurs="unbounded">
+								<xs:element name="dclxxGridlb" type="FZ02007ReqVO">
+									<xs:annotation>
+										<xs:documentation>待处理信息Gridlb</xs:documentation>
+									</xs:annotation>
+								</xs:element>
+							</xs:sequence>
+						</xs:complexType>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+</xs:schema>

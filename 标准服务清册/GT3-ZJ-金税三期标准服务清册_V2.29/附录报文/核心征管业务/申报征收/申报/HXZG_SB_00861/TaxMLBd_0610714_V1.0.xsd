@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 被2011 rel. 2 sp1 (TeaM DJiNN) 使用XMLSpy vTeaM DJiNN编辑的 (http://www.altova.com) by -->
+<!-- edited with XMLSpy v2010 rel. 3 (http://www.altova.com) by MESMERiZE (MSM) -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:include schemaLocation="TaxMLPublicType.xsd"/>
+	<xs:complexType name="jrbxdjgqddsnlxbfsryhmxbForm">
+		<xs:annotation>
+			<xs:documentation>金融、保险等机构取得的涉农利息、保费收入优惠明细表(A107013)业务报文</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="jrbxdjgqddsnlxbfsryhMxbVO" type="jrbxdjgqddsnlxbfsryhmxbVO" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>金融、保险等机构取得的涉农利息、保费收入优惠明细表</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="jrbxdjgqddsnlxbfsryhmxbVO">
+		<xs:annotation>
+			<xs:documentation>《金融、保险等机构取得的涉农利息、保费收入优惠明细表》</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="a1070131" type="je" >
+				<xs:annotation>
+					<xs:documentation>金融机构农户小额贷款的利息收入A107013_1</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="lxsrze" type="je" >
+				<xs:annotation>
+					<xs:documentation>金融机构取得农户小额贷款利息收入总额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="lxjjsr" type="je" >
+				<xs:annotation>
+					<xs:documentation>金融机构取得农户小额贷款利息减计收入</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="a1070134" type="je" >
+				<xs:annotation>
+					<xs:documentation>保险公司为种植业、养殖业提供保险业务取得的保费收入A107013_4</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bfsrze" type="je" >
+				<xs:annotation>
+					<xs:documentation>保险公司为种植业、养殖业提供保险业务取得的保费收入总额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ybfsr" type="je" >
+				<xs:annotation>
+					<xs:documentation>原保费收入</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="fbfsr" type="je" >
+				<xs:annotation>
+					<xs:documentation>分保费收入</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="fcbfsr" type="je" >
+				<xs:annotation>
+					<xs:documentation>分出保费收入</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bfjjsr" type="je" >
+				<xs:annotation>
+					<xs:documentation>保险公司为种植业、养殖业提供保险业务取得的保费减计收入</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="a10701310" type="je" >
+				<xs:annotation>
+					<xs:documentation>其他符合条件的机构农户小额贷款的利息收入A107013_10</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qtlxsrze" type="je" >
+				<xs:annotation>
+					<xs:documentation>其他符合条件的机构取得农户小额贷款利息收入总额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qtlxjjsr" type="je" >
+				<xs:annotation>
+					<xs:documentation>其他符合条件的机构取得农户小额贷款利息减计收入</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="hj" type="je" >
+				<xs:annotation>
+					<xs:documentation>合计</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

@@ -1,0 +1,334 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- 被2012 () 使用XMLSpy v编辑的 (http://www.altova.com) by -->
+<!-- edited with XMLSpy v2010 rel. 3 (http://www.altova.com) by MESMERiZE (MSM) -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:complexType name="Bqwtjgqkbgbywbw">
+		<xs:annotation>
+			<xs:documentation>《本期委托加工情况报告表》业务报文</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="Bqwtjgqkbgb" type="Bqwtjgqkbgb">
+						<xs:annotation>
+							<xs:documentation>《本期委托加工情况报告表》（成品油）</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="Bqwtjgqkbgb">
+		<xs:annotation>
+			<xs:documentation>《本期委托加工情况报告表》</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="dsdjskqkGrid">
+				<xs:annotation>
+					<xs:documentation>代收代缴税款情况</xs:documentation>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:sequence minOccurs="0" maxOccurs="unbounded">
+						<xs:element name="dsdjskqkGridlb" type="DsdjskqkVO">
+							<xs:annotation>
+								<xs:documentation>代收代缴税款情况信息</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="StfdkdjskqkGrid">
+				<xs:annotation>
+					<xs:documentation>受托方代扣代缴税款情况</xs:documentation>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:sequence minOccurs="0" maxOccurs="unbounded">
+						<xs:element name="StfdkdjskqkGridlb" type="StfdkdjskqkVO"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="WtjghsdysxfplyqkGrid">
+				<xs:annotation>
+					<xs:documentation>委托加工收回的应税消费品领用存情况</xs:documentation>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:sequence minOccurs="0" maxOccurs="unbounded">
+						<xs:element name="WtjghsdysxfplyqkGridlb" type="WtjghsdysxfplyqkVO"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="DsdjskqkVO">
+		<xs:annotation>
+			<xs:documentation>委托加工代收代缴税款情况表VO</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="sysl" type="sysl" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>适用税率</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sphfwssflbm" type="sphfwssflbm" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>商品和服务税收分类编码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="xgrDm" type="xgrDm" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>修改人代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="wtfnsrsbh" type="wtfnsrsbh">
+				<xs:annotation>
+					<xs:documentation>委托方纳税人识别号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sbuuid" type="sbuuid">
+				<xs:annotation>
+					<xs:documentation>申报UUID</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bqdsdjsk" type="bqdsdjsk" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>本期代收代缴税款</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="stjgsl" type="stjgsl" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>受托加工数量</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="pzxh" type="pzxh">
+				<xs:annotation>
+					<xs:documentation>凭证序号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zspmDm" type="zspmDm" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>征收品目代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sjtbSj" type="sjtbSj" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>数据同步时间</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="wtfnsrmc" type="wtfnsrmc">
+				<xs:annotation>
+					<xs:documentation>委托方纳税人名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="uuid" type="uuid">
+				<xs:annotation>
+					<xs:documentation>UUID||uuid</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="lrrDm" type="lrrDm">
+				<xs:annotation>
+					<xs:documentation>录入人代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="wtfdjxh" type="wtfdjxh" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>委托方登记序号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sjgsdq" type="sjgsdq">
+				<xs:annotation>
+					<xs:documentation>数据归属地区</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ysxfpmc" type="ysxfpmc" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>应税消费品名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="StfdkdjskqkVO">
+		<xs:annotation>
+			<xs:documentation>委托加工受托方代扣代缴税款情况VO</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="xgrDm" type="xgrDm" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>修改人代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sysl" type="sysl" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>适用税率</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sphfwssflbm" type="sphfwssflbm" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>商品和服务税收分类编码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="dsdjsk" type="dsdjsk" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>代收代缴税款</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ssjkskjrq" type="ssjkskjrq" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>税收缴款书开具日期</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ssjkshm" type="ssjkshm" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>税收缴款书号码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sbuuid" type="sbuuid">
+				<xs:annotation>
+					<xs:documentation>申报UUID</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sjtbSj" type="sjtbSj" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>数据同步时间</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="stfkjywrmc" type="stfkjywrmc" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>受托方扣缴义务人名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="pzxh" type="pzxh">
+				<xs:annotation>
+					<xs:documentation>凭证序号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zspmDm" type="zspmDm" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>征收品目代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="lrrDm" type="lrrDm">
+				<xs:annotation>
+					<xs:documentation>录入人代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="uuid" type="uuid">
+				<xs:annotation>
+					<xs:documentation>UUID||uuid</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sjgsdq" type="sjgsdq">
+				<xs:annotation>
+					<xs:documentation>数据归属地区</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="stfkjywrsbh" type="stfkjywrsbh" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>受托方扣缴义务人识别号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="wtjgshsl" type="wtjgshsl" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>委托加工收回数量||委托加工收回数量</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ysxfpmc" type="ysxfpmc" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>应税消费品名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="stfdjxh" type="stfdjxh" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>受托方登记序号||受托方登记序号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="WtjghsdysxfplyqkVO">
+		<xs:annotation>
+			<xs:documentation>委托加工收回的应税消费品领用存情况VO</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="xgrDm" type="xgrDm" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>修改人代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sysl" type="sysl" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>适用税率</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sphfwssflbm" type="sphfwssflbm" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>商品和服务税收分类编码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bqwtjgshsl" type="bqwtjgshsl" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>本期委托加工收回数量</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bqjcsl" type="bqjcsl" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>本期结存数量||本期结存数量</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sqkcsl" type="sqkcsl" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>上期扣除数量</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sbuuid" type="sbuuid">
+				<xs:annotation>
+					<xs:documentation>申报UUID</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zspmDm" type="zspmDm" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>征收品目代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sjtbSj" type="sjtbSj" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>数据同步时间</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="pzxh" type="pzxh">
+				<xs:annotation>
+					<xs:documentation>凭证序号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="lrrDm" type="lrrDm">
+				<xs:annotation>
+					<xs:documentation>录入人代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bqwtjgshzjjgsl" type="bqwtjgshzjjgsl" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>本期委托加工收回直接销售数量</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="uuid" type="uuid">
+				<xs:annotation>
+					<xs:documentation>UUID||uuid</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sjgsdq" type="sjgsdq">
+				<xs:annotation>
+					<xs:documentation>数据归属地区</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bqwtjgshyylxscsl" type="bqwtjgshyylxscsl" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>本期委托加工收回用于连续生产数量</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ysxfpmc" type="ysxfpmc" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>应税消费品名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

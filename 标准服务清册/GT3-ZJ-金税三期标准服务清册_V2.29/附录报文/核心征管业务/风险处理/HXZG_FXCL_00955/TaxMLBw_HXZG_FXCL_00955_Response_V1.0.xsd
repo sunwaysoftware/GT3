@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 被2012 () 使用XMLSpy v编辑的 (http://www.altova.com) by -->
+<!-- edited with XMLSpy v2013 (http://www.altova.com) by  () -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:complexType name="HXZGFXCL00955Response">
+		<xs:annotation>
+			<xs:documentation>违法违章信息查询业务报文</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="wfwzxxGrid">
+						<xs:annotation>
+							<xs:documentation>违法违章信息grid</xs:documentation>
+						</xs:annotation>
+						<xs:complexType>
+							<xs:sequence minOccurs="0" maxOccurs="unbounded">
+								<xs:element name="wfwzxxGridlb" type="FZWfwzxxfhVO">
+									<xs:annotation>
+										<xs:documentation>违法违章信息grid列表</xs:documentation>
+									</xs:annotation>
+								</xs:element>
+							</xs:sequence>
+						</xs:complexType>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="FZWfwzxxfhVO">
+		<xs:annotation>
+			<xs:documentation>违法违章信息返回VO</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="fhm" type="bzdsDm">
+				<xs:annotation>
+					<xs:documentation>返回码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="cljgmc" type="ywmc">
+				<xs:annotation>
+					<xs:documentation>处理结果描述</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="wfxwbh" type="wfxwbh">
+				<xs:annotation>
+					<xs:documentation>违法行为编号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="wfxwmc" type="wfxwmc">
+				<xs:annotation>
+					<xs:documentation>违法行为名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="nsrsbh" type="nsrsbh">
+				<xs:annotation>
+					<xs:documentation>纳税人识别号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="nsrmc" type="nsrmc">
+				<xs:annotation>
+					<xs:documentation>纳税人名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="wfxwlx" type="wfxwlx">
+				<xs:annotation>
+					<xs:documentation>违法行为类型</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="wfss" type="wfss">
+				<xs:annotation>
+					<xs:documentation>违法事实</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sssqq" type="sssqq">
+				<xs:annotation>
+					<xs:documentation>所属时期起</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sssqz" type="sssqz">
+				<xs:annotation>
+					<xs:documentation>所属时期止</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="wfxwclzt" type="wfxwclztDm">
+				<xs:annotation>
+					<xs:documentation>违法行为处理状态</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sdsj" type="wssdsj">
+				<xs:annotation>
+					<xs:documentation>送达时间</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="wszg" type="wszg">
+				<xs:annotation>
+					<xs:documentation>文书字轨</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="cfje" type="cfje">
+				<xs:annotation>
+					<xs:documentation>处罚金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jkqx" type="jkqx">
+				<xs:annotation>
+					<xs:documentation>缴款期限</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

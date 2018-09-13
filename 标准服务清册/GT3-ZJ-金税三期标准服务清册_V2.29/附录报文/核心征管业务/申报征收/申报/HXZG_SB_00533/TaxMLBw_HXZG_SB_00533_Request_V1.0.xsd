@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2010 rel. 3 (http://www.altova.com) by MESMERiZE (MSM) -->
+<!-- 被2011 rel. 2 sp1 (TeaM DJiNN) 使用XMLSpy vTeaM DJiNN编辑的 (http://www.altova.com) by -->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://www.chinatax.gov.cn/dataspec/" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:include schemaLocation="TaxMLPublicSBType.xsd"/>
+	<xs:complexType name="HXZGSB00533Request">
+		<xs:annotation>
+			<xs:documentation>代扣代收缴款书信息回滚接入报文</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="dkdsJksxxhgVO" type="DkdsJksxxhgVO" nillable="true">
+						<xs:annotation>
+							<xs:documentation>代扣代收缴款书信息回滚VO</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="DkdsJksxxhgVO">
+		<xs:annotation>
+			<xs:documentation>代扣代收缴款书信息回滚V</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="pzhm" type="pzhm">
+				<xs:annotation>
+					<xs:documentation>票证号码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="pzzlDm" type="pzzlDm">
+				<xs:annotation>
+					<xs:documentation>票证种类代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="pzzg" type="pzzg">
+				<xs:annotation>
+					<xs:documentation>票证子规</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="czryDm" type="czryDm">
+				<xs:annotation>
+					<xs:documentation>操作人员代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sddwdjxh" type="sddwdjxh">
+				<xs:annotation>
+					<xs:documentation>扣缴义务人登记序号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

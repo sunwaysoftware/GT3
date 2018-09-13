@@ -1,0 +1,259 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2013 (http://www.altova.com) by  () -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:include schemaLocation="TaxMLPublicDJType.xsd"/>
+	<xs:complexType name="bgswdjb">
+		<xs:annotation>
+			<xs:documentation>变更税务登记表提交</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="xh" type="xh2">
+				<xs:annotation>
+					<xs:documentation>序号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qfjgDm" type="swjgDm">
+				<xs:annotation>
+					<xs:documentation>清分机关代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="djxh" type="djxh">
+				<xs:annotation>
+					<xs:documentation>登记序号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="lcslid" type="lcslid">
+				<xs:annotation>
+					<xs:documentation>流程实例ID</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="xpzjglxDm" type="pzsljglxDm">
+				<xs:annotation>
+					<xs:documentation>批准机构类型代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zgswskfjDm" type="zgswskfjDm">
+				<xs:annotation>
+					<xs:documentation>主管税务所科分局代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="pzjguuid" type="pzjguuid">
+				<xs:annotation>
+					<xs:documentation>批准机构uuid</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="xnsrsbh" type="nsrsbh">
+				<xs:annotation>
+					<xs:documentation>新纳税人识别号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bgnsrsbhbz" type="bz1">
+				<xs:annotation>
+					<xs:documentation>变更纳税人识别号标志</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bgslxxvo" type="DJYsqywslxxbVO">
+				<xs:annotation>
+					<xs:documentation>受理信息</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bgdjmxGrid" type="BgdjmxGrid">
+				<xs:annotation>
+					<xs:documentation>变更税务登记明细信息</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="djZjgxxvo" type="DJZjgxxVO">
+				<xs:annotation>
+					<xs:documentation>总机构信息</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="insertnsrfyhyxxGrid" type="BgNsrfyhyxxGrid">
+				<xs:annotation>
+					<xs:documentation>新增的纳税人附营行业信息</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="insertfzjgxxGrid" type="BgFzjgxxGrid">
+				<xs:annotation>
+					<xs:documentation>新增的分支机构信息</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="inserttzfxxGrid" type="BgTzfxxGrid">
+				<xs:annotation>
+					<xs:documentation>新增的投资方信息</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="insertTzzexxGrid" type="BgTzzexxGrid">
+				<xs:annotation>
+					<xs:documentation>纳税人信息投资总额信息</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="insertZczbxxGrid" type="BgZczbxxGrid">
+				<xs:annotation>
+					<xs:documentation>纳税人信息（注册资本信息）</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="updatensrfyhyxxGrid" type="BgNsrfyhyxxGrid">
+				<xs:annotation>
+					<xs:documentation>修改的纳税人附营行业信息</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="updatefzjgxxGrid" type="BgFzjgxxGrid">
+				<xs:annotation>
+					<xs:documentation>修改的分支机构信息</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="updatetzfxxGrid" type="BgTzfxxGrid">
+				<xs:annotation>
+					<xs:documentation>修改的投资方信息</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="updateTzzexxGrid" type="BgTzzexxGrid">
+				<xs:annotation>
+					<xs:documentation>纳税人信息投资总额信息</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="updateZczbxxGrid" type="BgZczbxxGrid">
+				<xs:annotation>
+					<xs:documentation>纳税人信息（注册资本信息）</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="deletensrfyhyxxGrid" type="BgNsrfyhyxxGrid">
+				<xs:annotation>
+					<xs:documentation>删除的纳税人附营行业信息</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="deletefzjgxxGrid" type="BgFzjgxxGrid">
+				<xs:annotation>
+					<xs:documentation>删除的分支机构信息</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="deletetzfxxGrid" type="BgTzfxxGrid">
+				<xs:annotation>
+					<xs:documentation>删除的投资方信息</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="deleteTzzexxGrid" type="BgTzzexxGrid">
+				<xs:annotation>
+					<xs:documentation>纳税人信息投资总额信息</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="deleteZczbxxGrid" type="BgZczbxxGrid">
+				<xs:annotation>
+					<xs:documentation>纳税人信息（注册资本信息）</xs:documentation>
+				</xs:annotation>
+			</xs:element>			
+			<xs:element name="insertnsrJtcyxxGrid" type="BgNsrJtcyxxGrid">
+				<xs:annotation>
+					<xs:documentation>全量的纳税人家庭成员信息</xs:documentation>
+				</xs:annotation>
+			</xs:element>			
+			<xs:element name="updategsbgjlxxGrid" type="BggsbgjlGrid">
+				<xs:annotation>
+					<xs:documentation>工商部门查询时带出的工商变更记录信息</xs:documentation>
+				</xs:annotation>
+			</xs:element>			
+			<xs:element name="gsbgbz" type="yxbz">
+				<xs:annotation>
+					<xs:documentation>工商变更标志，网报传N</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="BgNsrfyhyxxGrid">
+		<xs:annotation>
+			<xs:documentation>纳税人附营行业信息列表</xs:documentation>
+		</xs:annotation>
+		<xs:sequence minOccurs="0" maxOccurs="unbounded">
+			<xs:element name="nsrfyhyxxGridlb" type="DJNsrfyhyxxVO">
+				<xs:annotation>
+					<xs:documentation>纳税人附营行业信息</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="BgFzjgxxGrid">
+		<xs:annotation>
+			<xs:documentation>分支机构信息列表</xs:documentation>
+		</xs:annotation>
+		<xs:sequence minOccurs="0" maxOccurs="unbounded">
+			<xs:element name="tzjgxxGridlb" type="DJFzjgxxVO">
+				<xs:annotation>
+					<xs:documentation>分支机构信息</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="BgTzfxxGrid">
+		<xs:annotation>
+			<xs:documentation>投资方信息列表</xs:documentation>
+		</xs:annotation>
+		<xs:sequence minOccurs="0" maxOccurs="unbounded">
+			<xs:element name="tzfxxGridlb" type="DJTzfxxVO">
+				<xs:annotation>
+					<xs:documentation>投资方信息信息</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="BgdjmxGrid">
+		<xs:annotation>
+			<xs:documentation>变更登记明细信息列表</xs:documentation>
+		</xs:annotation>
+		<xs:sequence minOccurs="0" maxOccurs="unbounded">
+			<xs:element name="bgdjmxGridlb" type="DJBgdjmxVO">
+				<xs:annotation>
+					<xs:documentation>变更税务登记明细信息</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="BgTzzexxGrid">
+		<xs:annotation>
+			<xs:documentation>纳税人信息投资总额信息</xs:documentation>
+		</xs:annotation>
+		<xs:sequence minOccurs="0" maxOccurs="unbounded">
+			<xs:element name="TzzexxGridlb" type="DJNsrxxTzzexxVO">
+				<xs:annotation>
+					<xs:documentation>纳税人信息投资总额信息信息</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="BgZczbxxGrid">
+		<xs:annotation>
+			<xs:documentation>纳税人信息（注册资本信息）</xs:documentation>
+		</xs:annotation>
+		<xs:sequence minOccurs="0" maxOccurs="unbounded">
+			<xs:element name="ZczbxxGridlb" type="DJNsrxxZczbxxVO">
+				<xs:annotation>
+					<xs:documentation>纳税人信息（注册资本信息）信息</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="BgNsrJtcyxxGrid">
+		<xs:annotation>
+			<xs:documentation>纳税人家庭成员信息列表</xs:documentation>
+		</xs:annotation>
+		<xs:sequence minOccurs="0" maxOccurs="unbounded">
+			<xs:element name="nsrJtcyxxGridlb" type="DJJtcyxxVO">
+				<xs:annotation>
+					<xs:documentation>纳税人家庭成员信息</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="BggsbgjlGrid">
+		<xs:annotation>
+			<xs:documentation>纳税人工商变更记录信息列表</xs:documentation>
+		</xs:annotation>
+		<xs:sequence minOccurs="0" maxOccurs="unbounded">
+			<xs:element name="gsbgjlGridlb" type="WbjhCjSjBgxxVO">
+				<xs:annotation>
+					<xs:documentation>纳税人工商变更记录信息</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

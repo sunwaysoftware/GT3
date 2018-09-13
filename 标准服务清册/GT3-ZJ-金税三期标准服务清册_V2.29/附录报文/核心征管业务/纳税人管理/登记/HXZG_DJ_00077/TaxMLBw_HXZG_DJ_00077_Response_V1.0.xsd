@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2013 (http://www.altova.com) by  () -->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://www.chinatax.gov.cn/dataspec/" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:include schemaLocation="TaxMLPublicDJType.xsd"/>
+	<xs:complexType name="HXZGDJ00077Response">
+		<xs:annotation>
+			<xs:documentation>停业受理</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="tysqdjVO" type="tysqdjVO"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="tysqdjVO">
+		<xs:annotation>
+			<xs:documentation>停业受理申请ＶＯ</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="hztyqxq" type="hztyqxq">
+				<xs:annotation>
+					<xs:documentation>首次核准停业期限起</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="slrDm" type="slrDm">
+				<xs:annotation>
+					<xs:documentation>受理人</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="slswjgDm" type="slswjgDm">
+				<xs:annotation>
+					<xs:documentation>受理税务机关</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="slrq" type="slrq">
+				<xs:annotation>
+					<xs:documentation>受理日期</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="DjTfyxxVO" type="DJTfyxxVO"/>
+			<xs:element name="jcfpqkGrid">
+				<xs:complexType>
+					<xs:sequence minOccurs="0" maxOccurs="unbounded">
+						<xs:element name="jcfpqkGridlb" type="jcfpqkVO"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="swzjzlGrid">
+				<xs:complexType>
+					<xs:sequence minOccurs="0" maxOccurs="unbounded">
+						<xs:element name="swzjzlGridlb" type="swzjzlVO"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="swzjzlVO">
+		<xs:annotation>
+			<xs:documentation>税务证件种类</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="swzjzlDm" type="swzjzlDm">
+				<xs:annotation>
+					<xs:documentation>税务证件种类</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="swzjhm" type="swzjhm">
+				<xs:annotation>
+					<xs:documentation> 税务证件号码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="jcfpqkVO">
+		<xs:annotation>
+			<xs:documentation>缴存发票情况</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="jcfpqkuuid" type="jcfpqkuuid">
+				<xs:annotation>
+					<xs:documentation>缴存发票情况UUID</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="djxh" type="djxh">
+				<xs:annotation>
+					<xs:documentation>登记序号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jhfpzlDm" type="jhfpzlDm" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>缴回发票种类代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="fpDm" type="fpDm" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>发票代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="fpqshm" type="fpqshm" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>发票起始号码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="fpzzhm" type="fpzzhm" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>发票终止号码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="fpsl" type="fpsl">
+				<xs:annotation>
+					<xs:documentation>发票数量</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

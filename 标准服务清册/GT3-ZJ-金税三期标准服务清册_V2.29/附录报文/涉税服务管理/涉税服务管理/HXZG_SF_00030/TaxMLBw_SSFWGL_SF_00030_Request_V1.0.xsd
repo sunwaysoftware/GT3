@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:include schemaLocation="TaxMLPublicSFType_00030.xsd"/>
+	<xs:complexType name="SSFWGLSSFW00030Request">
+		<xs:annotation>
+			<xs:documentation>行政登记查看重复人员</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="swsswsxzdjVO" type="ssjgxzdjbVO">
+						<xs:annotation>
+							<xs:documentation>行政登记表信息</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="ryxxGrid">
+						<xs:annotation>
+							<xs:documentation>人员信息Grid</xs:documentation>
+						</xs:annotation>
+						<xs:complexType>
+							<xs:sequence maxOccurs="unbounded">
+								<xs:element name="ryxxGridlb" type="ssjgryxxVO">
+									<xs:annotation>
+										<xs:documentation>人员信息gridlb</xs:documentation>
+									</xs:annotation>
+								</xs:element>
+							</xs:sequence>
+						</xs:complexType>
+					</xs:element>
+					<xs:element name="cxbz" type="cxbz">
+						<xs:annotation>
+							<xs:documentation>查询标志</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+</xs:schema>

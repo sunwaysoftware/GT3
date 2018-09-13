@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 被2012 () 使用XMLSpy v编辑的 (http://www.altova.com) by -->
+<!-- edited with XMLSpy v2010 rel. 3 (http://www.altova.com) by MESMERiZE (MSM) -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:complexType name="qyhbbdVO">
+		<xs:annotation>
+			<xs:documentation>《企业重组所得税特殊性税务处理报告表(企业合并)》</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence minOccurs="0">
+					<xs:element name="qyhbForm" type="qyhbFormVO">
+						<xs:annotation>
+							<xs:documentation>企业重组所得税特殊性税务处理报告表(企业合并)_主表</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="bhbqyxxGrid">
+						<xs:annotation>
+							<xs:documentation>被合并企业信息</xs:documentation>
+						</xs:annotation>
+						<xs:complexType>
+							<xs:sequence minOccurs="0" maxOccurs="unbounded">
+								<xs:element name="bhbqyxxmx" type="bhbqyxxmxVO">
+									<xs:annotation>
+										<xs:documentation>被合并企业信息</xs:documentation>
+									</xs:annotation>
+								</xs:element>
+							</xs:sequence>
+						</xs:complexType>
+					</xs:element>
+					<xs:element name="bhbqygdxxGrid">
+						<xs:annotation>
+							<xs:documentation>被合并企业股东信息</xs:documentation>
+						</xs:annotation>
+						<xs:complexType>
+							<xs:sequence minOccurs="0" maxOccurs="unbounded">
+								<xs:element name="bhbqygdxxmx" type="bhbqygdxxmxVO">
+									<xs:annotation>
+										<xs:documentation>被合并企业信息</xs:documentation>
+									</xs:annotation>
+								</xs:element>
+							</xs:sequence>
+						</xs:complexType>
+					</xs:element>
+					<xs:element name="bhbqyxxzcqkGrid">
+						<xs:annotation>
+							<xs:documentation>被合并企业股东取得股权和其他资产情况</xs:documentation>
+						</xs:annotation>
+						<xs:complexType>
+							<xs:sequence minOccurs="0" maxOccurs="unbounded">
+								<xs:element name="bhbqyxxzcqkmx" type="bhbqyxxzcqkmxVO">
+									<xs:annotation>
+										<xs:documentation>被合并企业信息</xs:documentation>
+									</xs:annotation>
+								</xs:element>
+							</xs:sequence>
+						</xs:complexType>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="bhbqyxxzcqkmxVO">
+		<xs:annotation>
+			<xs:documentation>被合并企业股东取得股权和其他资产情况</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="gdmc" type="gdmc" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>股东名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="xmmc" type="xmmc" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>项目名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="gyjz" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>公允价值||公允价值</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jsjc" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>计税基础</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="bhbqygdxxmxVO">
+		<xs:annotation>
+			<xs:documentation>被合并企业信息</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="nsrsbh" type="nsrsbh" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>纳税人识别号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="nsrmc" type="nsrmc" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>纳税人名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="cgbl" type="bl" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>持股比例</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="swjgmc" type="swjgmc" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>税务机关名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="bhbqyxxmxVO">
+		<xs:annotation>
+			<xs:documentation>被合并企业信息</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="nsrsbh" type="nsrsbh" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>纳税人识别号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="nsrmc" type="nsrmc" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>纳税人名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="swjgmc" type="swjgmc" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>税务机关名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="qyhbFormVO">
+		<xs:annotation>
+			<xs:documentation>企业合并</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="sbqymc" type="nsrmc" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>申报企业名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="hbqynssbh" type="nsrsbh" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>合并企业纳税人识别号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="hbqysszgswjgqc" type="swjgmc" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>合并企业所属主管税务机关（全称）</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="hbqymc" type="nsrmc" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>合并企业名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="hbjydzfze" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>合并交易的支付总额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="gqzfezjyzedbl" type="bl" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>股权支付额占交易支付总额的比例%</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="gqzfegyjz" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>②股权支付额_公允价值</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="gqzfeyjsjc" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>②股权支付额_原计税基础</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sftykzbxyzwdjdhb" type="nsrsbh" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>是否为同一控制下且不需要支付对价的合并</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="fgqzfdydzczrsdhss" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>非股权支付对应的资产转让所得或损失</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="fgqzfeyjsjc" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>①非股权支付额_原计税基础</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="fgqzfegyjz" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>①非股权支付额_公允价值</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bhbqysqswmbdkse" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>被合并企业税前尚未弥补的亏损额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bhbqyjzcgyjz" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>被合并企业净资产公允价值</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zcqxgzll" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>截至合并业务发生当年年末国家发行的最长期限的国债利率</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bhbqyksxe" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>可由合并企业弥补的被合并企业亏损的限额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bhbqyfzdyjsjc" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>被合并企业负债的原计税基础</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="hbqyjsbhbqyfzdjsjc" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>合并企业接受被合并企业负债的计税基础</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bhbqyzcdyjsjc" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>被合并企业资产的原计税基础</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="hbqyjsbhbqyzcdjsjc" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>合并企业接受被合并企业资产的计税基础</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="wqrdzcss" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>未确认的资产损失</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="fqqrdsr" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>分期确认的收入</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ksnx" type="ksnx" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>被合并企业有关项目所得优惠的开始年限</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jsnx" type="jsnx" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>被合并企业有关项目所得优惠的结束年限</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

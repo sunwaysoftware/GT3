@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<service>
+  <head>
+    <tran_id>SWZJ.HXZG.SB.ClhgzxxDrAndJk</tran_id>
+    <channel_id>TEST</channel_id>
+    <tran_seq>11111111111111111111111111111111</tran_seq>
+    <tran_date>201401016</tran_date>
+    <tran_time>173655570</tran_time>
+    <rtn_code>0</rtn_code>
+    <rtn_msg>
+      <Code>000</Code>
+      <Message></Message>
+      <Reason></Reason>
+    </rtn_msg>
+    <expand>
+      <name>sjjg</name>
+      <value>14406810004</value>
+    </expand>
+    <expand>
+      <name>sjry</name>
+      <value>14406811102</value>
+    </expand>
+    <expand>
+      <name>bs_sb_00080</name>
+      <value>05868FA7B76B3C30E053EE171296A903</value>
+    </expand>
+  </head>
+  <body><![CDATA[<?xml version="1.0" encoding="UTF-8" standalone="yes"?><taxML xsi:type="HXZGSB00080Response" xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><SBClhgzxxDrAndJkResVO><SBCgsHgzLockCheckResVO><hgzFlag>1</hgzFlag><hgzjk>Y</hgzjk><nsrxxInitFlag>0</nsrxxInitFlag></SBCgsHgzLockCheckResVO><hgzzwjc>Y</hgzzwjc><SBCgsCljgxxVO><clxlh>31000107017134</clxlh><clscqyDm>北汽福田汽车股份有限公司</clscqyDm><cllbDm1>1</cllbDm1><clcpxh>福田牌BJ6800U6AFB-1</clcpxh><clcp>福田牌</clcp><clxh>BJ6800U6AFB-1</clxh><cldw>2000.0</cldw><zws>33</zws><pql>5200.0</pql><clgzsrlnyzlDm>B</clgzsrlnyzlDm><zypz>2121</zypz><cdsx>1</cdsx><cllxDm>06</cllxDm><zdjsjg>300000.0</zdjsjg><jglx>备案</jglx></SBCgsCljgxxVO><sbcgsnsrzrrxxVO><DJZrrxxGrid/><DJNsrxxGrid/></sbcgsnsrzrrxxVO><clxlh>31000107017134</clxlh><nsrxxInitFlag>0</nsrxxInitFlag><hgzcjxxjkFlag>bd</hgzcjxxjkFlag><cgshgzbdcjxxVO><bdReCode>Y</bdReCode><bdMessage>根据合格证编号查询外部交换中机服务中心所得车辆信息与根据车辆序列号查询所得车价信息不一致，详细信息如下：其中车辆序列号为31000107017134,前者中的车辆厂牌为大众汽车牌/VOLKSWAGEN,但后者中的车辆厂牌为福田牌;前者中的车辆型号为SVW71411GR,但后者中的车辆型号为BJ6800U6AFB-1;前者中的排气量为1395.0,但后者中的排气量为5200.0;前者中的座位数为5,但后者中的座位数为33;前者中的车辆类型为轿车,但后者中的车辆类型为客车;另外，导入报文中的车辆信息与根据合格证编查询外部交换中机服务中心所得车辆信息不一致，详细信息如下：其中合格证编号为WAE021401066948,前者中的车辆厂牌为福田牌,但后者中的车辆厂牌为大众汽车牌/VOLKSWAGEN;前者中的车辆型号为BJ6800U6AFB-1,但后者中的车辆型号为SVW71411GR;前者中的车辆生产企业名称为北汽福田汽车股份有限公司,但后者中的车辆生产企业名称为上海大众汽车有限公司;前者中的车辆类型为客车,但后者中的车辆类型为轿车;</bdMessage></cgshgzbdcjxxVO></SBClhgzxxDrAndJkResVO></taxML>]]></body>
+</service>

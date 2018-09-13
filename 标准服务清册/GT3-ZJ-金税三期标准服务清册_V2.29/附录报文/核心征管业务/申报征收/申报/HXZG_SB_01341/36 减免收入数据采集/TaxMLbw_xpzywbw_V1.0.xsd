@@ -1,0 +1,159 @@
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" version="1.0" targetNamespace="http://www.chinatax.gov.cn/dataspec/">
+    <xs:include schemaLocation="TaxML.xsd"/>
+    <xs:complexType name="xpzywbw">
+        <xs:annotation>
+            <xs:documentation>总业务报文</xs:documentation>
+        </xs:annotation>
+        <xs:complexContent>
+            <xs:extension base="taxDoc">
+                <xs:sequence>
+                    <xs:element name="qyjmsdcbVO" type="qyjmsdcbVO">
+                        <xs:annotation>
+                            <xs:documentation>企业减免税调查表</xs:documentation>
+                        </xs:annotation>
+                    </xs:element>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+
+    <xs:complexType name="qyjmsdcbVO">
+        <xs:annotation>
+            <xs:documentation>企业减免税调查表</xs:documentation>
+        </xs:annotation>
+        <xs:sequence>
+            <xs:element name="sb136nsrxxFormVO" type="sb136nsrxxFormVO">
+                <xs:annotation>
+                    <xs:documentation>企业减免税调查表Form</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="sbzlbsqyjmsdcbmxGridVO">
+                <xs:annotation>
+                    <xs:documentation>企业减免税调查表明细Grid</xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="qyjmsdcbmxlbGridlbVO" type="qyjmsdcbmxlbGridlbVO" maxOccurs="unbounded">
+                            <xs:annotation>
+                                <xs:documentation>企业减免税调查表明细Gridlb</xs:documentation>
+                            </xs:annotation>
+                        </xs:element>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="sb136nsrxxFormVO">
+        <xs:sequence>
+            <xs:element name="nsrsbh" type="nsrsbh" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>纳税人识别号</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="nsrmc" type="nsrmc" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>纳税人名称</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="djzclxDm" type="djzclxDm" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>登记注册类型代码</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="hyDm" type="hyDm" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>行业代码</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="lxr" type="lxr" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>联系人||联系人</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="lxdh" type="lxdh" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>联系电话</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="email" type="email" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>电子邮箱</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="qysdszgswj" type="qysdszgswj" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>企业所得税主管税务局</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="dqxsyye" type="dqxsyye" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>当期销售（营业）额</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="dqlyze" type="dqlyze" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>当期利润总额</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="dqyjsj" type="dqyjsj" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>当期应缴税金</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="dqsjsj" type="dqsjsj" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>当期实缴税金</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="qyjmsdcbmxlbGridlbVO">
+        <xs:annotation>
+            <xs:documentation>企业减免税调查表明细Gridlb</xs:documentation>
+        </xs:annotation>
+        <xs:sequence>
+            <xs:element name="ewbhxh" type="ewbhxh" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>二维表行序号</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="hmc" type="hmc" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>行名称</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="jmxmDm" type="jmxmDm" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>减免项目代码</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="dqsjjmsehj" type="dqsjjmsehj" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>当期实际减免税额合计</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="dqzqjm" type="dqzqjm" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>当期征前减免</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="dqtkjm" type="dqtkjm" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>当期退库减免</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="dqqsdd" type="dqqsdd" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>当期欠税抵顶</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="qyxsjmsqssj" type="qyxsjmsqssj" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>企业享受减免税起始时间</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+</xs:schema>

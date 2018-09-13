@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2009 (http://www.altova.com) by Administrator (EMBRACE) -->
+<!-- 被2012 () 使用XMLSpy v编辑的 (http://www.altova.com) by -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:include schemaLocation="TaxMLPublicSBType.xsd"/>
+	<xs:include schemaLocation="TaxMLBw_dkdjzqjyyhssb_V1.0.xsd"/>
+	<xs:include schemaLocation="TaxMLBd_0610139_V1.0.xsd"/>
+	<xs:complexType name="HXZGSB00116Request">
+		<xs:annotation>
+			<xs:documentation>代扣代缴交易印花税申报保存接入报文</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="sbbcTjqtxxVO" type="SBSBbcTjqtxxVO">
+						<xs:annotation>
+							<xs:documentation>代扣代缴交易印花税申报申报保存提交其他信息对象</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="dkdjzqjyyhsSBVO" type="SBDkdjzqjyyhsSbxxVo">
+						<xs:annotation>
+							<xs:documentation>代扣代缴交易印花税申报申报表单数据信息</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="SBDkdjzqjyyhsSbxxVo">
+		<xs:annotation>
+			<xs:documentation>代扣代缴证券交易印花税申报信息</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="bgbxx" type="SBDkdjzqjyyhsbgbxxVo">
+				<xs:annotation>
+					<xs:documentation>报告表信息</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bgbskmx">
+				<xs:annotation>
+					<xs:documentation>报告表税款明细</xs:documentation>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:sequence maxOccurs="unbounded">
+						<xs:element name="bgbskmxList" type="SBDkdjzqjyyhsSkmxVo">
+							<xs:annotation>
+								<xs:documentation>报告表税款明细列表</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="dkdjzyjks" type="dkdjdsdjdkdszy" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>代扣代缴专用缴款书</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yhjszyjks" type="dkdjdsdjyhjszy" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>银行专用缴款书</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

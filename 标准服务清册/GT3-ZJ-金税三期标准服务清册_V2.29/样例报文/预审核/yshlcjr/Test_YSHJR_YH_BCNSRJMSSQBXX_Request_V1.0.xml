@@ -1,0 +1,100 @@
+<service xmlns="http://www.chinatax.gov.cn/spec/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<head>
+		<tran_id>SWZJ.HXZG.YSH.BCXXCJBSJ</tran_id>
+		<channel_id>TEST</channel_id>
+		<tran_seq>C000BNFZC25001201305030505267890</tran_seq>
+		<tran_date>20140826</tran_date>
+		<tran_time>173435849</tran_time>
+                       <expand>
+      <name>sjry</name>
+      <value>24406060735</value>
+    </expand>
+    <expand>
+      <name>sjjg</name>
+      <value>24406060700</value>
+    </expand>	</head> 
+<body><![CDATA[<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<taxML xsi:type="HXZGYSH00006Request" xmlbh="HXZGYSH00006Request" bbh="V1.1" xmlmc="渠道业务审核接入报文" xsi:schemaLocation="http://www.chinatax.gov.cn/dataspec/ TaxMLBw_HXZG_YSH_00006_Request_V1.1.xsd" xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<fileInfor>
+		<fileGrid>
+			<fileGridlb>
+				<filepath>2</filepath>
+				<filetype>2</filetype>
+				<filename>2</filename>
+				<fileindex>2</fileindex>
+			</fileGridlb>
+		</fileGrid>
+		<fileInforVO>
+			<fileSize>3</fileSize>
+			<recordNumber>3</recordNumber>
+			<nsrSwjgDm>3</nsrSwjgDm>
+		</fileInforVO>
+	</fileInfor>
+	<qdywshRequestVO>
+		<qxswjgDm>24406060700</qxswjgDm>
+		<djxh>12440600000000000001</djxh>
+		<lcswsxDm>LCSXA031003001</lcswsxDm>
+		<slswsxDm>SLSXA031003037</slswsxDm>
+		<dzbzdszlDm>BDA0310104</dzbzdszlDm>
+		<xtbm>C000BNFZC</xtbm>
+		<xzqhDm>440605</xzqhDm>
+		<nsrmc>佛山市天天门窗</nsrmc>
+		<nsrsbh>4406067077019355X</nsrsbh>
+		<request>&lt;?xml version="1.0" encoding="UTF-8" standalone="yes"?&gt;
+&lt;taxML xsi:type="HXZGYH00006Request" xmlmc="保存纳税人减免税申请表信息" xmlbh="TaxMLBw_HXZG_YH_00006_Request_V1.xsd" bbh="1.0" xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"&gt;
+    &lt;jmsqxx&gt;
+        &lt;jmsqjbxxForm&gt;
+            &lt;nsrsbh&gt;4406067077019355X&lt;/nsrsbh&gt;
+            &lt;nsrmc&gt;佛山市天天门窗&lt;/nsrmc&gt;
+            &lt;djxh&gt;12440600000000000001&lt;/djxh&gt;
+            &lt;qddybscjysrrq&gt;2014-10-01 01:28:06&lt;/qddybscjysrrq&gt;
+        &lt;/jmsqjbxxForm&gt;
+        &lt;jmssqbmxGrid&gt;
+            &lt;jmssqbmxGridlb&gt;
+                &lt;jmsspsxDm&gt;SXA031003037&lt;/jmsspsxDm&gt;
+                &lt;jmzlxDm&gt;02&lt;/jmzlxDm&gt;
+                &lt;jmlxDm&gt;2&lt;/jmlxDm&gt;
+                &lt;jmfsDm&gt;01&lt;/jmfsDm&gt;
+                &lt;zsxmDm&gt;10103&lt;/zsxmDm&gt;
+                &lt;zspmDm&gt;101030201&lt;/zspmDm&gt;
+                &lt;jmxmdlDm&gt;02&lt;/jmxmdlDm&gt;
+                &lt;jmxmxlDm&gt;999&lt;/jmxmxlDm&gt;
+                &lt;ssjmxzhzDm&gt;0003019901&lt;/ssjmxzhzDm&gt;
+                &lt;ssjmxzdlDm&gt;01&lt;/ssjmxzdlDm&gt;
+                &lt;ssjmxzxlDm&gt;99&lt;/ssjmxzxlDm&gt;
+                &lt;lmdybz&gt;N&lt;/lmdybz&gt;
+                &lt;ssjmsblmDm&gt;&lt;/ssjmsblmDm&gt;
+                &lt;jmqxq&gt;2014-10-01&lt;/jmqxq&gt;
+                &lt;jmqxz&gt;2014-10-31&lt;/jmqxz&gt;
+            &lt;/jmssqbmxGridlb&gt;
+        &lt;/jmssqbmxGrid&gt;
+        &lt;jmsqslxxForm&gt;
+            &lt;jbr&gt;www&lt;/jbr&gt;
+            &lt;sqrq&gt;2014-10-28 01:28:06&lt;/sqrq&gt;
+            &lt;slrDm&gt;24406060735&lt;/slrDm&gt;
+            &lt;slrq&gt;2014-10-28&lt;/slrq&gt;
+            &lt;slswjgDm&gt;24406060700&lt;/slswjgDm&gt;
+        &lt;/jmsqslxxForm&gt;
+    &lt;/jmsqxx&gt;
+    &lt;zgswskfjDm&gt;24406060700&lt;/zgswskfjDm&gt;
+    &lt;lcswsxDm&gt;LCSXA031003001&lt;/lcswsxDm&gt;
+    &lt;slswsxDm&gt;SLSXA031003037&lt;/slswsxDm&gt;
+&lt;/taxML&gt;</request>
+		<procStartOrgID>24406060700</procStartOrgID>
+		<userList>
+<userListlb>
+				<swryDm></swryDm>
+				<swryxm></swryxm>
+				<jgDm>24406060700</jgDm>
+				<jgmc></jgmc>
+				<gwDm>244000000092</gwDm>
+				<gwmc></gwmc>
+				<swrysfDm></swrysfDm>
+				<gwxh></gwxh>
+			</userListlb>
+</userList>
+		<procStartPerformer>24406060735</procStartPerformer>
+	</qdywshRequestVO>
+</taxML>
+]]></body>
+</service>

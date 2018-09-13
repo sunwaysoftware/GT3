@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2013 (http://www.altova.com) by  () -->
+<!-- 被2012 () 使用XMLSpy v编辑的 (http://www.altova.com) by -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:complexType name="HXZGSB01794Request">
+		<xs:annotation>
+			<xs:documentation>查询外部交换房源信息请求报文</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="htbh" type="htbh">
+						<xs:annotation>
+							<xs:documentation>合同编号</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="zlfclfbz" type="zlfclfbz">
+						<xs:annotation>
+							<xs:documentation>增量房存量房标志</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="fcjycjxxuuid" type="fcjycjxxuuid">
+						<xs:annotation>
+							<xs:documentation>房产交易采集信息uuid</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="kfqyDjxh" type="djxh" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>开发企业登记序号</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+</xs:schema>

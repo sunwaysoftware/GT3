@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 被2012 () 使用XMLSpy v编辑的 (http://www.altova.com) by -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:complexType name="RSJ2XY103Request">
+		<xs:annotation>
+			<xs:documentation>补评工作情况反馈</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="djxh" type="djxh">
+						<xs:annotation>
+							<xs:documentation>登记序号</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="sqbpnd" type="nd">
+						<xs:annotation>
+							<xs:documentation>申请补评年度</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="bpgzqk" type="nr" >
+						<xs:annotation>
+							<xs:documentation>补评工作情况（00完毕）</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="bpwcrq" type="wszzrq" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>补评完成日期</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="bppjjg" type="nr" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>补评评价结果</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+</xs:schema>

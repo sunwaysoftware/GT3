@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 被2012 (TeaM DJiNN) 使用XMLSpy vTeaM DJiNN编辑的 (http://www.altova.com) by -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:complexType name="kjcgzhzbzsgrsdscxRequest">
+		<xs:annotation>
+			<xs:documentation>科技成果转化暂不征收个人所得税备案信息查询请求</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="jldwnsrdjxh" type="djxh">
+						<xs:annotation>
+							<xs:documentation>奖励单位登记序号（与备案编号必录其一）</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+						<xs:element name="jywysbh" type="jywysbh">
+						<xs:annotation>
+							<xs:documentation>交易唯一识别号（与备案编号和登记序号必录其一）</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="barqq" type="barq">
+						<xs:annotation>
+							<xs:documentation>备案日期起(日期格式为yyyy-MM-dd)</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="barqz" type="barq">
+						<xs:annotation>
+							<xs:documentation>备案日期止(日期格式为yyyy-MM-dd)</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="babh" type="babh">
+						<xs:annotation>
+							<xs:documentation>备案编号(与奖励单位登记序号必录其一；传入备案编号时，以备案编号为唯一识别信息查询对应备案信息)</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+</xs:schema>

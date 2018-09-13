@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<service xmlns="http://www.chinatax.gov.cn/spec/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <head>
+    <tran_id>SWZJ.HXZG.YH.CXQYSDSLCBCZLXX</tran_id>
+    <channel_id>MNQ</channel_id>
+    <tran_seq>6c59f394e7b24576aad56985c7e6fbff</tran_seq>
+    <tran_date>20170525</tran_date>
+    <tran_time>105800246</tran_time>
+    <rtn_code>0</rtn_code>
+    <rtn_msg>
+      <Code>000</Code>
+      <Message></Message>
+      <Reason></Reason>
+    </rtn_msg>
+    <expand>
+      <name>sjry</name>
+      <value>24406060735</value>
+    </expand>
+    <expand>
+      <name>sjjg</name>
+      <value>24406060700</value>
+    </expand>
+  </head>
+  <body><![CDATA[<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<taxML xsi:type="HXZGYH00145Response" xmlmc="根据受理税务事项代码，查询企业所得税留存备查资料信息" xmlbh="TaxMLBw_HXZG_YH_00145_Response_V1.0.xsd" bbh="1.0" xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <yhqysdslcbczlxxList>
+        <yhqysdslcbczlxxVO>
+            <slswsxDm>SLSXA031900220</slswsxDm>
+            <lcbczlDm>1001001</lcbczlDm>
+            <bczlbxbz>N</bczlbxbz>
+            <lcbczlnr>国债净价交易交割单。</lcbczlnr>
+        </yhqysdslcbczlxxVO>
+        <yhqysdslcbczlxxVO>
+            <slswsxDm>SLSXA031900220</slswsxDm>
+            <lcbczlDm>1001002</lcbczlDm>
+            <bczlbxbz>Y</bczlbxbz>
+            <lcbczlnr>购买、转让国债的证明，包括持有时间，票面金额，利率等相关材料。</lcbczlnr>
+        </yhqysdslcbczlxxVO>
+        <yhqysdslcbczlxxVO>
+            <slswsxDm>SLSXA031900220</slswsxDm>
+            <lcbczlDm>1001003</lcbczlDm>
+            <bczlbxbz>Y</bczlbxbz>
+            <lcbczlnr>应收利息（投资收益）科目明细账或按月汇总表。</lcbczlnr>
+        </yhqysdslcbczlxxVO>
+        <yhqysdslcbczlxxVO>
+            <slswsxDm>SLSXA031900220</slswsxDm>
+            <lcbczlDm>1001004</lcbczlDm>
+            <bczlbxbz>Y</bczlbxbz>
+            <lcbczlnr>减免税计算过程的说明。</lcbczlnr>
+        </yhqysdslcbczlxxVO>
+    </yhqysdslcbczlxxList>
+</taxML>
+]]></body>
+</service>

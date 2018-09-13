@@ -1,0 +1,135 @@
+<service xmlns="http://www.chinatax.gov.cn/spec/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<head>
+		<tran_id>SWZJ.HXZG.YSH.BCXXCJBSJ</tran_id>
+		<channel_id>TEST</channel_id>
+		<tran_seq>C100BNFZC25001201305030505267110</tran_seq>
+		<tran_date>20140826</tran_date>
+		<tran_time>173435849</tran_time>
+                       <expand>
+      <name>sjry</name>
+      <value>14406820320</value>
+    </expand>
+    <expand>
+      <name>sjjg</name>
+      <value>14406823600</value>
+    </expand>	</head> 
+<body><![CDATA[<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<taxML xsi:type="HXZGYSH00006Request" xmlbh="HXZGYSH00006Request" bbh="V1.1" xmlmc="渠道业务审核接入报文" xsi:schemaLocation="http://www.chinatax.gov.cn/dataspec/ TaxMLBw_HXZG_YSH_00006_Request_V1.1.xsd" xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<fileInfor>
+		<fileGrid>
+			<fileGridlb>
+				<filepath>2</filepath>
+				<filetype>2</filetype>
+				<filename>2</filename>
+				<fileindex>2</fileindex>
+			</fileGridlb>
+		</fileGrid>
+		<fileInforVO>
+			<fileSize>3</fileSize>
+			<recordNumber>3</recordNumber>
+			<nsrSwjgDm>3</nsrSwjgDm>
+		</fileInforVO>
+	</fileInfor>
+	<qdywshRequestVO>
+		<qxswjgDm>14406823600</qxswjgDm>
+		<djxh>11440600000000234466</djxh>
+		<lcswsxDm>LCSXA021005001</lcswsxDm>
+		<slswsxDm>SLSXA021005001</slswsxDm>
+		<dzbzdszlDm>BDA0210025</dzbzdszlDm>
+		<xtbm>C000BNFZC</xtbm>
+		<xzqhDm>440605</xzqhDm>
+		<nsrmc>服务贸易人</nsrmc>
+		<nsrsbh>440605123456789</nsrsbh>
+		<request>&lt;?xml version="1.0" encoding="UTF-8" standalone="yes"?&gt;
+&lt;taxML xsi:type="HXZGFP00001Request" bbh="v1.0" xmlbh="HXZG_FP_00001_Request
+"  xmlmc="保存票种核定信息" xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"&gt;
+	&lt;pzhdsqsp&gt;
+		&lt;sjgsdq&gt;14406823600&lt;/sjgsdq&gt;
+		&lt;hzswjgDm/&gt;
+		&lt;djxh&gt;11440600000000234466&lt;/djxh&gt;
+		&lt;hdslid/&gt;
+		&lt;sqrxm&gt;502&lt;/sqrxm&gt;
+		&lt;sqrq&gt;2014-10-27&lt;/sqrq&gt;
+		&lt;hzrDm/&gt;
+		&lt;lrrDm&gt;14406820320&lt;/lrrDm&gt;
+		&lt;ljgpje&gt;20000.0&lt;/ljgpje&gt;
+		&lt;xgrDm/&gt;
+		&lt;hzrq/&gt;
+		&lt;ywpzuuid/&gt;
+		&lt;swjgDm&gt;14406823600&lt;/swjgDm&gt;
+		&lt;slrq&gt;2014-10-27&lt;/slrq&gt;
+		&lt;slrDm&gt;14406820320&lt;/slrDm&gt;
+		&lt;dbje/&gt;
+		&lt;fpdbbz&gt;N&lt;/fpdbbz&gt;
+		&lt;fpdblxDm/&gt;
+	&lt;/pzhdsqsp&gt;
+	&lt;pzhdsqspMxGrid&gt;
+		&lt;pzhdsqspMxGridlb&gt;
+			&lt;sjgsdq&gt;14406823600&lt;/sjgsdq&gt;
+			&lt;dffpzgkpxe&gt;1000000.0&lt;/dffpzgkpxe&gt;
+			&lt;dffpzgkpxeDm&gt;3&lt;/dffpzgkpxeDm&gt;
+			&lt;fpzlDm&gt;1130&lt;/fpzlDm&gt;
+			&lt;zsbz&gt;N&lt;/zsbz&gt;
+			&lt;cpzgsl&gt;25.0&lt;/cpzgsl&gt;
+			&lt;wtdkbz&gt;N&lt;/wtdkbz&gt;
+			&lt;mczggpsl&gt;25.0&lt;/mczggpsl&gt;
+			&lt;myzggpsl&gt;25.0&lt;/myzggpsl&gt;
+			&lt;fppzhdczlxDm&gt;2&lt;/fppzhdczlxDm&gt;
+			&lt;fpgpfsDm&gt;1&lt;/fpgpfsDm&gt;
+			&lt;lrrDm&gt;14406820320&lt;/lrrDm&gt;
+			&lt;xgrDm/&gt;
+			&lt;fplbDm&gt;1&lt;/fplbDm&gt;
+			&lt;tdhyDm/&gt;
+			&lt;fpzlmc&gt;增值税专用发票（中文三联无金额限制版）&lt;/fpzlmc&gt;
+			&lt;tkfsDm/&gt;
+			&lt;skbz&gt;Y&lt;/skbz&gt;
+			&lt;defpbz&gt;N&lt;/defpbz&gt;
+			&lt;zppzDm&gt;1&lt;/zppzDm&gt;
+			&lt;jldwDm&gt;0610&lt;/jldwDm&gt;
+			&lt;fpme/&gt;
+		&lt;/pzhdsqspMxGridlb&gt;
+	&lt;/pzhdsqspMxGrid&gt;
+	&lt;pzhdsqspGprGrid&gt;
+		&lt;pzhdsqspGprGridlb&gt;
+			&lt;gpruuid&gt;08f5bfa9d2efbec0117fe23ab9c81d1f&lt;/gpruuid&gt;
+			&lt;sqspuuid&gt;2ef9439d7e6fb430e7b689a261e6dde5&lt;/sqspuuid&gt;
+			&lt;gprxm&gt;2&lt;/gprxm&gt;
+			&lt;lxdh&gt;2&lt;/lxdh&gt;
+			&lt;sfzjzlDm&gt;101&lt;/sfzjzlDm&gt;
+			&lt;sfzjhm&gt;2&lt;/sfzjhm&gt;
+			&lt;fppzhdczlxDm&gt;2&lt;/fppzhdczlxDm&gt;
+			&lt;lrrDm&gt;14406820320&lt;/lrrDm&gt;
+			&lt;lrrq&gt;2014-10-27 17:29:21&lt;/lrrq&gt;
+			&lt;sjgsdq&gt;14406823600&lt;/sjgsdq&gt;
+			&lt;gprqcuuid&gt;29445338a318824fc2dc7cf821c19446&lt;/gprqcuuid&gt;
+		&lt;/pzhdsqspGprGridlb&gt;
+	&lt;/pzhdsqspGprGrid&gt;
+	&lt;deletePzhdsqspgprVOList&gt;
+	&lt;/deletePzhdsqspgprVOList&gt;
+	&lt;deletePzhdsqmxGridVOList&gt;
+	&lt;/deletePzhdsqmxGridVOList&gt;
+	&lt;isQdFpdblc&gt;false&lt;/isQdFpdblc&gt;
+	&lt;isQdZgkpxelc&gt;false&lt;/isQdZgkpxelc&gt;
+	&lt;sfts&gt;false&lt;/sfts&gt;
+	&lt;hjbz&gt;SL&lt;/hjbz&gt;
+	&lt;sfwbnsr&gt;false&lt;/sfwbnsr&gt;
+&lt;/taxML&gt;
+</request>
+		<procStartOrgID>14406823600</procStartOrgID>
+		<userList>
+<userListlb>
+				<swryDm></swryDm>
+				<swryxm></swryxm>
+				<jgDm>14406823600</jgDm>
+				<jgmc></jgmc>
+				<gwDm>144900000001</gwDm>
+				<gwmc></gwmc>
+				<swrysfDm></swrysfDm>
+				<gwxh></gwxh>
+			</userListlb>
+</userList>
+		<procStartPerformer>14406823041</procStartPerformer>
+	</qdywshRequestVO>
+</taxML>
+]]></body>
+</service>

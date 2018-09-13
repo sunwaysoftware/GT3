@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2010 rel. 3 (http://www.altova.com) by css1 (css1) -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:include schemaLocation="TaxMLCGSSBType.xsd"/>
+	<xs:complexType name="HXZGSB00083Request">
+		<xs:annotation>
+			<xs:documentation>车辆购置税申报计税报文</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="nsrxxForm" type="nsrxxForm">
+						<xs:annotation>
+							<xs:documentation>车辆购置税申报-纳税人信息</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="clgzssbxxForm" type="clgzssbxxForm">
+						<xs:annotation>
+							<xs:documentation>车辆购置税申报申报信息</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="fpcjGrid" type="fpcjGrid">
+						<xs:annotation>
+							<xs:documentation>机动车发票信息</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="escfpcjGrid" type="escfpcjGrid">
+						<xs:annotation>
+							<xs:documentation>二手车发票信息</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="sl1" type="sl1" nillable="true">
+						<xs:annotation>
+							<xs:documentation>税率</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="yhjmse" type="je" nillable="true">
+						<xs:annotation>
+							<xs:documentation>减免税额</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="jsrq" type="slrq">
+						<xs:annotation>
+							<xs:documentation>受理日期</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="cdsxmc" type="clcdsxmc">
+						<xs:annotation>
+							<xs:documentation>产地属性名称</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="msbz" type="bz">
+						<xs:annotation>
+							<xs:documentation>模式标志-区分应急模式还是普通模式</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="rgbdjg" type="bdbz">
+						<xs:annotation>
+							<xs:documentation>人工比对结果，Y人工比对通过，N人工比对不通过</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="rgbdbtgyy" type="bdbz">
+						<xs:annotation>
+							<xs:documentation>人工比对不通过原因：B、发票人工比对信息不符；D、纳税人中止；E、系统故障；G、其他</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+</xs:schema>

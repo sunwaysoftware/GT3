@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 被2011 rel. 2 sp1 (TeaM DJiNN) 使用XMLSpy vTeaM DJiNN编辑的 (http://www.altova.com) by -->
+<!-- edited with XMLSpy v2010 rel. 3 (http://www.altova.com) by MESMERiZE (MSM) -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:include schemaLocation="TaxMLPublicType.xsd"/>
+	<xs:complexType name="yffyjjkcyhmxbForm">
+		<xs:annotation>
+			<xs:documentation>研发费用加计扣除优惠明细表(A107014)业务报文</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="yffyjjkcyhMxbGrid" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>研发费用加计扣除优惠明细表</xs:documentation>
+						</xs:annotation>
+						<xs:complexType>
+							<xs:sequence minOccurs="0" maxOccurs="unbounded">
+								<xs:element name="yffyjjkcyhmxbgridVO" type="yffyjjkcyhmxbGridVO" minOccurs="0"/>
+							</xs:sequence>
+						</xs:complexType>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="yffyjjkcyhmxbGridVO">
+		<xs:annotation>
+			<xs:documentation>《研发费用加计扣除优惠明细表》</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="yfxm" type="nsrmc">
+				<xs:annotation>
+					<xs:documentation>研发项目</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bnyfhdzjxhclrldlf" type="je">
+				<xs:annotation>
+					<xs:documentation>本年研发费用明细_研发活动直接消耗的材料、燃料和动力费用</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bnyfzjcsyfhdbqyzzryfy" type="je">
+				<xs:annotation>
+					<xs:documentation>本年研发费用明细_直接从事研发活动的本企业在职人员费用</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bnyfzmyyyfhdygzjf" type="je">
+				<xs:annotation>
+					<xs:documentation>本年研发费用明细_专门用于研发活动的有关折旧费、租赁费、运行维护费</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bnyfzmyyyfhdygwxzctxf" type="je">
+				<xs:annotation>
+					<xs:documentation>本年研发费用明细_专门用于研发活动的有关无形资产摊销费</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bnyfzjsycpszygfyyp" type="je">
+				<xs:annotation>
+					<xs:documentation>本年研发费用明细_中间试验和产品试制的有关费用，样品、样机及一般测试手段购置费</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bnyffymxyfcglzpsys" type="je">
+				<xs:annotation>
+					<xs:documentation>本年研发费用明细_研发成果论证、评审、验收、鉴定费用</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bnyfktkfjsxcyfxyyzlcsyf" type="je">
+				<xs:annotation>
+					<xs:documentation>本年研发费用明细_勘探开发技术的现场试验费，新药研制的临床试验费</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bnyffymxsjdzzlfyfy" type="je">
+				<xs:annotation>
+					<xs:documentation>本年研发费用明细_设计、制定、资料和翻译费用</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bnyfndyffyhj" type="je">
+				<xs:annotation>
+					<xs:documentation>本年研发费用明细_年度研发费用合计</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zwbzssrclczxzj" type="je">
+				<xs:annotation>
+					<xs:documentation>减:作为不征税收入处理的财政性资金用于研发的部分</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="kjjkcyffyhj" type="je">
+				<xs:annotation>
+					<xs:documentation>可加计扣除的研发费用合计</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="fyhbfjrbnsyje" type="je">
+				<xs:annotation>
+					<xs:documentation>费用化部分_计入本年损益的金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="fyhbfjrbnyffyjjkce" type="je">
+				<xs:annotation>
+					<xs:documentation>费用化部分_计入本年研发费用加计扣除额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zbhbfbnxcwxzcje" type="je">
+				<xs:annotation>
+					<xs:documentation>资本化部分_本年形成无形资产的金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zbhbfbnxcwxzcjjtxe" type="je">
+				<xs:annotation>
+					<xs:documentation>资本化部分_本年形成无形资产加计摊销额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zbhbfyqndxcwxzcbnjjtxe" type="je">
+				<xs:annotation>
+					<xs:documentation>资本化部分_以前年度形成无形资产本年加计摊销额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zbhbfwxzcbnjjtxe" type="je">
+				<xs:annotation>
+					<xs:documentation>资本化部分_无形资产本年加计摊销额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bnyffyjjkcehj" type="je">
+				<xs:annotation>
+					<xs:documentation>本年研发费用加计扣除额合计</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

@@ -1,0 +1,1011 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:complexType name="nsdsewysnsrgrsdssbYwbw">
+		<xs:annotation>
+			<xs:documentation>年所得十二万以上纳税人个人所得税申报业务报文</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="nsdsewysnsrgrsdssb" type="nsdsewysnsrgrsdssb"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="nsdsewysnsrgrsdssb">
+		<xs:annotation>
+			<xs:documentation>个人所得税纳税申报表 (适用于年所得12万元以上的纳税人申报)业务报文</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="head" type="nsdsewysnsrgrsdssbHead">
+				<xs:annotation>
+					<xs:documentation>个人所得税纳税申报表 (适用于年所得12万元以上的纳税人申报)表头</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="body" type="nsdsewysnsrgrsdssbBody">
+				<xs:annotation>
+					<xs:documentation>个人所得税纳税申报表 (适用于年所得12万元以上的纳税人申报)表体</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bodyAffix" type="xs:anySimpleType">
+				<xs:annotation>
+					<xs:documentation>预留：附属表体</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="nsdsewysnsrgrsdssbHead">
+		<xs:annotation>
+			<xs:documentation>个人所得税纳税申报表 (适用于年所得12万元以上的纳税人申报)表头</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="nsrsbh" type="nsrsbh">
+				<xs:annotation>
+					<xs:documentation>纳税人识别号，不能为空</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="nsrxm" type="nsrmc">
+				<xs:annotation>
+					<xs:documentation>纳税人姓名，不能为空</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="djxh" type="djxh">
+				<xs:annotation>
+					<xs:documentation>登记序号，不能为空</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="nsrSwjgDm" type="nsrswjgDm">
+				<xs:annotation>
+					<xs:documentation>纳税人税务机关代码，不能为空</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="rzdwMc" type="jnrzgsmc">
+				<xs:annotation>
+					<xs:documentation>任职单位名称，rzdwsbh、rzdwSshyDm、rzdwMc三者要么都为空，要么都不为空</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="rzdwsbh" type="nsrsbh">
+				<xs:annotation>
+					<xs:documentation>任职单位识别号，rzdwsbh、rzdwSshyDm、rzdwMc三者要么都为空，要么都不为空</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="rzdwSshyDm" type="hyDm">
+				<xs:annotation>
+					<xs:documentation>任职单位所属行业代码，rzdwsbh、rzdwSshyDm、rzdwMc三者要么都为空，要么都不为空</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="rzdwSshyMc" type="hymc">
+				<xs:annotation>
+					<xs:documentation>任职单位所属行业名称，rzdwSshyDm不为空时，该字段也不能为空</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zw1Dm" type="bz1">
+				<xs:annotation>
+					<xs:documentation>职务代码，可以为空</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zw1Mc" type="zw">
+				<xs:annotation>
+					<xs:documentation>职务名称，可以为空</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zyDm" type="zyDm">
+				<xs:annotation>
+					<xs:documentation>职业代码，可以为空</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zyMc" type="zymc">
+				<xs:annotation>
+					<xs:documentation>职业名称，可以为空</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zhts" type="zhts">
+				<xs:annotation>
+					<xs:documentation>在华天数，可以为空，为空时传0，必须是0.5的倍数，比如0.5、1、1.5、2等</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jnyxlxdz" type="txdz">
+				<xs:annotation>
+					<xs:documentation>境内有效联系地址，可以为空</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jnjzdyzbm" type="jnjzdyzbm">
+				<xs:annotation>
+					<xs:documentation>境内有效联系地址邮编，可以为空</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="lxdh" type="lxdh">
+				<xs:annotation>
+					<xs:documentation>联系电话，可以为空</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jydwNsrsbh" type="jydwnsrsbh">
+				<xs:annotation>
+					<xs:documentation>经营单位纳税人识别号，当纳税人填写了生产经营所得或承包、承租所得时，不能为空</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jydwNsrmc" type="jydwnsrmc">
+				<xs:annotation>
+					<xs:documentation>经营单位纳税人名称，当纳税人填写了生产经营所得或承包、承租所得时，不能为空</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sdnf" type="sdnd">
+				<xs:annotation>
+					<xs:documentation>所得年份，不能为空，格式为yyyy</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="tbrq1" type="tbrq">
+				<xs:annotation>
+					<xs:documentation>填表日期，不能为空，格式为yyyy-mm-dd</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="gjDm" type="gjhdqszDm">
+				<xs:annotation>
+					<xs:documentation>国籍代码，可以为空</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="gjMc" type="gjhdqzwqc">
+				<xs:annotation>
+					<xs:documentation>国籍名称，可以为空</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sfzjlxDm" type="sfzjlxDm">
+				<xs:annotation>
+					<xs:documentation>身份证件种类，不能为空</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sfzjlxMc" type="sfzjlxmc">
+				<xs:annotation>
+					<xs:documentation>身份证件种类名称，不能为空</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sfzjhm" type="sfzjhm">
+				<xs:annotation>
+					<xs:documentation>身份证件号码，不能为空</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jbrxm" type="nsrjbrxm">
+				<xs:annotation>
+					<xs:documentation>经办人姓名，dlrxm不为空时，jbrxm也不能为空</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="dlrxm" type="dlrxm">
+				<xs:annotation>
+					<xs:documentation>代理人姓名，可以为空</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="dlrLxdh" type="dlrlxdh">
+				<xs:annotation>
+					<xs:documentation>代理人联系电话，dlrxm不为空时，dlrlxdh也不能为空</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="lrrxm" type="lrrxm">
+				<xs:annotation>
+					<xs:documentation>录入人姓名，不能为空</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="lrrDm" type="lrrDm">
+				<xs:annotation>
+					<xs:documentation>录入人代码，不能为空</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="lrrq" type="lrrq">
+				<xs:annotation>
+					<xs:documentation>录入日期，不能为空，格式为yyyy-mm-dd</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="slswjgDm" type="slswjgDm">
+				<xs:annotation>
+					<xs:documentation>受理税务机关代码，不能为空</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="slswjgMc" type="slswjgmc">
+				<xs:annotation>
+					<xs:documentation>受理税务机关名称，不能为空</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zgswskfjDm" type="zgswskfjDm">
+				<xs:annotation>
+					<xs:documentation>主管税务科所分局代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jdxzDm" type="jdxzDm">
+				<xs:annotation>
+					<xs:documentation>街道乡镇代码，不能为空</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="nsdsewysnsrgrsdssbBody">
+		<xs:annotation>
+			<xs:documentation>个人所得税纳税申报表 (适用于年所得12万元以上的纳税人申报)表体</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="gzxjJnsde" type="je">
+				<xs:annotation>
+					<xs:documentation>工资、薪金所得境内年所得额，可以为空，为空时传0</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="gzxjJwsde" type="je">
+				<xs:annotation>
+					<xs:documentation>工资、薪金所得境外年所得额，可以为空，为空时传0</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="gzxjSdehj" type="je">
+				<xs:annotation>
+					<xs:documentation>工资、薪金所得年所得额合计，可以为空，为空时传0</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="gzxjYnssde" type="je">
+				<xs:annotation>
+					<xs:documentation>工资、薪金所得应纳税所得额，可以为空，为空时传0</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="gzxjYnse" type="je">
+				<xs:annotation>
+					<xs:documentation>工资、薪金所得应纳税额，可以为空，为空时传0</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="gzxjYkjse" type="je">
+				<xs:annotation>
+					<xs:documentation>工资、薪金所得已缴（扣）税额，可以为空，为空时传0</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="gzxjDkse" type="je">
+				<xs:annotation>
+					<xs:documentation>工资、薪金所得抵扣税额，可以为空，为空时传0</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="gzxjJmse" type="je">
+				<xs:annotation>
+					<xs:documentation>工资、薪金所得减免税额，可以为空，为空时传0</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="gzxjYbse" type="je">
+				<xs:annotation>
+					<xs:documentation>工资、薪金所得应补税额，可以为空，为空时传0</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="gzxjYtse" type="je">
+				<xs:annotation>
+					<xs:documentation>工资、薪金所得应退税额，可以为空，为空时传0</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="gzxjBz" type="bz">
+				<xs:annotation>
+					<xs:documentation>工资、薪金所得备注，可以为空</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="scjysdJnsde" type="je">
+				<xs:annotation>
+					<xs:documentation>个体工商户的生产、经营所得境内年所得额，可以为空，为空时传0</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="scjysdJwsde" type="je">
+				<xs:annotation>
+					<xs:documentation>个体工商户的生产、经营所得境外年所得额，可以为空，为空时传0</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="scjysdSdehj" type="je">
+				<xs:annotation>
+					<xs:documentation>个体工商户的生产、经营所得年所得额合计，可以为空，为空时传0</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="scjysdYnssde" type="je">
+				<xs:annotation>
+					<xs:documentation>个体工商户的生产、经营所得应纳税所得额，可以为空，为空时传0</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="scjysdYnse" type="je">
+				<xs:annotation>
+					<xs:documentation>个体工商户的生产、经营所得应纳税额，可以为空，为空时传0</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="scjysdYkjse" type="je">
+				<xs:annotation>
+					<xs:documentation>个体工商户的生产、经营所得已缴（扣）税额，可以为空，为空时传0</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="scjysdDkse" type="je">
+				<xs:annotation>
+					<xs:documentation>个体工商户的生产、经营所得抵扣税额，可以为空，为空时传0</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="scjysdJmse" type="je">
+				<xs:annotation>
+					<xs:documentation>个体工商户的生产、经营所得减免税额，可以为空，为空时传0</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="scjysdYbse" type="je">
+				<xs:annotation>
+					<xs:documentation>个体工商户的生产、经营所得应补税额，可以为空，为空时传0</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="scjysdYtse" type="je">
+				<xs:annotation>
+					<xs:documentation>个体工商户的生产、经营所得应退税额，可以为空，为空时传0</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="scjysdBz" type="bz">
+				<xs:annotation>
+					<xs:documentation>个体工商户的生产、经营所得备注，可以为空</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="cbczjysdJnsde" type="je">
+				<xs:annotation>
+					<xs:documentation>对企事业单位的承包经营、承租经营所得境内年所得额，可以为空，为空时传0</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="cbczjysdJwsde" type="je">
+				<xs:annotation>
+					<xs:documentation>对企事业单位的承包经营、承租经营所得境外年所得额，可以为空，为空时传0</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="cbczjysdSdehj" type="je">
+				<xs:annotation>
+					<xs:documentation>对企事业单位的承包经营、承租经营所得年所得额合计，可以为空，为空时传0
+	   </xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="cbczjysdYnssde" type="je">
+				<xs:annotation>
+					<xs:documentation>对企事业单位的承包经营、承租经营所得应纳税所得额，可以为空，为空时传0
+	   </xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="cbczjysdYnse" type="je">
+				<xs:annotation>
+					<xs:documentation>对企事业单位的承包经营、承租经营所得应纳税额，可以为空，为空时传0</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="cbczjysdYkjse" type="je">
+				<xs:annotation>
+					<xs:documentation>对企事业单位的承包经营、承租经营所得已缴（扣）税额，可以为空，为空时传0
+	   </xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="cbczjysdDkse" type="je">
+				<xs:annotation>
+					<xs:documentation>对企事业单位的承包经营、承租经营所得抵扣税额，可以为空，为空时传0
+	   </xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="cbczjysdJmse" type="je">
+				<xs:annotation>
+					<xs:documentation>对企事业单位的承包经营、承租经营所得减免税额，可以为空，为空时传0
+	   </xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="cbczjysdYbse" type="je">
+				<xs:annotation>
+					<xs:documentation>对企事业单位的承包经营、承租经营所得应补税额，可以为空，为空时传0
+	   </xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="cbczjysdYtse" type="je">
+				<xs:annotation>
+					<xs:documentation>对企事业单位的承包经营、承租经营所得应退税额，可以为空，为空时传0
+	   </xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="cbczjysdBz" type="bz">
+				<xs:annotation>
+					<xs:documentation>对企事业单位的承包经营、承租经营所得备注，可以为空
+	   </xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="lwbcsdJnsde" type="je">
+				<xs:annotation>
+					<xs:documentation>劳务报酬所得境内年所得额，可以为空，为空时传0</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="lwbcsdJwsde" type="je">
+				<xs:annotation>
+					<xs:documentation>劳务报酬所得境外年所得额，可以为空，为空时传0</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="lwbcsdSdehj" type="je">
+				<xs:annotation>
+					<xs:documentation>劳务报酬所得年所得额合计，可以为空，为空时传0</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="lwbcsdYnssde" type="je">
+				<xs:annotation>
+					<xs:documentation>劳务报酬所得应纳税所得额，可以为空，为空时传0</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="lwbcsdYnse" type="je">
+				<xs:annotation>
+					<xs:documentation>劳务报酬所得应纳税额，可以为空，为空时传0</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="lwbcsdYkjse" type="je">
+				<xs:annotation>
+					<xs:documentation>劳务报酬所得已缴（扣）税额，可以为空，为空时传0</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="lwbcsdDkse" type="je">
+				<xs:annotation>
+					<xs:documentation>劳务报酬所得抵扣税额，可以为空，为空时传0</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="lwbcsdJmse" type="je">
+				<xs:annotation>
+					<xs:documentation>劳务报酬所得减免税额，可以为空，为空时传0</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="lwbcsdYbse" type="je">
+				<xs:annotation>
+					<xs:documentation>劳务报酬所得应补税额，可以为空，为空时传0</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="lwbcsdYtse" type="je">
+				<xs:annotation>
+					<xs:documentation>劳务报酬所得应退税额，可以为空，为空时传0</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="lwbcsdBz" type="bz">
+				<xs:annotation>
+					<xs:documentation>劳务报酬所得备注，可以为空</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="gcsdJnsde" type="je">
+				<xs:annotation>
+					<xs:documentation>稿酬所得境内年所得额，可以为空，为空时传0</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="gcsdJwsde" type="je">
+				<xs:annotation>
+					<xs:documentation>稿酬所得境外年所得额，可以为空，为空时传0</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="gcsdSdehj" type="je">
+				<xs:annotation>
+					<xs:documentation>稿酬所得年所得额合计，可以为空，为空时传0</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="gcsdYnssde" type="je">
+				<xs:annotation>
+					<xs:documentation>稿酬所得应纳税所得额，可以为空，为空时传0</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="gcsdYnse" type="je">
+				<xs:annotation>
+					<xs:documentation>稿酬所得应纳税额，可以为空，为空时传0</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="gcsdYkjse" type="je">
+				<xs:annotation>
+					<xs:documentation>稿酬所得已缴（扣）税额，可以为空，为空时传0</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="gcsdDkse" type="je">
+				<xs:annotation>
+					<xs:documentation>稿酬所得抵扣税额，可以为空，为空时传0</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="gcsdJmse" type="je">
+				<xs:annotation>
+					<xs:documentation>稿酬所得减免税额，可以为空，为空时传0</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="gcsdYbse" type="je">
+				<xs:annotation>
+					<xs:documentation>稿酬所得应补税额，可以为空，为空时传0</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="gcsdYtse" type="je">
+				<xs:annotation>
+					<xs:documentation>稿酬所得应退税额，可以为空，为空时传0</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="gcsdBz" type="bz">
+				<xs:annotation>
+					<xs:documentation>稿酬所得备注，可以为空</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="txqsyfsdJnsde" type="je">
+				<xs:annotation>
+					<xs:documentation>特许权使用费所得境内年所得额，可以为空，为空时传0</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="txqsyfsdJwsde" type="je">
+				<xs:annotation>
+					<xs:documentation>特许权使用费所得境外年所得额，可以为空，为空时传0</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="txqsyfsdSdehj" type="je">
+				<xs:annotation>
+					<xs:documentation>特许权使用费所得年所得额合计，可以为空，为空时传0</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="txqsyfsdYnssde" type="je">
+				<xs:annotation>
+					<xs:documentation>特许权使用费所得应纳税所得额，可以为空，为空时传0</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="txqsyfsdYnse" type="je">
+				<xs:annotation>
+					<xs:documentation>特许权使用费所得应纳税额，可以为空，为空时传0</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="txqsyfsdYkjse" type="je">
+				<xs:annotation>
+					<xs:documentation>特许权使用费所得已缴（扣）税额，可以为空，为空时传0</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="txqsyfsdDkse" type="je">
+				<xs:annotation>
+					<xs:documentation>特许权使用费所得抵扣税额，可以为空，为空时传0</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="txqsyfsdJmse" type="je">
+				<xs:annotation>
+					<xs:documentation>特许权使用费所得减免税额，可以为空，为空时传0</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="txqsyfsdYbse" type="je">
+				<xs:annotation>
+					<xs:documentation>特许权使用费所得应补税额，可以为空，为空时传0</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="txqsyfsdYtse" type="je">
+				<xs:annotation>
+					<xs:documentation>特许权使用费所得应退税额，可以为空，为空时传0</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="txqsyfsdBz" type="bz">
+				<xs:annotation>
+					<xs:documentation>特许权使用费所得备注，可以为空</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="lxgxhlsdJnsde" type="je">
+				<xs:annotation>
+					<xs:documentation>利息、股息、红利所得境内年所得额，可以为空，为空时传0</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="lxgxhlsdJwsde" type="je">
+				<xs:annotation>
+					<xs:documentation>利息、股息、红利所得境外年所得额，可以为空，为空时传0</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="lxgxhlsdSdehj" type="je">
+				<xs:annotation>
+					<xs:documentation>利息、股息、红利所得年所得额合计，可以为空，为空时传0</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="lxgxhlsdYnssde" type="je">
+				<xs:annotation>
+					<xs:documentation>利息、股息、红利所得应纳税所得额，可以为空，为空时传0</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="lxgxhlsdYnse" type="je">
+				<xs:annotation>
+					<xs:documentation>利息、股息、红利所得应纳税额，可以为空，为空时传0</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="lxgxhlsdYkjse" type="je">
+				<xs:annotation>
+					<xs:documentation>利息、股息、红利所得已缴（扣）税额，可以为空，为空时传0</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="lxgxhlsdDkse" type="je">
+				<xs:annotation>
+					<xs:documentation>利息、股息、红利所得抵扣税额，可以为空，为空时传0</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="lxgxhlsdJmse" type="je">
+				<xs:annotation>
+					<xs:documentation>利息、股息、红利所得减免税额，可以为空，为空时传0</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="lxgxhlsdYbse" type="je">
+				<xs:annotation>
+					<xs:documentation>利息、股息、红利所得应补税额，可以为空，为空时传0</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="lxgxhlsdYtse" type="je">
+				<xs:annotation>
+					<xs:documentation>利息、股息、红利所得应退税额，可以为空，为空时传0</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="lxgxhlsdBz" type="bz">
+				<xs:annotation>
+					<xs:documentation>利息、股息、红利所得备注，可以为空，可以为空，为空时传0</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="cczlsdJnsde" type="je">
+				<xs:annotation>
+					<xs:documentation>财产租赁所得境内年所得额，可以为空，为空时传0</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="cczlsdJwsde" type="je">
+				<xs:annotation>
+					<xs:documentation>财产租赁所得境外年所得额，可以为空，为空时传0</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="cczlsdSdehj" type="je">
+				<xs:annotation>
+					<xs:documentation>财产租赁所得年所得额合计，可以为空，为空时传0</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="cczlsdYnssde" type="je">
+				<xs:annotation>
+					<xs:documentation>财产租赁所得应纳税所得额，可以为空，为空时传0</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="cczlsdYnse" type="je">
+				<xs:annotation>
+					<xs:documentation>财产租赁所得应纳税额，可以为空，为空时传0</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="cczlsdYkjse" type="je">
+				<xs:annotation>
+					<xs:documentation>财产租赁所得已缴（扣）税额，可以为空，为空时传0</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="cczlsdDkse" type="je">
+				<xs:annotation>
+					<xs:documentation>财产租赁所得抵扣税额，可以为空，为空时传0</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="cczlsdJmse" type="je">
+				<xs:annotation>
+					<xs:documentation>财产租赁所得减免税额，可以为空，为空时传0</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="cczlsdYbse" type="je">
+				<xs:annotation>
+					<xs:documentation>财产租赁所得应补税额，可以为空，为空时传0</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="cczlsdYtse" type="je">
+				<xs:annotation>
+					<xs:documentation>财产租赁所得应退税额，可以为空，为空时传0</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="cczlsdBz" type="bz">
+				<xs:annotation>
+					<xs:documentation>财产租赁所得备注，可以为空</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="cczrsdJnsde" type="je">
+				<xs:annotation>
+					<xs:documentation>财产转让所得境内年所得额，可以为空，为空时传0</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="cczrsdJwsde" type="je">
+				<xs:annotation>
+					<xs:documentation>财产转让所得境外年所得额，可以为空，为空时传0</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="cczrsdSdehj" type="je">
+				<xs:annotation>
+					<xs:documentation>财产转让所得年所得额合计，可以为空，为空时传0</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="cczrsdYnssde" type="je">
+				<xs:annotation>
+					<xs:documentation>财产转让所得应纳税所得额，可以为空，为空时传0</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="cczrsdYnse" type="je">
+				<xs:annotation>
+					<xs:documentation>财产转让所得应纳税额，可以为空，为空时传0</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="cczrsdYkjse" type="je">
+				<xs:annotation>
+					<xs:documentation>财产转让所得已缴（扣）税额，可以为空，为空时传0</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="cczrsdDkse" type="je">
+				<xs:annotation>
+					<xs:documentation>财产转让所得抵扣税额，可以为空，为空时传0</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="cczrsdJmse" type="je">
+				<xs:annotation>
+					<xs:documentation>财产转让所得减免税额，可以为空，为空时传0</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="cczrsdYbse" type="je">
+				<xs:annotation>
+					<xs:documentation>财产转让所得应补税额，可以为空，为空时传0</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="cczrsdYtse" type="je">
+				<xs:annotation>
+					<xs:documentation>财产转让所得应退税额，可以为空，为空时传0</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="cczrsdBz" type="bz">
+				<xs:annotation>
+					<xs:documentation>财产转让所得备注，可以为空</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="gpzrsdJnsde" type="je">
+				<xs:annotation>
+					<xs:documentation>股票转让所得境内年所得额，可以为空，为空时传0</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="gpzrsdJwsde" type="je">
+				<xs:annotation>
+					<xs:documentation>股票转让所得境外年所得额，可以为空，为空时传0</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="gpzrsdSdehj" type="je">
+				<xs:annotation>
+					<xs:documentation>股票转让所得年所得额合计，可以为空，为空时传0</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="gpzrsdYnssde" type="je">
+				<xs:annotation>
+					<xs:documentation>股票转让所得应纳税所得额，可以为空，为空时传0</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="gpzrsdYnse" type="je">
+				<xs:annotation>
+					<xs:documentation>股票转让所得应纳税额，可以为空，为空时传0</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="gpzrsdYkjse" type="je">
+				<xs:annotation>
+					<xs:documentation>股票转让所得已缴（扣）税额，可以为空，为空时传0</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="gpzrsdDkse" type="je">
+				<xs:annotation>
+					<xs:documentation>股票转让所得抵扣税额，可以为空，为空时传0</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="gpzrsdJmse" type="je">
+				<xs:annotation>
+					<xs:documentation>股票转让所得减免税额，可以为空，为空时传0</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="gpzrsdYbse" type="je">
+				<xs:annotation>
+					<xs:documentation>股票转让所得应补税额，可以为空，为空时传0</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="gpzrsdYtse" type="je">
+				<xs:annotation>
+					<xs:documentation>股票转让所得应退税额，可以为空，为空时传0</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="gpzrsdBz" type="bz">
+				<xs:annotation>
+					<xs:documentation>股票转让所得备注，可以为空</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="fwzrsdJnsde" type="je">
+				<xs:annotation>
+					<xs:documentation>个体房屋转让所得境内年所得额，可以为空，为空时传0</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="fwzrsdJwsde" type="je">
+				<xs:annotation>
+					<xs:documentation>个体房屋转让所得境外年所得额，可以为空，为空时传0</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="fwzrsdSdehj" type="je">
+				<xs:annotation>
+					<xs:documentation>个体房屋转让所得年所得额合计，可以为空，为空时传0</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="fwzrsdYnssde" type="je">
+				<xs:annotation>
+					<xs:documentation>个体房屋转让所得应纳税所得额，可以为空，为空时传0</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="fwzrsdYnse" type="je">
+				<xs:annotation>
+					<xs:documentation>个体房屋转让所得应纳税额，可以为空，为空时传0</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="fwzrsdYkjse" type="je">
+				<xs:annotation>
+					<xs:documentation>个体房屋转让所得已缴（扣）税额，可以为空，为空时传0</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="fwzrsdDkse" type="je">
+				<xs:annotation>
+					<xs:documentation>个体房屋转让所得抵扣税额，可以为空，为空时传0</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="fwzrsdJmse" type="je">
+				<xs:annotation>
+					<xs:documentation>个体房屋转让所得减免税额，可以为空，为空时传0</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="fwzrsdYbse" type="je">
+				<xs:annotation>
+					<xs:documentation>个体房屋转让所得应补税额，可以为空，为空时传0</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="fwzrsdYtse" type="je">
+				<xs:annotation>
+					<xs:documentation>个体房屋转让所得应退税额，可以为空，为空时传0</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="fwzrsdBz" type="bz">
+				<xs:annotation>
+					<xs:documentation>个体房屋转让所得备注，可以为空</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="orsdJnsde" type="je">
+				<xs:annotation>
+					<xs:documentation>偶然所得境内年所得额，可以为空，为空时传0</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="orsdJwsde" type="je">
+				<xs:annotation>
+					<xs:documentation>偶然所得境外年所得额，可以为空，为空时传0</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="orsdSdehj" type="je">
+				<xs:annotation>
+					<xs:documentation>偶然所得年所得额合计，可以为空，为空时传0</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="orsdYnssde" type="je">
+				<xs:annotation>
+					<xs:documentation>偶然所得应纳税所得额，可以为空，为空时传0</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="orsdYnse" type="je">
+				<xs:annotation>
+					<xs:documentation>偶然所得应纳税额，可以为空，为空时传0</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="orsdYkjse" type="je">
+				<xs:annotation>
+					<xs:documentation>偶然所得已缴（扣）税额，可以为空，为空时传0</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="orsdDkse" type="je">
+				<xs:annotation>
+					<xs:documentation>偶然所得抵扣税额，可以为空，为空时传0</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="orsdJmse" type="je">
+				<xs:annotation>
+					<xs:documentation>偶然所得减免税额，可以为空，为空时传0</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="orsdYbse" type="je">
+				<xs:annotation>
+					<xs:documentation>偶然所得应补税额，可以为空，为空时传0</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="orsdYtse" type="je">
+				<xs:annotation>
+					<xs:documentation>偶然所得应退税额，可以为空，为空时传0</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="orsdBz" type="bz">
+				<xs:annotation>
+					<xs:documentation>偶然所得备注，可以为空</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qtsdJnsde" type="je">
+				<xs:annotation>
+					<xs:documentation>其他所得境内年所得额，可以为空，为空时传0</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qtsdJwsde" type="je">
+				<xs:annotation>
+					<xs:documentation>其他所得境外年所得额，可以为空，为空时传0</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qtsdSdehj" type="je">
+				<xs:annotation>
+					<xs:documentation>其他所得年所得额合计，可以为空，为空时传0</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qtsdYnssde" type="je">
+				<xs:annotation>
+					<xs:documentation>其他所得应纳税所得额，可以为空，为空时传0</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qtsdYnse" type="je">
+				<xs:annotation>
+					<xs:documentation>其他所得应纳税额，可以为空，为空时传0</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qtsdYkjse" type="je">
+				<xs:annotation>
+					<xs:documentation>其他所得已缴（扣）税额，可以为空，为空时传0</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qtsdDkse" type="je">
+				<xs:annotation>
+					<xs:documentation>其他所得抵扣税额，可以为空，为空时传0</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qtsdJmse" type="je">
+				<xs:annotation>
+					<xs:documentation>其他所得减免税额，可以为空，为空时传0</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qtsdYbse" type="je">
+				<xs:annotation>
+					<xs:documentation>其他所得应补税额，可以为空，为空时传0</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qtsdYtse" type="je">
+				<xs:annotation>
+					<xs:documentation>其他所得应退税额，可以为空，为空时传0</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qtsdBz" type="bz">
+				<xs:annotation>
+					<xs:documentation>其他所得备注，可以为空</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jnsdehj" type="je">
+				<xs:annotation>
+					<xs:documentation>境内年所得额合计，可以为空，为空时传0</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jwsdehj" type="je">
+				<xs:annotation>
+					<xs:documentation>境外年所得额合计，可以为空，为空时传0</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="allSdehj" type="je">
+				<xs:annotation>
+					<xs:documentation>年所得额合计合计，不能为空，不能小于12万</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ynssdehj" type="je">
+				<xs:annotation>
+					<xs:documentation>应纳税所得额合计，不能为空</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ynsehj" type="je">
+				<xs:annotation>
+					<xs:documentation>应纳税额合计，不能为空</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ykjsehj" type="je">
+				<xs:annotation>
+					<xs:documentation>已缴（扣）税额合计，可以为空，为空时传0</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="dksehj" type="je">
+				<xs:annotation>
+					<xs:documentation>抵扣税额合计，可以为空，为空时传0</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jmsehj" type="je">
+				<xs:annotation>
+					<xs:documentation>减免税额合计，可以为空，为空时传0</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ybsehj" type="je">
+				<xs:annotation>
+					<xs:documentation>
+					应补税额合计；
+					计算所有明细应补税额的总和，可以为空，为空时传0；
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ytsehj" type="je">
+				<xs:annotation>
+					<xs:documentation>
+					应退税额合计；
+					计算所有明细应退税额的总和，可以为空，为空时传0；
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bzHj" type="bz">
+				<xs:annotation>
+					<xs:documentation>备注，可以为空</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

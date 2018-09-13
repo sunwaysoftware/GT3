@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2010 rel. 3 (http://www.altova.com) by MESMERiZE (MSM) -->
+<!-- 被2011 rel. 2 sp1 (TeaM DJiNN) 使用XMLSpy vTeaM DJiNN编辑的 (http://www.altova.com) by -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:include schemaLocation="TaxMLPublicType.xsd"/>
+	<xs:complexType name="cpykcbgywbw">
+		<xs:annotation>
+			<xs:documentation>成品油库存报告表业务报文</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="cpykcbg" type="cpykcbg">
+						<xs:annotation>
+							<xs:documentation>成品油库存报告表</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="cpykcbg">
+		<xs:annotation>
+			<xs:documentation>成品油库存报告表</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="cpykcbgGrid">
+				<xs:complexType>
+					<xs:sequence minOccurs="0" maxOccurs="unbounded">
+						<xs:element name="cpykcbgGridlb" type="cpykcbgGridlbVO"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="cpykcbgGridlbVO">
+		<xs:annotation>
+			<xs:documentation>申报数据信息</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="ewbhxh" type="ewbhxh">
+				<xs:annotation>
+					<xs:documentation>二维表行序号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zspmDm" type="zspmDm">
+				<xs:annotation>
+					<xs:documentation>征收品目代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sl1" type="sl1">
+				<xs:annotation>
+					<xs:documentation>税率</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qckc" type="qckc">
+				<xs:annotation>
+					<xs:documentation>期初库存</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="wgYpzyrk" type="wgYpzyrk">
+				<xs:annotation>
+					<xs:documentation>外购有凭证已入库</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="wgYpzwrk" type="wgYpzwrk">
+				<xs:annotation>
+					<xs:documentation>外购有凭证未入库</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="wgYrkwpz" type="wgYrkwpz">
+				<xs:annotation>
+					<xs:documentation>外购已入库无凭证</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="wgxj" type="wgxj">
+				<xs:annotation>
+					<xs:documentation>外购小计</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="wtYpzyrk" type="wtYpzyrk">
+				<xs:annotation>
+					<xs:documentation>委托加工收回有凭证已入库</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="wtYpzwrk" type="wtYpzwrk">
+				<xs:annotation>
+					<xs:documentation>委托加工收回有凭证未入库</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="wtYrkwpz" type="wtYrkwpz">
+				<xs:annotation>
+					<xs:documentation>委托加工收回已入库无凭证</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="wtxj" type="wtxj">
+				<xs:annotation>
+					<xs:documentation>委托加工收回小计</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jkYpzyrk" type="jkYpzyrk">
+				<xs:annotation>
+					<xs:documentation>进口有凭证已入库</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jkYpzwrk" type="jkYpzwrk">
+				<xs:annotation>
+					<xs:documentation>进口有凭证未入库</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jkYrkwpz" type="jkYrkwpz">
+				<xs:annotation>
+					<xs:documentation>进口已入库无凭证</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jkxj" type="jkxj">
+				<xs:annotation>
+					<xs:documentation>进口小计</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="gjcpyly" type="gjcpyly">
+				<xs:annotation>
+					<xs:documentation>购进产品已领用</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="gjcpqmkc" type="gjcpqmkc">
+				<xs:annotation>
+					<xs:documentation>购进产品期末库存</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zccpqmkc" type="zccpqmkc">
+				<xs:annotation>
+					<xs:documentation>自产产品期末库存</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

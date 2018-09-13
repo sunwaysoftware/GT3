@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2013 (http://www.altova.com) by  () -->
+<!-- 被2011 rel. 2 sp1 (pjf) 使用XMLSpy vcss编辑的 (http://www.altova.com) by -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:complexType name="HXZGZS10211Request">
+		<xs:annotation>
+			<xs:documentation>保存税收缴款书(税务收现专用)信息</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="djxh" type="djxh">
+						<xs:annotation>
+							<xs:documentation>登记序号</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="skssswjgDm" type="skssswjgDm">
+						<xs:annotation>
+							<xs:documentation>税款所属机关</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="yzpzxh" type="yzpzxh">
+						<xs:annotation>
+							<xs:documentation>应征凭证序号</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="yzpzmxxh" type="yzpzmxxh">
+						<xs:annotation>
+							<xs:documentation>应征凭证明细序号</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="ZSkpFormVO" type="ZSkpFormVO">
+						<xs:annotation>
+							<xs:documentation>征收开票表单信息VO</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="ZSkpFormVO">
+		<xs:annotation>
+			<xs:documentation>征收开票表单信息VO</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="sfjnfs" type="jnfs">
+				<xs:annotation>
+					<xs:documentation>税款缴纳方式</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sfdysp" type="mc">
+				<xs:annotation>
+					<xs:documentation>是否打印税票</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="znjtsjscs" type="mc">
+				<xs:annotation>
+					<xs:documentation>滞纳金同时加收</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="pzzl" type="pzzlDm">
+				<xs:annotation>
+					<xs:documentation>票证种类</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="pzzg" type="pzzg">
+				<xs:annotation>
+					<xs:documentation>票证字轨</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="pzqshm" type="pzqshm">
+				<xs:annotation>
+					<xs:documentation>票证起始号码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yhyywdDm" type="yhyywdDm">
+				<xs:annotation>
+					<xs:documentation>银行营业网点代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yhzh" type="yhzh">
+				<xs:annotation>
+					<xs:documentation>银行账号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ckzhzhuuid" type="ckzhzhuuid">
+				<xs:annotation>
+					<xs:documentation>存款账户UUID</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="djxh" type="djxh">
+				<xs:annotation>
+					<xs:documentation>登记序号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yhhbDm" type="yhhbDm">
+				<xs:annotation>
+					<xs:documentation>银行行别代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yhyywdmc" type="yhyywdmc">
+				<xs:annotation>
+					<xs:documentation>银行营业网点名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sfxyh" type="sfxyh">
+				<xs:annotation>
+					<xs:documentation>三方协议号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qsyhhh" type="qsyhhh">
+				<xs:annotation>
+					<xs:documentation>清算银行号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="khyhhh" type="khyhhh">
+				<xs:annotation>
+					<xs:documentation>开户银行号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jkzhmc" type="jkzhmc">
+				<xs:annotation>
+					<xs:documentation>缴款账号名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="kprq" type="kprq">
+				<xs:annotation>
+					<xs:documentation>开票日期</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zspmDm" type="zspmDm">
+				<xs:annotation>
+					<xs:documentation>征收品目</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ghqysbh" type="ghqysbh">
+				<xs:annotation>
+					<xs:documentation>购货企业识别号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ghqymc" type="mc">
+				<xs:annotation>
+					<xs:documentation>购货企业名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ghqyhgDm" type="ghqyhgDm">
+				<xs:annotation>
+					<xs:documentation>购货企业海关代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="wtdzrnsrssbh" type="nsrsbh">
+				<xs:annotation>
+					<xs:documentation>委托代征人识别号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="wtdzrdjxh" type="djxh">
+				<xs:annotation>
+					<xs:documentation>委托代征人登记序号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

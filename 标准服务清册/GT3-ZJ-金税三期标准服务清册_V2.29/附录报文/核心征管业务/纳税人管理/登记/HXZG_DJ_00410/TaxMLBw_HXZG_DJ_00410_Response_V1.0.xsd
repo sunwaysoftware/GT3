@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2013 (http://www.altova.com) by  () -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:include schemaLocation="TaxMLPublicDJType.xsd"/>
+	<xs:complexType name="HXZGDJ00410Response">
+		<xs:annotation>
+			<xs:documentation>根据登记序号查询纳税人最顶端总机构信息（含纳税人信息）和上一级机构（紧邻的总机构）返回报文</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="zjgsyjjgxxVO" type="zjgsyjjgxxVO">
+						<xs:annotation>
+							<xs:documentation>最顶端总机构信息（含纳税人信息）和上一级机构（紧邻的总机构）</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="zjgsyjjgxxVO">
+		<xs:annotation>
+			<xs:documentation>总分机构信息（包括纳税人信息）</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="zjgxxVO" type="ZjgxxVO">
+				<xs:annotation>
+					<xs:documentation>总机构信息</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="syjjgxxVO" type="ZjgxxVO">
+				<xs:annotation>
+					<xs:documentation>上一级机构信息</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

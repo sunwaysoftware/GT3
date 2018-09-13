@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 被2011 rel. 2 sp1 (TeaM DJiNN) 使用XMLSpy vTeaM DJiNN编辑的 (http://www.altova.com) by -->
+<!-- edited with XMLSpy v2008 (http://www.altova.com) by TEAM ViRiLiTY (VRL) -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:complexType name="fccsssjmbaRequest">
+		<xs:annotation>
+			<xs:documentation>非车船税税收减免备案请求报文</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="djxh" type="djxh">
+						<xs:annotation>
+							<xs:documentation>登记序号（不能为空）</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="fccsssjmbaMxGrid" type="fccsssjmbaMxGrid">
+						<xs:annotation>
+							<xs:documentation>减免税备案情况明细列表</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="slxxGrid" type="slxx">
+						<xs:annotation>
+							<xs:documentation>受理信息</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="slxx">
+		<xs:annotation>
+			<xs:documentation>受理信息</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="bar" type="bar_dm">
+				<xs:annotation>
+					<xs:documentation>备案人（代码值，不能为空）</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="djrq" type="djrq">
+				<xs:annotation>
+					<xs:documentation>登记日期（不能为空）（格式：yyyy-MM-dd，默认为当前系统日期，不能大于备案日期）</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="barq" type="barq">
+				<xs:annotation>
+					<xs:documentation>备案日期（不能为空）(格式：yyyy-MM-dd，默认为当前系统日期，不能大于当前系统时间)</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="slswjg_dm" type="zgswjgDm">
+				<xs:annotation>
+					<xs:documentation>备案税务机关（不能为空）</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="fccsssjmbaMxGrid">
+		<xs:annotation>
+			<xs:documentation>减免税备案情况明细列表</xs:documentation>
+		</xs:annotation>
+		<xs:sequence maxOccurs="unbounded">
+			<xs:element name="fccsssjmbaMxx" type="fccsssjmbaMx">
+				<xs:annotation>
+					<xs:documentation>减免税备案情况明细</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="fccsssjmbaMx">
+		<xs:annotation>
+			<xs:documentation>减免税备案情况明细</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="zsxm_dm" type="zsxm_dm">
+				<xs:annotation>
+					<xs:documentation>征收项目代码(不能为空,查考dm_gy_zsxm表)</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="htbh" type="htbh">
+				<xs:annotation>
+					<xs:documentation>合同编号（校验规则：针对SXA031900483 贴息贷款合同免征印花税、对农民专业合作社与本社成员签订的农业产品和农业生产资料购销合同，免征印花税、受灾地区建设安居房所签订的建筑工程勘察设计合同等免征印花税；对财产所有人捐赠给受灾地区或受灾居民所书立的产权转移书据，免征印花税这些税收优惠事项时，“合同编号、合同名称”必录，并且判断征收项目、税收优惠事项、减免性质代码、合同编号、合同名称都相同且有效期存在交叉，则该条数据不允许再进行备案）</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="htmc" type="htmc">
+				<xs:annotation>
+					<xs:documentation>合同名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zsxm_dm" type="zsxm_dm">
+				<xs:annotation>
+					<xs:documentation>征收项目代码(不能为空,查考dm_gy_zsxm表)</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ssyhsx_dm" type="ssyhsx_dm">
+				<xs:annotation>
+					<xs:documentation>税收优惠事项代码(不能为空，查考dm_gy_swsx表)</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jmxz_dm" type="jmxz_dm">
+				<xs:annotation>
+					<xs:documentation>减免性质名称代码(不能为空，查考dm_gy_ssjmxz表)</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jmxzdl_dm" type="jmxzdl_dm">
+				<xs:annotation>
+					<xs:documentation>减免性质大类代码(不能为空,查考dm_gy_ssjmxzdl表)</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jmxzxl_dm" type="jmxzxl_dm">
+				<xs:annotation>
+					<xs:documentation>减免性质小类代码(不能为空，查看dm_gy_ssjmxzxl表)</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jmslx_dm" type="jmslx_dm">
+				<xs:annotation>
+					<xs:documentation>税收优惠类型代码(不能为空,01：减税 02：免税 当减免税类型为免税时，减免类型为税额式减免，且不可修改，
+					同时减征幅度、减征税率、减征额度三项不可录；年减免税额=年应纳税额，不可修改。)</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jmlx_dm" type="jmlx_dm">
+				<xs:annotation>
+					<xs:documentation>减免类型代码(不能为空,1:税率式减免  2:税额式减免  3:税基式减免  9:其他)（当减免类型代码为3时，减征额度、减征幅度必录且仅可录其一；
+					当减免类型代码为2时，减征额度、减征幅度必录且仅可录其一；当减免类型代码为1时，减征税率、减征幅度必录且仅可录其一）</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jmfs_dm" type="jmfs_dm">
+				<xs:annotation>
+					<xs:documentation>减免方式代码(不能为空，01：征前减免 02：退库减免 03：抵顶欠税 99：其他)</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yxqq" type="yxqq">
+				<xs:annotation>
+					<xs:documentation>有效期起(不能为空，格式：yyyy-MM-dd)</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yxqz" type="yxqz">
+				<xs:annotation>
+					<xs:documentation>有效期止(不能为空，格式：yyyy-MM-dd)</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jmsl" type="jmsl">
+				<xs:annotation>
+					<xs:documentation>减征税率（根据减免类型代码、税收优惠类型代码，条件必录）</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jzed" type="jzed">
+				<xs:annotation>
+					<xs:documentation>减征额度（根据减免类型代码、税收优惠类型代码，条件必录）</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jzfd" type="jmse">
+				<xs:annotation>
+					<xs:documentation>减征幅度（根据减免类型代码、税收优惠类型代码，条件必录）</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

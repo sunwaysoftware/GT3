@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:complexType name="kjryQdxjjlBaResponse">
+		<xs:annotation>
+			<xs:documentation>科技人员取得现金奖励备案反馈</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="jywysbh" type="jywysbh">
+						<xs:annotation>
+							<xs:documentation>交易唯一识别号</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="babh" type="babh">
+						<xs:annotation>
+							<xs:documentation>备案编号</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="bajg" type="bsjg">
+						<xs:annotation>
+							<xs:documentation>备案结果，0：失败；1：成功</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="sbyy" type="sbyy">
+						<xs:annotation>
+							<xs:documentation>失败原因</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+</xs:schema>

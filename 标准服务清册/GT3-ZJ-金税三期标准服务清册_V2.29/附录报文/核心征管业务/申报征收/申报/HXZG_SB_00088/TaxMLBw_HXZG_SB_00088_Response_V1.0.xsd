@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2010 rel. 3 (http://www.altova.com) by MESMERiZE (MSM) -->
+<!-- 被2012 () 使用XMLSpy v编辑的 (http://www.altova.com) by -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:include schemaLocation="TaxMLCGSSBType.xsd"/>
+	<xs:complexType name="HXZGSB00088Response">
+		<xs:annotation>
+			<xs:documentation>保存并打印车辆购置税完税证明发放返回报文</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="SBCgsWszmffSaveResVO" type="SBCgsWszmffSaveResVO">
+						<xs:annotation>
+							<xs:documentation>车购税完税证明发放保存返回值对象</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="SBCgsWszmffSaveResVO">
+		<xs:annotation>
+			<xs:documentation>车购税完税证明发放保存返回值对象</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="saveBz" type="bz">
+				<xs:annotation>
+					<xs:documentation>保存是否成功标志</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ewtmc" type="ewtmc">
+				<xs:annotation>
+					<xs:documentation>二维条码串</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ewtmt" type="ewtmt">
+				<xs:annotation>
+					<xs:documentation>二维条码图</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="cgssbuuid" type="cgssbuuid">
+				<xs:annotation>
+					<xs:documentation>车购税申报表主键</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="cgsuuid" type="cgsuuid">
+				<xs:annotation>
+					<xs:documentation>车辆完税证明表主键</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="cldauuid" type="cldauuid">
+				<xs:annotation>
+					<xs:documentation>车辆档案表主键</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="cldabh" type="cldabh">
+				<xs:annotation>
+					<xs:documentation>车辆档案编号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sbCgsWszmPzxxVO" type="SBCgsWszmPzxxVO">
+				<xs:annotation>
+					<xs:documentation>车辆购置税车辆识别号监控返回值对象</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="wszmhmSelGrid" type="wszmhmSelGrid">
+				<xs:annotation>
+					<xs:documentation>完税证明号码列表</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

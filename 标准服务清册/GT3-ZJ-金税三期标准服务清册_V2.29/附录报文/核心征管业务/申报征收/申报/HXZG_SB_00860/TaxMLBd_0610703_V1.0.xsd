@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 被2011 rel. 2 sp1 (TeaM DJiNN) 使用XMLSpy vTeaM DJiNN编辑的 (http://www.altova.com) by -->
+<!-- edited with XMLSpy v2010 rel. 3 (http://www.altova.com) by MESMERiZE (MSM) -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:include schemaLocation="TaxMLPublicType.xsd"/>
+	<xs:complexType name="zczjtxqkjnstzmxbForm">
+		<xs:annotation>
+			<xs:documentation>资产折旧、摊销情况及纳税调整明细表(A105080)业务报文</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="zczjtxqkjnstzMxbGrid">
+						<xs:annotation>
+							<xs:documentation>资产折旧、摊销情况及纳税调整明细表</xs:documentation>
+						</xs:annotation>
+						<xs:complexType>
+							<xs:sequence minOccurs="0" maxOccurs="unbounded">
+								<xs:element name="zczjtxqkjnstzmxbgridVO" type="zczjtxqkjnstzmxbGridVO"/>
+							</xs:sequence>
+						</xs:complexType>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="zczjtxqkjnstzmxbGridVO">
+		<xs:annotation>
+			<xs:documentation>《资产折旧、摊销情况及纳税调整明细表》</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="ewbhxh" type="ewbhxh">
+				<xs:annotation>
+					<xs:documentation>二维表行序号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ewbhmc" type="nsrmc">
+				<xs:annotation>
+					<xs:documentation>二维表行名称||二维表行名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zzjezczz" type="je">
+				<xs:annotation>
+					<xs:documentation>账载金额资产账载金额||账载金额资产账载金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zzjebnzj" type="je">
+				<xs:annotation>
+					<xs:documentation>账载金额本年折旧摊销额||账载金额本年折旧摊销额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zzjezcjs" type="je">
+				<xs:annotation>
+					<xs:documentation>账载金额资产计税基础||账载金额资产计税基础</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ssjezcjs" type="je">
+				<xs:annotation>
+					<xs:documentation>税收金额资产计税基础||税收金额资产计税基础</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ssjessgdzje" type="je">
+				<xs:annotation>
+					<xs:documentation>税收金额按税收一般规定计算的本年折旧、摊销额||税收金额按税收一般规定计算的本年折旧、摊销额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ssjebnjszje" type="je">
+				<xs:annotation>
+					<xs:documentation>税收金额本年加速折旧额额||税收金额本年加速折旧额额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ssje2014zje" type="je">
+				<xs:annotation>
+					<xs:documentation>税收金额2014年以及以后年度新增固定资产加速折旧额||税收金额2014年以及以后年度新增固定资产加速折旧额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ssjeljzje" type="je">
+				<xs:annotation>
+					<xs:documentation>税收金额累计折旧额||税收金额累计折旧额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="nstzje" type="je">
+				<xs:annotation>
+					<xs:documentation>纳税调整金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="nstzyy" type="nsrmc">
+				<xs:annotation>
+					<xs:documentation>调整原因||调整原因</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

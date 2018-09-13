@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:element name="nsdsewysyjcxresponse">
+		<xs:complexType>
+			<xs:complexContent>
+				<xs:extension base="taxDoc">
+					<xs:sequence>
+						<xs:element name="nsdsewysyjxx" type="nsdsewysyjxx">
+							<xs:annotation>
+								<xs:documentation>个人所得税自行申报（年所得12万元以上）已缴信息</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+					</xs:sequence>
+				</xs:extension>
+			</xs:complexContent>
+		</xs:complexType>
+	</xs:element>
+	<xs:complexType name="nsdsewysyjxx">
+		<xs:annotation>
+			<xs:documentation>个人所得税自行申报（年所得12万元以上）已缴信息</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="nsdsewysyjmx" maxOccurs="unbounded">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="zspmDm" type="zspmDm">
+							<xs:annotation>
+								<xs:documentation>征收品目代码</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+						<xs:element name="yjse" type="yjse">
+							<xs:annotation>
+								<xs:documentation>已缴税额</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

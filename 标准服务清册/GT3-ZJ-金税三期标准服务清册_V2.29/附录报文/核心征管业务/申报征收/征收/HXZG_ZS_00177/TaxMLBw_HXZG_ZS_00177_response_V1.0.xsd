@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 被2012 () 使用XMLSpy v编辑的 (http://www.altova.com) by -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:include schemaLocation="TaxMLPublicZSType.xsd"/>
+	<xs:complexType name="ZSHXZG00177ResponseVO">
+		<xs:annotation>
+			<xs:documentation>《居民企业所得税核定申请》（企业所得税核定（居民）(依职权)）表单信息申请保存VO</xs:documentation>
+		</xs:annotation>
+	       
+	</xs:complexType>
+</xs:schema>

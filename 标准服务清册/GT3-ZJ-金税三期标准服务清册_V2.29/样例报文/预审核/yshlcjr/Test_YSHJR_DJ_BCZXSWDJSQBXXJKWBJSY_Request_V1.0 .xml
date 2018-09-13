@@ -1,0 +1,105 @@
+<service xmlns="http://www.chinatax.gov.cn/spec/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<head>
+		<tran_id>SWZJ.HXZG.YSH.BCXXCJBSJ</tran_id>
+		<channel_id>TEST</channel_id>
+		<tran_seq>C000BNFZC25001201305030505267890</tran_seq>
+		<tran_date>20140826</tran_date>
+		<tran_time>173435849</tran_time>
+                       <expand>
+      <name>sjry</name>
+      <value>24406060735</value>
+    </expand>
+    <expand>
+      <name>sjjg</name>
+      <value>24406060700</value>
+    </expand>	</head> 
+<body><![CDATA[<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<taxML xsi:type="HXZGYSH00006Request" xmlbh="HXZGYSH00006Request" bbh="V1.1" xmlmc="渠道业务审核接入报文" xsi:schemaLocation="http://www.chinatax.gov.cn/dataspec/ TaxMLBw_HXZG_YSH_00006_Request_V1.1.xsd" xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<fileInfor>
+		<fileGrid>
+			<fileGridlb>
+				<filepath>2</filepath>
+				<filetype>2</filetype>
+				<filename>2</filename>
+				<fileindex>2</fileindex>
+			</fileGridlb>
+		</fileGrid>
+		<fileInforVO>
+			<fileSize>3</fileSize>
+			<recordNumber>3</recordNumber>
+			<nsrSwjgDm>3</nsrSwjgDm>
+		</fileInforVO>
+	</fileInfor>
+	<qdywshRequestVO>
+		<qxswjgDm>24406050005</qxswjgDm>
+		<djxh>10524406010000000002</djxh>
+		<lcswsxDm>LCSXA011005001</lcswsxDm>
+		<slswsxDm>SLSXA011005001</slswsxDm>
+		<dzbzdszlDm>BDA0110033</dzbzdszlDm>
+		<xtbm>C000BNFZC</xtbm>
+		<xzqhDm>440605</xzqhDm>
+		<nsrmc>测试注销预备审核系统</nsrmc>
+		<nsrsbh>440000865343434</nsrsbh>
+		<request>&lt;?xml version="1.0" encoding="UTF-8" standalone="yes"?&gt;
+&lt;taxML xsi:type="HXZGDJ00003Request" xmlmc="保存注销税务登记申请表信息" xmlbh="TaxMLBw_HXZG_DJ_00003_Request_V1.0.xsd" bbh="1.0" xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"&gt;
+    &lt;zxswdjslb&gt;
+        &lt;djxh&gt;10524406010000000002&lt;/djxh&gt;
+        &lt;xdjxh&gt;&lt;/xdjxh&gt;
+        &lt;lcslid&gt;1F2E148252AE6D460B400CE23D13696A&lt;/lcslid&gt;
+        &lt;sjgsdq&gt;24406060500&lt;/sjgsdq&gt;
+        &lt;zxswdjsqForm&gt;
+            &lt;zxuuid&gt;&lt;/zxuuid&gt;
+            &lt;zxyyDm&gt;08&lt;/zxyyDm&gt;
+            &lt;sfbxsf&gt;&lt;/sfbxsf&gt;
+            &lt;zxyysm&gt;注销原因说明&lt;/zxyysm&gt;
+            &lt;scjydz&gt;440000865343434440000865343434440000865343434&lt;/scjydz&gt;
+            &lt;qddzgswjgDm&gt;24406050005&lt;/qddzgswjgDm&gt;
+            &lt;pzjgmc&gt;&lt;/pzjgmc&gt;
+            &lt;pzwh&gt;&lt;/pzwh&gt;
+            &lt;pzrq&gt;2014-11-25 19:54:51&lt;/pzrq&gt;
+            &lt;hbfllxDm&gt;&lt;/hbfllxDm&gt;
+            &lt;qddscjydzxzqhszDm&gt;440605&lt;/qddscjydzxzqhszDm&gt;
+        &lt;/zxswdjsqForm&gt;
+        &lt;zxbsrxxForm&gt;
+            &lt;slrq&gt;2014-11-25 19:54:51&lt;/slrq&gt;
+            &lt;jbr&gt;纳税人经办人&lt;/jbr&gt;
+            &lt;sqrq&gt;2014-11-25 19:54:51&lt;/sqrq&gt;
+        &lt;/zxbsrxxForm&gt;
+        &lt;slsqswzjqkGridIn/&gt;
+        &lt;slsqswzjqkGridUp/&gt;
+        &lt;slsqswzjqkGridDete/&gt;
+        &lt;slsqswzjqkGridNo/&gt;
+        &lt;slsjqtswzlqkGridIn/&gt;
+        &lt;slsjqtswzlqkGridUp/&gt;
+        &lt;slsjqtswzlqkGridDete/&gt;
+        &lt;slsjqtswzlqkGridNo&gt;
+            &lt;slsjqtswzlqkGridNolb&gt;
+                &lt;sjqtzluuid&gt;&lt;/sjqtzluuid&gt;
+                &lt;zxuuid&gt;&lt;/zxuuid&gt;
+                &lt;djxh&gt;10524406010000000002&lt;/djxh&gt;
+                &lt;lcslid&gt;1F2E148252AE6D460B400CE23D13696A&lt;/lcslid&gt;
+                &lt;sjqtswzlzl&gt;税务资料种类&lt;/sjqtswzlzl&gt;
+                &lt;sjqtswzlsl&gt;2&lt;/sjqtswzlsl&gt;
+            &lt;/slsjqtswzlqkGridNolb&gt;
+        &lt;/slsjqtswzlqkGridNo&gt;
+    &lt;/zxswdjslb&gt;
+&lt;/taxML&gt;
+</request>
+		<procStartOrgID>24406050005</procStartOrgID>
+		<userList>
+<userListlb>
+				<swryDm></swryDm>
+				<swryxm></swryxm>
+				<jgDm>24406050005</jgDm>
+				<jgmc></jgmc>
+				<gwDm>244900000001</gwDm>
+				<gwmc></gwmc>
+				<swrysfDm></swrysfDm>
+				<gwxh></gwxh>
+			</userListlb>
+</userList>
+		<procStartPerformer>24406060735</procStartPerformer>
+	</qdywshRequestVO>
+</taxML>
+]]></body>
+</service>

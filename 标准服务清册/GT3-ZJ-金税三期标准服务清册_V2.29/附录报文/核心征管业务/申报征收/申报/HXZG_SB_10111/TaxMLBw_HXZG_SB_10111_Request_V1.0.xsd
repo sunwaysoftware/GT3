@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2013 (http://www.altova.com) by  () -->
+<!-- 被2012 () 使用XMLSpy v编辑的 (http://www.altova.com) by -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:include schemaLocation="TaxMLPublicSBType.xsd"/>
+	<xs:complexType name="HXZGSB01901Request">
+		<xs:annotation>
+			<xs:documentation>居民企业企业所得税核定征收月季度及年度申报基础数据查询请求报文</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="sbjmqysdshdzsyjdsbjcsjcxVO" type="SBJmqysdshdzsyjdsbjcsjcxVO">
+						<xs:annotation>
+							<xs:documentation>居民企业企业所得税核定征收月季度及年度申报基础数据查询请求对象</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="SBJmqysdshdzsyjdsbjcsjcxVO">
+		<xs:annotation>
+			<xs:documentation>居民企业企业所得税核定征收月季度及年度申报基础数据查询请求对象</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="SBNsrxxJhVO">
+				<xs:sequence>
+					<xs:element name="sfyjdndsbDm" type="bz">
+						<xs:annotation>
+							<xs:documentation>是否年度申报标志（0月（季）度申报1年度申报）</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+</xs:schema>

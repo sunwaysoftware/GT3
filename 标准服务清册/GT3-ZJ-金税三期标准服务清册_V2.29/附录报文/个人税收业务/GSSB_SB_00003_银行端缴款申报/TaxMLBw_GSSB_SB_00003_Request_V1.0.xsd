@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:complexType name="YhdjkSbRequest">
+		<xs:annotation>
+			<xs:documentation>银行端缴款申报请求</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="sfzjhm" type="sfzjhm" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>身份证件号码</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="pzxh" type="pzxh" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>申报流水号</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+</xs:schema>

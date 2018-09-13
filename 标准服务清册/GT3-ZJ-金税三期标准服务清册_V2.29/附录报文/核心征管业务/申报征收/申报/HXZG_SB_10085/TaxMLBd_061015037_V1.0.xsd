@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 被2011 rel. 2 sp1 (TeaM DJiNN) 使用XMLSpy vTeaM DJiNN编辑的 (http://www.altova.com) by -->
+<!-- edited with XMLSpy v2010 rel. 3 (http://www.altova.com) by MESMERiZE (MSM) -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:complexType name="A107020Ywbd">
+		<xs:annotation>
+			<xs:documentation>所得减免优惠明细表(A107020)表单</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="sdjmyhmxbhjForm" type="sdjmyhmxbhjForm">
+						<xs:annotation>
+							<xs:documentation>所得减免优惠明细表合计</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="nlmfyxmGrid">
+						<xs:complexType>
+							<xs:sequence minOccurs="0" maxOccurs="unbounded">
+								<xs:element name="xmGridlb" type="xmGridlbVO"/>
+							</xs:sequence>
+						</xs:complexType>
+					</xs:element>
+					<xs:element name="gjzdfzggjcssxmGrid">
+						<xs:complexType>
+							<xs:sequence minOccurs="0" maxOccurs="unbounded">
+								<xs:element name="xmGridlb" type="xmGridlbVO"/>
+							</xs:sequence>
+						</xs:complexType>
+					</xs:element>
+					<xs:element name="hjbhjnjsxmGrid">
+						<xs:complexType>
+							<xs:sequence minOccurs="0" maxOccurs="unbounded">
+								<xs:element name="xmGridlb" type="xmGridlbVO"/>
+							</xs:sequence>
+						</xs:complexType>
+					</xs:element>
+					<xs:element name="jszrxmGrid">
+						<xs:complexType>
+							<xs:sequence minOccurs="0" maxOccurs="unbounded">
+								<xs:element name="xmGridlb" type="xmGridlbVO"/>
+							</xs:sequence>
+						</xs:complexType>
+					</xs:element>
+					<xs:element name="ssqjjzfzxmGrid">
+						<xs:complexType>
+							<xs:sequence minOccurs="0" maxOccurs="unbounded">
+								<xs:element name="xmGridlb" type="xmGridlbVO"/>
+							</xs:sequence>
+						</xs:complexType>
+					</xs:element>
+					<xs:element name="nyglxmGrid">
+						<xs:complexType>
+							<xs:sequence minOccurs="0" maxOccurs="unbounded">
+								<xs:element name="xmGridlb" type="xmGridlbVO"/>
+							</xs:sequence>
+						</xs:complexType>
+					</xs:element>
+					<xs:element name="qtGrid">
+						<xs:complexType>
+							<xs:sequence minOccurs="0" maxOccurs="unbounded">
+								<xs:element name="xmGridlb" type="xmGridlbVO"/>
+							</xs:sequence>
+						</xs:complexType>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="sdjmyhmxbhjForm">
+		<xs:annotation>
+			<xs:documentation>《所得减免优惠明细表》</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="xmsrhj" type="je">
+				<xs:annotation>
+					<xs:documentation>项目收入-项目收入合计</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="xmcbhj" type="je">
+				<xs:annotation>
+					<xs:documentation>项目成本-项目成本合计</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="xgsfhj" type="je">
+				<xs:annotation>
+					<xs:documentation>相关税费-相关税费合计</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yftqjfyhj" type="je">
+				<xs:annotation>
+					<xs:documentation>应分摊期间费用-应分摊期间费用合计</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="nstzehj" type="je">
+				<xs:annotation>
+					<xs:documentation>纳税调整额-纳税调整额合计</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="msxmhj" type="je">
+				<xs:annotation>
+					<xs:documentation>项目所得额-免税项目合计</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jbxmhj" type="je">
+				<xs:annotation>
+					<xs:documentation>项目所得额-减半项目合计</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jmsdehj" type="je">
+				<xs:annotation>
+					<xs:documentation>减免所得额-减免所得额合计</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="xmGridlbVO">
+		<xs:annotation>
+			<xs:documentation>项目信息</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="ewbhmc" type="nsrmc">
+				<xs:annotation>
+					<xs:documentation>二维表行名称，根据所属大类传值||一、农、林、牧、渔业项目，二、国家重点扶持的公共基础设施项目，三、符合条件的环境保护、节能节水项目，四、符合条件的技术转让项目，五、实施清洁机制发展项目，六、符合条件的节能服务公司实施合同能源管理项目，七、其他</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ewbhgjz" type="nsrmc">
+				<xs:annotation>
+					<xs:documentation>二维表行关键字||一、农、林、牧、渔业项目传值为nlmfyxmGrid，二、国家重点扶持的公共基础设施项目传值为gjzdfzggjcssxmGrid，三、符合条件的环境保护、节能节水项目传值为hjbhjnjsxmGrid，四、符合条件的技术转让项目传值为jszrxmGrid，五、实施清洁机制发展项目传值为ssqjjzfzxmGrid，六、符合条件的节能服务公司实施合同能源管理项目传值为nyglxmGrid，七、其他传值为qtGrid</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="xmmc" type="nsrdz">
+				<xs:annotation>
+					<xs:documentation>项目名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sdjmyhsxDm" type="zsxmDm">
+				<xs:annotation>
+					<xs:documentation>优惠事项||取自代码表DM_SB_SDJMYHSXMC，根据所属大类传相应代码值</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yhfs" type="qygmDm">
+				<xs:annotation>
+					<xs:documentation>优惠方式||0免税1减半征收</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="xmsr" type="je">
+				<xs:annotation>
+					<xs:documentation>项目收入</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="xmcb" type="je">
+				<xs:annotation>
+					<xs:documentation>项目成本</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="xgsf" type="je">
+				<xs:annotation>
+					<xs:documentation>相关税费</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yftqjfy" type="je">
+				<xs:annotation>
+					<xs:documentation>应分摊期间费用</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="nstze" type="je">
+				<xs:annotation>
+					<xs:documentation>纳税调整额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="msxmsde" type="je">
+				<xs:annotation>
+					<xs:documentation>项目所得额-免税项目</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jbxmsde" type="je">
+				<xs:annotation>
+					<xs:documentation>项目所得额-减半项目</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jmsde" type="je">
+				<xs:annotation>
+					<xs:documentation>减免所得额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

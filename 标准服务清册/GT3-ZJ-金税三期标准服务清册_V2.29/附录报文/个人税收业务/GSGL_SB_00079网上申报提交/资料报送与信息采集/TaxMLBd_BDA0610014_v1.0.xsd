@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://www.chinatax.gov.cn/dataspec/" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:complexType name="fjmxsssxddyzxqkbgbYwbw">
+		<xs:annotation>
+			<xs:documentation>非居民享受税收协定待遇执行情况报告表业务报文</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="fjmxsssxddyzxqkbgb" type="fjmxsssxddyzxqkbgb"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="fjmxsssxddyzxqkbgb">
+		<xs:annotation>
+			<xs:documentation>非居民享受税收协定待遇执行情况报告表业务报文</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="fjmxsssxddyzxqkbgbHead" type="fjmxsssxddyzxqkbgbHead">
+				<xs:annotation>
+					<xs:documentation>非居民享受税收协定待遇执行情况报告表表头</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="fjmxsssxddyzxqkbgbBody" type="fjmxsssxddyzxqkbgbBody">
+				<xs:annotation>
+					<xs:documentation>非居民享受税收协定待遇执行情况报告表表体</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bodyAffix" type="xs:anySimpleType">
+				<xs:annotation>
+					<xs:documentation>预留：附属表体</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="fjmxsssxddyzxqkbgbHead">
+		<xs:annotation>
+			<xs:documentation>非居民享受税收协定待遇执行情况报告表表头</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="tbrq" type="tbrq">
+				<xs:annotation>
+					<xs:documentation>填报日期</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="tbrmc" type="tbrxm">
+				<xs:annotation>
+					<xs:documentation>填报人名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="tbrnssbh" type="nsrsbh">
+				<xs:annotation>
+					<xs:documentation>填报人纳税识别号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="tbrlxmc" type="tbrlxmc">
+				<xs:annotation>
+					<xs:documentation>填报人类型名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="tbrlxdm" type="tbrlxDm">
+				<xs:annotation>
+					<xs:documentation>填报人类型代码 （1：自然人，2：扣缴义务人）</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="nsrmc" type="nsrmc">
+				<xs:annotation>
+					<xs:documentation>纳税人名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="nsrsbh" type="nsrsbh">
+				<xs:annotation>
+					<xs:documentation>纳税人纳税识别号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="slswjgDm" type="slswjgDm">
+				<xs:annotation>
+					<xs:documentation>受理税务机关代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="slrDm" type="slrDm">
+				<xs:annotation>
+					<xs:documentation>受理人代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="fjmxsssxddyzxqkbgbBody">
+		<xs:annotation>
+			<xs:documentation>非居民享受税收协定待遇执行情况报告表表体</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="fjmxsssxddyzxqkbgbMx" type="fjmxsssxddyzxqkbgbMx" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>非居民享受税收协定待遇执行情况报告表明细</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="fjmxsssxddyzxqkbgbMx">
+		<xs:annotation>
+			<xs:documentation>非居民享受税收协定待遇执行情况报告表明细</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="xh" type="djxh">
+				<xs:annotation>
+					<xs:documentation>序号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ssxddylxmc" type="nr">
+				<xs:annotation>
+					<xs:documentation>税收协定待遇类型名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ssxddylxdm" type="nr">
+				<xs:annotation>
+					<xs:documentation>税收协定待遇类型代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sdlxmc" type="ssxdsdlxmc">
+				<xs:annotation>
+					<xs:documentation>所得类型名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sdlxdm" type="ssxdsdlxDm">
+				<xs:annotation>
+					<xs:documentation>所得类型代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="syssxdjtk" type="sqsyssxdks">
+				<xs:annotation>
+					<xs:documentation>适用税收协定及条款</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="spwsbhhbabgsj" type="spwsbh">
+				<xs:annotation>
+					<xs:documentation>审批文书编号或备案报告时间</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ynssdespsqse" type="ynssde">
+				<xs:annotation>
+					<xs:documentation>收入额或应纳税所得额审批申请数额或备案报告数额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ynssdesjfsse" type="ynssde">
+				<xs:annotation>
+					<xs:documentation>收入额或应纳税所得额实际发生数额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jmsespsqse" type="jmse">
+				<xs:annotation>
+					<xs:documentation>减免税额审批申请数额或备案报告数额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jmsesjzxse" type="jmse">
+				<xs:annotation>
+					<xs:documentation>减免税额实际执行数额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

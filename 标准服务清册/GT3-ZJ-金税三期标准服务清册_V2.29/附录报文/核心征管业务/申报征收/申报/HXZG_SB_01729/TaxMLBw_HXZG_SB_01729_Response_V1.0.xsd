@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- edited with XMLSpy v2010 rel. 3 (http://www.altova.com) by maatcat (MSM) -->
+<!-- 被2012 () 使用XMLSpy v编辑的 (http://www.altova.com) by -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxMLPublicSBType.xsd"/>
+	<xs:complexType name="HXZGSB01729Response">
+		<xs:annotation>
+			<xs:documentation>查询房产税从价从租申报信息</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="dqCjjzFcsyjskGrid">
+						<xs:annotation>
+							<xs:documentation>当期从价应缴税款信息</xs:documentation>
+						</xs:annotation>
+						<xs:complexType>
+							<xs:sequence>
+								<xs:element name="dqCjjzFcsyjskGridlb" type="SBCxsFcsyjskxxVO" maxOccurs="unbounded"/>
+							</xs:sequence>
+						</xs:complexType>
+					</xs:element>
+					<xs:element name="dqCzjzFcsyjskGrid">
+						<xs:annotation>
+							<xs:documentation>当期从租应缴税款信息</xs:documentation>
+						</xs:annotation>
+						<xs:complexType>
+							<xs:sequence>
+								<xs:element name="dqCzjzFcsyjskGridlb" type="SBCxsFcsyjskxxVO" maxOccurs="unbounded"/>
+							</xs:sequence>
+						</xs:complexType>
+					</xs:element>
+					<xs:element name="wqCjjzFcsyjskxxGrid">
+						<xs:annotation>
+							<xs:documentation>往期从价应缴税款信息</xs:documentation>
+						</xs:annotation>
+						<xs:complexType>
+							<xs:sequence>
+								<xs:element name="wqCjjzFcsyjskxxGridlb" type="SBCxsFcsyjskxxVO" maxOccurs="unbounded"/>
+							</xs:sequence>
+						</xs:complexType>
+					</xs:element>
+					<xs:element name="wqCzjzFcsyjskxxGrid">
+						<xs:annotation>
+							<xs:documentation>往期从租应缴税款信息</xs:documentation>
+						</xs:annotation>
+						<xs:complexType>
+							<xs:sequence>
+								<xs:element name="wqCzjzFcsyjskxxGridlb" type="SBCxsFcsyjskxxVO" maxOccurs="unbounded"/>
+							</xs:sequence>
+						</xs:complexType>
+					</xs:element>
+					<xs:element name="fyxxGrid">
+						<xs:annotation>
+							<xs:documentation>房源信息</xs:documentation>
+						</xs:annotation>
+						<xs:complexType>
+							<xs:sequence>
+								<xs:element name="fyxxGridlb" type="SBCxsFyxxcjbVO" maxOccurs="unbounded"/>
+							</xs:sequence>
+						</xs:complexType>
+					</xs:element>
+					<xs:element name="nsrxxVO" type="SBCxsSbnsrxxVO">
+						<xs:annotation>
+							<xs:documentation>纳税人信息</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+</xs:schema>

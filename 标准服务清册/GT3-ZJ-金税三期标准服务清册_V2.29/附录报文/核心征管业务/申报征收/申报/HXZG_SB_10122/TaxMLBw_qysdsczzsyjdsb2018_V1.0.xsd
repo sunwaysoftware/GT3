@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 被2011 rel. 2 sp1 (TeaM DJiNN) 使用XMLSpy vTeaM DJiNN编辑的 (http://www.altova.com) by -->
+<!-- edited with XMLSpy v2010 rel. 3 (http://www.altova.com) by liuwei (liuweicss) -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:include schemaLocation="TaxMLBd_0611033_V1.0.xsd"/>
+	<xs:include schemaLocation="TaxMLBd_0611034_V1.0.xsd"/>
+	<xs:include schemaLocation="TaxMLBd_0611035_V1.0.xsd"/>
+	<xs:include schemaLocation="TaxMLBd_0611036_V1.0.xsd"/>
+	<xs:include schemaLocation="TaxMLBd_0611037_V1.0.xsd"/>
+	<xs:include schemaLocation="TaxMLBd_0610674_V1.0.xsd"/>
+	<xs:include schemaLocation="TaxMLBd_0610913_V1.0.xsd"/>
+	<xs:complexType name="jmczyjdsbYwbw">
+		<xs:annotation>
+			<xs:documentation>《A200000中华人民共和国企业所得税月（季）度预缴纳税申报表（A类）》业务报文</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="A200000Ywbd" type="A200000Ywbd">
+						<xs:annotation>
+							<xs:documentation>《A200000中华人民共和国企业所得税月（季）度预缴纳税申报表（A类）》</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="A201010Ywbd" type="A201010Ywbd">
+						<xs:annotation>
+							<xs:documentation>《A201010免税收入、减计收入、所得减免等优惠明细表》</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="A201020Ywbd" type="A201020Ywbd">
+						<xs:annotation>
+							<xs:documentation>《A201020固定资产加速折旧(扣除)优惠明细表》</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="A201030Ywbd" type="A201030Ywbd">
+						<xs:annotation>
+							<xs:documentation>《A201030减免所得税优惠明细表》</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="A202000Ywbd" type="A202000Ywbd">
+						<xs:annotation>
+							<xs:documentation>《A202000企业所得税汇总纳税分支机构所得税分配表》</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="cgwgqyxxbgbYwbd" type="cgwgqyxxbgbYwbd">
+						<xs:annotation>
+							<xs:documentation>《居民企业参股外国企业信息报告表》</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="dynsbabYwbd" type="dynsbabYwbd">
+						<xs:annotation>
+							<xs:documentation>《技术成果投资入股企业所得税递延纳税备案表》</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+</xs:schema>

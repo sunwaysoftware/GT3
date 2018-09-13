@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2013 (http://www.altova.com) by  () -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:include schemaLocation="TaxMLPublicDJType.xsd"/>
+	<xs:complexType name="HXZGDJ00026Response">
+		<xs:annotation>
+			<xs:documentation>根据登记序号查询纳税人报验登记信息、外出经营证明、发票使用情况返回报文</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="WcjyhdqksbVO" type="WcjyhdqksbVO">
+						<xs:annotation>
+							<xs:documentation>外出经营活动申报表初始化信息</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="WcjyhdqksbVO">
+		<xs:annotation>
+			<xs:documentation>外出经营活动申报表初始化信息</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="wcjyhdBydjGrid" type="wcjyhdBydjGrid">
+				<xs:annotation>
+					<xs:documentation>外埠纳税人经营地报验登记信息</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="wcjyhdBydjHwxxGrid" type="wcjyhdBydjHwxxGrid">
+				<xs:annotation>
+					<xs:documentation>外埠纳税人经营地报验登记-货物信息</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="wcjyhdBydjLwxxGrid" type="wcjyhdBydjLwxxGrid">
+				<xs:annotation>
+					<xs:documentation>外埠纳税人经营地报验登记-劳务信息</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="wcjyhdqksbKpxxGrid" type="WcjyhdqksbKpxxGrid">
+				<xs:annotation>
+					<xs:documentation>外出经营活动情况申报-开票信息</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="wcjyhdBydjGrid">
+		<xs:annotation>
+			<xs:documentation>外埠纳税人经营地报验登记</xs:documentation>
+		</xs:annotation>
+		<xs:sequence maxOccurs="unbounded">
+			<xs:element name="wcjyhdBydjGridlb" type="DJWbnsrjydbydjVO"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="wcjyhdBydjHwxxGrid">
+		<xs:annotation>
+			<xs:documentation>外埠纳税人经营地报验登记（货物信息）</xs:documentation>
+		</xs:annotation>
+		<xs:sequence minOccurs="0" maxOccurs="unbounded">
+			<xs:element name="hwxxGridlb" type="DJWbnsrjydbydjHwxxVO"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="wcjyhdBydjLwxxGrid">
+		<xs:annotation>
+			<xs:documentation>外埠纳税人经营地报验登记（劳务信息）</xs:documentation>
+		</xs:annotation>
+		<xs:sequence minOccurs="0" maxOccurs="unbounded">
+			<xs:element name="lwxxGridlb" type="DJWbnsrjydbydjLwxxVO"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="WcjyhdqksbKpxxGrid">
+		<xs:annotation>
+			<xs:documentation>外出经营活动申报(开票信息)</xs:documentation>
+		</xs:annotation>
+		<xs:sequence minOccurs="0" maxOccurs="unbounded">
+			<xs:element name="kpxxGridlb" type="WcjyhdqksbKpxxVO"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="WcjyhdqksbKpxxVO">
+		<xs:annotation>
+			<xs:documentation>外出经营活动申报(开票信息)</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="fpDm" type="fpDm">
+				<xs:annotation>
+					<xs:documentation>发票代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="fpqshm" type="fpqshm">
+				<xs:annotation>
+					<xs:documentation>发票起始号码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="fpzzhm" type="fpzzhm">
+				<xs:annotation>
+					<xs:documentation>发票终止号码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="fs" type="fs">
+				<xs:annotation>
+					<xs:documentation>份数</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="se" type="se">
+				<xs:annotation>
+					<xs:documentation>税额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="fpzlDm" type="fpzlDm">
+				<xs:annotation>
+					<xs:documentation>发票种类代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="fpzlmc" type="fpzlmc">
+				<xs:annotation>
+					<xs:documentation>发票种类名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

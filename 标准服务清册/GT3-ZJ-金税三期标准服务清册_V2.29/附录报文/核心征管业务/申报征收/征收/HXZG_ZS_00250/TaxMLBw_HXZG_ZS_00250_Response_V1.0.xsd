@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2011 (http://www.altova.com) by ht (ht) -->
+<!-- 被2012 () 使用XMLSpy v编辑的 (http://www.altova.com) by -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:include schemaLocation="TaxMLPublicZSType.xsd"/>
+	<xs:complexType name="HXZGZS00250Response">
+		<xs:annotation>
+			<xs:documentation>保存抵缴欠税信息</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="swjgjg" type="swjgjg">
+						<xs:annotation>
+							<xs:documentation>税务机关局轨</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="zg" type="zg">
+						<xs:annotation>
+							<xs:documentation>字轨</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="nh" type="nh">
+						<xs:annotation>
+							<xs:documentation>年号</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="xh" type="mc">
+						<xs:annotation>
+							<xs:documentation>序号</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="wszg" type="wszg">
+						<xs:annotation>
+							<xs:documentation>文书字轨</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="djpzxh" type="djpzxh">
+						<xs:annotation>
+							<xs:documentation>抵缴凭证序号</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="tsjmxzbz" type="mc">
+						<xs:annotation>
+							<xs:documentation>退税减免性质标志</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+</xs:schema>

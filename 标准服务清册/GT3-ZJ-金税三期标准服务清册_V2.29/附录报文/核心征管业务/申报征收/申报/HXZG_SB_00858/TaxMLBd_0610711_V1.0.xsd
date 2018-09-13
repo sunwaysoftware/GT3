@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 被2011 rel. 2 sp1 (TeaM DJiNN) 使用XMLSpy vTeaM DJiNN编辑的 (http://www.altova.com) by -->
+<!-- edited with XMLSpy v2010 rel. 3 (http://www.altova.com) by MESMERiZE (MSM) -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:include schemaLocation="TaxMLPublicType.xsd"/>
+	<xs:complexType name="msjjsrjjjkcyhmxb">
+		<xs:annotation>
+			<xs:documentation>免税、减计收入及加计扣除额优惠明细表(A107010)业务报文</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="msjjsrjjjkcyhMxbVO" type="msjjsrjjjkcyhmxbVO">
+						<xs:annotation>
+							<xs:documentation>免税、减计收入及加计扣除额优惠明细表</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="msjjsrjjjkcyhmxbVO">
+		<xs:annotation>
+			<xs:documentation>《免税、减计收入及加计扣除额优惠明细表》</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+<xs:element name="mssr"  type="je"  minOccurs="0" > <xs:annotation> <xs:documentation>免税收入</xs:documentation></xs:annotation></xs:element>
+<xs:element name="gzlxsr"  type="je"  minOccurs="0" > <xs:annotation> <xs:documentation>国债利息收入</xs:documentation></xs:annotation></xs:element>
+<xs:element name="qyxtzsy"  type="je"  minOccurs="0" > <xs:annotation> <xs:documentation>符合条件的居民企业之间的股息、红利等权益性投资收益</xs:documentation></xs:annotation></xs:element>
+<xs:element name="fylzzsr"  type="je"  minOccurs="0" > <xs:annotation> <xs:documentation>符合条件的非营利组织的收入</xs:documentation></xs:annotation></xs:element>
+<xs:element name="mssrqtzxyh"  type="je"  minOccurs="0" > <xs:annotation> <xs:documentation>免税收入其他专项优惠</xs:documentation></xs:annotation></xs:element>
+<xs:element name="qjfzjzjjsr"  type="je"  minOccurs="0" > <xs:annotation> <xs:documentation>中国清洁发展机制基金取得的收入</xs:documentation></xs:annotation></xs:element>
+<xs:element name="zqtzjjzqscsr"  type="je"  minOccurs="0" > <xs:annotation> <xs:documentation>证券投资基金从证券市场取得的收入</xs:documentation></xs:annotation></xs:element>
+<xs:element name="zqtzjjfpsr"  type="je"  minOccurs="0" > <xs:annotation> <xs:documentation>证券投资基金投资者获得的分配收入</xs:documentation></xs:annotation></xs:element>
+<xs:element name="zqtzjjcjsr"  type="je"  minOccurs="0" > <xs:annotation> <xs:documentation>证券投资基金管理人运用基金买卖股票、债券的差价收入</xs:documentation></xs:annotation></xs:element>
+<xs:element name="dfzfzqlxsr"  type="je"  minOccurs="0" > <xs:annotation> <xs:documentation>取得的地方政府债券利息所得或收入</xs:documentation></xs:annotation></xs:element>
+<xs:element name="jzhzhcjsr"  type="je"  minOccurs="0" > <xs:annotation> <xs:documentation>受灾地区企业取得的救灾和灾后恢复重建款项等收入</xs:documentation></xs:annotation></xs:element>
+<xs:element name="yhcklxsr"  type="je"  minOccurs="0" > <xs:annotation> <xs:documentation>中国期货保证金监控中心有限责任公司取得的银行存款利息等收入</xs:documentation></xs:annotation></xs:element>
+<xs:element name="bxbzjjsr"  type="je"  minOccurs="0" > <xs:annotation> <xs:documentation>中国保险保障基金有限责任公司取得的保险保障基金等收入</xs:documentation></xs:annotation></xs:element>
+<xs:element name="qt1"  type="nsrsbh"  minOccurs="0" > <xs:annotation> <xs:documentation>9.其他 (页面14行的其他的减免性质)</xs:documentation></xs:annotation></xs:element>
+<xs:element name="qtmssr"  type="je"  minOccurs="0" > <xs:annotation> <xs:documentation>其他免税收入</xs:documentation></xs:annotation></xs:element>
+<xs:element name="jjsr"  type="je"  minOccurs="0" > <xs:annotation> <xs:documentation>减计收入</xs:documentation></xs:annotation></xs:element>
+<xs:element name="lyzysccp"  type="je"  minOccurs="0" > <xs:annotation> <xs:documentation>综合利用资源生产产品取得的收入</xs:documentation></xs:annotation></xs:element>
+<xs:element name="jjsrqtzxyh"  type="je"  minOccurs="0" > <xs:annotation> <xs:documentation>其他专项优惠</xs:documentation></xs:annotation></xs:element>
+<xs:element name="snlxbfsr"  type="je"  minOccurs="0" > <xs:annotation> <xs:documentation>金融、保险等机构取得的涉农利息、保费收入</xs:documentation></xs:annotation></xs:element>
+<xs:element name="tljszqlx"  type="je"  minOccurs="0" > <xs:annotation> <xs:documentation>取得的中国铁路建设债券利息收入</xs:documentation></xs:annotation></xs:element>
+<xs:element name="qt2"  type="nsrsbh"  minOccurs="0" > <xs:annotation> <xs:documentation> 3.其他  
+ （页面上20栏的其他的减免性质）</xs:documentation></xs:annotation></xs:element>
+<xs:element name="qtjjsr"  type="je"  minOccurs="0" > <xs:annotation> <xs:documentation>其他减计收入</xs:documentation></xs:annotation></xs:element>
+<xs:element name="jjkc"  type="je"  minOccurs="0" > <xs:annotation> <xs:documentation>加计扣除</xs:documentation></xs:annotation></xs:element>
+<xs:element name="yjkffy"  type="je"  minOccurs="0" > <xs:annotation> <xs:documentation>开发新技术、新产品、新工艺发生的研究开发费用加计扣除</xs:documentation></xs:annotation></xs:element>
+<xs:element name="gjzfgzjjck"  type="je"  minOccurs="0" > <xs:annotation> <xs:documentation>安置残疾人员及国家鼓励安置的其他就业人员所支付的工资加计扣除</xs:documentation></xs:annotation></xs:element>
+<xs:element name="zfcjrygz"  type="je"  minOccurs="0" > <xs:annotation> <xs:documentation>支付残疾人员工资加计扣除</xs:documentation></xs:annotation></xs:element>
+<xs:element name="gjglqtjyrygz"  type="je"  minOccurs="0" > <xs:annotation> <xs:documentation>国家鼓励的其他就业人员工资加计扣除</xs:documentation></xs:annotation></xs:element>
+<xs:element name="jjkcqtzxyh"  type="je"  minOccurs="0" > <xs:annotation> <xs:documentation>加计扣除其他专项优惠</xs:documentation></xs:annotation></xs:element>
+<xs:element name="qt3"  type="nsrsbh"  minOccurs="0" > <xs:annotation> <xs:documentation> （三）其他专项优惠  
+ （减免性质）</xs:documentation></xs:annotation></xs:element>
+<xs:element name="hj"  type="je"  minOccurs="0" > <xs:annotation> <xs:documentation>合计</xs:documentation></xs:annotation></xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

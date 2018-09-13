@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 被2012 () 使用XMLSpy v编辑的 (http://www.altova.com) by -->
+<!-- edited with XMLSpy v2011 rel. 2 (http://www.altova.com) by pl (css) -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:complexType name="SwzjJc2bQtQysdshsqjzcfxtsResponse">
+		<xs:annotation>
+			<xs:documentation>分析结果</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="dsAnalyseResult" type="DsAnalyseResult"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="DsRuleResult">
+		<xs:annotation>
+			<xs:documentation>规则结果</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="id" type="analyseid">
+				<xs:annotation>
+					<xs:documentation>分析规则ID</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ruleTip" type="ruleTip">
+				<xs:annotation>
+					<xs:documentation>风险规则的提示信息</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="DsAnalyseResult">
+		<xs:sequence>
+			<xs:element name="id" type="analyseid">
+				<xs:annotation>
+					<xs:documentation>返回结果ID</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="djxh" type="djxh">
+				<xs:annotation>
+					<xs:documentation>纳税人登记序号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ruleErrorCount" type="ruleErrorCount">
+				<xs:annotation>
+					<xs:documentation>有风险规则的个数</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="errorMsg" type="errorMsg">
+				<xs:annotation>
+					<xs:documentation>风险扫描系统返回的错误，如报文解析失败。</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="date" type="date">
+				<xs:annotation>
+					<xs:documentation>处理时间</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ruleResults" type="RuleResults"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="RuleResults">
+		<xs:sequence maxOccurs="100">
+			<xs:element name="dsRuleResult" type="DsRuleResult"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:simpleType name="analyseid">
+		<xs:annotation>
+			<xs:documentation>id</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:long"/>
+	</xs:simpleType>
+	<xs:simpleType name="ruleErrorCount">
+		<xs:annotation>
+			<xs:documentation>有风险规则的个数</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:int"/>
+	</xs:simpleType>
+	<xs:simpleType name="ruleTip">
+		<xs:annotation>
+			<xs:documentation>风险规则的提示信息</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:maxLength value="4000"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="errorMsg">
+		<xs:annotation>
+			<xs:documentation>风险扫描系统返回的错误，如报文解析失败。</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:maxLength value="4000"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="date">
+		<xs:annotation>
+			<xs:documentation>处理时间</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:maxLength value="20"/>
+		</xs:restriction>
+	</xs:simpleType>
+</xs:schema>

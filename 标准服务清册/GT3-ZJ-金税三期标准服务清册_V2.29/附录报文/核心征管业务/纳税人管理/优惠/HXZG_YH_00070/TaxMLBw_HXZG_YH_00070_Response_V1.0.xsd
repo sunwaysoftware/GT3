@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2010 rel. 3 (http://www.altova.com) by MESMERiZE (MSM) -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:complexType name="HXZGYH00070Response">
+		<xs:annotation>
+			<xs:documentation>根据登记序号税款所属期查询纳税人的车船优惠信息</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="ccsyhxxGrid" type="CcsyhxxGrid">
+						<xs:annotation>
+							<xs:documentation>车船税优惠信息</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="CcsyhxxGrid">
+		<xs:annotation>
+			<xs:documentation>车船税优惠信息</xs:documentation>
+		</xs:annotation>
+		<xs:sequence maxOccurs="unbounded">
+			<xs:element name="ccsyhxxGridlb" type="CcsyhxxVO">
+				<xs:annotation>
+					<xs:documentation>车船税优惠信息</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="CcsyhxxVO">
+		<xs:annotation>
+			<xs:documentation>车船税优惠信息</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+		<xs:annotation>
+			<xs:documentation>车船税优惠信息</xs:documentation>
+				</xs:annotation>
+			<xs:element name="yhpzuuid" type="yhpzuuid" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>优惠凭证UUID</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bamxuuid" type="bamxuuid" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>备案明细UUID</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="djxh" type="djxh" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>登记序号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jmsspsxDm" type="jmsspsxDm" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>减免税审批事项代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zsxmDm" type="zsxmDm" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>征收项目代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zspmDm" type="zspmDm" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>征收品目代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jmxmdlDm" type="jmxmdlDm" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>减免项目大类代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jmxmxlDm" type="jmxmxlDm" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>减免项目小类代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jmwjDm" type="jmwjDm" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>减免文件代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jmlxDm" type="jmlxDm" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>减免类型代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jmfsDm" type="jmfsDm" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>减免方式代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jmzlxDm" type="jmzlxDm">
+				<xs:annotation>
+					<xs:documentation>减免征类型代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ssjmxzhzDm" type="ssjmxzhzDm" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>减免性质汇总代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ssjmxzdlDm" type="ssjmxzdlDm" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>税收减免性质大类代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ssjmxzxlDm" type="ssjmxzxlDm" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>税收减免性质小类代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zmhm" type="zmhm" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>证明号码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="hphm" type="hphm" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>号牌号码||号牌号码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="cpxh1" type="cpxh1" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>厂牌型号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="clsbdh" type="clsbdh" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>车辆识别代号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="fdjhm" type="fdjhm" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>发动机号码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="cbmc" type="cbmc" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>船舶名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="cbsbh" type="cbsbh" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>船舶识别号||船舶识别号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jzed" type="jzed" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>减征额度</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jzfd" type="jzfd" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>减征幅度</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jzsl" type="jzsl" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>减征税率</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jmqxq" type="jmqxq">
+				<xs:annotation>
+					<xs:documentation>减免期限起</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jmqxz" type="jmqxz">
+				<xs:annotation>
+					<xs:documentation>减免期限止</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="nynse" type="nynse">
+				<xs:annotation>
+					<xs:documentation>年应纳税额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="njmse" type="njmse">
+				<xs:annotation>
+					<xs:documentation>年减免税额||车船税年减免税额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sjjzrq" type="sjjzrq">
+				<xs:annotation>
+					<xs:documentation>数据截止日期</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

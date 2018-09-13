@@ -1,0 +1,300 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2010 rel. 3 (http://www.altova.com) by xuxin (csstj) -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:include schemaLocation="TaxMLPublicType.xsd"/>
+	<xs:complexType name="ygyjzjlcznstzsbbywbw">
+		<xs:annotation>
+			<xs:documentation>《中华人民共和国企业所得税年度纳税申报表附表七以公允价值计量资产纳税调整表》业务报文</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="ygyjzjlcznstzsbb">
+						<xs:annotation>
+							<xs:documentation>《中华人民共和国企业所得税年度纳税申报表附表七以公允价值计量资产纳税调整表》</xs:documentation>
+						</xs:annotation>
+						<xs:complexType>
+							<xs:sequence>
+								<xs:element name="ygyjzjlzcnstzsbbForm" type="ygyjzjlzcnstzsbbForm">
+									<xs:annotation>
+										<xs:documentation>以公允价值计量资产纳税调整表信息</xs:documentation>
+									</xs:annotation>
+								</xs:element>
+							</xs:sequence>
+						</xs:complexType>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="ygyjzjlcznstzsbb">
+		<xs:annotation>
+			<xs:documentation>《中华人民共和国企业所得税年度纳税申报表附表七以公允价值计量资产纳税调整表》</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="ygyjzjlzcnstzsbbForm" type="ygyjzjlzcnstzsbbForm">
+				<xs:annotation>
+					<xs:documentation>以公允价值计量资产纳税调整表信息</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="ygyjzjlzcnstzsbbForm">
+		<xs:annotation>
+			<xs:documentation>中华人民共和国企业所得税年度纳税申报表（A类）-附表七以公允价值计量资产纳税调整表</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="gyjzjlbdjrdqsyJrzcqczzjeGyjz" type="gyjzjlbdjrdqsyJrzcqczzjeGyjz" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>公允价值计量且其变动计入当期损益的金融资产期初账载金额公允价值</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="gyjzjlqqbdjrdqsyJrzcqcjsjc" type="gyjzjlqqbdjrdqsyJrzcqcjsjc" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>公允价值计量且其变动计入当期损益的金融资产期初计税基础</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="gyjzjlbdjrdqsyJrzcqmzzjeGyjz" type="gyjzjlbdjrdqsyJrzcqmzzjeGyjz" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>公允价值计量且其变动计入当期损益的金融资产期末账载金额公允价值</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="gyjzjlqqbdjrdqsyJrzcqmjsjc" type="gyjzjlqqbdjrdqsyJrzcqmjsjc" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>公允价值计量且其变动计入当期损益的金融资产期末计税基础</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="gyjzjlqqbdjrdqsyJrzcnsdze" type="gyjzjlqqbdjrdqsyJrzcnsdze" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>公允价值计量且其变动计入当期损益的金融资产纳税调整额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jyxjrzcQczzjeGyjz" type="jyxjrzcQczzjeGyjz" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>交易性金融资产的期初账载金额公允价值</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jyxjrzcQcjsjc" type="jyxjrzcQcjsjc" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>交易性金融资产期初计税基础</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jyxjrzcQmzzjeGyjz" type="jyxjrzcQmzzjeGyjz" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>交易性金融资产期末账载金额公允价值</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jyxjrzcQmjsjc" type="jyxjrzcQmjsjc" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>交易性金融资产期末计税基础</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jyxjrzcNsdze" type="jyxjrzcNsdze" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>交易性金融资产纳税调整额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ysjrgjZcQczzjeGyjz" type="ysjrgjZcQczzjeGyjz" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>衍生金融工具资产期初账载金额公允价值</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ysjrgjZcQcjsjc" type="ysjrgjZcQcjsjc" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>衍生金融工具资产期初计税基础</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ysjrgjZcQmzzjeGyjz" type="ysjrgjZcQmzzjeGyjz" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>衍生金融工具资产期末账载金额公允价值</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ysjrgjZcQmjsjc" type="ysjrgjZcQmjsjc" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>衍生金融工具资产期末计税基础</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ysjrgjZcNsdze" type="ysjrgjZcNsdze" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>衍生金融工具资产纳税调整额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qtygyjzjlJrzcqczzjeGyjz" type="qtygyjzjlJrzcqczzjeGyjz" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>其他以公允价值计量的金融资产期初账载金额公允价值</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qtygyjzjlJrzcqcjsjc" type="qtygyjzjlJrzcqcjsjc" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>其他以公允价值计量的金融资产期初计税基础</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qtygyjzjlJrzcqmzzjeGyjz" type="qtygyjzjlJrzcqmzzjeGyjz" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>其他以公允价值计量的金融资产期末账载金额公允价值</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qtygyjzjlJrzcqmjsjc" type="qtygyjzjlJrzcqmjsjc" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>其他以公允价值计量的金融资产期末计税基础</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="tygyjzjlJrzcqmzzjeGyjz" type="tygyjzjlJrzcqmzzjeGyjz" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>其他以公允价值计量的金融资产的纳税调整额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="gyjzjlbdjrdqsyJrfzqczzjeGyjz" type="gyjzjlbdjrdqsyJrfzqczzjeGyjz" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>公允价值计量且其变动计入当期损益的金融负债期初账载金额公允价值</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="gyjzjlqqbdjrdqsyJrfzqcjsjc" type="gyjzjlqqbdjrdqsyJrfzqcjsjc" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>公允价值计量且其变动计入当期损益的金融负债期初计税基础</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="gyjzjlbdjrdqsyJrfzqmzzjeGyjz" type="gyjzjlbdjrdqsyJrfzqmzzjeGyjz" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>公允价值计量且其变动计入当期损益的金融负债期末账载金额公允价值</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="gyjzjlqqbdjrdqsyJrfzqmjsjc" type="gyjzjlqqbdjrdqsyJrfzqmjsjc" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>公允价值计量且其变动计入当期损益的金融负债期末计税基础</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="gyjzjlqqbdjrdqsyJrfzNsdze" type="gyjzjlqqbdjrdqsyJrfzNsdze" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>公允价值计量且其变动计入当期损益的金融负债的纳税调整额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jyxjrfzQczzjeGyjz" type="jyxjrfzQczzjeGyjz" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>交易性金融负债期初账载金额公允价值</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jyxjrfzQcjsjc" type="jyxjrfzQcjsjc" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>交易性金融负债期初计税基础</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jyxjrfzQmzzjeGyjz" type="jyxjrfzQmzzjeGyjz" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>交易性金融负债期末账载金额公允价值</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jyxjrfzQmjsjc" type="jyxjrfzQmjsjc" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>交易性金融负债期末计税基础</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jyxjrfzNsdze" type="jyxjrfzNsdze" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>交易性金融负债的纳税调整额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ysjrgjFzQczzjeGyjz" type="ysjrgjFzQczzjeGyjz" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>衍生金融工具负债期初账载金额公允价值</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ysjrgjFzQcjsjc" type="ysjrgjFzQcjsjc" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>衍生金融工具负债期初计税基础</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ysjrgjFzQmzzjeGyjz" type="ysjrgjFzQmzzjeGyjz" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>衍生金融工具负债期末账载金额公允价值</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ysjrgjFzQmjsjc" type="ysjrgjFzQmjsjc" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>衍生金融工具负债期末计税基础</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ysjrgjFzNsdze" type="ysjrgjFzNsdze" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>衍生金融工具负债的纳税调整额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qtygyjzjlJrfzqczzjeGyjz" type="qtygyjzjlJrfzqczzjeGyjz" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>其他以公允价值计量的金融负债期初账载金额公允价值</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qtygyjzjlJrfzqcjsjc" type="qtygyjzjlJrfzqcjsjc" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>其他以公允价值计量的金融负债期初计税基础</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qtygyjzjlJrfzqmzzjeGyjz" type="qtygyjzjlJrfzqmzzjeGyjz" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>其他以公允价值计量的金融负债期末账载金额公允价值</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qtygyjzjlJrfzqmjsjc" type="qtygyjzjlJrfzqmjsjc" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>其他以公允价值计量的金融负债期末计税基础</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qtygyjzjlJrfzNsdze" type="qtygyjzjlJrfzNsdze" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>其他以公允价值计量的金融负债的纳税调整额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="tzxfdcQczzjeGyjz" type="tzxfdcQczzjeGyjz" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>投资性房地产期初账载金额公允价值</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="tzxfdcQcjsjc" type="tzxfdcQcjsjc" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>投资性房地产期初计税基础</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="tzxfdcQmzzjeGyjz" type="tzxfdcQmzzjeGyjz" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>投资性房地产期末账载金额公允价值</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="tzxfdcQmjsjc" type="tzxfdcQmjsjc" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>投资性房地产期末计税基础</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="tzxfdcNsdze" type="tzxfdcNsdze" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>投资性房地产的纳税调整额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qczzjehjGyjz" type="qczzjehjGyjz" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>期初账载金额合计公允价值</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qcjsjchj" type="qcjsjchj" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>期初计税基础合计</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qmzzjeGyjzHj" type="qmzzjeGyjzHj" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>期末账载金额公允价值合计</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qmjsjchj" type="qmjsjchj" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>期末计税基础合计</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="nsdzehj" type="nsdzehj" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>纳税调整额合计</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2013 (http://www.altova.com) by  () -->
+<!-- 被2011 rel. 2 sp1 (TeaM DJiNN) 使用XMLSpy vTeaM DJiNN编辑的 (http://www.altova.com) by -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:include schemaLocation="TaxMLPublicZSType.xsd"/>
+	<xs:complexType name="HXZGZS00095Request">
+		<xs:annotation>
+			<xs:documentation>定期定额户核定申请业务表单</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="jbxxForm" type="ZsDqdehdsqjbxxVO">
+						<xs:annotation>
+							<xs:documentation>定期定额核定申请基本信息</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="dbqkForm" type="ZsDqdehdsqdbqkVO">
+						<xs:annotation>
+							<xs:documentation>定期定额核定申请对比情况</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="slxxForm" type="ZsDqdehdsqslxxVO">
+						<xs:annotation>
+							<xs:documentation>定期定额核定申请受理信息</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="jyqkGrid" minOccurs="0">
+						<xs:complexType>
+							<xs:annotation>
+								<xs:documentation>定期定额核定申请经营情况</xs:documentation>
+							</xs:annotation>
+							<xs:sequence maxOccurs="unbounded">
+								<xs:element name="jyqkGridlb" type="ZsDqdehdsqjyqkVO"/>
+							</xs:sequence>
+						</xs:complexType>
+					</xs:element>
+					<xs:element name="sqdeqkGrid" minOccurs="0">
+						<xs:complexType>
+							<xs:annotation>
+								<xs:documentation>定期定额核定申请申请定额情况</xs:documentation>
+							</xs:annotation>
+							<xs:sequence maxOccurs="unbounded">
+								<xs:element name="sqdeqkGridlb" type="ZsDqdehdsqsqdeqkVO"/>
+							</xs:sequence>
+						</xs:complexType>
+					</xs:element>
+					<xs:element name="djxh" type="djxh">
+						<xs:annotation>
+							<xs:documentation>登记序号</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="bglcslid" type="lcslid">
+						<xs:annotation>
+							<xs:documentation>报告流程实例</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="dezxqq" type="dezxqq">
+						<xs:annotation>
+							<xs:documentation>定额执行期起</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="dezxqz" type="dezxqz">
+						<xs:annotation>
+							<xs:documentation>定额执行期止</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+</xs:schema>

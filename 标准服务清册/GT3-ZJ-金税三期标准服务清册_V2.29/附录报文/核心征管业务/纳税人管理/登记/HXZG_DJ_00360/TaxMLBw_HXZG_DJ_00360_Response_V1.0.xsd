@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2013 (http://www.altova.com) by  () -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:include schemaLocation="TaxMLPublicDJType.xsd"/>
+	<xs:complexType name="HXZGDJ00360Response">
+		<xs:annotation>
+			<xs:documentation>根据登记序号和所属期起、所属期止查询纳税人企业会计制度备案信息反馈报文</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+		<xs:sequence>
+			<xs:element name="cwkjzdxxvo" type="DJCwkjzdjhsrjbabgsVO">
+				<xs:annotation>
+					<xs:documentation>财务会计制度及核算软件备案报告书</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			
+				<xs:element name="cwkjzdbaKjbbmcGrid" type="CwkjzdbaKjbbmcGrid">
+				<xs:annotation>
+					<xs:documentation>财务会计制度备案会计报表信息</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+			</xs:extension>
+			</xs:complexContent>
+	</xs:complexType>
+
+			
+	<xs:complexType name="CwkjzdbaKjbbmcGrid">
+		<xs:annotation>
+			<xs:documentation>财务会计制度备案会计报表列表</xs:documentation>
+		</xs:annotation>
+		<xs:sequence minOccurs="0" maxOccurs="unbounded">
+			<xs:element name="cwkjzdbaKjbbmcGridlb" type="DJCwkjzdbaKjbbmcVO">
+				<xs:annotation>
+					<xs:documentation>财务会计制度备案会计报表信息</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	
+</xs:schema>

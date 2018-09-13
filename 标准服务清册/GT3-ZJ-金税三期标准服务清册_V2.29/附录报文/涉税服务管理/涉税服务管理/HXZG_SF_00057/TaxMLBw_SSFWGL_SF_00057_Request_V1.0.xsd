@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:include schemaLocation="TaxMLPublicSFType.xsd"/>
+	<xs:complexType name="SSFWGLSSFW00057Request">
+		<xs:annotation>
+			<xs:documentation>批量保存人员信息，证书信息</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="jgxh" type="sszyfwjgxh">
+						<xs:annotation>
+							<xs:documentation>涉税专业服务机构序号</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="insertRyGrid" type="sszyfwryGrid">
+						<xs:annotation>
+							<xs:documentation>增加的人员信息集合</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="updateRyGrid" type="sszyfwryGrid">
+						<xs:annotation>
+							<xs:documentation>修改的人员信息集合</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="deleteRyGrid" type="sszyfwryGrid">
+						<xs:annotation>
+							<xs:documentation>删除的人员信息集合</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="insertZsGrid" type="sszyfwryzsxxGrid">
+						<xs:annotation>
+							<xs:documentation>增加的人员证书信息集合</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="updateZsGrid" type="sszyfwryzsxxGrid">
+						<xs:annotation>
+							<xs:documentation>修改的人员证书信息集合</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="deleteZsGrid" type="sszyfwryzsxxGrid">
+						<xs:annotation>
+							<xs:documentation>删除的人员证书信息集合</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+</xs:schema>

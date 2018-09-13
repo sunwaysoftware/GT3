@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2011 (http://www.altova.com) by ht (ht) -->
+<!-- 被2012 () 使用XMLSpy v编辑的 (http://www.altova.com) by -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:include schemaLocation="TaxMLPublicZSType.xsd"/>
+	<xs:complexType name="ZSHXZG00430RequestVO">
+		<xs:annotation>
+			<xs:documentation>核定应纳税额保存核定应纳税额核定信息</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="jbxxFormVo" type="ZShdhdynseJbxxVO">
+						<xs:annotation>
+							<xs:documentation>基本信息区</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="hdnrFormVo" type="ZShdhdynseHdnrVO">
+						<xs:annotation>
+							<xs:documentation>核定内容</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+
+
+					<xs:element name="zsxxGrid">
+						<xs:annotation>
+							<xs:documentation>征收数据信息</xs:documentation>
+						</xs:annotation>
+						<xs:complexType>
+							<xs:sequence minOccurs="0" maxOccurs="unbounded">
+								<xs:element name="zsxxGridlb" type="ZShdhdynseHdxmVO"/>
+							</xs:sequence>
+						</xs:complexType>
+					</xs:element>
+
+
+
+
+
+					<xs:element name="lcwybs" type="lcslid">
+						<xs:annotation>
+							<xs:documentation>流程实例id</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="hjwybs" type="hdslid">
+						<xs:annotation>
+							<xs:documentation>活动实例id</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="fxmxxh" type="mxxh">
+						<xs:annotation>
+							<xs:documentation>明细序号</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+</xs:schema>

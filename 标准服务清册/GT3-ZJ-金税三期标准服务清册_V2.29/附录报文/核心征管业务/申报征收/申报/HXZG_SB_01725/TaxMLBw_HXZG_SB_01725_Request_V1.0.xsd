@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 被2012 () 使用XMLSpy v编辑的 (http://www.altova.com) by -->
+<!-- edited with XMLSpy v2013 (http://www.altova.com) by  () -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxMLPublicSBType.xsd"/>
+	<xs:include schemaLocation="TaxMlBd_fcssb_V1.0.xsd"/>
+	<xs:include schemaLocation="TaxDoc.xsd"/>
+	<xs:complexType name="HXZGSB01725Request">
+		<xs:annotation>
+			<xs:documentation>保存房产税申报信息</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="cxsFcssbVO" type="CxsFcssbVO">
+						<xs:annotation>
+							<xs:documentation>房产税申报表单</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="zxbztzsuuid" type="zxbztzsuuid" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>自行补正uuid</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+</xs:schema>

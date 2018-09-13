@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2010 rel. 3 (http://www.altova.com) by xuxin (csstj) -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:include schemaLocation="TaxMLPublicType.xsd"/>
+	<xs:complexType name="gdzcsbbywbw">
+		<xs:annotation>
+			<xs:documentation>《中华人民共和国企业年度关联业务往来报告表表六固定资产表》业务报文</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="gdzcsbb">
+						<xs:annotation>
+							<xs:documentation>《中华人民共和国企业年度关联业务往来报告表表六固定资产表》</xs:documentation>
+						</xs:annotation>
+						<xs:complexType>
+							<xs:sequence>
+								<xs:element name="gdzcsbbsyqGrid">
+									<xs:annotation>
+										<xs:documentation>固定资产表-使用权数据对应Grid</xs:documentation>
+									</xs:annotation>
+									<xs:complexType>
+										<xs:sequence maxOccurs="unbounded">
+											<xs:element name="gdzcsbbsyqGridlb" type="gdzcsbbsyqGridlbVO">
+												<xs:annotation>
+													<xs:documentation>固定资产表-使用权数据对应列表</xs:documentation>
+												</xs:annotation>
+											</xs:element>
+										</xs:sequence>
+									</xs:complexType>
+								</xs:element>
+								<xs:element name="gdzcsbbsyquanGrid">
+									<xs:annotation>
+										<xs:documentation>固定资产表-所有权数据对应Grid</xs:documentation>
+									</xs:annotation>
+									<xs:complexType>
+										<xs:sequence maxOccurs="unbounded">
+											<xs:element name="gdzcsbbsyquanGridlb" type="gdzcsbbsyquanGridlbVO">
+												<xs:annotation>
+													<xs:documentation>固定资产表-所有权数据对应列表</xs:documentation>
+												</xs:annotation>
+											</xs:element>
+										</xs:sequence>
+									</xs:complexType>
+								</xs:element>
+							</xs:sequence>
+						</xs:complexType>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="gdzcsbb">
+		<xs:annotation>
+			<xs:documentation>《中华人民共和国企业年度关联业务往来报告表表六固定资产表》</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="gdzcsbbsyqGrid">
+				<xs:annotation>
+					<xs:documentation>固定资产表-使用权数据对应Grid</xs:documentation>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:sequence maxOccurs="unbounded">
+						<xs:element name="gdzcsbbsyqGridlb" type="gdzcsbbsyqGridlbVO">
+							<xs:annotation>
+								<xs:documentation>固定资产表-使用权数据对应列表</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="gdzcsbbsyquanGrid">
+				<xs:annotation>
+					<xs:documentation>固定资产表-所有权数据对应Grid</xs:documentation>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:sequence maxOccurs="unbounded">
+						<xs:element name="gdzcsbbsyquanGridlb" type="gdzcsbbsyquanGridlbVO">
+							<xs:annotation>
+								<xs:documentation>固定资产表-所有权数据对应列表</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="gdzcsbbsyqGrid">
+		<xs:annotation>
+			<xs:documentation>固定资产表-使用权数据对应Grid</xs:documentation>
+		</xs:annotation>
+		<xs:sequence maxOccurs="unbounded">
+			<xs:element name="gdzcsbbsyqGridlb" type="gdzcsbbsyqGridlbVO">
+				<xs:annotation>
+					<xs:documentation>固定资产表-使用权数据对应列表</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="gdzcsbbsyqGridlbVO">
+		<xs:annotation>
+			<xs:documentation>固定资产表-使用权数据对应明细</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="ewbhxh" type="ewbhxh" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>二维表行序号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="xm1" type="xm1" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>项目</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="srZjyje" type="srZjyje" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>受让总交易金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="cjwsrgdzcGljyje" type="cjwsrgdzcGljyje" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>受让从境外受让固定资产关联交易金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="cjwsrgdzcFgljyje" type="cjwsrgdzcFgljyje" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>受让从境外受让固定资产非关联交易金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="cjnsrgdzcGljyje" type="cjnsrgdzcGljyje" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>受让从境内受让固定资产关联交易金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="cjnsrgdzcFgljyje" type="cjnsrgdzcFgljyje" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>受让从境内受让固定资产非关联交易金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="crZjyje" type="crZjyje" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>出让总交易金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="cjwcrgdzcGljyje" type="cjwcrgdzcGljyje" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>出让从境外出让固定资产关联交易金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="cjwcrgdzcFgljyje" type="cjwcrgdzcFgljyje" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>出让从境外出让固定资产非关联交易金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="cjncrgdzcGljyje" type="cjncrgdzcGljyje" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>出让从境内出让固定资产关联交易金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="cjncrgdzcFgljyje" type="cjncrgdzcFgljyje" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>出让从境内出让固定资产非关联交易金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="gdzcsbbsyquanGrid">
+		<xs:annotation>
+			<xs:documentation>固定资产表-所有权数据对应Grid</xs:documentation>
+		</xs:annotation>
+		<xs:sequence maxOccurs="unbounded">
+			<xs:element name="gdzcsbbsyquanGridlb" type="gdzcsbbsyquanGridlbVO">
+				<xs:annotation>
+					<xs:documentation>固定资产表-所有权数据对应列表</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="gdzcsbbsyquanGridlbVO">
+		<xs:annotation>
+			<xs:documentation>固定资产表-所有权数据对应明细</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="ewbhxh" type="ewbhxh" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>二维表行序号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="xm1" type="xm1" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>项目</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="srZjyje" type="srZjyje" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>受让总交易金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="cjwsrgdzcGljyje" type="cjwsrgdzcGljyje" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>受让从境外受让固定资产关联交易金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="cjwsrgdzcFgljyje" type="cjwsrgdzcFgljyje" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>受让从境外受让固定资产非关联交易金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="cjnsrgdzcGljyje" type="cjnsrgdzcGljyje" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>受让从境内受让固定资产关联交易金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="cjnsrgdzcFgljyje" type="cjnsrgdzcFgljyje" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>受让从境内受让固定资产非关联交易金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="crZjyje" type="crZjyje" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>出让总交易金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="cjwcrgdzcGljyje" type="cjwcrgdzcGljyje" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>出让从境外出让固定资产关联交易金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="cjwcrgdzcFgljyje" type="cjwcrgdzcFgljyje" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>出让从境外出让固定资产非关联交易金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="cjncrgdzcGljyje" type="cjncrgdzcGljyje" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>出让从境内出让固定资产关联交易金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="cjncrgdzcFgljyje" type="cjncrgdzcFgljyje" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>出让从境内出让固定资产非关联交易金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

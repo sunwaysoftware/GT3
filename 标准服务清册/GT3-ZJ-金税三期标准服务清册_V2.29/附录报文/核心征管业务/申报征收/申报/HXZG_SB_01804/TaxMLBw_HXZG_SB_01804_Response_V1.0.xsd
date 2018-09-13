@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2010 rel. 3 (http://www.altova.com) by MESMERiZE (MSM) -->
+<!-- 被2012 () 使用XMLSpy v编辑的 (http://www.altova.com) by -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:include schemaLocation="TaxMLPublicSBType.xsd"/>
+	<xs:complexType name="HXZGSB01804Response">
+		<xs:annotation>
+			<xs:documentation>土地增值税尾盘销售申报获取其他数据信息</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="cfsbBz" type="bz1" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>重复申报标志</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="sffrdbz" type="bz1" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>是否非认定标志</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="wpsbrdxxGrid">
+						<xs:annotation>
+							<xs:documentation>申报信息Grid</xs:documentation>
+						</xs:annotation>
+						<xs:complexType>
+							<xs:sequence minOccurs="0" maxOccurs="unbounded">
+								<xs:element name="wpsbrdxxGridlb" type="SBSbxxJhVO">
+									<xs:annotation>
+										<xs:documentation>申报Gridlb</xs:documentation>
+									</xs:annotation>
+								</xs:element>
+							</xs:sequence>
+						</xs:complexType>
+					</xs:element>
+					<xs:element name="skssqz" type="nsrmc" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>上次申报的所属期止或者清算申报对应的所属期止</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="yjseptzz" type="je" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>已缴税额普通住宅</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="yjsefptzz" type="je" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>已缴税额非普通住宅</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="yjseqtlxfc" type="je" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>已缴税额其他类型房产</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="ptzzzsl" type="sl1" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>普通住宅征收率</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="fptzzzsl" type="sl1" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>非普通住宅征收率</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="qtlclxzsl" type="je" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>其他类型房产征收率</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+</xs:schema>

@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 被2011 rel. 2 sp1 (TeaM DJiNN) 使用XMLSpy vTeaM DJiNN编辑的 (http://www.altova.com) by -->
+<!-- edited with XMLSpy v2010 rel. 3 (http://www.altova.com) by liuwei (liuweicss) -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:include schemaLocation="TaxMLPublicType.xsd"/>
+	<xs:complexType name="ggfhywxcfkndnstzmxbForm">
+		<xs:annotation>
+			<xs:documentation>广告费和业务宣传费跨年度纳税调整明细表(A105060)业务报文</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="ggfhywxcfkndnstzMxbVO" type="ggfhywxcfkndnstzmxbVO" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>广告费和业务宣传费跨年度纳税调整明细表</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="ggfhywxcfkndnstzmxbVO">
+		<xs:annotation>
+			<xs:documentation>《广告费和业务宣传费跨年度纳税调整明细表》</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="bnggfhywxcfzc" type="je">
+				<xs:annotation>
+					<xs:documentation>本年广告费用和业务宣传支出</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="byxkcdggfhywxczc" type="je">
+				<xs:annotation>
+					<xs:documentation>减：不允许扣除的广告费和业务宣传费支出</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bnfhtjdggfhywxcfzc" type="je">
+				<xs:annotation>
+					<xs:documentation>本年符合条件的广告费和业务宣传费支出（1-2）</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bnjsggfhywxcfkcedxssr" type="je">
+				<xs:annotation>
+					<xs:documentation>本年计算广告费和业务宣传费扣除限额的销售（营业）收入</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ssgdkce" type="je">
+				<xs:annotation>
+					<xs:documentation>税收规定扣除率</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bqyjsdggfhywxcfkcxe" type="je">
+				<xs:annotation>
+					<xs:documentation>本企业计算的广告费和业务宣传费扣除限额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bnjzyhndkce" type="je">
+				<xs:annotation>
+					<xs:documentation>本年结转以后年度扣除额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yqndljjzkce" type="je">
+				<xs:annotation>
+					<xs:documentation>加：以前年度累计结转扣除额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bnkcdyqndjze" type="je">
+				<xs:annotation>
+					<xs:documentation>减：本年扣除的以前年度结转额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="anftxygjzqtdffy" type="je">
+				<xs:annotation>
+					<xs:documentation>按照分摊协议归集至其他关联方的广告费和业务宣传费</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="azftxycqtdfgjzbqyfy" type="je">
+				<xs:annotation>
+					<xs:documentation>按照分摊协议从其他关联方归集至本企业的广告费和业务宣传费</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bnggfhywxcfzcnstzje" type="je">
+				<xs:annotation>
+					<xs:documentation>本年广告费和业务宣传费支出纳税调整金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ljjzyhndkce" type="je">
+				<xs:annotation>
+					<xs:documentation>累计结转以后年度扣除额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

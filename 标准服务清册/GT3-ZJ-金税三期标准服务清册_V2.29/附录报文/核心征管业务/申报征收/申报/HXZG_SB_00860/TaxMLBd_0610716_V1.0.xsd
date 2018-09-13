@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 被2011 rel. 2 sp1 (TeaM DJiNN) 使用XMLSpy vTeaM DJiNN编辑的 (http://www.altova.com) by -->
+<!-- edited with XMLSpy v2010 rel. 3 (http://www.altova.com) by MESMERiZE (MSM) -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:include schemaLocation="TaxMLPublicType.xsd"/>
+	<xs:complexType name="sdjmyhmxbForm">
+		<xs:annotation>
+			<xs:documentation>所得减免优惠明细表(A107020)业务报文</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="sdjmyhMxbGrid" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>所得减免优惠明细表</xs:documentation>
+						</xs:annotation>
+						<xs:complexType>
+							<xs:sequence  maxOccurs="unbounded" minOccurs="0">
+								<xs:element name="sdjmyhmxbgridVO" type="sdjmyhmxbGridVO" minOccurs="0"/>
+							</xs:sequence>
+						</xs:complexType>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="sdjmyhmxbGridVO">
+		<xs:annotation>
+			<xs:documentation>《所得减免优惠明细表》</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+<xs:element name="ewbhxh"  type="ewbhxh"   > <xs:annotation> <xs:documentation>二维表行序号</xs:documentation></xs:annotation></xs:element>
+<xs:element name="ewbhmc"  type="nsrmc"   > <xs:annotation> <xs:documentation>二维表行名称||二维表行名称</xs:documentation></xs:annotation></xs:element>
+<xs:element name="xmsr"  type="je"   > <xs:annotation> <xs:documentation>项目收入||项目收入</xs:documentation></xs:annotation></xs:element>
+<xs:element name="xmcb"  type="je"   > <xs:annotation> <xs:documentation>项目成本||项目成本</xs:documentation></xs:annotation></xs:element>
+<xs:element name="xgsf"  type="je"   > <xs:annotation> <xs:documentation>相关税费||相关税费</xs:documentation></xs:annotation></xs:element>
+<xs:element name="yftqjfy"  type="je"   > <xs:annotation> <xs:documentation>应分摊期间费用||应分摊期间费用</xs:documentation></xs:annotation></xs:element>
+<xs:element name="nstze"  type="je"   > <xs:annotation> <xs:documentation>纳税调整额</xs:documentation></xs:annotation></xs:element>
+<xs:element name="xmsde"  type="je"   > <xs:annotation> <xs:documentation>项目所得额||项目所得额</xs:documentation></xs:annotation></xs:element>
+<xs:element name="jmsde"  type="je"   > <xs:annotation> <xs:documentation>减免所得额||减免所得额</xs:documentation></xs:annotation></xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

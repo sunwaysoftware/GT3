@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 被2013 sp1 () 使用XMLSpy v编辑的 (http://www.altova.com) by -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:complexType name="ShbxfjfjssbRequest">
+		<xs:annotation>
+			<xs:documentation>社会保险费缴费基数申报（全责模式）请求报文</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="djxh" type="djxh">
+						<xs:annotation>
+							<xs:documentation>登记序号</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="zgswjgdm" type="zgswjgdm">
+						<xs:annotation>
+							<xs:documentation>主管税务机关代码</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="zgswskfjdm" type="zgswskfjDm">
+						<xs:annotation>
+							<xs:documentation>主管税务所（科、分局）</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="jfjssbmxList">
+						<xs:annotation>
+							<xs:documentation>缴费基数申报明细列表</xs:documentation>
+						</xs:annotation>
+						<xs:complexType>
+							<xs:sequence minOccurs="0" maxOccurs="unbounded">
+								<xs:element name="jfjssbmxRequest" type="jfjssbmxRequest"/>
+							</xs:sequence>
+						</xs:complexType>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="jfjssbmxRequest">
+		<xs:annotation>
+			<xs:documentation>缴费基数申报明细</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="sbjbjgDm" type="sbjbjgDm">
+				<xs:annotation>
+					<xs:documentation>社保经办机构代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sbbm" type="sbbm">
+				<xs:annotation>
+					<xs:documentation>社保编码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="grsbbm" type="grsbbm">
+				<xs:annotation>
+					<xs:documentation>个人社保编码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sfzjlxDm" type="sfzjlx">
+				<xs:annotation>
+					<xs:documentation>身份证件类型</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sfzjhm" type="sfzjhm">
+				<xs:annotation>
+					<xs:documentation>身份证件号码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="xm" type="xm">
+				<xs:annotation>
+					<xs:documentation>姓名</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jfjssbxzmxList">
+				<xs:annotation>
+					<xs:documentation>缴费基数申报险种明细列表</xs:documentation>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:sequence minOccurs="0" maxOccurs="unbounded">
+						<xs:element name="jfjssbxzmxRequest" type="jfjssbxzmxRequest"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="jfjssbxzmxRequest">
+		<xs:annotation>
+			<xs:documentation>缴费基数申报险种明细</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="zsxmDm" type="zsxmDm">
+					<xs:annotation>
+						<xs:documentation>征收项目</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element name="zspmDm" type="zspmDm">
+					<xs:annotation>
+						<xs:documentation>征收品目</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element name="zszmDm" type="zszmDm">
+					<xs:annotation>
+						<xs:documentation>征收子目</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element name="jfjs" type="jfjs">
+					<xs:annotation>
+						<xs:documentation>缴费基数</xs:documentation>
+					</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

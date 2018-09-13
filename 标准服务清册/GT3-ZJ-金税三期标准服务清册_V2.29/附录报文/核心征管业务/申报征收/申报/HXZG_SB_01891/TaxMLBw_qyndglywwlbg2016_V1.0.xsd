@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2010 rel. 3 (http://www.altova.com) by MESMERiZE (MSM) -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:include schemaLocation="TaxMLBd_0610921_V1.0.xsd"/>
+	<xs:include schemaLocation="TaxMLBd_0610922_V1.0.xsd"/>
+	<xs:include schemaLocation="TaxMLBd_0610923_V1.0.xsd"/>
+	<xs:include schemaLocation="TaxMLBd_0610924_V1.0.xsd"/>
+	<xs:include schemaLocation="TaxMLBd_0610925_V1.0.xsd"/>
+	<xs:include schemaLocation="TaxMLBd_0610926_V1.0.xsd"/>
+	<xs:include schemaLocation="TaxMLBd_0610927_V1.0.xsd"/>
+	<xs:include schemaLocation="TaxMLBd_0610928_V1.0.xsd"/>
+	<xs:include schemaLocation="TaxMLBd_0610929_V1.0.xsd"/>
+	<xs:include schemaLocation="TaxMLBd_0610930_V1.0.xsd"/>
+	<xs:include schemaLocation="TaxMLBd_0610931_V1.0.xsd"/>
+	<xs:include schemaLocation="TaxMLBd_0610932_V1.0.xsd"/>
+	<xs:include schemaLocation="TaxMLBd_0610932_V2.0.xsd"/>
+	<xs:include schemaLocation="TaxMLBd_0610933_V1.0.xsd"/>
+	<xs:include schemaLocation="TaxMLBd_0610934_V1.0.xsd"/>
+	<xs:include schemaLocation="TaxMLBd_0610935_V1.0.xsd"/>
+	<xs:include schemaLocation="TaxMLBd_0610936_V1.0.xsd"/>
+	<xs:include schemaLocation="TaxMLBd_0610937_V1.0.xsd"/>
+	<xs:include schemaLocation="TaxMLBd_0610938_V1.0.xsd"/>
+	<xs:include schemaLocation="TaxMLBd_0610939_V1.0.xsd"/>
+	<xs:include schemaLocation="TaxMLBd_0610940_V1.0.xsd"/>
+	<xs:include schemaLocation="TaxMLBd_0610941_V1.0.xsd"/>
+	<xs:include schemaLocation="TaxMLBd_0610942_V1.0.xsd"/>
+	<xs:complexType name="qyndglywwlbgywbw">
+		<xs:annotation>
+			<xs:documentation>《年度关联业务往来报告2016版》业务报文</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="qyndglywwlbg2016_G000000" type="qyndglywwlbg2016_G000000">
+						<xs:annotation>
+							<xs:documentation>报告企业信息表</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="qyndglywwlbg2016_G100000" type="qyndglywwlbg2016_G100000">
+						<xs:annotation>
+							<xs:documentation>中华人民共和国企业年度关联业务往来汇总表</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="qyndglywwlbg2016_G101000" type="qyndglywwlbg2016_G101000">
+						<xs:annotation>
+							<xs:documentation>G101000关联关系表</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="qyndglywwlbg2016_G102000" type="qyndglywwlbg2016_G102000">
+						<xs:annotation>
+							<xs:documentation>G102000有形资产所有权交易表</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="qyndglywwlbg2016_G103000" type="qyndglywwlbg2016_G103000">
+						<xs:annotation>
+							<xs:documentation>G103000无形资产所有权交易表</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="qyndglywwlbg2016_G104000" type="qyndglywwlbg2016_G104000">
+						<xs:annotation>
+							<xs:documentation>G104000有形资产使用权交易表</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="qyndglywwlbg2016_G105000" type="qyndglywwlbg2016_G105000">
+						<xs:annotation>
+							<xs:documentation>G105000无形资产使用权交易表</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="qyndglywwlbg2016_G106000" type="qyndglywwlbg2016_G106000">
+						<xs:annotation>
+							<xs:documentation>G106000金融资产交易表</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="qyndglywwlbg2016_G107000" type="qyndglywwlbg2016_G107000">
+						<xs:annotation>
+							<xs:documentation>G107000融通资金表</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="qyndglywwlbg2016_G108000" type="qyndglywwlbg2016_G108000">
+						<xs:annotation>
+							<xs:documentation>G108000关联劳务表</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="qyndglywwlbg2016_G109000" type="qyndglywwlbg2016_G109000">
+						<xs:annotation>
+							<xs:documentation>G109000权益性投资表</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="qyndglywwlbg2016_G110000" type="qyndglywwlbg2016_G110000">
+						<xs:annotation>
+							<xs:documentation>G110000成本分摊协议表</xs:documentation>
+						</xs:annotation>
+					</xs:element>					
+					<xs:element name="qyndglywwlbg2016_G110000hj" type="qyndglywwlbg2016_G110000hj">
+						<xs:annotation>
+							<xs:documentation>G110000成本分摊协议表（报送多张形式）</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="qyndglywwlbg2016_G111000" type="qyndglywwlbg2016_G111000">
+						<xs:annotation>
+							<xs:documentation>G111000对外支付款项情况表</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="qyndglywwlbg2016_G112000hj" type="qyndglywwlbg2016_G112000hj">
+						<xs:annotation>
+							<xs:documentation>G112000境外关联方信息表</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="qyndglywwlbg2016_G113010" type="qyndglywwlbg2016_G113010">
+						<xs:annotation>
+							<xs:documentation>G113010年度关联交易财务状况分析表（报告企业个别报表信息）</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="qyndglywwlbg2016_G113020" type="qyndglywwlbg2016_G113020">
+						<xs:annotation>
+							<xs:documentation>G113020年度关联交易财务状况分析表（企业合并报表信息）</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="qyndglywwlbg2016_G114010" type="qyndglywwlbg2016_G114010">
+						<xs:annotation>
+							<xs:documentation>G114010国别报告－所得、税收和业务活动国别分布表</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="qyndglywwlbg2016_G114011" type="qyndglywwlbg2016_G114011">
+						<xs:annotation>
+							<xs:documentation>G114011国别报告－所得、税收和业务活动国别分布表（英文表）</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="qyndglywwlbg2016_G114020" type="qyndglywwlbg2016_G114020">
+						<xs:annotation>
+							<xs:documentation>G114020跨国集团成员实体名单</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="qyndglywwlbg2016_G114021" type="qyndglywwlbg2016_G114021">
+						<xs:annotation>
+							<xs:documentation>G114021跨国集团成员实体名单（英文表）</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="qyndglywwlbg2016_G114030" type="qyndglywwlbg2016_G114030">
+						<xs:annotation>
+							<xs:documentation>G114030附加说明表</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="qyndglywwlbg2016_G114031" type="qyndglywwlbg2016_G114031">
+						<xs:annotation>
+							<xs:documentation>G114031附加说明表（英文表）</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+</xs:schema>

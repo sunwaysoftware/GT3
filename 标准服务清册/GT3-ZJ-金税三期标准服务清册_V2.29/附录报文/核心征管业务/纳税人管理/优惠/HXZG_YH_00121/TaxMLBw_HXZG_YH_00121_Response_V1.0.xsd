@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:complexType name="HXZGYH00121Response">
+		<xs:annotation>
+			<xs:documentation>非居民享受税收协定待遇优惠</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="jzsl" type="jzsl">
+						<xs:annotation>
+							<xs:documentation>减征税率</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="sfxxbgbuuid" type="sfxxbgbuuid">
+						<xs:annotation>
+							<xs:documentation>身份信息报告表UUID</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+</xs:schema>

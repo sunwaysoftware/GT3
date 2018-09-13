@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 被2011 rel. 2 sp1 (TeaM DJiNN) 使用XMLSpy vTeaM DJiNN编辑的 (http://www.altova.com) by -->
+<!-- edited with XMLSpy v2010 rel. 3 (http://www.altova.com) by MESMERiZE (MSM) -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:include schemaLocation="TaxMLPublicType.xsd"/>
+	<xs:complexType name="bqzydjsejsbjjjjywbw">
+		<xs:annotation>
+			<xs:documentation>《本期准予抵减税额计算表》（酒及酒精）业务报文</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="bqzydjsejsbjjjj" type="bqzydjsejsbjjjj">
+						<xs:annotation>
+							<xs:documentation>《本期准予抵减税额计算表》（酒及酒精）</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="bqzydjsejsbjjjj">
+		<xs:annotation>
+			<xs:documentation>《本期准予抵减税额计算表》（酒及酒精）</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="bqzydjsejjForm" type="bqzydjsejjForm">
+				<xs:annotation>
+					<xs:documentation>申报数据信息</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="pjGrid">
+				<xs:annotation>
+					<xs:documentation>啤酒（增值税专用发票）</xs:documentation>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:sequence minOccurs="0" maxOccurs="unbounded">
+						<xs:element name="pjGridlb" type="pjGridlbVO"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="ptjGrid">
+				<xs:annotation>
+					<xs:documentation>葡萄酒（海关进口消费税专用缴款书）</xs:documentation>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:sequence minOccurs="0" maxOccurs="unbounded">
+						<xs:element name="ptjGridlb" type="ptjGridlbVO">
+							<xs:annotation>
+								<xs:documentation>葡萄酒（海关进口消费税专用缴款书）</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="bqzydjsejjForm">
+		<xs:annotation>
+			<xs:documentation>申报数据信息</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="qckcwgsl" type="sl">
+				<xs:annotation>
+					<xs:documentation>当期准予抵减的期初库存外购啤酒液数量</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="dqwgsl" type="sl">
+				<xs:annotation>
+					<xs:documentation>当期准予抵减的当期外购啤酒液数量</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qmkcwgsl" type="sl">
+				<xs:annotation>
+					<xs:documentation>当期准予抵减的期末库存外购啤酒液数量</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="wgynse" type="se">
+				<xs:annotation>
+					<xs:documentation>当期准予抵减的外购啤酒液已纳税款</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jkynse" type="yjse">
+				<xs:annotation>
+					<xs:documentation>当期准予抵减的进口葡萄酒已纳税款</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bqzydjsehj" type="se">
+				<xs:annotation>
+					<xs:documentation>本期准予抵减税款合计</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="pjGrid">
+		<xs:annotation>
+			<xs:documentation>啤酒（增值税专用发票）</xs:documentation>
+		</xs:annotation>
+		<xs:sequence minOccurs="0" maxOccurs="unbounded">
+			<xs:element name="pjGridlb" type="pjGridlbVO">
+				<xs:annotation>
+					<xs:documentation>啤酒（增值税专用发票）</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="pjGridlbVO">
+		<xs:annotation>
+			<xs:documentation>啤酒（增值税专用发票）</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="ewbhxh" type="ewbhxh">
+				<xs:annotation>
+					<xs:documentation>二维表行序号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="xmmc" type="xmmc">
+				<xs:annotation>
+					<xs:documentation>啤酒（增值税专用发票）</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="hm1" type="pjzzszyfphm">
+				<xs:annotation>
+					<xs:documentation>啤酒（增值税专用发票）号码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="kprq" type="kjrq">
+				<xs:annotation>
+					<xs:documentation>啤酒（增值税专用发票）开票日期</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sl" type="sl">
+				<xs:annotation>
+					<xs:documentation>啤酒（增值税专用发票）数量</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="dj" type="je">
+				<xs:annotation>
+					<xs:documentation>啤酒（增值税专用发票）单价</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="desl1" type="desl1">
+				<xs:annotation>
+					<xs:documentation>啤酒（增值税专用发票）定额税率（元/吨）</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="ptjGrid">
+		<xs:annotation>
+			<xs:documentation>葡萄酒（海关进口消费税专用缴款书）</xs:documentation>
+		</xs:annotation>
+		<xs:sequence minOccurs="0" maxOccurs="unbounded">
+			<xs:element name="ptjGridlb" type="ptjGridlbVO">
+				<xs:annotation>
+					<xs:documentation>葡萄酒（海关进口消费税专用缴款书）</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="ptjGridlbVO">
+		<xs:annotation>
+			<xs:documentation>葡萄酒（海关进口消费税专用缴款书）</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="ewbhxh" type="ewbhxh">
+				<xs:annotation>
+					<xs:documentation>二维表行序号（接着上面啤酒的ewbhxh排）</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="xmmc">
+				<xs:annotation>
+					<xs:documentation>葡萄酒（海关进口消费税专用缴款书）</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="hm1" type="ptjhgjkxfszyjkshm">
+				<xs:annotation>
+					<xs:documentation>葡萄酒（海关进口消费税专用缴款书）号码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="kprq" type="kjrq">
+				<xs:annotation>
+					<xs:documentation>葡萄酒（海关进口消费税专用缴款书）开票日期</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sl" type="sl">
+				<xs:annotation>
+					<xs:documentation>葡萄酒（海关进口消费税专用缴款书）数量</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="wsjg" type="wsjg">
+				<xs:annotation>
+					<xs:documentation>葡萄酒（海关进口消费税专用缴款书）完税价格</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="skje" type="skje">
+				<xs:annotation>
+					<xs:documentation>葡萄酒（海关进口消费税专用缴款书）税款金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

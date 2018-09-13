@@ -1,0 +1,175 @@
+<service xmlns="http://www.chinatax.gov.cn/spec/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<head>
+		<tran_id>SWZJ.HXZG.YSH.BCXXCJBSJ</tran_id>
+		<channel_id>TEST</channel_id>
+		<tran_seq>C100BNFZC25001201305030505267110</tran_seq>
+		<tran_date>20140826</tran_date>
+		<tran_time>173435849</tran_time>
+                       <expand>
+      <name>sjry</name>
+      <value>14406823041</value>
+    </expand>
+    <expand>
+      <name>sjjg</name>
+      <value>14406821200</value>
+    </expand>	</head> 
+<body><![CDATA[<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<taxML xsi:type="HXZGYSH00006Request" xmlbh="HXZGYSH00006Request" bbh="V1.1" xmlmc="渠道业务审核接入报文" xsi:schemaLocation="http://www.chinatax.gov.cn/dataspec/ 
+
+TaxMLBw_HXZG_YSH_00006_Request_V1.1.xsd" xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<fileInfor>
+		<fileGrid>
+			<fileGridlb>
+				<filepath>2</filepath>
+				<filetype>2</filetype>
+				<filename>2</filename>
+				<fileindex>2</fileindex>
+			</fileGridlb>
+		</fileGrid>
+		<fileInforVO>
+			<fileSize>3</fileSize>
+			<recordNumber>3</recordNumber>
+			<nsrSwjgDm>3</nsrSwjgDm>
+		</fileInforVO>
+	</fileInfor>
+	<qdywshRequestVO>
+		<qxswjgDm>14406821200</qxswjgDm>
+		<djxh>11440600000000234450</djxh>
+		<lcswsxDm>LCSXA131001004</lcswsxDm>
+		<slswsxDm>SLSXA131001004</slswsxDm>
+		<dzbzdszlDm>BDA1310009</dzbzdszlDm>
+		<xtbm>C000BNFZC</xtbm>
+		<xzqhDm>440605</xzqhDm>
+		<nsrmc>testtest</nsrmc>
+		<nsrsbh>440605213313133</nsrsbh>
+		<request>&lt;?xml version="1.0" encoding="UTF-8" standalone="yes"?&gt;
+&lt;taxML xsi:type="HXZGFP00176Request" bbh="String" xmlbh="String" xmlmc="String" xsi:schemaLocation="http://www.chinatax.gov.cn/dataspec/ 
+
+TaxMLBw_HXZG_FP_00176_Request_V1.0.xsd" xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"&gt;
+  &lt;fpSwxzxkSqVO&gt;
+    &lt;fpSwxzxkSqxxVO&gt;
+      &lt;xzxkuuid&gt;&lt;/xzxkuuid&gt;
+      &lt;djxh&gt;12440600000000000001&lt;/djxh&gt;
+      &lt;sqrlxDm&gt;1&lt;/sqrlxDm&gt;
+      &lt;sqdbh&gt;150010201408270543&lt;/sqdbh&gt;
+      &lt;dlrmc&gt;&lt;/dlrmc&gt;
+      &lt;dlrsfzjhm_1&gt;&lt;/dlrsfzjhm_1&gt;
+      &lt;wtdlrzz&gt;&lt;/wtdlrzz&gt;
+      &lt;dlrlxdh&gt;&lt;/dlrlxdh&gt;
+      &lt;dlrsfzjzlDm_1&gt;&lt;/dlrsfzjzlDm_1&gt;
+      &lt;lrrDm&gt;14406020100&lt;/lrrDm&gt;
+      &lt;lrrq&gt;2014-08-27 17:56:56&lt;/lrrq&gt;
+      &lt;xgrDm&gt;14406020100&lt;/xgrDm&gt;
+      &lt;xgrq&gt;2014-09-01 19:02:25&lt;/xgrq&gt;
+      &lt;sjgsdq&gt;14406821200&lt;/sjgsdq&gt;
+      &lt;lxdh&gt;22222&lt;/lxdh&gt;
+      &lt;dz&gt;重庆市北碚区云华路170号&lt;/dz&gt;
+      &lt;yzbm&gt;534534&lt;/yzbm&gt;
+      &lt;lcslid&gt;&lt;/lcslid&gt;
+      &lt;bjjzrq&gt;2014-12-16&lt;/bjjzrq&gt;
+      &lt;swxzxkxmDm&gt;3&lt;/swxzxkxmDm&gt;
+      &lt;slswjgDm&gt;15001091000&lt;/slswjgDm&gt;
+      &lt;slrDm&gt;15001093111&lt;/slrDm&gt;
+      &lt;slrq&gt;2014-08-27&lt;/slrq&gt;
+      &lt;blztDm&gt;2&lt;/blztDm&gt;
+      &lt;qrjdrq&gt;&lt;/qrjdrq&gt;
+      &lt;sjtb_sj/&gt;
+    &lt;/fpSwxzxkSqxxVO&gt;
+    &lt;fpSwxzxkCyfpxxSqspVO&gt;
+      &lt;cyfpsqspuuid&gt;&lt;/cyfpsqspuuid&gt;
+      &lt;djxh&gt;11440600000000000004&lt;/djxh&gt;
+      &lt;lcslid&gt;&lt;/lcslid&gt;
+      &lt;hdslid&gt;129941e166a66adecad96359df06b014&lt;/hdslid&gt;
+      &lt;fpbmyxm&gt;11&lt;/fpbmyxm&gt;
+      &lt;fpjyyxm&gt;11&lt;/fpjyyxm&gt;
+      &lt;fpbgyxm&gt;11&lt;/fpbgyxm&gt;
+      &lt;fpywyxm&gt;11&lt;/fpywyxm&gt;
+      &lt;fppbyxm&gt;11&lt;/fppbyxm&gt;
+      &lt;cyycmc&gt;11&lt;/cyycmc&gt;
+      &lt;cybzmc&gt;11&lt;/cybzmc&gt;
+      &lt;cysctj&gt;11&lt;/cysctj&gt;
+      &lt;scjgscyjDm/&gt;
+      &lt;scjgscyjsm/&gt;
+      &lt;scrDm/&gt;
+      &lt;scswjgDm/&gt;
+      &lt;scrq/&gt;
+      &lt;xkyxqq/&gt;
+      &lt;xkyxqz/&gt;
+      &lt;lrrDm&gt;14406821200&lt;/lrrDm&gt;
+      &lt;lrrq&gt;2014-08-27 22:30:05&lt;/lrrq&gt;
+      &lt;xgrDm/&gt;
+      &lt;xgrq/&gt;
+      &lt;sjgsdq&gt;14406823600&lt;/sjgsdq&gt;
+      &lt;nsrmc&gt;1&lt;/nsrmc&gt;
+      &lt;sjtb_sj/&gt;
+    &lt;/fpSwxzxkCyfpxxSqspVO&gt;
+    &lt;fpSwxzxkDsyhspSqspVO&gt;
+      &lt;yhspdssqspuuid&gt;&lt;/yhspdssqspuuid&gt;
+      &lt;djxh&gt;11440600000000000004&lt;/djxh&gt;
+      &lt;lcslid&gt;&lt;/lcslid&gt;
+      &lt;hdslid&gt;658f94872f1ee1d5e9c6134686aadad9&lt;/hdslid&gt;
+      &lt;sqly&gt;申请2&lt;/sqly&gt;
+      &lt;ywfw&gt;业务2&lt;/ywfw&gt;
+      &lt;sxfbl/&gt;
+      &lt;xdskjjqx/&gt;
+      &lt;xkyxqq/&gt;
+      &lt;xkyxqz/&gt;
+      &lt;scjgscyjDm/&gt;
+      &lt;scjgscyjsm/&gt;
+      &lt;scrDm/&gt;
+      &lt;scswjgDm/&gt;
+      &lt;scrq/&gt;
+      &lt;lrrDm&gt;24406060733&lt;/lrrDm&gt;
+      &lt;lrrq&gt;2014-08-27 19:09:03&lt;/lrrq&gt;
+      &lt;xgrDm/&gt;
+      &lt;xgrq/&gt;
+      &lt;sjgsdq&gt;14406823600&lt;/sjgsdq&gt;
+      &lt;sjtb_sj/&gt;
+    &lt;/fpSwxzxkDsyhspSqspVO&gt;
+    &lt;fpSwxzxkZgxeSqspVOs&gt;
+      &lt;fpSwxzxkZgxeSqspVO&gt;
+        &lt;kpxesqspuuid&gt;&lt;/kpxesqspuuid&gt;
+        &lt;lcslid&gt;&lt;/lcslid&gt;
+        &lt;hdslid&gt;68e81c266891bc46437c687f2c63431a&lt;/hdslid&gt;
+        &lt;djxh&gt;11440600000000000004&lt;/djxh&gt;
+        &lt;fpzlDm&gt;1130&lt;/fpzlDm&gt;
+        &lt;fpzgkpxeDm&gt;4&lt;/fpzgkpxeDm&gt;
+        &lt;sqly&gt;试试&lt;/sqly&gt;
+        &lt;scjgscyjDm&gt;11&lt;/scjgscyjDm&gt;
+        &lt;scjgscyjsm/&gt;
+        &lt;xkyxqq&gt;2014-08-28&lt;/xkyxqq&gt;
+        &lt;xkyxqz&gt;2014-08-29&lt;/xkyxqz&gt;
+        &lt;scrDm&gt;14406020100&lt;/scrDm&gt;
+        &lt;scswjgDm&gt;24400000000&lt;/scswjgDm&gt;
+        &lt;scrq&gt;2014-08-27&lt;/scrq&gt;
+        &lt;lrrDm&gt;14406020100&lt;/lrrDm&gt;
+        &lt;lrrq&gt;2014-08-27 17:10:17&lt;/lrrq&gt;
+        &lt;xgrDm&gt;14406020100&lt;/xgrDm&gt;
+        &lt;xgrq&gt;2014-08-27 17:45:15&lt;/xgrq&gt;
+        &lt;sjgsdq&gt;15001091000&lt;/sjgsdq&gt;
+        &lt;sjtb_sj/&gt;
+      &lt;/fpSwxzxkZgxeSqspVO&gt;
+    &lt;/fpSwxzxkZgxeSqspVOs&gt;
+  &lt;/fpSwxzxkSqVO&gt;
+  &lt;swxzxklx&gt;1&lt;/swxzxklx&gt;
+  &lt;sfybc&gt;N&lt;/sfybc&gt;
+&lt;/taxML&gt;
+</request>
+		<procStartOrgID>14406823600</procStartOrgID>
+		<userList>
+<userListlb>
+				<swryDm>14406020100</swryDm>
+				<swryxm></swryxm>
+				<jgDm>14406821200</jgDm>
+				<jgmc></jgmc>
+				<gwDm>144900000001</gwDm>
+				<gwmc></gwmc>
+				<swrysfDm></swrysfDm>
+				<gwxh></gwxh>
+			</userListlb>
+</userList>
+		<procStartPerformer>24406060733</procStartPerformer>
+	</qdywshRequestVO>
+</taxML>
+]]></body>
+</service>

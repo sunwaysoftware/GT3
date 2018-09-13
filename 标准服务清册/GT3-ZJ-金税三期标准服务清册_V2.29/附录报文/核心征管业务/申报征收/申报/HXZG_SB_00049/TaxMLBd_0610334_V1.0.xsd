@@ -1,0 +1,345 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 被2012 () 使用XMLSpy v编辑的 (http://www.altova.com) by -->
+<!-- edited with XMLSpy v2010 (http://www.altova.com) by MESMERiZE (MiZE) -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:include schemaLocation="TaxMLPublicType.xsd"/>
+	<xs:complexType name="whsyjsfsbbygz">
+		<xs:annotation>
+			<xs:documentation>《文化事业建设费申报表》（营改增）</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="sbbhead" type="sbbheadkz1VO">
+				<xs:annotation>
+					<xs:documentation>文化事业建设费申报表头信息</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="SbsjxxForm">
+				<xs:annotation>
+					<xs:documentation>文化事业建设费申报信息</xs:documentation>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:complexContent>
+						<xs:extension base="SbsjxxForm"/>
+					</xs:complexContent>
+				</xs:complexType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="ysfwxmjcqdGrid">
+		<xs:annotation>
+			<xs:documentation>文化事业建设费（营改增）申报表应税服务减除项目清单附表</xs:documentation>
+		</xs:annotation>
+		<xs:sequence minOccurs="0" maxOccurs="unbounded">
+			<xs:element name="ysfwxmjcqdGridlb" type="ysfwxmjcqdGridlb">
+				<xs:annotation>
+					<xs:documentation>文化事业建设费（营改增）申报表应税服务减除项目清单附表</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="ysfwxmjcqdGridlb">
+		<xs:annotation>
+			<xs:documentation>文化事业建设费（营改增）申报表应税服务减除项目清单附表</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="ewbhxh" type="ewbhxh">
+				<xs:annotation>
+					<xs:documentation>二维表行序号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="je" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="pzhm2" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>凭证号码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="pzzlDm1" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>凭证种类代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="fwxmmc" type="fwxmmc" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>服务项目名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="kpfdwmc" type="kpfdwmc" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>开票方单位名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="kpfnsrsbh" type="kpfnsrsbh" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>开票方纳税人识别号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="SbsjxxForm">
+		<xs:annotation>
+			<xs:documentation>申报数据信息</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="pzxh" type="ewbhxh">
+				<xs:annotation>
+					<xs:documentation>凭证序号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="hjzgtbrq" type="zspmDm" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>会计主管填表日期</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yzsrbys" type="jsyj" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>计税依据</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yzsrbnlj" type="fl" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>应征收入本年累计</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="mzsrbys" type="bqynfe" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>免征收入本月数</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="mzsrbnlj" type="jmfe" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>免征收入本年累计</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jcxmqcjeBys" type="yjfe1" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>减除项目期初金额_本月数</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jcxmqcjeBnlj" type="bqybtfe" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>减除项目期初金额_本年累计</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jcxmbqfseBys" type="ewbhxh">
+				<xs:annotation>
+					<xs:documentation>减除项目本期发生额_本月数</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jcxmbqfseBnlj" type="zspmDm" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>减除项目本期发生额_本年累计</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yzsrjceBys" type="jsyj" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>应征收入减除额_本月数</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yzsrjceBnlj" type="fl" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>应征收入减除额_本年累计</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="mzsrjceBys" type="bqynfe" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>免征收入减除额_本月数</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="mzsrjcebnlj" type="jmfe" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>免征收入减除额本年累计</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jcxmqmyeBys" type="yjfe1" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>减除项目期末余额_本月数</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jcxmqmyeBnlj" type="bqybtfe" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>减除项目期末余额_本年累计</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jfxseBys" type="ewbhxh">
+				<xs:annotation>
+					<xs:documentation>计费销售额_本月数</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jfxsebnlj" type="zspmDm" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>计费销售额本年累计</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="flBys" type="jsyj" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>费率_本月数</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="flBnlj" type="fl" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>费率_本年累计</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yjfeBys" type="bqynfe" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>应缴费额_本月数</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yjfebnlj" type="jmfe" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>应缴费额本年累计</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qcwjfeDjwfBys" type="yjfe1" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>期初未缴费额（多缴为负）_本月数</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qcwjfeDjwfBnlj" type="bqybtfe" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>期初未缴费额（多缴为负）_本年累计</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bqyjfeBys" type="ewbhxh">
+				<xs:annotation>
+					<xs:documentation>本期已缴费额_本月数</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bqyjfebnlj" type="zspmDm" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>本期已缴费额本年累计</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qzbqyjfeBys" type="jsyj" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>其中本期预缴费额_本月数</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bqyjfebnlj1" type="fl" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>本期预缴费额本年累计1</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qzbqjnsqfeBys" type="bqynfe" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>其中本期缴纳上期费额_本月数</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bqjnsqfebnlj" type="jmfe" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>本期缴纳上期费额本年累计</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qzbqjnqfeBys" type="yjfe1" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>其中本期缴纳欠费额_本月数</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bqjnqfebnlj" type="bqybtfe" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>本期缴纳欠费额本年累计</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qmwjfebys" type="ewbhxh">
+				<xs:annotation>
+					<xs:documentation>期末未缴费额本月数</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qmwjfedjwfbnlj" type="zspmDm" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>期末未缴费额（多缴为负）本年累计</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qzqjfe" type="jsyj" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>其中欠缴费额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bqybtfe" type="fl" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>本期应补退费额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bqjcybjfeBys" type="bqynfe" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>本期检查已补缴费额本月数</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bqjcybjfe" type="bqynfe" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>费额缴纳本期检查已补缴费额本年累计</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bsrymc" type="jmfe" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>办税人员名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="cwfzr" type="yjfe1" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>财务负责人</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="fddbrqz" type="bqybtfe" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>法定代表人签字</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jnywrlxdh" type="ewbhxh">
+				<xs:annotation>
+					<xs:documentation>缴纳义务人联系电话</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="dlrmc" type="zspmDm" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>代理人名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="dljbr" type="jsyj" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>代理经办人</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="dlrlxdh" type="fl" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>代理人联系电话</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jsr" type="zspmDm" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>接收人</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sdrq" type="jsyj" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>收到日期</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zgswjg" type="fl" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>主管税务机关</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sfdlsb" type="sfdlsb" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>是否代理申报</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="dlrsfzjzlDm1" type="dlrsfzjzlDm1" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>代理人身份证件种类代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="dlrsfzjhm1" type="dlrsfzjhm1" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>代理人身份证件号码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

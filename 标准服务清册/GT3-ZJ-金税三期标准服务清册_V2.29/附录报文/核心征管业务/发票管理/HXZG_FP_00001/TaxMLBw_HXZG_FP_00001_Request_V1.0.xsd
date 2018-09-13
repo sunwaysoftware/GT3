@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 被2012 () 使用XMLSpy v编辑的 (http://www.altova.com) by -->
+<!-- edited with XMLSpy v2005 rel. 3 U (http://www.altova.com) by  () -->
+<!-- 编辑使用 XMLSpy v2006 U (http://www.altova.com) 由 any (any) -->
+<!-- 编辑使用 XMLSpy v2006 U (http://www.altova.com) 由 any (any) -->
+<!-- 编辑使用 XMLSpy v2006 U (http://www.altova.com) 由 any (any) -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxDoc.xsd"/>
+	<xs:include schemaLocation="TaxMLPublic.xsd"/>
+	<xs:include schemaLocation="TaxMLPublicFPType.xsd"/>
+	<xs:complexType name="HXZGFP00001Request">
+		<xs:annotation>
+			<xs:documentation>保存票种核定申请信息</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="pzhdsqsp" type="FPPzhdsqspVO" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>票种核定申请审批主表</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="pzhdsqspMxGrid" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>票种核定申请审批明细</xs:documentation>
+						</xs:annotation>
+						<xs:complexType>
+							<xs:sequence maxOccurs="unbounded">
+								<xs:element name="pzhdsqspMxGridlb" type="FPPzhdsqspMxJcVO"/>
+							</xs:sequence>
+						</xs:complexType>
+					</xs:element>
+					<xs:element name="pzhdsqspGprGrid" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>票种核定申请审批购票人</xs:documentation>
+						</xs:annotation>
+						<xs:complexType>
+							<xs:sequence maxOccurs="unbounded">
+								<xs:element name="pzhdsqspGprGridlb" type="FPPzhdsqspGprVO"/>
+							</xs:sequence>
+						</xs:complexType>
+					</xs:element>
+					<xs:element name="deletePzhdsqspgprVOList" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>票种核定申请审批购票人删除</xs:documentation>
+						</xs:annotation>
+						<xs:complexType>
+							<xs:sequence maxOccurs="unbounded">
+								<xs:element name="deletePzhdsqspgprVOListlb" type="FPPzhdsqspGprVO"/>
+							</xs:sequence>
+						</xs:complexType>
+					</xs:element>
+					<xs:element name="deletePzhdsqmxGridVOList" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>票种核定申请删除</xs:documentation>
+						</xs:annotation>
+						<xs:complexType>
+							<xs:sequence maxOccurs="unbounded">
+								<xs:element name="deletePzhdsqmxGridVOListlb" type="FPPzhdsqspMxJcVO"/>
+							</xs:sequence>
+						</xs:complexType>
+					</xs:element>
+					<xs:element name="isQdFpdblc" type="xs:boolean">
+						<xs:annotation>
+							<xs:documentation>是否启动发票担保流程</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="isQdZgkpxelc" type="xs:boolean">
+						<xs:annotation>
+							<xs:documentation>是否发起最高开票限额流程</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="sfts" type="xs:boolean">
+						<xs:annotation>
+							<xs:documentation>是否推送</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="hjbz" type="xs:string">
+						<xs:annotation>
+							<xs:documentation>环节标志</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="sfwbnsr" type="xs:boolean">
+						<xs:annotation>
+							<xs:documentation>是否是外埠报验纳税人</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+</xs:schema>

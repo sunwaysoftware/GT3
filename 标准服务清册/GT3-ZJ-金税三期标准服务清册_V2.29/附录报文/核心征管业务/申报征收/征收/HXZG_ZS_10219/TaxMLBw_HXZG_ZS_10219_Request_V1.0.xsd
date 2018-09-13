@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2013 (http://www.altova.com) by  () -->
+<!-- 被2011 rel. 2 sp1 (pjf) 使用XMLSpy vcss编辑的 (http://www.altova.com) by -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:include schemaLocation="TaxMLPublicZSType.xsd"/>
+	<xs:complexType name="HXZGZS10219Request">
+		<xs:annotation>
+			<xs:documentation>个人独资企业和合伙企业投资者生产经营所得企业代为缴税</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="zjgsfxydjxh" type="djxh">
+						<xs:annotation>
+							<xs:documentation>总机构三方协议登记序号</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="zsxmDm" type="zsxmDm">
+						<xs:annotation>
+							<xs:documentation>征收项目代码</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="skssqq" type="skssqq">
+						<xs:annotation>
+							<xs:documentation>税款所属期起</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="skssqz" type="skssqz">
+						<xs:annotation>
+							<xs:documentation>税款所属期止</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="zfjgsbxxGrid">
+						<xs:annotation>
+							<xs:documentation>总分机构申报信息Grid</xs:documentation>
+						</xs:annotation>
+						<xs:complexType>
+							<xs:sequence maxOccurs="unbounded">
+								<xs:element name="zfjgsbxxGridlb">
+									<xs:annotation>
+										<xs:documentation>总分机构申报信息列表</xs:documentation>
+									</xs:annotation>
+									<xs:complexType>
+										<xs:sequence>
+											<xs:element name="djxh" type="djxh">
+												<xs:annotation>
+													<xs:documentation>登记序号</xs:documentation>
+												</xs:annotation>
+											</xs:element>
+											<xs:element name="sfxyh" type="sfxyh">
+												<xs:annotation>
+													<xs:documentation>三方协议号</xs:documentation>
+												</xs:annotation>
+											</xs:element>
+											<xs:element name="yzpzxhGrid">
+												<xs:annotation>
+													<xs:documentation>应征凭证序号集合</xs:documentation>
+												</xs:annotation>
+												<xs:complexType>
+													<xs:sequence maxOccurs="unbounded">
+														<xs:element name="yzpzxhGridlb">
+															<xs:annotation>
+																<xs:documentation>应征凭证序号列表</xs:documentation>
+															</xs:annotation>
+															<xs:complexType>
+																<xs:sequence>
+																	<xs:element name="yzpzxh" type="yzpzxh">
+																		<xs:annotation>
+																			<xs:documentation>应征凭证序号</xs:documentation>
+																		</xs:annotation>
+																	</xs:element>
+																	<xs:element name="yzpzmxxhGrid" minOccurs="0">
+																		<xs:annotation>
+																			<xs:documentation>应征凭证明细序号集合</xs:documentation>
+																		</xs:annotation>
+																		<xs:complexType>
+																			<xs:sequence maxOccurs="unbounded">
+																				<xs:element name="yzpzmxxhGridlb">
+																					<xs:annotation>
+																						<xs:documentation>应征凭证序号列表</xs:documentation>
+																					</xs:annotation>
+																					<xs:complexType>
+																						<xs:sequence>
+																							<xs:element name="yzpzmxxh" type="yzpzmxxh">
+																								<xs:annotation>
+																									<xs:documentation>应征凭证明细序号</xs:documentation>
+																								</xs:annotation>
+																							</xs:element>
+																							<xs:element name="zsuuid" type="zsuuid">
+																								<xs:annotation>
+																									<xs:documentation>征收UUID</xs:documentation>
+																								</xs:annotation>
+																							</xs:element>
+																							<xs:element name="kkje" type="ybtse" minOccurs="0">
+																								<xs:annotation>
+																									<xs:documentation>主税扣款金额</xs:documentation>
+																								</xs:annotation>
+																							</xs:element>
+																							<xs:element name="znjkpje" type="znj" minOccurs="0">
+																								<xs:annotation>
+																									<xs:documentation>滞纳金开票金额</xs:documentation>
+																								</xs:annotation>
+																							</xs:element>
+																						</xs:sequence>
+																					</xs:complexType>
+																				</xs:element>
+																			</xs:sequence>
+																		</xs:complexType>
+																	</xs:element>
+																</xs:sequence>
+															</xs:complexType>
+														</xs:element>
+													</xs:sequence>
+												</xs:complexType>
+											</xs:element>
+										</xs:sequence>
+									</xs:complexType>
+								</xs:element>
+							</xs:sequence>
+						</xs:complexType>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+</xs:schema>

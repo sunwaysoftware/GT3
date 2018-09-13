@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2010 rel. 3 (http://www.altova.com) by MESMERiZE (MSM) -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:complexType name="sbgrsdsfqdybacxresponse">
+		<xs:annotation>
+			<xs:documentation>个人所得税分期递延备案情况查询</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence maxOccurs="unbounded">
+					<xs:element name="baqkxx" type="baqkxx">
+						<xs:annotation>
+							<xs:documentation>备案情况信息</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="baqkxx">
+		<xs:annotation>
+			<xs:documentation>备案情况信息</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="DJXH" type="djxh">
+				<xs:annotation>
+					<xs:documentation>纳税人登记序号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="BABH" type="babh">
+				<xs:annotation>
+					<xs:documentation>备案编号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="BARQ" type="barq">
+				<xs:annotation>
+					<xs:documentation>备案日期</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="BARS" type="bars">
+				<xs:annotation>
+					<xs:documentation>备案人数</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bajg" type="swjgDm">
+				<xs:annotation>
+					<xs:documentation>备案机关</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="JYWYSBH" type="jywysbh">
+				<xs:annotation>
+					<xs:documentation>交易唯一识别号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="SWSX_DM" type="swsxDm">
+				<xs:annotation>
+					<xs:documentation>备案税务事项</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

@@ -1,0 +1,354 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 被2012 () 使用XMLSpy v编辑的 (http://www.altova.com) by -->
+<!-- edited with XMLSpy v2013 (http://www.altova.com) by  () -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:complexType name="A106000Ywbd">
+		<xs:annotation>
+			<xs:documentation>企业所得税弥补亏损明细表(A106000)业务报文</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="qysdsmbksmxsbbForm" type="qysdsmbksmxsbbVO" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>企业所得税弥补亏损明细表</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="qysdsmbksmxsbbVO">
+		<xs:annotation>
+			<xs:documentation>企业所得税弥补亏损明细表</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="nd1" type="sbnd">
+				<xs:annotation>
+					<xs:documentation>申报年度之前第一年（年度）</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ylehkse1" type="je">
+				<xs:annotation>
+					<xs:documentation>申报年度之前一年年度的盈利额或亏损额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="hbflqyzrkmbkse1" type="je">
+				<xs:annotation>
+					<xs:documentation>申报年度之前一年年度合并分立企业转入可弥补亏损额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="dnkmbdsde1" type="je">
+				<xs:annotation>
+					<xs:documentation>申报年度之前一年年度的当年可弥补的所得额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yqndksmbeqsnd" type="je">
+				<xs:annotation>
+					<xs:documentation>以前年度亏损弥补额前四年度</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yqndksmbeqsannd1" type="je">
+				<xs:annotation>
+					<xs:documentation>以前年度亏损弥补额前三年度</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yqndksmbeqernd1" type="je">
+				<xs:annotation>
+					<xs:documentation>以前年度亏损弥补额前二年度</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yqndksmbeqyind1" type="je">
+				<xs:annotation>
+					<xs:documentation>以前年度亏损弥补额前一年度</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jwyqndksmbeqsnd" type="je">
+				<xs:annotation>
+					<xs:documentation>境外以前年度亏损弥补额前四年度</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jwyqndksmbeqsannd1" type="je">
+				<xs:annotation>
+					<xs:documentation>境外以前年度亏损弥补额前三年度</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jwyqndksmbeqernd1" type="je">
+				<xs:annotation>
+					<xs:documentation>以前年度亏损弥补额前二年度</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jwyqndksmbeqyind1" type="je">
+				<xs:annotation>
+					<xs:documentation>境外以前年度亏损弥补额前一年度</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="hj1" type="je">
+				<xs:annotation>
+					<xs:documentation>以前年度亏损弥补额合计</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bndsjmbdyqndkse1" type="je">
+				<xs:annotation>
+					<xs:documentation>申报年度之前五年年度实际弥补的以前年度亏损额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bnjwsdmbyqndkse1" type="je">
+				<xs:annotation>
+					<xs:documentation>本年度境外所得实际弥补的前五年度亏损额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="nd2" type="sbnd">
+				<xs:annotation>
+					<xs:documentation>申报年度之前第二年（年度）</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ylehkse2" type="je">
+				<xs:annotation>
+					<xs:documentation>申报年度之前二年年度的盈利额或亏损额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="hbflqyzrkmbkse2" type="je">
+				<xs:annotation>
+					<xs:documentation>申报年度之前二年年度合并分立企业转入可弥补亏损额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="dnkmbdsde2" type="je">
+				<xs:annotation>
+					<xs:documentation>申报年度之前二年年度的当年可弥补的所得额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yqndksmbeqsannd2" type="je">
+				<xs:annotation>
+					<xs:documentation>以前年度亏损弥补额前三年度2</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yqndksmbeqernd2" type="je">
+				<xs:annotation>
+					<xs:documentation>以前年度亏损弥补额前二年度2</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yqndksmbeqyind2" type="je">
+				<xs:annotation>
+					<xs:documentation>以前年度亏损弥补额前一年度2</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jwyqndksmbeqsannd2" type="je">
+				<xs:annotation>
+					<xs:documentation>境外以前年度亏损弥补额前三年度2</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jwyqndksmbeqernd2" type="je">
+				<xs:annotation>
+					<xs:documentation>境外以前年度亏损弥补额前二年度2</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jwyqndksmbeqyind2" type="je">
+				<xs:annotation>
+					<xs:documentation>境外以前年度亏损弥补额前一年度2</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="hj2" type="je">
+				<xs:annotation>
+					<xs:documentation>申报年度之前二年年度的以前年度亏损弥补额合计</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bndsjmbdyqndkse2" type="je">
+				<xs:annotation>
+					<xs:documentation>申报年度之前年四年度实际弥补的以前年度亏损额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bnjwsdmbyqndkse2" type="je">
+				<xs:annotation>
+					<xs:documentation>本年度境外所得实际弥补的前四年度亏损额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="kjzyhndmbdkse2" type="je">
+				<xs:annotation>
+					<xs:documentation>申报年度之前二年年度可结转以后年度弥补的亏损额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="nd3" type="sbnd">
+				<xs:annotation>
+					<xs:documentation>申报年度之前第三年（年度）</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ylehkse3" type="je">
+				<xs:annotation>
+					<xs:documentation>申报年度之前三年年度的盈利额或亏损额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="hbflqyzrkmbkse3" type="je">
+				<xs:annotation>
+					<xs:documentation>申报年度之前三年年度合并分立企业转入可弥补亏损额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="dnkmbdsde3" type="je">
+				<xs:annotation>
+					<xs:documentation>申报年度之前三年年度的当年可弥补的所得额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yqndksmbeqernd3" type="je">
+				<xs:annotation>
+					<xs:documentation>以前年度亏损弥补额前二年度3</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yqndksmbeqyind3" type="je">
+				<xs:annotation>
+					<xs:documentation>以前年度亏损弥补额前一年度3</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jwyqndksmbeqernd3" type="je">
+				<xs:annotation>
+					<xs:documentation>境外以前年度亏损弥补额前二年度3</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jwyqndksmbeqyind3" type="je">
+				<xs:annotation>
+					<xs:documentation>境外以前年度亏损弥补额前一年度3</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="hj3" type="je">
+				<xs:annotation>
+					<xs:documentation>申报年度之前三年年度的以前年度亏损弥补额合计</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bndsjmbdyqndkse3" type="je">
+				<xs:annotation>
+					<xs:documentation>申报年度之前三年年度实际弥补的以前年度亏损额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bnjwsdmbyqndkse3" type="je">
+				<xs:annotation>
+					<xs:documentation>本年度境外所得实际弥补的前三年度亏损额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="kjzyhndmbdkse3" type="je">
+				<xs:annotation>
+					<xs:documentation>申报年度之前三年年度可结转以后年度弥补的亏损额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="nd4" type="sbnd">
+				<xs:annotation>
+					<xs:documentation>申报年度之前第四年（年度）</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ylehkse4" type="je">
+				<xs:annotation>
+					<xs:documentation>申报年度之前四年年度的盈利额或亏损额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="hbflqyzrkmbkse4" type="je">
+				<xs:annotation>
+					<xs:documentation>申报年度之前四年年度的合并分立企业转入可弥补亏损额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="dnkmbdsde4" type="je">
+				<xs:annotation>
+					<xs:documentation>申报年度之前四年年度当年可弥补的所得额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yqndksmbeqyind4" type="je">
+				<xs:annotation>
+					<xs:documentation>以前年度亏损弥补额前一年度4</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jwyqndksmbeqyind4" type="je">
+				<xs:annotation>
+					<xs:documentation>境外以前年度亏损弥补额前一年度4</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="hj4" type="je">
+				<xs:annotation>
+					<xs:documentation>申报年度之前四年年度的以前年度亏损弥补额合计</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bndsjmbdyqndkse4" type="je">
+				<xs:annotation>
+					<xs:documentation>申报年度之前二年年度实际弥补的以前年度亏损额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bnjwsdmbyqndkse4" type="je">
+				<xs:annotation>
+					<xs:documentation>本年度境外所得实际弥补的前二年度亏损额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="kjzyhndmbdkse4" type="je">
+				<xs:annotation>
+					<xs:documentation>申报年度之前四年年度可结转以后年度弥补的亏损额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="nd5" type="sbnd">
+				<xs:annotation>
+					<xs:documentation>申报年度之前第五年（年度）</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ylehkse5" type="je">
+				<xs:annotation>
+					<xs:documentation>申报年度之前五年年度的盈利额或亏损额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="hbflqyzrkmbkse5" type="je">
+				<xs:annotation>
+					<xs:documentation>申报年度之前五年年度的合并分立企业转入可弥补亏损额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="dnkmbdsde5" type="je">
+				<xs:annotation>
+					<xs:documentation>申报年度之前五年年度当年可弥补的所得额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bndsjmbdyqndkse5" type="je">
+				<xs:annotation>
+					<xs:documentation>申报年度之前一年年度实际弥补的以前年度亏损额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bnjwsdmbyqndkse5" type="je">
+				<xs:annotation>
+					<xs:documentation>本年度境外所得实际弥补的前一年度亏损额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="kjzyhndmbdkse5" type="je">
+				<xs:annotation>
+					<xs:documentation>可结转以后年度弥补的亏损额5 </xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="nd6" type="nd">
+				<xs:annotation>
+					<xs:documentation>本年</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ylehkse6" type="je">
+				<xs:annotation>
+					<xs:documentation>申报年度当年盈利额或亏损额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="hbflqyzrkmbkse6" type="je">
+				<xs:annotation>
+					<xs:documentation>申报年度当年合并分立企业转入可弥补亏损额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="dnkmbdsde6" type="je">
+				<xs:annotation>
+					<xs:documentation>申报年度当年可弥补的所得额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bndsjmbdyqndkse6" type="je">
+				<xs:annotation>
+					<xs:documentation>申报年度实际弥补的以前年度亏损额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="kjzyhndmbdkse6" type="je">
+				<xs:annotation>
+					<xs:documentation>申报年度可结转以后年度弥补的亏损额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="kjzyhndmbdksehj" type="je">
+				<xs:annotation>
+					<xs:documentation>申报年度可结转以后年度弥补的亏损额合计</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

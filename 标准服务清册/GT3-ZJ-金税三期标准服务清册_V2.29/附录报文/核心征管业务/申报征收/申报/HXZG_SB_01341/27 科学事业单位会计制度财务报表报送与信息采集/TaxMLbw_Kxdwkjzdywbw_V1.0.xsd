@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 被2012 () 使用XMLSpy v编辑的 (http://www.altova.com) by -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:include schemaLocation="TaxMLBd_0610653_V1.0.xsd"/>
+	<xs:include schemaLocation="TaxMLBd_0610654_V1.0.xsd"/>
+	<xs:include schemaLocation="TaxMLBd_0610655_V1.0.xsd"/>
+	<xs:include schemaLocation="TaxMLBd_0610656_V1.0.xsd"/>
+	<xs:include schemaLocation="TaxMLPublicSBType.xsd"/>
+	<xs:complexType name="kxsydwkjzdcwbbywbw">
+		<xs:annotation>
+			<xs:documentation>科学事业单位会计制度财务报表报送与信息采集</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="zcfzb" type="kxsydwkjzdzcfzbVO" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>资产负债表</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="srzcbyb" type="kxsydwkjzdcwbbsrzcbybVO" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>收入支出表月报</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="srzcbnb" type="kxsydwkjzdsrzcbnbVO"/>
+					<xs:element name="czbzsrzc" type="kxsydwkjzdczbzsrzcVO" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>财政补助收入支出</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="ndcwkjbgshbgVO" type="NdcwkjbgshbgVO">
+						<xs:annotation>
+							<xs:documentation>年度财务会计报告审核报告</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="yfzcfzzhzbVO" type="YfzcfzzhzbVO">
+						<xs:annotation>
+							<xs:documentation>“研发支出”辅助账汇总表VO</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="kxsydwkjzdfzVO" type="KxsydwkjzdfzVO">
+						<xs:annotation>
+							<xs:documentation>科学事业单位会计制度附注VO</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+</xs:schema>

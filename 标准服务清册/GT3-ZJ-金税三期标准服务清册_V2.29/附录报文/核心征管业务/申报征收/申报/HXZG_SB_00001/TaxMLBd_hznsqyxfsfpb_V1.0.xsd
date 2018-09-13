@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 被2011 rel. 2 sp1 (TeaM DJiNN) 使用XMLSpy vTeaM DJiNN编辑的 (http://www.altova.com) by -->
+<!-- edited with XMLSpy v2010 rel. 3 (http://www.altova.com) by MESMERiZE (MSM) -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:include schemaLocation="TaxMLPublicType.xsd"/>
+	<xs:complexType name="hznsqyxfsfpbywbw">
+		<xs:annotation>
+			<xs:documentation>《汇总纳税企业消费税分配表》业务报文</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="hznsqyxfsfpb" type="hznsqyxfsfpb">
+						<xs:annotation>
+							<xs:documentation>《汇总纳税企业消费税分配表》</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="hznsqyxfsfpb">
+		<xs:annotation>
+			<xs:documentation>《汇总纳税企业消费税分配表》</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="zjgForm" type="zjgForm">
+				<xs:annotation>
+					<xs:documentation>总机构</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="fzjgGrid">
+				<xs:annotation>
+					<xs:documentation>分支机构</xs:documentation>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:sequence minOccurs="0" maxOccurs="unbounded">
+						<xs:element name="fzjgGridlb" type="fzjgGridlbVO"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="zjgForm">
+		<xs:annotation>
+			<xs:documentation>总机构</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="khyh" type="khyh">
+				<xs:annotation>
+					<xs:documentation>开户银行</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yhzh" type="yhzh">
+				<xs:annotation>
+					<xs:documentation>银行账号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bsrymc" type="mc">
+				<xs:annotation>
+					<xs:documentation>办税人名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="dhhm" type="dhhm">
+				<xs:annotation>
+					<xs:documentation>电话号码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zfjgxsehj" type="je">
+				<xs:annotation>
+					<xs:documentation>总分机构销售额合计</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zjgxssr" type="je">
+				<xs:annotation>
+					<xs:documentation>总机构销售收入</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zjgfpbl" type="je">
+				<xs:annotation>
+					<xs:documentation>总机构分配比例</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zjgfpse" type="je">
+				<xs:annotation>
+					<xs:documentation>总机构分配税额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bsdw" type="mc">
+				<xs:annotation>
+					<xs:documentation>办税单位</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zgswjgshyj" type="mc">
+				<xs:annotation>
+					<xs:documentation>主管税务机关审核意见</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="slry" type="mc">
+				<xs:annotation>
+					<xs:documentation>受理人员</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zgswjgmc" type="mc">
+				<xs:annotation>
+					<xs:documentation>主管税务机关</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="slrq" type="slrq">
+				<xs:annotation>
+					<xs:documentation>受理日期</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zjgnsrmc" type="nsrmc">
+				<xs:annotation>
+					<xs:documentation>总机构纳税人名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="fddbrxm" type="fddbr">
+				<xs:annotation>
+					<xs:documentation>法定代表人姓名</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yydz" type="yydz">
+				<xs:annotation>
+					<xs:documentation>营业地址</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="lxdh" type="lxdh">
+				<xs:annotation>
+					<xs:documentation>联系电话</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zjgnsrsbh" type="nsrsbh">
+				<xs:annotation>
+					<xs:documentation>总机构纳税人识别号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ybtse" type="ybtse">
+				<xs:annotation>
+					<xs:documentation>应补退税额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="fzjgGrid">
+		<xs:annotation>
+			<xs:documentation>分支机构</xs:documentation>
+		</xs:annotation>
+		<xs:sequence minOccurs="0" maxOccurs="unbounded">
+			<xs:element name="fzjgGridlb" type="fzjgGridlbVO">
+				<xs:annotation>
+					<xs:documentation>分支机构</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="fzjgGridlbVO">
+		<xs:annotation>
+			<xs:documentation>分支机构</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="ewbhxh" type="ewbhxh">
+				<xs:annotation>
+					<xs:documentation>二维表行序号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bhznsqynsrsbh" type="nsrsbh">
+				<xs:annotation>
+					<xs:documentation>被汇总纳税企业纳税人识别号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bhznsqynsrmc" type="nsrmc">
+				<xs:annotation>
+					<xs:documentation>被汇总纳税企业纳税人名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bhzrdjxh" type="djxh">
+				<xs:annotation>
+					<xs:documentation>被汇总纳税企业登记序号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="fzjgxssr" type="je">
+				<xs:annotation>
+					<xs:documentation>分支机构销售收入</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="fzjgfpbl" type="sl1">
+				<xs:annotation>
+					<xs:documentation>分支机构分配比例</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="fzjgfpse" type="je">
+				<xs:annotation>
+					<xs:documentation>分支机构分配税额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

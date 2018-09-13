@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2011 (http://www.altova.com) by www.hbnu.com (www.hbnu.com) -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:include schemaLocation="TaxMLPublic.xsd"/>
+	<xs:complexType name="glgxbywbw">
+		<xs:annotation>
+			<xs:documentation>《关联关系表》业务报文</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="qyndglywwlbg2016_G101000" type="qyndglywwlbg2016_G101000">
+						<xs:annotation>
+							<xs:documentation>《关联关系表》</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="qyndglywwlbg2016_G101000">
+		<xs:annotation>
+			<xs:documentation>《关联关系表》</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="glgxbGrid" type="glgxbGrid">
+				<xs:annotation>
+					<xs:documentation>关联关系表</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="glgxbGrid">
+		<xs:annotation>
+			<xs:documentation>关联关系表</xs:documentation>
+		</xs:annotation>
+		<xs:sequence maxOccurs="unbounded">
+			<xs:element name="glgxbGridlbVO" type="glgxbGridlbVO">
+				<xs:annotation>
+					<xs:documentation>关联关系表</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="glgxbGridlbVO">
+		<xs:annotation>
+			<xs:documentation>关联关系表</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="glfmc" type="glfmc">
+				<xs:annotation>
+					<xs:documentation>关联方名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="gdglflxDm" type="gdglflxDm">
+				<xs:annotation>
+					<xs:documentation>关联方类型，取值为代码表DM_SB_GDGLFLX</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="gjhdqszDm" type="gjhdqszDm">
+				<xs:annotation>
+					<xs:documentation>国家（地区），取值为代码表DM_GY_GJHDQ</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sfzjlxDm" type="sfzjlxDm">
+				<xs:annotation>
+					<xs:documentation>证件种类，取值为代码表DM_GY_SFZJLX</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="nsrsbh" type="nsrsbh">
+				<xs:annotation>
+					<xs:documentation>纳税人识别号或身份证件号码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="glgxlxDm" type="glgxlxDm">
+				<xs:annotation>
+					<xs:documentation>关联关系类型，取值为代码表DM_SB_GLGXLX</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qsrq" type="qsrq">
+				<xs:annotation>
+					<xs:documentation>起始日期</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jzrq" type="jzrq">
+				<xs:annotation>
+					<xs:documentation>截止日期</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 被2012 () 使用XMLSpy v编辑的 (http://www.altova.com) by -->
+<!-- edited with XMLSpy v2013 (http://www.altova.com) by  () -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:include schemaLocation="TaxMLPublicZMType.xsd"/>
+	<xs:complexType name="fjmqyhznsqysdssqb">
+		<xs:annotation>
+			<xs:documentation>保存非居民企业汇总纳税企业所得税申请表信息</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="fjmhzsbsdsForm" type="ZMFjmhzsbsdsForm">
+				<xs:annotation>
+					<xs:documentation>非居民企业汇总申报企业所得税证明Form</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="fjmhzsbsdsGrid" type="FjmhzsbsdsGrid">
+				<xs:annotation>
+					<xs:documentation>非居民企业汇总申报企业所得税证明明细表单</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="FjmhzsbsdsGrid">
+		<xs:annotation>
+			<xs:documentation>汇总纳税企业认定申请明细信息表-被汇总纳税人信息列表</xs:documentation>
+		</xs:annotation>
+		<xs:sequence minOccurs="0" maxOccurs="unbounded">
+			<xs:element name="fjmhzsbsdsGridlb" type="ZMFjmhzsbsdsForm">
+				<xs:annotation>
+					<xs:documentation>汇总纳税企业认定申请明细信息表-被汇总纳税人信息Vo</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="ZMFjmhzsbsdsForm">
+		<xs:annotation>
+			<xs:documentation>非居民企业汇总申报企业所得税证明</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="nsrsbh" type="nsrsbh">
+				<xs:annotation>
+					<xs:documentation>nsrsbh</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="nsrmc" type="nsrmc">
+				<xs:annotation>
+					<xs:documentation>纳税人名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zmzbuuid" type="zmzbuuid">
+				<xs:annotation>
+					<xs:documentation>证明主表UUID</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ywpzuuid" type="ywpzuuid">
+				<xs:annotation>
+					<xs:documentation>业务凭证uuid</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="hznsspwh" type="hznsspwh">
+				<xs:annotation>
+					<xs:documentation>汇总纳税审批文号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sqrxm" type="sqrxm">
+				<xs:annotation>
+					<xs:documentation>申请人姓名</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sqrq" type="sqrq">
+				<xs:annotation>
+					<xs:documentation>申请日期</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sbrq1" type="sbrq1" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>申报日期</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sbnd" type="sbnd" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>申报年度</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bhjnsrzgswjgmc" type="bhjnsrzgswjgmc"/>
+			<xs:element name="lrze" type="lrze" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>利润（亏损）总额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="hjjgszdzgswjgDm" type="hjjgszdzgswjgDm" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>汇缴机构所在地主管税务机关代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="wszzrq" type="wszzrq" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>文书制作日期</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zgswjgdz" type="zgswjgdz" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>主管税务机关地址</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zgswjgyzbm" type="zgswjgyzbm" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>主管税务机关邮政编码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="lxrDm" type="lxrDm" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>联系人代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="lxr" type="lxr" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>联系人</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="lxdh" type="lxdh" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>联系电话</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="cz" type="cz" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>传真</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

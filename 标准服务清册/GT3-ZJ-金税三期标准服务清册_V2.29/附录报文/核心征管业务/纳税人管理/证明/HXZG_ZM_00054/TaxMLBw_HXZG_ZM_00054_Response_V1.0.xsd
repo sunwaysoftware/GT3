@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2013 (http://www.altova.com) by  () -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+        <xs:include schemaLocation="TaxMLPublicZMType.xsd"/>
+	<xs:complexType name="HXZGZM00054Response">
+		<xs:annotation>
+			<xs:documentation>根据登记序号、税务机关代码，查询此纳税人开具到税务机关的为报验的外出经营证明单信息</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="wcjyzmdxxGrid">
+						<xs:annotation>
+							<xs:documentation>经营证明单信息</xs:documentation>
+						</xs:annotation>
+						<xs:complexType>
+							<xs:sequence minOccurs="0" maxOccurs="unbounded">
+								<xs:element name="wcjyzmdxxGridlb" type="ZMWcjyhdssglzmxxVO">
+									<xs:annotation>
+										<xs:documentation>经营证明单信息</xs:documentation>
+									</xs:annotation>
+								</xs:element>
+							</xs:sequence>
+						</xs:complexType>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+</xs:schema>

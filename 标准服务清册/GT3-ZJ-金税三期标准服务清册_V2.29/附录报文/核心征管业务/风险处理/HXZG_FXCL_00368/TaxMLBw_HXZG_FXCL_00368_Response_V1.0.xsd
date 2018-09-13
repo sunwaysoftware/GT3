@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 被2012 () 使用XMLSpy v编辑的 (http://www.altova.com) by -->
+<!-- edited with XMLSpy v2013 (http://www.altova.com) by  () -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:include schemaLocation="TaxMLPublicFZType.xsd"/>
+	<xs:complexType name="HXZGFXCL00368Response">
+		<xs:annotation>
+			<xs:documentation>根据条件（商品、货物或者其他财产UUID、案件信息UUID、决定书UUID、电子表证单书种类代码）查询返还商品、货物或者其他财产清单信息返回报文</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="FhsphwhzqtccqdxxForm" type="FhsphwhzqtccqdxxForm">
+						<xs:annotation>
+							<xs:documentation>返还商品、货物或者其他财产清单信息</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="FhsphwhzqtccqdxxForm">
+		<xs:annotation>
+			<xs:documentation>返还商品、货物或者其他财产清单信息</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="FhsphwhzqtccqdForm" type="FZSphwhzqtccVO">
+				<xs:annotation>
+					<xs:documentation>返还商品、货物或者其他财产清单</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="FhsphwhzqtccqdGrid">
+				<xs:annotation>
+					<xs:documentation>返还商品、货物或者其他财产清单详细</xs:documentation>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="FhsphwhzqtccqdGridlb" type="FZSphwhzqtcczbVO" maxOccurs="unbounded">
+							<xs:annotation>
+								<xs:documentation>返还商品、货物或者其他财产清单列表</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

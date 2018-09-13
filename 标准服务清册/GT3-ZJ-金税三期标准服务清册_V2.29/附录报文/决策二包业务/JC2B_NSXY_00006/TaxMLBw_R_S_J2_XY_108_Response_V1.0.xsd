@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 被2012 () 使用XMLSpy v编辑的 (http://www.altova.com) by -->
+<!-- edited with XMLSpy v2013 (http://www.altova.com) by  () -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:complexType name="RSJ2XY108Response">
+		<xs:annotation>
+			<xs:documentation>复评结果查询返回报文</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="pjfs" type="xs:decimal" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>纳税信用评价得分</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="pjjb" type="pjjb" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>纳税信用评价级别</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="pjnd" type="nd" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>评价年度</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="djxh" type="djxh" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>登记序号</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="nsrsbh" type="nsrsbh" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>纳税人识别号</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="nsrmc" type="nsrmc" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>纳税人名称</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="zblist" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>指标数组</xs:documentation>
+						</xs:annotation>
+						<xs:complexType>
+							<xs:sequence maxOccurs="500">
+								<xs:element name="zb" minOccurs="0">
+									<xs:complexType>
+										<xs:sequence>
+											<xs:element name="zbmc" type="zbmc">
+												<xs:annotation>
+													<xs:documentation>指标名称</xs:documentation>
+												</xs:annotation>
+											</xs:element>
+											<xs:element name="zbdm" type="zbdm">
+												<xs:annotation>
+													<xs:documentation>指标代码</xs:documentation>
+												</xs:annotation>
+											</xs:element>
+											<xs:element name="zbpjfs" type="xs:double">
+												<xs:annotation>
+													<xs:documentation>指标得分</xs:documentation>
+												</xs:annotation>
+											</xs:element>
+											<xs:element name="Yzbpjfs" type="xs:double"/>
+										</xs:sequence>
+									</xs:complexType>
+								</xs:element>
+							</xs:sequence>
+						</xs:complexType>
+					</xs:element>
+					<xs:element name="pjsj">
+						<xs:annotation>
+							<xs:documentation>评价时间</xs:documentation>
+						</xs:annotation>
+						<xs:simpleType>
+							<xs:restriction base="xs:string">
+								<xs:length value="30"/>
+							</xs:restriction>
+						</xs:simpleType>
+					</xs:element>
+					<xs:element name="Ypjfs" type="xs:double">
+						<xs:annotation>
+							<xs:documentation>原评价得分</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="Ypjjb">
+						<xs:annotation>
+							<xs:documentation>原评价级别</xs:documentation>
+						</xs:annotation>
+						<xs:simpleType>
+							<xs:restriction base="xs:string">
+								<xs:length value="1"/>
+							</xs:restriction>
+						</xs:simpleType>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+</xs:schema>

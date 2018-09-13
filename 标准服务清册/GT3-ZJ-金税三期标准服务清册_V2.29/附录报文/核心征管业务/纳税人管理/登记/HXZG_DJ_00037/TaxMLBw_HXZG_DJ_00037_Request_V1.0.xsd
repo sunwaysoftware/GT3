@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:complexType name="HXZGDJ00037Request">
+		<xs:annotation>
+			<xs:documentation>临时税务登记验证信息报文</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="shxydm" type="shxydm">
+						<xs:annotation>
+							<xs:documentation>社会信用代码</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="zzlxDm" type="zzlxDm" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>证照名称</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="zzhm" type="zzhm" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>证照号码</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="fddbrsfzjlxDm" type="fddbrsfzjlxDm">
+						<xs:annotation>
+							<xs:documentation>法定人身份证代码</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="fddbrsfzjhm" type="fddbrsfzjhm">
+						<xs:annotation>
+							<xs:documentation>法定人种类号码</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="zzjgDm" type="zzjgDm" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>组织机构代码</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="nsrmc" type="nsrmc">
+						<xs:annotation>
+							<xs:documentation>纳税人名称</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+</xs:schema>

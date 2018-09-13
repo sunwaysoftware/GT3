@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 被2012 () 使用XMLSpy v编辑的 (http://www.altova.com) by -->
+<!-- edited with XMLSpy v2013 (http://www.altova.com) by  () -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:include schemaLocation="TaxMLPublicType.xsd"/>
+	<xs:include schemaLocation="TaxMLPublicSBType.xsd"/>
+	<xs:complexType name="CxsFcssbVO">
+		<xs:annotation>
+			<xs:documentation>房产税申报表单VO</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="cjjzJmxxGrid">
+				<xs:annotation>
+					<xs:documentation>从价减免信息</xs:documentation>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:sequence maxOccurs="unbounded">
+						<xs:element name="cjjzjmxxGridlb" type="SBCxsFcsCjjzJmxxVO">
+							<xs:annotation>
+								<xs:documentation>从价减免信息</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="czjzJmxxGrid">
+				<xs:annotation>
+					<xs:documentation>从租减免信息</xs:documentation>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:sequence maxOccurs="unbounded">
+						<xs:element name="czjzjmxxGridlb" type="SBCxsFcsCzjzJmxxVO">
+							<xs:annotation>
+								<xs:documentation>从租减免信息</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="cjjzdqsbxxGrid">
+				<xs:annotation>
+					<xs:documentation>从价当期申报信息</xs:documentation>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:sequence maxOccurs="unbounded">
+						<xs:element name="cjjzdqsbxxGridlb" type="SBCxsFcsCjjzDqSbxxVO">
+							<xs:annotation>
+								<xs:documentation>从价当期申报信息</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="czjzdqsbxxGrid">
+				<xs:annotation>
+					<xs:documentation>从租当期申报信息</xs:documentation>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:sequence maxOccurs="unbounded">
+						<xs:element name="czjzdqsbxxGridlb" type="SBCxsFcsCzjzDqSbxxVO">
+							<xs:annotation>
+								<xs:documentation>从租当期申报信息</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="wqcjsbxxGrid">
+				<xs:annotation>
+					<xs:documentation>从价往期申报信息</xs:documentation>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:sequence maxOccurs="unbounded">
+						<xs:element name="wqcjsbxxGridlb" type="SBCxsWqCjsbxxVO">
+							<xs:annotation>
+								<xs:documentation>从价往期申报信息</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="wqczsbxxGrid">
+				<xs:annotation>
+					<xs:documentation>从租往期申报信息</xs:documentation>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:sequence maxOccurs="unbounded">
+						<xs:element name="wqczsbxxGridlb" type="SBCxsWqCzsbxxVO">
+							<xs:annotation>
+								<xs:documentation>从租往期申报信息</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="nsrxxForm" type="SBCxsSbnsrxxVO"/>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 被2011 rel. 2 sp1 (TeaM DJiNN) 使用XMLSpy vTeaM DJiNN编辑的 (http://www.altova.com) by -->
+<!-- edited with XMLSpy v2013 (http://www.altova.com) by  () -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:complexType name="A105090Ywbd">
+		<xs:annotation>
+			<xs:documentation>资产损失税前扣除及纳税调整明细表(A105090)业务报文</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="zcsssqkcjnstzMxbGrid">
+						<xs:annotation>
+							<xs:documentation>资产损失税前扣除及纳税调整明细表</xs:documentation>
+						</xs:annotation>
+						<xs:complexType>
+							<xs:sequence minOccurs="0" maxOccurs="unbounded">
+								<xs:element name="zcsssqkcjnstzMxbGridlb" type="zcsssqkcjnstzmxbGridlbVO"/>
+							</xs:sequence>
+						</xs:complexType>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="zcsssqkcjnstzmxbGridlbVO">
+		<xs:annotation>
+			<xs:documentation>《资产损失税前扣除及纳税调整明细表》</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="ewbhxh" type="ewbhxh" minOccurs="1">
+				<xs:annotation>
+					<xs:documentation>二维表行序号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ewbhmc" type="nsrmc" minOccurs="1">
+				<xs:annotation>
+					<xs:documentation>二维表行名称||二维表行名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ewbhgjz" type="ewbhgjz" minOccurs="1">
+				<xs:annotation>
+					<xs:documentation>二维表行关键字，1行:qdsbzcss|2行:xszrbmzcss|3行:chfszcsh|4行:zcbfql|5行:zcsw|6行:tgjycsscfs|7行:fzjgsb|8行:qtqdsbzcss|9行:zxsbzcss|10行:hbzcss|11行:fhbzcss|12行:tzss|13行:qtzxsbzcss|14行:hj</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zzje" type="je" minOccurs="1">
+				<xs:annotation>
+					<xs:documentation>资产损失的账载金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zcczsr" type="je" minOccurs="1">
+				<xs:annotation>
+					<xs:documentation>资产处置收入</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="pcsr" type="je" minOccurs="1">
+				<xs:annotation>
+					<xs:documentation>赔偿收入</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zcjsjc" type="je" minOccurs="1">
+				<xs:annotation>
+					<xs:documentation>资产计税基础</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ssje" type="je" minOccurs="1">
+				<xs:annotation>
+					<xs:documentation>资产损失的税收金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="nstzje" type="je" minOccurs="1">
+				<xs:annotation>
+					<xs:documentation>纳税调整金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 被2011 rel. 2 sp1 (TeaM DJiNN) 使用XMLSpy vTeaM DJiNN编辑的 (http://www.altova.com) by -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:complexType name="dbyydjapndbgVO">
+		<xs:annotation>
+			<xs:documentation>单边预约定价安排企业执行情况年度报告VO</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="dbyydjapndbgFormVO" type="dbyydjapndbgFormVO">
+				<xs:annotation>
+					<xs:documentation>报送信息</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="dbyydjapndbgFormVO">
+		<xs:annotation>
+			<xs:documentation>报送信息</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="nsrsbh" type="nsrsbh" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>纳税人识别号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="nsrmc" type="nsrmc" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>纳税人名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="dbsbfsDm" type="dbsbfsDm" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>单边双边方式代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yydjapAjbh" type="yydjapAjbh" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>预约定价安排案件编号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yydjaplxDm" type="yydjaplxDm" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>预约定价安排类型代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yydjapSyrqq" type="yydjapSyrqq" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>预约定价安排适用日期起||不带小时分秒</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yydjapSyrqz" type="yydjapSyrqz" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>预约定价安排适用日期止||不带小时分秒</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="smjLjd" type="smjLjd" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>预约定价安排执行情况年度报告或实质性变化报告扫描件链接点</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qyzxbglxDm" type="qyzxbglxDm" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>企业执行报告类型代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ssnd" type="ssnd" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>所属年度</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="szxbhfsrq" type="szxbhfsrq" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>实质性变化发生日期</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qyyj" type="qyyj" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>企业意见</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="swjgsdzxbgrq" type="swjgsdzxbgrq" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>税务机关收到执行报告日期</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="djrDm" type="djrDm" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>登记人代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yydjapAjmc" type="yydjapAjmc" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>预约定价安排案件名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

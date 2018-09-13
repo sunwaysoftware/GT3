@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2013 (http://www.altova.com) by  () -->
+<!-- 被2011 rel. 2 sp1 (TeaM DJiNN) 使用XMLSpy vTeaM DJiNN编辑的 (http://www.altova.com) by -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:include schemaLocation="TaxMLPublicType.xsd"/>
+	<xs:complexType name="qyndgljybywbw">
+		<xs:annotation>
+			<xs:documentation>企业年度关联交易财务状况分析表业务报文</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="qyndgljyb" type="qyndgljybVO">
+						<xs:annotation>
+							<xs:documentation>企业年度关联交易财务状况分析表</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="qyndgljybVO">
+		<xs:annotation>
+			<xs:documentation>企业年度关联交易财务状况分析表</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="nsrxxForm" type="qyndgljybNsrxxformVO">
+				<xs:annotation>
+					<xs:documentation>纳税人基本信息</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qyndgljybGrid">
+				<xs:annotation>
+					<xs:documentation>申报信息</xs:documentation>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:sequence maxOccurs="unbounded">
+						<xs:element name="qyndgljybGridlb" type="qyndgljybGridlbVO"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="qyndgljybGridlbVO">
+		<xs:annotation>
+			<xs:documentation>申报信息</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="ewbhxh" type="ewbhxh" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>二维表行序号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="xm1" type="xm1" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>项目</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jwgljyje" type="jwgljyje" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>境外关联交易金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jngljyje" type="jngljyje" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>境内关联交易金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jwfgljyje" type="jwfgljyje" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>境外非关联交易金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jnfgljyje" type="jnfgljyje" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>境内非关联交易金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zjje2" type="zjje2" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>总计金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="qyndgljybNsrxxformVO">
+		<xs:annotation>
+			<xs:documentation>纳税人基本人信息</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="nsrsbh" type="nsrsbh">
+				<xs:annotation>
+					<xs:documentation>纳税人识别号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="nsrmc" type="nsrmc">
+				<xs:annotation>
+					<xs:documentation>纳税人名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ssqq" type="ssqq">
+				<xs:annotation>
+					<xs:documentation>所属期起</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ssqz" type="ssqz">
+				<xs:annotation>
+					<xs:documentation>所属起止</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="tbrq" type="tbrq">
+				<xs:annotation>
+					<xs:documentation>填表日期</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qyfzr" type="fzr">
+				<xs:annotation>
+					<xs:documentation>企业负责人</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

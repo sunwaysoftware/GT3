@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 被2012 () 使用XMLSpy v编辑的 (http://www.altova.com) by -->
+<!-- edited with XMLSpy v2013 (http://www.altova.com) by  () -->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://www.chinatax.gov.cn/dataspec/" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:include schemaLocation="TaxMLPublicDJType.xsd"/>
+	<xs:complexType name="HXZGDJ00148Response">
+		<xs:annotation>
+			<xs:documentation>根据财务会计制度备案UUID查询财务会计制度备案信息、会计报表、其他资料信息返回报文</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="CwkjzdjhsrjbabgsVO" type="CwkjzdjhsrjbabgsVO"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="CwkjzdjhsrjbabgsVO">
+		<xs:annotation>
+			<xs:documentation>财务会计制度备案信息（子表信息）</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="kjbbqkGrid">
+				<xs:annotation>
+					<xs:documentation>会计报表情况信息</xs:documentation>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:sequence minOccurs="0" maxOccurs="unbounded">
+						<xs:element name="kjbbqkGridlb" type="DJCwkjzdbaKjbbmcVO">
+							<xs:annotation>
+								<xs:documentation>会计报表情况信息列表</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="qtzlGrid">
+				<xs:annotation>
+					<xs:documentation>其他资料信息</xs:documentation>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:sequence minOccurs="0" maxOccurs="unbounded">
+						<xs:element name="qtzlGridlb" type="DJCwkjzdbaQtzlqkVO">
+							<xs:annotation>
+								<xs:documentation>其他资料信息列表</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="CwkjzdjhsrjbabgsVO" type="DJCwkjzdjhsrjbabgsVO">
+				<xs:annotation>
+					<xs:documentation>财务会计制度备案信息</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

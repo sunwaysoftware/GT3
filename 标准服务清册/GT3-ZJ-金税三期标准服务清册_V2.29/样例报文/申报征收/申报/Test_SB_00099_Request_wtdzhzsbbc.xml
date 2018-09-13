@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<service xmlns="http://www.chinatax.gov.cn/spec/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <head>
+    <tran_id>SWZJ.HXZG.SB.BcWtdzsb</tran_id>
+    <channel_id>TEST</channel_id>
+    <tran_seq>e645dbdbbc03462cb99402bfe37f6d79</tran_seq>
+    <tran_date>20120420</tran_date>
+    <tran_time>022034181</tran_time>
+    <rtn_code>0</rtn_code>
+    <rtn_msg>
+      <Code>000</Code>
+      <Message></Message>
+      <Reason></Reason>
+    </rtn_msg>
+    <expand>
+      <name>sjry</name>
+      <value>24406060733</value>
+    </expand>
+    <expand>
+      <name>sjjg</name>
+      <value>24400000000</value>
+    </expand>
+  </head>
+  <body><![CDATA[<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<taxML xsi:type="HXZGSB00099Request" xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<wtdzsbSbbdxxVO>
+		<wtdzskmxbbgb>
+			<nsrxxForm>
+				<nsrsbh>440606098765432</nsrsbh>
+				<nsrmc>代扣代缴专用</nsrmc>
+				<bsrq>2015-01-20 22:29:58</bsrq>
+				<skssqq>2014-12-01</skssqq>
+				<skssqz>2014-12-31</skssqz>
+				<djxh>12440600000000000708</djxh>
+				<saveHz>Y</saveHz>
+			</nsrxxForm>
+			<wtdzskmxbgbGrid/>
+			<wtdzskbgbGrid>
+				<wtdzskbgbGridlb>
+					<hyDm>0111</hyDm>
+					<zsxmDm>10109</zsxmDm>
+					<zspmDm>101090102</zspmDm>
+					<zszmDm/>
+					<skssqq>2014-12-01</skssqq>
+					<skssqz>2014-12-31</skssqz>
+					<ydzse>2.0</ydzse>
+					<ydzse1>0.0</ydzse1>
+					<dzhcs>1</dzhcs>
+					<jmse>0.0</jmse>
+					<sl1>0.02</sl1>
+					<jsyj>100.0</jsyj>
+					<yjse>0.0</yjse>
+				</wtdzskbgbGridlb>
+			</wtdzskbgbGrid>
+			<slxxform>
+				<swrymc>as</swrymc>
+			</slxxform>
+		</wtdzskmxbbgb>
+		<swjszyb>
+			<swjszybGrid/>
+		</swjszyb>
+		<swsxzybgb>
+			<swsxzyGrid/>
+		</swsxzybgb>
+	</wtdzsbSbbdxxVO>
+</taxML>]]></body>
+</service>

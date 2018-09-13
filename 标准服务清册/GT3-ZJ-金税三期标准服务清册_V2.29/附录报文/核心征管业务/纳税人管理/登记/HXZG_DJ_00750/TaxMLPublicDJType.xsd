@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 被2011 rel. 2 sp1 (TeaM DJiNN) 使用XMLSpy vTeaM DJiNN编辑的 (http://www.altova.com) by -->
+<!-- edited with XMLSpy v2013 (http://www.altova.com) by  () -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:include schemaLocation="TaxMLPublic.xsd"/>
+	<xs:complexType name="DJZrrxxCXGrid">
+		<xs:annotation>
+			<xs:documentation>自然人信息Grid</xs:documentation>
+		</xs:annotation>
+		<xs:sequence minOccurs="0" maxOccurs="unbounded">
+			<xs:element name="DJZrrxxCXGridlb" type="DJZrrxxVO"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="DJZrrxxVO">
+		<xs:annotation>
+			<xs:documentation>自然人信息VO</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="djxh" type="djxh">
+				<xs:annotation>
+					<xs:documentation>登记序号，生成VO后改为BigDecimal类型</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="nsrsbh" type="nsrsbh">
+				<xs:annotation>
+					<xs:documentation>纳税人识别号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="xm" type="xm">
+				<xs:annotation>
+					<xs:documentation>姓名</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zyDm" type="zyDm">
+				<xs:annotation>
+					<xs:documentation>职业代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zjzlDm" type="zjzlDm">
+				<xs:annotation>
+					<xs:documentation>证件种类代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zjhm" type="zjhm">
+				<xs:annotation>
+					<xs:documentation>证件号码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="lxdh" type="lxdh">
+				<xs:annotation>
+					<xs:documentation>联系电话</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sfyzs" type="bz">
+				<xs:annotation>
+					<xs:documentation>在华是否有住所</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sfmyn" type="bz">
+				<xs:annotation>
+					<xs:documentation>在华无住所申请年度在华是否居住满一年</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jzdz" type="dz">
+				<xs:annotation>
+					<xs:documentation>居住地址</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="hjdz" type="hjdz">
+				<xs:annotation>
+					<xs:documentation>户籍地址</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="txdz1" type="txdz">
+				<xs:annotation>
+					<xs:documentation>通信地址</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="nrsndwsqk" type="nrsndwsqk">
+				<xs:annotation>
+					<xs:documentation>申请年度完税情况</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zgswjDm" type="zgswjDm">
+				<xs:annotation>
+					<xs:documentation>主管税务局代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zgswskfjDm" type="zgswskfjDm">
+				<xs:annotation>
+					<xs:documentation>主管税务所科分局代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ssglyDm" type="ssglyDm">
+				<xs:annotation>
+					<xs:documentation>税收管理员代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="nsrmc" type="nsrmc">
+				<xs:annotation>
+					<xs:documentation>纳税人名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="dwlsgxDm" type="dwlsgxDm">
+				<xs:annotation>
+					<xs:documentation>单位隶属关系代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="djzclxDm" type="djzclxDm">
+				<xs:annotation>
+					<xs:documentation>登记注册类型</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zgswjmc" type="zgswjg">
+				<xs:annotation>
+					<xs:documentation>主管税务局名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zgswskfjmc" type="bz">
+				<xs:annotation>
+					<xs:documentation>主管税务科所名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ssglymc" type="bz">
+				<xs:annotation>
+					<xs:documentation>税收管理员名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="djzclxmc" type="djzclxmc">
+				<xs:annotation>
+					<xs:documentation>登记注册类型名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sjgsdq" type="sjgsdq">
+				<xs:annotation>
+					<xs:documentation>数据归属地区</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="csrq" type="csrq">
+				<xs:annotation>
+					<xs:documentation>出生日期</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="xbDm" type="xbDm">
+				<xs:annotation>
+					<xs:documentation>性别代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="gjhdqszDm" type="gjhdqszDm">
+				<xs:annotation>
+					<xs:documentation>国家或地区数字代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="slswjgDm" type="slswjgDm">
+				<xs:annotation>
+					<xs:documentation>受理税务机关代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="slrDm" type="slrDm">
+				<xs:annotation>
+					<xs:documentation>受理人代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="slswsxDm" type="slswsxDm">
+				<xs:annotation>
+					<xs:documentation>受理税务事项代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

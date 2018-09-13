@@ -1,0 +1,390 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2011 (http://www.altova.com) by adwadwa (TeaM DJiNN) -->
+<!-- 被2011 rel. 2 sp1 (pjf) 使用XMLSpy vcss编辑的 (http://www.altova.com) by -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:complexType name="GSSBRD00003Response">
+		<xs:annotation>
+			<xs:documentation>获取日常申报初始化响应报文(全责模式)</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+				    <xs:element name="jfrmc" type="nsrmc" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>缴费人名称</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="zgswskfjDm" type="zgswskfjDm" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>主管税务所（科、分局）代码</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="djzclxDm" type="djzclxDm" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>注册类型代码</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="dwlsgxDm" type="dwlsgxDm" minOccurs="0">
+				        <xs:annotation>
+				        	<xs:documentation>单位隶属关系代码,纳税人为单位时填写</xs:documentation>
+			        	</xs:annotation>
+		        	</xs:element>
+					<xs:element name="hyDm" type="hyDm" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>行业代码</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="yhzh" type="yhzh" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>银行帐号</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="yhmc" type="yhmc" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>银行名称</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="yjsf_ls" type="yjse" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>前两个月应缴费额累计</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="xssr" type="xssr" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>销售收入</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="sfgzze" type="gzze" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>实发工资总额</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="zgrs" type="zgrs" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>职工人数</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="zsfsDm" type="zsfsDm" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>征收方式代码</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="hygzhl" type="xygzhl" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>行业工作含量</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="gzzezdsbbl" type="bl" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>工资总额最低申报比例</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="dywsb" type="bz1" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>当月份是否已申报 Y：为未申报 N：已申报</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="jkqx" type="jkqx">
+						<xs:annotation>
+							<xs:documentation>缴款期限</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+                    <xs:element name="sbqx" type="sbqx">
+						<xs:annotation>
+							<xs:documentation>申报期限</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="sfczbjhdxx" type="sfczbjhdxx" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>是否存在补缴核定信息</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="zgswjgDm" type="zgswjgDm" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>主管税务机关代码</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="sbhdxxlb">
+						<xs:annotation>
+							<xs:documentation>社保核定信息列表</xs:documentation>
+						</xs:annotation>
+						<xs:complexType>
+							<xs:sequence minOccurs="0" maxOccurs="unbounded">
+								<xs:element name="sbhdxxlb" type="SbSbfRdxxVO"/>
+							</xs:sequence>
+						</xs:complexType>
+					</xs:element>
+
+					<xs:element name="bdgxlb">
+						<xs:annotation>
+							<xs:documentation>比对关系列表</xs:documentation>
+						</xs:annotation>
+						<xs:complexType>
+							<xs:sequence minOccurs="0" maxOccurs="unbounded">
+								<xs:element name="bdgxlb" type="SbfYBdgxxxVO"/>
+							</xs:sequence>
+						</xs:complexType>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+
+	<xs:complexType name="SbSbfRdxxVO">
+		<xs:annotation>
+			<xs:documentation>社保认定信息</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+		    <xs:element name="sblsh" type="sblsh">
+				<xs:annotation>
+					<xs:documentation>社保流水号码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="xxh" type="xxh">
+				<xs:annotation>
+					<xs:documentation>小序号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sbshrq" type="shrq">
+				<xs:annotation>
+					<xs:documentation>社保审核日期</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sbjbjgDm" type="sbjbjgDm">
+				<xs:annotation>
+					<xs:documentation>社保经办机构代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sbbm" type="sbbm">
+				<xs:annotation>
+					<xs:documentation>社保编码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zsxmmc" type="zsxmmc">
+				<xs:annotation>
+					<xs:documentation>征收项目名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zsxmDm" type="zsxmDm">
+				<xs:annotation>
+					<xs:documentation>征收项目代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sjzspmDm" type="zspmDm">
+				<xs:annotation>
+					<xs:documentation>上级征收品目代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zspmDm" type="zspmDm">
+				<xs:annotation>
+					<xs:documentation>征收品目代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zspmmc" type="zspmmc">
+				<xs:annotation>
+					<xs:documentation>征收品目名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zszmDm" type="zszmDm">
+				<xs:annotation>
+					<xs:documentation>征收子目代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zszmmc" type="zszmmc">
+				<xs:annotation>
+					<xs:documentation>征收子目名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jfjs" type="jfjs">
+				<xs:annotation>
+					<xs:documentation>缴费基数</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		    <xs:element name="jfrs" type="jfrs">
+				<xs:annotation>
+					<xs:documentation>缴费人数</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jfbl" type="jfbl">
+				<xs:annotation>
+					<xs:documentation>缴费比例</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yjfe_je" type="yjse2">
+				<xs:annotation>
+					<xs:documentation>应缴费额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yjse1" type="yjse1" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>预缴税额 没有默认为0</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jmse" type="jmse" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>减免税额 没有默认为0</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ybtse" type="ybtse">
+				<xs:annotation>
+					<xs:documentation>应补退税额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="kxgbz" type="bz1" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>可修改标志，该险种是否可以修改 Y：可修改 N：不可修改</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sfgrjn" type="bz1" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>是否为个人缴纳 Y：是 N：否</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sbjfjs_min" type="jfjs" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>申报缴费基数最低金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jzbl" type="jzl" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>减征比例</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="de_bj" type="debj">
+				<xs:annotation>
+					<xs:documentation>定额标记</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="skssqq" type="skssqq">
+				<xs:annotation>
+					<xs:documentation>税款所属期起</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="skssqz" type="skssqz">
+				<xs:annotation>
+					<xs:documentation>税款所属期止</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="SbfYBdgxxxVO">
+		<xs:annotation>
+			<xs:documentation>比对关系信息</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+		    <xs:element name="mbzsxmmc" type="zsxmmc">
+				<xs:annotation>
+					<xs:documentation>目标征收项目名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="mbzsxmDm" type="zsxmDm">
+				<xs:annotation>
+					<xs:documentation>目标征收项目代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="mbzspmDm" type="zspmDm">
+				<xs:annotation>
+					<xs:documentation>目标征收品目代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="mbzspmmc" type="zspmmc">
+				<xs:annotation>
+					<xs:documentation>目标征收品目名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			
+			<xs:element name="mbzszmDm" type="zszmDm">
+				<xs:annotation>
+					<xs:documentation>目标征收子目代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="mbzszmmc" type="zszmmc">
+				<xs:annotation>
+					<xs:documentation>目标征收子目名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+	        <xs:element name="czzsxmmc" type="zsxmmc">
+				<xs:annotation>
+					<xs:documentation>参照征收项目名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="czzsxmDm" type="zsxmDm">
+				<xs:annotation>
+					<xs:documentation>参照征收项目代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="czzspmDm" type="zspmDm">
+				<xs:annotation>
+					<xs:documentation>参照征收品目代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="czzspmmc" type="zspmmc">
+				<xs:annotation>
+					<xs:documentation>参照征收品目名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="czzszmDm" type="zszmDm">
+				<xs:annotation>
+					<xs:documentation>参照征收子目代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="czzszmmc" type="zszmmc">
+				<xs:annotation>
+					<xs:documentation>参照征收子目名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bdfsbj" type="bz1">
+				<xs:annotation>
+					<xs:documentation>比对方式标记，0:大于等于; 1：等于; 2:小于;3:大于;4:小于等于</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+
+			<xs:element name="bdfsmc" type="bdjgmc">
+				<xs:annotation>
+					<xs:documentation>比对方式名称,大于等于; 等于;小于;大于;小于等于</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bdlx" type="bz1">
+				<xs:annotation>
+					<xs:documentation>比对类型, 0：单位和个人缴费基数比对 1：费种间单位缴费基数比对</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		    <xs:element name="ybdlx" type="bz1">
+				<xs:annotation>
+					<xs:documentation>月比对类型,0按月比对 1按月累计比对</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="czxzhjje" type="jfjs">
+				<xs:annotation>
+					<xs:documentation>累计比对时，参照险种合计金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="mbxzhjje" type="jfjs">
+				<xs:annotation>
+					<xs:documentation>累计比对时，目标险种合计金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:simpleType name="sblsh">
+		<xs:annotation>
+			<xs:documentation>社保流水号</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:length value="32"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="jfbl">
+		<xs:annotation>
+			<xs:documentation>缴费比例</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:double"/>
+	</xs:simpleType>
+	<xs:simpleType name="debj">
+		<xs:annotation>
+			<xs:documentation>定额标记</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string"/>
+	</xs:simpleType>
+</xs:schema>

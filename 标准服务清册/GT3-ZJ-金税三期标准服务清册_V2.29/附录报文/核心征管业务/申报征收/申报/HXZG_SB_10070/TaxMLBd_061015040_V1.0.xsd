@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 被2011 rel. 2 sp1 (TeaM DJiNN) 使用XMLSpy vTeaM DJiNN编辑的 (http://www.altova.com) by -->
+<!-- edited with XMLSpy v2010 rel. 3 (http://www.altova.com) by MESMERiZE (MSM) -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:complexType name="A107041Ywbd">
+		<xs:annotation>
+			<xs:documentation>高新技术企业优惠情况及明细表(A107041)业务报文</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="gxjsqyyhmxzbForm" type="gxjsqyyhmxzbFormVO"/>
+					<xs:element name="gxjsqyyhmxfyGrid">
+						<xs:complexType>
+							<xs:sequence minOccurs="0" maxOccurs="unbounded">
+								<xs:element name="gxjsqyyhmxfyGridlb" type="gxjsqyyhmxfyGridlbVO"/>
+							</xs:sequence>
+						</xs:complexType>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="gxjsqyyhmxzbFormVO">
+		<xs:annotation>
+			<xs:documentation>《高新技术企业优惠情况及明细表》</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="gxjsqyzsbh" type="bh">
+				<xs:annotation>
+					<xs:documentation>高新技术企业证书编号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="gxjsqyzsqdsj" type="sj">
+				<xs:annotation>
+					<xs:documentation>高新技术企业证书取得时间</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="cpsygdfw" type="mc">
+				<xs:annotation>
+					<xs:documentation>产品属于《国家重点。。》规定的范围</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bngxjscpsr" type="je">
+				<xs:annotation>
+					<xs:documentation>本年高新技术产品（服务）收入</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qzcpfwsr" type="je">
+				<xs:annotation>
+					<xs:documentation>其中：产品（服务）收入</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jsxsr" type="je">
+				<xs:annotation>
+					<xs:documentation>技术性收入</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bnqyzsr" type="je">
+				<xs:annotation>
+					<xs:documentation>本年企业总收入</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bngxjscpsrzqyzsrbl" type="bl">
+				<xs:annotation>
+					<xs:documentation>本年高新技术产品（服务）收入占企业总收入的比例||小数格式，最多4位小数</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bnkjrys" type="sl">
+				<xs:annotation>
+					<xs:documentation>本年科技人员数</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bnzgzs" type="sl">
+				<xs:annotation>
+					<xs:documentation>本年职工总数</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bnkjryzqydnzgsbl" type="bl">
+				<xs:annotation>
+					<xs:documentation>本年科技人员占企业当年职工总数的比例||小数格式，最多4位小数</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="cpsygdfw2" type="mc">
+				<xs:annotation>
+					<xs:documentation>产品属于《国家重点。。》规定的范围二级</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="cpsygdfw3" type="mc">
+				<xs:annotation>
+					<xs:documentation>产品属于《国家重点。。》规定的范围三级</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qzsrze" type="je">
+				<xs:annotation>
+					<xs:documentation>其中：收入总额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bzssr" type="je">
+				<xs:annotation>
+					<xs:documentation>不征税收入</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="gjxyzdfcdgxjsqyjzqysds" type="je">
+				<xs:annotation>
+					<xs:documentation>国家需要重点扶持的高新技术企业减征企业所得税</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jjtqhpdxqxsldgxjsqydqjmse" type="je">
+				<xs:annotation>
+					<xs:documentation>经济特区和上海浦东新区新设立的高新技术企业定期减免税额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yffyzzebl" type="bl">
+				<xs:annotation>
+					<xs:documentation>九、三年研发费用占销售（营业）收入的比例（15行4列÷29行4列）||小数格式，最多4位小数</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="gxjsqyyhmxfyGridlbVO">
+		<xs:annotation>
+			<xs:documentation>《高新技术企业优惠情况及明细表》</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="ewbhxh" type="ewbhxh">
+				<xs:annotation>
+					<xs:documentation>二维表行序号||从第15行开始，第29行结束</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ewbhmc" type="ewbhmc">
+				<xs:annotation>
+					<xs:documentation>二维表行名称||15~29行对应的研究费用指标名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ewbhgjz" type="ewbhgjz">
+				<xs:annotation>
+					<xs:documentation>二维表关键字||15行：gxyffyje，16行：nbyftrje，17行：ryrgfyje，18行：zjtrfyje，19行：zjycqdtfyje，20行：wxzctxfyje，21行：sjfyje，22行：zbtsfysyfje，23行：qtfyje，24行：qtyffje，25行：wtwbyffje，26行：jnwbyffje，27行：jwwbyffje，28行：qtjwwbyffje，29行：xssrje</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="kffybnd" type="je">
+				<xs:annotation>
+					<xs:documentation>开发费用本年度</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="kffyqynd" type="je">
+				<xs:annotation>
+					<xs:documentation>开发费用前一年度</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="kffyqend" type="je">
+				<xs:annotation>
+					<xs:documentation>开发费用前二年度</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="kffyhj" type="je">
+				<xs:annotation>
+					<xs:documentation>开发费用合计</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

@@ -1,0 +1,280 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:complexType name="zrrxxdjbkjYwbw">
+		<xs:annotation>
+			<xs:documentation>自然人信息登记表（扣缴）业务报文</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="zrrxxdjbkjBzds" type="zrrxxdjbkjBzds"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="zrrxxdjbkjBzds">
+		<xs:annotation>
+			<xs:documentation>自然人信息登记表（扣缴）</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="zrrxxdjbkjHead" type="zrrxxdjbkjHead">
+				<xs:annotation>
+					<xs:documentation>自然人信息登记表（扣缴）表头</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zrrxxdjbkjBody" type="zrrxxdjbkjBody">
+				<xs:annotation>
+					<xs:documentation>自然人信息登记表（扣缴）表体</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bodyAffix" type="xs:anySimpleType">
+				<xs:annotation>
+					<xs:documentation>预留：附属表体</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="zrrxxdjbkjHead">
+		<xs:annotation>
+			<xs:documentation>自然人信息登记表（扣缴）表头</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="kjywrsbh" type="kjywrsbh">
+				<xs:annotation>
+					<xs:documentation>扣缴义务人编码，必填</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="kjywrmc" type="kjywrmc">
+				<xs:annotation>
+					<xs:documentation>扣缴义务人名称，必填</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jbrxm" type="zrrxm">
+				<xs:annotation>
+					<xs:documentation>经办人姓名，必填</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="slrxm" type="slrxm">
+				<xs:annotation>
+					<xs:documentation>受理人姓名，必填</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="slrDm" type="xs:string">
+				<xs:annotation>
+					<xs:documentation>受理人代码，必填</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="slrq" type="slrq">
+				<xs:annotation>
+					<xs:documentation>录入日期，必填，格式为YYYY-MM-DD</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="slswjgDm" type="slswjgDm">
+				<xs:annotation>
+					<xs:documentation>受理税务机关代码，格式为YYYY-MM-DD</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="slswjgMc" type="nsrzgswjgmc">
+				<xs:annotation>
+					<xs:documentation>受理税务机关名称，格式为YYYY-MM-DD</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="kjywrdjxh" type="djxh">
+				<xs:annotation>
+					<xs:documentation>扣缴义务人登记序号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sssqq" type="skssqq">
+				<xs:annotation>
+					<xs:documentation>所属时期起，必填，格式为YYYY-MM-DD</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sssqz" type="skssqz">
+				<xs:annotation>
+					<xs:documentation>所属时期止，必填，格式为YYYY-MM-DD</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="zrrxxdjbkjBody">
+		<xs:annotation>
+			<xs:documentation>自然人信息登记表（扣缴）表体</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="zrrxxdjbkj" type="zrrxxdjbkj">
+				<xs:annotation>
+					<xs:documentation>自然人信息登记表（扣缴）表头</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="zrrxxdjbkj">
+		<xs:sequence>
+			<xs:element name="zrrxxdjbkjMx" type="zrrxxdjbkjMx" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="zrrxxdjbkjMx">
+		<xs:annotation>
+			<xs:documentation>自然人信息登记表（扣缴）表体</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="zrrxm" type="zrrxm">
+				<xs:annotation>
+					<xs:documentation>自然人姓名，必填</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="gjdq" type="gjhdqszDm">
+				<xs:annotation>
+					<xs:documentation>国籍(地区)，必填</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="xbDm" type="xbDm">
+				<xs:annotation>
+					<xs:documentation>性别</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sfzjlxmc" type="sfzjlxmc">
+				<xs:annotation>
+					<xs:documentation>身份证件类型名称，必填</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sfzjlxDm" type="sfzjlxDm">
+				<xs:annotation>
+					<xs:documentation>身份证件类型代码，必填</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sfzjhm" type="sfzjhm">
+				<xs:annotation>
+					<xs:documentation>身份证件号码，当身份证件类型代码为201【居民身份证】时身份证件号码长度必须为18位，必填，</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sfcjlsgl" type="sfcjlsgl">
+				<xs:annotation>
+					<xs:documentation>是否残疾烈属孤老，必填（Y:是，N:否）</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="nsrsbh" type="nsrsbh">
+				<xs:annotation>
+					<xs:documentation>纳税人识别号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yddhhm" type="yddh">
+				<xs:annotation>
+					<xs:documentation>移动电话号码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="gddhhm" type="bsrgddh">
+				<xs:annotation>
+					<xs:documentation>固定电话号码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="email" type="email">
+				<xs:annotation>
+					<xs:documentation>电子邮箱</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jcjzdz" type="jcjzd">
+				<xs:annotation>
+					<xs:documentation>经常居住地址</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="gzdw" type="dwmc">
+				<xs:annotation>
+					<xs:documentation>工作单位</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sfgdDm" type="sfbz">
+				<xs:annotation>
+					<xs:documentation>是否股东代码， 1：是，0：否，必填</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sftstzr" type="sfbz">
+				<xs:annotation>
+					<xs:documentation>是否天使投资人，1：是，0：否，为空时，按否处理</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sfgdmc" type="sfbz">
+				<xs:annotation>
+					<xs:documentation>是否股东名称，是、否，必填</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="gsgbtzze" type="je">
+				<xs:annotation>
+					<xs:documentation>公司股本（投资）总额，“是否股东”选择“是”时，必填</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="grgbtze" type="je">
+				<xs:annotation>
+					<xs:documentation>个人股本（投资）额，“是否股东”选择“是”时，必填</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="lhsj" type="dycrjsj">
+				<xs:annotation>
+					<xs:documentation>来华时间</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="rzqx" type="rzqx">
+				<xs:annotation>
+					<xs:documentation>任职期限</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="rzqxq" type="rzqxq">
+				<xs:annotation>
+					<xs:documentation>任职期限起</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="rzqxz" type="rzqxz">
+				<xs:annotation>
+					<xs:documentation>任职期限止</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yjljsj" type="yjljrq">
+				<xs:annotation>
+					<xs:documentation>预计离境时间</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yjljdd" type="dz">
+				<xs:annotation>
+					<xs:documentation>预计离境地点</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jnzw" type="zw">
+				<xs:annotation>
+					<xs:documentation>境内职务</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jwzw" type="zw">
+				<xs:annotation>
+					<xs:documentation>境外职务</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zfd" type="zfdlbDm">
+				<xs:annotation>
+					<xs:documentation>支付地</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jwzfggbdq" type="gjhdqszDm">
+				<xs:annotation>
+					<xs:documentation>境外支付国国别（地区）</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:simpleType name="rzqx">
+		<xs:annotation>
+			<xs:documentation>任职期限</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:maxLength value="3"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="sfcjlsgl">
+		<xs:annotation>
+			<xs:documentation>是否残疾烈属孤老</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:maxLength value="1"/>
+		</xs:restriction>
+	</xs:simpleType>
+</xs:schema>

@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 被2012 () 使用XMLSpy v编辑的 (http://www.altova.com) by -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:include schemaLocation="TaxMLPublicSBType.xsd"/>
+	<xs:complexType name="HXZGSB00071Response">
+		<xs:annotation>
+			<xs:documentation>废弃电器电子产品基金申报查询返回报文</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="SB193FqdqdzcpsjjsbVO" type="SB193FqdqdzcpsjjsbVO">
+						<xs:annotation>
+							<xs:documentation>废弃电器电子产品基金申报查询结果</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="SB193FqdqdzcpsjjsbVO">
+		<xs:annotation>
+			<xs:documentation>废弃电器电子产品基金申报查询结果</xs:documentation>
+		</xs:annotation>
+		<xs:sequence maxOccurs="unbounded">
+			<xs:element name="SbsjxxGridlbVo" type="SbsjxxGridlbVo"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="SbsjxxGridlbVo">
+		<xs:sequence>
+			<xs:element name="ewblxh" type="ewblxh" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>二维表列序号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bqxssl" type="bqxssl" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>本期销售数量 </xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yzxssl" type="yzxssl" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>应征销售数量</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ckmzXssl" type="ckmzXssl" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>出口免征销售数量</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sqwksl" type="sqwksl" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>上期未扣数量</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bqkkcsl" type="bqkkcsl" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>本期可扣除数量</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jksl" type="jksl" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>进口数量</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="gngjsl" type="gngjsl" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>国内购进数量</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="wtjgShsl" type="wtjgShsl" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>委托加工收回数量</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yzjjcpKdthsl" type="yzjjcpKdthsl" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>已征基金产品可抵退货数量</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bqyzsl" type="bqyzsl" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>本期应征数量</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jzxqkcsl" type="jzxqkcsl" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>结转下期扣除数量</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zsbz" type="zsbz" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>征收标准</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bqyzjjje" type="bqyzjjje" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>本期应征基金金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bqjzje" type="bqjzje" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>本期减征金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yyjjje" type="yyjjje" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>已预缴基金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sqjzjje" type="sqjzjje" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>上期结转基金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bqybjje" type="bqybjje" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>本期应补基金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bqjzxqjje" type="bqjzxqjje" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>本期结转下期基金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zsxmDm" type="zsxmDm" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>征收项目代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zspmDm" type="zspmDm" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>征收品目代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

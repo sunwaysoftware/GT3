@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 被2011 rel. 2 sp1 (TeaM DJiNN) 使用XMLSpy vTeaM DJiNN编辑的 (http://www.altova.com) by -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:complexType name="kjryQdxjjlBaRequest">
+		<xs:annotation>
+			<xs:documentation>科技人员取得现金奖励备案请求</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="btxx" type="btxx">
+						<xs:annotation>
+							<xs:documentation>表头信息</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="xjjlqkLb" type="xjjlqkLb">
+						<xs:annotation>
+							<xs:documentation>科技人员取得现金奖励基本情况列表</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="btxx">
+		<xs:annotation>
+			<xs:documentation>表头信息</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="jywysbh" type="jywysbh">
+				<xs:annotation>
+					<xs:documentation>交易唯一识别号，可以为空</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="kjywrdjxh" type="djxh">
+				<xs:annotation>
+					<xs:documentation>扣缴义务人登记序号，不能为空</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="kjywrlxDm" type="lxDm">
+				<xs:annotation>
+					<xs:documentation>			扣缴义务人类型，不能为空,类型代码：10-国家设立的科研机构；20-国家设立的高校；30-民办非营利性科研机构；40-民办非营利性高校；90：其他；
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="kjywrlxBz" type="bz">
+				<xs:annotation>
+					<xs:documentation>
+						扣缴义务人类型备注，可以为空，当扣缴义务人类型选择“其他（9）”时必录
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="kjcgmc" type="kjcgmc">
+				<xs:annotation>
+					<xs:documentation>科技成果名称，不能为空</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="kjcglxDm" type="lxDm">
+				<xs:annotation>
+					<xs:documentation>科技成果类型，不能为空,10-专利技术（含国防专利）,20-计算机软件著作权,30-集成电路布图设计专有权,40-植物新品种权；50-生物医药新品种；90-科技部、财政部、国家税务总局确定的其他科技成果
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="fzbm" type="fzbm">
+				<xs:annotation>
+					<xs:documentation>发证部门，可以为空</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="kjcgzsbh" type="zsbh">
+				<xs:annotation>
+					<xs:documentation>科技成果证书编号，可以为空</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zhfs" type="zhfs">
+				<xs:annotation>
+					<xs:documentation>转化方式，不能为空,1-转让；2-许可使用</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jshtdjjg" type="swjgmc1">
+				<xs:annotation>
+					<xs:documentation>技术合同登记机构，可以为空</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jshtbh" type="zsbh">
+				<xs:annotation>
+					<xs:documentation>技术合同编号，可以为空</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jshtxmmc" type="xmmc">
+				<xs:annotation>
+					<xs:documentation>技术合同项目名称，不能为空</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qdzhsrje" type="je">
+				<xs:annotation>
+					<xs:documentation>取得转化收入金额，不能为空</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qdzhsrsj" type="tbrq">
+				<xs:annotation>
+					<xs:documentation>取得转化收入时间，不能为空,日期格式为yyyy-MM-dd</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="gsjgwjwh" type="zsbh">
+				<xs:annotation>
+					<xs:documentation>公示结果文件文号，可以为空</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="gsjgwjmc" type="xmmc">
+				<xs:annotation>
+					<xs:documentation>公示结果文件名称，不能为空</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jbr" type="jbr">
+				<xs:annotation>
+					<xs:documentation>经办人，可以为空</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="tbrq" type="tbrq">
+				<xs:annotation>
+					<xs:documentation>填报日期，可以为空,日期格式为yyyy-MM-dd,不能大于系统日期</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zgswjgDm" type="zgswjgDm">
+				<xs:annotation>
+					<xs:documentation>主管税务机关，不能为空</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="slrDm" type="slrDm">
+				<xs:annotation>
+					<xs:documentation>受理人，不能为空</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="slrq" type="slrq">
+				<xs:annotation>
+					<xs:documentation>受理日期，不能为空,日期格式为yyyy-MM-dd,不能大于系统日期</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="xjjlqkLb">
+		<xs:annotation>
+			<xs:documentation>科技人员取得现金奖励基本情况列表</xs:documentation>
+		</xs:annotation>
+		<xs:sequence maxOccurs="unbounded">
+			<xs:element name="xjjlqk" type="xjjlqk">
+				<xs:annotation>
+					<xs:documentation>科技人员取得现金奖励基本情况</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="xjjlqk">
+		<xs:annotation>
+			<xs:documentation>科技人员取得现金奖励基本情况</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="xh" type="xh">
+				<xs:annotation>
+					<xs:documentation>序号，可以为空</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="xm" type="xm">
+				<xs:annotation>
+					<xs:documentation>姓名，不能为空</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sfzjlxDm" type="sfzjlxDm">
+				<xs:annotation>
+					<xs:documentation>身份证件类型，不能为空</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sfzjhm" type="sfzjhm">
+				<xs:annotation>
+					<xs:documentation>身份证件号码，不能为空</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="gjhdqDm" type="gjdqDm">
+				<xs:annotation>
+					<xs:documentation>国籍（地区），不能为空</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="djxh" type="djxh">
+				<xs:annotation>
+					<xs:documentation>登记序号，可以为空</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="xjjlje" type="je">
+				<xs:annotation>
+					<xs:documentation>现金奖励金额，不能为空</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="xjjlqdsj" type="tbrq">
+				<xs:annotation>
+					<xs:documentation>现金奖励取得时间，不能为空</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

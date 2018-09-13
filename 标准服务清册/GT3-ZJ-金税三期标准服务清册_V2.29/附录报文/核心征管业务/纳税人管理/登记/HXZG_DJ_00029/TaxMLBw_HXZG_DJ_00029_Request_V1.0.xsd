@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2013 (http://www.altova.com) by  () -->
+<!-- 编辑使用 XMLSpy v2006 U (http://www.altova.com) 由 any (any) -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:include schemaLocation="TaxMLPublicDJType.xsd"/>
+	<xs:complexType name="HXZGDJ00029Request">
+		<xs:annotation>
+			<xs:documentation>单位纳税人登记证采集保存业务报文</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="wbmdjNsrxxcjgsdjxxlb" type="WbjhCjSjGsdjxxVO">
+						<xs:annotation>
+							<xs:documentation>外部门纳税人信息</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="nsrxxForm" type="SlnsrjbxxVO">
+						<xs:annotation>
+							<xs:documentation>纳税人信息</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="zjgxxForm" type="DJZjgxxVO">
+						<xs:annotation>
+							<xs:documentation>总机构信息</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="fzjgGrid" type="fzjgGrid">
+						<xs:annotation>
+							<xs:documentation>分支机构Grid</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="slxxdjForm" type="DJYsqywslxxbVO">
+						<xs:annotation>
+							<xs:documentation>受理信息</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="zxdjxh" type="djxh">
+						<xs:annotation>
+							<xs:documentation>受理信息</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="xdjxh" type="djxh">
+						<xs:annotation>
+							<xs:documentation>新登记序号</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="ssdabh" type="ssdabh">
+						<xs:annotation>
+							<xs:documentation>受理信息</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="fzjgGrid">
+		<xs:annotation>
+			<xs:documentation>单位纳税人登记证采集-分支机构信息</xs:documentation>
+		</xs:annotation>
+		<xs:sequence minOccurs="0" maxOccurs="unbounded">
+			<xs:element name="fzjgGridlb" type="DJFzjgxxVO">
+				<xs:annotation>
+					<xs:documentation>个体税务登记-分支机构信息列表</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>	
+</xs:schema>

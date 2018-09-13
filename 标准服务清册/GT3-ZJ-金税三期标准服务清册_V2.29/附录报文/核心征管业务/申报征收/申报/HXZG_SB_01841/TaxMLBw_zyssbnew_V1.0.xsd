@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2010 rel. 3 (http://www.altova.com) by MESMERiZE (MSM) -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+     <xs:include schemaLocation="TaxML.xsd"/>
+     <xs:include schemaLocation="TaxMLBd_BDA0610887_V1.0.xsd"/>
+     <xs:include schemaLocation="TaxMLBd_BDA0610888_V1.0.xsd"/>
+     <xs:include schemaLocation="TaxMLBd_BDA0610889_V1.0.xsd"/>
+     <xs:include schemaLocation="TaxMLBd_BDA0610890_V1.0.xsd"/>
+     <xs:include schemaLocation="TaxMLBd_yqtfb_V1.0.xsd"/>
+        <xs:complexType name="zyssbywbw">
+           <xs:annotation>
+               <xs:documentation>《zyssb》业务报文</xs:documentation>
+           </xs:annotation>
+           <xs:complexContent>
+               <xs:extension base="taxDoc">
+                   <xs:sequence>
+                       <xs:element name="zysywbwbody" type="BDA0610887Body">
+                           <xs:annotation>
+                               <xs:documentation>《zyssb》业务报文</xs:documentation>
+                           </xs:annotation>
+                       </xs:element>
+                   </xs:sequence>
+               </xs:extension>
+           </xs:complexContent>
+       </xs:complexType>
+       <xs:complexType name="BDA0610887Body">
+           <xs:annotation>
+               <xs:documentation>《zyssb》业务报文</xs:documentation>
+           </xs:annotation>
+           <xs:sequence>
+               <xs:element name="zyssb" type="zyssb">
+                   <xs:annotation>
+                       <xs:documentation>zyssb</xs:documentation>
+                   </xs:annotation>
+               </xs:element>
+               <xs:element name="BDA0610888" type="BDA0610888">
+                   <xs:annotation>
+                       <xs:documentation>资源税纳税申报表附表（一）（原矿类税目适用）</xs:documentation>
+                   </xs:annotation>
+               </xs:element>
+               <xs:element name="BDA0610889" type="BDA0610889">
+                   <xs:annotation>
+                       <xs:documentation>资源税纳税申报表附表（二）（精矿类税目适用）</xs:documentation>
+                   </xs:annotation>
+               </xs:element>
+               <xs:element name="BDA0610890" type="BDA0610890">
+                   <xs:annotation>
+                       <xs:documentation>资源税纳税申报表附表（三）（减免税明细）</xs:documentation>
+                   </xs:annotation>
+               </xs:element>
+               <xs:element name="yqtfb" type="yqtfb">
+                   <xs:annotation>
+                       <xs:documentation>油气田附表</xs:documentation>
+                   </xs:annotation>
+               </xs:element>
+        </xs:sequence>
+  </xs:complexType>
+</xs:schema>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 被2012 () 使用XMLSpy v编辑的 (http://www.altova.com) by -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:complexType name="HXZGSB01824Response">
+		<xs:annotation>
+			<xs:documentation>增量房申报错误更正初始化根据凭证序号获取采集UUID业务报文</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="SbcjxxGrid">
+						<xs:annotation>
+							<xs:documentation>采集UUID信息Grid</xs:documentation>
+						</xs:annotation>
+						<xs:complexType>
+							<xs:sequence maxOccurs="unbounded">
+								<xs:element name="SbcjxxGridlb" type="SbcjxxGridlbVO">
+									<xs:annotation>
+										<xs:documentation>采集UUID信息Grid</xs:documentation>
+									</xs:annotation>
+								</xs:element>
+							</xs:sequence>
+						</xs:complexType>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="SbcjxxGridlbVO">
+		<xs:annotation>
+			<xs:documentation>申报采集信息Grid</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="cjuuid" type="cjuuid" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>未申报采集UUID</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

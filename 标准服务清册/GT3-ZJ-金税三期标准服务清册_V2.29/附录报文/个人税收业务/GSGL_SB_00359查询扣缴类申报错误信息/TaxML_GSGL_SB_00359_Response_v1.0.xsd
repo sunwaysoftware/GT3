@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 被2011 rel. 2 sp1 (TeaM DJiNN) 使用XMLSpy vTeaM DJiNN编辑的 (http://www.altova.com) by -->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://www.chinatax.gov.cn/dataspec/" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:complexType name="cxKjlSbCwxxResponse">
+		<xs:annotation>
+			<xs:documentation>查询扣缴类申报错误信息响应报文</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="sbcwxxlb" type="sbcwxxlb" maxOccurs="unbounded">
+						<xs:annotation>
+							<xs:documentation>申报错误信息列表</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="sbcwxxlb">
+		<xs:annotation>
+			<xs:documentation>申报错误信息列表</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="yzpzxh" type="yzpzxh">
+				<xs:annotation>
+					<xs:documentation>应征凭证序号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jywysbh" type="jywysbh">
+				<xs:annotation>
+					<xs:documentation>交易唯一识别号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ywlxDm" type="ywlx">
+				<xs:annotation>
+					<xs:documentation>业务类型代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yzpzzlDm" type="yzpzzlDm">
+				<xs:annotation>
+					<xs:documentation>应征凭证种类代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bmbh" type="bmbh">
+				<xs:annotation>
+					<xs:documentation>部门编号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bmmc" type="bmmc">
+				<xs:annotation>
+					<xs:documentation>部门名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="skssqq" type="skssqq">
+				<xs:annotation>
+					<xs:documentation>税款所属期起，（日期格式：yyyy-MM-dd）</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="skssqz" type="skssqz">
+				<xs:annotation>
+					<xs:documentation>税款所属期止，（日期格式：yyyy-MM-dd）</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sbrq" type="sbrq">
+				<xs:annotation>
+					<xs:documentation>申报日期，（日期格式：yyyy-MM-dd）</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="cwxx" type="cwxx">
+				<xs:annotation>
+					<xs:documentation>错误信息，(base64编码格式，需要外围厂商先通过base64解码，得到一个字节数组，然后对字节数组进行解压后再转成字符串，获取具体的错误信息)</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

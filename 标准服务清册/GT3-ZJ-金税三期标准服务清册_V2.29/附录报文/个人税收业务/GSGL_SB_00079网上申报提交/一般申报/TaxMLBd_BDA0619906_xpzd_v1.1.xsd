@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxMLPublic.xsd"/>
+	<xs:complexType name="grsdsZxsbOneHeadXpzd">
+		<xs:annotation>
+			<xs:documentation>广东个人所得税自行申报A表表头选配字段</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="sbfsDm" type="sbfsDm">
+				<xs:annotation>
+					<xs:documentation>申报方式代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sbfsmc" type="sbfsmc">
+				<xs:annotation>
+					<xs:documentation>申报方式名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sbrq" type="sbrq">
+				<xs:annotation>
+					<xs:documentation>申报日期</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yzbm" type="yzbm">
+				<xs:annotation>
+					<xs:documentation>邮政编码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="dhhm" type="czdh">
+				<xs:annotation>
+					<xs:documentation>电话号码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zzgjntxdz" type="jntxdz">
+				<xs:annotation>
+					<xs:documentation>在中国境内通讯地址</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="grsdsZxsbOneMxXpzd">
+		<xs:annotation>
+			<xs:documentation> 广东个人所得税自行申报A表明细选配字段</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="srssqq" type="skssqq">
+				<xs:annotation>
+					<xs:documentation>收入所属期起</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="srssqz" type="skssqz">
+				<xs:annotation>
+					<xs:documentation>收入所属期止</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sdzmDm" type="zszmDm">
+				<xs:annotation>
+					<xs:documentation>所得子目代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sdzmMc" type="zszmmc">
+				<xs:annotation>
+					<xs:documentation>所得子目名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sre" type="sre">
+				<xs:annotation>
+					<xs:documentation>收入额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="hssre" type="sre">
+				<xs:annotation>
+					<xs:documentation>含税收入额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="skfdfsDm" type="skfdfsDm">
+				<xs:annotation>
+					<xs:documentation>税款负担方式代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="skfdfsMc" type="skfdfsmc">
+				<xs:annotation>
+					<xs:documentation>税款负担方式名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="gzfdbl" type="bl">
+				<xs:annotation>
+					<xs:documentation>雇主负担比例</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="gzfdsk" type="skje">
+				<xs:annotation>
+					<xs:documentation>雇主负担税款</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jsjg" type="jgfx">
+				<xs:annotation>
+					<xs:documentation>计税结果</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="njkce" type="skje">
+				<xs:annotation>
+					<xs:documentation>年金（暂不使用）</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qtkce" type="skje">
+				<xs:annotation>
+					<xs:documentation>其他（暂不使用）</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bnljxqsr" type="skje">
+				<xs:annotation>
+					<xs:documentation>本年累计行权收入</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bnljynse" type="skje">
+				<xs:annotation>
+					<xs:documentation>本年累计应纳税额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="grsdsZxsbOneHjXpzd">
+		<xs:annotation>
+			<xs:documentation>广东个人所得税自行申报A表合计数据(预留)</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="sreHj" type="sre">
+				<xs:annotation>
+					<xs:documentation>收入额合计</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="hssreHj" type="sre">
+				<xs:annotation>
+					<xs:documentation>含税收入额合计</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="gzfdskHj" type="sre">
+				<xs:annotation>
+					<xs:documentation>雇主负担税款合计</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="njkceHj" type="skje">
+				<xs:annotation>
+					<xs:documentation>年金合计</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qtkceHj" type="skje">
+				<xs:annotation>
+					<xs:documentation>其他合计</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

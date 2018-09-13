@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 被2012 () 使用XMLSpy v编辑的 (http://www.altova.com) by -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:include schemaLocation="TaxMLPublicType.xsd"/>
+	<xs:include schemaLocation="TaxMLBw_tdzzsqssb_gy_V1.0.xsd"/>
+	<xs:complexType name="fdczrsrmxbywbw">
+		<xs:annotation>
+			<xs:documentation>房地产转让收入明细表业务报文</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="fdczrsrmxb" type="fdczrsrmxb">
+						<xs:annotation>
+							<xs:documentation>房地产转让收入明细表</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="fdczrsrmxb">
+		<xs:annotation>
+			<xs:documentation>房地产转让收入明细表</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="fdczrsrmxbGrid" type="fdczrsrmxbGrid">
+				<xs:annotation>
+					<xs:documentation>申报表信息</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="tdzzsqsFbGyNdVo" type="tdzzsqsFbGyNdVo"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="fdczrsrmxbGrid">
+		<xs:annotation>
+			<xs:documentation>申报数据信息</xs:documentation>
+		</xs:annotation>
+		<xs:sequence maxOccurs="unbounded">
+			<xs:element name="fdczrsrmxbGridGridlb" type="fdczrsrmxbGridlbVO">
+				<xs:annotation>
+					<xs:documentation>申报数据信息</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="fdczrsrmxbGridlbVO">
+		<xs:annotation>
+			<xs:documentation>申报表信息</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="tdzzsqsFbGyNdDataVo">
+				<xs:sequence>
+					<xs:element name="srlb" type="srlb">
+						<xs:annotation>
+							<xs:documentation>收入类别</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+</xs:schema>

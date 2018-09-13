@@ -1,0 +1,96 @@
+<service xmlns="http://www.chinatax.gov.cn/spec/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<head>
+		<tran_id>SWZJ.HXZG.YSH.BCXXCJBSJ</tran_id>
+		<channel_id>TEST</channel_id>
+		<tran_seq>C000BNFZC25001201305030505267890</tran_seq>
+		<tran_date>20140826</tran_date>
+		<tran_time>173435849</tran_time>
+                       <expand>
+      <name>sjry</name>
+      <value>24406060735</value>
+    </expand>
+    <expand>
+      <name>sjjg</name>
+      <value>24406060700</value>
+    </expand>	</head> 
+<body><![CDATA[<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<taxML xsi:type="HXZGYSH00006Request" xmlbh="HXZGYSH00006Request" bbh="V1.1" xmlmc="渠道业务审核接入报文" xsi:schemaLocation="http://www.chinatax.gov.cn/dataspec/ TaxMLBw_HXZG_YSH_00006_Request_V1.1.xsd" xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<fileInfor>
+		<fileGrid>
+			<fileGridlb>
+				<filepath>2</filepath>
+				<filetype>2</filetype>
+				<filename>2</filename>
+				<fileindex>2</fileindex>
+			</fileGridlb>
+		</fileGrid>
+		<fileInforVO>
+			<fileSize>3</fileSize>
+			<recordNumber>3</recordNumber>
+			<nsrSwjgDm>3</nsrSwjgDm>
+		</fileInforVO>
+	</fileInfor>
+	<qdywshRequestVO>
+		<qxswjgDm>24406060700</qxswjgDm>
+		<djxh>12440600000000000832</djxh>
+		<lcswsxDm>LCSXA071007001</lcswsxDm>
+		<slswsxDm>SLSXA071007001</slswsxDm>
+		<dzbzdszlDm>BDA0710049</dzbzdszlDm>
+		<xtbm>C000BNFZC</xtbm>
+		<xzqhDm>440605</xzqhDm>
+		<nsrmc>谁改剁手地税</nsrmc>
+		<nsrsbh>500109745323074</nsrsbh>
+		<request>&lt;taxML xsi:type="yqjnsksqbywbd" xmlbh="String" bbh="String" xmlmc="String" xsi:schemaLocation="http://www.chinatax.gov.cn/dataspec/ TaxMLBd_00476_V1.0.xsd" xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"&gt;
+	&lt;djxh&gt;12440600000000000832&lt;/djxh&gt;
+	&lt;yqjnsksqb&gt;
+		&lt;jbxxForm&gt;
+			&lt;nsrsbh&gt;500109745323074&lt;/nsrsbh&gt;
+			&lt;nsrmc&gt;谁改剁手地税&lt;/nsrmc&gt;
+			&lt;fddbrxm&gt;边建光&lt;/fddbrxm&gt;
+		&lt;/jbxxForm&gt;
+		&lt;yzxxForm&gt;
+			&lt;dqhbzjye&gt;4.0&lt;/dqhbzjye&gt;
+			&lt;dqyfzggzzc&gt;4.0&lt;/dqyfzggzzc&gt;
+			&lt;dqshbxfzcys&gt;4.0&lt;/dqshbxfzcys&gt;
+			&lt;dcbz&gt;0&lt;/dcbz&gt;
+		&lt;/yzxxForm&gt;
+		&lt;sqForm&gt;
+			&lt;sqly&gt;4&lt;/sqly&gt;
+			&lt;sqr&gt;邓炳沛&lt;/sqr&gt;
+			&lt;sqrq&gt;2014-11-08&lt;/sqrq&gt;
+		&lt;/sqForm&gt;
+		&lt;yzxxGrid&gt;
+			&lt;yzxxGridlb&gt;
+				&lt;zsuuid&gt;C15B0F86D4B4DEA870A459FB24A7FB70&lt;/zsuuid&gt;
+				&lt;sksxDm&gt;0101&lt;/sksxDm&gt;
+				&lt;zsxmDm&gt;10109&lt;/zsxmDm&gt;
+				&lt;zspmDm&gt;101090101&lt;/zspmDm&gt;
+				&lt;skssqq&gt;2014-10-01&lt;/skssqq&gt;
+				&lt;skssqz&gt;2014-10-31&lt;/skssqz&gt;
+				&lt;jkqx&gt;2014-11-15&lt;/jkqx&gt;
+				&lt;yjkqx&gt;2014-11-15&lt;/yjkqx&gt;
+				&lt;ynse&gt;100.0&lt;/ynse&gt;
+				&lt;yqjnse&gt;100.0&lt;/yqjnse&gt;
+				&lt;yqjkqx&gt;2014-11-28&lt;/yqjkqx&gt;
+			&lt;/yzxxGridlb&gt;
+		&lt;/yzxxGrid&gt;
+	&lt;/yqjnsksqb&gt;
+&lt;/taxML&gt;</request>
+		<procStartOrgID>14406821200</procStartOrgID>
+		<userList>
+<userListlb>
+				<swryDm></swryDm>
+				<swryxm></swryxm>
+				<jgDm>24406060700</jgDm>
+				<jgmc></jgmc>
+				<gwDm>244900000001</gwDm>
+				<gwmc></gwmc>
+				<swrysfDm></swrysfDm>
+				<gwxh></gwxh>
+			</userListlb>
+</userList>
+		<procStartPerformer>24406060735</procStartPerformer>
+	</qdywshRequestVO>
+</taxML>
+]]></body>
+</service>

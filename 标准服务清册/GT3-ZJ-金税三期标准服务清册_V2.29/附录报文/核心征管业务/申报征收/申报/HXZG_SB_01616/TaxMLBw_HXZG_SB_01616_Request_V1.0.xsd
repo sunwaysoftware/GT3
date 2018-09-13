@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2011 rel. 2 (http://www.altova.com) by pl (css) -->
+<!-- 被2012 () 使用XMLSpy v编辑的 (http://www.altova.com) by -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:include schemaLocation="TaxMLPublicSBType.xsd"/>
+	<xs:include schemaLocation="TaxMLBw_ccssb_V2.0.xsd"/>
+	<xs:complexType name="HXZGSB01616Request">
+		<xs:annotation>
+			<xs:documentation>车船税申报查询车船税信息</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="djxh" type="djxh">
+						<xs:annotation>
+							<xs:documentation>登记序号</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="skssqq" type="skssqq" nillable="true">
+						<xs:annotation>
+							<xs:documentation>税款所属期起</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="skssqz" type="skssqz" nillable="true">
+						<xs:annotation>
+							<xs:documentation>税款所属期止</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="cbsbh" type="cbsbh" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>船舶识别号</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="clsbdh" type="clsbdh" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>车辆识别到号</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="nsqxDm" type="nsqxDm" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>纳税期限代码</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="jylxDm" type="jylxDm" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>交易类型代码01车辆02船舶</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+</xs:schema>

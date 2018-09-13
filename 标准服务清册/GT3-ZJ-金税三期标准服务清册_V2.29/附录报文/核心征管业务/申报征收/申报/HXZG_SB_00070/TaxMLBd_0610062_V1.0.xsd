@@ -1,0 +1,468 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2013 (http://www.altova.com) by  () -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:include schemaLocation="TaxMLPublicType.xsd"/>
+	<xs:complexType name="gxsbbywbw">
+		<xs:annotation>
+			<xs:documentation>《中华人民共和国企业年度关联业务往来报告表表三购销表》业务报文</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="gxsbb">
+						<xs:annotation>
+							<xs:documentation>《中华人民共和国企业年度关联业务往来报告表表三购销表》</xs:documentation>
+						</xs:annotation>
+						<xs:complexType>
+							<xs:sequence>
+								<xs:element name="gxsbbFrom" type="gxsbbFrom">
+									<xs:annotation>
+										<xs:documentation>购销表数据扩展信息</xs:documentation>
+									</xs:annotation>
+								</xs:element>
+								<xs:element name="gxsbbckjwglGrid">
+									<xs:annotation>
+										<xs:documentation>购销表数据-出口境外关联对应Grid</xs:documentation>
+									</xs:annotation>
+									<xs:complexType>
+										<xs:sequence maxOccurs="unbounded">
+											<xs:element name="gxsbbckjwglGridlb" type="gxsbbckjwglGridlbVO">
+												<xs:annotation>
+													<xs:documentation>购销表数据-出口境外关联列表</xs:documentation>
+												</xs:annotation>
+											</xs:element>
+										</xs:sequence>
+									</xs:complexType>
+								</xs:element>
+								<xs:element name="gxsbbckjwfglGrid">
+									<xs:annotation>
+										<xs:documentation>购销表数据-出口境外非关联对应Grid</xs:documentation>
+									</xs:annotation>
+									<xs:complexType>
+										<xs:sequence maxOccurs="unbounded">
+											<xs:element name="gxsbbckjwfglGridlb" type="gxsbbckjwfglGridlbVO">
+												<xs:annotation>
+													<xs:documentation>购销表数据-出口境外非关联列表</xs:documentation>
+												</xs:annotation>
+											</xs:element>
+										</xs:sequence>
+									</xs:complexType>
+								</xs:element>
+								<xs:element name="gxsbbjkjwglGrid">
+									<xs:annotation>
+										<xs:documentation>购销表数据-进口境外关联对应Grid</xs:documentation>
+									</xs:annotation>
+									<xs:complexType>
+										<xs:sequence maxOccurs="unbounded">
+											<xs:element name="gxsbbjkjwglGridlb" type="gxsbbjkjwglGridlbVO">
+												<xs:annotation>
+													<xs:documentation>购销表数据-进口境外关联列表</xs:documentation>
+												</xs:annotation>
+											</xs:element>
+										</xs:sequence>
+									</xs:complexType>
+								</xs:element>
+								<xs:element name="gxsbbjkjwfglGrid">
+									<xs:annotation>
+										<xs:documentation>购销表数据-进口境外非关联对应Grid</xs:documentation>
+									</xs:annotation>
+									<xs:complexType>
+										<xs:sequence maxOccurs="unbounded">
+											<xs:element name="gxsbbjkjwfglGridlb" type="gxsbbjkjwfglGridlbVO">
+												<xs:annotation>
+													<xs:documentation>购销表数据-进口境外非关联列表</xs:documentation>
+												</xs:annotation>
+											</xs:element>
+										</xs:sequence>
+									</xs:complexType>
+								</xs:element>
+							</xs:sequence>
+						</xs:complexType>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="gxsbb">
+		<xs:annotation>
+			<xs:documentation>《中华人民共和国企业年度关联业务往来报告表表三购销表》</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="gxsbbFrom" type="gxsbbFrom">
+				<xs:annotation>
+					<xs:documentation>购销表数据扩展信息</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="gxsbbckjwglGrid">
+				<xs:annotation>
+					<xs:documentation>购销表数据-出口境外关联对应Grid</xs:documentation>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:sequence maxOccurs="unbounded">
+						<xs:element name="gxsbbckjwglGridlb" type="gxsbbckjwglGridlbVO">
+							<xs:annotation>
+								<xs:documentation>购销表数据-出口境外关联列表</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="gxsbbckjwfglGrid">
+				<xs:annotation>
+					<xs:documentation>购销表数据-出口境外非关联对应Grid</xs:documentation>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:sequence maxOccurs="unbounded">
+						<xs:element name="gxsbbckjwfglGridlb" type="gxsbbckjwfglGridlbVO">
+							<xs:annotation>
+								<xs:documentation>购销表数据-出口境外非关联列表</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="gxsbbjkjwglGrid">
+				<xs:annotation>
+					<xs:documentation>购销表数据-进口境外关联对应Grid</xs:documentation>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:sequence maxOccurs="unbounded">
+						<xs:element name="gxsbbjkjwglGridlb" type="gxsbbjkjwglGridlbVO">
+							<xs:annotation>
+								<xs:documentation>购销表数据-进口境外关联列表</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="gxsbbjkjwfglGrid">
+				<xs:annotation>
+					<xs:documentation>购销表数据-进口境外非关联对应Grid</xs:documentation>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:sequence maxOccurs="unbounded">
+						<xs:element name="gxsbbjkjwfglGridlb" type="gxsbbjkjwfglGridlbVO">
+							<xs:annotation>
+								<xs:documentation>购销表数据-进口境外非关联列表</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="gxsbbckjwglGrid">
+		<xs:annotation>
+			<xs:documentation>购销表数据-出口境外关联对应Grid</xs:documentation>
+		</xs:annotation>
+		<xs:sequence maxOccurs="unbounded">
+			<xs:element name="gxsbbckjwglGridlb" type="gxsbbckjwglGridlbVO">
+				<xs:annotation>
+					<xs:documentation>购销表数据-出口境外关联列表</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="gxsbbckjwglGridlbVO">
+		<xs:annotation>
+			<xs:documentation>购销表数据-出口境外关联对应明细</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="sfjwglf" type="sfjwglf" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>是否境外关联方"Y"/"N"</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="dxlx" type="dxlx" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>对象类型境外(2出口)/境内(1进口)</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="dxmc" type="dxmc" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>境外/境内关联方名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="gjhdq" type="gjhdq" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>国家或地区</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jyje" type="jyje" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>交易金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="djff" type="djff" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>定价方法</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bz" type="bz" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>备注</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="gxsbbckjwfglGrid">
+		<xs:annotation>
+			<xs:documentation>购销表数据-出口境外非关联对应Grid</xs:documentation>
+		</xs:annotation>
+		<xs:sequence maxOccurs="unbounded">
+			<xs:element name="gxsbbckjwfglGridlb" type="gxsbbckjwfglGridlbVO">
+				<xs:annotation>
+					<xs:documentation>购销表数据-出口境外非关联列表</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="gxsbbckjwfglGridlbVO">
+		<xs:annotation>
+			<xs:documentation>购销表数据-出口境外非关联对应明细</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="sfjwglf" type="sfjwglf" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>是否境外关联方"Y"/"N"</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="dxlx" type="dxlx" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>对象类型境外(2出口)/境内(1进口)</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="dxmc" type="dxmc" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>境外/境内关联方名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="gjhdq" type="gjhdq" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>国家或地区</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jyje" type="jyje" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>交易金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="djff" type="djff" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>定价方法</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bz" type="bz" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>备注</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="gxsbbjkjwglGrid">
+		<xs:annotation>
+			<xs:documentation>购销表数据-进口境外关联对应Grid</xs:documentation>
+		</xs:annotation>
+		<xs:sequence maxOccurs="unbounded">
+			<xs:element name="gxsbbjkjwglGridlb" type="gxsbbjkjwglGridlbVO">
+				<xs:annotation>
+					<xs:documentation>购销表数据-进口境外关联列表</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="gxsbbjkjwglGridlbVO">
+		<xs:annotation>
+			<xs:documentation>购销表数据-进口境外关联对应明细</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="sfjwglf" type="sfjwglf" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>是否境外关联方"Y"/"N"</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="dxlx" type="dxlx" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>对象类型境外(2出口)/境内(1进口)</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="dxmc" type="dxmc" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>境外/境内关联方名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="gjhdq" type="gjhdq" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>国家或地区</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jyje" type="jyje" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>交易金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="djff" type="djff" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>定价方法</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bz" type="bz" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>备注</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="gxsbbjkjwfglGrid">
+		<xs:annotation>
+			<xs:documentation>购销表数据-进口境外非关联对应Grid</xs:documentation>
+		</xs:annotation>
+		<xs:sequence maxOccurs="unbounded">
+			<xs:element name="gxsbbjkjwfglGridlb" type="gxsbbjkjwfglGridlbVO">
+				<xs:annotation>
+					<xs:documentation>购销表数据-进口境外非关联列表</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="gxsbbjkjwfglGridlbVO">
+		<xs:annotation>
+			<xs:documentation>购销表数据-进口境外非关联对应明细</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="sfjwglf" type="sfjwglf" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>是否境外关联方"Y"/"N"</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="dxlx" type="dxlx" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>对象类型境外(2出口)/境内(1进口)</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="dxmc" type="dxmc" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>境外/境内关联方名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="gjhdq" type="gjhdq" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>国家或地区</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jyje" type="jyje" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>交易金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="djff" type="djff" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>定价方法</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bz" type="bz" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>备注</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="gxsbbFrom">
+		<xs:annotation>
+			<xs:documentation>购销表数据扩展</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="grze" type="grze" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>购入总额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jkgr" type="jkgr" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>进口购入</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jkgrFgljk" type="jkgrFgljk" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>进口购入非关联进口</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jkgrGljk" type="jkgrGljk" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>进口购入关联进口</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="gngr" type="gngr" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>国内购入</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="gngrFglgr" type="gngrFglgr" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>国内购入非关联购入</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="gngrGlgr" type="gngrGlgr" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>国内购入关联购入</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="xsze" type="xsze" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>销售总额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ckxs" type="ckxs" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>出口销售</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ckxsFglck" type="ckxsFglck" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>出口销售非关联出口</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ckxsGlck" type="ckxsGlck" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>出口销售关联出口</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="gnxs" type="gnxs" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>国内销售</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="gnxsFglxs" type="gnxsFglxs" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>国内销售非关联销售</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="gnxsGlxs" type="gnxsGlxs" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>国内销售关联销售</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="lljgGlje" type="lljgGlje" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>来料加工关联金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="lljgFglje" type="lljgFglje" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>来料加工非关联金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qtmyfsGlje" type="qtmyfsGlje" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>其他贸易方式关联金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qtmyfsFglje" type="qtmyfsFglje" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>其他贸易方式非关联金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

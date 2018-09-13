@@ -1,0 +1,397 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2010 rel. 3 (http://www.altova.com) by xuxin (csstj) -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:include schemaLocation="TaxMLPublicType.xsd"/>
+	<xs:complexType name="fjmqysdsndnssbbsyyjssbqyywbw">
+		<xs:annotation>
+			<xs:documentation>《中华人民共和国非居民企业所得税年度纳税申报表（适用于据实申报企业）》业务报文</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="fjmqysdsndnssbbsyyjssbqy">
+						<xs:annotation>
+							<xs:documentation>《中华人民共和国非居民企业所得税年度纳税申报表（适用于据实申报企业）》</xs:documentation>
+						</xs:annotation>
+						<xs:complexType>
+							<xs:sequence>
+								<xs:element name="headFrom" type="sbbheadkz1VO">
+									<xs:annotation>
+										<xs:documentation>表头信息</xs:documentation>
+									</xs:annotation>
+								</xs:element>
+								<xs:element name="fjmqysdsndnssbbsyyjssbqyFrom" type="fjmqysdsndnssbbsyyjssbqyFrom">
+									<xs:annotation>
+										<xs:documentation>中华人民共和国非居民企业所得税年度纳税申报表（适用于据实申报企业）申报信息</xs:documentation>
+									</xs:annotation>
+								</xs:element>
+								<xs:element name="slxxFrom" type="slxxFrom">
+									<xs:annotation>
+										<xs:documentation>受理信息</xs:documentation>
+									</xs:annotation>
+								</xs:element>
+							</xs:sequence>
+						</xs:complexType>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="fjmqysdsndnssbbsyyjssbqy">
+		<xs:annotation>
+			<xs:documentation>《中华人民共和国非居民企业所得税年度纳税申报表（适用于据实申报企业）》</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="headFrom" type="sbbheadkz1VO">
+				<xs:annotation>
+					<xs:documentation>表头信息</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="fjmqysdsndnssbbsyyjssbqyFrom" type="fjmqysdsndnssbbsyyjssbqyFrom">
+				<xs:annotation>
+					<xs:documentation>中华人民共和国非居民企业所得税季度纳税申报表（适用于据实申报企业）申报信息</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="slxxFrom" type="slxxFrom">
+				<xs:annotation>
+					<xs:documentation>受理信息</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="fjmqysdsndnssbbsyyjssbqyFrom">
+		<xs:annotation>
+			<xs:documentation>非居民企业所得税年度纳税申报表（适用于据实申报企业）申报信息</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="jmgdqmcjdm" type="jmgdqmcjdm" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>居民国地区名称及代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yysrZzje" type="yysrZzje" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>营业收入账载金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yfsbYysrje" type="yfsbYysrje" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>依法申报营业收入金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yysrBz" type="yysrBz" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>营业收入备注</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yycbzzje" type="yycbzzje" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>营业成本账载金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yfsbYycbje" type="yfsbYycbje" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>依法申报营业成本金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yycbbz" type="yycbbz" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>营业成本备注</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yysjFjzzje" type="yysjFjzzje" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>营业税金及附加账载金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yfsbYysjjfjje" type="yfsbYysjjfjje" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>依法申报营业税金及附加金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yysjFjbz" type="yysjFjbz" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>营业税金及附加备注</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yyfyZzje" type="yyfyZzje" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>营业费用账载金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yfsbYyfyje" type="yfsbYyfyje" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>依法申报营业费用金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yyfyBz" type="yyfyBz" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>营业费用备注</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="glfyzzje" type="glfyzzje" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>管理费用账载金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yfsbGlfyje" type="yfsbGlfyje" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>依法申报管理费用金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="glfybz" type="glfybz" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>管理费用备注</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="cwfyZzje" type="cwfyZzje" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>财务费用账载金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yfsbCwfyje" type="yfsbCwfyje" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>依法申报财务费用金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="cwfybz" type="cwfybz" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>财务费用备注</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yylrZzje" type="yylrZzje" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>营业利润账载金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yfsbYylrje" type="yfsbYylrje" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>依法申报营业利润金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yylrBz" type="yylrBz" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>营业利润备注</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yywSrzzje" type="yywSrzzje" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>营业外收入账载金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yfsbYywsrje" type="yfsbYywsrje" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>依法申报营业外收入金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yywsrBz" type="yywsrBz" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>营业外收入备注</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yywZczzje" type="yywZczzje" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>营业外支出账载金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yfsbYywzcje" type="yfsbYywzcje" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>依法申报营业外支出金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yywZcBz" type="yywZcBz" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>营业外支出备注</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="lrkszezzje" type="lrkszezzje" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>利润亏损总额账载金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yfsbLrksze" type="yfsbLrksze" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>依法申报利润亏损总额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="lrkszebz" type="lrkszebz" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>利润亏损总额备注</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qtysxmDzjezzje" type="qtysxmDzjezzje" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>其他应税项目调增减额账载金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yfsbQtysxmdzje" type="yfsbQtysxmdzje" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>依法申报其他应税项目调增减额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qtysxmDzjeBz" type="qtysxmDzjeBz" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>其他应税项目调增减额备注</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yfsbAgdkmbYqndksje" type="yfsbAgdkmbYqndksje" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>依法申报按规定可弥补的以前年度亏损金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="agdkmbYqndksebz" type="agdkmbYqndksebz" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>按规定可弥补的以前年度亏损额备注</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yfsbYnssde" type="yfsbYnssde" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>依法申报应纳税所得额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qyynssdebz" type="qyynssdebz">
+				<xs:annotation>
+					<xs:documentation>企业应纳税所得额备注</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="fdsl" type="fdsl" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>法定税率</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="fdslBz" type="fdslBz" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>法定税率备注</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yfsbYnqysdseje" type="yfsbYnqysdseje" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>依法申报应纳企业所得税额金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ynqySdsebz" type="ynqySdsebz" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>应纳企业所得税额备注</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sjzsl" type="sjzsl" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>实际征收率</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sjzslbz" type="sjzslbz" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>实际征收率备注</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yfsbSjynqySdse" type="yfsbSjynqySdse" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>依法申报实际应纳企业所得税额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sjynsdsebz" type="sjynsdsebz" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>实际应纳所得税额备注</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yfsbJmqysdse" type="yfsbJmqysdse" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>依法申报减免企业所得税额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jmqysdseBz" type="jmqysdseBz" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>减（免）企业所得税额备注</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yfsbjwSdybqysdse" type="yfsbjwSdybqysdse" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>依法申报境外所得应补企业所得税额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jwsdybsdsebz" type="jwsdybsdsebz" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>境外所得应补所得税额备注</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yfsbjnWsjynqysdse" type="yfsbjnWsjynqysdse" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>依法申报境内外实际应纳企业所得税额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jnwsjynsdsebz" type="jnwsjynsdsebz" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>境内外实际应纳所得税额备注</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yfsbBndyyjqysdse" type="yfsbBndyyjqysdse" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>依法申报本年度已预缴企业所得税额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yfsbYqndsyybtQysdse" type="yfsbYqndsyybtQysdse" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>依法申报以前年度损益应补退企业所得税额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yqndSyybTQysdsebz" type="yqndSyybTQysdsebz" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>以前年度损益应补退企业所得税额备注</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bndyyjqysdsebz" type="bndyyjqysdsebz" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>本年度已预缴企业所得税额备注</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yfsbBndybtqysdse" type="yfsbBndybtqysdse" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>依法申报本年度应补退企业所得税额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bndybtqysdsebz" type="bndybtqysdsebz" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>本年度应补退企业所得税额备注</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="slxxFrom">
+		<xs:annotation>
+			<xs:documentation>受理信息</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="slrDm" type="slrDm">
+				<xs:annotation>
+					<xs:documentation>受理人</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="slrq" type="slrq">
+				<xs:annotation>
+					<xs:documentation>受理日期</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bsrymc" type="bsrymc">
+				<xs:annotation>
+					<xs:documentation>办税人</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="dljbr" type="dljbr">
+				<xs:annotation>
+					<xs:documentation>代理经办人</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="dljbrzyzjhm" type="dljbrzyzjhm">
+				<xs:annotation>
+					<xs:documentation>代理经办人执业证件号码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="dlsbrq" type="dlsbrq">
+				<xs:annotation>
+					<xs:documentation>代理申报日期</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

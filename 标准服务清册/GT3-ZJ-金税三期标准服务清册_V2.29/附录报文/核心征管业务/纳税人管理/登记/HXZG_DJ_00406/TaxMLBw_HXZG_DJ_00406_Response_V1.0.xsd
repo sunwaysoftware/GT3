@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2013 (http://www.altova.com) by  () -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:complexType name="HXZGDJ00406Response">
+		<xs:annotation>
+			<xs:documentation>根据登记序号查询纳税人扣缴税款登记信息</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+			<xs:element name="kjywrmc" type="kjywrmc">
+				<xs:annotation>
+					<xs:documentation>扣缴义务人名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="kjywfsrq" type="kjywfsrq">
+				<xs:annotation>
+					<xs:documentation>扣缴义务发生日期</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="kjnrjszGrid" type="KjnrjszGrid">
+				<xs:annotation>
+					<xs:documentation>扣缴义务人名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+		</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="KjnrjszGrid">
+		<xs:annotation>
+			<xs:documentation>扣缴税款内容及税种信息</xs:documentation>
+		</xs:annotation>
+		<xs:sequence minOccurs="0" maxOccurs="unbounded">
+			<xs:element name="kjnrjszGridlb" type="KjnrjszxxVO">
+				<xs:annotation>
+					<xs:documentation>扣缴税款内容及税种信息</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="KjnrjszxxVO">
+		<xs:annotation>
+			<xs:documentation>扣缴税款内容及税种信息</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+				<xs:annotation>
+					<xs:documentation>扣缴税款内容及税种信息</xs:documentation>
+				</xs:annotation>
+                         <xs:element name="dkdjdsdjskywnr" type="dkdjdsdjskywnr">
+				<xs:annotation>
+					<xs:documentation>代扣代缴代收代缴税款业务内容</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="dkdjdsdjsz" type="dkdjdsdjzsxmDm">
+				<xs:annotation>
+					<xs:documentation>代扣代缴代收代缴税款税种</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

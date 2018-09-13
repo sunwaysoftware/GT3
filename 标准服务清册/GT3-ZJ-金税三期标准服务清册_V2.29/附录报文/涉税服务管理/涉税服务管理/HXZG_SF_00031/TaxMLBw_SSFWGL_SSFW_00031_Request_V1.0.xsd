@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 被2012 () 使用XMLSpy v编辑的 (http://www.altova.com) by -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:include schemaLocation="TaxMLPublicSFType.xsd"/>
+	<xs:complexType name="SSFWGLSSFW00031Request">
+		<xs:annotation>
+			<xs:documentation>查询税务师事务所行政登记信息请求报文</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="shxydm" type="shxydm">
+						<xs:annotation>
+							<xs:documentation>社会信用代码</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="zsfBs" type="bz1">
+						<xs:annotation>
+							<xs:documentation>总分所标识</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="cxbz" type="cxbz">
+						<xs:annotation>
+							<xs:documentation>查询标志</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+</xs:schema>

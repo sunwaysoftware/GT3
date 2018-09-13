@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2010 rel. 3 (http://www.altova.com) by xuxin (csstj) -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:complexType name="zcjzzbxmztmxsbbywbw">
+		<xs:annotation>
+			<xs:documentation>《中华人民共和国企业所得税年度纳税申报表附表十资产减值准备项目调整明细表》业务报文</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="zczjtxnstzmxsbb">
+						<xs:annotation>
+							<xs:documentation>《中华人民共和国企业所得税年度纳税申报表附表十资产减值准备项目调整明细表》</xs:documentation>
+						</xs:annotation>
+						<xs:complexType>
+							<xs:sequence>
+								<xs:element name="zcjzzbxmztmxsbbGrid">
+									<xs:annotation>
+										<xs:documentation>资产减值准备项目调整明细表列表</xs:documentation>
+									</xs:annotation>
+									<xs:complexType>
+										<xs:sequence maxOccurs="unbounded">
+											<xs:element name="zcjzzbxmztmxsbbGridlb" type="zcjzzbxmztmxsbbGridlbVO">
+												<xs:annotation>
+													<xs:documentation>资产减值准备项目调整明细表明细列表</xs:documentation>
+												</xs:annotation>
+											</xs:element>
+										</xs:sequence>
+									</xs:complexType>
+								</xs:element>
+							</xs:sequence>
+						</xs:complexType>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="zcjzzbxmztmxsbb">
+		<xs:annotation>
+			<xs:documentation>《中华人民共和国企业所得税年度纳税申报表附表十资产减值准备项目调整明细表》</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="zcjzzbxmztmxsbbGrid">
+				<xs:annotation>
+					<xs:documentation>资产减值准备项目调整明细表列表</xs:documentation>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:sequence maxOccurs="unbounded">
+						<xs:element name="zcjzzbxmztmxsbbGridlb" type="zcjzzbxmztmxsbbGridlbVO">
+							<xs:annotation>
+								<xs:documentation>资产减值准备项目调整明细表明细列表</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="zcjzzbxmztmxsbbGrid">
+		<xs:annotation>
+			<xs:documentation>资产减值准备项目调整明细表申报信息</xs:documentation>
+		</xs:annotation>
+		<xs:sequence maxOccurs="unbounded">
+			<xs:element name="zcjzzbxmztmxsbbGridlb" type="zcjzzbxmztmxsbbGridlbVO">
+				<xs:annotation>
+					<xs:documentation>资产折旧、摊销纳税调整明细表明细列表</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="zcjzzbxmztmxsbbGridlbVO">
+		<xs:annotation>
+			<xs:documentation>资产减值准备项目调整明细表明细列表</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="ewbhxh" type="ewbhxh">
+				<xs:annotation>
+					<xs:documentation>二维表行序号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="hmc" type="hmc">
+				<xs:annotation>
+					<xs:documentation>行名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qcye" type="qcye">
+				<xs:annotation>
+					<xs:documentation>期初余额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bqzhe" type="bqzhe">
+				<xs:annotation>
+					<xs:documentation>本期转回额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bqjte" type="bqjte">
+				<xs:annotation>
+					<xs:documentation>本期计提额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qmye" type="qmye">
+				<xs:annotation>
+					<xs:documentation>期末余额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="nstze" type="nstze">
+				<xs:annotation>
+					<xs:documentation>纳税调整额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

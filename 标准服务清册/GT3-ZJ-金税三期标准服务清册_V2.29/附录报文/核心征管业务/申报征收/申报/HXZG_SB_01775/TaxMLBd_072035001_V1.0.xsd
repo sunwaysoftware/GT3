@@ -1,0 +1,1013 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 被2012 () 使用XMLSpy v编辑的 (http://www.altova.com) by -->
+<!-- edited with XMLSpy v2010 rel. 3 (http://www.altova.com) by liuwei (css) -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:complexType name="tdzzsqshd">
+		<xs:annotation>
+			<xs:documentation>土地增值税清算核定</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="tdzzshdcbForm" type="tdzzshdcbForm">
+						<xs:annotation>
+							<xs:documentation>核定成本信息</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="tdzzsqshdzslForm" type="tdzzsqshdzslForm">
+						<xs:annotation>
+							<xs:documentation>核定征收率信息</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="nsrxxForm" type="nsrxxForm">
+						<xs:annotation>
+							<xs:documentation>纳税人基本信息</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="hdrxxForm" type="hdrxxForm">
+						<xs:annotation>
+							<xs:documentation>核定人信息</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="ptzzjmxxForhdGrid">
+						<xs:annotation>
+							<xs:documentation>普通住宅减免信息Grid</xs:documentation>
+						</xs:annotation>
+						<xs:complexType>
+							<xs:sequence minOccurs="0" maxOccurs="unbounded">
+								<xs:element name="ptzzjmxxForhdGridlb" type="ptzzjmxxForhdGridlbVO">
+									<xs:annotation>
+										<xs:documentation>普通住宅减免信息Grid</xs:documentation>
+									</xs:annotation>
+								</xs:element>
+							</xs:sequence>
+						</xs:complexType>
+					</xs:element>
+					<xs:element name="fptzzjmxxForhdGrid">
+						<xs:annotation>
+							<xs:documentation>非普通住宅减免信息Grid</xs:documentation>
+						</xs:annotation>
+						<xs:complexType>
+							<xs:sequence minOccurs="0" maxOccurs="unbounded">
+								<xs:element name="fptzzjmxxForhdGridlb" type="fptzzjmxxForhdGridlbVO">
+									<xs:annotation>
+										<xs:documentation>非普通住宅减免信息Grid</xs:documentation>
+									</xs:annotation>
+								</xs:element>
+							</xs:sequence>
+						</xs:complexType>
+					</xs:element>
+					<xs:element name="qtfclxjmxxForhdGrid">
+						<xs:annotation>
+							<xs:documentation>其他房产类型减免信息Grid</xs:documentation>
+						</xs:annotation>
+						<xs:complexType>
+							<xs:sequence minOccurs="0" maxOccurs="unbounded">
+								<xs:element name="qtfclxjmxxForhdGridlb" type="qtfclxjmxxForhdGridlbVO">
+									<xs:annotation>
+										<xs:documentation>其他房产类型减免信息Grid</xs:documentation>
+									</xs:annotation>
+								</xs:element>
+							</xs:sequence>
+						</xs:complexType>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="tdzzsqshdzslForm">
+		<xs:annotation>
+			<xs:documentation>征收率</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="zrfdcsrzePtzz" type="je">
+				<xs:annotation>
+					<xs:documentation>转让房地产收入总额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zrfdcsrzeFptzz" type="je">
+				<xs:annotation>
+					<xs:documentation>转让房地产收入总额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zrfdcsrzeQtlxfc" type="je">
+				<xs:annotation>
+					<xs:documentation>转让房地产收入总额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zrfdcsrzeHj" type="je">
+				<xs:annotation>
+					<xs:documentation>合计</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="hbsrPtzz" type="je">
+				<xs:annotation>
+					<xs:documentation>货币收入</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="hbsrFptzz" type="je">
+				<xs:annotation>
+					<xs:documentation>货币收入</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="hbsrQtlxfc" type="je">
+				<xs:annotation>
+					<xs:documentation>货币收入</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="hbsrHj" type="je">
+				<xs:annotation>
+					<xs:documentation>合计</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="swsrjqtsrPtzz" type="je">
+				<xs:annotation>
+					<xs:documentation>实物收入及其他收入</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="swsrjqtsrFptzz" type="je">
+				<xs:annotation>
+					<xs:documentation>实物收入及其他收入</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="swsrjqtsrQtlxfc" type="je">
+				<xs:annotation>
+					<xs:documentation>实物收入及其他收入</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="swsrjqtsrHj" type="je">
+				<xs:annotation>
+					<xs:documentation>合计</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="stxssrPtzz" type="je">
+				<xs:annotation>
+					<xs:documentation>视同销售收入</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="stxssrFptzz" type="je">
+				<xs:annotation>
+					<xs:documentation>视同销售收入</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="stxssrQtlxfc" type="je">
+				<xs:annotation>
+					<xs:documentation>视同销售收入</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="stxssrHj" type="je">
+				<xs:annotation>
+					<xs:documentation>合计</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="syslPtzz" type="je">
+				<xs:annotation>
+					<xs:documentation>核定征收率</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="syslFptzz" type="je">
+				<xs:annotation>
+					<xs:documentation>核定征收率</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="syslQtlxfc" type="je">
+				<xs:annotation>
+					<xs:documentation>核定征收率</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yjtdzzssePtzz" type="je">
+				<xs:annotation>
+					<xs:documentation>应缴土地增值税税额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yjtdzzsseFptzz" type="je">
+				<xs:annotation>
+					<xs:documentation>应缴土地增值税税额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yjtdzzsseQtlxfc" type="je">
+				<xs:annotation>
+					<xs:documentation>应缴土地增值税税额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yjtdzzsseHj" type="je">
+				<xs:annotation>
+					<xs:documentation>合计</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jmsePtzz" type="je">
+				<xs:annotation>
+					<xs:documentation>减免税额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jmseFptzz" type="je">
+				<xs:annotation>
+					<xs:documentation>减免税额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jmseQtlxfc" type="je">
+				<xs:annotation>
+					<xs:documentation>减免税额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jmseHj" type="je">
+				<xs:annotation>
+					<xs:documentation>合计</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yijtdzzssePtzz" type="je">
+				<xs:annotation>
+					<xs:documentation>已缴土地增值税税额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yijtdzzsseFptzz" type="je">
+				<xs:annotation>
+					<xs:documentation>已缴土地增值税税额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yijtdzzsseQtlxfc" type="je">
+				<xs:annotation>
+					<xs:documentation>已缴土地增值税税额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yijtdzzsseHj" type="je">
+				<xs:annotation>
+					<xs:documentation>合计</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ybtdzzssePtzz" type="je">
+				<xs:annotation>
+					<xs:documentation>应补（退）土地增值税税额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ybtdzzsseFptzz" type="je">
+				<xs:annotation>
+					<xs:documentation>应补（退）土地增值税税额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ybtdzzsseQtlxfc" type="je">
+				<xs:annotation>
+					<xs:documentation>应补（退）土地增值税税额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ybtdzzsseHj" type="je">
+				<xs:annotation>
+					<xs:documentation>合计</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="tdzzshdcbForm">
+		<xs:annotation>
+			<xs:documentation>核定成本信息</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="zrfdcsrzePtzz" type="je">
+				<xs:annotation>
+					<xs:documentation>转让房地产收入总额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zrfdcsrzeFptzz" type="je">
+				<xs:annotation>
+					<xs:documentation>转让房地产收入总额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zrfdcsrzeQtlxfc" type="je">
+				<xs:annotation>
+					<xs:documentation>转让房地产收入总额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zrfdcsrzeHj" type="je">
+				<xs:annotation>
+					<xs:documentation>合计</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="hbsrPtzz" type="je">
+				<xs:annotation>
+					<xs:documentation>货币收入</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="hbsrFptzz" type="je">
+				<xs:annotation>
+					<xs:documentation>货币收入</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="hbsrQtlxfc" type="je">
+				<xs:annotation>
+					<xs:documentation>货币收入</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="hbsrHj" type="je">
+				<xs:annotation>
+					<xs:documentation>合计</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="swsrjqtsrPtzz" type="je">
+				<xs:annotation>
+					<xs:documentation>实物收入及其他收入</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="swsrjqtsrFptzz" type="je">
+				<xs:annotation>
+					<xs:documentation>实物收入及其他收入</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="swsrjqtsrQtlxfc" type="je">
+				<xs:annotation>
+					<xs:documentation>实物收入及其他收入</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="swsrjqtsrHj" type="je">
+				<xs:annotation>
+					<xs:documentation>合计</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="stxssrPtzz" type="je">
+				<xs:annotation>
+					<xs:documentation>视同销售收入</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="stxssrFptzz" type="je">
+				<xs:annotation>
+					<xs:documentation>视同销售收入</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="stxssrQtlxfc" type="je">
+				<xs:annotation>
+					<xs:documentation>视同销售收入</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="stxssrHj" type="je">
+				<xs:annotation>
+					<xs:documentation>合计</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="kcxmjehjPtzz" type="je">
+				<xs:annotation>
+					<xs:documentation>扣除项目金额合计</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="kcxmjehjFptzz" type="je">
+				<xs:annotation>
+					<xs:documentation>扣除项目金额合计</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="kcxmjehjQtlxfc" type="je">
+				<xs:annotation>
+					<xs:documentation>扣除项目金额合计</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="kcxmjeHj" type="je">
+				<xs:annotation>
+					<xs:documentation>合计</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qdtdsyqszfdjePtzz" type="je">
+				<xs:annotation>
+					<xs:documentation>取得土地使用权所支付金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qdtdsyqszfdjeFptzz" type="je">
+				<xs:annotation>
+					<xs:documentation>取得土地使用权所支付金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qdtdsyqszfdjeQtlxfc" type="je">
+				<xs:annotation>
+					<xs:documentation>取得土地使用权所支付金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qdtdsyqszfdjeHj" type="je">
+				<xs:annotation>
+					<xs:documentation>合计</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="fdckfcbPtzz" type="je">
+				<xs:annotation>
+					<xs:documentation>房地产开发成本</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="fdckfcbFptzz" type="je">
+				<xs:annotation>
+					<xs:documentation>房地产开发成本</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="fdckfcbQtlxfc" type="je">
+				<xs:annotation>
+					<xs:documentation>房地产开发成本</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="fdckfcbHj" type="je">
+				<xs:annotation>
+					<xs:documentation>合计</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="tdzyjcqbcfPtzz" type="je">
+				<xs:annotation>
+					<xs:documentation>土地征用及拆迁补偿费</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="tdzyjcqbcfFptzz" type="je">
+				<xs:annotation>
+					<xs:documentation>土地征用及拆迁补偿费</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="tdzyjcqbcfQtlxfc" type="je">
+				<xs:annotation>
+					<xs:documentation>土地征用及拆迁补偿费</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="tdzyjcqbcfHj" type="je">
+				<xs:annotation>
+					<xs:documentation>合计</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qqgcfPtzz" type="je">
+				<xs:annotation>
+					<xs:documentation>前期工程费</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qqgcfFptzz" type="je">
+				<xs:annotation>
+					<xs:documentation>前期工程费</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qqgcfQtlxfc" type="je">
+				<xs:annotation>
+					<xs:documentation>前期工程费</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qqgcfHj" type="je">
+				<xs:annotation>
+					<xs:documentation>合计</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jzazgcfPtzz" type="je">
+				<xs:annotation>
+					<xs:documentation>建筑安装工程费</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jzazgcfFptzz" type="je">
+				<xs:annotation>
+					<xs:documentation>建筑安装工程费</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jzazgcfQtlxfc" type="je">
+				<xs:annotation>
+					<xs:documentation>建筑安装工程费</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jzazgcfHj" type="je">
+				<xs:annotation>
+					<xs:documentation>合计</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jcssfPtzz" type="je">
+				<xs:annotation>
+					<xs:documentation>基础设施费</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jcssfFptzz" type="je">
+				<xs:annotation>
+					<xs:documentation>基础设施费</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jcssfQtlxfc" type="je">
+				<xs:annotation>
+					<xs:documentation>基础设施费</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jcssfHj" type="je">
+				<xs:annotation>
+					<xs:documentation>合计</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ggptssfPtzz" type="je">
+				<xs:annotation>
+					<xs:documentation>公共配套设施费</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ggptssfFptzz" type="je">
+				<xs:annotation>
+					<xs:documentation>公共配套设施费</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ggptssfQtlxfc" type="je">
+				<xs:annotation>
+					<xs:documentation>公共配套设施费</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ggptssfHj" type="je">
+				<xs:annotation>
+					<xs:documentation>合计</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="kfjjfyPtzz" type="je">
+				<xs:annotation>
+					<xs:documentation>开发间接费用</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="kfjjfyFptzz" type="je">
+				<xs:annotation>
+					<xs:documentation>开发间接费用</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="kfjjfyQtlxfc" type="je">
+				<xs:annotation>
+					<xs:documentation>开发间接费用</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="kfjjfyHj" type="je">
+				<xs:annotation>
+					<xs:documentation>合计</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="fdckffyPtzz" type="je">
+				<xs:annotation>
+					<xs:documentation>房地产开发费用</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="fdckffyFptzz" type="je">
+				<xs:annotation>
+					<xs:documentation>房地产开发费用</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="field130" type="je">
+				<xs:annotation>
+					<xs:documentation>房地产开发费用</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="fdckffyHj" type="je">
+				<xs:annotation>
+					<xs:documentation>合计</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="lxzcPtzz" type="je">
+				<xs:annotation>
+					<xs:documentation>利息支出</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="lxzcFptzz" type="je">
+				<xs:annotation>
+					<xs:documentation>利息支出</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="lxzcQtlxfc" type="je">
+				<xs:annotation>
+					<xs:documentation>利息支出</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="lxzcHj" type="je">
+				<xs:annotation>
+					<xs:documentation>合计</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qtfdckffyPtzz" type="je">
+				<xs:annotation>
+					<xs:documentation>其他房地产开发费用</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qtfdckffyFptzz" type="je">
+				<xs:annotation>
+					<xs:documentation>其他房地产开发费用</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qtfdckffyQtlxfc" type="je">
+				<xs:annotation>
+					<xs:documentation>其他房地产开发费用</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="fdckffyQtlxfc" type="je">
+				<xs:annotation>
+					<xs:documentation>其他房地产开发费用</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qtfdckffyHj" type="je">
+				<xs:annotation>
+					<xs:documentation>合计</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yzrfdcygdsjdPtzz" type="je">
+				<xs:annotation>
+					<xs:documentation>与转让房地产有关的税金</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yzrfdcygdsjdFptzz" type="je">
+				<xs:annotation>
+					<xs:documentation>与转让房地产有关的税金</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yzrfdcygdsjdQtlxfc" type="je">
+				<xs:annotation>
+					<xs:documentation>与转让房地产有关的税金</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yzrfdcygdsjdHj" type="je">
+				<xs:annotation>
+					<xs:documentation>合计</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yysPtzz" type="je">
+				<xs:annotation>
+					<xs:documentation>营业税</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yysFptzz" type="je">
+				<xs:annotation>
+					<xs:documentation>营业税</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yysQtlxfc" type="je">
+				<xs:annotation>
+					<xs:documentation>营业税</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yysHj" type="je">
+				<xs:annotation>
+					<xs:documentation>合计</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="cswhjsfPtzz" type="je">
+				<xs:annotation>
+					<xs:documentation>城市维护建设税</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="cswhjsfFptzz" type="je">
+				<xs:annotation>
+					<xs:documentation>城市维护建设税</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="cswhjsfQtlxfc" type="je">
+				<xs:annotation>
+					<xs:documentation>城市维护建设税</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="cswhjsfHj" type="je">
+				<xs:annotation>
+					<xs:documentation>合计</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jyffjPtzz" type="je">
+				<xs:annotation>
+					<xs:documentation>教育费附加</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jyffjFptzz" type="je">
+				<xs:annotation>
+					<xs:documentation>教育费附加</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jyffjQtlxfc" type="je">
+				<xs:annotation>
+					<xs:documentation>教育费附加</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jyffjHj" type="je">
+				<xs:annotation>
+					<xs:documentation>合计</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="czbgddqtkcxmPtzz" type="je">
+				<xs:annotation>
+					<xs:documentation>财政部规定的其他扣除项目</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="czbgddqtkcxmFptzz" type="je">
+				<xs:annotation>
+					<xs:documentation>财政部规定的其他扣除项目</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="czbgddqtkcxmQtlxfc" type="je">
+				<xs:annotation>
+					<xs:documentation>财政部规定的其他扣除项目</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="czbgddqtkcxmHj" type="je">
+				<xs:annotation>
+					<xs:documentation>合计</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="dsfyPtzz" type="je">
+				<xs:annotation>
+					<xs:documentation>代收费用</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="dsfyFptzz" type="je">
+				<xs:annotation>
+					<xs:documentation>代收费用</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="dsfyQtlxfc" type="je">
+				<xs:annotation>
+					<xs:documentation>代收费用</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="dsfyHj" type="je">
+				<xs:annotation>
+					<xs:documentation>合计</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zzePtzz" type="je">
+				<xs:annotation>
+					<xs:documentation>增值额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zzeFptzz" type="je">
+				<xs:annotation>
+					<xs:documentation>增值额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zzeQtlxfc" type="je">
+				<xs:annotation>
+					<xs:documentation>增值额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zzeHj" type="je">
+				<xs:annotation>
+					<xs:documentation>合计</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zzeykcxmjezbPtzz" type="je">
+				<xs:annotation>
+					<xs:documentation>增值额与扣除项目金额之比</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zzeykcxmjezbFptzz" type="je">
+				<xs:annotation>
+					<xs:documentation>增值额与扣除项目金额之比</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zzeykcxmjezbQtlxfc" type="je">
+				<xs:annotation>
+					<xs:documentation>增值额与扣除项目金额之比</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="syslPtzz" type="je">
+				<xs:annotation>
+					<xs:documentation>适用税率</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="syslFptzz" type="je">
+				<xs:annotation>
+					<xs:documentation>适用税率</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="syslQtlxfc" type="je">
+				<xs:annotation>
+					<xs:documentation>适用税率</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sskcxsPtzz" type="je">
+				<xs:annotation>
+					<xs:documentation>速算扣除系数</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sskcxsFptzz" type="je">
+				<xs:annotation>
+					<xs:documentation>速算扣除系数</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sskcxsQtlxfc" type="je">
+				<xs:annotation>
+					<xs:documentation>速算扣除系数</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yjtdzzssePtzz" type="je">
+				<xs:annotation>
+					<xs:documentation>应缴土地增值税税额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yjtdzzsseFptzz" type="je">
+				<xs:annotation>
+					<xs:documentation>应缴土地增值税税额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yjtdzzsseQtlxfc" type="je">
+				<xs:annotation>
+					<xs:documentation>应缴土地增值税税额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yjtdzzsseHj" type="je">
+				<xs:annotation>
+					<xs:documentation>合计</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jmsePtzz" type="je">
+				<xs:annotation>
+					<xs:documentation>减免税额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jmseFptzz" type="je">
+				<xs:annotation>
+					<xs:documentation>减免税额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jmseQtlxfc" type="je">
+				<xs:annotation>
+					<xs:documentation>减免税额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jmseHj" type="je">
+				<xs:annotation>
+					<xs:documentation>合计</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yijtdzzssePtzz" type="je">
+				<xs:annotation>
+					<xs:documentation>已缴土地增值税税额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yijtdzzsseFptzz" type="je">
+				<xs:annotation>
+					<xs:documentation>已缴土地增值税税额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yijtdzzsseQtlxfc" type="je">
+				<xs:annotation>
+					<xs:documentation>已缴土地增值税税额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yijtdzzsseHj" type="je">
+				<xs:annotation>
+					<xs:documentation>合计</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ybtdzzssePtzz" type="je">
+				<xs:annotation>
+					<xs:documentation>应补（退）土地增值税税额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ybtdzzsseFptzz" type="je">
+				<xs:annotation>
+					<xs:documentation>应补（退）土地增值税税额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ybtdzzsseQtlxfc" type="je">
+				<xs:annotation>
+					<xs:documentation>应补（退）土地增值税税额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ybtdzzsseHj" type="je">
+				<xs:annotation>
+					<xs:documentation>合计</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="nsrxxForm">
+		<xs:annotation>
+			<xs:documentation>纳税人基本信息</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="nsrsbh" type="nsrsbh">
+				<xs:annotation>
+					<xs:documentation>纳税人识别号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="uuid" type="uuid" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>UUID||uuid</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="djxh" type="djxh" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>登记序号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sfbz" type="sfbz" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>是否核定征收率标志</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="lcslid" type="lcslid" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>流程实例ID</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="nsrmc" type="nsrmc" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>纳税人名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="xmbh" type="xmbh" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>项目编号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="xmmc" type="xmmc" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>项目名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="xmdz" type="xmdz" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>项目地址</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ssqq" type="ssqq" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>项目开始日期</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="hdrxxForm">
+		<xs:annotation>
+			<xs:documentation>核定人信息</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="hdr" type="swryxm" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>核定人</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="hdswjg" type="swjgmc" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>核定机关</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="swjgDm" type="swjgDm" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>核定机关代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="hdrq" type="hdrq" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>核定日期</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="spjg" type="spjg" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>审批结果</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zfbz1" type="zfbz1" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>作废标志</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zfrq1" type="zfrq1" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>作废日期</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zfrDm" type="zfrDm" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>作废人代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="ptzzjmxxForhdGridlbVO">
+		<xs:annotation>
+			<xs:documentation>普通住宅减免信息Grid</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="ssjmxzDm" type="ssjmxzDm" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>税收减免性质代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ssjmxzjmse" type="jmse" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>税收减免性质对应的减免税额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="fptzzjmxxForhdGridlbVO">
+		<xs:annotation>
+			<xs:documentation>非普通住宅减免信息Grid</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="ssjmxzDm" type="ssjmxzDm" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>税收减免性质代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ssjmxzjmse" type="jmse" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>税收减免性质对应的减免税额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="qtfclxjmxxForhdGridlbVO">
+		<xs:annotation>
+			<xs:documentation>其他房产类型减免信息Grid</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="ssjmxzDm" type="ssjmxzDm" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>税收减免性质代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ssjmxzjmse" type="jmse" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>税收减免性质对应的减免税额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

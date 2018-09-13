@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 被2011 rel. 2 sp1 (TeaM DJiNN) 使用XMLSpy vTeaM DJiNN编辑的 (http://www.altova.com) by -->
+<!-- edited with XMLSpy v2010 (http://www.altova.com) by MESMERiZE (MiZE) -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:include schemaLocation="TaxMLPublicType.xsd"/>
+	<xs:include schemaLocation="TaxMLBd_0610133_V1.0.xsd"/>
+	<xs:include schemaLocation="TaxMLBd_0610136_V1.0.xsd"/>
+	<xs:include schemaLocation="TaxMLBd_tydkdj_0610572_V1.0.xsd"/>
+	<xs:include schemaLocation="TaxMLBd_tydkdj_0610575_V1.0.xsd"/>
+	<xs:include schemaLocation="TaxMLBd_0610140_V1.0.xsd"/>
+	<xs:complexType name="tydkdjdsdjsbywbw">
+		<xs:annotation>
+			<xs:documentation>《通用代扣代缴、代收代缴申报》业务报文</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="dkdjdsdjskbgb" type="dkdjdsdjskbg">
+						<xs:annotation>
+							<xs:documentation>《代扣代缴、代收代缴税款报告表》</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="dkdjdsdjccsmxb" type="dkdjdsdjccsmxb" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>代扣代缴、代收代缴车船税明细报告表</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="dkdjdsdjdkdszy" type="dkdjdsdjdkdszy" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>中华人民共和国税收缴款书（代扣代收专用）</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="dkdjdsdjyhjszy" type="dkdjdsdjyhjszy" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>中华人民共和国税收缴款书（银行经收专用）</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="dkdjdsdjskmxbgb" type="dkdjdsdjskmxbg">
+						<xs:annotation>
+							<xs:documentation>《代扣代缴、代收代缴税款明细报告表》</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="kqskfpbz" type="bz">
+						<xs:annotation>
+							<xs:documentation>跨区分配标志(Y:分配,N:不分配)</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+</xs:schema>

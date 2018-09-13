@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<service xmlns="http://www.chinatax.gov.cn/spec/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <head>
+    <tran_id>SWZJ.HXZG.DJ.CXGLJSQXMXX</tran_id>
+    <channel_id>TEST</channel_id>
+    <tran_seq>c76f25281d7949609d38f9d84bdc9f9c</tran_seq>
+    <tran_date>20141028</tran_date>
+    <tran_time>053055059</tran_time>
+    <expand>
+      <name>sjry</name>
+      <value>24406060735</value>
+    </expand>
+    <expand>
+      <name>sjjg</name>
+      <value>24406060700</value>
+    </expand>
+  </head>
+  <body><![CDATA[<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<taxML xsi:type="HXZGDJ00157Request" xmlmc="根据土地税源编号查询关联的建设期项目信息" xmlbh="TaxMLBw_HXZG_DJ_00157_Request_V1.0.xsd" bbh="1.0" xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <tdsybhGrid>
+        <tdsybhGridlb>
+            <tdsybh>T44060620140000106</tdsybh>
+        </tdsybhGridlb>
+    </tdsybhGrid>
+</taxML>
+]]></body>
+</service>

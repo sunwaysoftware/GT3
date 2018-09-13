@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+    <xs:include schemaLocation="TaxML.xsd"/>
+    <xs:complexType name="RSJ2FX901Response">
+        <xs:annotation>
+            <xs:documentation>关联纳税人业务控制查询返回报文</xs:documentation>
+        </xs:annotation>
+        <xs:complexContent>
+            <xs:extension base="taxDoc">
+                <xs:sequence>
+                    <xs:element name="nsrdzdah" type="xs:string">
+						<xs:annotation>
+							<xs:documentation>纳税人登记序号</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="nsrsbh" type="xs:string">
+						<xs:annotation>
+							<xs:documentation>纳税人识别号</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="nsrmc" type="xs:string">
+						<xs:annotation>
+							<xs:documentation>纳税人名称</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+                    <xs:element name="kzxxGrid">
+						<xs:annotation>
+							<xs:documentation>控制信息列表</xs:documentation>
+						</xs:annotation>
+						<xs:complexType>
+							<xs:sequence maxOccurs="unbounded" minOccurs="0">
+								<xs:element name="kzxx">
+									<xs:annotation>
+										<xs:documentation>控制信息</xs:documentation>
+									</xs:annotation>
+									<xs:complexType>	
+										<xs:sequence>
+											<xs:element name="cfkzfs" type="xs:string">
+												<xs:annotation>
+													<xs:documentation>触发控制方式</xs:documentation>
+												</xs:annotation>
+											</xs:element>
+											<xs:element name="cfyy" type="xs:string">
+												<xs:annotation>
+													<xs:documentation>触发原因</xs:documentation>
+												</xs:annotation>
+											</xs:element>
+											<xs:element name="kztj" type="xs:string">
+												<xs:annotation>
+													<xs:documentation>控制条件</xs:documentation>
+												</xs:annotation>
+											</xs:element>
+											<xs:element name="kzcs" type="xs:string">
+												<xs:annotation>
+													<xs:documentation>控制措施</xs:documentation>
+												</xs:annotation>
+											</xs:element>
+										</xs:sequence>
+									</xs:complexType>		
+								</xs:element>
+							</xs:sequence>
+						</xs:complexType>	
+					</xs:element>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+</xs:schema>

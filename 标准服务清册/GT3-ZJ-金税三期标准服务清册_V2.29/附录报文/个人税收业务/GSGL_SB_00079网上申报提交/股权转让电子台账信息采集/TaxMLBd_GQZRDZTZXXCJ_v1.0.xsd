@@ -1,0 +1,463 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:complexType name="gqzrdztzxxYwbw">
+		<xs:annotation>
+			<xs:documentation>股权转让电子台账信息采集业务报文</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="gqzrdztzxxBzds" type="gqzrdztzxxBzds"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="gqzrdztzxxBzds">
+		<xs:annotation>
+			<xs:documentation>股权转让电子台账信息采集表证单书</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="head" type="gqzrdztzxxHead">
+				<xs:annotation>
+					<xs:documentation>股权转让电子台账信息采集表头</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="body" type="gqzrdztzxxBody">
+				<xs:annotation>
+					<xs:documentation>股权转让电子台账信息采集表体</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="gqzrdztzxxHead">
+		<xs:annotation>
+			<xs:documentation>股权转让电子台账信息采集表头</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="sfzjlxDm" type="sfzjlxDm">
+				<xs:annotation>
+					<xs:documentation>身份证件类型代码，参考DM_GY_SFZJLX表，如果是采集的主体是企业，该字段为空，否则不能为空</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zzlxmc" type="zzlxmc">
+				<xs:annotation>
+					<xs:documentation>证照类型名称，可以为空</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sfzjhm" type="sfzjhm">
+				<xs:annotation>
+					<xs:documentation>身份证件号码，如果是采集的主体是企业，该字段为空，否则不能为空</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="nsrmc" type="xm">
+				<xs:annotation>
+					<xs:documentation>纳税人名称，如果采集的主体是企业，存放企业的名称，如果是自然人存放自然人的姓名</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="djxh" type="djxh">
+				<xs:annotation>
+					<xs:documentation>登记序号，不能为空，如果是采集的主体是企业，该字段为企业的登记序号，否则为自然人的登记序号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="slrxm" type="slrxm">
+				<xs:annotation>
+					<xs:documentation>受理人姓名，不能为空</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="slrDm" type="slrDm">
+				<xs:annotation>
+					<xs:documentation>受理人代码，不能为空</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="slswjgDm" type="slswjgDm">
+				<xs:annotation>
+					<xs:documentation>受理税务机关代码，不能为空</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="slswjgmc" type="slswjgmc">
+				<xs:annotation>
+					<xs:documentation>受理税务机关名称，不能为空</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="slrq" type="slrq">
+				<xs:annotation>
+					<xs:documentation>受理日期，不能为空，格式必须为：YYYY-MM-DD</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="gqzrdztzxxBody">
+		<xs:annotation>
+			<xs:documentation>股权转让电子台账信息采集表体</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="gqzrdztzxxMx" type="gqzrdztzxxMx" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>股权转让电子台账信息采集明细</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="gqzrdztzxxMx">
+		<xs:sequence>
+			<xs:element name="gqzrsblx" type="bz3" minOccurs="1" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>股权转让个人所得税申报类型，1-纳税人申报，2-扣缴义务人申报，不能为空</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="gqzrxybh" type="gqzrxybh" minOccurs="1" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>被投资单位信息</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zgswjgDm" type="swjgDm">
+				<xs:annotation>
+					<xs:documentation>主管税务机关代码，不能为空，来自于dm_gy_swjg表</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zgswjgMc" type="swjgmc">
+				<xs:annotation>
+					<xs:documentation>主管税务机关名称，不能为空，来自于dm_gy_swjg表</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="cjrDm" type="slrDm">
+				<xs:annotation>
+					<xs:documentation>采集人代码，不能为空</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="cjrmc" type="slrxm">
+				<xs:annotation>
+					<xs:documentation>采集人名称，不能为空</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="cjrq" type="slrq">
+				<xs:annotation>
+					<xs:documentation>采集日期，不能为空，格式必须为：YYYY-MM-DD</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="btzqyxxcj" type="btzqyxxcj" minOccurs="1" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>被投资企业信息采集</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="gqcrfxxcj" type="gqcrfxxcj" minOccurs="1" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>股权出让方信息采集</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="gqsrfxxcj" type="gqsrfxxcj" minOccurs="1" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>股权受让方信息采集</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="crfjspzxx" type="crfjspzxx" minOccurs="1" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>出让方缴税凭证信息</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="srfjspzxx" type="srfjspzxx" minOccurs="1" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>受让方缴税凭证信息</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="btzqyxxcj">
+		<xs:annotation>
+			<xs:documentation>被投资企业信息采集</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="btzqynsrsbh" type="nsrsbh">
+				<xs:annotation>
+					<xs:documentation>
+					被投资企业纳税人识别号，不能为空
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="btzqymc" type="nsrmc">
+				<xs:annotation>
+					<xs:documentation>
+					被投资企业名称，不能为空
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="btzqyzczb" type="je">
+				<xs:annotation>
+					<xs:documentation>被投资企业注册资本（投资额）</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="gqbdsj" type="skssqq">
+				<xs:annotation>
+					<xs:documentation>股权变动时间，格式为YYYY-MM-DD，不能为空</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zrsqyzmjzcje" type="je">
+				<xs:annotation>
+					<xs:documentation>转让时企业账面净资产金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sszb" type="je">
+				<xs:annotation>
+					<xs:documentation>实收资本</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zbgj" type="je">
+				<xs:annotation>
+					<xs:documentation>资本公积</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yygj" type="je">
+				<xs:annotation>
+					<xs:documentation>盈余公积</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="wfplr" type="je">
+				<xs:annotation>
+					<xs:documentation>未分配利润</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="gdzcjzcgyjz" type="je">
+				<xs:annotation>
+					<xs:documentation>拥有规定资产的企业转让时净资产公允价值</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="gqcrfxxcj">
+		<xs:annotation>
+			<xs:documentation>股权出让方信息采集</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="crfnsrsbh" type="nsrsbh">
+				<xs:annotation>
+					<xs:documentation>出让方纳税人识别号，不能为空</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="crfmc" type="nsrmc">
+				<xs:annotation>
+					<xs:documentation>出让方姓名（名称），不能为空</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="crfgjhdqszDm" type="gjhdqszDm">
+				<xs:annotation>
+					<xs:documentation>出让方国籍(地区)代码，不能为空</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="crfgjhdqszmc" type="gjhdqmc">
+				<xs:annotation>
+					<xs:documentation>出让方国籍(地区)名称，可以为空</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="crfsfzjlxDm" type="sfzjlxDm">
+				<xs:annotation>
+					<xs:documentation>出让方身份证件类型代码，不能为空</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="crfsfzjlxmc" type="sfzjlxmc">
+				<xs:annotation>
+					<xs:documentation>出让方身份证件类型名称，不能为空</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="crfsfzjhm" type="sfzjhm">
+				<xs:annotation>
+					<xs:documentation>出让方身份证件号码，可以为空</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="crfdjxh" type="djxh">
+				<xs:annotation>
+					<xs:documentation>出让方登记序号，不能为空</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="gqzrfe" type="je">
+				<xs:annotation>
+					<xs:documentation>股权转让份额，不能为空</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zrgqzqyzgfbz" type="sl1">
+				<xs:annotation>
+					<xs:documentation>转让股权占企业总股份比重，比如20%，传0.2，不能为空</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="gqzrhtjg" type="se">
+				<xs:annotation>
+					<xs:documentation>股权转让合同（协议）价格，可以为空</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="gqzrjsjg" type="se">
+				<xs:annotation>
+					<xs:documentation>股权转让计税价格，可以为空</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="gqzrsbcb" type="je">
+				<xs:annotation>
+					<xs:documentation>股权转让申报成本，可以为空</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="gqzrjscb" type="je">
+				<xs:annotation>
+					<xs:documentation>股权转让计税成本，可以为空</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="crfzrhlfy" type="je">
+				<xs:annotation>
+					<xs:documentation>出让方转让发生的相关合理费用，可以为空</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="crfyjyhs" type="se">
+				<xs:annotation>
+					<xs:documentation>出让方应缴印花税，不能为空</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ynssde" type="se">
+				<xs:annotation>
+					<xs:documentation>应纳税所得额，不能为空</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yjgrsds" type="se">
+				<xs:annotation>
+					<xs:documentation>应缴个人所得税，可以为空</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bz" type="bz">
+				<xs:annotation>
+					<xs:documentation>备注，可以为空</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="gqsrfxxcj">
+		<xs:annotation>
+			<xs:documentation>股权受让方信息采集</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="srfnsrsbh" type="nsrsbh">
+				<xs:annotation>
+					<xs:documentation>受让方纳税人识别号，不能为空</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="srfmc" type="nsrmc">
+				<xs:annotation>
+					<xs:documentation>受让方姓名（名称），不能为空</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="srfgjhdqszDm" type="gjhdqszDm">
+				<xs:annotation>
+					<xs:documentation>受让方国籍(地区)代码，不能为空</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="srfgjhdqszmc" type="gjhdqmc">
+				<xs:annotation>
+					<xs:documentation>受让方国籍(地区)名称，可以为空</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="srfsfzjlxDm" type="sfzjlxDm">
+				<xs:annotation>
+					<xs:documentation>受让方身份证件类型代码，不能为空</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="srfsfzjlxmc" type="sfzjlxmc">
+				<xs:annotation>
+					<xs:documentation>受让方身份证件类型名称，不能为空</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="srfsfzjhm" type="sfzjhm">
+				<xs:annotation>
+					<xs:documentation>受让方身份证件号码，可以为空</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="srfdjxh" type="djxh">
+				<xs:annotation>
+					<xs:documentation>受让方登记序号，不能为空</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="srfyjyhs" type="se">
+				<xs:annotation>
+					<xs:documentation>受让方应缴印花税，不能为空</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="crfjspzxx">
+		<xs:annotation>
+			<xs:documentation>出让方缴税凭证信息</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="xtsphm" type="dzsphm">
+				<xs:annotation>
+					<xs:documentation>系统税票号码，不能为空</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zsxmDm" type="zsxmDm">
+				<xs:annotation>
+					<xs:documentation>征收项目代码，不能为空</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zspmDm" type="zspmDm">
+				<xs:annotation>
+					<xs:documentation>征收品目代码，不能为空</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sjje" type="se">
+				<xs:annotation>
+					<xs:documentation>实缴金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sbrq1" type="sbrq1">
+				<xs:annotation>
+					<xs:documentation>申报日期</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="rkrq" type="rkrq">
+				<xs:annotation>
+					<xs:documentation>入库日期</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="srfjspzxx">
+		<xs:annotation>
+			<xs:documentation>受让方缴税凭证信息</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="xtsphm" type="dzsphm">
+				<xs:annotation>
+					<xs:documentation>系统税票号码，不能为空</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zsxmDm" type="zsxmDm">
+				<xs:annotation>
+					<xs:documentation>征收项目代码，不能为空</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zspmDm" type="zspmDm">
+				<xs:annotation>
+					<xs:documentation>征收品目代码，不能为空</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sjje" type="se">
+				<xs:annotation>
+					<xs:documentation>实缴金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sbrq1" type="sbrq1">
+				<xs:annotation>
+					<xs:documentation>申报日期</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="rkrq" type="rkrq">
+				<xs:annotation>
+					<xs:documentation>入库日期</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:simpleType name="gqzrxybh">
+		<xs:annotation>
+			<xs:documentation>股权转让协议编号</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:maxLength value="40"/>
+		</xs:restriction>
+	</xs:simpleType>
+</xs:schema>

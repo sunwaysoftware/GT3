@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 被2011 rel. 2 sp1 (TeaM DJiNN) 使用XMLSpy vTeaM DJiNN编辑的 (http://www.altova.com) by -->
+<!-- edited with XMLSpy v2010 rel. 3 (http://www.altova.com) by MESMERiZE (MSM) -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:include schemaLocation="TaxMLPublicType.xsd"/>
+	<xs:complexType name="zcsszxytsqkcjnstzmxbFrom">
+		<xs:annotation>
+			<xs:documentation>资产损失(专项用途)税前扣除及纳税调整明细表(A105091)业务报文.</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="zcsszxytsqkcjnstzMxbVO" type="zcsszxytsqkcjnstzmxbVO" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>资产损失(专项用途)税前扣除及纳税调整明细表</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="hbzcssGrid">
+						<xs:complexType>
+							<xs:sequence minOccurs="0" maxOccurs="unbounded">
+								<xs:element name="hbzcssgridmx" type="hbzcssGridMx"/>
+							</xs:sequence>
+						</xs:complexType>
+					</xs:element>
+					<xs:element name="fhbzcssGrid">
+						<xs:complexType>
+							<xs:sequence minOccurs="0" maxOccurs="unbounded">
+								<xs:element name="fhbzcssgridmx" type="fhbzcssGridMx"/>
+							</xs:sequence>
+						</xs:complexType>
+					</xs:element>
+					<xs:element name="tzssGrid">
+						<xs:complexType>
+							<xs:sequence minOccurs="0" maxOccurs="unbounded">
+								<xs:element name="tzssgridmx" type="tzssGridMx"/>
+							</xs:sequence>
+						</xs:complexType>
+					</xs:element>
+					<xs:element name="qtGrid">
+						<xs:complexType>
+							<xs:sequence minOccurs="0" maxOccurs="unbounded">
+								<xs:element name="qtgridmx" type="qtGridMx"/>
+							</xs:sequence>
+						</xs:complexType>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="hbzcssGridMx">
+		<xs:annotation>
+			<xs:documentation>货币资产明细</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="xmmc" type="nsrmc" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>项目名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zzje" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>账载金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="czsr" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>处置金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="pcsr" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>赔偿金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jsjc" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>计税基础</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ssje" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>税收金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="nstzje" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>纳税调整金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="fhbzcssGridMx">
+		<xs:annotation>
+			<xs:documentation>非货币资产明细</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="xmmc" type="nsrmc" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>项目名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zzje" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>账载金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="czsr" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>处置金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="pcsr" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>赔偿金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jsjc" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>计税基础</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ssje" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>税收金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="nstzje" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>纳税调整金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="tzssGridMx">
+		<xs:annotation>
+			<xs:documentation>投资损失明细</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="xmmc" type="nsrmc" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>项目名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zzje" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>账载金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="czsr" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>处置金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="pcsr" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>赔偿金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jsjc" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>计税基础</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ssje" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>税收金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="nstzje" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>纳税调整金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="qtGridMx">
+		<xs:annotation>
+			<xs:documentation>其他损失明细</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="xmmc" type="nsrmc" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>项目名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zzje" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>账载金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="czsr" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>处置金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="pcsr" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>赔偿金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jsjc" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>计税基础</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ssje" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>税收金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="nstzje" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>纳税调整金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="zcsszxytsqkcjnstzmxbVO">
+		<xs:annotation>
+			<xs:documentation>《资产损失(专项用途)税前扣除及纳税调整明细表》</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="hjzzje" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>合计账载金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="hjczsr" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>处置收入合计</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="hjpcsr" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>合计赔偿收入</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="hjjsjc" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>合计计税基础</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="hjssje" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>合计税收金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="hjnstzje" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>合计纳税调整金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

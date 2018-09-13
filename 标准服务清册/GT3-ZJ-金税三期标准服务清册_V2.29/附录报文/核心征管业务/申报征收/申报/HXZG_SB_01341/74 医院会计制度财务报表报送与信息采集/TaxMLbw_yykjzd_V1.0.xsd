@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2013 (http://www.altova.com) by  () -->
+<!-- 被2012 () 使用XMLSpy v编辑的 (http://www.altova.com) by -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:include schemaLocation="TaxMLBd_0610670_V1.0.xsd"/>
+	<xs:include schemaLocation="TaxMLPublicSBType.xsd"/>
+	<xs:complexType name="yykjzdcwbbywbw">
+		<xs:annotation>
+			<xs:documentation>总业务报文</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="zcfzb" type="yykjzdZcfzbVO" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>资产负债表</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="srfyzb" type="yykjzdSrfyzbVO" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>收入费用总表</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="ylsrfymxb" type="yykjzdYlsrfymxbVO" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>医疗收入费用明细表</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="xjllb" type="yykjzdXjllbVO" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>现金流量表</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="czbzszqkb" type="yykjzdCzbzszqkbVO" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>财政补助收支情况表</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="ndcwkjbgshbgVO" type="NdcwkjbgshbgVO">
+						<xs:annotation>
+							<xs:documentation>年度财务会计报告审核报告</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="yfzcfzzhzbVO" type="YfzcfzzhzbVO">
+						<xs:annotation>
+							<xs:documentation>“研发支出”辅助账汇总表VO</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="yykjzdfzVO" type="YykjzdfzVO">
+						<xs:annotation>
+							<xs:documentation>医院会计制度附注VO</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+</xs:schema>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<service>
+	<head>
+		<tran_id>SWZJ.HXZG.SB.SBBZFMXCX</tran_id>
+		<channel_id>TEST</channel_id>
+		<tran_seq>11111111111111111111111111111111</tran_seq>
+		<tran_date>20140820</tran_date>
+		<tran_time>173655570</tran_time>
+		<expand>
+			<name>identityType</name>
+			<value>49308fd2f75d462594648203c1ae5e93</value>
+		</expand>
+		<expand>
+			<name>sjry</name>
+			<value>24406060733</value>
+		</expand>
+		<expand>
+			<name>sjjg</name>
+			<value>24400000000</value>
+		</expand>
+	</head>
+	<body><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<!--用XMLSpy v2011 rel. 2 sp1产生的 XML文件(http://www.altova.com)-->
+<taxML xsi:type="HXZGSB00515Request" xmlbh="String" bbh="String" xmlmc="String" xsi:schemaLocation="http://www.chinatax.gov.cn/dataspec/ TaxMLBw_HXZG_SB_00515_Request_V1.0.xsd" xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<sBzfxxCxVO>
+		<djxh>11440600000000000083</djxh>
+		<pzxh>10014414000000005023</pzxh>
+		<skssqq>2014-07-01</skssqq>	
+		<skssqz>2014-09-30</skssqz>
+	</sBzfxxCxVO>
+</taxML>]]></body>
+</service>

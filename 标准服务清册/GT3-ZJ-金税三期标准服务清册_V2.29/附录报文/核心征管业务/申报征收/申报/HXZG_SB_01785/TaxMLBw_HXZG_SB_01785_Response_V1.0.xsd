@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 被2011 rel. 2 sp1 (TeaM DJiNN) 使用XMLSpy vTeaM DJiNN编辑的 (http://www.altova.com) by -->
+<!-- edited with XMLSpy v2010 rel. 3 (http://www.altova.com) by liuwei (liuweicss) -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:include schemaLocation="TaxMLPublicSBType.xsd"/>
+	<xs:complexType name="HXZGSB01785Response">
+		<xs:annotation>
+			<xs:documentation>增值税预缴纳税申报基础数据信息返回报文</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="yzxmListVO">
+						<xs:annotation>
+							<xs:documentation>预征项目列表</xs:documentation>
+						</xs:annotation>
+						<xs:complexType>
+							<xs:sequence minOccurs="0" maxOccurs="unbounded">
+								<xs:element name="yzxmVO">
+									<xs:annotation>
+										<xs:documentation>预征项目VO</xs:documentation>
+									</xs:annotation>
+									<xs:complexType>
+										<xs:sequence>
+											<xs:element name="yzxmDm" type="zspmDm">
+												<xs:annotation>
+													<xs:documentation>预征项目代码</xs:documentation>
+												</xs:annotation>
+											</xs:element>
+											<xs:element name="nsqxDm" type="nsqxDm">
+												<xs:annotation>
+													<xs:documentation>纳税期限代码</xs:documentation>
+												</xs:annotation>
+											</xs:element>
+											<xs:sequence minOccurs="0" maxOccurs="unbounded">
+												<xs:element name="yzl" type="sl1">
+													<xs:annotation>
+														<xs:documentation>预征率</xs:documentation>
+													</xs:annotation>
+												</xs:element>
+											</xs:sequence>
+											<xs:element name="sl1" type="sl1">
+												<xs:annotation>
+													<xs:documentation>税率或征收率</xs:documentation>
+												</xs:annotation>
+											</xs:element>
+										</xs:sequence>
+									</xs:complexType>
+								</xs:element>
+							</xs:sequence>
+						</xs:complexType>
+					</xs:element>
+					<xs:element name="nsqxDm" type="nsqxDm">
+						<xs:annotation>
+							<xs:documentation>纳税期限代码</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="skssqq" type="skssqq">
+						<xs:annotation>
+							<xs:documentation>修正后的税款所属期起</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="skssqz" type="skssqq">
+						<xs:annotation>
+							<xs:documentation>修正后的税款所属期止</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="zzsybrBz" type="bz">
+						<xs:annotation>
+							<xs:documentation>增值税一般人标志</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="ybrbz" type="nsrsbh">
+						<xs:annotation>
+							<xs:documentation>一般人标志，0主体在省外的纳税人，1小规模，2一般纳税人</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="qzd" type="nsrsbh">
+						<xs:annotation>
+							<xs:documentation>起征点金额(已经折算成按季的)</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="ysbje" type="nsrsbh">
+						<xs:annotation>
+							<xs:documentation>申报属期所在季度已申报数据</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+</xs:schema>

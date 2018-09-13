@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 被2012 () 使用XMLSpy v编辑的 (http://www.altova.com) by -->
+<!-- edited with XMLSpy v2013 (http://www.altova.com) by  () -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:complexType name="FZ02006ReqVO">
+		<xs:annotation>
+			<xs:documentation>接入报文VO(登记序号、文书制作日期起、文书制作日期止，是否接受处罚)</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="djxh" type="djxh">
+				<xs:annotation>
+					<xs:documentation>登记序号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="wszzrqq" type="wszzrq" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>文书制作日期起</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="wszzrqz" type="wszzrq" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>文书制作日期止</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sfjscf" type="bz1" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>是否接受处罚Y/N/NULL</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="HXZGFXCL02006Request">
+		<xs:annotation>
+			<xs:documentation>通过条件（登记序号、文书制作日期起、文书制作日期止，是否接受处罚）查询催报过后系统自动生成的简易处罚决定书接入报文</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="FZ02006ReqVO" type="FZ02006ReqVO">
+						<xs:annotation>
+							<xs:documentation>输入参数</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+</xs:schema>

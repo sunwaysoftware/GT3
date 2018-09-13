@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2011 (http://www.altova.com) by www.hbnu.com (www.hbnu.com) -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:include schemaLocation="TaxMLPublic.xsd"/>
+	<xs:complexType name="dwzfkxqkywbw">
+		<xs:annotation>
+			<xs:documentation>《对外支付款项情况表》业务报文</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="qyndglywwlbg2016_G111000" type="qyndglywwlbg2016_G111000">
+						<xs:annotation>
+							<xs:documentation>《对外支付款项情况表》</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="qyndglywwlbg2016_G111000">
+		<xs:annotation>
+			<xs:documentation>《对外支付款项情况表》</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="dwzfkxqkbGrid" type="dwzfkxqkbGrid">
+				<xs:annotation>
+					<xs:documentation>对外支付款项情况表</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="dwzfkxqkbGrid">
+		<xs:annotation>
+			<xs:documentation>对外支付款项情况表</xs:documentation>
+		</xs:annotation>
+		<xs:sequence maxOccurs="unbounded">
+			<xs:element name="dwzfkxqkbGridlbVO" type="dwzfkxqkbGridlbVO">
+				<xs:annotation>
+					<xs:documentation>对外支付款项情况表</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="dwzfkxqkbGridlbVO">
+		<xs:annotation>
+			<xs:documentation>对外支付款项情况表</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="ewbhxh" type="ewbhxh">
+				<xs:annotation>
+					<xs:documentation>二维表行序号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ewbhmc" type="ewbhmc">
+				<xs:annotation>
+					<xs:documentation>二维表行名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bndxjwzfje" type="je">
+				<xs:annotation>
+					<xs:documentation>本年度向境外支付款项金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bndxjwglfzfje" type="je">
+				<xs:annotation>
+					<xs:documentation>其中：本年度向境外关联方支付款项金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

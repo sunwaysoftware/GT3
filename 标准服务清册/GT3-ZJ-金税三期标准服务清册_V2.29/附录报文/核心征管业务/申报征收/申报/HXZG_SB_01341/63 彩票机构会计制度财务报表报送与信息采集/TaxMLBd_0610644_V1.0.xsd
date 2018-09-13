@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 被2011 rel. 2 sp1 (TeaM DJiNN) 使用XMLSpy vTeaM DJiNN编辑的 (http://www.altova.com) by -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:include schemaLocation="TaxMLPublicType.xsd"/>
+	<xs:complexType name="cpjgFjjjbdxmVO">
+		<xs:annotation>
+			<xs:documentation>彩票机构会计制度返奖奖金变动明细表VO</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="NsrxxFormVO" type="NsrxxFormVO"/>
+			<xs:element name="cpjgFjjjbdmxGrid">
+				<xs:annotation>
+					<xs:documentation>报送信息</xs:documentation>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:sequence maxOccurs="unbounded">
+						<xs:element name="cpjgFjjjbdmxGridlbVO" type="cpjgFjjjbdmxGridlbVO"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="cpjgFjjjbdmxGridlbVO">
+		<xs:annotation>
+			<xs:documentation>报送信息</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="ewbhxh" type="ewbhxh" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>二维表行序号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="xmmc" type="xmmc" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>项目名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="cpCtx" type="lx" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>彩票传统型</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="cpJkx" type="lx" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>彩票即开型</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="cpSzx" type="lx" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>彩票数字型</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="cpLtx" type="lx" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>彩票乐透型</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="cpJcx" type="lx" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>彩票竞猜型</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="cpSpx" type="lx" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>彩票视频型</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="cpJnx" type="lx" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>彩票基诺型</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="cpYbtjjj" type="lx" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>彩票一般调节基金</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="hj" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>合计</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

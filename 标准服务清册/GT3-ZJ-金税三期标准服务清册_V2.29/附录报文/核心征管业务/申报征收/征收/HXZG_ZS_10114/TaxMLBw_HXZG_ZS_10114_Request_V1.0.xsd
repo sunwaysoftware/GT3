@@ -1,0 +1,549 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2013 (http://www.altova.com) by  () -->
+<!-- 被2011 rel. 2 sp1 (pjf) 使用XMLSpy vcss编辑的 (http://www.altova.com) by -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:include schemaLocation="TaxMLPublicZSType.xsd"/>
+	<xs:complexType name="HXZGZS10114Request">
+		<xs:annotation>
+			<xs:documentation>保存福利企业退税申请信息</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="ZSFlqytsxxVO">
+						<xs:annotation>
+							<xs:documentation>福利企业退税信息</xs:documentation>
+						</xs:annotation>
+						<xs:complexType>
+							<xs:sequence>
+								<xs:element name="jbxxqForm" type="ZSFlqyJbxxqFormVO">
+									<xs:annotation>
+										<xs:documentation>福利企业基本信息</xs:documentation>
+									</xs:annotation>
+								</xs:element>
+								<xs:element name="flqyyhxxvo" type="ZSFlqyYhxxVO">
+									<xs:annotation>
+										<xs:documentation>可审批退税计算列表</xs:documentation>
+									</xs:annotation>
+								</xs:element>
+								<xs:element name="TdsfmxGridVO" type="TdsfmxGridVO">
+									<xs:annotation>
+										<xs:documentation>退抵税费明细</xs:documentation>
+									</xs:annotation>
+								</xs:element>
+							</xs:sequence>
+						</xs:complexType>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="ZSFlqyYhxxVO">
+		<xs:sequence>
+			<xs:element name="yhuuid">
+				<xs:annotation>
+					<xs:documentation>优惠UUID</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="tdsfuuid">
+				<xs:annotation>
+					<xs:documentation>退抵税费UUID</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="djxh">
+				<xs:annotation>
+					<xs:documentation>登记序号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="spnd">
+				<xs:annotation>
+					<xs:documentation>审批年度</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="spyf">
+				<xs:annotation>
+					<xs:documentation>审批月份</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bqfhtjcjrs">
+				<xs:annotation>
+					<xs:documentation>本期符合条件残疾人数</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zgrs">
+				<xs:annotation>
+					<xs:documentation>职工人数</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bqcjrybl">
+				<xs:annotation>
+					<xs:documentation>本期残疾人员比例</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="mrmytsxe">
+				<xs:annotation>
+					<xs:documentation>每人每月退税限额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="xszcrkseqcye">
+				<xs:annotation>
+					<xs:documentation>享受政策入库税额期初余额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="xszcbqrkse">
+				<xs:annotation>
+					<xs:documentation>享受政策本期入库税额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="tsxeqcye">
+				<xs:annotation>
+					<xs:documentation>退税限额期初余额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bqtsxe">
+				<xs:annotation>
+					<xs:documentation>本期退税限额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bqksptse">
+				<xs:annotation>
+					<xs:documentation>本期可审批退税额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bqsptse">
+				<xs:annotation>
+					<xs:documentation>本期审批退税额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="xszcrkseqmye">
+				<xs:annotation>
+					<xs:documentation>享受政策入库税额期末余额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="tsxeqmye">
+				<xs:annotation>
+					<xs:documentation>退税限额期末余额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yhcsfs">
+				<xs:annotation>
+					<xs:documentation>优惠产生方式</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yxbz">
+				<xs:annotation>
+					<xs:documentation>有效标志</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="lrrDm">
+				<xs:annotation>
+					<xs:documentation>录入人代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sjgsdq">
+				<xs:annotation>
+					<xs:documentation>数据归属地区</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="xgrDm">
+				<xs:annotation>
+					<xs:documentation>修改人代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zgswskfjDm">
+				<xs:annotation>
+					<xs:documentation>主管税务科分局代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="swjgDm">
+				<xs:annotation>
+					<xs:documentation>税务机关代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bytsbz">
+				<xs:annotation>
+					<xs:documentation>不予退税标志</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="byytje">
+				<xs:annotation>
+					<xs:documentation>本月已退金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="byyxszcrkse">
+				<xs:annotation>
+					<xs:documentation>本月已享受政策入库税额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="ZSFlqyJbxxqFormVO">
+		<xs:sequence>
+			<xs:element name="lcslid">
+				<xs:annotation>
+					<xs:documentation>流程实例ID</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="dcxcqduuid">
+				<xs:annotation>
+					<xs:documentation>调查巡查启动UUID</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="djxh">
+				<xs:annotation>
+					<xs:documentation>登记序号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="lcswsxDm">
+				<xs:annotation>
+					<xs:documentation>流程税务事项代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yhyywdDm">
+				<xs:annotation>
+					<xs:documentation>银行营业网点代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zhmc">
+				<xs:annotation>
+					<xs:documentation>账户名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yhzh">
+				<xs:annotation>
+					<xs:documentation>银行账号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="tdsfsDm">
+				<xs:annotation>
+					<xs:documentation>退抵税(费)方式</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ttsjlxDm">
+				<xs:annotation>
+					<xs:documentation>提退税金类型</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="tdsfyylxDm">
+				<xs:annotation>
+					<xs:documentation>退抵税费原因类型代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="wszgCode">
+				<xs:annotation>
+					<xs:documentation>退抵税(费)依据文书字号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="dcbz">
+				<xs:annotation>
+					<xs:documentation>调查标志</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="nsrsbh">
+				<xs:annotation>
+					<xs:documentation>纳税人识别号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="nsrmc">
+				<xs:annotation>
+					<xs:documentation>纳税人名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="dcsxDm"/>
+			<xs:element name="wszg">
+				<xs:annotation>
+					<xs:documentation>文书字轨</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jsr">
+				<xs:annotation>
+					<xs:documentation>接收人</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jsrq">
+				<xs:annotation>
+					<xs:documentation>接收日期</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="spnd">
+				<xs:annotation>
+					<xs:documentation>审批年代</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="spyf">
+				<xs:annotation>
+					<xs:documentation>审批月份</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="tkyy">
+				<xs:annotation>
+					<xs:documentation>退税原因</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="TdsfmxGridVO">
+		<xs:sequence>
+			<xs:element name="ydtuuid">
+				<xs:annotation>
+					<xs:documentation>应抵退UUID</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="tdsfmxuuid">
+				<xs:annotation>
+					<xs:documentation>退抵税费明细UUID</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="tdsfuuid">
+				<xs:annotation>
+					<xs:documentation>退抵税费UUID</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ydtlyuuid">
+				<xs:annotation>
+					<xs:documentation>应抵退来源UUID</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zsuuid">
+				<xs:annotation>
+					<xs:documentation>征收UUID</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yzpzxh">
+				<xs:annotation>
+					<xs:documentation>应征凭证序号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yzpzmxxh">
+				<xs:annotation>
+					<xs:documentation>应征凭证明细序号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="dzsphm">
+				<xs:annotation>
+					<xs:documentation>电子税票号码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="pzzlDm">
+				<xs:annotation>
+					<xs:documentation>票证种类代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="pzzgDm">
+				<xs:annotation>
+					<xs:documentation>票证字轨代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="pzhm">
+				<xs:annotation>
+					<xs:documentation>票证号码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="je">
+				<xs:annotation>
+					<xs:documentation>金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="djsjsxDm"/>
+			<xs:element name="sksxDm">
+				<xs:annotation>
+					<xs:documentation>税款属性代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="skzlDm">
+				<xs:annotation>
+					<xs:documentation>税款种类代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jkfsrq">
+				<xs:annotation>
+					<xs:documentation>缴款发生日期</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="rkrq">
+				<xs:annotation>
+					<xs:documentation>入库日期</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ssyhlxDm">
+				<xs:annotation>
+					<xs:documentation>税收优惠类型代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="hzytdje">
+				<xs:annotation>
+					<xs:documentation>核准应退抵金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zsxmDm">
+				<xs:annotation>
+					<xs:documentation>征收项目代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zspmDm">
+				<xs:annotation>
+					<xs:documentation>征收品目代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="skssqq">
+				<xs:annotation>
+					<xs:documentation>税款所属期起</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="skssqz">
+				<xs:annotation>
+					<xs:documentation>税款所属期止</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="se">
+				<xs:annotation>
+					<xs:documentation>税额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="djzclxDm">
+				<xs:annotation>
+					<xs:documentation>登记注册类型代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="hyDm">
+				<xs:annotation>
+					<xs:documentation>行业代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ljytdje">
+				<xs:annotation>
+					<xs:documentation>累计已退抵金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="syktdje">
+				<xs:annotation>
+					<xs:documentation>税费尚余可退抵金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bctdse">
+				<xs:annotation>
+					<xs:documentation>本次退抵税费额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jslxqsrq">
+				<xs:annotation>
+					<xs:documentation>计算利息起始日期</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yskmDm">
+				<xs:annotation>
+					<xs:documentation>预算科目</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ysfpblDm">
+				<xs:annotation>
+					<xs:documentation>预算分配比例代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ssjmxzdlDm">
+				<xs:annotation>
+					<xs:documentation>减免性质大类代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ssjmxzxlDm">
+				<xs:annotation>
+					<xs:documentation>减免性质小类代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ssjmxzhzDm">
+				<xs:annotation>
+					<xs:documentation>减免性质</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jmfsDm">
+				<xs:annotation>
+					<xs:documentation>减免方式代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="skgkDm">
+				<xs:annotation>
+					<xs:documentation>收款国库代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="skssswjgDm">
+				<xs:annotation>
+					<xs:documentation>税款所属税务机关代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jdxzDm"/>
+			<xs:element name="zgswskfjDm">
+				<xs:annotation>
+					<xs:documentation>主管税务科分局代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="lrrDm">
+				<xs:annotation>
+					<xs:documentation>录入人代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="lrrq">
+				<xs:annotation>
+					<xs:documentation>录入日期</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="xgrDm">
+				<xs:annotation>
+					<xs:documentation>修改人代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="xgrq">
+				<xs:annotation>
+					<xs:documentation>修改日期</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sjgsdq">
+				<xs:annotation>
+					<xs:documentation>数据归属地区</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="grktdsf"/>
+			<xs:element name="zrrDkdjSe"/>
+			<xs:element name="djfsrq">
+				<xs:annotation>
+					<xs:documentation>多缴产生日期</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jmtse">
+				<xs:annotation>
+					<xs:documentation>减免退税额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zszmDm">
+				<xs:annotation>
+					<xs:documentation>征收子目代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yhpzuuid">
+				<xs:annotation>
+					<xs:documentation>优惠凭证UUID</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jmlxDm">
+				<xs:annotation>
+					<xs:documentation>减免类型代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yydtlyuuid">
+				<xs:annotation>
+					<xs:documentation>原应抵退来源UUID</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jzjtskbz">
+				<xs:annotation>
+					<xs:documentation>即征即退税款标志</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yzpzzlDm">
+				<xs:annotation>
+					<xs:documentation>应征凭证种类代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

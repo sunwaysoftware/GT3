@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2010 rel. 3 (http://www.altova.com) by liuwei (liuweicss) -->
+<!-- 被2011 rel. 2 sp1 (TeaM DJiNN) 使用XMLSpy vTeaM DJiNN编辑的 (http://www.altova.com) by -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:include schemaLocation="TaxMLPublicSBType.xsd"/>
+	<xs:complexType name="fqdqdzcpcljjsbslxx">
+		<xs:annotation>
+			<xs:documentation>废弃电器电子产品处理基金申报受理信息</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="jbr" type="jbr">
+						<xs:annotation>
+							<xs:documentation>经办人</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="fddbr" type="fddbr">
+						<xs:annotation>
+							<xs:documentation>法定代表人 </xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="lxdh" type="lxdh">
+						<xs:annotation>
+							<xs:documentation>联系电话</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="sfdlsb" type="nsrsbh">
+						<xs:annotation>
+							<xs:documentation>是否代理申报</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="dlrmc" type="dlrmc">
+						<xs:annotation>
+							<xs:documentation>代理人名称</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="sqr" type="sqr">
+						<xs:annotation>
+							<xs:documentation>授权人</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="dljbr" type="jbr" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>代理经办人</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="dljbrLxdh" type="lxdh" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>代理经办人联系电话</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="slr" type="nsrmc">
+						<xs:annotation>
+							<xs:documentation>受理人</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="slswjg" type="swjgmc">
+						<xs:annotation>
+							<xs:documentation>受理税务机关</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="slrq" type="skssqq">
+						<xs:annotation>
+							<xs:documentation>受理日期</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+</xs:schema>

@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 被2012 () 使用XMLSpy v编辑的 (http://www.altova.com) by -->
+<!-- edited with XMLSpy v2010 rel. 3 (http://www.altova.com) by  () -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:complexType name="jrbxyyyssb03_rzzlsrmxbywbw">
+		<xs:annotation>
+			<xs:documentation>《融资租赁收入明细表》业务报文</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="jrbxyyyssb03_rzzlsrmxb" type="jrbxyyyssb03_rzzlsrmxb">
+						<xs:annotation>
+							<xs:documentation>《融资租赁收入明细表》</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="jrbxyyyssb03_rzzlsrmxb">
+		<xs:annotation>
+			<xs:documentation>《融资租赁收入明细表》</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="rzzlsrmxbGrid" type="rzzlsrmxbGrid">
+				<xs:annotation>
+					<xs:documentation>"融资租赁收入明细表"</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="rzzlsrmxbGrid">
+		<xs:annotation>
+			<xs:documentation>《融资租赁收入明细表》</xs:documentation>
+		</xs:annotation>
+		<xs:sequence maxOccurs="unbounded">
+			<xs:element name="rzzlsrmxbGridlb" type="rzzlsrmxbGridlb">
+				<xs:annotation>
+					<xs:documentation>"融资租赁收入明细表列表"</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="rzzlsrmxbGridlb">
+		<xs:annotation>
+			<xs:documentation>"融资租赁收入明细表"</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="nsrsbh" type="nsrsbh">
+				<xs:annotation>
+					<xs:documentation>纳税人识别号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="htzxqsrq" type="htzxqsrq">
+				<xs:annotation>
+					<xs:documentation>合同执行起始日期</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bqjxqqrq" type="bqjxqqrq">
+				<xs:annotation>
+					<xs:documentation>本期计息起讫日期</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bzDm" type="bzDm">
+				<xs:annotation>
+					<xs:documentation>币制代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zhl" type="je">
+				<xs:annotation>
+					<xs:documentation>折合率</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zjsryb" type="je">
+				<xs:annotation>
+					<xs:documentation>租金收入原币</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zjsrzrmb" type="je">
+				<xs:annotation>
+					<xs:documentation>租金收入折人民币</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="czhwSjcbyb" type="je">
+				<xs:annotation>
+					<xs:documentation>出租货物实际成本原币</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="czhwSjcbzrmb" type="je">
+				<xs:annotation>
+					<xs:documentation>出租货物实际成本折人民币</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bqlxsr" type="je">
+				<xs:annotation>
+					<xs:documentation>本期利息收入</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2010 rel. 3 (http://www.altova.com) by MESMERiZE (MSM) -->
+<!-- 被2011 rel. 2 sp1 (TeaM DJiNN) 使用XMLSpy vTeaM DJiNN编辑的 (http://www.altova.com) by -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:include schemaLocation="TaxMLPublicSBType.xsd"/>
+	<xs:complexType name="HXZGSB00497Response">
+		<xs:annotation>
+			<xs:documentation>非居民企业合同项目备案信息返回报文</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="fjmqyhtxmbaxxGrid">
+						<xs:annotation>
+							<xs:documentation>非居民企业合同项目备案信息Grid</xs:documentation>
+						</xs:annotation>
+						<xs:complexType>
+							<xs:sequence maxOccurs="unbounded">
+								<xs:element name="fjmqyhtxmbaxxGridlb" type="FjmqyhtxmbaxxGridlbVO">
+									<xs:annotation>
+										<xs:documentation>非居民企业合同项目备案信息</xs:documentation>
+									</xs:annotation>
+								</xs:element>
+							</xs:sequence>
+						</xs:complexType>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="FjmqyhtxmbaxxGridlbVO">
+		<xs:annotation>
+			<xs:documentation>非居民企业合同项目备案信息返回VO</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="zwxm" type="xm">
+				<xs:annotation>
+					<xs:documentation>中文姓名</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ywxm" type="ywxm">
+				<xs:annotation>
+					<xs:documentation>英文姓名</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zqjmgnsrzwmc" type="xm">
+				<xs:annotation>
+					<xs:documentation>在其居民国纳税人中文名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zqjmgnsrywmc" type="ywxm">
+				<xs:annotation>
+					<xs:documentation>在其居民国纳税人英文名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="gjdq" type="gjdqDm">
+				<xs:annotation>
+					<xs:documentation>国籍地区</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qjmgdzzw" type="dz">
+				<xs:annotation>
+					<xs:documentation>其居民国地址（中文）</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qjmgdzyw" type="ywdz">
+				<xs:annotation>
+					<xs:documentation>其居民国地址（英文）</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="hthxymc" type="hthxymc">
+				<xs:annotation>
+					<xs:documentation>合同或协议名称 </xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="htbh" type="htbh">
+				<xs:annotation>
+					<xs:documentation>合同编号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="htzxqssj" type="htzxqssj">
+				<xs:annotation>
+					<xs:documentation>合同执行起始时间</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="htzxzzrq" type="htzxzzrq">
+				<xs:annotation>
+					<xs:documentation>合同执行终止日期</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="htje" type="htje">
+				<xs:annotation>
+					<xs:documentation>合同金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

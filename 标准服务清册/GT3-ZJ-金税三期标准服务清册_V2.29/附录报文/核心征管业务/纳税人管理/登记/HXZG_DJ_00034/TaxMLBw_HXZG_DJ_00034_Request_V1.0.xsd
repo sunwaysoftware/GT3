@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2013 (http://www.altova.com) by  () -->
+<!-- 编辑使用 XMLSpy v2006 U (http://www.altova.com) 由 any (any) -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:include schemaLocation="TaxMLPublicDJType.xsd"/>
+	<xs:complexType name="HXZGDJ00034Request">
+		<xs:annotation>
+			<xs:documentation>保存个体经营税务登记信息并生成纳税人识别号及税务档案编号接入报文</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="nsrxxForm" type="SlnsrjbxxVO">
+						<xs:annotation>
+							<xs:documentation>个体登记证采集保存业务</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="slrxxForm" type="DJYsqywslxxbVO">
+						<xs:annotation>
+							<xs:documentation>受理人信息</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="zxdjxh" type="djxh">
+						<xs:annotation>
+							<xs:documentation>注销登记序号</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="xdjxh" type="djxh">
+						<xs:annotation>
+							<xs:documentation>新登记序号</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="ssdabh" type="ssdabh">
+						<xs:annotation>
+							<xs:documentation>税收档案编号</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+</xs:schema>

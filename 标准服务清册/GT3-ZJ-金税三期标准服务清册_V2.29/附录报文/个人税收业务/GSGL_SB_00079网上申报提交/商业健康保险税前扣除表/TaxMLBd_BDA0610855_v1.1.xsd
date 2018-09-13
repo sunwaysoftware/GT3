@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:complexType name="syjkbxYwbw">
+		<xs:annotation>
+			<xs:documentation>商业健康保险业务报文</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="syjkbxmxlb" type="syjkbxmxlb"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="syjkbxmxlb">
+		<xs:sequence>
+			<xs:element name="syjkbxmx" type="syjkbxmx" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="syjkbxmx">
+		<xs:annotation>
+			<xs:documentation>商业健康保险明细</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="mxxh" type="xh">
+				<xs:annotation>
+					<xs:documentation>序号（必录）</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="xm" type="xm">
+				<xs:annotation>
+					<xs:documentation>姓名（必录）</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sfzjlxdm" type="sfzjlxDm">
+				<xs:annotation>
+					<xs:documentation>身份证件类型代码（必录）</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sfzjlxmc" type="sfzjlxmc">
+				<xs:annotation>
+					<xs:documentation>身份证件类型名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sfzjhm" type="sfzjhm">
+				<xs:annotation>
+					<xs:documentation>身份证件号码（必录），当身份证件类型代码为201【居民身份证】时，身份证件号码长度只能为18位</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sysbh" type="sysbh">
+				<xs:annotation>
+					<xs:documentation>税优识别号（必录）</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ndbf" type="je">
+				<xs:annotation>
+					<xs:documentation>年度保费</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ydbf" type="je">
+				<xs:annotation>
+					<xs:documentation>月度保费</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bdsxrq" type="sbrq1">
+				<xs:annotation>
+					<xs:documentation>保单生效日期，日期格式：yyyy-MM-dd</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bqkcje" type="je">
+				<xs:annotation>
+					<xs:documentation>本期扣除金额（必录）</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

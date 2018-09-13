@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2013 (http://www.altova.com) by  () -->
+<!-- 被2011 rel. 2 sp1 (pjf) 使用XMLSpy vcss编辑的 (http://www.altova.com) by -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:complexType name="HXZGZS10237Response">
+		<xs:annotation>
+			<xs:documentation>保存税收缴款书(税务收现专用)信息</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="zskpGrid">
+						<xs:annotation>
+							<xs:documentation>缴款信息</xs:documentation>
+						</xs:annotation>
+						<xs:complexType>
+							<xs:sequence maxOccurs="unbounded">
+								<xs:element name="zskpGridlb">
+									<xs:complexType>
+										<xs:sequence>
+											<xs:element name="djzclxDm" type="djzclxDm">
+												<xs:annotation>
+													<xs:documentation>登记注册类型代码</xs:documentation>
+												</xs:annotation>
+											</xs:element>
+											<xs:element name="n" type="mc">
+												<xs:annotation>
+													<xs:documentation>年</xs:documentation>
+												</xs:annotation>
+											</xs:element>
+											<xs:element name="y" type="mc">
+												<xs:annotation>
+													<xs:documentation>月</xs:documentation>
+												</xs:annotation>
+											</xs:element>
+											<xs:element name="r" type="mc">
+												<xs:annotation>
+													<xs:documentation>日</xs:documentation>
+												</xs:annotation>
+											</xs:element>
+											<xs:element name="pzzg" type="pzzg">
+												<xs:annotation>
+													<xs:documentation>票证字轨</xs:documentation>
+												</xs:annotation>
+											</xs:element>
+											<xs:element name="pzhm" type="pzhm">
+												<xs:annotation>
+													<xs:documentation>票证号码</xs:documentation>
+												</xs:annotation>
+											</xs:element>
+											<xs:element name="nsrsbh" type="nsrsbh">
+												<xs:annotation>
+													<xs:documentation>纳税人识别号</xs:documentation>
+												</xs:annotation>
+											</xs:element>
+											<xs:element name="nsrmc" type="nsrmc">
+												<xs:annotation>
+													<xs:documentation>纳税人名称</xs:documentation>
+												</xs:annotation>
+											</xs:element>
+											<xs:element name="dz" type="dz">
+												<xs:annotation>
+													<xs:documentation>地址</xs:documentation>
+												</xs:annotation>
+											</xs:element>
+											<xs:element name="swjg" type="mc">
+												<xs:annotation>
+													<xs:documentation>税务机关名称</xs:documentation>
+												</xs:annotation>
+											</xs:element>
+											<xs:element name="jehjchn" type="mc">
+												<xs:annotation>
+													<xs:documentation>大写金额合计</xs:documentation>
+												</xs:annotation>
+											</xs:element>
+											<xs:element name="jehjnum" type="mc">
+												<xs:annotation>
+													<xs:documentation>小写金额合计</xs:documentation>
+												</xs:annotation>
+											</xs:element>
+											<xs:element name="swjggzxx" type="mc">
+												<xs:annotation>
+													<xs:documentation>税务机关名称(盖章信息)</xs:documentation>
+												</xs:annotation>
+											</xs:element>
+											<xs:element name="dzdw" type="mc">
+												<xs:annotation>
+													<xs:documentation>代征单位</xs:documentation>
+												</xs:annotation>
+											</xs:element>
+											<xs:element name="tpr" type="mc">
+												<xs:annotation>
+													<xs:documentation>填票人</xs:documentation>
+												</xs:annotation>
+											</xs:element>
+											<xs:element name="bz" type="bz">
+												<xs:annotation>
+													<xs:documentation>备注</xs:documentation>
+												</xs:annotation>
+											</xs:element>
+											<xs:element name="printListGrid">
+												<xs:complexType>
+													<xs:sequence maxOccurs="unbounded">
+														<xs:element name="printListGridlb" type="printListVO"/>
+													</xs:sequence>
+												</xs:complexType>
+											</xs:element>
+										</xs:sequence>
+									</xs:complexType>
+								</xs:element>
+							</xs:sequence>
+						</xs:complexType>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="printListVO">
+		<xs:annotation>
+			<xs:documentation>列表VO</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="sz" type="sz">
+				<xs:annotation>
+					<xs:documentation>税种</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zspmMc" type="mc">
+				<xs:annotation>
+					<xs:documentation>品目名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="kssl" type="mc">
+				<xs:annotation>
+					<xs:documentation>课税数量</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jsje" type="mc">
+				<xs:annotation>
+					<xs:documentation>计税金额或销售收入</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sl" type="mc">
+				<xs:annotation>
+					<xs:documentation>税率或单位税额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sksssq" type="skssqq">
+				<xs:annotation>
+					<xs:documentation>税款所属时期</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="kce" type="mc">
+				<xs:annotation>
+					<xs:documentation>已缴或扣除额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sjje" type="mc">
+				<xs:annotation>
+					<xs:documentation>实缴金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

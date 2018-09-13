@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:complexType name="GSSBSB00017Request">
+		<xs:annotation>
+			<xs:documentation>城乡居日常申报保存应征信息</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="CxjmrcsbbcDetailList" type="CxjmrcsbbcDetailList">
+						<xs:annotation>
+							<xs:documentation>城乡居民日常申报明细信息</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="CxjmrcsbbcDetailList">
+		<xs:annotation>
+			<xs:documentation>城乡居民日常申报明细信息</xs:documentation>
+		</xs:annotation>
+		<xs:sequence maxOccurs="unbounded">
+			<xs:element name="CxjmrcsbbcDetail" type="CxjmrcsbbcDetail">
+				<xs:annotation>
+					<xs:documentation>城乡居民日常申报明细</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="CxjmrcsbbcDetail">
+		<xs:annotation>
+			<xs:documentation>城乡居民日常申报明细</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="sbwylsh" type="sblsh">
+				<xs:annotation>
+					<xs:documentation>社保唯一流水号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="xxh" type="xxh">
+				<xs:annotation>
+					<xs:documentation>小序号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zjlx" type="sfzjlx" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>身份证件类型代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zjhm" type="sfzjhm" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>身份证件号码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="xm" type="xm" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>姓名</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zsxmdm" type="zsxmDm">
+				<xs:annotation>
+					<xs:documentation>征收项目代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zspmdm" type="zspmDm">
+				<xs:annotation>
+					<xs:documentation>征收品目代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yjje" type="yjfe">
+				<xs:annotation>
+					<xs:documentation>应缴金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="lxdh" type="lxdh1" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>联系电话</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:simpleType name="lxdh1">
+		<xs:annotation>
+			<xs:documentation>联系电话</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:maxLength value="11"/>
+		</xs:restriction>
+	</xs:simpleType>
+	
+</xs:schema>

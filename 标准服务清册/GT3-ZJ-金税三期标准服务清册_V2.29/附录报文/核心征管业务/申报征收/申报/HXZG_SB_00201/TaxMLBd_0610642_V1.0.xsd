@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 被2012 () 使用XMLSpy v编辑的 (http://www.altova.com) by -->
+<!-- edited with XMLSpy v2010 (http://www.altova.com) by MESMERiZE (MiZE) -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:include schemaLocation="TaxMLPublicType.xsd"/>
+	<xs:complexType name="dqdezxsbbw">
+		<xs:annotation>
+			<xs:documentation>定期定额自行申报业务报文</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="dqdezxsb" type="dqdezxsb">
+						<xs:annotation>
+							<xs:documentation>定期定额自行申报</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="dqdezxsb">
+		<xs:annotation>
+			<xs:documentation>定期定额申报</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="sbbhead" type="sbbheadkz1VO">
+				<xs:annotation>
+					<xs:documentation>纳税人基本信息</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="dqdezxsbGrid">
+				<xs:annotation>
+					<xs:documentation>定期定额自行申报表</xs:documentation>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:sequence maxOccurs="unbounded">
+						<xs:element name="dqdezxsbGridlb" type="dqdezxsbGridlbVo">
+							<xs:annotation>
+								<xs:documentation>定期定额自行申报</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="slrxxForm" type="sbbslxxkz1VO">
+				<xs:annotation>
+					<xs:documentation>受理人信息</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="dqdezxsbGrid">
+		<xs:annotation>
+			<xs:documentation>申报数据信息</xs:documentation>
+		</xs:annotation>
+		<xs:sequence maxOccurs="unbounded">
+			<xs:element name="yhssbGridlb" type="dqdezxsbGridlbVo">
+				<xs:annotation>
+					<xs:documentation>申报数据信息</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="dqdezxsbGridlbVo">
+		<xs:annotation>
+			<xs:documentation>定期定额自行申报表信息</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="zsxmDm" type="zsxmDm">
+				<xs:annotation>
+					<xs:documentation>征收项目</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zspmDm" type="zspmDm">
+				<xs:annotation>
+					<xs:documentation>征收品目</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jsyj" type="jsyj">
+				<xs:annotation>
+					<xs:documentation>计税依据</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="hdjsyj" type="jsyj">
+				<xs:annotation>
+					<xs:documentation>核定计税依据</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sl1" type="sl1">
+				<xs:annotation>
+					<xs:documentation>税率(征收率)</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bqynse" type="bqynse">
+				<xs:annotation>
+					<xs:documentation>本期应纳税额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="hdynse" type="hdynse">
+				<xs:annotation>
+					<xs:documentation>核定应纳税额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jmse" type="jmse" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>减免税额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yjse" type="yjse" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>本期已缴税额：本期已申报金额+本期可用预缴税额。默认带出，可以修改。</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ybtse" type="bqybtse">
+				<xs:annotation>
+					<xs:documentation>本期应补退税额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="skssqq" type="skssqq">
+				<xs:annotation>
+					<xs:documentation>税款所属期起</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="skssqz" type="skssqz">
+				<xs:annotation>
+					<xs:documentation>税款所属起止</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="rdpzuuid" type="rdpzuuid">
+				<xs:annotation>
+					<xs:documentation>认定凭证uuid</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="rdzsuuid" type="rdzsuuid">
+				<xs:annotation>
+					<xs:documentation>认定主税uuid</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jsbz1" type="jsbz" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>计税标志：个人所得税征收方式为征收率：jsbz1为1；个人所得税征收方式为应税所得率：jsbz2为2</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="pzmxxh" type="pzmxxh" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>凭证明细序号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jmwsuuid" type="uuid" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>减免文书uuid</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ysbse" type="yjse" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>本期已申报税额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="kyyjje" type="yjse">
+				<xs:annotation>
+					<xs:documentation>本期可用预缴税额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="wdqzdbz" type="bz" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>未达起征点标志</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zfsbz" type="bz" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>主附税标志</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zszmDm" type="zszmDm" nillable="1">
+				<xs:annotation>
+					<xs:documentation>征收子目代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yssdl" type="yssdl" nillable="1">
+				<xs:annotation>
+					<xs:documentation>应税所得率</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ssjmxzDm" type="ssjmxzDm" nillable="1">
+				<xs:annotation>
+					<xs:documentation>税收减免性质代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ysx" type="ysx" nillable="1">
+				<xs:annotation>
+					<xs:documentation>应税项</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="arzsbz" type="bz" nillable="1">
+				<xs:annotation>
+					<xs:documentation>按日折算标志,设计开发字段，用来表示是否存在按天折算情况</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="kce" type="yjse" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>扣除额，计税标志为5的场景，一水依据=应税项-扣除额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	
+</xs:schema>

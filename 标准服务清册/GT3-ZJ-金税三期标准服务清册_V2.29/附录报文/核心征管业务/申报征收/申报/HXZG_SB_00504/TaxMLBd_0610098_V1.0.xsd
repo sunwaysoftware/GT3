@@ -1,0 +1,266 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 被2011 rel. 2 sp1 (TeaM DJiNN) 使用XMLSpy vTeaM DJiNN编辑的 (http://www.altova.com) by -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:include schemaLocation="TaxMLPublicType.xsd"/>
+	<xs:complexType name="cbdezcbgywbw">
+		<xs:annotation>
+			<xs:documentation>处分大额资产报告业务报文</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="cfdezcbgb" type="cfdezcbgb">
+						<xs:annotation>
+							<xs:documentation>欠税纳税人处分不动产或大额资产</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="cfdezcbgb">
+		<xs:annotation>
+			<xs:documentation>欠税纳税人处分不动产或大额资产</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="sqxxMapVO" type="sqxxMapVO">
+				<xs:annotation>
+					<xs:documentation>纳税人基本信息</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yysgqkGrid">
+				<xs:annotation>
+					<xs:documentation>纳税人拟处分资产情况基本信息</xs:documentation>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:sequence maxOccurs="unbounded">
+						<xs:element name="yysgqkGridlbVO" type="yysgqkGridlbVO"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="delUuids">
+				<xs:annotation>
+					<xs:documentation>待作废数据</xs:documentation>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:sequence maxOccurs="unbounded">
+						<xs:element name="uuidListVO" type="uuidListVO"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="slxxVO" type="sbbslxxVO">
+				<xs:annotation>
+					<xs:documentation>受理信息</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="sqxxMapVO">
+		<xs:annotation>
+			<xs:documentation>纳税人信息</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="nsrsbh" type="nsrsbh">
+				<xs:annotation>
+					<xs:documentation>纳税人识别号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="nsrmc" type="nsrmc">
+				<xs:annotation>
+					<xs:documentation>纳税人名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sqrq" type="sqrq">
+				<xs:annotation>
+					<xs:documentation>申请日期</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sqrmc" type="sqrmc">
+				<xs:annotation>
+					<xs:documentation>申请人名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="djxh" type="djxh">
+				<xs:annotation>
+					<xs:documentation>登记序号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="gzbz" type="gzbz">
+				<xs:annotation>
+					<xs:documentation>更正标志</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="nsruuid" type="uuid">
+				<xs:annotation>
+					<xs:documentation>uuid</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sbbwz" type="uuid">
+				<xs:annotation>
+					<xs:documentation>申报表位置</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="yysgqkGridlbVO">
+		<xs:annotation>
+			<xs:documentation>处分资产信息表</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="ewbhxh" type="ewbhxh" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>二维表行序号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zczlDm" type="qsnsrczzczlDm" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>资产种类代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zcmc" type="qsnsrczzczlmc" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>资产名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bdccqzsh" type="bdcqszsh" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>不动产产权证书号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bdczld" type="xmxxzldd" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>不动产座落地</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zcxh" type="xh3" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>资产型号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zcyz" type="zcyz" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>资产原值</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zcjz" type="zcjz" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>资产净值</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="cffs" type="cffsDm" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>处分方式</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="cfjg" type="cfjg" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>处分价格</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jsrnsrsbh" type="stfnsrsbh" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>接收人纳税人识别号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jsrnsrmc" type="cyfnsrmc" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>接收人纳税人名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jsrdjxh" type="csfdjxh" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>接受方方登记序号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jsrlxdh" type="jsflxdh" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>接收人联系电话</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="xzqhsf" type="xzqhsf" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>省份</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="xzqhds" type="xzqhds" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>地税</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="xzqhqx" type="xzqhqx" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>区县</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jdxzDm" type="jdxzDm" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>街道乡镇</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			
+			<xs:element name="jsrbgdz" type="bgdz" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>详细地址</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jsrzz" type="zz" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>接收人住址</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jzmj" type="jzmj" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>建筑面积</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sl" type="sl" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>数量</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="uuid" type="uuid">
+				<xs:annotation>
+					<xs:documentation>uuid</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="deletebz" type="bz1">
+				<xs:annotation>
+					<xs:documentation>删除标志</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="insertbz" type="bz1">
+				<xs:annotation>
+					<xs:documentation>新增标志</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="nsruuid" type="uuid">
+				<xs:annotation>
+					<xs:documentation>uuid</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sbbwz" type="uuid">
+				<xs:annotation>
+					<xs:documentation>申报表位置</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sqrq" type="sqrq">
+				<xs:annotation>
+					<xs:documentation>申请日期</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="uuidListVO">
+		<xs:annotation>
+			<xs:documentation>待作废uuid集合</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="uuid" type="uuid" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>uuid</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

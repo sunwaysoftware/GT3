@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2010 rel. 3 (http://www.altova.com) by MESMERiZE (MSM) -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:include schemaLocation="TaxMLCGSSBType.xsd"/>
+	<xs:complexType name="clgzsnssbywbw">
+		<xs:annotation>
+			<xs:documentation>车辆购置税申报业务报文</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="clgzssb" type="clgzssb">
+						<xs:annotation>
+							<xs:documentation>车辆购置税申报</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="clgzssb">
+		<xs:annotation>
+			<xs:documentation>车辆购置税申报</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="nsrxxForm" type="nsrxxForm">
+				<xs:annotation>
+					<xs:documentation>车辆购置税申报-纳税人信息</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="clgzssbxxForm" type="clgzssbxxForm">
+				<xs:annotation>
+					<xs:documentation>车辆购置税申报申报信息</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="clgzssbhzxxForm" type="clgzssbhzxxForm">
+				<xs:annotation>
+					<xs:documentation>车辆购置税申报核准信息</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="fjxxForm" type="fjxxForm">
+				<xs:annotation>
+					<xs:documentation>车辆购置税附加信息</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="flzlGrid" type="flzlGrid">
+				<xs:annotation>
+					<xs:documentation>附送资料</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="fpcjGrid" type="fpcjGrid">
+				<xs:annotation>
+					<xs:documentation>机动车发票信息</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="escfpcjGrid" type="escfpcjGrid">
+				<xs:annotation>
+					<xs:documentation>二手车发票信息</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yjsxxGrid" type="yjsxxGrid"/>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>
