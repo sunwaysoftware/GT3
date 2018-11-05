@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2010 rel. 3 (http://www.altova.com) by MESMERiZE (MSM) -->
+<!-- 被2012 () 使用XMLSpy v编辑的 (http://www.altova.com) by -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:complexType name="HXZGSB00758Response">
+		<xs:annotation>
+			<xs:documentation>车购税完税证明换补保存车辆购置税完税证明换补信息返回报文</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="wszmhm" type="wszmhm">
+						<xs:annotation>
+							<xs:documentation>新完税凭证号码、barcode、ewtm</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="barcode" type="ewtmc">
+						<xs:annotation>
+							<xs:documentation>二维条码</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="ewtm" type="ewtmt">
+						<xs:annotation>
+							<xs:documentation>二维条码</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+</xs:schema>

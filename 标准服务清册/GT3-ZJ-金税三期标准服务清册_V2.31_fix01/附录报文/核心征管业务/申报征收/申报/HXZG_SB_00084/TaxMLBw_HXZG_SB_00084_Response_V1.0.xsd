@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2013 (http://www.altova.com) by  () -->
+<!-- 被2012 () 使用XMLSpy v编辑的 (http://www.altova.com) by -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:include schemaLocation="TaxMLPublicSBType.xsd"/>
+	<xs:include schemaLocation="TaxMLCGSSBType.xsd"/>
+	<xs:complexType name="HXZGSB00084Response">
+		<xs:annotation>
+			<xs:documentation>车辆购置税申报保存返回报文</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="SBCgsSaveReturnVO" type="SBCgsSaveReturnVO">
+						<xs:annotation>
+							<xs:documentation>申报保存返回数据信息</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="SBCgsSaveReturnVO">
+		<xs:complexContent>
+			<xs:extension base="SBSaveReturnVO">
+				<xs:sequence>
+					<xs:element name="cgssbuuid" type="cgssbuuid">
+						<xs:annotation>
+							<xs:documentation>车购税申报主键</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="sbbwz" type="sbbwz">
+						<xs:annotation>
+							<xs:documentation>申报表凭证化保存位置</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="yqts" type="yqts">
+						<xs:annotation>
+							<xs:documentation>预期天数</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="cgsznjxxVO" type="cgsznjxxVO">
+						<xs:annotation>
+							<xs:documentation>车购税滞纳金信息（模拟缴款日期为此刻计算，真实精确的在征收开票环节计算）</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+</xs:schema>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:include schemaLocation="TaxMLCGSSBType.xsd"/>
+	<xs:complexType name="HXZGSB00664Request">
+		<xs:annotation>
+			<xs:documentation>查询车辆购置税完税证明信息接入报文</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="SBCgsWszmCXVO" type="SBCgsWszmCXVO">
+						<xs:annotation>
+							<xs:documentation>车辆完税证明查询条件</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+</xs:schema>

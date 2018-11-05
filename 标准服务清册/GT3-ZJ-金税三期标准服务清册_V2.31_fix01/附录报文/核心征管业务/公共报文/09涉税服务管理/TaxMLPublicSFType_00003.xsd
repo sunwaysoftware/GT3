@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:include schemaLocation="TaxMLPublic.xsd"/>
+	<xs:complexType name="sfSsjgzzbVO">
+	<xs:annotation><xs:documentation>行政登记终止受理</xs:documentation></xs:annotation>
+	<xs:sequence>
+	<xs:element name="xzdjzzuuid" type="xzdjzzuuid"><xs:annotation><xs:documentation>终止uuid</xs:documentation></xs:annotation></xs:element>
+	<xs:element name="xzdjxh" type="xzdjxh"  minOccurs="0"><xs:annotation><xs:documentation>xzdjxh</xs:documentation></xs:annotation></xs:element>
+	<xs:element name="zzyy" type="zzyy"  minOccurs="0"><xs:annotation><xs:documentation>zzyy</xs:documentation></xs:annotation></xs:element>
+	<xs:element name="spjg" type="spjg"  minOccurs="0"><xs:annotation><xs:documentation>spjg</xs:documentation></xs:annotation></xs:element>
+	<xs:element name="zzrq" type="zzrq"  minOccurs="0"><xs:annotation><xs:documentation>zzrq</xs:documentation></xs:annotation></xs:element>
+	<xs:element name="zzryDm" type="zzryDm" minOccurs="0"><xs:annotation><xs:documentation>zzryDm</xs:documentation></xs:annotation></xs:element>
+	<xs:element name="zsrq3" type="zsrq3"  minOccurs="0"> <xs:annotation><xs:documentation>zsrq3</xs:documentation></xs:annotation></xs:element>
+	<xs:element name="zsswjgDm1" type="zsswjgDm1"  minOccurs="0"><xs:annotation><xs:documentation>zsswjgDm1</xs:documentation></xs:annotation></xs:element>
+	<xs:element name="zsrDm" type="zsrDm"  minOccurs="0"><xs:annotation><xs:documentation>zsrDm</xs:documentation></xs:annotation></xs:element>
+	<xs:element name="slrDm" type="slrDm"  minOccurs="0"><xs:annotation><xs:documentation>slrDm</xs:documentation></xs:annotation></xs:element>
+		<xs:element name="slrq" type="slrq" minOccurs="0"><xs:annotation><xs:documentation>slrq</xs:documentation></xs:annotation></xs:element>
+		<xs:element name="slswjgDm" type="slswjgDm" minOccurs="0"><xs:annotation><xs:documentation>slrq</xs:documentation></xs:annotation></xs:element>
+		<xs:element name="lrrDm" type="lrrDm" minOccurs="0"><xs:annotation><xs:documentation>lrrDm</xs:documentation></xs:annotation></xs:element>
+		<xs:element name="lrrq" type="lrrq" minOccurs="0"><xs:annotation><xs:documentation>lrrq</xs:documentation></xs:annotation></xs:element>
+		<xs:element name="xgrDm" type="xgrDm" minOccurs="0"><xs:annotation><xs:documentation>xgrDm</xs:documentation></xs:annotation></xs:element>
+		<xs:element name="xgrq" type="xgrq" minOccurs="0"><xs:annotation><xs:documentation>xgrq</xs:documentation></xs:annotation></xs:element>
+		<xs:element name="zfbz1" type="zfbz1" minOccurs="0"><xs:annotation><xs:documentation>zfbz1</xs:documentation></xs:annotation></xs:element>
+		<xs:element name="zfrDm" type="zfrDm" minOccurs="0"><xs:annotation><xs:documentation>zfrDm</xs:documentation></xs:annotation></xs:element>
+		<xs:element name="zfrq1" type="zfrq1" minOccurs="0"><xs:annotation><xs:documentation>zfrq1</xs:documentation></xs:annotation></xs:element>
+		<xs:element name="sjgsdq" type="sjgsdq" minOccurs="0"><xs:annotation><xs:documentation>sjgsdq</xs:documentation></xs:annotation></xs:element>
+		<xs:element name="sjtbSj" type="sjtbSj" minOccurs="0"><xs:annotation><xs:documentation>sjtbSj</xs:documentation></xs:annotation></xs:element>
+		<xs:element name="lcslid" type="lcslid" minOccurs="0"><xs:annotation><xs:documentation>lcslid</xs:documentation></xs:annotation></xs:element>
+		<xs:element name="shxydm" type="shxydm" minOccurs="0"><xs:annotation><xs:documentation>shxydm</xs:documentation></xs:annotation></xs:element>
+		<xs:element name="swsswsmc" type="swsswsmc" minOccurs="0"><xs:annotation><xs:documentation>swsswsmc</xs:documentation></xs:annotation></xs:element>
+		<xs:element name="xzdjuuid" type="uuid" minOccurs="0"><xs:annotation><xs:documentation>xzdjuuid</xs:documentation></xs:annotation></xs:element>
+	</xs:sequence>
+	</xs:complexType>
+</xs:schema>

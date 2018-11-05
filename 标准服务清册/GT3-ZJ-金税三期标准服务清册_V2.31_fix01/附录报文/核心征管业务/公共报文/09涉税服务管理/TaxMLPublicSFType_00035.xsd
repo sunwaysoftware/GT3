@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:include schemaLocation="TaxMLPublic.xsd"/>
+	<xs:complexType name="ssjgryxxVO">
+		<xs:annotation>
+			<xs:documentation>涉税机构人员信息</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="uuid" type="uuid">
+				<xs:annotation>
+					<xs:documentation>UUID||uuid</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="xzdjxh" type="xzdjxh">
+				<xs:annotation>
+					<xs:documentation>行政登记序号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ryxh" type="ryxh" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>人员序号||人员序号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="xm" type="xm" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>姓名</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sfzjzlDm" type="sfzjzlDm" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>身份证件种类代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sfzjhm" type="sfzjhm" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>身份证件号码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zyzgzslxDm" type="zyzgzslxDm" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>职业资格证书类型代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zyzgzssj" type="zyzgzssj" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>职业资格证书时间</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zyzgzsbh" type="zyzgzsbh" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>执业资格证书编号||执业资格证书编号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="hyxhhybh" type="hyxhhybh" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>行业协会会员编号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yxbz" type="yxbz" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>有效标志</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="rylbbz" type="rylbbz" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>人员类别标志||01代表合伙人或股东，02代表其他人员</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="lcslid" type="lcslid" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>流程实例ID</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zyzgzsmc" type="zyzgzsmc" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>职业资格证书名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yxqq" type="yxqq" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>有效期期</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yxqz" type="yxqz" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>有效期止</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="xzdjbgrycxVO">
+		<xs:annotation>
+			<xs:documentation>行政登记变更条件查询</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="xzdjxh" type="xzdjxh">
+				<xs:annotation>
+					<xs:documentation>行政登记序号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="rylbbz" type="rylbbz" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>人员类别标志||01代表合伙人或股东，02代表其他人员</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="xm" type="xm" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>姓名</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sfzjzlDm" type="sfzjzlDm" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>身份证件种类代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sfzjhm" type="sfzjhm" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>身份证件号码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>
