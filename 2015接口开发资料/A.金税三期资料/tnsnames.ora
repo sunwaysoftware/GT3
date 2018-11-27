@@ -1,0 +1,41 @@
+#######################################湖南地税生产
+
+
+
+HNLT_SC_HXCX =  
+ (DESCRIPTION =
+  (ADDRESS_LIST =
+  (ADDRESS = (PROTOCOL = tcp)(HOST = 149.12.72.52)(PORT = 1521))
+  (ADDRESS = (PROTOCOL = tcp)(HOST = 149.12.72.53)(PORT = 1521))
+  (LOAD_BALANCE = ON)
+  (FAILOVER = ON)
+  )
+  (CONNECT_DATA =
+	   (SERVICE_NAME = hnlthxcx)
+	   (GLOBAL_NAME = hnlthxcx)
+	   (FAILOVER_MODE =
+	   (TYPE = SELECT)
+	   (METHOD = BASIC)
+	)
+  )
+)
+
+
+
+HNLT_SC_HXFF =  
+ (DESCRIPTION =
+  (ADDRESS_LIST =
+  (ADDRESS = (PROTOCOL = tcp)(HOST = 149.12.72.48)(PORT = 1521))
+  (ADDRESS = (PROTOCOL = tcp)(HOST = 149.12.72.49)(PORT = 1521))
+  (LOAD_BALANCE = ON)
+  (FAILOVER = ON)
+  )
+  (CONNECT_DATA =
+	   (SERVICE_NAME = hnlthxff)
+	   (GLOBAL_NAME = hnlthxff)
+	   (FAILOVER_MODE =
+	   (TYPE = SELECT)
+	   (METHOD = BASIC)
+	)
+  )
+)
