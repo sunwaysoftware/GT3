@@ -1,0 +1,867 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 被2012 () 使用XMLSpy v编辑的 (http://www.altova.com) by -->
+<!-- edited with XMLSpy v2013 (http://www.altova.com) by  () -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:include schemaLocation="TaxMLPublic.xsd"/>
+	<xs:complexType name="SFSszyfwndbgVO">
+		<xs:annotation>
+			<xs:documentation>涉税专业服务年度报告</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="ndbguuid" type="uuid">
+				<xs:annotation>
+					<xs:documentation>年度报告uuid</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="nd" type="nd">
+				<xs:annotation>
+					<xs:documentation>年度</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ndbgbh" type="cpxh">
+				<xs:annotation>
+					<xs:documentation>年度报告编号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sszyfwjgxh" type="djxh">
+				<xs:annotation>
+					<xs:documentation>涉税专业服务机构序号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sszyfwxypf" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>涉税专业服务信用评分</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ssqyDm" type="yxbz" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>上市区域代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bnsfsdxzcf" type="yxbz" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>本年是否受到行政处罚</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bnsfsdhyxhcj" type="yxbz" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>本年是否受到行业协会惩戒</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="gsjk" type="nr" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>公司简况</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qtsm" type="qtsm" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>其他说明</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="gzlxDm" type="yxbz" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>更正类型代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jbr" type="jbr">
+				<xs:annotation>
+					<xs:documentation>经办人</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jsrDm" type="swryDm">
+				<xs:annotation>
+					<xs:documentation>接收人代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jsrq" type="jsrq">
+				<xs:annotation>
+					<xs:documentation>接收日期</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jsswjgDm" type="swryDm">
+				<xs:annotation>
+					<xs:documentation>接收税务机关</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="shdxzcfqk" type="nr" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>受到行政处罚情况</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="hyxhjcqk" type="nr" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>行业协会奖惩情况</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="csssfwry" type="cyrs">
+				<xs:annotation>
+					<xs:documentation>从事涉税服务人员数</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="csssfwwjrys" type="cyrs">
+				<xs:annotation>
+					<xs:documentation>其中：从事涉税服务外籍人员数</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="SFNdbgjyxxVO">
+		<xs:annotation>
+			<xs:documentation>涉税专业服务年度报告经营信息</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="ndbgjyxxuuid" type="uuid">
+				<xs:annotation>
+					<xs:documentation>年度报告经营信息uuid</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ndbguuid" type="uuid">
+				<xs:annotation>
+					<xs:documentation>年度报告uuid</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="hc" type="hc">
+				<xs:annotation>
+					<xs:documentation>行次</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="hmc" type="hmc">
+				<xs:annotation>
+					<xs:documentation>行名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="je" type="je">
+				<xs:annotation>
+					<xs:documentation>金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="SFNdbgywxxVO">
+		<xs:annotation>
+			<xs:documentation>涉税专业服务年度报告业务信息</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="ndbgywxxuuid" type="uuid">
+				<xs:annotation>
+					<xs:documentation>年度报告经营信息uuid</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ndbguuid" type="uuid">
+				<xs:annotation>
+					<xs:documentation>年度报告uuid</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="hc" type="hc">
+				<xs:annotation>
+					<xs:documentation>行次</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="hmc" type="hmc">
+				<xs:annotation>
+					<xs:documentation>行名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="hs" type="hs">
+				<xs:annotation>
+					<xs:documentation>户数</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ywje" type="je">
+				<xs:annotation>
+					<xs:documentation>业务金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ywsr" type="je">
+				<xs:annotation>
+					<xs:documentation>业务收入</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="jgjbxxForm">
+		<xs:annotation>
+			<xs:documentation>机构基本信息</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="tyshxydm" type="shxydm">
+				<xs:annotation>
+					<xs:documentation>统一社会信用代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ssjgmc" type="nsrmc">
+				<xs:annotation>
+					<xs:documentation>涉税机构名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="djzclxDm" type="djzclxDm">
+				<xs:annotation>
+					<xs:documentation>登记注册类型代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="clrq" type="rq">
+				<xs:annotation>
+					<xs:documentation>成立日期</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="gdsl" type="sl">
+				<xs:annotation>
+					<xs:documentation>股东数量</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zcze" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>资产总额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="fddbrxm" type="xm">
+				<xs:annotation>
+					<xs:documentation>法定代表人姓名</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="swsrs" type="sl">
+				<xs:annotation>
+					<xs:documentation>税务师人数</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="lsrs" type="sl">
+				<xs:annotation>
+					<xs:documentation>律师人数</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zckjsrs" type="sl">
+				<xs:annotation>
+					<xs:documentation>注册会计师人数</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="cyrs" type="sl" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>从业人数</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ssqyDm" type="ssqyDm" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>上市情况</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zczj" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>注册资金</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ssjgdz" type="dz">
+				<xs:annotation>
+					<xs:documentation>机构地址</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sszyfwxypf" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>涉税专业服务信用评分</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bnsfsdxzcf" type="bz1" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>本年是否收到行政处罚</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bnsfsdhyxhcj" type="bz1" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>本年是否受到行业协会惩戒</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="gsjk" type="nrDzfx" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>公司简况</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qtsm" type="nr" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>其他说明</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jsrDm" type="swryDm">
+				<xs:annotation>
+					<xs:documentation>接收人代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jsswjgDm" type="swjgDm">
+				<xs:annotation>
+					<xs:documentation>接收税务机关代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jbr" type="jbr">
+				<xs:annotation>
+					<xs:documentation>经办人</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jsrq" type="rq">
+				<xs:annotation>
+					<xs:documentation>接收日期</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="swjgmc" type="swjgmc">
+				<xs:annotation>
+					<xs:documentation>税务机关名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="shdxzcfqk" type="nr" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>受到行政处罚情况</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="hyxhjcqk" type="nr" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>行业协会奖惩情况</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="fddbrlxdh" type="lxdh">
+				<xs:annotation>
+					<xs:documentation>联系电话</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="csssfwry" type="cyrs">
+				<xs:annotation>
+					<xs:documentation>从事涉税服务人员数</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="csssfwwjrys" type="cyrs">
+				<xs:annotation>
+					<xs:documentation>其中：从事涉税服务外籍人员数</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="jyxxForm">
+		<xs:annotation>
+			<xs:documentation>经营信息表单</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="h1l2" type="je">
+				<xs:annotation>
+					<xs:documentation>一、收入总额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="h2l2" type="je">
+				<xs:annotation>
+					<xs:documentation>（一）主营业务合计</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="h3l2" type="je">
+				<xs:annotation>
+					<xs:documentation>（二）其他收入</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="h4l2" type="je">
+				<xs:annotation>
+					<xs:documentation>（三）营业外收入</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="h5l2" type="je">
+				<xs:annotation>
+					<xs:documentation>二、支出总额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="h6l2" type="je">
+				<xs:annotation>
+					<xs:documentation>（一）主营业务成本</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="h7l2" type="je">
+				<xs:annotation>
+					<xs:documentation>（二）主营业务税金及附加</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="h8l2" type="je">
+				<xs:annotation>
+					<xs:documentation>（三）管理费用</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="h9l2" type="je">
+				<xs:annotation>
+					<xs:documentation>（四）销售费用</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="h10l2" type="je">
+				<xs:annotation>
+					<xs:documentation>（五）财务费用</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="h11l2" type="je">
+				<xs:annotation>
+					<xs:documentation>（六）营业外支出</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="h12l2" type="je">
+				<xs:annotation>
+					<xs:documentation>三、利润总额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="h13l2" type="je">
+				<xs:annotation>
+					<xs:documentation>减：所得减免</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="h14l2" type="je">
+				<xs:annotation>
+					<xs:documentation>减：抵扣应纳税所得额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="h15l2" type="je">
+				<xs:annotation>
+					<xs:documentation>减：弥补以前年度亏损</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="ywxxForm">
+		<xs:annotation>
+			<xs:documentation>业务信息表单</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="h1l2" type="sl">
+				<xs:annotation>
+					<xs:documentation>户数</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="h1l3" type="je">
+				<xs:annotation>
+					<xs:documentation>业务金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="h1l4" type="je">
+				<xs:annotation>
+					<xs:documentation>业务收入</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="h2l2" type="sl">
+				<xs:annotation>
+					<xs:documentation>户数</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="h2l3" type="je">
+				<xs:annotation>
+					<xs:documentation>业务金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="h2l4" type="je">
+				<xs:annotation>
+					<xs:documentation>业务收入</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="h3l2" type="sl">
+				<xs:annotation>
+					<xs:documentation>户数</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="h3l3" type="je">
+				<xs:annotation>
+					<xs:documentation>业务金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="h3l4" type="je">
+				<xs:annotation>
+					<xs:documentation>业务收入</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="h4l2" type="sl">
+				<xs:annotation>
+					<xs:documentation>户数</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="h4l3" type="je">
+				<xs:annotation>
+					<xs:documentation>业务金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="h4l4" type="je">
+				<xs:annotation>
+					<xs:documentation>业务收入</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="h5l2" type="sl">
+				<xs:annotation>
+					<xs:documentation>户数</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="h5l3" type="je">
+				<xs:annotation>
+					<xs:documentation>业务金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="h5l4" type="je">
+				<xs:annotation>
+					<xs:documentation>业务收入</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="h6l2" type="sl" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>户数</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="h6l3" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>业务金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="h6l4" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>业务收入</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="h7l2" type="sl">
+				<xs:annotation>
+					<xs:documentation>户数</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="h7l3" type="je">
+				<xs:annotation>
+					<xs:documentation>业务金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="h7l4" type="je">
+				<xs:annotation>
+					<xs:documentation>业务收入</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="h8l2" type="sl">
+				<xs:annotation>
+					<xs:documentation>户数</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="h8l3" type="je">
+				<xs:annotation>
+					<xs:documentation>业务金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="h8l4" type="je">
+				<xs:annotation>
+					<xs:documentation>业务收入</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="h9l2" type="sl">
+				<xs:annotation>
+					<xs:documentation>户数</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="h9l3" type="je">
+				<xs:annotation>
+					<xs:documentation>业务金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="h9l4" type="je">
+				<xs:annotation>
+					<xs:documentation>业务收入</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="h10l2" type="sl">
+				<xs:annotation>
+					<xs:documentation>户数</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="h10l3" type="je">
+				<xs:annotation>
+					<xs:documentation>业务金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="h10l4" type="je">
+				<xs:annotation>
+					<xs:documentation>业务收入</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="h11l2" type="sl" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>户数</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="h11l3" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>业务金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="h11l4" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>业务收入</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="h12l2" type="sl">
+				<xs:annotation>
+					<xs:documentation>户数</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="h12l3" type="je">
+				<xs:annotation>
+					<xs:documentation>业务金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="h12l4" type="je">
+				<xs:annotation>
+					<xs:documentation>业务收入</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="h13l2" type="sl">
+				<xs:annotation>
+					<xs:documentation>户数</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="h13l3" type="je">
+				<xs:annotation>
+					<xs:documentation>业务金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="h13l4" type="je">
+				<xs:annotation>
+					<xs:documentation>业务收入</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="h14l2" type="sl">
+				<xs:annotation>
+					<xs:documentation>户数</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="h14l3" type="je">
+				<xs:annotation>
+					<xs:documentation>业务金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="h14l4" type="je">
+				<xs:annotation>
+					<xs:documentation>业务收入</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="h15l2" type="sl">
+				<xs:annotation>
+					<xs:documentation>户数</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="h15l3" type="je">
+				<xs:annotation>
+					<xs:documentation>业务金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="h15l4" type="je">
+				<xs:annotation>
+					<xs:documentation>业务收入</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="h16l2" type="sl">
+				<xs:annotation>
+					<xs:documentation>户数</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="h16l3" type="je">
+				<xs:annotation>
+					<xs:documentation>业务金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="h16l4" type="je">
+				<xs:annotation>
+					<xs:documentation>业务收入</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="h17l2" type="sl">
+				<xs:annotation>
+					<xs:documentation>户数</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="h17l3" type="je">
+				<xs:annotation>
+					<xs:documentation>业务金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="h17l4" type="je">
+				<xs:annotation>
+					<xs:documentation>业务收入</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="h18l2" type="sl">
+				<xs:annotation>
+					<xs:documentation>户数</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="h18l3" type="je">
+				<xs:annotation>
+					<xs:documentation>业务金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="h18l4" type="je">
+				<xs:annotation>
+					<xs:documentation>业务收入</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="SFSszyfwzxbgVO">
+		<xs:annotation>
+			<xs:documentation>涉税专业服务专项报告</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="zxbguuid" type="uuid">
+				<xs:annotation>
+					<xs:documentation>专项报告uuid</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sszyfwjgxh" type="djxh">
+				<xs:annotation>
+					<xs:documentation>涉税专业服务机构序号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="wtxyxxcjbh" type="jcajbh">
+				<xs:annotation>
+					<xs:documentation>委托协议信息采集编号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sszyfwzxbgbh" type="cpxh">
+				<xs:annotation>
+					<xs:documentation>涉税专业服务专项报告编号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ysszyfwzxbgbh" type="cpxh" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>原涉税专业服务专项报告编号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jsje1" type="je">
+				<xs:annotation>
+					<xs:documentation>结算金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ywwcrq" type="jsrq">
+				<xs:annotation>
+					<xs:documentation>业务完成日期</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="fwqkzy" type="nr" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>服务情况摘要</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="gzlxDm" type="yxbz">
+				<xs:annotation>
+					<xs:documentation>更正类型代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sszyfwwtxmdlDm" type="xzqhszDm">
+				<xs:annotation>
+					<xs:documentation>涉税专业服务委托项目大类代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jbr" type="jbr">
+				<xs:annotation>
+					<xs:documentation>经办人</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jsrDm" type="swryDm">
+				<xs:annotation>
+					<xs:documentation>接收人代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jsrq" type="jsrq">
+				<xs:annotation>
+					<xs:documentation>接收日期</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jsswjgDm" type="swryDm">
+				<xs:annotation>
+					<xs:documentation>接收税务机关</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="wtxm" type="sszyfwwtxmDm">
+				<xs:annotation>
+					<xs:documentation>委托项目代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="SFZxbgryxxVO">
+		<xs:annotation>
+			<xs:documentation>涉税专业服务专项报告人员信息</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="zxbgryuuid" type="uuid">
+				<xs:annotation>
+					<xs:documentation>专项报告人员信息uuid</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zxbguuid" type="uuid">
+				<xs:annotation>
+					<xs:documentation>专项报告uuid</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ryxh" type="djxh">
+				<xs:annotation>
+					<xs:documentation>人员序号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="xmnsf" type="ghqnsrsfzjzlmc">
+				<xs:annotation>
+					<xs:documentation>项目内身份</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="SFZxbgwtxmxxVO">
+		<xs:annotation>
+			<xs:documentation>涉税专业服务专项报告委托项目信息</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="wtxmuuid" type="uuid">
+				<xs:annotation>
+					<xs:documentation>委托项目uuid</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zxbguuid" type="uuid">
+				<xs:annotation>
+					<xs:documentation>专项报告uuid</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sszyfwwtxmDm" type="xzqhszDm">
+				<xs:annotation>
+					<xs:documentation>委托服务项目代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ywje" type="je">
+				<xs:annotation>
+					<xs:documentation>业务金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ywsrje" type="je">
+				<xs:annotation>
+					<xs:documentation>业务收入金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ywbgqsr" type="xm" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>业务报告签署人</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="SFZxbgryxxMap">
+		<xs:annotation>
+			<xs:documentation>涉税专业服务专项报告人员信息Map</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="xm" type="xm">
+				<xs:annotation>
+					<xs:documentation>姓名</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="xmnsf" type="ghqnsrsfzjzlmc">
+				<xs:annotation>
+					<xs:documentation>项目内身份</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sfzjzlDm" type="sfzjzlDm">
+				<xs:annotation>
+					<xs:documentation>身份证件种类代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sfzjhm" type="sfzjhm">
+				<xs:annotation>
+					<xs:documentation>身份证件号码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

@@ -1,0 +1,1342 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 被2012 () 使用XMLSpy v编辑的 (http://www.altova.com) by -->
+<!-- edited with XMLSpy v2010 rel. 3 (http://www.altova.com) by MESMERiZE (MSM) -->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://www.chinatax.gov.cn/dataspec/" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:include schemaLocation="TaxMLPublic.xsd"/>
+	<xs:complexType name="WfDataVO">
+		<xs:annotation>
+			<xs:documentation>工作流通用数据载体类VO</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="packageId">
+				<xs:annotation>
+					<xs:documentation>包ID</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="lcdyid">
+				<xs:annotation>
+					<xs:documentation>流程定义ID</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="actDefId">
+				<xs:annotation>
+					<xs:documentation>活动定义ID</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="processInsId">
+				<xs:annotation>
+					<xs:documentation>流程实例ID</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="parentProcessInsId">
+				<xs:annotation>
+					<xs:documentation>父流程实例ID</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="parentLcslid">
+				<xs:annotation>
+					<xs:documentation>（业务）父流程实例ID</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="actInsId">
+				<xs:annotation>
+					<xs:documentation>活动实例ID</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="parentActInsId">
+				<xs:annotation>
+					<xs:documentation>父活动实例ID</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bizProcId">
+				<xs:annotation>
+					<xs:documentation>业务流程ID</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bizActId">
+				<xs:annotation>
+					<xs:documentation>业务活动ID</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bizPreActId">
+				<xs:annotation>
+					<xs:documentation>业务父活动ID</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="wfWsh">
+				<xs:annotation>
+					<xs:documentation>工作流文书号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="workflowFlag">
+				<xs:annotation>
+					<xs:documentation>工作流标记</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="workItemId">
+				<xs:annotation>
+					<xs:documentation>工作项ID</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="parentWorkItemId">
+				<xs:annotation>
+					<xs:documentation>父工作项ID</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="isStarted">
+				<xs:annotation>
+					<xs:documentation>是否已启动</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="isInvokeTid">
+				<xs:annotation>
+					<xs:documentation>是否激活标记</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="userList">
+				<xs:annotation>
+					<xs:documentation>执行者列表</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="orgList">
+				<xs:annotation>
+					<xs:documentation>机构列表</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bizBtnList">
+				<xs:annotation>
+					<xs:documentation>业务按钮列表</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="operatorOrgCode">
+				<xs:annotation>
+					<xs:documentation>操作者机关</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="nextActDefId">
+				<xs:annotation>
+					<xs:documentation>下一活动定义ID</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="btnStatus">
+				<xs:annotation>
+					<xs:documentation>按钮状态</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="isFinalTask">
+				<xs:annotation>
+					<xs:documentation>是否结束任务</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="swjgDm">
+				<xs:annotation>
+					<xs:documentation>税务机关代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zndm">
+				<xs:annotation>
+					<xs:documentation>职能代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="message">
+				<xs:annotation>
+					<xs:documentation>消息</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="isShowSpForm">
+				<xs:annotation>
+					<xs:documentation>是否显示审批表单</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="returnCode">
+				<xs:annotation>
+					<xs:documentation>执行结果返回值</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="oneOfMultiTaskTag">
+				<xs:annotation>
+					<xs:documentation>多事件办理一个任务标记位</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sjgzid">
+				<xs:annotation>
+					<xs:documentation>事件规则ID</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sjmc">
+				<xs:annotation>
+					<xs:documentation>事件名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sjlx">
+				<xs:annotation>
+					<xs:documentation>事件类型</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sjbl">
+				<xs:annotation>
+					<xs:documentation>事件办理</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sjslid">
+				<xs:annotation>
+					<xs:documentation>事件实例ID</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sjType">
+				<xs:annotation>
+					<xs:documentation>事件类型</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="isMultiEventStartPro">
+				<xs:annotation>
+					<xs:documentation>多事件启动流程</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="canSend">
+				<xs:annotation>
+					<xs:documentation>可以执行推送</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sendMessage">
+				<xs:annotation>
+					<xs:documentation>推送提示信息</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sjState">
+				<xs:annotation>
+					<xs:documentation>事件状态</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="gllcsfxs">
+				<xs:annotation>
+					<xs:documentation>关联流程是否显示</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="wfPerformerSelector">
+				<xs:annotation>
+					<xs:documentation>工作流操作者选择器</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="wfDepartSelector">
+				<xs:annotation>
+					<xs:documentation>工作流部门选择器</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="wfRoleSelector">
+				<xs:annotation>
+					<xs:documentation>工作流角色选择器</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="isTaskMerger">
+				<xs:annotation>
+					<xs:documentation>合并任务</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="batchMainWidget">
+				<xs:annotation>
+					<xs:documentation>批量主组件</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="subSendFlag">
+				<xs:annotation>
+					<xs:documentation>发起子流程和推送按钮之间的控制</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="glLcswsxDm">
+				<xs:annotation>
+					<xs:documentation>关联流程税务事项</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="wfTaskOrigin">
+				<xs:annotation>
+					<xs:documentation>任务来源</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="wfTaskState">
+				<xs:annotation>
+					<xs:documentation>任务来源</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="wfTaxItemID">
+				<xs:annotation>
+					<xs:documentation>税务事项代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="htly">
+				<xs:annotation>
+					<xs:documentation>回退理由</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="isShowApproveHistory">
+				<xs:annotation>
+					<xs:documentation>是否只显示审批历史</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="boxClosingEventFlag">
+				<xs:annotation>
+					<xs:documentation>触发选人窗口关闭的标示</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="isPermitContinue">
+				<xs:annotation>
+					<xs:documentation>是否允许继续操作</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="isProcessClosed">
+				<xs:annotation>
+					<xs:documentation>流程是否结束</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="isSychronizedSubflowStarted">
+				<xs:annotation>
+					<xs:documentation>同步子流程是否启动</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="isConfigedSubflow">
+				<xs:annotation>
+					<xs:documentation>是否配置里关联流程</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="isReadOnly">
+				<xs:annotation>
+					<xs:documentation>是否只读</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="isxh">
+				<xs:annotation>
+					<xs:documentation>是否细化流程</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="nextWorkitemId">
+				<xs:annotation>
+					<xs:documentation>下一个环节工作项ID</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="isClickNext">
+				<xs:annotation>
+					<xs:documentation>是否点击了下一步</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="xhlcdyid">
+				<xs:annotation>
+					<xs:documentation>细化流程定义ID</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="xhhddyid">
+				<xs:annotation>
+					<xs:documentation>细化流程第一个活动定义ID</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="xhfhddyid">
+				<xs:annotation>
+					<xs:documentation>细化流程父活动定义ID</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="xhflcdyid">
+				<xs:annotation>
+					<xs:documentation>细化流程父流程定义ID</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="xhmodelid">
+				<xs:annotation>
+					<xs:documentation>细化流程modelid</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="queryCode">
+				<xs:annotation>
+					<xs:documentation>查询排序规则</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="procReleData">
+				<xs:annotation>
+					<xs:documentation>工作流流程相关数据</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="procStartOrgID">
+				<xs:annotation>
+					<xs:documentation>流程启动机关</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="lcslid">
+				<xs:annotation>
+					<xs:documentation>流程实例ID</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="hdslid">
+				<xs:annotation>
+					<xs:documentation>活动实例ID</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="procModelId">
+				<xs:annotation>
+					<xs:documentation>流程模型ID</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="result">
+				<xs:annotation>
+					<xs:documentation>结果</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="nextWorkItemList">
+				<xs:annotation>
+					<xs:documentation>下一步工作项列表</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="procStartPerformer">
+				<xs:annotation>
+					<xs:documentation>流程启动人</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="workItemList">
+				<xs:annotation>
+					<xs:documentation>工作项列表</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="opinionVO">
+				<xs:annotation>
+					<xs:documentation>选项</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ishebing">
+				<xs:annotation>
+					<xs:documentation>是否合并</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="wfTaskType">
+				<xs:annotation>
+					<xs:documentation>工作流任务类型</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="participant">
+				<xs:annotation>
+					<xs:documentation>工作流参与者</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="methodName">
+				<xs:annotation>
+					<xs:documentation>工作流引擎调用方法名（提交类）</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="isShowSelectPerson">
+				<xs:annotation>
+					<xs:documentation>isShowSelectPerson</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="addAttr">
+				<xs:annotation>
+					<xs:documentation>addAttr</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="addSelectWithDataName">
+				<xs:annotation>
+					<xs:documentation>addSelectWithDataName</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="allNextActUser">
+				<xs:annotation>
+					<xs:documentation>allNextActUser</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="addTree">
+				<xs:annotation>
+					<xs:documentation>addTree</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="tableDatas">
+				<xs:annotation>
+					<xs:documentation>表格数据</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="isZs">
+				<xs:annotation>
+					<xs:documentation>是否终审</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="isNewEventIns">
+				<xs:annotation>
+					<xs:documentation>是否新事件实例</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="rwbldz">
+				<xs:annotation>
+					<xs:documentation>任务办理地址</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bdljuuid">
+				<xs:annotation>
+					<xs:documentation>表单路径UUID</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="dsjVo">
+				<xs:annotation>
+					<xs:documentation>多事件VO</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="swrysfDm">
+				<xs:annotation>
+					<xs:documentation>税务人员身份代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="tsgwDm">
+				<xs:annotation>
+					<xs:documentation>推送岗位代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="tssfDm">
+				<xs:annotation>
+					<xs:documentation>推送税务人员身份代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="code">
+				<xs:annotation>
+					<xs:documentation>节点代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="pcode">
+				<xs:annotation>
+					<xs:documentation>父节点代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="swsx">
+				<xs:annotation>
+					<xs:documentation>发起流程税务事项</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zlcslid">
+				<xs:annotation>
+					<xs:documentation>子流程实例ID</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="lcczlx">
+				<xs:annotation>
+					<xs:documentation>流程操作类型</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="btnNames">
+				<xs:annotation>
+					<xs:documentation>按钮名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="slswsxDm">
+				<xs:annotation>
+					<xs:documentation>受理税务事项代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="YSHQdywshRequestVO">
+		<xs:annotation>
+			<xs:documentation>预审核渠道业务审核请求基本信息</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="qxswjgDm" type="swjgDm" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>权限税务机关</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="djxh" type="djxh" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>登记序号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="lcswsxDm" type="lcswsxDm">
+				<xs:annotation>
+					<xs:documentation>流程税务事项代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="slswsxDm" type="slswsxDm">
+				<xs:annotation>
+					<xs:documentation>受理税务事项代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="dzbzdszlDm" type="dzbzdszlDm">
+				<xs:annotation>
+					<xs:documentation>电子表证单书种类代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="xtbm" type="xtbm">
+				<xs:annotation>
+					<xs:documentation>系统编码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="xzqhDm" type="xzqhDm" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>行政区划数字代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="nsrmc" type="nsrmc">
+				<xs:annotation>
+					<xs:documentation>纳税人名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="nsrsbh" type="nsrsbh" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>纳税人识别号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="request" type="request">
+				<xs:annotation>
+					<xs:documentation>通用流程启动请求业务报文CDATA类型(按流程税务事项代码不同而不同)</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="procStartOrgID" type="qdswjgDm">
+				<xs:annotation>
+					<xs:documentation>流程启动机关</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="userList" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>执行者列表</xs:documentation>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:sequence minOccurs="0" maxOccurs="unbounded">
+						<xs:element name="userListlb" type="PerformersVO">
+							<xs:annotation>
+								<xs:documentation>执行者列表</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="procStartPerformer" type="qdry" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>流程启动人</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="isStartToSecond" type="bz" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>是否启动到第二环节</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="lcslid" type="lcslid" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>流程实例id</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="procReleDataGrid" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>工作流相关参数</xs:documentation>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:sequence minOccurs="0" maxOccurs="unbounded">
+						<xs:element name="procReleDataLb" type="MapVO"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="PerformersVO">
+		<xs:annotation>
+			<xs:documentation>执行者列表</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="swryDm" type="swryDm">
+				<xs:annotation>
+					<xs:documentation>税务人员代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="swryxm" type="swryxm">
+				<xs:annotation>
+					<xs:documentation>税务人员姓名</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jgDm" type="swjgDm">
+				<xs:annotation>
+					<xs:documentation>机关代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jgmc" type="swjgmc">
+				<xs:annotation>
+					<xs:documentation>机关名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="gwDm" type="gwDm">
+				<xs:annotation>
+					<xs:documentation>岗位代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="gwmc" type="gwmc">
+				<xs:annotation>
+					<xs:documentation>岗位名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="swrysfDm" type="grsfDm">
+				<xs:annotation>
+					<xs:documentation>税务人员身份代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="gwxh" type="gwxh">
+				<xs:annotation>
+					<xs:documentation>岗位序号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="YSHFileInforVO">
+		<xs:annotation>
+			<xs:documentation>预审核渠道业务审核请求附件信息</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="fileSize" type="filesize" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>附件大小</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="recordNumber" type="recordnumber" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>记录数</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="nsrSwjgDm" type="nsrswjgDm" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>纳税人税务机关</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="YSHFileJhVO">
+		<xs:annotation>
+			<xs:documentation>预审核渠道业务审核请求附件基本信息</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="filepath" type="filepath">
+				<xs:annotation>
+					<xs:documentation>附件路径</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="filetype" type="flzlDm">
+				<xs:annotation>
+					<xs:documentation>附件类型</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="filename" type="filename">
+				<xs:annotation>
+					<xs:documentation>附件名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="fileindex" type="dzwjsy" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>电子文件索引</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yxbz" type="yxbz" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>有效标志</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="YSHCxysxxReqVO">
+		<xs:annotation>
+			<xs:documentation>预审核查询审核结果请求流水号信息</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="qdywshlsh" type="qdywshlsh">
+				<xs:annotation>
+					<xs:documentation>渠道业务审核流水号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="YSHCxysxxResVO">
+		<xs:annotation>
+			<xs:documentation>预审核查询审核意见返回信息</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="qdywshlsh" type="qdywshlsh">
+				<xs:annotation>
+					<xs:documentation>渠道业务审核流水号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="shyj" type="shyj" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>审核意见</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="shyjsm" type="shyjsm" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>审核意见说明</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="shrq" type="shrq" minOccurs="0"/>
+			<xs:element name="lcslid" type="lcslid">
+				<xs:annotation>
+					<xs:documentation>流程实例id</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:simpleType name="request">
+		<xs:annotation>
+			<xs:documentation>通用请求业务报文CDATA类型</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string"/>
+	</xs:simpleType>
+	<xs:simpleType name="response">
+		<xs:annotation>
+			<xs:documentation>通用响应业务报文CDATA类型</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string"/>
+	</xs:simpleType>
+	<xs:complexType name="YSHCxwsspjgResVO">
+		<xs:annotation>
+			<xs:documentation>预审核查询文书审批结果返回vo</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="lcslid" type="lcslid">
+				<xs:annotation>
+					<xs:documentation>流程实例id</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="djxh" type="djxh" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>登记序号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="nsrsbh" type="nsrsbh">
+				<xs:annotation>
+					<xs:documentation>纳税人识别号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="slswsxdm" type="slswsxDm" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>受理税务事项代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="lcswsxdm" type="lcswsxDm">
+				<xs:annotation>
+					<xs:documentation>流程税务事项代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="lcfqsj" type="starttime">
+				<xs:annotation>
+					<xs:documentation>流程发起时间</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="spjg" type="spjg" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>审批结果</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="spyjxx" type="spyjxx" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>审批意见信息</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="gwxh" type="gwDm">
+				<xs:annotation>
+					<xs:documentation>岗位序号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="dqgwjssj" type="rq">
+				<xs:annotation>
+					<xs:documentation>当前岗位接收时间</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="dqgwblsx" type="rq">
+				<xs:annotation>
+					<xs:documentation>当前岗位办理时限</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sxdqzt" type="ms">
+				<xs:annotation>
+					<xs:documentation>事项当前状态</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sxblzt" type="ms">
+				<xs:annotation>
+					<xs:documentation>事项办理状态</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sprq" type="sprq" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>审批日期</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="spswjg" type="swjgDm" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>审批税务机关</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="YSHCxwsspjgReqVO">
+		<xs:annotation>
+			<xs:documentation>预审核查询文书审批结果请求vo</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="djxh" type="djxh" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>登记序号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="nsrsbh" type="nsrsbh">
+				<xs:annotation>
+					<xs:documentation>纳税人识别号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="slswsxdm" type="slswsxDm" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>受理税务事项代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="lcswsxdm" type="lcswsxDm" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>流程税务事项代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sqrqq" type="sqrq" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>申请日期起</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sqrqz" type="sqrq" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>申请日期止</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qdywshlsh" type="qdywshlsh" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>渠道业务审核流水号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="lcslid" type="lcslid" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>流程实例id</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="YSHWszgJhVO">
+		<xs:annotation>
+			<xs:documentation>预审核文书字轨</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="zg" type="zg">
+				<xs:annotation>
+					<xs:documentation>字轨</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="swjgjg" type="swjgjg">
+				<xs:annotation>
+					<xs:documentation>税务机构局轨</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="nd" type="nd">
+				<xs:annotation>
+					<xs:documentation>年度</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="wh" type="wswh">
+				<xs:annotation>
+					<xs:documentation>文号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="wszg" type="wszg">
+				<xs:annotation>
+					<xs:documentation>文书字轨</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jgssswjgDm" type="swjgDm">
+				<xs:annotation>
+					<xs:documentation>局轨所属税务机关代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jgssswjgmc" type="swjgmc">
+				<xs:annotation>
+					<xs:documentation>局轨所属税务机关名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="swjgjg2" type="swjgjg" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>税务机关局轨2</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="wh2" type="wh" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>文号2</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="wszg2" type="wszg" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>文书字轨2</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jgssswjgmc2" type="swjgmc" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>局轨所属税务机关名称2</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="YSHCxwszgRequestVO">
+		<xs:annotation>
+			<xs:documentation>预审核查询文书字轨请求信息</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="swjg" type="swjgDm">
+				<xs:annotation>
+					<xs:documentation>税务机关</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="nd" type="nd">
+				<xs:annotation>
+					<xs:documentation>年度</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="dzbzdszlDm" type="dzbzdszlDm">
+				<xs:annotation>
+					<xs:documentation>电子表证单书种类代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zxSl" type="zxSl" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>整型数量</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="wszzgzDm" type="dzbzdszlDm" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>文书字轨规则代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="TyslJkcxtjVO">
+		<xs:annotation>
+			<xs:documentation>统一受理监控查询条件VO</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="lcswsxDm" type="lcswsxDm"/>
+			<xs:element name="slswsxDm" type="slswsxDm"/>
+			<xs:element name="djxh" type="djxh"/>
+			<xs:element name="zsxmDm" type="zsxm" minOccurs="0"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="TyslJkcxtjPlVO">
+		<xs:annotation>
+			<xs:documentation>统一受理监控查询条件批量VO</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="lcswsxDm" type="lcswsxDm"/>
+			<xs:element name="slswsxDm" type="slswsxDm"/>
+			<xs:element name="zxtDm" type="zxtDm"/>
+			<xs:element name="jkxmDm" type="jkxmDm"/>
+			<xs:element name="jkxmmc" type="jkxmmc"/>
+			<xs:element name="jkxmlxDm" type="jkxmlxDm"/>
+			<xs:element name="jkxmlxmc" type="jkxmlxmc"/>
+			<xs:element name="jkl" type="jkl"/>
+			<xs:element name="jkff" type="jkff"/>
+			<xs:element name="sqlxh" type="sqlxh"/>
+			<xs:element name="jkdlDm" type="nsrmc"/>
+			<xs:element name="nsrxxGrid">
+				<xs:complexType>
+					<xs:sequence maxOccurs="unbounded">
+						<xs:element name="nsrxxGridLb" type="TyslJkcxtjNsrxxVO"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="TyslJkjgVO">
+		<xs:annotation>
+			<xs:documentation>统一受理监控结果VO</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="jkxmDm" type="jkxmDm"/>
+			<xs:element name="jkxmmc" type="jkxmmc"/>
+			<xs:element name="jklxDm" type="jklxDm"/>
+			<xs:element name="jklxmc" type="jklxmc"/>
+			<xs:element name="jkjgDm" type="jkjgdm"/>
+			<xs:element name="jkjgmc" type="jkjgmc"/>
+			<xs:element name="gyxx" type="gyxx"/>
+			<xs:element name="djxh" type="djxh" minOccurs="0"/>
+			<xs:element name="nsrsbh" type="nsrsbh" minOccurs="0"/>
+			<xs:element name="nsrmc" type="nsrmc" minOccurs="0"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="GYWszbVO">
+		<xs:annotation>
+			<xs:documentation>文书子表VO</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="uuid" type="uuid"/>
+			<xs:element name="djxh" type="djxh"/>
+			<xs:element name="nsrsbh" type="nsrsbh"/>
+			<xs:element name="nsrmc" type="nsrmc"/>
+			<xs:element name="dzbzdszlDm" type="dzbzdszlDm"/>
+			<xs:element name="lcslid" type="lcslid"/>
+			<xs:element name="swjgjg" type="swjgjg"/>
+			<xs:element name="zg" type="zg"/>
+			<xs:element name="nh" type="nh"/>
+			<xs:element name="wh" type="wh"/>
+			<xs:element name="zzrDm" type="zzrDm"/>
+			<xs:element name="wszzrq" type="wszzrq"/>
+			<xs:element name="wszzswjgDm" type="wszzswjgDm"/>
+			<xs:element name="ywwsuuid" type="ywwsuuid"/>
+			<xs:element name="xmllsh" type="xmllsh"/>
+			<xs:element name="swsxDm" type="swsxDm"/>
+			<xs:element name="sdztDm" type="sdztDm"/>
+			<xs:element name="dybz" type="dybz"/>
+			<xs:element name="dyryDm" type="dyryDm"/>
+			<xs:element name="dyrq" type="dyrq"/>
+			<xs:element name="zfrDm" type="zfrDm"/>
+			<xs:element name="zfsj" type="zfsj"/>
+			<xs:element name="sjgsdq" type="sjgsdq"/>
+			<xs:element name="scwszgbz" type="scwszgbz"/>
+			<xs:element name="lcswsxDm" type="lcswsxDm"/>
+			<xs:element name="slrDm" type="slrDm"/>
+			<xs:element name="slrq" type="slrq"/>
+			<xs:element name="slswjgDm" type="slswjgDm"/>
+			<xs:element name="lcztDm" type="lcztDm"/>
+			<xs:element name="zsrDm" type="zsrDm"/>
+			<xs:element name="zssj" type="zssj"/>
+			<xs:element name="businesscontent" type="businesscontent"/>
+			<xs:element name="ywzjuuid" type="ywzjuuid"/>
+			<xs:element name="blsx" type="ywflDm"/>
+			<xs:element name="wsbh" type="wsbh"/>
+			<xs:element name="ywflDm" type="ywflDm"/>
+			<xs:element name="sshjDm" type="sshjDm"/>
+			<xs:element name="wszg" type="wszg"/>
+			<xs:element name="jgssswjgDm" type="swjg1Dm"/>
+			<xs:element name="bz" type="bz"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="TyslJkcxtjNsrxxVO">
+		<xs:annotation>
+			<xs:documentation>统一受理监控查询条件纳税人信息VO</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="djxh" type="djxh"/>
+			<xs:element name="nsrztDm" type="nsrztDm"/>
+			<xs:element name="kzztdjlxDm" type="kzztdjlxDm"/>
+			<xs:element name="djzclxDm" type="djzclxDm"/>
+			<xs:element name="fjmqybz" type="fjmqybz"/>
+			<xs:element name="zsxmDm" type="zsxmDm"/>
+			<xs:element name="nsrsbh" type="nsrsbh" minOccurs="0"/>
+			<xs:element name="nsrmc" type="nsrmc" minOccurs="0"/>
+			<xs:element name="param1" minOccurs="0"/>
+			<xs:element name="param2" minOccurs="0"/>
+			<xs:element name="param3" minOccurs="0"/>
+			<xs:element name="param4" minOccurs="0"/>
+			<xs:element name="mapGrid" minOccurs="0">
+				<xs:complexType>
+					<xs:sequence minOccurs="0" maxOccurs="unbounded">
+						<xs:element name="mapLb" type="MapVO"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="MapVO">
+		<xs:annotation>
+			<xs:documentation>存储键值对</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="key" type="bz"/>
+			<xs:element name="value" type="bz"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="GYSwjgYzxxVO">
+		<xs:annotation>
+			<xs:documentation>税务机关印章信息VO</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="uuid" type="uuid">
+				<xs:annotation>
+					<xs:documentation>印章uuid</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="fileName" type="name">
+				<xs:annotation>
+					<xs:documentation>印章文件名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="swjgDm" type="swjgDm">
+				<xs:annotation>
+					<xs:documentation>印章税务机关名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="pzzlDm" type="pzzlDm">
+				<xs:annotation>
+					<xs:documentation>印章票证种类代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yzlxDm" type="xbDm">
+				<xs:annotation>
+					<xs:documentation>印章类型代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sftd" type="xbDm">
+				<xs:annotation>
+					<xs:documentation>是否套打</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jzwz" type="name">
+				<xs:annotation>
+					<xs:documentation>距左位置</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jswz" type="name">
+				<xs:annotation>
+					<xs:documentation>距上位置</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="tpkd" type="name">
+				<xs:annotation>
+					<xs:documentation>图片宽度</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="tpgd" type="name">
+				<xs:annotation>
+					<xs:documentation>图片高度</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="GYSxjbxxVO">
+		<xs:annotation>
+			<xs:documentation>事项基本信息VO</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="uuid" type="uuid">
+				<xs:annotation>
+					<xs:documentation>事项主键</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="djxh" type="djxh">
+				<xs:annotation>
+					<xs:documentation>登记序号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="nsrsbh" type="nsrsbh" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>纳税人识别号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="nsrmc" type="nsrmc" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>纳税人名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zgswjDm" type="zgswjDm">
+				<xs:annotation>
+					<xs:documentation>主管税务局代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="slswsxDm" type="slswsxDm">
+				<xs:annotation>
+					<xs:documentation>受理事项代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="lcswsxDm" type="lcswsxDm" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>流程事项代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="xtbm" type="xtbm">
+				<xs:annotation>
+					<xs:documentation>系统编码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ywfsrq" type="ywfsrq">
+				<xs:annotation>
+					<xs:documentation>业务发生日期</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yxbz" type="yxbz">
+				<xs:annotation>
+					<xs:documentation>有效标志</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yscnwfjbz" type="bz1" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>已上传内网附件标志</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="ZHYsdzzlglVO">
+		<xs:annotation>
+			<xs:documentation>预审电子资料关联VO</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="ysdzzlgluuid" type="uuid">
+				<xs:annotation>
+					<xs:documentation>uuid</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qdywshlsh" type="qdywshlsh" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>渠道业务审核流水号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="dzwjsy" type="dzwjsy" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>电子文件索引</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="txm" type="txm" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>条形码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="wjm" type="wjm">
+				<xs:annotation>
+					<xs:documentation>文件名-外网</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ywzj" type="ywzj">
+				<xs:annotation>
+					<xs:documentation>业务主键</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="flzlDm" type="flzlDm">
+				<xs:annotation>
+					<xs:documentation>附列资料代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="wjcfml" type="wjcfml">
+				<xs:annotation>
+					<xs:documentation>文件存放目录-外网</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="filename" type="filename">
+				<xs:annotation>
+					<xs:documentation>文件名-内网</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="filepath" type="filepath">
+				<xs:annotation>
+					<xs:documentation>文件路径-内网</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yxbz" type="yxbz">
+				<xs:annotation>
+					<xs:documentation>有效标志</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="base64Str" type="bz">
+				<xs:annotation>
+					<xs:documentation>文件转换为base64编码格式的字符串</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ycbz" type="xybz">
+				<xs:annotation>
+					<xs:documentation>远程标志</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="lrrq" type="bz">
+				<xs:annotation>
+					<xs:documentation>录入日期</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="filesize" type="bz">
+				<xs:annotation>
+					<xs:documentation>文件大小</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

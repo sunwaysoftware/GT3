@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2013 (http://www.altova.com) by  () -->
+<!-- 被2011 rel. 2 sp1 (TeaM DJiNN) 使用XMLSpy vTeaM DJiNN编辑的 (http://www.altova.com) by -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:complexType name="HXZGZS10284Response">
+		<xs:annotation>
+			<xs:documentation>保存转开完税证明信息</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="jksGrid">
+						<xs:complexType>
+							<xs:sequence minOccurs="0" maxOccurs="unbounded">
+								<xs:element name="zkjkslb" type="JkszkxxVO"/>
+							</xs:sequence>
+						</xs:complexType>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="JkszkxxVO">
+		<xs:annotation>
+			<xs:documentation>缴款书明细VO</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="xtsphm" type="dzsphm">
+				<xs:annotation>
+					<xs:documentation>系统税票号码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="year" type="year">
+				<xs:annotation>
+					<xs:documentation>年</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="month" type="month">
+				<xs:annotation>
+					<xs:documentation>月</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="day" type="month">
+				<xs:annotation>
+					<xs:documentation>日</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zsjg" type="zsjg">
+				<xs:annotation>
+					<xs:documentation>征收机关</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="nsrsbh" type="nsrsbh">
+				<xs:annotation>
+					<xs:documentation>纳税人名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="hjjechn" type="dxje">
+				<xs:annotation>
+					<xs:documentation>合计金额（大写）</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="hjjenum" type="dxje">
+				<xs:annotation>
+					<xs:documentation>合计金额（小写）</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ypswrymc" type="swrymc">
+				<xs:annotation>
+					<xs:documentation>用票税务人员名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bz" type="bz">
+				<xs:annotation>
+					<xs:documentation>备注</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jksmxGrid">
+				<xs:complexType>
+					<xs:sequence minOccurs="0" maxOccurs="unbounded">
+						<xs:element name="jklist" type="JkszkmxVO"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="JkszkmxVO">
+		<xs:annotation>
+			<xs:documentation>缴款书明细VO</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="dzsphm" type="dzsphm">
+				<xs:annotation>
+					<xs:documentation>电子税票号码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="skssq" type="skssqq">
+				<xs:annotation>
+					<xs:documentation>税款所属期起</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sjtje" type="dxje">
+				<xs:annotation>
+					<xs:documentation>实缴金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="rtkrq" type="skssqq">
+				<xs:annotation>
+					<xs:documentation>入退库日期</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zsxmmc" type="zsxmmc">
+				<xs:annotation>
+					<xs:documentation>征收项目名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zspmmc" type="zspmmc">
+				<xs:annotation>
+					<xs:documentation>征收品目名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zspmzm" type="zszmmc">
+				<xs:annotation>
+					<xs:documentation>征收子目名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>
